@@ -1,0 +1,54 @@
+ideas = {
+	country = {
+		STG_GRF_assistance = {
+			removal_cost = -1
+			allowed = {
+				tag = STG 
+			}
+			picture = 111
+			modifier = {
+				army_core_attack_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+		STG_capital_burning = {
+			removal_cost = -1
+			allowed = {
+				tag = STG
+			}
+			picture = 1111
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.1
+				political_power_gain = -0.5
+			}
+		}
+		STG_stalliongrad_blocade = {
+			removal_cost = -1
+			allowed = {
+				tag = STG
+			}
+			picture = 1111
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				MONTHLY_POPULATION = -1
+				weekly_manpower = -1000
+			}
+		}
+		STG_cleanings = {
+			removal_cost = -1
+			allowed = {
+				tag = STG
+			}
+			picture = 1111
+			modifier = {
+				stability_factor = -0.2
+				political_power_gain = -0.3
+				offence = -0.4
+				defence = -0.4
+				experience_gain_army_factor = -0.5
+			}
+		}
+	}
+				

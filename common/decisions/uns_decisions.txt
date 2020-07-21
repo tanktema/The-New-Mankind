@@ -1,0 +1,744 @@
+resource_exploring_human_category = {
+	UNS_search_steel = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				set_state_flag = uns_steel_1
+			}
+			
+		}
+	}
+	UNS_search_aluminium = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = uns_aluminium_1
+			}
+		}
+	}
+	UNS_search_rubber = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 48
+			controls_state = 48
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			48 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+				set_state_flag = uns_rubber_1
+			}
+		}
+	}
+	UNS_search_oil = {
+	icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 96
+			controls_state = 96
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			96 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+				set_state_flag = uns_oil_1
+			}
+		}
+	}
+	UNS_search_crystals = {
+	icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 96
+			controls_state = 96
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			96 = {
+				add_resource = {
+					type = crystals
+					amount = 10
+				}
+				set_state_flag = uns_crystals_1
+			}
+		}
+	}
+	UNS_search_chromium = {
+	icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				set_state_flag = uns_chromium_1
+			}
+		}
+	}
+	UNS_search_tungsten = {
+	icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = UNS_resources
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resources
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+				set_state_flag = uns_tungsten_1
+			}
+		}
+	}
+}
+
+christmas_celebrating_category = {
+	UNS_celebrate_christmas = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			NOT ={
+				has_country_flag = celebrate_heart_warming
+			}
+		}
+		visible = {
+			date > 1007.12.15
+			date < 1007.12.25
+			is_human_race = yes
+		}
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+		remove_effect = {
+			set_country_flag = celebrate_christmas
+		}
+		
+	}
+	UNS_celebrate_heartwarming = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			NOT = {
+				has_country_flag = celebrate_christmas
+			}
+		}
+		visible = {
+			date > 1007.12.15
+			date < 1007.12.25
+			is_human_race = yes
+		}
+		cost = 0
+		fire_only_once = yes
+		days_remove = 5
+		complete_effect = {
+			set_country_flag = celebrate_heart_warming
+		}
+		remove_effect = {
+			every_other_country = {
+				limit = {
+					is_pony_race = yes
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = heartwarming
+				}
+			}
+		}
+		
+	}
+	UNS_celebrating = {
+		icon = 1111
+		allowed = { tag = UNS }
+		available = {
+			OR = {
+				has_country_flag = celebrate_christmas 
+				has_country_flag = celebrate_heart_warming
+			}
+		}
+		activation = {
+			date > 1007.12.10
+		}
+		visible = {
+			date > 1007.12.10
+			is_human_race = yes
+		}
+		days_mission_timeout = 25
+		fire_only_once = yes
+		timeout_effect = {
+			country_event = {
+				id = uns.25
+				days = 1
+			}
+		}
+		complete_effect = {
+			country_event = {
+				id = uns.24
+				days = 1
+			}
+		}
+	}
+}
+		
+
+
+equestria_communist_support_category = {
+	UNS_send_weapons = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			has_equipment = {
+				support_equipment > 2499
+			}
+			has_equipment = {
+				infantry_equipment > 4999
+			}
+		}
+		visible = {
+			has_completed_focus = UNS_starlight_help
+		}
+		cost = 25
+		fire_only_once = yes
+		days_remove = 15
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -2500
+			}
+			add_to_variable = {
+				var = equestria_comm_size
+				value = 0.2
+			}
+			EQS = {
+				set_country_flag = UNS_equestria_communist_support2
+			}
+		}
+	}
+	UNS_send_training = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			EQS = {
+				has_country_flag = UNS_equestria_communist_support2
+			}
+		}
+		visible = {
+			has_completed_focus = UNS_starlight_help
+		}
+		cost = 50
+		days_remove = 90
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			UNS = {
+				every_unit_leader = {
+					limit = {
+						has_id = 99
+					}
+				set_nationality = EQS
+				}
+			}
+		remove_effect = { 
+			EQS = {
+				every_unit_leader = {
+					limit = {
+						has_id = 99
+						}
+					set_nationality = UNS
+					}
+				}
+			add_to_variable = {
+				var = equestria_comm_size
+				value = 0.3
+			}
+			EQS = {
+				set_country_flag = UNS_equestria_communist_support3
+				}
+			}
+		}
+	}
+}
+resource_keep_exploring_human_category = {
+	UNS_steel_expand = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			18 = {
+				has_state_flag = uns_steel_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				set_state_flag = UNS_steel_2
+			}
+		}
+	}
+	UNS_aluminium_expand = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			18 = {
+				has_state_flag = uns_aluminium_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			set_state_flag = uns_aluminium_2
+			}
+		}
+	}
+	UNS_rubber_expand = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			48 = {
+				has_state_flag = uns_rubber_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 48
+			controls_state = 48
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			48 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+				set_state_flag = uns_rubber_2
+			}
+		}
+	}
+	UNS_oil_expand = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			96 = {
+				has_state_flag = uns_oil_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 96
+			controls_state = 96
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			96 = {
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+				set_state_flag = uns_oil_2
+			}
+		}
+	}
+	UNS_crystals_expand = {
+	icon = 111
+		available = {
+			original_tag = UNS
+			96 = {
+				has_state_flag = uns_crystals_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 96
+			controls_state = 96
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			96 = {
+				add_resource = {
+					type = crystals
+					amount = 12
+				}
+			set_state_flag = uns_crystals_2
+			}
+		}
+	}
+	UNS_chromium_expand = {
+	icon = 111
+		available = {
+			original_tag = UNS
+			18 = {
+				has_state_flag = uns_chromium_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = chromium
+					amount = 8
+				}
+				set_state_flag = uns_chromium_2
+			}
+		}
+	}
+	UNS_tungsten_expand = {
+		icon = 111
+		available = {
+			original_tag = UNS
+			18 = {
+				has_state_flag = uns_tungsten_1
+			}
+			num_of_civilian_factories_available_for_projects > 2
+			owns_state = 18
+			controls_state = 18
+		}
+		visible = {
+			has_completed_focus = UNS_resource_search
+		}
+		cost = 50
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			18 = {
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+			set_state_flag = uns_tungsten_2
+			}
+		}
+	}
+}
+
+extra_worktime_human_category = {
+	extra_work = {
+		icon = 111
+		available = {
+			original_tag = UNS
+		}
+		visible = {
+			has_tech = prod_time_work
+		}
+		cost = 25
+		days_remove = 30
+		days_re-enable = 30
+		modifier = {
+			stability_weekly = -0.05
+			production_factory_max_efficiency_factor = 0.35
+			production_factory_efficiency_gain_factor = 0.3
+			production_speed_buildings_factor = 0.35
+		}
+		remove_effect = {
+			custom_effect_tooltip = expand_people_rage
+			hidden_effect = {
+				if = {
+					limit = {
+						check_variable = { rage_hum_meter < 5 }
+					}
+					add_to_variable = {
+						var = rage_hum_meter
+						value = 1
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { rage_hum_meter = 5 }
+					}
+					add_ideas = human_coups
+				}
+			}
+		}
+	}
+	extra_measures_payment = {
+		icon = 111
+		available = {
+			original_tag = UNS
+		}
+		visible = {
+			OR = {
+				has_idea = human_coups
+				has_idea = human_coups_up
+				has_idea = human_hate
+			}
+			has_tech = prod_time_work
+		}
+		days_remove = 15
+		modifier = {
+			political_power_gain = -0.25
+			stability_weekly = -0.05
+		}
+		remove_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = human_coups
+					}
+					remove_ideas = human_coups
+				}
+				if = {
+					limit = {
+						has_idea = human_coups_up
+					}
+					swap_ideas =  {
+						remove_idea = human_coups_up
+						add_idea = human_coups
+					}
+				}
+				if = {
+					limit = {
+						has_idea = human_hate
+					}
+					swap_ideas = {
+						remove_idea = human_hate
+						add_idea = human_coups_up
+					}
+				}
+				substract_from_variable = {
+					var = rage_hum_meter
+					value = 2
+				}
+			}
+			custom_effect_tooltip = diminish_human_rage
+		}
+	}
+	extra_measures_military = {
+		available = {
+			original_tag = UNS
+			divisions_in_state = {
+				size > 0
+				state = 96
+			}
+			check_variable = { rage_hum_meter = 5 }
+		}
+		visible = {
+			has_tech = prod_time_work
+		}
+		days_remove = 15
+		modifier = {
+			stability_weekly = -0.05
+			weekly_manpower = -10
+		}
+		remove_effect = {
+			hidden_effect = {
+				random_list = {
+					25 = {
+						country_event = {
+							id = uns.31
+						}
+					}
+					75 = {
+						country_event = {
+							id = uns.32
+						}
+					}
+				}
+			}
+		}
+	}
+				
+		
+			
+	

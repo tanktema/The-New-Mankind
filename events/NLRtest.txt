@@ -1,0 +1,731 @@
+EQS_NLR_civil_war = {  # Это как бы сама война
+	set_global_flag = equestrian_civil_war # Установка глобального флага
+	random_list = { 50 = { set_country_flag = SCS_gonna_appear } 50 = { }} # С шансом 50% флаг страны
+	news_event = { hours = 6 id = news.200 }  # Через 6 часов ивент news.200
+	country_event = { id = equestria.229 days = 10 } # Через 10 дней ивент equestria.229
+	STG = {  # У Сталлиона ивент
+		country_event = { id = stalliongrad.5 days = 2 }
+	}
+	every_other_country = { # Для каждой страны, которая существует и которую гарантит Эквестрия будут удалены гарантии
+		limit = { exists = yes is_guaranteed_by = ROOT }
+		ROOT = { diplomatic_relation = { country = PREV relation = guarantee active = no } }
+	}   
+	every_other_country = { # Для каждой страны, которая является субъектом ЭКВ, или которая в альянсе с ней и не является субъектом, которая никогда не была НЛР если она не является ИИ установит правило для марионеток "Может отклонить призыв в войну"
+		limit = {
+			OR = {
+				is_subject_of = ROOT
+				AND = { is_in_faction_with = ROOT is_subject = no }
+			}
+			NOT = {
+				original_tag = NLR
+			}
+		}
+		if = {
+			limit = { is_subject = yes is_ai = no }
+			set_rule = { can_decline_call_to_war = yes }
+		}
+		country_event = { id = solarempire.5 hours = 1 }
+	}
+	if = {
+		limit = { has_unit_leader = 9999 }
+		remove_unit_leader = 9999
+	}
+	set_stability = 0.6 # Стабу на 60%
+	add_popularity = {  # Популярность гармонии на 10% повысить
+		ideology = democratic
+		popularity = 0.10
+	}
+	add_popularity = {  # Популярность комми поднять на 8%
+		ideology = communism
+		popularity = 0.08
+	}
+	#GRF = {
+		#	transfer_state = 241
+		#}
+	every_state = {  # Каждый из перечисленных стейтов получит корки НЛР
+		limit = {
+			OR = {
+				state = 5
+				state = 1
+				state = 39
+				state = 75
+				state = 12
+				state = 28
+				state = 110
+				state = 13
+				state = 15
+				state = 106
+				state = 16
+				state = 525
+				state = 29
+				state = 22
+				state = 109
+				state = 226
+				state = 187
+				state = 157
+				state = 160
+				state = 351
+				state = 107
+				state = 24
+				state = 33
+				state = 32
+				state = 50
+				state = 167
+				state = 184
+				state = 228
+				state = 82
+				state = 40
+				state = 108
+				state = 67
+				state = 653
+				state = 229
+				state = 662
+				state = 352
+				state = 156
+				state = 122
+				state = 116
+				state = 162
+				state = 159
+				state = 183
+				state = 326
+				state = 34
+				state = 88
+				state = 102
+				state = 164
+				state = 26
+				state = 111
+				state = 63
+				state = 188
+				state = 185
+				state = 661
+				state = 113
+				state = 90
+				state = 81
+				state = 231
+				state = 349
+				state = 97
+				state = 84
+				state = 223
+				state = 177
+				state = 115
+				state = 120
+				state = 158
+				state = 348
+				state = 25
+				state = 186
+				state = 232
+				state = 112
+				state = 65
+				state = 86
+				state = 227
+				state = 52
+				state = 79
+				state = 36
+				state = 230
+				state = 182
+				state = 155
+				state = 27
+				state = 35
+				state = 154
+				state = 327
+				state = 31
+				state = 83
+				state = 353
+				state = 350
+				state = 221
+				state = 30
+				state = 17
+				state = 37
+			}
+		}
+		add_core_of = NLR
+	}
+
+	every_state = { # Каждый стейт, не являющийся коркой НЛР и является коркой/претензией ЭКВ будет дана претензия НЛР
+		limit = {
+			NOT = { is_core_of = NLR }
+			OR = {
+				is_core_of = EQS
+				is_claimed_by = EQS
+			}
+		}
+		add_claim_by = NLR
+	}
+
+	every_owned_state = { # Каждый регион из перечисленных передается НЛР
+		limit = {
+			is_controlled_by = PREV
+			OR = {
+				state = 5
+				state = 1
+				state = 39
+				state = 75
+				state = 12
+				state = 28
+				state = 110
+				state = 13
+				state = 15
+				state = 106
+				state = 16
+				state = 525
+				state = 29
+				state = 22
+				state = 109
+				state = 226
+				state = 187
+				state = 157
+				state = 160
+				state = 351
+				state = 107
+				state = 24
+				state = 33
+				state = 32
+				state = 50
+				state = 167
+				state = 184
+				state = 228
+				state = 82
+				state = 40
+				state = 108
+				state = 67
+				state = 653
+				state = 229
+				state = 662
+				state = 352
+				state = 156
+				state = 122
+				state = 116
+				state = 162
+				state = 159
+				state = 183
+				state = 326
+				state = 34
+				state = 88
+				state = 102
+				state = 164
+				state = 26
+				state = 111
+				state = 63
+				state = 188
+				state = 185
+				state = 661
+				state = 113
+				state = 90
+				state = 81
+				state = 231
+				state = 349
+				state = 97
+				state = 84
+				state = 223
+				state = 177
+				state = 115
+				state = 120
+				state = 158
+				state = 348
+				state = 25
+				state = 186
+				state = 232
+				state = 112
+				state = 65
+				state = 86
+				state = 227
+				state = 52
+				state = 79
+				state = 36
+				state = 230
+				state = 182
+				state = 155
+				state = 27
+				state = 35
+				state = 154
+				state = 327
+				state = 31
+				state = 83
+				state = 353
+				state = 350
+				state = 221
+				state = 30
+				state = 17
+				state = 37
+			}
+		}
+		NLR = { transfer_state = PREV }
+	}
+	
+	NLR = {
+		add_named_threat = { threat = 10 name = threat_equestrian_civil_war_NLR } # Будет добавлена напряга с локализацией
+	}
+	set_variable = { civil_war_size = 0.3 } # Переменная "civil_war_size" станет 0.3 (30%)
+
+	#Modify civil war size by NMM's agressiveness      ЭТО ВСЕ УВЕЛИЧИВАЕТ крч
+	#if = {
+	#	limit = { 
+	#		check_variable = {
+	#			var = NMM_aggressive
+	#			value = 3
+	#			compare = greater_than_or_equals
+	#		}
+	#	}
+	#	set_variable = { civil_war_size = 0.70 }
+	#}
+	#else_if = {
+	#	limit = {
+	#		check_variable = {
+	#			var = NMM_aggressive
+	#			value = 2
+	#			compare = equals
+	#		}
+	#	}
+	#	set_variable = { civil_war_size = 0.60 }
+	#}
+	#else_if = {
+	#	limit = {
+	#		check_variable = {
+	#			var = NMM_aggressive
+	#			value = 1
+	#			compare = equals
+	#		}
+	#	}
+	#	set_variable = { civil_war_size = 0.50 }
+	#}
+	#else = {
+	#	set_variable = { civil_war_size = 0.30 }
+	#}	
+	#if = { #Tiny size if early discovery
+	#	limit = { has_country_flag = nlr_early_discovery }
+	#	set_variable = { civil_war_size = 0.20 }
+	#}
+	transfer_units_fraction = {  # Передача части войск и тд от ЭКВ к НЛР
+		target = NLR
+		size = civil_war_size
+		keep_unit_leaders_trigger = { always = yes }
+	}
+	#log = "EQS NLR civil war size: [?civil_war_size]"
+	clear_variable = civil_war_size # Обнуляем переменную
+	create_country_leader = { # ЭКВ создается новый лидер на фашизм
+		name = "Chancellor Neighsay"
+		expire = "1965.1.1"
+		picture = "Naysay.tga"
+		desc = "CHANCELLOR_NEIGHSAY_DESC"
+		ideology = fascism_ideology
+		traits = {
+		}
+	}
+	remove_ideas = alicorn_sisters # Удалить идеи
+	add_ideas = eqs_civil_war # Дать идеи
+	40 = { # В стейт 40 дать 1 авиабазу
+		add_building_construction = {
+			type = air_base
+			level = 1
+			instant_build = yes
+		}
+	}
+	EQS = { # Ну тут посложнее, но тут короче разные идеи в зависимости от силы партизан разные идеи
+		if = {
+			limit = { 
+					check_variable = { NMM_partisans = 3 }
+				}
+			add_timed_idea = { idea = EQS_moonshine_partisans_3 days = 180 }
+			}
+		else_if = {
+			limit = {
+					check_variable = { NMM_partisans = 2 }
+				}
+			add_timed_idea = { idea = EQS_moonshine_partisans_2 days = 180 }
+			}
+		else_if = {
+			limit = {
+					check_variable = { NMM_partisans = 1 }
+				}
+			add_timed_idea = { idea = EQS_moonshine_partisans_1 days = 180 }
+			}
+		else = {
+			add_timed_idea = { idea = EQS_moonshine_partisans_0 days = 180 }
+			}
+	}
+	load_oob = "EQS_Civil_War" # Тут у нас загружается OOBшка для гражданки
+	set_global_flag = { flag = ECW_block_SCS days = 240 } # Установка глобального флага
+	NLR = { # Тут эффекты которые получает НЛР
+		if = { # Тут и далее - получает разных генералов
+			limit = {
+				has_global_flag = EQS_Bipen_created
+			}
+			if = {
+				limit = { NOT = { has_unit_leader = 789 } }
+				event_target:EQS_Bipen = { set_nationality = NLR }
+			}
+		}
+		else = {
+			create_corps_commander = {
+				name = "Bipen"
+				portrait_path = "gfx/leaders/NLR/Bipen.tga"
+				traits = { night_guard thestral_race_trait }
+				desc = striped_pink_bat
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+				female = yes
+				id = 789
+			}
+			set_global_flag = EQS_Bipen_created
+			hidden_effect = {
+				random_army_leader = {
+					limit = { has_id = 789 }
+					save_global_event_target_as = EQS_Bipen
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = EQS_Selenite_created
+			}
+			if = {
+				limit = { NOT = { has_unit_leader = 790 } }
+				event_target:EQS_Selenite = { set_nationality = NLR }
+			}
+		}
+		else = {
+			create_corps_commander = {
+				name = "Selenite"
+				portrait_path = "gfx/leaders/NLR/Selenite.tga"
+				traits = { moonatik thestral_race_trait }
+				desc = NLR_selenite_desc
+				skill = 1
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 1
+				id = 790
+				female = yes
+			}
+			set_global_flag = EQS_Selenite_created
+			hidden_effect = {
+				random_army_leader = {
+					limit = { has_id = 790 }
+					save_global_event_target_as = EQS_Selenite
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = EQS_Tempest_Wind_created
+			}
+			if = {
+				limit = { NOT = { has_unit_leader = 202 } }
+				event_target:EQS_Tempest_Wind = { set_nationality = NLR }
+			}
+		}
+		else = {
+			create_corps_commander = {
+				name = "Tempest Wind"
+				portrait_path = "gfx/leaders/NLR/TempestWind.tga"
+				traits = { night_guard commando panzer_leader thestral_race_trait }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+				female = yes
+				id = 202
+			}
+			set_global_flag = EQS_Tempest_Wind_created
+			random_army_leader = {
+				limit = { has_id = 202 }
+				save_global_event_target_as = EQS_Tempest_Wind
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = EQS_Midnight_Oil_created
+			}
+			if = {
+				limit = { NOT = { has_unit_leader = 205 } }
+				event_target:EQS_Midnight_Oil = { set_nationality = NLR }
+			}
+		}
+		else = {
+			create_corps_commander = {
+				name = "Midnight Oil"
+				portrait_path = "gfx/leaders/NLR/Cyrus.tga"
+				traits = { night_guard trait_reckless pony_race_trait }
+				skill = 1
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 2
+				id = 205
+			}
+			set_global_flag = EQS_Midnight_Oil_created
+			random_army_leader = {
+				limit = { has_id = 205 }
+				save_global_event_target_as = EQS_Midnight_Oil
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = EQS_Selenite_created
+			}
+			if = {
+				limit = { NOT = { has_unit_leader = 790 } }
+				event_target:EQS_Selenite = { set_nationality = NLR }
+			}
+		}
+		else = {
+			create_corps_commander = {
+				name = "Selenite"
+				portrait_path = "gfx/leaders/NLR/Selenite.tga"
+				traits = { moonatik thestral_race_trait }
+				desc = NLR_selenite_desc
+				skill = 1
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 1
+				female = yes
+				id = 790
+			}
+			set_global_flag = EQS_Selenite_created
+			random_army_leader = {
+				limit = { has_id = 790 }
+				save_global_event_target_as = EQS_Selenite
+			}
+		}
+		if = {  # Это для ИИшки что-то, я не нашел в файлах
+			limit = { is_ai = yes }
+			Evil_unicorn_magic = yes
+		}
+		if = { # Если нету правила то произойдет ивент
+			limit = {
+				NOT = {
+					has_game_rule = {
+						rule = equestria_united_status
+						option = EQS_STATUS_CIVIL_WAR
+					}
+				}
+			}
+			country_event = { id = lunas.2 days = 7 }#days to hours applied
+		}
+		country_event = civwar.110 # Ивент о гражданке
+		country_event = { id = equestria.229 days = 10 } #rarity captured - схватили Рэрити
+		set_country_flag = recovery_idea_bypass # Флаг о восстановлении 
+		set_stability = 0.7 # 70% стаба
+		add_popularity = { # Дать +10% популярности фашизму
+			ideology = fascism
+			popularity = 0.1
+		}
+		load_oob = "NLR_Civil_War" # Загрузить ООВшку для НЛР - аналогично как для ЭКВ
+		add_ideas = eqs_civil_war # Нацдух на войну
+		if = { # Если ЭКВ существует то цель войны на аннексию и начать войну на аннексию
+			limit = { country_exists = EQS }
+			hidden_effect = {
+				create_wargoal = { 
+					type = annex_everything
+					target = EQS
+				}
+			}
+			declare_war_on = {
+				target = EQS type = annex_everything
+			}
+		}
+		clr_country_flag = recovery_idea_bypass # Очистка флага
+		add_manpower = 40000 # Дать 40к мэнповера 
+		add_ideas = NLR_fragile_rule 
+		### Moonshine national spirits ###
+		country_event = { id = lunas.1 days = 1 } # Это все с переменными на усиление 
+		if = {
+			limit = {
+					EQS = { check_variable = { NMM_weaponstealers = 3 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_weaponstealers_3 days = 180 }
+			}
+		else_if = {
+			limit = {
+					EQS = { check_variable = { NMM_weaponstealers = 2 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_weaponstealers_2 days = 180 }
+			}
+		else_if = {
+			limit = {
+					EQS = { check_variable = { NMM_weaponstealers = 1 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_weaponstealers_1 days = 180 }
+			}
+		else = {
+			add_timed_idea = { idea = NLR_moonshine_weaponstealers_0 days = 180 }
+			}
+		if = {
+			limit = {
+					EQS = { check_variable = { NMM_workers = 3 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_workers_3 days = 180 }
+			}
+		else_if = {
+			limit = {
+					EQS = { check_variable = { NMM_workers = 2 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_workers_2 days = 180 }
+			}
+		else_if = {
+			limit = {
+					EQS = { check_variable = { NMM_workers = 1 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_workers_1 days = 180 }
+			}
+		else = {
+			add_timed_idea = { idea = NLR_moonshine_workers_0 days = 180 }
+			}
+		if = {
+			limit = {
+					EQS = { check_variable = { NMM_bats = 3 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_bats_3 days = 180 }
+			}
+		else_if = {
+			limit = {
+					EQS = { check_variable = { NMM_bats = 2 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_bats_2 days = 180 }
+			}
+		else_if = {
+			limit = {
+					EQS = { check_variable = { NMM_bats = 1 } }
+				}
+			add_timed_idea = { idea = NLR_moonshine_bats_1 days = 180 }
+			}
+		else = {
+			add_timed_idea = { idea = NLR_moonshine_bats_0 days = 180 }
+			}
+		create_faction = NLR_lunar_hegemony # Ну и альянсик
+	}
+	every_state = {
+		clr_state_flag = block_NLR_state
+	}
+}
+
+country_event = { # Это ивент о начале войны
+	id = equestria.100 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.100"}
+	title = equestria.100.t
+	desc = {
+		text = equestria.100.d_1
+		trigger = { has_country_flag = nlr_early_discovery }
+	}
+	desc = {
+		text = equestria.100.d_2
+		trigger = { NOT = { has_country_flag = nlr_early_discovery } }
+	}
+	picture = GFX_event_luna_ready_for_war
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = nightmare_moon
+			modify_country_flag = { flag = celestia_evil_meter value = 12 }
+		}
+	}
+
+	option = { # Support Luna - стать за НЛР
+		name = equestria.100.a
+		trigger = { is_ai = no } # не для ИИшки
+		custom_effect_tooltip = luna_chosen # Тултипчик
+
+		hidden_effect = { # Скрытым эффектом - смотрим первый блок, это кстомный эффект и смена страны на НЛР. Ну и ивент какой-то
+			EQS_NLR_civil_war = yes 
+			country_event = { id = equestria.919 days = 1 }
+			NLR = { 
+				change_tag_from = ROOT	
+
+			}
+		}
+	}
+	option = { # Support Celestia - остаться за ЭКВ
+		name = equestria.100.b
+		custom_effect_tooltip = celestia_chosen # тоже Тултипчик
+
+		hidden_effect = { # тут скрытм эффектом то же самое, только без смены
+			EQS_NLR_civil_war = yes
+			country_event = { id = equestria.105 days = 25 }
+			country_event = { id = equestria.179 days = 29 }
+		}
+	}
+	option = { # Tag switch to EQC - можно зайти за Мэйрлэнд
+		name = equestria.100.c
+		trigger = {  # Доступно если не ИИшка и если Мэйрленд отделился с победой Джет Сета 
+			is_ai = no
+			EQC = {
+				OR = {
+					has_completed_focus = EQC_jet_set_wins
+					NOT = { has_completed_focus = EQC_patriation }
+				}
+			}
+		}
+		custom_effect_tooltip = EQC_tag_switch # Еще один Тултипчик
+
+		hidden_effect = { # Ну и тут тоже смена стороны и эффект
+			EQS_NLR_civil_war = yes
+			EQC = { change_tag_from = ROOT	}
+		}
+	}
+	option = { # Tag switch to CRY - Аналогично предыдущему, смена на Кристалльную Империю
+		name = equestria.100.d
+		trigger = { 
+			is_ai = no
+			CRY = {
+				NOT = { 
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+		custom_effect_tooltip = CRY_tag_switch
+
+		hidden_effect = {
+			EQS_NLR_civil_war = yes
+			CRY = { change_tag_from = ROOT	}
+		}
+	}
+}
+
+country = {
+		eqs_civil_war = { # А это - как прописана идея на войну двух сестер
+
+
+			allowed = {
+				always = no
+			}
+			available = { # Когда идея может быть?
+				OR = {
+					original_tag = NLR # Либо если страна когда-то была НЛР
+					original_tag = EQS # Либо если страна когда-то была ЭКВ
+					AND = { # И если активен триггер на войну двух сестер (ищи в файлах, если в кратце - там проверяются несколько флагов) и любая другая стара является целью войны
+						eqs_has_civil_war = yes  
+						any_enemy_country = {
+							is_eqs_civil_war_tag = yes
+						}
+					}
+				}
+			}
+			removal_cost = -1
+			rule = { # Правила что нельзя вступать в альянсы и начинать войны
+				can_join_factions = no
+				can_not_declare_war = yes
+			}
+			modifier = { # Ну и модификаторы
+				stability_factor = -0.20
+				war_support_factor	= -0.15
+				political_power_factor	= -0.10
+				mobilization_speed	= 0.1
+				training_time_army_factor = -0.1
+				production_speed_buildings_factor = -0.10
+				ai_get_ally_desire_factor = -2000
+				ai_join_ally_desire_factor = -2000
+				ai_call_ally_desire_factor = -2000
+				ai_focus_aggressive_factor = 3.0
+				justify_war_goal_time = 2.00
+			}
+		}
+	}

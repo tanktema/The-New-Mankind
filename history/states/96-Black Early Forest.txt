@@ -1,0 +1,22 @@
+
+state={
+	id=96
+	name="STATE_96"
+	state_category = rural
+
+	history={
+		owner = UNS
+		add_core_of = UNS
+		buildings = {
+			infrastructure = 2
+			9406 = { naval_base = 1 }
+		}
+		victory_points = { 9406 30 }
+	}
+
+	provinces={
+		3045 3182 6050 6127 6209 9251 9329 9406 11147 11163 11231 11278 11311 13095 13098
+	}
+	manpower=22100000
+	buildings_max_level_factor=1.000
+}

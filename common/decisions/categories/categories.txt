@@ -1,0 +1,37 @@
+resource_exploring_human_category = {
+	icon = generic_formable_nations
+	picture = GFX_resources
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+christmas_celebrating_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+equestria_communist_support_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+resource_keep_exploring_human_category = {
+icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+political_actions_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+extra_worktime_human_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}

@@ -1,0 +1,209 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_technology_human_folder_small_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_human_folder_small_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_human_folder_small_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_human_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/technology_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_human_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/technology_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_human_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/technology_researched_item_bg.dds"
+	}
+	SpriteType = {
+		name = "GFX_archetype_magical_equipment_medium"
+		texturefile = "gfx/interface/archetype_infantry_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_magic_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_magic_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_magical_weapons2_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_magic_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_magical_weapons3_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_magic_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_base_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_musket.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_infantry_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_infantry_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_infantry_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_infantry_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_infantry_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_infantry_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_transport.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_lav1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_lav2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_lav3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_mechanised_infantry_a_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_lav4.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_mechanised_infantry_b_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_lav5.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_iav1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_iav2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_amphibious_mechanized_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_iav3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_amphibious_mechanized_infantry_4_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_iav4.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_amphibious_mechanized_infantry_5_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_iav5.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_gwtank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_base_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_light_tank_a_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank4.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_light_tank_b_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank5.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_medium_tank1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_medium_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_medium_tank3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_modern_tank1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_main_battle_tank_a_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_modern_tank1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_main_battle_tank_b_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_modern_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_main_battle_tank_c_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_modern_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_main_battle_tank_d_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_modern_tank3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_main_battle_tank_e_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_modern_tank3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_heavy_tank1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_heavy_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_heavy_tank3.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_superheavy_tank1.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_super_heavy_tank_a_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_superheavy_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_super_heavy_tank_b_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_superheavy_tank3.dds"
+	}
+	
+	
+		

@@ -1,0 +1,11 @@
+technology_categories = {
+	human_tech
+}
+technology_folders = {
+	human_folder = {
+		available = {
+			is_human_race = yes
+		}
+		ledger = civilian
+	}
+}

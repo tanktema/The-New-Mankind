@@ -1,0 +1,3233 @@
+focus_tree = {
+	id = uns_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UNS
+		}
+	}
+	
+	continuous_focus_position = { x = 200 y = 2500 }
+	
+	default = no
+	
+		
+	focus = { ### ТЕСТ УДАЛИТЬ НЕ ЗАБЫТЬБЛЯТЬНАХУЙ
+		id = UNS_test
+		x = 0
+		y = 0
+		icon = 000
+		cost = 0
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			country_event = {
+				id = uns.6
+			}
+			set_country_flag = tst_flag
+			country_event = {
+				id = uns.7
+			}
+			division_template = {
+				name = "SMP Squad"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 3 y = 0 }
+				}
+				support = {
+					military_police = { x = 0 y = 0 }
+				}	
+			}
+			add_popularity = {
+				ideology = ROOT
+				popularity = -0.01
+			}
+			hidden_effect = {
+			48 = {
+				add_core_of = UNS
+				remove_core_of = EQS
+				}
+			18 = {
+				add_core_of = UNS
+				remove_core_of = EQS
+				}
+			96 = {
+				set_state_category = large_city
+				set_state_name = "STATE_900"
+				}
+			set_province_name = { 
+				id = 9406 
+				name = "STATE_900" 
+				}
+			}
+		}
+	}
+	
+
+	############# Beginning 
+	
+	focus = { ### Дивный Новый Мир
+		id = UNS_evac
+		icon = GFX_goal_evac_focus
+		x = 30
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+			country_event = {
+				id = uns.1
+				days = 10
+				}
+			
+			country_event = {
+				id = uns.2
+				days = 20
+				}
+			country_event = {
+				id = uns.3
+				days = 30
+				}
+			}
+			
+		completion_reward = {
+			effect_tooltip = {
+				country_event = uns.1
+			}		
+		}
+	}
+	focus = { ### Разведка Местности
+		id = UNS_stalk
+		icon = GFX_goal_stalk
+		x = 30
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = UNS_evac
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+			country_event = {
+				id = uns.6
+				days = 15
+			}
+			country_event = {
+				id = uns.7
+				days = 30
+			}
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = {
+					id = uns.7
+				}
+			}
+			add_to_variable = {
+				var = acceptance_value
+				value = 10
+			}
+		}
+	}
+	focus = { ### Первый контакт
+		id = UNS_settle
+		x = 30
+		y = 2
+		icon = GFX_goal_settle
+		cost = 2
+		prerequisite = {
+			focus = UNS_stalk
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			news_event = {
+				id = uns.8
+			}
+		add_ideas = UNS_equestria_depence
+		hidden_effect = {
+			48 = {
+				add_core_of = UNS
+				remove_core_of = EQS
+				}
+			18 = {
+				add_core_of = UNS
+				remove_core_of = EQS
+				}
+			96 = {
+				set_state_category = large_city
+				set_state_name = "STATE_900"
+				}
+			set_province_name = { 
+				id = 9406 
+				name = "STATE_900" 
+				}
+			}
+		}
+	}
+	############## Leading party
+	focus = { ### Борьба со внутренним арвгом
+		id = UNS_enemy_inside
+		x = 13
+		y = 3
+		icon = GFX_goal_eninside
+		cost = 5
+		prerequisite = {
+			focus = UNS_settle
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = { ### Проблема Гражданства
+		id = UNS_problem_1
+		x = 10
+		y = 9
+		cost = 5
+		icon = GFX_goal_prob_1
+		prerequisite = {
+			focus = UNS_workers_power OR = UNS_demo_ever OR = UNS_fasc_rev
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = { ### Проблема Отношений
+		id = UNS_problem_2
+		x = 16
+		y = 9
+		cost = 5
+		icon = GFX_goal_prob_2
+		prerequisite = {
+			focus = UNS_workers_power OR = UNS_demo_ever OR = UNS_fasc_rev
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	############# Democracy
+	focus = { ### Оплот Демократии
+		id = UNS_demo_1
+		x = 7
+		y = 4
+		icon = GFX_goal_demo_1
+		cost = 5
+		mutually_exclusive = { focus = UNS_comm_1 }
+		mutually_exclusive = { focus = UNS_fasc_1 }
+		prerequisite = {
+			focus = UNS_enemy_inside
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = UNS_demo_adv
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = { ### Восстановление золотого запаса
+		id = UNS_return_gold
+		x = 6
+		y = 5
+		icon = GFX_goal_gold_return
+		cost = 5
+		prerequisite = {
+			focus = UNS_demo_1
+		}
+		completion_reward = {
+			add_timed_idea = {
+			idea = UNS_gold_return 
+			days = 720
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	}
+	focus = { ### Конституция США
+		id = UNS_constitution
+		x = 8
+		y = 5
+		icon = GFX_goal_const
+		cost = 6
+		prerequisite = {
+			focus = UNS_demo_1
+		}
+		completion_reward = {
+			add_ideas = UNS_constitution_1
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = { ### Демократическая Реформа
+		id = UNS_demo_reform 
+		x = 7
+		y = 6
+		icon = GFX_goal_demo_reform
+		cost = 10
+		prerequisite = {
+			focus = UNS_constitution 
+		}
+		prerequisite = {
+			focus = UNS_return_gold
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = democratic
+				long_name = UNS_harmonic_party_long
+				name = UNS_harmonic_party
+				
+			}
+			every_other_country = {
+				limit = {
+					has_government = democratic
+				}
+				
+				add_opinion_modifier = {
+					target = UNS
+					modifier = democratic_reform
+				}
+				reverse_add_opinion_modifier = {
+					target = UNS
+					modifier = democratic_reform
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = { ### Контроль за фальсификацией
+		id = UNS_fake_control
+		x = 6
+		y = 7
+		cost = 5
+		icon = GFX_goal_fake
+		prerequisite = {
+			focus = UNS_demo_reform
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = UNS_fake_stopping
+				days = 365
+			}
+		}	
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	focus = { ### Права Человека
+		id = UNS_human_rights
+		x = 8
+		y = 7
+		icon = GFX_goal_human_rights
+		cost = 6
+		prerequisite = {
+			focus = UNS_demo_reform
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = { ### Гарант Мира
+		id = UNS_demo_ever
+		x = 7
+		y = 8
+		cost = 5
+		icon = GFX_goal_demo_ever
+		prerequisite = {
+			focus = UNS_fake_control
+		}
+		prerequisite = {
+			focus = UNS_human_rights
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = {
+				idea = UNS_peacekeeping
+			}
+			set_rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+	
+	############ Communism
+	focus = { ### Большая Перемена
+		id = UNS_comm_1
+		x = 13
+		y = 4
+		cost = 5
+		mutually_exclusive = { focus = UNS_demo_1 }
+		mutually_exclusive = { focus = UNS_fasc_1 }
+		prerequisite = {
+			focus = UNS_enemy_inside
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = UNS_comm_adv
+			add_stability = 0.05
+			add_war_support = 0.05
+		}		
+	}
+	focus = { ### Уступки Профсоюзам
+		id = UNS_prof_union
+		x = 12
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = UNS_comm_1
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = { ### Поддержка СССР
+		id = UNS_soviet_help
+		x = 14
+		y = 5
+		cost = 5
+		prerequisite = {
+			focus = UNS_comm_1
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					tag = SOU
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = soviet_embassy
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = SOU
+					modifier = soviet_embassy
+				}
+			}
+		}
+	}
+	focus = { ### Коммунисты в парламенте
+		id = UNS_par_comm
+		x = 12
+		y = 6
+		cost = 6
+		prerequisite = {
+			focus = UNS_prof_union
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = UNS_communist_influence
+				days = 120
+			}
+		}
+	}
+	focus = { ### Заручиться поддержкой Старлайт Глиммер
+		id = UNS_starlight_help
+		x = 14
+		y = 6
+		cost = 4
+		prerequisite = {
+			focus = UNS_soviet_help
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			custom_effect_tooltip = uns_comm_tooltip_1
+			unlock_decision_category_tooltip = equestria_communist_support_category
+			create_wargoal = {
+				type = annex_everything
+				target = EQS
+			}
+		}
+		hidden_effect = {
+			EQS = {
+				set_country_flag = UNS_equestria_communist_support 
+			}
+			set_variable = {
+				var = equestria_comm_size
+				value = 0
+			}
+		}
+	}
+	focus = { ### Социалистические Штаты Америки
+		id = UNS_soc_state
+		x = 13
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = UNS_starlight_help
+		}
+		prerequisite = {
+			focus = UNS_par_comm
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+	}
+	focus = { ### Власть Трудящимся
+		id = UNS_workers_power
+		x = 13
+		y = 8
+		cost = 10
+		prerequisite = {
+			focus = UNS_soc_state
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_stability = 0.25
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	
+	############# Fascism
+	focus = { ### Make America Great Again
+		id = UNS_fasc_1
+		x = 19
+		y = 4
+		cost = 5
+		mutually_exclusive = { focus = UNS_demo_1 }
+		mutually_exclusive = { focus = UNS_comm_1 }
+		prerequisite = {
+			focus = UNS_enemy_inside
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = UNS_fasc_adv
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	focus = { ### Новый Путь
+		id = UNS_new_way
+		x = 19
+		y = 5
+		prerequisite = {
+			focus = UNS_fasc_1
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			country_event = {
+				id = uns.10
+			}
+		}
+	}
+	focus = { ### Посольство к Оборотням
+		id = UNS_embass_changeling
+		x = 19
+		y = 6
+		cost = 7
+		prerequisite = {
+			focus = UNS_new_way
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			CHN = {
+				add_opinion_modifier = {
+					target = UNS
+					modifier = embassy_changeling
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = embassy_changeling
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = { ### Винтовку каждому человеку
+		id = UNS_rifle_human
+		x = 21
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = UNS_new_way
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = {
+				idea = UNS_militarized_people
+			}
+		}
+	}
+	focus = { ### Образец Третьего Рейха
+		id = UNS_germany_way
+		x = 18
+		y = 7
+		cost = 5
+		prerequisite = {
+			focus = UNS_embass_changeling
+		}
+		mutually_exclusive = { focus = UNS_new_fasc }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = fascism
+				long_name = UNS_nasizm_party_long
+				name = UNS_nasizm_party
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_stability = -0.1
+		}
+	}
+	focus = { ### Новый Стиль Национализма
+		id = UNS_new_fasc
+		x = 20
+		y = 7
+		cost = 5
+		prerequisite = {
+			focus = UNS_embass_changeling
+		}
+		mutually_exclusive = { focus = UNS_germany_way }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_stability = -0.1
+			set_country_flag = UNS_military_strength
+		}
+	}
+	focus = { ### Фашистский Переворот
+		id = UNS_fasc_rev
+		x = 19
+		y = 8
+		icon = GFX_goal_fasc_rev
+		cost = 5
+		prerequisite = {
+			focus = UNS_new_fasc OR = UNS_germany_way
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+			country_event = {
+				id = uns.11
+				days = 15
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+	
+	############## Politics
+	
+	focus = { ### Изучить ситуацию в мире
+		id = UNS_world_situation
+		x = 13
+		y = 10
+		cost = 10
+		prerequisite = {
+		 focus = UNS_workers_power OR = UNS_demo_ever OR = UNS_fasc_rev
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			set_major = yes
+			country_event = {
+				id = uns.15
+			}
+		}
+	} 
+	focus = { ### Посольство в Весалиполис
+		id = UNS_changeling
+		x = 3
+		y = 11
+		cost = 5
+		prerequisite = {
+			focus = UNS_world_situation
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					tag = CHN
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = embassy_vesalipolis
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = embassy_vesalipolis
+				}
+			}
+			country_event = {
+				id = uns.17
+			}
+		}
+	} 
+	focus = { ### Посольство в Хьортланд
+		id = UNS_embass_hjortland
+		x = 7
+		y = 11
+		cost = 5
+		prerequisite = {
+			focus = UNS_world_situation
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					tag = OLE
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = embassy_hjortland
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = OLE
+					modifier = embassy_hjortland
+				}
+			}
+			country_event = {
+				id = uns.16
+			}
+		}
+		bypass = {
+			OLE = {
+				exists = no
+			}
+		}		
+	} 
+	focus = { ### Кантерлотское Соглашение
+		id = UNS_Canterlot_meeting
+		x = 11
+		y = 11
+		cost = 5
+		prerequisite = {
+			focus = UNS_world_situation
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					tag = EQS
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = canterlot_visit
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = EQS
+					modifier = canterlot_visit
+					
+				}
+			}
+			country_event = {
+				id = uns.18
+			}
+		}
+	} 
+	focus = { ### Визит в Сталлионград
+		id = UNS_Stalliongrad_visit
+		x = 15
+		y = 11
+		cost = 5
+		prerequisite = {
+			focus = UNS_world_situation
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					tag = STG
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = stalliongrad_visit
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = STG
+					modifier = stalliongrad_visit
+				}
+			}
+		}
+	} 
+	focus = { ### Саммит в Кантерлоте
+		id = UNS_canterlot_summit
+		x = 19
+		y = 11
+		cost = 5
+		prerequisite = {
+			focus = UNS_world_situation
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = SOU
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = GEM
+				relation = non_aggression_pact
+				active = yes
+			}
+			diplomatic_relation = {
+				country = GRB
+				relation = non_aggression_pact
+				active = yes
+			}
+			country_event = {
+				id = uns.20
+			}
+		}
+	} 
+	focus = { ### Реакция на восстание Найтмэр Мун
+		id = UNS_eqs_civilwar
+		x = 25
+		y = 11
+		cost = 5
+		available = {
+			any_country = {
+				original_tag = EQS
+				has_government = democratic
+				has_civil_war = yes
+			}
+		}
+		prerequisite = {
+			focus = UNS_world_situation
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_political_power = 25
+		}
+	} 
+	focus = { ### Война Оленей и Оборотней
+		id = UNS_cha_ole_war
+		x = 5
+		y = 12
+		cost = 2
+		prerequisite = {
+			focus = UNS_changeling OR = UNS_embass_hjortland
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			country_event = {
+				id = uns.21
+			}
+		}
+	} 
+	focus = { ### Политика Умиротворения
+		id = UNS_peace_politics
+		x = 1
+		y = 12
+		cost = 5
+		prerequisite = {
+			focus = UNS_changeling
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Дипломатический Протест
+		id = UNS_diplomacy_protest
+		x = 3
+		y = 13
+		cost = 4
+		prerequisite = {
+			focus = UNS_cha_ole_war 
+		}
+		mutually_exclusive = {
+			focus = UNS_join_war
+			}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Оказать Военную помощь
+		id = UNS_join_war
+		x = 7
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = UNS_cha_ole_war 
+		}
+		available = {
+			OLE = {
+				has_war_with = CHN
+			}
+			UNS = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		completion_reward = {
+			UNS = {
+				diplomatic_relation = {
+					country = OLE
+					relation = non_aggression_pact
+					active = yes
+				}
+				diplomatic_relation = {
+					country = OLE
+					relation = military_access
+					active = yes
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = UNS_diplomacy_protest
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		bypass = {
+			OLE = {
+				exists = no
+			}
+		}
+		continue_if_invalid = yes
+		
+	} 
+	focus = { ### Союз с Оборотнями
+		id = UNS_changeling_alliance
+		x = 1
+		y = 14
+		cost = 6
+		prerequisite = {
+			focus = UNS_peace_politics 
+		}
+		prerequisite = {
+			focus = UNS_diplomacy_protest
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			CHN = {
+				country_event = {
+					id = uns.22
+					days = 1
+				}
+			}
+		}
+	} 
+	focus = { ### Падение Аликорна
+		id = UNS_alicorn_fall
+		x = 1
+		y = 15
+		cost = 30
+		prerequisite = {
+			focus = UNS_changeling_alliance
+		}
+		mutually_exclusive = {
+			focus = UNS_chang_war
+			}
+		mutually_exclusive = {
+			focus = UNS_neytrality
+			}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+		}
+			
+	} 
+	focus = { ### Война с Оборотнями
+		id = UNS_chang_war
+		x = 7
+		y = 15
+		cost = 5
+		prerequisite = {
+			focus = UNS_join_war
+		}
+		mutually_exclusive = {
+			focus = UNS_neytrality
+			}
+			mutually_exclusive = {
+			focus = UNS_alicorn_fall
+			}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Сохранять Нейтралитет
+		id = UNS_neytrality
+		x = 4
+		y = 15
+		cost = 6
+		prerequisite = {
+			focus = UNS_diplomacy_protest
+		}
+		mutually_exclusive = {
+			focus = UNS_chang_war
+			}
+			mutually_exclusive = {
+			focus = UNS_alicorn_fall
+			}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Обмен Технологиями
+		id = UNS_tech_trade
+		x = 9
+		y = 12
+		cost = 5
+		prerequisite = {
+			focus = UNS_Canterlot_meeting
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Акт о Дружбе Людей и Пони
+		id = UNS_pony_human_friendship
+		x = 13
+		y = 12
+		cost = 6
+		prerequisite = {
+			focus = UNS_Canterlot_meeting OR = UNS_Stalliongrad_visit
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Пригласить Твайлайт Спаркл в Вашингтон
+		id = UNS_twilight
+		x = 11
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = UNS_Canterlot_meeting
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			EQS = {
+				country_event = {
+					id = uns.26
+					days = 1
+				}
+			}
+		}
+	} 
+	focus = { ### Союз со Сталлионградом
+		id = UNS_stal_uns_alliance
+		x = 15
+		y = 13
+		cost = 10
+		prerequisite = {
+			focus = UNS_Stalliongrad_visit
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			create_faction = UNS_STG_FOCUS_FACTION
+			STG = {
+				country_event = {
+					id = uns.28
+					days = 0
+				}
+			}
+		}
+	} 
+	focus = { ### Союз с Эквестрией
+		id = UNS_eqs_uns_alliance
+		x = 11
+		y = 14
+		cost = 10
+		prerequisite = {
+			focus = UNS_twilight
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			EQS = {
+				country_event = {
+					id = uns.29
+					days = 0
+				}
+			}
+		}
+	} 
+	focus = { ### Мировая Революция
+		id = UNS_world_rev
+		x = 15
+		y = 14
+		cost = 5
+		prerequisite = {
+			focus = UNS_stal_uns_alliance
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+		}
+	} 
+	focus = { ### Конец политике Нейтралитета
+		id = UNS_end_neytrality
+		x = 13
+		y = 15
+		cost = 10
+		prerequisite = {
+			focus = UNS_pony_human_friendship
+		}
+		prerequisite = {
+			focus = UNS_eqs_uns_alliance OR = UNS_world_rev
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_war_support = 0.2
+			add_stability = 0.3
+			add_ideas = UNS_neutrality_over
+		}
+	} 
+	focus = { ### Гарант Независимости
+		id = UNS_guarantee_independence
+		x = 13
+		y = 16
+		cost = 10
+		prerequisite = {
+			focus = UNS_end_neytrality
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			give_guarantee = EQS
+			give_guarantee = CRY
+			give_guarantee = STG 
+		}
+	} 
+	focus = { ### Дружба с СССР
+		id = UNS_soviet_relation
+		x = 17
+		y = 12
+		cost = 10
+		prerequisite = {
+			focus = UNS_canterlot_summit
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Дружба с Британией
+		id = UNS_british_relation
+		x = 19
+		y = 12
+		cost = 10
+		prerequisite = {
+			focus = UNS_canterlot_summit
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}  
+	focus = { ### Примириться с Германией
+		id = UNS_germany_relation
+		x = 21
+		y = 12
+		cost = 10 
+		prerequisite = {
+			focus = UNS_canterlot_summit
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Новый Коминтерн
+		id = UNS_aliance_sov
+		x = 17
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = UNS_soviet_relation
+		}
+		mutually_exclusive = {
+			focus = UNS_brit_alliance
+		}
+		mutually_exclusive = {
+			focus = UNS_germany_alliance
+		}
+			
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Возродить Альянс
+		id = UNS_brit_alliance
+		x = 19
+		y = 13
+		cost = 5 
+		prerequisite = {
+			focus = UNS_british_relation
+		}
+		mutually_exclusive = {
+			focus = UNS_aliance_sov
+		}
+		mutually_exclusive = {
+			focus = UNS_germany_alliance
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Ось Нового Мира
+		id = UNS_germany_alliance
+		x = 21
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = UNS_germany_relation
+		}
+		mutually_exclusive = {
+			focus = UNS_aliance_sov
+		}
+		mutually_exclusive = {
+			focus = UNS_brit_alliance
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Социализм всему Миру
+		id = UNS_world_soc
+		x = 17
+		y = 14
+		cost = 7 
+		prerequisite = {
+			focus = UNS_aliance_sov
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Защита Свободы
+		id = UNS_new_allies
+		x = 19
+		y = 14
+		cost = 7 
+		prerequisite = {
+			focus = UNS_brit_alliance
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Высшая Раса
+		id = UNS_axis_new
+		x = 21
+		y = 14
+		cost = 7
+		prerequisite = {
+			focus = UNS_germany_alliance
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	} 
+	focus = { ### Поддержать Эквестрию
+		id = UNS_help_equestria
+		x = 24
+		y = 12
+		cost = 8 
+		prerequisite = {
+			focus = UNS_eqs_civilwar
+		}
+		mutually_exclusive = {
+			focus = UNS_support_moon
+		}
+		available = {
+			AND = {
+				any_other_country = {
+					original_tag = EQS
+					has_civil_war = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			EQS = {
+				add_opinion_modifier = {
+					target = UNS
+					modifier = supported_us
+				}
+				reverse_add_opinion_modifier = {
+					target = UNS
+					modifier = supported_us
+				}
+			}
+			NLR = {
+				add_opinion_modifier = {
+					target = UNS
+					modifier = supported_enemy
+				}
+				reverse_add_opinion_modifier = {
+					target = UNS
+					modifier = supported_enemy
+				}
+			}
+		}
+	} 
+	focus = { ### Поддержать Восстание
+		id = UNS_support_moon
+		x = 26
+		y = 12
+		cost = 8 
+		prerequisite = {
+			focus = UNS_eqs_civilwar
+		}
+		available = {
+			AND = {
+				any_other_country = {
+					tag = NLR
+					exists = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		mutually_exclusive = {
+			focus = UNS_help_equestria
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			NLR = {
+				add_opinion_modifier = {
+					target = UNS
+					modifier = supported_us
+				}
+				reverse_add_opinion_modifier = {
+					tag = UNS
+					modifier = supported_us
+				}
+			}
+			EQS = {
+				add_opinion_modifier = {
+					target = UNS
+					modifier = supported_enemy
+				}
+				reverse_add_opinion_modifier = {
+					target = UNS
+					modifier = supported_enemy
+				}
+			}
+		}
+	} 
+	focus = { ### Миротворческие Силы
+		id = UNS_peacemakers
+		x = 24
+		y = 13
+		cost = 5
+		prerequisite = {
+			focus = UNS_help_equestria
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = UNS_equestria_support
+			give_military_access = EQS
+			EQS = {
+				give_military_access = UNS
+			}
+		}		
+	} 
+	focus = { ### Военная Помощь
+		id = UNS_military_support
+		x = 26
+		y = 13
+		cost = 5 
+		prerequisite = {
+			focus = UNS_support_moon
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = UNS_lunar_support
+			give_military_access = NLR
+			NLR = {
+				give_military_access = UNS
+			}
+		}
+	} 
+	focus = { ### Гуманитарная Помощь
+		id = UNS_hum_assist
+		x = 24
+		y = 14
+		cost = 3 
+		prerequisite = {
+			focus = UNS_peacemakers
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 5000
+			}
+			has_equipment = {
+				support_equipment > 1000
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+			}
+			EQS = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = UNS
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = UNS
+				}
+			}
+		}
+	} 
+	focus = { ### Послать оружие
+		id = UNS_send_guns
+		x = 26
+		y = 14
+		cost = 3 
+		prerequisite = {
+			focus = UNS_military_support
+		}
+		available = {
+			has_equipment = {
+				infantry_equipment > 5000
+			}
+			has_equipment = {
+				support_equipment > 1000
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -5000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+			}
+			NLR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 5000
+					producer = UNS
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = UNS
+				}
+			}
+		}
+	} 
+	focus = { ### Послевоенная Поддержка
+		id = UNS_continue_support
+		x = 24
+		y = 15
+		cost = 10 
+		prerequisite = {
+			focus = UNS_hum_assist
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = UNS_afterwar_assistance_UNS_EQS
+			EQS = {
+				add_ideas = UNS_afterwar_assistance_EQS
+			}
+		}
+	} 
+	focus = { ### Выдать Беженцев
+		id = UNS_resend_runaways
+		x = 26
+		y = 15
+		cost =	10 
+		prerequisite = {
+			focus = UNS_send_guns
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = UNS_afterwar_assistance_UNS_NLR
+			NLR = {
+				add_ideas = UNS_afterwar_assistance_NLR
+			}
+		}
+	} 
+	 
+	  
+	 
+
+	############## Industry
+	focus = { ### Борьба с Новой Депрессией
+		id = UNS_depression
+		x = 36
+		y = 3
+		cost = 5
+		prerequisite = {
+		focus = UNS_settle
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			country_event = {
+				id = uns.9
+			}
+		}
+	}
+	focus = { ### Разведка Ресурсов
+		id = UNS_resources
+		x = 34
+		y = 4
+		cost = 10
+		prerequisite = {
+		focus = UNS_depression
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = resource_exploring_human_category
+		}
+	}
+	focus = { ### Возрождение ВПК
+		id = UNS_industry
+		x = 38
+		y = 4
+		cost = 5
+		prerequisite = {
+			focus = UNS_depression
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = UNS_industry_rebuild
+				days = 720
+			}
+		}
+	}	
+	focus = { ### Использование Вторсырья
+		id = UNS_recycle
+		x = 32
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = UNS_resources
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_ideas = UNS_recycle_idea
+		}
+	}
+	focus = { ### Продолжить разведку залежей
+		id = UNS_resource_search
+		x = 36
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = UNS_resources
+		}
+		prerequisite = {
+			focus = UNS_industry
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			unlock_decision_category_tooltip = resource_keep_exploring_human_category
+		}
+	}	
+	focus = { ### Расширение производства
+		id = UNS_up_product
+		x = 40
+		y = 5
+		cost = 5
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = UNS_industry
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = UNS_equestria_depence
+				add_idea = UNS_equestria_depence_less_1
+			}
+		}
+	}
+	focus = { ### Начало Модернизации
+		id = UNS_modernization
+		x = 44
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 4
+		}
+		prerequisite = {
+			focus = UNS_industry
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 3
+				category = industry
+				category = infantry_weapons
+				category = electronics
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = light_fighter
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = cat_light_armor
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
+		}
+	}	
+	focus = { ### Геологическая разведка
+		id = UNS_new_mines
+		x = 38
+		y = 6
+		cost = 5
+		prerequisite = {
+			focus = UNS_resource_search
+		}
+		prerequisite = {
+			focus = UNS_up_product
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_resource = {
+					type = steel
+					amount = 2
+				}
+			}
+			random_owned_state = {
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = { ### Переработка Резины
+		id = UNS_rubber
+		x = 34
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = UNS_recycle
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+			}
+		}
+	}
+	focus = { ### Нефтепереработка
+		id = UNS_oil
+		x = 30
+		y = 6
+		cost = 10
+		available = {
+			has_tech = synth_oil_experiments 
+		}
+		prerequisite = {
+			focus = UNS_recycle
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { ### Сбор металлолома
+		id = UNS_metall
+		x = 30
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = UNS_oil
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = { ### Раздельный сбор отходов
+		id = UNS_recycle_2
+		x = 34
+		y = 7
+		cost = 10
+		prerequisite = {
+			focus = UNS_rubber
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = chromium
+					amount = 2
+				}
+				add_resource = {
+					type = tungsten
+					amount = 2
+				}
+			}
+		}
+	}
+	focus = { ### Долговечность для народа
+		id = UNS_human_more
+		x = 32
+		y = 8
+		cost = 5
+		prerequisite = {
+			focus = UNS_recycle_2
+		}
+		prerequisite = {
+			focus = UNS_metall
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_ideas = UNS_longterm 
+		}
+	}
+	focus = { ### Ставка на оборону
+		id = UNS_defence_focus
+		x = 42
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = UNS_modernization
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_ideas = UNS_defence
+		}
+	}
+	focus = { ### Ставка на атаку
+		id = UNS_offence_focus
+		x = 46
+		y = 6
+		cost = 10
+		prerequisite = {
+			focus = UNS_modernization
+		}
+		prerequisite = {
+			focus = UNS_true_army OR = UNS_peace_forces
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_ideas = UNS_offence
+		}
+	}
+	focus = { ### Увеличить военный бюджет
+		id = UNS_new_military_budget
+		x = 44
+		y = 7
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_offence_focus OR = UNS_defence_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { ### Прекратить закупку вооружения
+		id = UNS_stop_buying
+		x = 44
+		y = 8
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_new_military_budget
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			
+		}
+	}
+	focus = { ### Продолжить Модернизацию
+		id = UNS_keep_modernizating
+		x = 44
+		y = 9
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_stop_buying
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = light_fighter
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+	focus = { ### Заполнить Пустые Склады
+		id = UNS_no_empty_storage
+		x = 44
+		y = 10
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_keep_modernizating
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = { ### Военная Машина США
+		id = UNS_war_machine
+		x = 42
+		y = 10
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_tank_industry
+		}
+		prerequisite = {
+			focus = UNS_keep_modernizating
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = { ### Небо, море и земля
+		id = UNS_sky_sea_land
+		x = 44
+		y = 11
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_no_empty_storage
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = { ### Дальнейшее расширение производства
+		id = UNS_rise_of_industry
+		x = 38
+		y = 7
+		cost = 7
+		prerequisite = {
+			focus = UNS_new_mines
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = { ### Выбрать Ford
+		id = UNS_ford_motors
+		x = 36
+		y = 8
+		cost = 5
+		prerequisite = {
+			focus = UNS_rise_of_industry
+		}
+		mutually_exclusive = {
+			focus = UNS_general_motors
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			available_political_advisor = UNS_ford
+		}
+	}
+	focus = { ### Выбрать General Motors
+		id = UNS_general_motors
+		x = 40
+		y = 8
+		cost = 5
+		prerequisite = {
+			focus = UNS_rise_of_industry
+		}
+		mutually_exclusive = {
+			focus = UNS_ford_motors
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			available_political_advisor = UNS_generalmotors
+		}
+	}
+	focus = { ### Расширение танковой промышленности
+		id = UNS_tank_industry
+		x = 38
+		y = 9
+		cost = 10
+		prerequisite = {
+			focus = UNS_ford_motors OR = UNS_general_motors
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			available_political_advisor = UNS_chrysler
+		}
+	}
+	focus = { ### Развитие инфраструктуры
+		id = UNS_infrastructure
+		x = 34
+		y = 9
+		cost = 10
+		prerequisite = {
+			focus = UNS_human_more
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { ### Основать WIT
+		id = UNS_mit_restart
+		x = 36
+		y = 10
+		cost = 15
+		prerequisite = {
+			focus = UNS_infrastructure
+		}
+		prerequisite = {
+			focus = UNS_tank_industry
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = { ### Факультет IT
+		id = UNS_it_fac
+		x = 34
+		y = 11
+		cost = 7
+		prerequisite = {
+			focus = UNS_mit_restart
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	focus = { ### Факультет Промышленности
+		id = UNS_ind_fac
+		x = 38
+		y = 11
+		cost = 7
+		prerequisite = {
+			focus = UNS_mit_restart
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = industry 
+			}
+		}
+	}
+	focus = { ### Гражданская промышленность
+		id = UNS_civ_ind
+		x = 32
+		y = 12
+		cost = 10
+		prerequisite = {
+			focus = UNS_it_fac
+		}
+		mutually_exclusive = { 
+			focus = UNS_balance_ind 
+		}
+		mutually_exclusive = {
+			focus = UNS_mil_ind 
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+	
+		}
+	}
+	focus = { ### Поиск Компромисса
+		id = UNS_balance_ind
+		x = 36
+		y = 12
+		cost = 10
+		prerequisite = {
+			focus = UNS_it_fac
+		}
+		prerequisite = {
+			focus = UNS_ind_fac
+		}
+		mutually_exclusive = { 
+			focus = UNS_civ_ind 
+		}
+		mutually_exclusive = {
+			focus = UNS_mil_ind 
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+	
+		}
+	}
+	focus = { ### Милитаризация Промышленности
+		id = UNS_mil_ind 
+		x = 40
+		y = 12
+		cost = 10
+		prerequisite = {
+			focus = UNS_ind_fac
+		}
+		mutually_exclusive = { 
+			focus = UNS_balance_ind
+		}
+		mutually_exclusive = { 
+			focus = UNS_civ_ind
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+	
+		}
+	}
+	focus = { ### Научный подъем
+		id = UNS_science_expand
+		x = 36
+		y = 13
+		cost = 10
+		prerequisite = {
+			focus = UNS_civ_ind OR = UNS_balance_ind OR = UNS_mil_ind
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = { ### Восстановить Статую Свободы
+		id = UNS_freedom_statue
+		x = 36
+		y = 14
+		cost = 15
+		prerequisite = {
+			focus = UNS_science_expand
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+	
+		}
+		completion_reward = {
+			add_stability = 0.25
+		}
+	}			
+	########### Military
+	focus = { ### Восстановление Армии
+		id = UNS_military
+		x = 58
+		y = 3
+		cost = 5
+		prerequisite = {
+			focus = UNS_settle
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			country_event = {
+				id = uns.30
+				days = 5
+			}
+		}
+	}
+	########### ARMY
+	focus = { ### ВС США
+		id = UNS_army
+		x = 50
+		y = 4
+		icon = GFX_goal_army
+		cost = 10
+		prerequisite = {
+			focus = UNS_military
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = { ### Полноценная Армия
+		id = UNS_true_army
+		x = 48
+		y = 5
+		icon = 111
+		cost = 7
+		prerequisite = {
+			focus = UNS_army
+		}
+		mutually_exclusive = {
+			focus = UNS_peace_forces
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = true_army_tooltip
+			hidden_effect = {
+				division_template = {
+					name = "U.S Army Division"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						field_hospital = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
+				}
+			}
+		}	
+	}
+	focus = { ### Миротворческие Силы
+		id = UNS_peace_forces
+		x = 52
+		y = 5
+		icon = 111
+		cost = 7
+		prerequisite = {
+			focus = UNS_army
+		}
+		mutually_exclusive = {
+			focus = UNS_true_army
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = peacekeeper_army_tooltip
+			hidden_effect = {
+				division_template = {
+					name = "U.S. Peacekeepers Division"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						artillery_brigade = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						artillery_brigade = { x = 2 y = 0 }
+						
+					}
+					support = {
+						field_hospital = { x = 0 y = 0 }
+					}
+				}
+			}
+		}
+	}
+	focus = { ### Новая Доктрина
+		id = UNS_new_doctrine
+		x = 50
+		y = 6
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_true_army OR = UNS_peace_forces
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = land_doctrine 
+			}
+		}
+	}
+	focus = { ### Ставка на Артиллерию
+		id = UNS_artillery_focus
+		x = 48
+		y = 7
+		icon = 111
+		cost = 6
+		prerequisite = {
+			focus = UNS_new_doctrine
+		}
+		mutually_exclusive = {
+			focus = UNS_motorize_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_superior_firepower 
+			}
+		}
+	}
+	focus = { ### Ставка на Скорость
+		id = UNS_motorize_focus
+		x = 52
+		y = 7
+		icon = 111
+		cost = 6
+		prerequisite = {
+			focus = UNS_new_doctrine
+		}
+		mutually_exclusive = {
+			focus = UNS_artillery_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_mobile_warfare 
+			}
+		}
+	}
+	focus = { ### Марш Артиллеристов
+		id = UNS_artillery_marsch
+		x = 46
+		y = 8
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_artillery_focus
+		}
+		mutually_exclusive = {
+			focus = UNS_armorcar
+		}
+		mutually_exclusive = {
+			focus = UNS_true_armor
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = cat_anti_tank
+				category = cat_anti_air
+				category = artillery
+			}
+		}
+	}
+	focus = { ### Бронетехника
+		id = UNS_armorcar
+		x = 50
+		y = 8
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_artillery_focus OR = UNS_motorize_focus
+		}
+		mutually_exclusive = {
+			focus = UNS_artillery_marsch
+		}
+		mutually_exclusive = {
+			focus = UNS_true_armor
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_mechanized_equipment
+				categoty = motorized_equipment
+			}
+		}
+	}
+	focus = { ### Полноценная броня
+		id = UNS_true_armor
+		x = 54
+		y = 8
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_motorize_focus
+		}
+		mutually_exclusive = {
+			focus = UNS_artillery_marsch
+		}
+		mutually_exclusive = {
+			focus = UNS_armorcar
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_light_armor
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
+		}
+	}
+	focus = { ### Ужесточить подготовку
+		id = UNS_expand_training
+		x = 48
+		y = 9
+		icon = 111
+		cost = 8
+		prerequisite = {
+			focus = UNS_artillery_marsch OR = UNS_armorcar
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_ideas = UNS_training
+		}
+	}
+	focus = { ### Войска Спец Назначения
+		id = UNS_special_forces
+		x = 52
+		y = 9
+		icon = 111
+		cost = 8
+		prerequisite = {
+			focus = UNS_armorcar OR = UNS_true_armor
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = special_forces_tech
+			}
+		}
+	}
+	focus = { ### Ежегодные учения
+		id = UNS_year_training
+		x = 50
+		y = 10
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_special_forces OR = UNS_expand_training
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			army_experience = 75
+		}
+	}
+	focus = { ### Опыт Двух Войн
+		id = UNS_two_war_xp
+		x = 50
+		y = 11
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_year_training
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_ideas = UNS_twowar_exp
+		}
+	}
+
+####### AIR
+	focus = { ### ВВС США
+		id = UNS_air
+		x = 58
+		y = 4
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_military
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+	}
+	focus = { ### Выжженая Земля
+		id = UNS_burned_terrain
+		x = 56
+		y = 5
+		icon = 111
+		cost = 5
+		prerequisite = {
+			focus = UNS_air
+		}
+		mutually_exclusive = {
+			focus = UNS_fighter_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = { ### Воздушный контроль
+		id = UNS_fighter_focus
+		x = 60
+		y = 5
+		icon = 111
+		cost = 5
+		prerequisite = {
+		focus = UNS_air
+		}
+		mutually_exclusive = {
+		focus = UNS_burned_terrain
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+	focus = { ### Летное Училище
+		id = UNS_flight_school
+		x = 58
+		y = 6
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_fighter_focus OR = UNS_burned_terrain
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_ideas = UNS_air_techiqum
+		}
+	}
+	focus = { ### Программа поддержки Асов
+		id = UNS_aces
+		x = 56
+		y = 7
+		icon = 111
+		cost = 7
+		prerequisite = {
+			focus = UNS_flight_school
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_ideas = UNS_aces_prep
+		}
+	}
+	focus = { ### Новые Аэродромы
+		id = UNS_airfields
+		x = 60
+		y = 7
+		icon = 11
+		cost = 10
+		prerequisite = {
+			focus = UNS_flight_school
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { ### Небо и земля
+		id = UNS_earth_and_sky
+		x = 58
+		y = 8
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_airfields
+		}
+		prerequisite = {
+			focus = UNS_aces
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = cat_battlefield_support
+			}
+		}
+	}
+	focus = { ### Ограничить продажу технологий
+		id = UNS_limit_license
+		x = 58
+		y = 9
+		icon = 111
+		cost = 7
+		prerequisite = {
+			focus = UNS_earth_and_sky
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+}
+	focus = { ### РЭБ
+		id = UNS_ref_insert
+		x = 56
+		y = 10
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_limit_license
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_ideas = UNS_rab
+		}
+	}
+	focus = { ### Ужесточить подготовку пилотов
+		id = UNS_flight_training
+		x = 60
+		y = 10
+		icon = 11
+		cost = 10
+		prerequisite = {
+			focus = UNS_limit_license
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	focus = { ### МБР
+		id = UNS_nukes
+		x = 58
+		y = 11
+		icon = 11
+		cost = 15
+		prerequisite = {
+			focus = UNS_flight_training
+		}
+		prerequisite = {
+			focus = UNS_ref_insert
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 2
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
+##### NAVY
+	focus = { ### ВМФ США
+		id = UNS_fleet
+		x = 66
+		y = 4
+		icon = GFX_goal_navy
+		cost = 10
+		prerequisite = {
+			focus = UNS_military
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			navy_experience = 25
+		}
+	}
+	focus = { ### Старая Доктрина
+		id = UNS_carrier_focus
+		x = 64
+		y = 5
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_fleet
+		}
+		mutually_exclusive = {
+			focus = UNS_new_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_base_strike
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = cv_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	focus = { ### Новый Курс
+		id = UNS_new_focus
+		x = 68
+		y = 5
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_fleet
+		}
+		mutually_exclusive = {
+			focus = UNS_carrier_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_trade_interdiction
+				category = cat_fleet_in_being
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = ss_tech
+				category = bb_tech
+			}
+		}
+	}
+	focus = { ### Береговая Охрана
+		id = UNS_coastall_guard
+		x = 66
+		y = 6
+		icon = 111
+		cost = 6
+		prerequisite = {
+			focus = UNS_new_focus OR = UNS_carrier_focus
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = { ### Наша Тактика
+		id = UNS_new_tactics
+		x = 66
+		y = 7
+		icon = 111
+		cost = 7
+		prerequisite = {
+			focus = UNS_coastall_guard
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = naval_doctrine 
+			}
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 4
+				category = dd_tech
+				category = cl_tech 
+				category = ca_tech
+				category = cv_tech
+				category = bb_tech
+				category = bc_tech
+				category = ss_tech
+				category = tp_tech
+			}
+		}
+	}
+	focus = { ### Поддержка с Моря
+		id = UNS_naval_support
+		x = 66
+		y = 8
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_new_tactics
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 2
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+	focus = { ### U.S.M.C
+		id = UNS_usmc
+		x = 66
+		y = 9
+		icon = 111
+		cost = 10
+		prerequisite = {
+			focus = UNS_naval_support
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = uns_marines_tooltip 
+			create_corps_commander = {
+				name = "John Henry Edem"
+				portrait_path = "gfx/leaders/UNS/usa1.dds"
+				traits = { marines_leader }
+				skil = 5
+				attack_skill = 5
+				defense_skill = 4
+				planning_skill = 6
+				logistics_skill = 5
+			}
+			hidden_effect = {
+				load_oob = "UNS_marines"  
+			}
+		}
+	}
+	focus = { ### Подготовка USMC
+		id = UNS_marines_training
+		x = 64
+		y = 10
+		icon = 
+		cost = 10
+		prerequisite = {
+			focus = UNS_usmc
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+			add_ideas = UNS_usmc_train_idea
+		}
+	}
+	focus = { ### Доминирование на воде
+		id = UNS_naval_superiority
+		x = 68
+		y = 10
+		icon = 
+		cost = 10
+		prerequisite = {
+			focus = UNS_usmc
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+	}
+	focus = { ### Сражение на берегу
+		id = UNS_coastall_fight
+		x = 66
+		y = 11
+		icon = 
+		cost = 10
+		prerequisite = {
+			focus = UNS_naval_superiority
+		}
+		prerequisite = {
+			focus = UNS_marines_training
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		select_effect = {
+		
+		}
+		completion_reward = {
+		
+		}
+	}

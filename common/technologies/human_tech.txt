@@ -1,0 +1,367 @@
+@989 = 0
+@1007 = 0
+@1009 = 2
+@1010 = 4
+@1011 = 6
+@1012 = 8
+@1013 = 10
+@1014 = 12
+@1015 = 14
+@1016 = 16
+@1017 = 18
+@1018 = 20
+@1019 = 22
+@1020 = 24
+@1021 = 26
+@1022 = 28
+@1023 = 30
+@1024 = 32
+@1025 = 34
+@1026 = 36
+
+technologies = {
+	human_race = {
+		research_cost = 1
+		intel_network_gain_factor = 0.2
+		recon = {
+			maximum_speed = -0.1
+		}
+		allow = {
+			always = no
+		}
+	}
+	#Снайперы
+	
+	human_snipers_corps = {
+		depencies = {
+			human_race = 1
+			tech_support = 1
+		}
+		enable_subunits = { sniper_corps }
+		path = {
+			leads_to_tech = snipers_optics
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = snipers_double
+			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				fix_weapon_techs = yes
+			}
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 2 y = 0 }
+		}
+		categories = {
+			human_tech
+			race_tech
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	snipers_optics = {
+		
+		xor = {
+			snipers_double
+		}
+		path = {
+			leads_to_tech = snipers_camo_cover
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			entrenchment = 2
+			default_morale = 0.3
+			need = {
+				support_equipment = 15
+				infantry_equipment = 10
+			}
+		}
+		research_cost = 1
+		folder = {
+			name = human_folder
+			position = { x = 0 y = 2 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			race_tech
+		} 
+	}
+	snipers_camo_cover = {
+		path = {
+			leads_to_tech = snipers_uav
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			default_morale = 0.4
+			need = {
+				support_equipment = 25
+				infantry_equipment = 10
+			}
+			forest = {
+				attack = 0.1
+				defence = 0.2
+			}
+			jungle = {
+				attack = 0.1
+				defence = 0.1
+			}
+			urban = {
+				attack = 0.05
+				defence = 0.1
+			}
+		}
+		research_cost = 1
+		folder = {
+			name = human_folder
+			position = { x = 0 y = 4 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			race_tech
+		} 
+	}
+	snipers_uav = {
+		path = {
+			leads_to_tech = snipers_high_caliber
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			maximum_speed = 0.4
+			forest = {
+				attack = 0.05
+				defence = 0.1
+				movement = 0.1
+			}
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+			mountain = {
+				attack = 0.05
+				movement = 0.1
+				defence = 0.05
+			}
+			urban = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+			soft_attack = 0.1
+		}
+		research_cost = 1
+		folder = {
+			name = human_folder
+			position = { x = 0 y = 6 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			race_tech
+		} 
+	}
+	snipers_double = {
+		xor = {
+			snipers_optics
+		}
+		
+		path = {
+			leads_to_tech = snipers_targeting_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		sniper_corps = {
+			manpower = 200
+			max_strength = 25
+			default_morale = 0.4
+			soft_attack = 0.1
+			breakthrough = 0.1
+			reliability = 2
+		}
+		folder = {
+			name = human_folder
+			position = { x = 4 y = 2 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			race_tech
+		}
+	}
+	snipers_targeting_systems = {
+		path = {
+			leads_to_tech = snipers_locking_system
+			research_cost_coeff = 1
+		}
+		category_line_artillery = {
+			soft_attack = 0.1
+			breakthrough = 0.05
+		}
+		research_cost = 1
+		folder = {
+			name = human_folder
+			position = { x = 4 y = 4 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			race_tech
+		}
+	}
+	snipers_locking_system = {
+		path = {
+			leads_to_tech = snipers_high_caliber
+			research_cost_coeff = 1
+		}
+		air_interception_attack_factor = 0.1
+		air_air_superiority_attack_factor = 0.1
+		research_cost = 1
+		folder = {
+			name = human_folder
+			position = { x = 4 y = 6 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			race_tech
+		}
+	}
+	snipers_high_caliber = {
+		path = {
+			leads_to_tech = snipers_at_rifles
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 2 y = 8 }
+		}
+		sniper_corps = {
+			hard_attack = 0.05
+			soft_attack = 0.1
+			breakthrough = 0.05
+		}
+		research_cost = 1
+		categories = {
+			human_tech
+			race_tech 
+		}
+	}
+	snipers_at_rifles = {
+		path = {
+			leads_to_tech = sniper_nigt_vision
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 2 y = 10 }
+		}
+		research_cost = 1
+		categories = {
+			human_tech
+			race_tech 
+		}
+		sniper_corps = {
+			hard_attack = 0.15
+			breakthrough = 0.05
+		}
+	}
+	sniper_nigt_vision = {
+		folder = {
+			name = human_folder
+			position = { x = 2 y = 12 }
+		}
+		depencies = {
+			night_vision = 1
+		}
+		research_cost = 1
+		categories = {
+			human_tech
+			race_tech 
+		}
+		land_night_attack = 0.2
+	}
+	conveyor_prod_human = {
+		depencies = {
+			improved_machine_tools = 1
+		}
+		path = {
+			leads_to_tech = prod_autom_human
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 6 y = 0 }
+		}
+		research_cost = 1
+		categories = {
+			human_tech
+			race_tech 
+		}
+		production_factory_max_efficiency_factor = 0.1
+		industrial_capacity_factory = 0.1
+		conversion_cost_civ_to_mil_factor = -0.15
+	}
+	prod_autom_human = {
+		path = {
+			leads_to_tech = prod_time_work
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 6 y = 2 }
+		}
+		research_cost = 1
+		categories = {
+			race_tech
+			human_tech
+		}
+		line_change_production_efficiency_factor = 0.15
+		production_factory_efficiency_gain_factor = 0.1
+	}
+	prod_time_work = {
+		path = {
+			leads_to_tech = prod_security_system
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 6 y = 4 }
+		}
+		research_cost = 1
+		categories = {
+			race_tech
+			human_tech
+		}
+		on_research_complete = {
+			unlock_decision_category_tooltip = extra_worktime_human_category
+			set_variable = {
+				var = rage_hum_meter
+				value = 0
+			}
+		}
+	}
+	
+}
+
+		
+		

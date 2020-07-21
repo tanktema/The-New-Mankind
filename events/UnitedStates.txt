@@ -1,0 +1,1020 @@
+add_namespace = uns
+add_namespace = tst
+	# Эвакуация
+
+
+
+
+country_event = {
+	id = uns.1
+	title = uns.evac.1.t
+	desc = uns.evac.1.desc
+	picture = GFX_event_evac
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = uns.evac.1.a
+			96 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	option = {
+		name = uns.evac.1.b
+			96 = {
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+country_event = {
+	id = uns.2
+	title = uns.evac.2.t
+	desc = uns.evac.2.desc
+	picture = GFX_event_demo1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = uns.evac.2.a
+		hidden_effect = {
+			96 = {
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Militia\" division_template = \"U.S. Militia\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+			}	
+		}
+		custom_effect_tooltip = recruit_1
+	}
+	option = {
+		name = uns.evac.2.b
+		hidden_effect = {
+			96 = {
+				create_unit = {
+					division = " name = \"U.S. Infantry Division\" division_template = \"U.S. Infantry Division\" start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Infantry Division\" division_template = \"U.S. Infantry Division\" start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Infantry Division\" division_template = \"U.S. Infantry Division\" start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+				create_unit = {
+					division = " name = \"U.S. Infantry Division\" division_template = \"U.S. Infantry Division\" start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = UNS
+				}
+			}
+		}
+		custom_effect_tooltip = recruit_2
+	}
+}
+country_event = {
+	id = uns.3
+	title = uns.evac.3.t
+	desc = uns.evac.3.desc
+	picture = GFX_event_explore_3
+	is_triggered_only = yes
+	option = {
+		name = uns.evac.3.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 2500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 200
+		}
+		add_stability = -0.05
+	}
+	option = {
+		name = uns.evac.3.b
+		96 = {
+			add_manpower = 100000
+		}
+	}
+	option = {
+		name = uns.evac.3.c
+		random_list = {
+			75 = {
+				country_event = uns.4
+			}
+			25 = {
+				country_event = uns.5
+			}
+			
+		}
+	}
+}
+country_event = {
+	id = uns.4
+	title = uns.evac.4.t
+	desc = uns.evac.4.desc
+	picture = GFX_event_demo1
+	is_triggered_only = yes
+	option = {
+		name = uns.evac.4.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 100
+		}
+		96 = {
+			add_manpower = 100000
+		}
+	}
+}
+country_event = {
+	id = uns.5
+	title = uns.evac.5.t
+	desc = uns.evac.5.desc
+	picture = GFX_event_demo1
+	is_triggered_only = yes
+	option = {
+		name = uns.evac.5.a
+		add_stability = -0.15
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 50
+		}
+		96 = {
+			add_manpower = 50000
+		}
+	}
+}
+
+
+	
+country_event = {
+	id = uns.6
+	title = uns.explore.1.t
+	desc = uns.explore.1.desc
+	picture = GFX_event_evac
+	is_triggered_only = yes
+	option = {
+		name = uns.explore.1.a
+		transfer_state = 48 ####### West Exploration
+	}
+}
+country_event = {
+	id = uns.7
+	title = uns.explore.2.t
+	desc = uns.explore.2.desc
+	picture = GFX_event_evac
+	is_triggered_only = yes
+	option = {
+		name = uns.explore.2.a
+		transfer_state = 18 ####### West Exploration
+	}
+}
+
+news_event = {
+	id = uns.8
+	title = uns.contact.1
+	desc = uns.contact.1.desc
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = uns.contact.1.a
+	}
+}
+country_event = {
+	id = uns.9
+	title = uns.eco.1.t
+	desc = uns.eco.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.eco.1.a
+		every_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = uns.10
+	title = uns.fasc.1.t
+	desc = uns.fasc.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.fasc.1.a
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		set_country_flag = UNS_fasc_accepted
+	}
+	option = {
+		name = uns.fasc.1.b
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.25
+		}
+		set_country_flag = UNS_fasc_declined
+	}
+}
+country_event = {
+	id = uns.11
+	title = uns.fasc.2.t
+	desc = uns.fasc.2.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.fasc.2.a
+		trigger = {
+			has_country_flag = UNS_fasc_accepted
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+	}
+	option = { 
+		name = uns.fasc.2.b
+		trigger = {
+			has_country_flag = UNS_fasc_declined
+		}
+		UNS = {
+			set_country_flag = uns_fasc_stopped
+		}
+		hidden_effect = {
+			country_event = {
+				id = uns.12
+				days = 7
+			}
+		}
+	}
+}
+country_event = {
+	id = uns.12
+	title = uns.fasc.3.t
+	desc = uns.fasc.3.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.fasc.3.a
+		UNS = {
+			kill_country_leader = yes
+			set_country_flag = kennedy_killed
+			start_civil_war = {
+				ideology = fascism
+				size = 0.3
+			}
+			create_country_leader = {
+				name = "Harry Trueman"
+				desc = "UNS_demo_trueman_desc"
+				picture = "Kennedy.dds"
+				expire = 1965.1.1
+				ideology = liberalism
+				traits = {
+					human_leader
+					demo_leader
+				}
+			}
+		}
+	}
+	option = {
+		name = uns.fasc.3.b
+		UNS = {
+			kill_country_leader = yes
+			set_country_flag = kennedy_killed
+			start_civil_war = {
+				ideology = ROOT
+				ruling_party = fascism
+				size = 0.3
+			}
+		}
+	}
+	option = {
+		name = uns.fasc.3.c
+		trigger = {
+			has_country_flag = UNS_military_strength
+		}
+		UNS = {
+			kill_country_leader = yes
+			set_country_flag = kennedy_killed
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = uns.13
+				days = 7
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns.13
+	title = uns.mil.1.t
+	desc = uns.mil.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.mil.1.a
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "General Gershell fon Shepherd"
+			desc = "Shepherd_leader_desc"
+			picture = "Shep.dds"
+			expire = 1965.1.1
+			ideology = militarism
+			traits = {
+				military_leader
+				human_leader
+			}
+		}
+		set_party_name = {
+				ideology = fascism
+				long_name = UNS_militarizm_party_long
+				name = UNS_militarizm_party
+			}
+		set_cosmetic_tag = UNS_MIL
+		set_country_flag = uns_military_coup
+	}
+}
+news_event = {
+	id = uns.14
+	major = yes
+	title = uns.mil.2.t
+	desc = uns.mil.2.desc
+	is_triggered_only = yes
+	trigger = {
+		UNS = {
+			has_country_flag = uns_military_coup
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	option = {
+		trigger = {
+			tag = UNS
+		}
+		name = uns.mil.2.a
+	}
+	option = {
+		trigger = {
+			has_government = democratic
+		}
+		name = uns.mil.2.b
+	}
+	option = {
+		trigger = {
+			has_government = fascism
+			NOT = {
+				tag = UNS
+			}
+		}
+		name = uns.mil.2.c
+	}
+	option = {
+		trigger = {
+			has_government = communism
+		}
+		name = uns.mil.2.d
+	}
+}
+country_event = {
+	id = uns.15
+	title = uns.world.1.t
+	desc = {
+		text = uns.world.1.desc.a
+		trigger = {
+			threat < 0.25
+		}
+	}
+	desc = {
+		text = uns.world.1.desc.b
+		trigger = {
+			threat < 0.5
+			threat > 0.25
+		}
+	}	
+	desc = {
+		text = uns.world.1.desc.c
+		trigger = {
+			threat > 0.5
+		}
+	}	
+	is_triggered_only = yes
+	option = {
+		name = uns.world.1.a
+		add_political_power = 50
+	}
+}
+news_event = {
+	id = uns.16
+	title = uns.olenia.1.t
+	desc = uns.olenia.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.olenia.1.a
+	}
+}
+news_event = {
+	id = uns.17
+	title = uns.changeling.1.t
+	desc = uns.changeling.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.changeling.1.a
+	}
+}
+news_event = {
+	id = uns.18
+	title = uns.equestria.1.t
+	desc = {
+		text = uns.equestria.1.desc.a
+		trigger = {
+			UNS = {
+				has_government = democratic
+				NOT = {
+					has_country_flag = kennedy_killed
+				}
+			}
+		}
+	}
+	desc = {
+		text = uns.equestria.1.desc.b
+		trigger = {
+			UNS = {
+				has_government = fascism
+				NOT = {
+					has_country_flag = uns_military_coup
+				}
+			}
+		}
+	}
+	desc = {
+		text = uns.equestria.1.desc.c
+		trigger = {
+			UNS = {
+				has_government = democratic
+				has_country_flag = kennedy_killed
+			}
+		}
+	}
+	desc = {
+		text = uns.equestria.1.desc.d
+		trigger = {
+			UNS = {
+				has_government = communism
+			}
+		}
+	}
+	desc = {
+		text = uns.equestria.1.desc.e
+		trigger = {
+			UNS = {
+				has_government = fascism
+				has_country_flag = uns_military_coup
+			}
+		}
+	}
+			
+	is_triggered_only = yes
+	option = {
+		name = uns.eqs.1.a
+	}
+}
+news_event = {
+	id = uns.19
+	title = uns.stalliongrad.1.t
+	desc = {
+		text = uns.stalliongrad.1.desc.a
+		trigger = {
+			UNS = {
+				has_government = democratic
+				NOT = {
+					has_country_flag = kennedy_killed
+				}
+			}
+		}
+	}
+	desc = {
+		text = uns.stalliongrad.1.desc.b
+		trigger = {
+			UNS = {
+				has_government = fascism
+				NOT = {
+					has_country_flag = uns_military_coup
+				}
+			}
+		}
+	}
+	desc = {
+		text = uns.stalliongrad.1.desc.c
+		trigger = {
+			UNS = {
+				has_government = democratic
+				has_country_flag = kennedy_killed
+			}
+		}
+	}
+	desc = {
+		text = uns.stalliongrad.1.desc.d
+		trigger = {
+			UNS = {
+				has_government = communism
+			}
+		}
+	}
+	desc = {
+		text = uns.stalliongrad.1.desc.e
+		trigger = {
+			UNS = {
+				has_government = fascism
+				has_country_flag = uns_military_coup
+			}
+		}
+	}
+			
+	is_triggered_only = yes
+	option = {
+		name = uns.eqs.1.a
+	}
+}
+news_event = {
+	id = uns.20
+	title = uns.summit.1.t
+	desc = uns.summit.1.desc
+	option = {
+		name = uns.summit.1.a
+	}
+	is_triggered_only = yes
+}
+country_event = {
+	id = uns.21
+	title = uns.chaolewar.1.t
+	desc = uns.chaolewar.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.chaolewar.1.a
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					tag = CHN
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = decline_politics
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = decline_politics
+				}
+			}
+		}
+		custom_effect_tooltip = uns_chaolewar_1
+	}
+	option = {
+		name = uns.chaolewar.1.b
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					tag = CHN
+				}
+				add_opinion_modifier = {
+					target = UNS
+					modifier = accept_politics
+				}
+			}
+			UNS = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = accept_politics
+				}
+			}
+		}
+		custom_effect_tooltip = uns_chaolewar_2
+	}
+}
+country_event = {
+	id = uns.22
+	title = uns.changeling.2.t
+	desc = uns.changeling.2.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.changeling.2.a
+		CHN = {
+			add_to_faction = UNS
+		}
+	}
+}
+country_event = {
+	id = uns.23
+	title = uns.war.1.t
+	desc = uns.war.1.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.war.1.a
+		hidden_effect = {
+			UNS = {
+			add_state_core = 41
+			add_state_claim = 41
+			add_state_core = 125
+			add_state_claim = 125
+			add_state_core = 95
+			add_state_claim = 95
+			add_state_core = 66
+			add_state_claim = 66
+			add_state_core = 114
+			add_state_claim = 114
+			add_state_core = 118
+			add_state_claim = 118
+			add_state_core = 119
+			add_state_claim = 119
+			add_state_core = 127
+			add_state_claim = 127
+			add_state_core = 124
+			add_state_claim = 124
+			}
+			custom_effect_tooltip = uns_war_tooltip1
+		}
+	}
+	option = {
+		name = uns.war.2.b
+		hidden_effect = {
+			UNS = {
+			add_state_core = 14
+			add_state_claim = 14
+			add_state_core = 45
+			add_state_claim = 45
+			add_state_core = 59
+			add_state_claim = 59
+			add_state_core = 46
+			add_state_claim = 46
+			add_state_core = 60
+			add_state_claim = 60
+			add_state_core = 72
+			add_state_claim = 72
+			add_state_core = 61
+			add_state_claim = 61
+			add_state_core = 73
+			add_state_claim = 73
+			}
+			custom_effect_tooltip = uns_war_tooltip2
+		}
+	}
+	option = {
+		trigger = {
+			UNS = {
+				has_country_flag = uns_military_coup
+			}
+		}
+		name = uns.war.3.c
+		hidden_effect = {
+			UNS = {
+			add_state_core = 14
+			add_state_claim = 14
+			add_state_core = 45
+			add_state_claim = 45
+			add_state_core = 59
+			add_state_claim = 59
+			add_state_core = 46
+			add_state_claim = 46
+			add_state_core = 60
+			add_state_claim = 60
+			add_state_core = 72
+			add_state_claim = 72
+			add_state_core = 61
+			add_state_claim = 61
+			add_state_core = 73
+			add_state_claim = 73
+			add_state_core = 41
+			add_state_claim = 41
+			add_state_core = 125
+			add_state_claim = 125
+			add_state_core = 95
+			add_state_claim = 95
+			add_state_core = 66
+			add_state_claim = 66
+			add_state_core = 114
+			add_state_claim = 114
+			add_state_core = 118
+			add_state_claim = 118
+			add_state_core = 119
+			add_state_claim = 119
+			add_state_core = 127
+			add_state_claim = 127
+			add_state_core = 124
+			add_state_claim = 124
+			}
+			custom_effect_tooltip = uns_war_tooltip3
+		}
+	}
+}
+news_event = {
+	id = uns.24
+	title = uns.celeb.1.t #Праздник
+	is_triggered_only = yes
+	desc = {
+		text = uns.celeb.1.desc.a #Празднование рождества
+		trigger = {
+			UNS = {
+				has_country_flag = celebrate_christmas
+			}
+		}
+	}
+	desc = {
+		text = uns.celeb.1.desc.b #празднование дня очага
+		trigger = {
+			UNS = {
+				has_country_flag = celebrate_heart_warming
+			}
+		}
+	}
+	option = {
+		name = uns.celeb.1.a #Празднование рождества
+		trigger = {
+			has_country_flag = celebrate_christmas
+		}
+	}
+	option = {
+		text = uns.celeb.1.b #празднование дня очага
+		trigger = {
+			has_country_flag = celebrate_heart_warming
+		}
+	}
+}
+country_event = {
+	id = uns.25
+	title = uns.celeb.2.t # Не праздновал
+	desc = uns.celeb.2.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.celeb.2.a
+		add_political_power = -25
+	}
+}
+country_event = {
+	id = uns.26
+	title = uns.twilight.1.t
+	desc = uns.twilight.1.desc 
+	is_triggered_only = yes
+	option = {
+		name = uns.twilight.1.a 
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 0
+				OR = {
+					UNS = {
+						has_government = fascism
+						has_added_tension_amount > 0.1
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			UNS = {
+				add_opinion_modifier = {
+					target = EQS
+					modifier = twilight_accepted
+				}
+				reverse_add_opinion_modifier = {
+					target = EQS
+					modifier = twilight_accepted
+				}
+				news_event = {
+					id = uns.27
+					days = 1
+				}
+			}
+		}
+		custom_effect_tooltip = UNS_visit_tooltip
+	}
+	option = {
+		name = uns.twilight.1.b 
+		ai_chance = { factor = 10 }
+	}
+}
+news_event = {
+	id = uns.27
+	title = uns.twilight.2.t
+	desc = uns.twilight.2.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.twilight.2.a 
+		hidden_effect = {
+			set_country_flag = twilight_visit
+		}
+	}
+}
+country_event = {
+	id = uns.28
+	title = uns.28.t
+	desc = uns.28.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.28.a 
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					UNS = {
+						NOT = {
+							has_government = communism
+						}
+						has_war = yes
+					}
+				}
+			}
+		}
+		UNS = {
+			add_to_faction = STG
+		}
+	}
+	option = {
+		name = uns.28.b 
+		ai_chance = { factor = 10 }
+	}	
+}
+country_event = {
+	id = uns.29
+	title = uns.29.t 
+	desc = uns.29.desc 
+	is_triggered_only = yes
+	option = {
+		name = uns.29.a 
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 0
+				OR = {
+					UNS = {	
+						has_government = fascism
+						has_added_tension_amount > 0.1
+					}
+				}
+			}
+			modifier = {
+				factor = 1000
+				OR = {
+					has_war = yes
+					has_war_with = CHN
+					surrender_progress > 0.2
+				}
+			}
+		}
+		ROOT = {
+			add_to_faction = UNS
+		}
+	}
+	option = {
+		name = uns.29.b 
+		ai_chance = { factor = 50 }
+	}
+}	
+country_event = {
+	id = uns.30
+	title = uns.30.t
+	desc = uns.30.desc 
+	is_triggered_only = yes
+	option = {
+		name = uns.30.a
+		custom_effect_tooltip = uns_recruitment_effect
+		hidden_effect = {
+			load_oob = "UNS_recruitment"
+		}
+	}
+}
+country_event = {
+	id = uns.31
+	title = uns.31.t
+	desc = uns.31.desc
+	is_triggered_only = yes
+	option = {
+		name = uns.31.a 
+		custom_effect_tooltip = raise_human_rage_tooltip
+		hidden_effect = {
+			raise_human_rage = yes 
+		}
+	}
+}
+
+country_event = {
+	id = uns.32
+	title = uns.32.t 
+	desc = uns.32.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.32.a 
+		custom_effect_tooltip = diminish_rage_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					has_idea = human_coups
+				}
+				remove_ideas = human_coups
+				}
+			if = {
+				limit = {
+					has_idea = human_coups_up
+				}
+				remove_ideas = human_coups_up
+			}
+			if = {
+				limit = {
+					has_idea = human_hate
+				}
+				remove_ideas = human_hate
+			}
+			add_to_variable = {
+				var = rage_hum_meter
+				value = -5
+			}
+		}
+	}
+}

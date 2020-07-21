@@ -1,0 +1,69 @@
+SWI_communist_support_category = {
+	SWI_coup_factories = {
+		icon = 111
+		visible = {
+			tag = SWI
+			any_owned_state = {
+				NOT = {
+					has_state_flag = SWI_ind_coup
+				}
+			}
+		}
+		available = {
+			
+		}
+		cost = 10
+		days_remove = 5
+		days_re-enable = 7
+		remove_effect = {
+			random_owned_controlled_state = {
+				set_state_flag = SWI_ind_coup
+			}
+			add_stability = -0.03
+			add_popularity = {
+				ideology = communism
+				popularity = 0.01
+			}
+		}
+		
+	}
+	SWI_city_coup = {
+		icon = 111
+		visible = {
+			tag = SWI
+			any_owned_state = {
+				has_state_flag = SWI_ind_coup
+			}
+		}
+		available = {
+			any_owned_state = {
+				has_state_flag = SWI_ind_coup
+			}
+		}
+		cost = 15
+		days_remove = 5
+		days_re-enable = 7
+		remove_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					has_state_flag = SWI_ind_coup
+				}
+				set_state_flag = SWI_city_coup_success
+			}
+			if = {
+				limit = {
+					check_variable = { num_succeed_cities = 0 }
+				}
+				add_to_variable = {
+					var = num_succeed_cities 
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { num_succeed_cities = 1 }
+					has_stability < 0.35
+				}
+				start_civil_war = {
+					ideology = communism
+					size = 

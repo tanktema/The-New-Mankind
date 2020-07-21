@@ -1,0 +1,36 @@
+ideas = {
+	race_pointer = {
+		human_race = {
+			allowed = {
+				is_human_race = yes
+			}
+			visible = {
+				has_idea = human_race
+			}
+			removal_cost = -1
+			default = yes
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	city_idea = {
+		human_science = {
+			allowed = {
+				is_human_race = yes
+			}
+			visible = {
+				is_human_race = yes
+			}
+			removal_cost = -1
+			default = yes
+			available = {
+				is_human_race = yes
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+political_actions_category = {
+	DEM_mis1 = {
+
+		icon = generic_form_nation
+		cost = 100
+		days_remove = 5
+		complete_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						has_template = "Demon"
+					}
+				}
+				Capital_scope = {
+					create_unit = { 
+						division = "division_template = \"Demon\" start_experience_factor = 1 start_equipment_factor = 1" 
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"2nd.Demon Army\" division_template = \"Demon\" start_experience_factor = 1 start_equipment_factor = 1" 
+						owner = ROOT 
+					}
+				}
+			}
+		
+			else = {
+				ROOT = {
+					division_template = {
+						name = "Demon"
+						is_locked = yes
+						division_names_group = UNS_INF_01
+						regiments = {
+							demon = { x = 0 y = 0 }
+							demon = { x = 0 y = 1 }
+							demon = { x = 0 y = 2 }
+							demon = { x = 1 y = 0 }
+							demon = { x = 1 y = 1 }
+							demon = { x = 1 y = 2 }
+						}
+					}
+				}
+				Capital_scope = {
+					create_unit = {
+						division = "division_template = \"Demon\" start_experience_factor = 1 start_equipment_factor = 1" 
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"2.Demon Army\" division_template = \"Demon\" start_experience_factor = 1 start_equipment_factor = 1" 
+						owner = ROOT 
+					}
+				}
+			}
+		}
+	}
+}

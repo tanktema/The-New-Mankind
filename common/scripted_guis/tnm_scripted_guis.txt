@@ -1,0 +1,15 @@
+scripted_gui = {
+	hum_acceptance = {
+		window_name = "hum_acceptance_container"
+		context_type = player_context
+		visible = {
+			is_human_race = yes
+		}
+		effects = {
+		
+		}
+		triggers = {
+		
+		}
+	}
+}

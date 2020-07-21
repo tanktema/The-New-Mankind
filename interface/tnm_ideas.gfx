@@ -1,0 +1,5 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_test"
+		texturefile = "gfx/interface/ideas/test.dds"
+	}

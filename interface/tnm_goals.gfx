@@ -1,0 +1,6 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_goal_evacuation"
+		texturefile = "gfx/interface/goals/evac_focus.dds"
+	}
+}

@@ -1,0 +1,178 @@
+on_actions = {
+	on_startup = {
+		effect = {
+		  STG = {
+		  country_event = { days = 1 id = RT.STG.1 }
+		  }
+		  every_country = {
+		  if = {
+		  limit = { has_government = communism }
+		  set_variable = { rt_government_influence = 4050}
+		  set_variable = { rt_military_influence = 2750}
+		  set_variable = { rt_workers_influence = 1050}
+		  set_variable = { rt_middle_class_influence = 1150}
+		  set_variable = { rt_business_influence = 1000}		  	
+         }
+		 else_if = {
+		 limit = { has_government = democratic }
+		  set_variable = { rt_government_influence = 3900}
+		  set_variable = { rt_military_influence = 2450}
+		  set_variable = { rt_workers_influence = 1150}
+		  set_variable = { rt_middle_class_influence = 1350}
+		  set_variable = { rt_business_influence = 1150}		  			 
+		 }
+		 else_if = {
+		 limit = { has_government = neutrality }
+		  set_variable = { rt_government_influence = 3450}
+		  set_variable = { rt_military_influence = 2750}
+		  set_variable = { rt_workers_influence = 1000}
+		  set_variable = { rt_middle_class_influence = 1350}
+		  set_variable = { rt_business_influence = 1450}	  			 
+		 }		 
+		 else_if = {
+		 limit = { has_government = paternalist }
+		  set_variable = { rt_government_influence = 2500}
+		  set_variable = { rt_military_influence = 2750}
+		  set_variable = { rt_workers_influence = 1150}
+		  set_variable = { rt_middle_class_influence = 1750}
+		  set_variable = { rt_business_influence = 1850}		  			 
+		 }	
+		 else_if = {
+		 limit = { has_government = neo_harmonism }
+		  set_variable = { rt_government_influence = 2700}
+		  set_variable = { rt_military_influence = 2150}
+		  set_variable = { rt_workers_influence = 1550}
+		  set_variable = { rt_middle_class_influence = 2150}
+		  set_variable = { rt_business_influence = 1450}	  			 
+		 }			
+		 else_if = {
+		 limit = { has_government = fascism }
+		  set_variable = { rt_government_influence = 2050}
+		  set_variable = { rt_military_influence = 2750}
+		  set_variable = { rt_workers_influence = 2200}
+		  set_variable = { rt_middle_class_influence = 1350}
+		  set_variable = { rt_business_influence = 1650}	  			 
+		 }		 
+		  set_variable = { rt_government_approval = 70}
+		  set_variable = { rt_military_approval = 70}
+		  set_variable = { rt_workers_approval = 70}
+		  set_variable = { rt_middle_class_approval = 70}
+		  set_variable = { rt_business_approval = 70}		  		  		  
+		 }
+		EQS = {
+		  set_variable = { rt_government_influence = 3500}
+		  set_variable = { rt_military_influence = 1250}
+		  set_variable = { rt_workers_influence = 1400}
+		  set_variable = { rt_middle_class_influence = 2100}
+		  set_variable = { rt_business_influence = 1750}	
+
+		  set_variable = { rt_government_approval = 72}
+		  set_variable = { rt_military_approval = 59}
+		  set_variable = { rt_workers_approval = 53}
+		  set_variable = { rt_middle_class_approval = 71 }
+		  set_variable = { rt_business_approval = 65}		  	
+		}
+		STG = {
+		  set_variable = { rt_government_influence = 950}
+		  set_variable = { rt_military_influence = 5500}
+		  set_variable = { rt_workers_influence = 1350}
+		  set_variable = { rt_middle_class_influence = 1250}
+		  set_variable = { rt_business_influence = 950}	
+
+		  set_variable = { rt_government_approval = 29}
+		  set_variable = { rt_military_approval = 87}
+		  set_variable = { rt_workers_approval = 18}
+		  set_variable = { rt_middle_class_approval = 49 }
+		  set_variable = { rt_business_approval = 51}		  	
+		}	
+		GRF = {
+		  set_variable = { rt_government_influence = 4000}
+		  set_variable = { rt_military_influence = 3250}
+		  set_variable = { rt_workers_influence = 1100}
+		  set_variable = { rt_middle_class_influence = 750}
+		  set_variable = { rt_business_influence = 900}	
+
+		  set_variable = { rt_government_approval = 77}
+		  set_variable = { rt_military_approval = 68}
+		  set_variable = { rt_workers_approval = 40}
+		  set_variable = { rt_middle_class_approval = 62 }
+		  set_variable = { rt_business_approval = 57}		  	
+		}	
+		CHN	 = {
+		  set_variable = { rt_government_influence = 6150}
+		  set_variable = { rt_military_influence = 950}
+		  set_variable = { rt_workers_influence = 700}
+		  set_variable = { rt_middle_class_influence = 950}
+		  set_variable = { rt_business_influence = 1250}	
+
+		  set_variable = { rt_government_approval = 84}
+		  set_variable = { rt_military_approval = 32}
+		  set_variable = { rt_workers_approval = 52}
+		  set_variable = { rt_middle_class_approval = 62 }
+		  set_variable = { rt_business_approval = 57}		  	
+		}			
+		}
+				WIT = {
+		set_varable = {riv_civil_war = 1}
+		}
+		GVR = {
+		set_varable = {riv_civil_war = 1}
+		}
+		LCT = {
+		set_varable = {riv_civil_war = 1}
+		}
+		RCT = {
+		set_varable = {riv_civil_war = 1}
+		}
+		BAK = {
+		set_varable = {riv_civil_war = 1}
+		}
+		WTN = {
+		set_varable = {riv_civil_war = 1}
+		}
+		DEP = {
+		set_varable = {riv_civil_war = 1}
+		}
+		UDO = {
+		set_varable = {riv_civil_war = 1}
+		}
+		OZR = {
+		set_varable = {riv_civil_war = 1}
+		}
+		DPA = {
+		set_varable = {riv_civil_war = 1}
+		}
+		PES = {
+		set_varable = {riv_civil_war = 1}
+		}
+		NIM = {
+		set_varable = {riv_civil_war = 1}
+		}
+		FRE = {
+		set_varable = {riv_civil_war = 1}
+		}
+  
+	}
+		on_weekly = {
+	effect = {
+	every_country = {
+	#Бонус за влияние правительства#
+	if = {limit = {AND = {check_variable = {var = rt_government_influence value = 1000 compare = greater_than_or_equals} check_variable = {rt_government_influence <3000}}}
+	add_political_power = 0.02 	
+	}
+	if = { limit = {AND = {check_variable = {var = rt_government_influence value = 3000 compare = greater_than_or_equals} check_variable = {rt_government_influence <5000}}}
+		add_political_power = 0.04
+	}
+	if = { limit = {AND = {check_variable = {var = rt_government_influence value = 5000 compare = greater_than_or_equals} check_variable = {rt_government_influence <6000}}}
+		add_political_power = 0.1
+	}
+	if = { limit = {check_variable = {rt_government_influence > 5999}}
+		add_political_power = -0.5
+	}
+
+	}
+	}
+	}
+
+}
+

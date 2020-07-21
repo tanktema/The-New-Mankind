@@ -1,0 +1,15 @@
+UNS = {
+	male = {
+		names = { John Jack Kyle Jason Johnatan Codey Sheldon Leonard Howard Stephen
+				  Sam Meryl Rick Allen Charles Hunter Pierce Samuel Albey Spenser Floyd
+				  Raynold Eden Jerry Dunkan
+				 }
+		}
+	female = {
+		names = { Claire Katryn Jennifer Rachel }
+		}
+	surnames = {
+			Shepard Johnson Valley Mactavish Price Stewens Stark Raynolds Jackman Ramirs Fawley Dunse
+			Peterson Stewey Pitt }
+	callsigns = { ANvil Hammer Arrow Storm Fury Metal }
+	

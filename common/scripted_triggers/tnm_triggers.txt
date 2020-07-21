@@ -1,0 +1,3 @@
+is_human_race = {
+	has_tech = human_race
+}

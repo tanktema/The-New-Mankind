@@ -1,0 +1,62 @@
+sub_units = {
+	sniper_corps = {
+		sprite = infantry
+		map_icon_category = infantry
+		priority = 2501
+		ai_priority = 2500
+		active = no
+		cavalry = no
+		special_forces = no
+		group = support
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_special_forces
+			category_army
+		}
+		type = {
+			support
+		}
+		combat_width = 0
+		
+		need = {
+			support_equipment = 10
+			infantry_equipment = 10
+		}
+		max_strength = 15
+		max_organisation = -10
+		default_morale = 0.2
+		manpower = 100
+		maximum_speed = 0.4
+		training_time = 150
+		suppression = 2.5
+		weight = 0.3
+		air_attack = 0
+		reliability = 1
+		can_be_parachuted = yes
+		supply_consumption = 0.05
+		soft_attack = 0.1
+		hard_attack = 0
+		breakthrough = 0.05
+		entrenchment = 1
+		forest = {
+			attack = 0.05
+			defence = 0.1
+		}
+		jungle = {
+			attack = 0.05
+			defence = 0.05
+		}
+		mountain = {
+			attack = 0.2
+			movement = 0.1
+			defence = 0.15
+		}
+		urban = {
+			attack = 0.3
+			defence = 0.5
+		}
+		
+	}
+		

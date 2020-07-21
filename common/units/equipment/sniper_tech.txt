@@ -1,0 +1,58 @@
+sub_units = {
+	snipers_support = {
+		sprite = snipers_sprite
+		map_icon_category = infantry
+		priority = 2501
+		ai_priority = 2000
+		active = no
+		cavalry = no
+		special_forcse = no
+		marines = no
+		mountaineers = no
+		group = support
+		can_be_parachuted = yes
+		type = {
+			infantry
+			support
+		}
+		categories = {
+			category_front_line
+			category_light_infantry
+			category_all_infantry
+			category_special_forces
+			category_army
+		}
+		essential = {
+			support_equipment
+			infantry_equipment 
+		}
+		need = {
+			support_equipment = 25
+			infantry_equipment = 100
+		}
+		combat_width = 0
+		manpower = 1000
+		deafult_morale = 0.1
+		training_time = 180
+		supply_consumption = 0.1
+		max_organisation = 15
+		max_strength = 3
+		weight = 0.3
+		defence = 0.2
+		breaktrough = 5
+		soft_attack = 7
+		hard_attack = 10
+		recon = 2
+		movement = -0.1
+		suppression_factor = 0.2
+		fort = {
+			attack = 0.1
+		}
+		urban = {
+			attack = 0.2
+			defence = 0.3
+		}
+	}
+		
+		
+			

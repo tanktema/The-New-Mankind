@@ -1,0 +1,234 @@
+scripted_gui = { 
+    FAC_TEST = {
+        context_type = player_context
+		window_name = "FAC_TEST"
+		
+		visible = {
+			is_ai = no
+		}
+		
+		effects = {
+		}
+        
+		triggers = {
+        }
+    }
+	    FAC_MIL_WINDOW = {
+        context_type = player_context
+		window_name = "FAC_MIL_WINDOW"
+		
+		visible = {
+			is_ai = no
+			has_variable = FAC_MIL_WINDOW_door
+		}
+		
+		effects = {
+FAC_MIL_WINDOW_CLOSE_click = {
+clear_variable = FAC_MIL_WINDOW_door
+}
+		}
+        
+		triggers = {
+        }
+    }
+			    FAC_WRK_WINDOW = {
+        context_type = player_context
+		window_name = "FAC_WRK_WINDOW"
+		
+		visible = {
+			is_ai = no
+			has_variable = "FAC_WRK_WINDOW_door"
+		}
+		
+		effects = {
+FAC_WRK_WINDOW_CLOSE_click = {
+clear_variable = FAC_WRK_WINDOW_door
+}
+		}
+        
+		triggers = {
+        }
+    }
+		FAC_MID_WINDOW = {
+        context_type = player_context
+		window_name = "FAC_MID_WINDOW"
+		
+		visible = {
+			is_ai = no
+			has_variable = "FAC_MID_WINDOW_door"
+		}
+		
+		effects = {
+FAC_MID_WINDOW_CLOSE_click = {
+clear_variable = FAC_MID_WINDOW_door
+}
+		}
+        
+		triggers = {
+        }
+    }
+				    FAC_BRG_WINDOW = {
+        context_type = player_context
+		window_name = "FAC_BRG_WINDOW"
+		
+		visible = {
+			is_ai = no
+			has_variable = "FAC_BRG_WINDOW_door"
+		}
+		
+		effects = {
+FAC_BRG_WINDOW_CLOSE_click = {
+clear_variable = FAC_BRG_WINDOW_door
+}
+		}
+        
+		triggers = {
+        }
+    }
+		    FAC_GOV_WINDOW = {
+        context_type = player_context
+		window_name = "FAC_GOV_WINDOW"
+		
+		visible = {
+			is_ai = no
+			has_variable = FAC_GOV_WINDOW_door
+		}
+		
+		effects = {
+FAC_GOV_WINDOW_CLOSE_click = {
+clear_variable = FAC_GOV_WINDOW_door
+}
+		}
+        
+		triggers = {
+        }
+    }
+	    FAC_INFO_BUTTON = {
+        context_type = player_context
+		window_name = "FAC_INFO_BUTTON"
+		
+		visible = {
+			is_ai = no
+		}
+		
+		effects = {
+			fac_info_start_button_click = {
+				if = {
+					limit = { NOT = { has_variable = FAC_info_door } }
+					set_variable = { FAC_info_door = 1 }
+				}
+				else = {
+					clear_variable = FAC_info_door
+				}
+			}
+		}
+        
+		triggers = {
+        }
+    }
+
+		    FAC_ICONS = {
+        context_type = player_context
+		window_name = "FAC_ICONS"
+		
+		visible = {
+			is_ai = no
+		}
+		
+		effects = {
+			fac_mil_open_click = {
+				if = {
+					limit = { NOT = { has_variable = FAC_MIL_WINDOW_door } }
+					set_variable = { FAC_MIL_WINDOW_door = 1 }
+					clear_variable = FAC_BRG_WINDOW_door
+					clear_variable = FAC_GOV_WINDOW_door
+					clear_variable = FAC_MID_WINDOW_door
+					clear_variable = FAC_WRK_WINDOW_door
+				}
+				else = {
+					clear_variable = FAC_MIL_WINDOW_door
+				}
+			}
+		
+					fac_gov_open_click = {
+				if = {
+					limit = { NOT = { has_variable = FAC_GOV_WINDOW_door } }
+					set_variable = { FAC_GOV_WINDOW_door = 1 }
+					clear_variable = FAC_BRG_WINDOW_door
+					clear_variable = FAC_MIL_WINDOW_door
+					clear_variable = FAC_MID_WINDOW_door
+					clear_variable = FAC_WRK_WINDOW_door					
+				}
+				else = {
+					clear_variable = FAC_GOV_WINDOW_door
+				}
+			}
+					fac_wrk_open_click = {
+				if = {
+					limit = { NOT = { has_variable = FAC_WRK_WINDOW_door } }
+					set_variable = { FAC_WRK_WINDOW_door = 1 }
+					clear_variable = FAC_BRG_WINDOW_door
+					clear_variable = FAC_GOV_WINDOW_door
+					clear_variable = FAC_MID_WINDOW_door
+					clear_variable = FAC_MIL_WINDOW_door					
+				}
+				else = {
+					clear_variable = FAC_WRK_WINDOW_door
+				}
+			}
+			fac_mid_open_click = {
+							if = {
+					limit = { NOT = { has_variable = FAC_MID_WINDOW_door } }
+					set_variable = { FAC_MID_WINDOW_door = 1 }
+					clear_variable = FAC_BRG_WINDOW_door
+					clear_variable = FAC_GOV_WINDOW_door
+					clear_variable = FAC_MIL_WINDOW_door
+					clear_variable = FAC_WRK_WINDOW_door					
+				}
+				else = {
+					clear_variable = FAC_MID_WINDOW_door
+				}
+			}
+			fac_brg_open_click = {
+										if = {
+					limit = { NOT = { has_variable = FAC_BRG_WINDOW_door } }
+					set_variable = { FAC_BRG_WINDOW_door = 1 }
+					clear_variable = FAC_MIL_WINDOW_door
+					clear_variable = FAC_GOV_WINDOW_door
+					clear_variable = FAC_MID_WINDOW_door
+					clear_variable = FAC_WRK_WINDOW_door			
+				}
+				else = {
+					clear_variable = FAC_BRG_WINDOW_door
+				}
+			}
+			
+			}
+        
+		triggers = {
+        }
+    }
+		 FAC_INFO = {
+    
+        context_type = player_context
+		
+		window_name = "FAC_INFO"
+		
+		visible = {
+			is_ai = no
+			has_variable = FAC_info_door
+
+		}
+		
+		effects = {
+					fac_info_close_click = {            
+				clear_variable = FAC_info_door
+			}
+		}
+        
+		triggers = {
+
+        }
+    }
+
+	}

@@ -1,0 +1,18 @@
+BIR_become_russia = {
+	set_stability = 0.8
+	every_state = {
+		limit = {
+			is_core_of = BIR
+		}
+		add_core_of = RUS
+		remove_core_of = BIR
+	}
+	every_owned_state = {
+		limit = {
+			is_controlled_by = ROOT
+		}
+		set_state_owner = RUS
+		set_state_controller = RUS
+	}
+}
+	

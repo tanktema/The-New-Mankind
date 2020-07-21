@@ -1,0 +1,70 @@
+UNS_INF_01 = {
+	name = "U.S. Infantry Division"
+	for_countries = { UNS }
+	division_types = { "infantry" }
+	fallback_name = "%d Infantry Division"
+
+	
+	ordered = { 
+		1 = { "%dst 'Washington' Division" }
+		2 = { "%dnd 'United States' Division" }
+		3 = { "%drd 'Texas' Division" }
+		4 = { "%dth 'Peacekeeper' Division" }
+		5 = { "%dth 'Vancoover' Division" }
+		6 = { "%dth 'Manehattan' Division" }
+		7 = { "%dth 'Alpha' Division" }
+		8 = { "%dth 'George Washington' Division" }
+		9 = { "%dth 'Peace Hunters' Division" }
+		10 = { "%dth 'Bravo' Division" }
+		11 = { "%dth 'Liberty' Division" }
+		12 = { "%dth 'Hollywood' Division" }
+		13 = { "%dth 'Detective' Division" }
+		14 = { "%dth 'Detroit' Division" }
+		15 = { "%dth 'Chicago Bulls' Division" }
+		16 = { "%dth 'Atomic Cats' Division" }
+		17 = { "%dth 'Brotherhood' Division" }
+		18 = { "%dth 'Enclave' Division" }
+		19 = { "%dth 'Thor' Division" }
+		20 = { "%dth 'Roman' Division" }
+		21 = { "%dst 'Hydra' Division" }
+		22 = { "%dnd 'Everlast' Division" }
+		23 = { "%drd 'Black Cats' Division" }
+		24 = { "%dth 'Motorhead' Division" }
+		25 = { "%dth 'Shadow' Division" }
+		26 = { "%dth 'Rangers' Division" }
+		27 = { "%dth 'Tangoe' Division" }
+		28 = { "%dth 'Delta' Division" }
+		29 = { "%dth 'Ghost' Division" }
+		30 = { "%dth 'Columbia' Division" }
+		31 = { "%dst 'Pentagon' Division" }
+		32 = { "%dnd 'Desert Storm' Division" }
+		33 = { "%drd 'The Brave' Division" }
+		34 = { "%dth 'Stronghold' Division" }
+		35 = { "%dth 'Skyfall' Division" }
+		36 = { "%dth 'Decimal' Division" }
+		
+	}
+}
+UNS_ARM_01 = {
+	name = "U.S. Armored Corps"
+	for_countries = { UNS }
+	division_types = { "light_armor" }
+	fallback_name = "%d Armored Division"
+	
+	ordered = {
+		1 = { "%dst 'Crusader' Division" }
+		2 = { "%dst 'Holy' Division" }
+		3 = { "%dst 'Hellhound' Division" }
+		4 = { "%dst 'Steel Dogs' Division" }
+		5 = { "%dst 'Motorborn' Division" }
+	}
+}
+UNS_MAR_01 = {
+	name = "U.S. Marines Corps"
+	for_countries = { UNS }
+	division_types = { "marines" }
+	fallback_name = "%d Marines Division"
+	ordered = {
+		1 = { "Devil Dogs" }
+	}
+}

@@ -1,0 +1,20 @@
+raise_human_rage = {
+	if = {
+		limit = {
+			has_idea = human_coups
+		}
+		swap_ideas =  {
+			remove_idea = human_coups
+			add_idea = human_coups_up
+		}
+	}
+	if = {
+		limit = {
+			has_idea = human_coups_up
+		}
+		swap_ideas =  {
+			remove_idea = human_coups_up
+			add_idea = human_hate
+		}
+	}
+}
