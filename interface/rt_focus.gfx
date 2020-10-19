@@ -1,4 +1,0 @@
-spriteTypes = {
-	SpriteType = {
-		name = "GFX_goal_111"
-		texturefile = "gfx/interface/goals/goal_purge.dds"

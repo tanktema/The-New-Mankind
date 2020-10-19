@@ -21,7 +21,7 @@ leader_traits = {
 				}
 			}
 		comm_leader = {
-			random = 0
+			random = no
 			political_power_gain = 0.5
 			stability_factor = 0.1
 			ai_focus_aggressivd_factor = 0.5
@@ -33,7 +33,7 @@ leader_traits = {
 				}
 			}
 		fasc_leader = {
-			random = 0
+			random = no
 			political_power_gain = 0.5
 			stability_factor = 0.1
 			ai_focus_aggressivd_factor = 0.5
@@ -46,7 +46,7 @@ leader_traits = {
 		
 			}
 		demo_bring = {
-			random = 0
+			random = no
 			democratic_drift = 0.1
 			stability_factor = 0.1
 			
@@ -55,7 +55,7 @@ leader_traits = {
 				}
 			}
 		comm_bring = {
-			random = 0
+			random = no
 			communism_drift = 0.1
 			war_support_factor = 0.05
 			
@@ -64,7 +64,7 @@ leader_traits = {
 				}
 		}
 		fasc_bring = {
-			random = 0
+			random = no
 			fascism_drift = 0.1
 			war_support_factor = 0.05
 			ai_will_do = {
@@ -72,7 +72,7 @@ leader_traits = {
 				}
 		}
 		military_leader = {
-			random = 0
+			random = no
 			war_support_factor = 0.1
 			max_command_power = 50
 			special_forces_cap = 0.05
@@ -82,15 +82,178 @@ leader_traits = {
 			surrender_limit = -0.2
 		}
 		peoples_favourite = {
-			random = 0
+			random = no
 			stability_factor = 0.1
 			democratic_drift = 0.01
 		}
 		captured_scientist = {
-			random = 0
+			random = no
 			war_support_factor = 0.1
 			political_power_gain = -0.01
 			stability_factor = -0.05
 		}
+		onwheel_master = {
+			random = 0
+			equipment_bonus = {
+				armor = {
+					maximum_speed = 0.05
+					reliability = 0.1
+					breakthrough = 0.05
+				}
+				mechanized = {
+					maximum_speed = 0.15
+					reliability = 0.1
+				}
+				motorized = {
+					maximum_speed = 0.1
+					reliability = 0.15
+				}
+			}
+		}
+		arms_dealer_m = {
+			random = no
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					defense = 0.05
+					build_cost_ic = -0.01
+				}
+				magical_equipment = {
+					reliability = 0.1
+					defense = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		arms_dealer = {
+			random = no
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.15
+					defense = 0.1
+					build_cost_ic = -0.05
+				}
+
+			}
+		}
+		old_world_shipyard = {
+			random = no
+			equipment_bonus = {
+				carrier = {
+					armor_value = 0.25
+					max_strength = 0.1
+				}
+				capital_ship = {
+					armor_value = 0.1 
+					hg_attack = 0.1
+				}
+				screen_ship = {
+					naval_range = 0.2
+				}
+				submarine = {
+					naval_range = 0.15
+				}
+			}
+		}
+		master_of_building = {
+			random = no
+			production_speed_bunker_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+		}
+		peoples_voice = {
+			random = no 
+			democratic_drift = 0.02
+			war_support_factor = -0.15
+			stability_factor = 0.1
+		}
+		fascist_politician_yasnov = {
+			random = no
+			political_power_gain = 0.2
+			fascism_drift = 0.02 
+			stability_factor = 0.1
+		}
+		foolish_leader = {
+			random = no 
+			political_power_gain = -0.15
+			drift_defence_factor = -0.5
+			stability_factor = -0.05
+		}
+		xeno_tolerant = {
+			random = no 
+			non_core_manpower = 0.25
+			resistance_target = -0.2
+		}
+		tsar_of_all = {
+			random = no
+			non_core_manpower = 0.5
+		}
+		heavy_tank_producer = {
+			random = no
+			equipment_bonus = {
+				heavy_armor = {
+					armor = 0.1
+					reliability = 0.1
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		medium_tank_producer = {
+			equipment_bonus = {
+				medium_armor = {
+					armor = 0.12
+					reliability = 0.12
+					build_cost_ic = -0.08
+				}
+			}
+		}
+		serp_high_command = {
+			random = no
+			experience_gain_army = 0.02
+			attrition = -0.1
+		}
+		electrical_concern_sou = {
+			random = no
+			research_speed_factor = 0.05
+		}
+		comissar_of_kgb = {
+			random = no 
+			operative_slot = 1
+			agency_upgrade_time = -0.2
+			intel_network_gain_factor = 0.1
+			intelligence_agency_defense = 1
+		}
+		army_planning_master_chief = {
+			random = no
+			experience_gain_army = 0.02
+			defence = 0.1
+			offence = 0.1
+		}
+		navy_leader_human = {
+			random = no 
+			naval_range = 0.1
+			experience_gain_navy = 0.02
+			naval_speed_factor = 0.1
+		}
+		human_air_leader = {
+			random = no 
+			experience_gain_air = 0.02
+			air_night_penalty = -0.1
+			air_range_factor = 0.1
+		}
+		shutzstaffen_reichsfuhrer = {
+			random = no
+			special_forces_cap = 0.1
+		}
+		pure_race_fighter = {
+			random = no
+			non_core_manpower = -1
+		}
+		propaganda_master_hum = {
+			random = no
+			fascism_drift = 0.01
+			drift_defence_factor = 0.2
+		} 
+		
 	}
+	
 		

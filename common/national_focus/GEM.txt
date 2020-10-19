@@ -1,0 +1,620 @@
+focus_tree = {
+	id = gem_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 12
+			tag = GEM 
+		}
+	}
+	
+	continuous_focus_position = { x = 200 y = 2500 }
+	
+	default = no
+	
+	focus = {
+		id = GEM_evac_focus
+		icon = GFX_goal_GEM_evac
+		x = 30
+		y = 0
+		cost = 5
+		select_effect = {
+			country_event = { id = gem.1 days = 10 }
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = gem.1 days = 15 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_exploration
+		icon = GFX_goal_GEM_exploration
+		x = 0
+		y = 1
+		relative_position_id = GEM_evac_focus
+		prerequisite = { focus = GEM_evac_focus }
+		cost = 5
+		select_effect = {
+			country_event = { id = gem.4 days = 15 }
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = gem.4 days = 15 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_contact
+		icon = GFX_goal_GEM_contact
+		x = 0
+		y = 1
+		relative_position_id = GEM_exploration
+		prerequisite = { focus = GEM_exploration }
+		cost = 1
+		completion_reward = {
+			acceptance_expand_extra = yes
+			country_event = { id = gem.6 }
+			hidden_effect = {
+				314 = {
+					add_core_of = ROOT 
+					remove_core_of = CHN
+				}
+				311 = {
+					add_core_of = ROOT 
+					remove_core_of = CHN 
+				}
+				312 = {
+					set_state_category = large_city
+					set_state_name = "STATE_902"
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_party_meeting 
+		icon = GFX_goal_GEM_party_meeting
+		x = 0 
+		y = 1
+		relative_position_id = GEM_contact
+		prerequisite = { focus = GEM_contact }
+		cost = 7.2
+		completion_reward = {
+			set_variable = { fasc_support = 60 }
+			set_variable = { goebbels_support = 30 }
+			set_variable = { himmler_support = 30 }
+			set_variable = { comm_support = 20 }
+			set_variable = { demo_support = 20 }
+		}
+	}
+	focus = {
+		id = GEM_goebbels_speech
+		icon = GFX_goal_GEM_goebbels_speech
+		x = -1
+		y = 1
+		relative_position_id = GEM_party_meeting
+		prerequisite = { focus = GEM_party_meeting }
+		cost = 7.2 
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = GEM_rations
+		icon = GFX_goal_GEM_rations
+		x = 1
+		y = 1
+		cost = 7.2
+		relative_position_id = GEM_party_meeting
+		prerequisite = { focus = GEM_party_meeting }
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = GEM_opposition_question
+		icon = GFX_goal_GEM_opposition
+		available = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_country_flag = himmler_way
+					has_country_flag = goebbels_way
+					has_country_flag = communist_way
+					has_country_flag = democratic_way
+				}
+				tooltip = gem_choise_has_been_made
+			}
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = GEM_goebbels_speech
+		prerequisite = { focus = GEM_goebbels_speech }
+		prerequisite = { focus = GEM_rations }
+		cost = 7.2
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = GEM_night_of_broken_glass
+		icon = GFX_goal_GEM_night_of_broken_glass
+		x = -1
+		y = 1
+		relative_position_id = GEM_opposition_question
+		prerequisite = { focus = GEM_opposition_question }
+		mutually_exclusive = { focus = GEM_oppose_nazis }
+		cost = 7.2
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = GEM_oppose_nazis
+		icon = GFX_goal_GEM_oppose_nazis
+		x = 1
+		y = 1
+		relative_position_id = GEM_opposition_question
+		prerequisite = { focus = GEM_opposition_question }
+		mutually_exclusive = { focus = GEM_night_of_broken_glass }
+		cost = 7.2
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = GEM_destroy_the_opposition
+		icon = GFX_goal_GEM_destroy_opposition
+		x = 0
+		y = 1
+		relative_position_id = GEM_night_of_broken_glass
+		prerequisite = { focus = GEM_night_of_broken_glass }
+		cost = 7.2
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = GEM_iron_guard
+		icon = GFX_goal_GEM_iron_guard
+		available = { always = no }
+		x = 0
+		y = 1
+		relative_position_id = GEM_destroy_the_opposition
+		prerequisite = { focus = GEM_destroy_the_opposition }
+		mutually_exclusive = { focus = GEM_a_little_freedom }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			effect_tooltip = {
+				create_country_leader = {
+					name = "Heinrich Himmler"
+					desc = "GEM_HIMMLER_DESC"
+					picture = "gfx/leaders/GEM/Himmler.dds"
+					ideology = nazism
+					traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_a_little_freedom
+		icon = GFX_goal_GEM_a_little_freedom
+		available = { always = no }
+		x = -2
+		y = 1
+		relative_position_id = GEM_destroy_the_opposition
+		prerequisite = { focus = GEM_destroy_the_opposition }
+		mutually_exclusive = { focus = GEM_iron_guard }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			effect_tooltip = {
+				create_country_leader = {
+					name = "Joseph Goebbels"
+					desc = "GEM_GOEBBELS_DESC"
+					picture = "gfx/leaders/GEM/Goebbels.dds"
+					ideology = nazism
+					traits = { propaganda_master_hum human_leader }
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_red_variant 
+		icon = GFX_goal_GEM_red_variant
+		available = { always = no }
+		x = 0
+		y = 1
+		relative_position_id = GEM_oppose_nazis
+		prerequisite = { focus = GEM_oppose_nazis }
+		mutually_exclusive = { focus = GEM_people_spirit }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	focus = {
+		id = GEM_people_spirit
+		icon = GFX_goal_people_spirit
+		available = { always = no }
+		x = 4
+		y = 1
+		relative_position_id = GEM_oppose_nazis
+		prerequisite = { focus = GEM_oppose_nazis }
+		mutually_exclusive = { focus = GEM_red_variant }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	focus = {
+		id = GEM_comendant_hour
+		icon = GFX_goal_GEM_comendant_hour
+		x = -2
+		y = 1
+		relative_position_id = GEM_a_little_freedom
+		prerequisite = { focus = GEM_a_little_freedom }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				set_demilitarized_zone = yes 
+			}
+		}
+	}
+	focus = {
+		id = GEM_xeno_question
+		icon = GFX_goal_GEM_xenos
+		x = 0
+		y = 1
+		relative_position_id = GEM_a_little_freedom
+		prerequisite = { focus = GEM_a_little_freedom }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.12 }
+		}
+	}
+	focus = {
+		id = GEM_world_arena
+		icon = GFX_goal_GEM_world_arena
+		x = -1
+		y = 1
+		relative_position_id = GEM_xeno_question
+		prerequisite = { focus = GEM_xeno_question }
+		prerequisite = { focus = GEM_comendant_hour }
+		cost = 10
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = GEM_military_squads
+		icon = GFX_goal_GEM_milsquads
+		x = 0
+		y = 1
+		relative_position_id = GEM_iron_guard
+		prerequisite = { focus = GEM_iron_guard }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_ss_stormtroopers
+		}
+	}
+	focus = {
+		id = GEM_war_never_changes
+		icon = GFX_goal_GEM_war_never_changes
+		x = 0
+		y = 1
+		relative_position_id = GEM_military_squads
+		prerequisite = { focus = GEM_military_squads }
+		cost = 10
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = GEM_worker_manifest
+		icon = GFX_goal_GEM_work_manifest
+		x = 0
+		y = 1
+		relative_position_id = GEM_red_variant
+		prerequisite = { focus = GEM_red_variant }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = GEM_soviet_assistance
+		icon = GFX_goal_GEM_SOU_assist
+		x = 2
+		y = 1
+		relative_position_id = GEM_red_variant
+		prerequisite = { focus = GEM_red_variant }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				country_event = { id = gem.13 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_rise_the_people
+		icon = GFX_goal_GEM_rise_people
+		x = 1
+		y = 1
+		relative_position_id = GEM_worker_manifest
+		prerequisite = { focus = GEM_worker_manifest }
+		prerequisite = { focus = GEM_soviet_assistance }
+		cost = 5
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+	}
+	focus = {
+		id = GEM_equality_brothehood
+		icon = GFX_goal_GEM_equality
+		x = 0
+		y = 1
+		relative_position_id = GEM_rise_the_people
+		prerequisite = { focus = GEM_rise_the_people }
+		cost = 10
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = GEM_echo_of_war
+		icon = GFX_goal_GEM_war_echo
+		x = 0
+		y = 1
+		relative_position_id = GEM_people_spirit
+		prerequisite = { focus = GEM_people_spirit }
+		cost = 5
+		completion_reward = {
+			add_war_support = -0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GEM_coups
+		icon = GFX_goal_GEM_coups
+		x = 2
+		y = 1
+		relative_position_id = GEM_people_spirit
+		prerequisite = { focus = GEM_people_spirit }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_coups_idea
+		}
+	}
+	focus = {
+		id = GEM_ask_for_UNS
+		icon = GFX_goal_GEM_UNS
+		x = 0
+		y = 1
+		relative_position_id = GEM_echo_of_war
+		prerequisite = { focus = GEM_echo_of_war }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				country_event = { id = gem.15 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_natives_help
+		icon = GFX_goal_natives
+		x = 0
+		y = 1
+		relative_position_id = GEM_coups
+		prerequisite = { focus = GEM_coups }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				country_event = { id = gem.15 }
+			}
+			CRY = {
+				country_event = { id = gem.15 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_elections
+		icon = GFX_goal_GEM_elections
+		x = 1
+		y = 1
+		relative_position_id = GEM_ask_for_UNS
+		prerequisite = { focus = GEM_ask_for_UNS }
+		prerequisite = { focus = GEM_natives_help }
+		cost = 10
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			set_politics = {
+				ruling_party = democratic
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	focus = {
+		id = GEM_contact_changeling 
+		#allow_branch = {
+		#	has_completed_focus = GEM_world_arena
+		#}
+		icon = GFX_goal_GEM_CHN_contact
+		x = 0 
+		y = 1
+		relative_position_id = GEM_world_arena
+		prerequisite = { focus = GEM_world_arena }
+		cost = 5
+		completion_reward = {
+			CHN = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_liberal_politics
+		available = {
+			has_idea = GEM_no_xenophobia
+		}
+		icon = GFX_goal_GEM_liberal
+		x = -1
+		y = 1
+		relative_position_id = GEM_contact_changeling
+		prerequisite = { focus = GEM_contact_changeling }
+		mutually_exclusive = { focus = GEM_radicalism_goeb }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.05
+			capital_scope = {
+				set_demilitarized_zone = no
+			}
+		}
+	}
+	focus = {
+		id = GEM_dialog_himmler
+		icon = GFX_goal_GEM_dialog_himmler
+		x = -1
+		y = 1
+		relative_position_id = GEM_liberal_politics 
+		prerequisite = { focus = GEM_liberal_politics }
+		mutually_exclusive = { focus = GEM_arrest_himmler }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.17 }
+		}
+	}
+	focus = {
+		id = GEM_arrest_himmler
+		icon = GFX_goal_GEM_arrest_himmler
+		x = 1
+		y = 1
+		relative_position_id = GEM_liberal_politics
+		prerequisite = { focus = GEM_liberal_politics }
+		mutually_exclusive = { focus = GEM_dialog_himmler }
+		cost = 5
+		completion_reward = {
+			set_country_flag = gem_himmler_arrested
+			custom_effect_tooltip = arrest_himmler_tt
+		}
+	}
+	focus = {
+		id = GEM_access_xenophilia
+		icon = GFX_goal_GEM_fight_xenophilia
+		x = 1
+		y = 1
+		relative_position_id = GEM_dialog_himmler
+		prerequisite = { focus = GEM_dialog_himmler OR = GEM_arrest_himmler }
+		cost = 10
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	focus = {
+		id = GEM_ss_question
+		icon = GFX_goal_GEM_ss_question
+		x = 0
+		y = 1
+		relative_position_id = GEM_access_xenophilia
+		prerequisite = { focus = GEM_access_xenophilia }
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = depence_of_himmlers_fate 
+			hidden_effect = {
+				if = {
+					limit = {
+						has_template = "Waffen SS"
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Waffen SS\" division_template = \"Waffen SS\" start_experience_factor = 1 start_equipment_factor = 1"
+							owner = ROOT 
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = himmler_civil_war
+					}
+					start_civil_war = {
+						ideology = neutrality
+						size = 0.3
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_black_day
+		icon = GFX_goal_GEM_black_day
+		available = {
+			has_civil_war = no 
+		}
+		x = -1
+		y = 1
+		relative_position_id = GEM_ss_question 
+		prerequisite = { focus = GEM_ss_question }
+		cost = 5
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+		}
+	}
+	focus = {
+		id = GEM_adaptation
+		icon = GFX_goal_adaptation
+		available = {
+			has_civil_war = no 
+		}
+		x = 1
+		y = 1
+		relative_position_id = GEM_ss_question
+		prerequisite = { focus = GEM_ss_question }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	focus = {
+		id = GEM_radicalism_goeb
+		icon = GFX_goal_GEM_goeb_radicalism
+		available = {
+			has_idea = GEM_no_xenos
+		}
+		x = 1
+		y = 1
+		relative_position_id = GEM_contact_changeling
+		prerequisite = { focus = GEM_contact_changeling }

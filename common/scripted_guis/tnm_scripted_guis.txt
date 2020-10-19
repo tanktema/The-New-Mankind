@@ -12,4 +12,30 @@ scripted_gui = {
 		
 		}
 	}
+	human_manpower_icon = {
+		window_name = "human_manpower_icon_container"
+		context_type = player_context
+		visible = {
+			is_human_race = yes
+		}
+		effects = {
+		
+		}
+		triggers = {
+		
+		}
+	}
+	alpha_logo_icon = {
+		window_name = "alpha_logo_icon_container"
+		context_type = player_context
+		visible = {
+			always = yes
+		}
+		effects = {
+		
+		}
+		triggers = {
+		
+		}
+	
 }

@@ -1,0 +1,11 @@
+units = {
+	fleet = {
+		name = "USA Fleet №1."
+		naval_base = 9406
+		task_force = {
+			name = "Task Force 141"
+			location = 9406
+			ship = { name = "USS Phoenix" pride_of_the_fleet = yes definition = battleship start_experience_factor = 1 equipment = { ship_hull_heavy_1 = { amount = 1 owner = UNS version_name = "Atlantic Class" } } }
+		}
+	}
+}

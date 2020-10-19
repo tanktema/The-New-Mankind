@@ -35,3 +35,125 @@ extra_worktime_human_category = {
 		has_dlc = "Waking the Tiger"
 	}
 }
+scientifical_park_human_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+scientifical_expand_human_category = {
+icon = generic_formable_nations
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}	
+industral_rebuild_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+fleet_reconstruction_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+soviet_pressure_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}	
+soviet_diplomacy_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+soviet_tsar_coring_decisions = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}	
+state_renaming_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+	visible = { always = no }
+}
+sou_industrial_effort = {
+	icon = generic_formable_nations
+	visible = {
+		NOT = {
+			has_country_flag = industry_rebuilt_yes
+		}
+		check_variable = { industrial_broken_sou > 0 }
+	} 
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}	
+SOU_resource_effort_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}	
+SOU_resource_selling = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}	
+SOU_vdnh_category = {
+	icon = soviet_vdnh_category
+	visible = { 
+		OR = {
+			has_completed_focus = SOU_finish_rebuilding
+			has_completed_focus = SOU_end_of_destroyment
+		}
+	}
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+	picture = GFX_decision_sou_vdnh_picture
+}
+SOU_cremlin_category = {
+	icon = soviet_vdnh_category
+	visible = {
+		has_completed_focus = SOU_rebuild_cremlin
+	}
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+UNS_liberty_statue_category = {
+	icon = soviet_vdnh_category
+	visible = {
+		has_completed_focus = UNS_liberty_statue
+	}
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+SOU_fleet_remake_category = {
+	icon = generic_formable_nations
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+GEM_political_crisis_category = {
+	icon = generic_formable_nations 
+	visible = {
+		has_completed_focus = GEM_party_meeting
+		has_idea = GEM_polit_crisis
+	}
+	allowed = {
+		has_dlc = "Waking the Tiger"
+		tag = GEM
+	}
+}

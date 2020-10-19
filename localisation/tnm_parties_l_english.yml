@@ -1,0 +1,26 @@
+﻿l_english:
+    UNS_fascism_party:0 "NSPA"
+    UNS_democratic_party:0 "DPA"
+    UNS_communism_party:0 "SDPA"
+    UNS_neutrality_party:0 "RPA"
+    UNS_fascism_party_long:0 "National-Socialistic party of America"
+    UNS_democratic_party_long:0 "Democratic party of America"
+    UNS_communism_party_long:0 "Social-Democratic party of America"
+    UNS_neutrality_party_long:0 "Republican party of America"
+    UNS_harmonic_party:0 "HPA"
+    UNS_harmonic_party_long:0 "Harmonical party of America"
+    UNS_nasizm_party:0 "NSALP"
+    UNS_nasizm_party_long:0 "National-Socialistic American labor Party"
+    UNS_militarizm_party:0 "ADC"
+    UNS_militarizm_party_long:0 "American Defense Council"
+    
+    SOU_fascism_party:0 "IPSS"
+    SOU_fascism_party_long:0 "Imperial Party of the Soviet Union"
+    SOU_communism_party:0 "KPSS"
+    SOU_communism_party_long:0 "Communist party of the Soviet Union"
+    SOU_democratic_party:0 "RPSS"
+    SOU_democratic_party_long:0 "Reformist party of the Soviet Union"
+    SOU_neutrality_party:0 "SD"
+    SOU_neutrality_party_long:0 "Dynasty of Smolyaniy"
+    
+    

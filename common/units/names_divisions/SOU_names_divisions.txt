@@ -1,0 +1,35 @@
+SOU_INF_01 = {
+	name = "Pekhotnaya Diviziya"
+	for_countries = { SOU }
+	division_types = { "infantry" }
+	fallback_name = "%d Pekhotnaya Diviziya"
+	
+	ordered = {
+		1 = { "%dst Moskovskaya Strelkovaya Diviziya" }
+		2 = { "%dnd Lrningradskaya Strelkovaya Diviziya" }
+		3 = { "%drd Stalingradskaya Strelkovaya Diviziya" }
+		4 = { "%dth Minskaya Strelkovaya Diviziya" }
+		5 = { "%dth Kievskaya Strelkovaya Diviziya" }
+		6 = { "%dth Permskaya Strelkovaya Diviziya" }
+		7 = { "%dth Sevastopalskaya Strelkovaya Diviziya" }
+		8 = { "%dth Simferopolskaya Strelkovaya Diviziya" }
+		9 = { "%dth Brestskaya Strelkovaya Diviziya" }
+		10 = { "%dth Kharkovskaya Strelkovaya Diviziya" }
+		11 = { "%dth Donetskaya Strelkovaya Diviziya" }
+		12 = { "%dth Arkhangelskaya Strelkovaya Diviziya" }
+	}
+}
+
+SOU_ARM_01 = {
+	name = "Mekhanizirovannaya Brigada"
+	for_countries = { SOU }
+	division_types = { "light_armor" "medium_armor" "heavy_armor" }
+	fallback_name = "%d Mekhanizirovannaya Brigada"
+	
+	ordered = {
+		1 = { "%dst Moskovskaya Mekhanizirovannaya Brigada" }
+		2 = { "%dst Kievskaya Mekhanizirovannaya Brigada" }
+		3 = { "%dst Minskaya Mekhanizirovannaya Brigada" }
+		4 = { "%dst Leningradskaya Mekhanizirovannaya Brigada" }
+	}
+}

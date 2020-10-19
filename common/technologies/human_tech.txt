@@ -29,6 +29,18 @@ technologies = {
 		allow = {
 			always = no
 		}
+		category_army = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+			max_organization = 15
+			reliability = 0.5
+			maximum_speed = -0.1
+			combat_width = 0.1
+			breakthrough = 0.1
+			attack = 0.1
+		}
+
+			
 	}
 	#Снайперы
 	
@@ -59,6 +71,7 @@ technologies = {
 		}
 		categories = {
 			human_tech
+			snipers_tech
 			race_tech
 		}
 		ai_will_do = {
@@ -92,6 +105,7 @@ technologies = {
 		}
 		categories = {
 			human_tech
+			snipers_tech
 			race_tech
 		} 
 	}
@@ -129,6 +143,7 @@ technologies = {
 		}
 		categories = {
 			human_tech
+			snipers_tech
 			race_tech
 		} 
 	}
@@ -172,6 +187,7 @@ technologies = {
 		categories = {
 			human_tech
 			race_tech
+			snipers_tech
 		} 
 	}
 	snipers_double = {
@@ -186,7 +202,7 @@ technologies = {
 		research_cost = 1
 		sniper_corps = {
 			manpower = 200
-			max_strength = 25
+			max_strength = 0.25
 			default_morale = 0.4
 			soft_attack = 0.1
 			breakthrough = 0.1
@@ -202,6 +218,7 @@ technologies = {
 		categories = {
 			human_tech
 			race_tech
+			snipers_tech
 		}
 	}
 	snipers_targeting_systems = {
@@ -223,6 +240,7 @@ technologies = {
 		}
 		categories = {
 			human_tech
+			snipers_tech
 			race_tech
 		}
 	}
@@ -244,6 +262,7 @@ technologies = {
 		categories = {
 			human_tech
 			race_tech
+			snipers_tech
 		}
 	}
 	snipers_high_caliber = {
@@ -263,6 +282,7 @@ technologies = {
 		research_cost = 1
 		categories = {
 			human_tech
+			snipers_tech
 			race_tech 
 		}
 	}
@@ -278,6 +298,7 @@ technologies = {
 		research_cost = 1
 		categories = {
 			human_tech
+			snipers_tech
 			race_tech 
 		}
 		sniper_corps = {
@@ -297,6 +318,7 @@ technologies = {
 		categories = {
 			human_tech
 			race_tech 
+			snipers_tech
 		}
 		land_night_attack = 0.2
 	}
@@ -316,6 +338,7 @@ technologies = {
 		categories = {
 			human_tech
 			race_tech 
+			human_industrial_tech
 		}
 		production_factory_max_efficiency_factor = 0.1
 		industrial_capacity_factory = 0.1
@@ -333,6 +356,7 @@ technologies = {
 		research_cost = 1
 		categories = {
 			race_tech
+			human_industrial_tech
 			human_tech
 		}
 		line_change_production_efficiency_factor = 0.15
@@ -350,6 +374,7 @@ technologies = {
 		research_cost = 1
 		categories = {
 			race_tech
+			human_industrial_tech
 			human_tech
 		}
 		on_research_complete = {

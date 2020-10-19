@@ -1,0 +1,858 @@
+add_namespace = sou
+
+country_event = {
+	id = sou.1
+	title = sou.1.t 
+	desc = sou.1.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.1.a 
+		capital_scope = {
+			add_extra_state_shared_building_slots = 7
+			add_building_construction = {
+				type = industrial_complex 
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory 
+				level = 3
+				instant_build = yes
+			}
+		}
+		country_event = { id = sou.2 days = 10 }
+	}
+	option = {
+		name = sou.1.b 
+		capital_scope = {
+			add_extra_state_shared_building_slots = 7
+			add_building_construction = {
+				type = industrial_complex 
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory 
+				level = 4
+				instant_build = yes
+			}
+		}
+		country_event = { id = sou.2 days = 10 }
+	}
+}
+country_event = {
+	id = sou.2
+	title = sou.2.t
+	desc = sou.2.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.2.a 
+		hidden_effect = {
+			capital_scope = {
+				create_unit = {
+					division = " name = \"1ya Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = SOU
+				}
+				create_unit = {
+					division = " name = \"1ya Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = SOU
+				}
+				create_unit = {
+					division = " name = \"1ya Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = SOU
+				}
+				create_unit = {
+					division = " name = \"1ya Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = SOU
+				}
+				create_unit = {
+					division = " name = \"1ya Pekhotnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = SOU
+				}
+			}
+		}
+		custom_effect_tooltip = sou_tooltip_recruit_1
+		country_event = { id = sou.3 days = 5 }
+	}
+}
+country_event = {
+	id = sou.3
+	title = sou.3.t 
+	desc = sou.3.desc 
+	is_triggered_only = yes
+	option = {
+		name = sou.3.a 
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 1500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 50
+		}
+	}
+}
+country_event = {
+	id = sou.4
+	title = sou.4.t 
+	desc = sou.4.desc
+	is_triggered_only = yes 
+	fire_only_once = yes
+	option = {
+		name = sou.4.a 
+		transfer_state = 234
+		country_event = { id = sou.5 days = 10 }
+	}
+}
+country_event = {
+	id = sou.5
+	title = sou.5.t 
+	desc = sou.5.desc
+	is_triggered_only = yes 
+	option = {
+		name = sou.5.a 
+		transfer_state = 233
+	}
+}
+news_event = {
+	id = sou.6
+	title = sou.6.t 
+	major = yes 
+	desc = sou.6.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.6.a 
+	}
+}
+country_event = {	
+	id = sou.7 
+	title = sou.7.t
+	desc = sou.7.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.7.a 
+		FROM = {
+			puppet = ROOT 
+			set_autonomy = {
+				target = ROOT 
+				autonomy_state = autonomy_socialistic_republic
+			}
+		}
+	}
+	option = {
+		name = sou.7.b 
+		FROM = {
+			country_event = { id = sou.8 }
+		}
+	}
+}
+country_event = {	
+	id = sou.8  
+	title = sou.8.t
+	desc = sou.8.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.8.a 
+		create_wargoal = {
+			target = FROM 
+			type = puppet_wargoal_focus
+		}
+	}
+}
+country_event = {
+	id = sou.9
+	title = sou.9.t 
+	desc = sou.9.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.9.a 
+		set_country_flag = soviet_embassy_opened
+	}
+	option = {
+		name = sou.9.b 
+		set_country_flag = soviet_embassy_declined
+	}
+}
+country_event = {
+	id = sou.10 
+	title = sou.10.t 
+	desc = sou.10.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.10.a 
+		FROM = {
+			country_event = { id = sou.11 days = 1 }
+		}
+	}
+	option = {
+		name = sou.10.b 
+	}
+}
+country_event = {
+	id = sou.11 
+	title = sou.11.t 
+	desc = sou.11.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.11.a 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
+	}
+}
+country_event = {
+	id = sou.12 
+	title = sou.12.t 
+	desc = sou.12.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.12.a 
+		trigger = {
+			democratic > 0.4
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes 
+			elections_frequency = 36
+		}
+	}
+	option = {
+		name = sou.12.b 
+		trigger = {
+			communism > 0.4
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.1
+		}
+		complete_national_focus = SOU_world_arena
+	}
+	option = {
+		name = sou.12.c 
+		trigger = {
+			communism < 0.3
+			democratic > 0.4
+		}
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.3
+		}
+		add_stability = -0.2
+		hidden_effect = {
+			country_event = { id = sou.13 days = 30 }
+		}
+		custom_effect_tooltip = democratic_unstable_tt_1
+	}
+}
+country_event = {
+	id = sou.13 
+	title = sou.13.t 
+	desc = sou.13.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.13.a 
+		start_civil_war = {
+			ideology = ROOT 
+			size = 0.3
+			keep_unit_leaders = { 1491 }
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes 
+			elections_frequency = 36
+		}
+	}
+	option = {
+		name = sou.13.b 
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes 
+			elections_frequency = 36
+		}
+	}
+}
+country_event = {
+	id = sou.14 
+	title = sou.14.t
+	desc = sou.14.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.14.a 
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
+		}
+		trigger = {
+			fascism < 0.15
+		}
+		set_country_flag = fascist_suppressed
+		custom_effect_tooltip = fascist_suppressed_tt 
+	}
+	option = {
+		name = sou.14.b 
+		add_popularity = {
+			ideology = communism
+			popularity = -0.2
+		}
+		trigger = {
+			fascism < 0.15
+		}
+		add_stability = -0.2
+		custom_effect_tooltip = fascist_not_suppressed_tt 
+	}
+}
+country_event = {
+	id = sou.15 
+	title = sou.15.t 
+	desc = sou.15.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.15.a 
+		add_equipment_to_stockpile = {
+			type = infantry_equipment 
+			amount = 3000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment 
+			amount = 1500
+		}
+		add_manpower = 10000
+		create_corps_commander = {
+			name = "Comrade Shashka"
+			portrait_path = "gfx/leaders/SOU/Shashka.dds"
+			traits = {
+
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 1
+			logistics_skill = 8
+			id = 1984
+		}
+	}
+}
+country_event = {
+	id = sou.16
+	title = sou.16.t 
+	desc = sou.16.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.16.a
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+	}
+	option = {
+		name = sou.16.b 
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		add_stability = -0.1
+		add_political_power = -25
+		set_country_flag = sou_bloody_sunday
+		custom_effect_tooltip = sou_tsarizm_tt_1
+	}
+}
+country_event = {
+	id = sou.17 
+	title = sou.17.t 
+	desc = sou.17.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.17.a 
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.15
+		}
+	}
+}
+country_event = {
+	id = sou.18
+	title = sou.18.t
+	desc = sou.18.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.18.a 
+		random_list = {
+			75 = {
+				country_event = { id = sou.19 }
+			}
+			25 = {
+				country_event = { id = sou.20 }
+			}
+		}
+	}
+	option = {
+		name = sou.18.b 
+		trigger = {
+			has_country_flag = sou_bloody_sunday
+		}
+		country_event = { id = sou.27 }
+		
+	}
+}
+country_event = {
+	id = sou.19
+	title = sou.19.t 
+	desc = sou.19.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.19.a 
+		every_unit_leader = {
+			limit = {
+				has_trait = gen_serpov
+			}
+			set_unit_leader_flag = serpov_supported_tsar
+		}
+	}
+}
+country_event = {
+	id = sou.20
+	title = sou.20.t 
+	desc = sou.20.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.20.a 
+	}
+}
+country_event = {
+	id = sou.21
+	title = sou.21.t 
+	desc = sou.21.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.21.a
+		effect_tooltip = {		
+			every_unit_leader = {
+				limit = {
+					has_unit_leader_flag = serpov_supported_tsar
+				}
+				promote_leader = yes 
+				add_unit_leader_trait = reinstalled_royal_guard_master
+			}
+		}
+		hidden_effect = {
+			every_unit_leader = {
+				limit = {
+					has_unit_leader_flag = serpov_supported_tsar
+				}
+				retire = yes
+			}
+			create_field_marshal = {
+				name = "Captain-Commander Dmitry Serpov"
+				desc = "UNS_serp_cc_desc"
+				portrait_path = "gfx/leaders/UNS/Serpov.dds"
+				traits = {
+					gen_serpov_fm
+					omega_fm
+					reinstalled_royal_guard_master
+				}
+				skill = 6
+				attack_skill = 6
+				defense_skill = 6
+				planning_skill = 6
+				logistics_skill = 6
+				id = 20001
+			}
+			capital_scope = {
+				add_dynamic_modifier = { modifier = SOU_33_belarus_div }
+			}
+		}
+	}
+}
+country_event = {
+	id = sou.22
+	title = sou.22.t 
+	desc = sou.22.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.22.a 
+		every_unit_leader = {
+			limit = {
+				has_trait = gen_serpov 
+			}
+			set_nationality = EQS
+			EQS = {
+				country_event = { id = sou.24 days = 3 }
+			}
+		}
+	}
+}
+news_event = {
+	id = sou.23
+	title = sou.23.t 
+	desc = sou.23.desc
+	is_triggered_only = yes 
+	option = {
+		name = sou.23.a 
+		add_stability = 0.1
+	}
+}
+country_event = {
+	id = sou.24
+	title = sou.24.t 
+	desc = sou.24.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.24.a 
+		every_unit_leader = {
+			limit = {
+				has_trait = gen_serpov 
+			}
+			add_unit_leader_trait = human_guard_captain
+			
+		}
+		set_country_flag = sou_army_support_tsar_flag
+	}
+}
+country_event = {
+	id = sou.25
+	title = sou.25.t 
+	desc = sou.25.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.25.a 
+		ai_chance = { base = 100 }
+		ROOT = {
+			add_to_faction = FROM 
+			add_ideas = married_sunbutt_human
+		}
+		FROM = {
+			add_ideas = married_sunbutt_human
+		}
+		news_event = { id = sou.26 }
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM 
+				modifier = married_sunbutt
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM 
+				modifier = married_sunbutt
+			}
+		}
+	}
+	option = {
+		name = sou.25.b 
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = broken_heart
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM
+				modifier = broken_heart 
+			}
+		}
+	}
+}
+news_event = {
+	id = sou.26 
+	title = sou.26.t 
+	desc = sou.26.desc 
+	is_triggered_only = yes 
+	major = yes 
+	option = {
+		trigger = {
+			OR = {
+				tag = SOU 
+				tag = EQS 
+				tag = CRY
+			}
+		}
+		name = sou.26.a 
+	}
+	option = {
+		trigger = {
+			is_human_race = yes 
+			NOT = {
+				tag = SOU
+			}
+		}
+		name = sou.26.b 
+	}
+	option = {
+		trigger = {
+			AND	 = {
+				has_government = communism
+				is_human_race = no
+				NOT = {
+					tag = EQS 
+					tag = CRY
+				}
+			}
+		}
+		name = sou.26.c 
+	}
+	option = {
+		trigger = {
+			AND	 = {
+				has_government = fascism
+				is_human_race = no
+				NOT = {
+					tag = EQS 
+					tag = CRY
+				}
+			}
+		}
+		name = sou.26.d 
+	}
+	option = {
+		trigger = {
+			AND	 = {
+				has_government = democratic
+				is_human_race = no
+				NOT = {
+					tag = EQS 
+					tag = CRY
+				}
+			}
+		}
+		name = sou.26.e 
+	}
+	option = {
+		trigger = {
+			AND	 = {
+				has_government = neutrality
+				is_human_race = no
+				NOT = {
+					tag = EQS 
+					tag = CRY
+				}
+			}
+		}
+		name = sou.26.f 
+	}
+}
+country_event = {
+	id = sou.27
+	title = sou.27.t 
+	desc = sou.27.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.27.a 
+		every_unit_leader = {
+			limit = {
+				has_trait = gen_serpov
+			}
+			set_unit_leader_flag = serpov_supported_tsar
+			
+		}
+		set_country_flag = sou_army_support_tsar_flag
+	}
+}
+country_event = {
+	id = sou.28
+	title = sou.28.t 
+	desc = sou.28.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.28.a 
+		FROM = {
+			country_event = { id = sou.29 }
+		}
+	}
+	option = {
+		name = sou.28.b 
+	}
+}
+country_event = {
+	id = sou.29 
+	title = sou.29.t 
+	desc = sou.29.desc
+	is_triggered_only = yes 
+	option = {
+		name = sou.29.a 
+		every_state = {
+			limit = {
+				OR = {
+					state = 332
+					state = 234
+					state = 678
+					state = 58
+					state = 338
+					state = 239
+					state = 242
+					state = 243
+				}
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes	
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sou.30 
+	title = sou.tanker
+	desc = sou.tanker.desc 
+	picture = GFX_event_SOU_tanker
+	is_triggered_only = yes 
+	option = {
+		name = sou.tanker.a 
+		create_corps_commander = {
+			name = "Tanker Pony"
+			desc = "SOU_TANKER_DESC"
+			portrait_path = "gfx/leaders/SOU/Tanker.dds"
+			traits = {
+				reactive_pony
+			}
+			skill = 4
+			attack_skill = 5
+			defense_skill = 4
+			logistics_skill = 5
+			planning_skill = 7
+		}
+	}
+}
+
+country_event = {
+	id = sou.31
+	title = sou.tanker.untrained
+	desc = sou.youngtanker.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.tankeryoung.a 
+		hidden_effect = {
+			country_event = { id = sou.30 days = 60}
+		}
+	}
+	option = {
+		name = sou.tankeryoung.b
+	}
+}
+country_event = {
+	id = sou.32
+	title = sou.32.t 
+	desc = sou.32.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.32.a 
+		hidden_effect = {
+			country_event = { id = sou.33 days = 60 }
+		}
+		custom_effect_tooltip = uns_acc_offic_tt_2
+	}
+	option = {
+		name = sou.32.b 
+		trigger = {
+			check_variable = { acceptance_value > 20 }
+		}
+		hidden_effect = {
+			country_event = { id = sou.34 days = 60 }
+		}
+		custom_effect_tooltip = uns_acc_offic_tt_2
+		custom_effect_tooltip = uns_acc_offic_tt_1
+	}
+}
+country_event = {
+	id = sou.33 
+	title = sou.33.t 
+	desc = sou.33.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.33.a 
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Polkovnik Tokarev"
+				portrait_path = "gfx/leaders/SOU/Tokarev.dds"
+				traits = { trait_cautious infantry_officer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Leytenant Semenov"
+				portrait_path = "gfx/leaders/SOU/Semenov.dds"
+				skill = 5
+				attack_skill = 5
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 2
+				traits = { trickster winter_expert }
+			}
+			create_corps_commander = {
+				name = "Captain Mustafov"
+				portrait_path = "gfx/leaders/SOU/Mustafov.dds"
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				logistics_skill = 5
+				planning_skill = 2
+				traits = { panzer_leader }
+			}
+		}
+		custom_effect_tooltip = new_officers_uns_tt
+		add_ideas = SOU_suvorov_academy
+	}
+}
+country_event = {
+	id = sou.34 
+	title = sou.34.t 
+	desc = sou.34.desc 
+	is_triggered_only = yes 
+	option = {
+		name = sou.34.a 
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Polkovnik Tokarev"
+				portrait_path = "gfx/leaders/SOU/Tokarev.dds"
+				traits = { trait_cautious infantry_officer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 5
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Leytenant Semenov"
+				portrait_path = "gfx/leaders/SOU/Semenov.dds"
+				skill = 5
+				attack_skill = 5
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 2
+				traits = { trickster winter_expert }
+			}
+			create_corps_commander = {
+				name = "Captain Mustafov"
+				portrait_path = "gfx/leaders/SOU/Mustafov.dds"
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				logistics_skill = 5
+				planning_skill = 2
+				traits = { panzer_leader }
+			}
+			create_corps_commander = {
+				name = "Vitaliy Orlov"
+				portrait_path = "gfx/leaders/SOU/Orlov.dds"
+				skill = 4
+				attack_skill = 6
+				defense_skill = 2
+				planning_skill = 7
+				logistics_skill = 3
+				traits = { orlov_pony }
+			}
+		}
+		custom_effect_tooltip = new_officers_uns_tt
+		add_ideas = SOU_suvorov_academy
+	}
+}

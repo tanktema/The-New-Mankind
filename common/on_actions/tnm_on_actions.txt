@@ -8,112 +8,57 @@ on_actions = {
 					}
 					add_ideas = human_race
 					add_ideas = human_science
-					add_ideas = human_economy
+					add_ideas = human_society
 					set_variable = {
 						var = acceptance_value
 						value = 0
 					}
+					add_dynamic_modifier = {
+						modifier = human_acceptance_politlevel
+					}
 				}
+			}
+			UNS = {
+				country_event = { id = uns.37 days = 210 }
 			}
 		}
 	}
-	on_declare_war = {
-		effect = {
-			if = {
-				limit = {
-					tag = UNS
-					EQS = {
-						has_country_flag = UNS_equestria_communist_support 
-					}
-				}
-				EQS = {
-					start_civil_war = {
-						ideology = communism
-						size = var:equestria_comm_size
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					ROOT = {
-						is_human_race = yes
-					}
-					FROM = {
-						is_human_race = no
-					}
-				}
-				ROOT = {
-					set_temp_variable = { acceptance_value_temp3 = acceptance_value_tension }
-					divide_temp_variable = { acceptance_value_temp3 = 100 }
-					set_variable = { acceptance_value_penalty = acceptance_value_temp3 }
-					add_war_support = -acceptance_value_penalty
-					add_stability = -acceptance_value_penalty
-				}	
-			}
-		}
-	}
+	
 	on_daily = {
 		effect = {
-			if = {
-				limit = {
-					tag = UNS
-				}
-				set_temp_variable = { acceptance_value_temp = acceptance_value } 
-				divide_temp_variable = { acceptance_value_temp = 100 }
-				set_variable = { acceptance_value_polit = acceptance_value_temp }
-				set_temp_variable = { acceptance_value_temp2 = acceptance_value }
-				divide_temp_variable = { acceptance_value_temp2 = 5 }
-				set_variable = { acceptance_value_tension = acceptance_value_temp2 }
-		
-				
-				add_political_power = acceptance_value_polit
-				
-			}
-			
-			if = {
-				limit = {
-					tag = UNS
-					NOT = {
-						has_country_flag = tst_flag
+			every_country = {
+				if = {
+					limit = {
+						is_human_race = yes 
 					}
+					set_temp_variable = { acceptance_value_temp = acceptance_value } 
+					divide_temp_variable = { acceptance_value_temp = 100 }
+					set_variable = { acceptance_value_polit = acceptance_value_temp }
+					set_temp_variable = { acceptance_value_temp2 = acceptance_value }
+					divide_temp_variable = { acceptance_value_temp2 = 5 }
+					set_variable = { acceptance_value_tension = acceptance_value_temp2 }
+				
 				}
-				set_temp_variable = { var_days_mech_temp = 0 }
-				randomize_temp_variable = {
-					var = var_days_mech_temp
-					distribution = binomial
-					min = 40
-					max = 80
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_temp_variable = { acceptance_value_temp_ideology = acceptance_value_polit }
+					divide_temp_variable = { acceptance_value_temp_ideology = 4 }
+					set_variable = { acceptance_value_polit_ideology = acceptance_value_temp_ideology}
 				}
-				set_variable = { var_days_mech = var_days_mech_temp }
+				if = {
+					limit = {
+						OR = {
+							has_government = communism
+							has_government = neutrality
+						}
+					}
+					set_temp_variable = { acceptance_value_temp_ideology = acceptance_value_polit }
+					divide_temp_variable = { acceptance_value_temp_ideology = 2 }
+					set_variable = { acceptance_value_polit_ideology = acceptance_value_temp_ideology}
+				}
 			}
-			
-			#else if = {
-			#	limit = {
-			#		tag = UNS
-			#		EQS = {
-			#			has_country_flag = UNS_equestria_communist_support2
-			#		}
-			#	}
-			#	EQS = {
-			#		start_civil_war = {
-			#			ideology = communism
-			#			size = 0.4
-			#		}
-			#	}
-			#}
-			#else if = {
-			#	limit = {
-			#		tag = UNS
-			#		EQS = {
-			#			has_country_flag = UNS_equestria_communist_support3
-			#		}
-			#	}
-			#	EQS = {
-			#		start_civil_war = {
-			#			ideology = communism
-			#			size = 0.5
-			#		}
-			#	}
-			#}
 		}
 	}
+			

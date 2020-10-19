@@ -1,8 +1,0 @@
-opinion_modifiers = {
-	landlease_accepted = { value = 25 }
-	landlease_denied = { value = -25 }
-	puppet_accepted = { value = 25 }
-	puppet_denied = { value = -25 }
-	pounds_currency = { value = 25 }
-	rubles_currency = { value = -25 }
-}

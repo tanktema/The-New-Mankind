@@ -1,17 +1,11 @@
 spriteTypes = {
 	spriteType = {
-		name ="GFX_unit_demon_icon_medium"
-		texturefile = "gfx/interface/counters/divisions_large/unit_infantry_icon.dds"
+		name = "GFX_unit_sniper_unit_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/unit_sniper_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_unit_demon_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_small/unit_infantry_icon.dds"
-		noOfFrames = 2
-	}
-	spriteType = {
-		name = "GFX_unit_demon_icon_small"
-		texturefile = "gfx/texticons/unit_infantry_icon_small.dds"
-		legacy_lazy_load = no
+		name = "GFX_unit_sniper_unit_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}

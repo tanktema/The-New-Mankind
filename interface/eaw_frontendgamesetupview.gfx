@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	 frameAnimatedSpriteType = {
+        name = "GFX_country_selection_minor_entry_new_113_overlay" # the name of the Sprite
+        texturefile = "gfx/interface/country_selection_minor_entry_new_113_overlay.dds" # the frames stripe picture
+        noOfFrames = 8 # number of frames
+        effectFile = "gfx/FX/buttonstate_nodowneffect.lua" # effect overlay
+        
+        animation_rate_fps = 13 # FPS of animation
+        looping = yes 
+        play_on_show = yes
+        pause_on_loop = 0
+        
+        allwaystransparent = yes
+    }
+}

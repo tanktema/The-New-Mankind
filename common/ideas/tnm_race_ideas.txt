@@ -13,6 +13,9 @@ ideas = {
 			ai_will_do = {
 				factor = 0
 			}
+			allowed_to_remove = {
+                always = no
+            }
 		}
 	}
 	city_idea = {
@@ -30,6 +33,29 @@ ideas = {
 			}
 			modifier = {
 				research_speed_factor = 0.1
+			}
+			allowed_to_remove = {
+                always = no
+            }
+		}
+	}
+	society_development_idea = {
+		human_society = {
+			allowed = {
+				is_human_race = yes
+			}
+			visible = {
+				is_human_race = yes
+			}
+			allowed_to_remove = {
+                always = no
+            }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				local_resources_factor = 0.1
 			}
 		}
 	}

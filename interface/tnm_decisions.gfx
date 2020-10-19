@@ -1,0 +1,37 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_decision_yarmarka"
+		textureFile = "gfx/interface/decisions/yarmarka_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_general_pav"
+		textureFile = "gfx/interface/decisions/general_pav_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_military_pav"
+		textureFile = "gfx/interface/decisions/military_pav_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_tractor_pav"
+		textureFile = "gfx/interface/decisions/tractor_pav_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_astro_pav"
+		textureFile = "gfx/interface/decisions/astro_pav_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_medic_pav"
+		textureFile = "gfx/interface/decisions/medic_pav_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_agron_pav"
+		textureFile = "gfx/interface/decisions/agron_pav_sou.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_category_soviet_vdnh_category"
+		textureFile = "gfx/interface/decisions/soviet_vdnh_cat.dds"
+	}
+	SpriteType = {
+		name = "GFX_decision_sou_vdnh_picture"
+		textureFile = "gfx/interface/decisions/soviet_vdnh.dds"
+	}

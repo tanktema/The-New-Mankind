@@ -1,0 +1,18 @@
+state={
+	id=312
+	name="STATE_312"
+	provinces={
+		1523 7449 7462 7607 10333 12305
+	}
+	manpower=8973256
+	history={
+		owner = GEM
+		add_core_of = GEM
+		victory_points = {
+			12305 30
+		}
+	}
+
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

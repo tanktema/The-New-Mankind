@@ -46,5 +46,32 @@ opinion_modifiers = {
 	twilight_accepted = {
 		value = 15
 	}
+	trading_treaty_uns  = {
+		trade = yes 
+		value = 60
+	}
+	friendship_between = {
+		value = 75
+	}
+	anticommunsim_politics = {
+		value = -50
+	}
+	married_sunbutt = {
+		value = 150 
+	}
+	broken_heart = {
+		value = -100
+	}
+	tsardom_of_eqvus = {
+		value = 1000
+	}
+	selling_resources_sou = {
+		trade = yes 
+		value = 50
+	}
+	accepted_vdnh = {
+		value = 70
+		months = 6
+	}
 }
 	

@@ -1,0 +1,28 @@
+division_template = {
+	name = "Spetsnaz"
+	division_names_group = SOU_SPEC_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }
+	}
+	support = {
+		sniper_corps = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+units = {
+	division = {
+		name = "33ya Belorusskaya Diviziya Spetsnaza"
+		location = 119
+		division_template = "Spetsnaz"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+}
+		

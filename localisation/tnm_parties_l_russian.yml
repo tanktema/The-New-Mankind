@@ -21,8 +21,8 @@
     ### GEM
     GEM_fascism_party:0 "НСДАП"
     GEM_fascism_party_long:0 "Национал-Социалистическая Немецкая Рабочая Партия"
-    GEM_communism_party:0 "КПГР"
-    GEM_communism_party_long:0 "Коммунистическая Партия Германской Республики"
+    GEM_communism_party:0 "СДПГ"
+    GEM_communism_party_long:0 "Социал-Демократическая Партия Германии"
     GEM_democratic_party:0 "РПГ"
     GEM_democratic_party_long:0 "Республиканская Партия Германии"
     GEM_neutrality_party:0 "СК"
@@ -39,11 +39,11 @@
     GRB_neutrality_party_long:0 "Королевская Семья"
      
     ### SOU
-    SOU_fascism_party:0 "СЦ"
-    SOU_fascism_party_long:0 "Сторонники Царя"
+    SOU_fascism_party:0 "ИПСС"
+    SOU_fascism_party_long:0 "Империалистическая Партия Советского Союза"
     SOU_communism_party:0 "КПСС"
     SOU_communism_party_long:0 "Коммунистическая Партия Советского Союза"
     SOU_democratic_party:0 "РПСС"
     SOU_democratic_party_long:0 "Реформистская Партия Советского Союза"
-    SOU_neutrality_party:0 "ВП"
-    SOU_neutrality_party_long:0 "Временное Правительство"
+    SOU_neutrality_party:0 "ДС"
+    SOU_neutrality_party_long:0 "Династия Смоляных"

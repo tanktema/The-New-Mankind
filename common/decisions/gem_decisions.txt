@@ -1,0 +1,507 @@
+GEM_political_crisis_category = {
+	your_politics_finishing = {
+		visible = {
+			has_completed_focus = GEM_party_meeting
+		}
+		activation = {
+			has_completed_focus = GEM_party_meeting
+		}
+		available = {
+			OR = {
+				has_country_flag = himmler_won
+				has_country_flag = goebbels_won
+				has_country_flag = commie_won
+				has_country_flag = demo_won
+			}
+		}
+		is_good = yes 
+		days_mission_timeout = 365
+		timeout_effect = {
+			country_event = { id = gem.11 }
+		}
+		complete_effect  = {
+			custom_effect_tooltip = gem_meeting_tt_1
+		}
+	}
+	nsdap_consolidation = {
+		available = {
+			has_completed_focus = GEM_party_meeting
+		}
+		visible = {
+			has_completed_focus = GEM_party_meeting
+		}
+		cost = 30
+		complete_effect = {
+			set_country_flag = choise_of_fascism
+			custom_effect_tooltip = unlock_himmler_hoebbels_way
+		}
+		
+		fire_only_once = yes
+	}
+	oppose_fascism = {
+		available = {
+			has_completed_focus = GEM_party_meeting
+		}
+		visible = {
+			has_completed_focus = GEM_party_meeting
+		}
+		cost = 30
+		complete_effect = {
+			set_country_flag = oppose_fascism_gem
+			custom_effect_tooltip = unlock_demo_comm_way
+		}
+		fire_only_once = yes
+	}
+	military_support_decision = {
+		available = {
+			has_country_flag = choise_of_fascism
+		}
+		visible = {
+			has_country_flag = choise_of_fascism 
+		}
+		days_remove = 50
+		cost = 25
+		remove_effect = {
+			set_country_flag = himmler_way
+			custom_effect_tooltip = himmler_support
+			add_to_variable = { fasc_support = 10 }
+			add_to_variable = { himmler_support = 10 }
+			add_to_variable = { comm_support = -5 }
+			add_to_variable = { demo_support = -5 }
+			check_german_supports_level = yes
+		}
+		fire_only_once = yes
+	}
+	use_propaganda_machine = {
+		available = {
+			has_country_flag = choise_of_fascism
+		}
+		visible = {
+			has_country_flag = choise_of_fascism 
+		}
+		days_remove = 50
+		cost = 25
+		remove_effect = {
+			set_country_flag = goebbels_way 
+			custom_effect_tooltip = goebbels_support
+			add_to_variable = { fasc_support = 10 }
+			add_to_variable = { goebbels_support = 10 }
+			add_to_variable = { comm_support = -5 }
+			add_to_variable = { demo_support = -5 }
+			check_german_supports_level = yes
+		}
+		fire_only_once = yes
+	}
+	left_way_decision = {
+		available = {
+			has_country_flag = oppose_fascism_gem
+		}
+		visible = {
+			has_country_flag = oppose_fascism_gem
+		}
+		days_remove = 50
+		cost = 25
+		remove_effect = {
+			set_country_flag = communist_way
+			custom_effect_tooltip = communist_support_gem
+			add_to_variable = { comm_support = 10 }
+			add_to_variable = { himmler_support = -5 }
+			add_to_variable = { goebbels_support = -5 }
+			add_to_variable = { fasc_support = -10 }
+			check_german_supports_level = yes 
+		}
+		fire_only_once = yes
+	}
+	people_answer_gem = {
+		available = {
+			has_country_flag = oppose_fascism_gem
+		}
+		visible = {
+			has_country_flag = oppose_fascism_gem
+		}
+		days_remove = 50
+		cost = 25
+		remove_effect = {
+			set_country_flag = democratic_way
+			custom_effect_tooltip = demo_support_gem
+			add_to_variable = { demo_support = 10 }
+			add_to_variable = { fasc_support = -10 }
+			add_to_variable = { himmler_support = -5 }
+			add_to_variable = { goebbels_support = -5 }
+			check_german_supports_level = yes 
+		}
+		fire_only_once = yes
+
+	}
+	searching_for_enemy = {
+		available = {
+			has_country_flag = speech_himmler
+		}
+		visible = {
+			has_country_flag = himmler_way
+		}
+		days_remove = 50
+		cost = 25 
+		remove_effect = {
+			set_country_flag = searches_of_ss
+			add_stability = -0.05
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			custom_effect_tooltip = find_the_opposition
+			add_to_variable = { demo_support = -10 }
+			add_to_variable = { comm_support = -10 }
+			add_to_variable = { fasc_support = 20 }
+			add_to_variable = { goebbels_support = 5 }
+			add_to_variable = { himmler_support = 15 }
+			check_german_supports_level = yes 
+		}
+		fire_only_once = yes
+	}
+	meeting_the_people = {	
+		available = {
+			has_country_flag = speech_goebbels
+		}
+		visible = {
+			has_country_flag = goebbels_way
+		}
+		days_remove = 50
+		cost = 25
+		remove_effect = {
+			set_country_flag = meet_the_people_goebbels
+			custom_effect_tooltip = meeting_with_people
+			add_stability = 0.05 
+			add_war_support = -0.05 
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_to_variable = { demo_support = -10 }
+			add_to_variable = { comm_support = -10 }
+			add_to_variable = { fasc_support = 20 }
+			add_to_variable = { himmler_support = 5 }
+			add_to_variable = { goebbels_support = 15 }
+			check_german_supports_level = yes 
+		}
+		fire_only_once = yes
+	}
+	no_more_lies = {
+		available = {
+			has_country_flag = speech_oppose_fascism
+		}
+		visible = {
+			OR = {
+				has_country_flag = communist_way
+				has_country_flag = democratic_way
+			}
+		}
+		days_remove = 50
+		cost = 25
+		remove_effect = {
+			set_country_flag = cake_is_a_lie
+			custom_effect_tooltip = demos_commies_will_fight
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.05
+			}
+			add_to_variable = { demo_support = 5 }
+			add_to_variable = { comm_support = 5 }
+			add_to_variable = { fasc_support = -10 }
+			add_to_variable = { himmler_support = -5 }
+			add_to_variable = { goebbels_support = -5 }
+			check_german_supports_level = yes
+		}
+		fire_only_once = yes
+	}
+	mil_rations_system = {
+		available = {
+			has_country_flag = chosen_rations_food_idea
+		}
+		visible = {
+			has_completed_focus = GEM_rations
+		}
+		days_remove = 25
+		cost = 25
+		remove_effect = {
+			add_ideas = GEM_military_ration_system
+		}
+		fire_only_once = yes 
+	}
+	rations_food_for_workers = {
+		available = {
+			has_country_flag = comm_give_food_workers
+		}
+		visible = {
+			has_completed_focus = GEM_rations
+		}
+		days_remove = 25
+		cost = 25
+		remove_effect = { 
+			add_ideas = GEM_more_food_for_workers
+		}
+		fire_only_once = yes 
+	}
+	equal_food_everyone = {
+		available = {
+			has_country_flag = demos_stopped_rations
+		}
+		visible = {
+			has_completed_focus = GEM_rations
+		}
+		days_remove = 25
+		cost = 25
+		remove_effect = { 
+			add_ideas = GEM_equal_rations
+		}
+		fire_only_once = yes 
+	}
+	kill_the_opposition = {
+		available = {
+			has_country_flag = opposition_himmler_solution
+		}
+		visible = {
+			has_country_flag = opposition_himmler_solution
+		}
+		days_remove = 10
+		cost = 10
+		remove_effect = {
+			add_manpower = -15
+			set_country_flag = no_turning_back
+			custom_effect_tooltip = himmler_is_superior
+			add_to_variable = { comm_support = -5 }
+			add_to_variable = { fasc_support = 5 }
+			add_to_variable = { himmler_support = 5 }
+			check_german_supports_level = yes 
+		}
+		fire_only_once = yes 
+	}
+	arrest_the_opposition = {
+		available = {
+			has_country_flag = opposition_goebbels_solution
+		}
+		visible = {
+			has_country_flag = opposition_goebbels_solution
+		}
+		days_remove = 15 
+		cost = 10
+		remove_effect = {
+			add_stability = -0.05
+			set_country_flag = no_turning_back 
+			custom_effect_tooltip = goebbels_is_superior
+			add_to_variable = { comm_support = -5 }
+			add_to_variable = { fasc_support = 5 }
+			add_to_variable = { goebbels_support = 5 }
+			check_german_supports_level = yes 
+		}
+		fire_only_once = yes 
+	}
+	set_them_free = {
+		available = {
+			has_country_flag = opposition_opposition_solution
+		}
+		visible = {
+			has_country_flag = opposition_opposition_solution
+		}
+		days_remove = 25
+		cost = 25
+		remove_effect = {
+			if = {
+				limit = {
+					has_country_flag = communist_way
+				}
+				add_to_variable = { comm_support = 10 }
+				add_to_variable = { fasc_support = -10 }
+				add_to_variable = { goebbels_support = -5 }
+				add_to_variable = { himmler_support = -5 }
+				check_german_supports_level = yes 
+				set_country_flag = stop_them_now 
+				set_country_flag = communism_is_in_lead
+				custom_effect_tooltip = communism_is_superior
+			}
+			if = {
+				limit = {
+					has_country_flag = democratic_way
+				}
+				add_to_variable = { demo_support = 10 }
+				add_to_variable = { fasc_support = -10 }
+				add_to_variable = { goebbels_support = -5 }
+				add_to_variable = { himmler_support = -5 }
+				check_german_supports_level = yes 
+				set_country_flag = stop_them_now 
+				set_country_flag = democrats_in_lead
+				custom_effect_tooltip = democratic_is_superior
+			}
+		}
+		fire_only_once = yes 
+	}
+	broken_glass_plan = {
+		available = {
+			has_country_flag = choise_of_broken_glass
+		}
+		visible = {
+			has_country_flag = choise_of_broken_glass
+		}
+		days_remove = 10
+		cost = 25
+		remove_effect = {
+			add_to_variable = { himmler_support = goebbels_support }
+			set_variable = { goebbels_support = 0 }
+			add_manpower = -root.comm_support
+			add_manpower = -root.demo_support
+			add_to_variable = { fasc_support = comm_support }
+			add_to_variable = { fasc_support = demo_support }
+			set_variable = { comm_support = 0 }
+			set_variable = { demo_support = 0 }
+			set_country_flag = himmler_is_in_lead_of_nsdap
+		}
+		fire_only_once = yes 
+	}
+	claw_plan = {
+		available = {
+			has_country_flag = choise_of_claw
+		}
+		visible = {
+			has_country_flag = choise_of_claw
+		}
+		days_remove = 10
+		cost = 25
+		remove_effect = {
+			add_to_variable = { goebbels_support = himmler_support }
+			set_variable = { himmler_support = 0 }
+			add_stability = -0.1
+			add_to_variable = { fasc_support = comm_support }
+			add_to_variable = { fasc_support = demo_support }
+			set_variable = { comm_support = 0 }
+			set_variable = { demo_support = 0 }
+			set_country_flag = goebbels_is_in_lead_of_nsdap
+		}
+		fire_only_once = yes 
+	}
+	break_the_lies = {
+		available = {
+			has_country_flag = communist_way
+		}
+		visible = {
+			has_country_flag = communism_is_in_lead
+		}
+		days_remove = 10
+		cost = 25 
+		remove_effect = {
+			add_to_variable = { comm_support = fasc_support }
+			set_variable = { fasc_support = 0 }
+			set_variable = { goebbels_support = 0 }
+			set_variable = { himmler_support = 0 }
+			set_country_flag = communists_in_the_council_head
+			custom_effect_tooltip = communism_is_winning
+		}
+	}
+	people_meeting = {
+		available = {
+			has_country_flag = democratic_way
+		}
+		visible = {
+			has_country_flag = democrats_in_lead
+		}
+		days_remove = 10
+		cost = 25 
+		remove_effect = {
+			add_to_variable = { demo_support = fasc_support }
+			set_variable = { fasc_support = 0 }
+			set_variable = { goebbels_support = 0 }
+			set_variable = { himmler_support = 0 }
+			set_country_flag = democrats_in_the_council_head
+			custom_effect_tooltip = democracy_is_winning
+		}
+	}
+	secret_meeting = {
+		available = {
+			has_country_flag = opposition_destroyed
+			has_country_flag = himmler_is_in_lead_of_nsdap
+		}
+		visible = {
+			has_completed_focus = opposition_destroyed
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				create_country_leader = {
+					name = "Heinrich Himmler"
+					desc = "GEM_HIMMLER_DESC"
+					picture = "gfx/leaders/GEM/Himmler.dds"
+					ideology = nazism
+					traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
+				}
+			}
+			complete_national_focus = GEM_iron_guard
+			set_country_flag = himmler_won
+		}
+	}
+	last_strike = {
+		available = {
+			has_completed_focus = opposition_destroyed
+			has_country_flag = goebbels_is_in_lead_of_nsdap
+		}
+		visible = {
+			has_completed_focus = opposition_destroyed
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			hidden_effect = {
+				create_country_leader = {
+					name = "Joseph Goebbels"
+					desc = "GEM_GOEBBELS_DESC"
+					picture = "gfx/leaders/GEM/Goebbels.dds"
+					ideology = nazism
+					traits = { propaganda_master_hum human_leader }
+				}
+			}
+			complete_national_focus = GEM_a_little_freedom
+			set_country_flag = goebbels_won
+		}
+	}
+	assasinate_himmler = {
+		available = {
+			has_completed_focus = GEM_oppose_nazis
+			has_country_flag = communists_in_the_council_head
+		}
+		visible = {
+			has_completed_focus = GEM_oppose_nazis
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.5
+			}
+			complete_national_focus = GEM_red_variant
+			set_country_flag = commie_won
+		}
+	}
+	stage_a_coup = {
+		available = {
+			has_completed_focus = GEM_oppose_nazis
+			has_country_flag = democrats_in_the_council_head
+		}
+		visible = {
+			has_completed_focus = GEM_oppose_nazis
+		}
+		complete_effect = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.4
+			}
+			complete_national_focus = GEM_people_spirit
+			set_country_flag = demo_won
+		}
+	}

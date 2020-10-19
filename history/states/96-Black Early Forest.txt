@@ -8,7 +8,6 @@ state={
 		owner = UNS
 		add_core_of = UNS
 		buildings = {
-			infrastructure = 2
 			9406 = { naval_base = 1 }
 		}
 		victory_points = { 9406 30 }

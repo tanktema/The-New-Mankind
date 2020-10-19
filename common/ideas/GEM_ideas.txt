@@ -1,0 +1,105 @@
+ideas = {
+	country = {	
+		GEM_polit_crisis = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				political_advisor_cost_factor = 1
+				trade_laws_cost_factor = 1
+				mobilization_laws_cost_factor = 1
+				economy_cost_factor = 1
+				high_command_cost_factor = 1
+				air_chief_cost_factor = 1
+				army_chief_cost_factor = 1
+				navy_chief_cost_factor = 1
+				political_power_gain = 1
+			}
+			rule = {
+				can_join_factions = no
+			}
+		}
+		GEM_military_ration_system = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.1
+				conscription = 0.005
+				MONTHLY_POPULATION = -0.2
+			}
+		}
+		GEM_more_food_for_workers = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_oil_factor = 0.1
+				consumer_goods_factor = -0.01
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		GEM_equal_rations = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				stability_factor = 0.1
+			}
+		}
+		GEM_no_xenophobia = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				non_core_manpower = 0.2
+				stability_factor = 0.1
+				justify_war_goal_time = 0.2
+			}
+		}
+		GEM_no_xenos = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				non_core_manpower = -0.5
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.1
+			}
+		}
+		GEM_ss_stormtroopers = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				drift_defence_factor = 0.4
+				conscription_factor = 0.2
+				resistance_target = -0.2
+				intelligence_agency_defense = 1
+			}
+		}
+		GEM_coups_idea = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				production_oil_factor = -0.1
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = -0.15
+			}
+		}
+		GEM_ss_disbanding = {
+			removal_cost = -1
+			allowed = { original_tag = GEM }
+			
+			modifier = {
+				drift_defence_factor = -0.4
+				resistance_target = 0.2
+				intelligence_agency_defense = 2
+			}
+		}

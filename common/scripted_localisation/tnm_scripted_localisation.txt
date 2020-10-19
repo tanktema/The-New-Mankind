@@ -1,0 +1,114 @@
+defined_text = {
+	name = GetPalubReadyStatus
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = UNS_built_paluba
+			}
+		}
+		localization_key = not_ready_uns_key
+	}
+	text = {
+		trigger = {
+			has_country_flag = UNS_founded_bb 
+			has_country_flag = UNS_built_paluba
+		}
+		localization_key = ready_uns_key
+	}
+	text = {
+		localization_key = not_doing_uns_key
+	}
+}
+defined_text = {
+	name = GetGunsReadyStatus
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = UNS_built_paluba
+			}
+		}
+		localization_key = not_ready_uns_key
+	}
+	text = {
+		trigger = {
+			has_country_flag = UNS_founded_bb 
+			has_country_flag = UNS_built_paluba
+		}
+		localization_key = ready_uns_key
+	}
+	text = {
+		localization_key = not_doing_uns_key
+	}
+}
+defined_text = {
+	name = GetEngineReadyStatus
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = UNS_built_paluba
+			}
+		}
+		localization_key = not_ready_uns_key
+	}
+	text = {
+		trigger = {
+			has_country_flag = UNS_founded_bb 
+			has_country_flag = UNS_built_paluba
+		}
+		localization_key = ready_uns_key
+	}
+	text = {
+		localization_key = not_doing_uns_key
+	}
+}
+defined_text = {
+	name = GetControlsReadyStatus
+	text = {
+		trigger = {
+			NOT = {
+				has_country_flag = UNS_built_paluba
+			}
+		}
+		localization_key = not_ready_uns_key
+	}
+	text = {
+		trigger = {
+			has_country_flag = UNS_founded_bb 
+			has_country_flag = UNS_built_paluba
+		}
+		localization_key = ready_uns_key
+	}
+	text = {
+		localization_key = not_doing_uns_key
+	}
+}
+defined_text = {
+	name = GetOppositionDecisionColorFirst
+	text = {
+		trigger = {
+			has_country_flag = communist_way
+		}
+		localization_key = OppositionColorRedOne
+	}
+	text = {
+		trigger = {
+			has_country_flag = democratic_way
+		}
+		localization_key = OppositionColorCyanOne
+	}
+}
+defined_text = {
+	name = GetOppositionDecisionColorSecond
+	text = {
+		trigger = {
+			has_country_flag = communist_way
+		}
+		localization_key = OppositionColorRedTwo
+	}
+	text = {
+		trigger = {
+			has_country_flag = democratic_way
+		}
+		localization_key = OppositionColorCyanTwo
+	}
+}

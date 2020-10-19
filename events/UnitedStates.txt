@@ -3,8 +3,6 @@ add_namespace = tst
 	# Эвакуация
 
 
-
-
 country_event = {
 	id = uns.1
 	title = uns.evac.1.t
@@ -299,6 +297,7 @@ country_event = {
 			popularity = -0.25
 		}
 		set_country_flag = UNS_fasc_declined
+		custom_effect_tooltip = uns_fasc_tt_1
 	}
 }
 country_event = {
@@ -944,7 +943,6 @@ country_event = {
 				OR = {
 					has_war = yes
 					has_war_with = CHN
-					surrender_progress > 0.2
 				}
 			}
 		}
@@ -983,7 +981,7 @@ country_event = {
 		}
 	}
 }
-
+ 
 country_event = {
 	id = uns.32
 	title = uns.32.t 
@@ -1013,8 +1011,213 @@ country_event = {
 			}
 			add_to_variable = {
 				var = rage_hum_meter
-				value = -5
+				value = ROOT.rage_hum_meter 
 			}
 		}
+	}
+}
+country_event = {
+	id = uns.33
+	title = uns.33.t 
+	desc = uns.33.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.33.a 
+		custom_effect_tooltip = uns_acc_offic_tt_2
+		hidden_effect = {
+			country_event = { id = uns.34 days = 60 }
+		}
+	}
+	option = {
+		name = uns.33.b
+		trigger = {
+			check_variable = { acceptance_value > 40 }
+		}
+		custom_effect_tooltip = uns_acc_offic_tt_1
+		custom_effect_tooltip = uns_acc_offic_tt_2
+		hidden_effect = {
+			country_event = { id = uns.35 days = 60 }
+		}
+	}
+}
+country_event = {
+	id = uns.34
+	title = uns.34.t 
+	desc = uns.34.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.34.a 
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Jason Broady"
+				portrait_path = "gfx/leaders/UNS/gen_broady.dds"
+				traits = { trait_cautious }
+				skill = 3 
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Adam Savage"
+				portrait_path = "gfx/leaders/YNS/gen_savage.dds"
+				traits = { infantry_officer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				logistics_skill = 5
+				planning_skill = 3
+			}
+			create_corps_commander = {
+				name = "Colonel Barton"
+				portrait_path = "gfx/leaders/UNS/gen_barton.dds"
+				traits = { armor_officer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				logistics_skill = 6
+				planning_skill = 7
+			}
+		}
+		custom_effect_tooltip = new_officers_uns_tt
+		add_ideas = UNS_milacc
+	}
+}
+country_event = {
+	id = uns.35
+	title = uns.35.t 
+	desc = uns.35.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.35.a 
+		hidden_effect = {
+			create_corps_commander = {
+				name = "Jason Broady"
+				portrait_path = "gfx/leaders/UNS/gen_broady.dds"
+				traits = { trait_cautious }
+				skill = 3 
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			create_corps_commander = {
+				name = "Adam Savage"
+				portrait_path = "gfx/leaders/UNS/gen_savage.dds"
+				traits = { infantry_officer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				logistics_skill = 5
+				planning_skill = 3
+			}
+			create_corps_commander = {
+				name = "Colonel Barton"
+				portrait_path = "gfx/leaders/UNS/gen_barton.dds"
+				traits = { armor_officer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				logistics_skill = 6
+				planning_skill = 7
+			}
+			create_corps_commander = {
+				name = "Moonstriker"
+				portrait_path = "gfx/leaders/UNS/moonstriker.dds"
+				traits = { moonstriker_service paladin_of_moon } 
+				skill = 6
+				attack_skill = 7
+				defense_skill = 8
+				logistics_skill = 5
+				planning_skill = 7
+			}
+		}
+		custom_effect_tooltip = new_officers_uns_tt
+		add_ideas = UNS_milacc
+	}
+}
+country_event = {
+	id = uns.36
+	title = uns.36.t 
+	desc = uns.36.desc 
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = uns.36.a 
+		trigger = {
+			NOT = {
+				has_tech = mobile_warfare
+			}
+		}
+		set_technology = { 
+			mobile_warfare = 1
+		}
+	}
+	option = {
+		name = uns.36.b 
+		trigger = {
+			NOT = {
+				has_tech = superior_firepower
+			}
+		}
+		set_technology = { 
+			superior_firepower = 1
+		}
+	}
+	option = {
+		name = uns.36.c 
+		trigger = {
+			NOT = {
+				has_tech = mass_assault
+			}
+		}
+		set_technology = { 
+			mass_assault = 1
+		}
+	}
+	option = {
+		name = uns.36.d 
+		trigger = {
+			NOT = {
+				has_tech = trench_warfare
+			}
+		}
+		set_technology = { 
+			trench_warfare = 1 
+		}
+	}
+}
+
+country_event = {
+	id = uns.37
+	title = uns.37.t 
+	desc = uns.37.desc 
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	option = {
+		name = uns.37.a 
+		custom_effect_tooltip = expand_acceptance_tt_exta
+		if = {
+			limit = {
+				check_variable = { acceptance_value < 90 }
+			}
+			add_to_variable = {
+				acceptance_value = 10
+			}
+				
+		}
+		if = {
+			limit = {
+				check_variable = { acceptance_value > 90 }
+			}
+			set_temp_variable = { accept_temp_check = acceptance_value }
+			set_temp_variable = { temp_hundred = 100 }
+			subtract_from_temp_variable = { temp_hundred = accept_temp_check }
+			set_temp_variable = { vartoadd_accept = temp_hundred }
+			add_to_variable = { acceptance_value = vartoadd_accept }
+		}
+	}
+	option = {
+		name = uns.37.b
 	}
 }

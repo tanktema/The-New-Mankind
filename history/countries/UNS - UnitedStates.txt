@@ -33,6 +33,24 @@ set_technology = {
 	formation_flying = 1
 	mechanised_infantry = 1
 	amphibious_mechanized_infantry = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	early_fighter = 1
+	CAS1 = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	basic_medium_tank = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	antiair1 = 1
+	interwar_antitank = 1
+	antitank1 = 1
 }
 actually_fix_weapon_techs = yes
 if = {
@@ -86,16 +104,22 @@ add_timed_idea = {
 	idea = UNS_radiation_poisoning
 	days = 720
 }
+
+
 add_ideas = {
 	UNS_army_force
 	UNS_people_producting
 }
 
 set_convoys = 0
-
 set_stability = 0.65
 set_war_support = 0.35
 add_manpower = 60000
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = yes
+}
 
 set_politics = {
    ruling_party = democratic
@@ -115,14 +139,14 @@ create_country_leader = {
    desc = "UNS_demo_desc"
    picture = "gfx/leaders/UNS/Kennedy.dds"
    expire = "1999.9.9"
-   ideology = conservatism
+   ideology = liberalism
    traits = { 
 		human_leader
 		demo_leader
 	}
 }
 create_country_leader = {
-	name = "Gase Hall"
+	name = "Gus Hall"
 	desc = "UNS_comm_desc"
 	picture = "gfx/leaders/UNS/Hall.dds"
 	expire = "1989.1.1"
@@ -160,19 +184,32 @@ create_field_marshal = {
 	logistics_skill = 4
 	id = 1490
 }
-create_corps_commander = {
-	name = "Captain Serpov"
-	desc = "UNS_serp_desc"
-	portrait_path = "gfx/leaders/UNS/Serpov.dds"
-	traits = {
-		gen_serpov
-		omega
+
+create_operative_leader = {
+	name = "Edvard Snowden" # Имя оперативника
+	GFX = GFX_portrait_richard_sorge # Портрет
+	traits = { operative_secret_service } # Трейты оперативника. Могут быть взяты из файла common/unit_leader/00_traits.txt или из созданного. Допустим, наш трейт будет иметь такой код
+	bypass_recruitment = yes # Если Yes, оперативник будет доступен с самого начала, но вам все равно придется иметь свободные ячейки
+	available_to_spy_master = yes # Вот тут я честно без понятия
+	nationalities = { UNS EQS } # Национальности агента 
+}
+create_equipment_variant = {
+	name = "Atlantic Class"
+	type = ship_hull_heavy_1
+	name_group = UNS_BB_historical
+	parent_version = 0
+	modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_2
+		fixed_ship_anti_air_slot = ship_anti_air_1
+		fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+		fixed_ship_radar_slot = empty
+		fixed_ship_engine_slot = heavy_ship_engine_2
+		fixed_ship_secondaries_slot = ship_secondaries_2
+		fixed_ship_armor_slot = ship_armor_bb_2
+		front_1_custom_slot = ship_heavy_battery_2
+		mid_1_custom_slot = empty
+		mid_2_custom_slot = empty
+		rear_1_custom_slot = empty
 	}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 6
-	planning_skill = 6
-	logistics_skill = 6
-	id = 1491
 }
 		

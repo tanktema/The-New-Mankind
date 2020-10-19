@@ -1,0 +1,7 @@
+human_acceptance_politlevel = {	
+	icon = GFX_idea_acceptance_value
+	enable = {
+		is_human_race = yes 
+	}
+	political_power_gain = acceptance_value_polit_ideology
+}

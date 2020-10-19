@@ -5,7 +5,7 @@ ideas = {
 			allowed = {
 				has_completed_focus = UNS_constitution
 			}
-			picture = 1111
+			
 			
 			modifier = {
 				political_power_factor = 0.1
@@ -19,7 +19,7 @@ ideas = {
 			allowed = {
 				has_completed_focus = UNS_return_gold
 			}
-			picture = 000
+			
 			modifier = {
 				political_power_factor = 0.05
 				production_speed_buildings_factor = 0.1
@@ -30,7 +30,7 @@ ideas = {
 			allowed = {
 				has_completed_focus = UNS_fake_control
 			}
-			picture = 000
+		
 			modifier = {
 				democratic_drift = 0.01
 				communism_drift = -0.01
@@ -43,7 +43,7 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 				}
-			picture = 000
+			
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.2
@@ -58,7 +58,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 000
 			modifier = {
 				political_power_gain = -0.75
 				production_speed_buildings_factor = 0.1
@@ -71,7 +70,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 0000
 			modifier = {
 				send_volunteers_tension = -1
 				send_volunteer_divisions_required = -0.5
@@ -84,7 +82,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 0000
 			modifier = {
 				communism_drift = 0.1
 				political_power_gain = -0.10
@@ -95,7 +92,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 111
 			modifier = {
 				consumer_goods_factor = 0.1
 				political_power_gain = -1
@@ -106,7 +102,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 111
 			modifier = {
 				consumer_goods_factor = 0.05
 				political_power_gain = -0.5
@@ -117,7 +112,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 111
 			modifier = {
 				political_power_gain = -0.25
 			}
@@ -127,7 +121,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 111
 			modifier = {
 				conscription = 0.015
 			}
@@ -137,7 +130,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 111
 			modifier = {
 				offence = 0.1
 				defence = 0.1
@@ -164,7 +156,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 1111
 			modifier = {
 				send_volunteers_tension = -0.5
 				send_volunteer_size = 5
@@ -181,7 +172,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 1111
 			modifier = {
 				send_volunteer_size = 5
 				send_volunteer_divisions_required = -0.5
@@ -197,7 +187,6 @@ ideas = {
 			allowed = {
 				original_tag = UNS
 			}
-			picture = 111
 			modifier = {
 				conscription = 0.02
 				weekly_manpower = 500
@@ -331,6 +320,15 @@ ideas = {
 				experience_loss_factor = -0.1
 				out_of_supply_factor = -0.2
 				dig_in_speed_factor = 0.15
+				max_dig_in = 2
+				no_supply_grace = 48
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.15
+					soft_attack = 0.15
+					defense = 0.15
+				}
 			}
 		}
 		UNS_air_techiqum = {
@@ -342,6 +340,60 @@ ideas = {
 				air_night_penalty = -0.1
 				experience_gain_air_factor = 0.05
 				experience_gain_air = 0.05
+			}
+		}
+		UNS_power_of_fleet_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			equipment_bonus = {
+				ship_hull_light = {
+					fire_range = 0.10
+					shore_bombardment = 0.10
+					naval_range = 0.15
+					surface_visibility  = -0.25
+				}
+				ship_hull_heavy = {	
+					fire_range = 0.15
+					shore_bombardment = 0.15
+					naval_range = 0.25
+					surface_visibility  = -0.3
+				}
+				ship_hull_carrier = {
+					naval_range = 0.25
+				}
+				ship_hull_submarine = {
+					sub_visibility = -0.15
+					convoy_raiding_coordination = 0.1
+				}
+			}
+		}
+		UNS_milacc = {
+			removal_cost = -1
+			allowed = { always = yes } 
+			modifier = {
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 2
+				skill_bonus_factor = 0.2
+			}
+		}
+		uns_produce_aircraft = {
+			removal_cost = -1
+			allowed = { always = yes }
+			equipment_bonus = {
+				fighter_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				tac_bomber_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
+				cv_CAS_equipment = {
+					instant = yes
+					build_cost_ic = -0.15
+				}
 			}
 		}
 		UNS_aces_prep = {
@@ -439,16 +491,235 @@ ideas = {
 				production_oil_factor = -0.75
 			}
 		}
+		tech_park_idea = {
+			removal_cost = -1
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+				NOT = {
+					has_war_with = UNS
+				}
+			}
+			modifier = {
+				custom_modifier_tooltip = uns_park_member
+				research_speed_factor = 0.1
+			}
+		}
+		medical_park_bonus = {
+			removal_cost = -1
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				weekly_manpower = 500
+			}
+			research_bonus = {
+				hospital_tech = 0.05
+			}
+		}
+		UNS_mobilization_expand = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				mobilization_speed = 0.5
+				weekly_manpower = 200
+				conscription_factor = 0.5
+				conscription = 0.02
+			}
+		}
+		UNS_Production_military = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.15
+				equipment_conversion_speed = 0.15
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+		}
+		UNS_liberty_statue_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.25
+				war_support_factor = 0.25
+			}
+		}
+				
+	}
+	hidden_ideas = {
+		tech_park_idea_hidden_total = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				nuclear_production_factor = 0.02
+			}
+		}
+		tech_park_idea_hidden_humans = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				electronics = 0.05
+				industry = 0.05
+			}
+		}
+		tech_park_idea_hidden_spec = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				armor = 0.05
+			}
+		}
+		tech_park_idea_hidden_ponies = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				light_air = 0.05
+				medium_air = 0.05
+				heavy_air = 0.05
+			}
+		}
+		tech_park_idea_hidden_griffs = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				dd_tech = 0.05
+				cl_tech = 0.05
+				ca_tech = 0.05
+				cv_tech = 0.05
+				bb_tech = 0.05
+				bc_tech = 0.05
+				shbb_tech = 0.05
+				ss_tech = 0.05
+				tp_tech = 0.05
+			}
+		}
+		tech_park_idea_hidden_generic = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				infantry_weapons = 0.05
+				support_tech = 0.05
+			}
+		}
+		research_in_park = {
+			allowed = { 
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		nuclear_research_in_park = {
+			allowed = {
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				nuclear = 0.1
+			}
+		}
+		medical_research_in_the_park = {
+			allowed = {
+				OR = {
+					has_country_flag = accepted_the_park
+					has_country_flag = uns_built_tech_park
+				}
+			}
+			research_bonus = {
+				hospital_tech = 0.1
+			}
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				experience_loss_factor = -0.25
+			}
+		}
+		funding_of_army = {
+			allowed = { always = yes }
+			available = { always = yes }
+			research_bonus = {
+				infantry_weapons = 0.25
+				armor = 0.25
+				support_tech = 0.25
+			}
+		}
+		funding_of_navy = {
+			allowed = { always = yes }
+			available = { always = yes }
+			research_bonus = {
+				dd_tech = 0.25
+				cl_tech = 0.25 
+				ca_tech = 0.25
+				cv_tech = 0.25
+				bc_tech = 0.25
+				bb_tech = 0.25
+				shbb_tech = 0.25
+				ss_tech = 0.25 
+				tp_tech = 0.25
+			}
+		}
+		funding_of_air = {
+			allowed = { always = yes }
+			available = { always = yes }
+			research_bonus = {
+				light_air = 0.25
+				medium_air = 0.25
+				heavy_air = 0.25
+			}
+		}
+		funding_of_industry = {
+			allowed = { always = yes }
+			available = { always = yes }
+			research_bonus = {
+				industry = 0.25
+			}
+		}
 	}
 	political_advisor = {
 		UNS_demo_adv = {			
 			allowed = {
-					original_tag = UNS
-				}
+				original_tag = UNS
+			}
 			available = {
 				has_completed_focus = UNS_demo_1
 				NOT = {
-				has_country_flag = kennedy_killed
+					has_country_flag = kennedy_killed
 				}
 			}
 			traits = {
@@ -461,8 +732,8 @@ ideas = {
 			}
 			available = {
 				NOT = {
-				has_government = communism
-			}
+					has_government = communism
+				}
 				has_completed_focus = UNS_comm_1
 			}
 			traits = {
@@ -475,7 +746,7 @@ ideas = {
 				}
 			available = {
 				NOT = {
-				has_government = fascism
+					has_government = fascism
 				}
 				has_completed_focus = UNS_fasc_1
 			}
@@ -557,43 +828,151 @@ ideas = {
 
 		designer = yes
 		
-		UNS_chrysler = {
+		UNS_general_motors = {
 			allowed = {
-				original_tag = UNS
+				original_tag = UNS 
 			}
 			available = {
-				has_completed_focus = UNS_rise_of_industry
+				has_completed_focus = UNS_gm_side
 			}
 			research_bonus = {
 				armor = 0.15
 			}
-			traits = { medium_tank_manufacturer }
+			traits = { onwheel_master }
 		}
-		UNS_ford = {
+		UNS_ford_motors = {
 			allowed = {
 				original_tag = UNS
 			}
 			available = {
-				has_completed_focus = UNS_ford_motors
+				has_completed_focus = UNS_ford_side
 			}
 			research_bonus = {
-				armor = 0.15
-				motorized_equipment = 0.15
+				armor = 0.1
+				magical_tech = 0.05
 			}
-			traits = { light_tank_manufacturer }
+			traits = { onwheel_master }
 		}
-		UNS_generalmotors = {
+		
+	}
+	materiel_manufacturer = {
+	
+		designer = yes
+
+		UNS_colt_macintosh = {
+			allowed = {
+				original_tag = UNS 
+			}
+			available = {
+				has_completed_focus = UNS_ford_side
+			}
+			research_bonus = {
+				infantry = 0.1
+				magical_tech = 0.1
+			}
+			traits = { arms_dealer_m }
+		}
+		UNS_remington = {
 			allowed = {
 				original_tag = UNS
 			}
 			available = {
-				has_completed_focus = UNS_general_motors
+				has_completed_focus = UNS_gm_side
 			}
 			research_bonus = {
-				armor = 0.25
+				infantry = 0.1
+				sniper_tech = 0.1
 			}
-			traits = { heavy_tank_manufacturer }
+			traits = { arms_dealer }
 		}
 	}
-			
+	industrial_concern = {
+		
+		designer = yes 
+		
+		UNS_teresx_company = {
+			allowed = {
+				original_tag = UNS 
+			}
+			available = {
+				has_completed_focus = UNS_concerns
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			traits = { master_of_building }
+		}
+	}
+	aircraft_manufacturer = {
+		
+		designer = yes 
+		
+		UNS_boeing_corp = {
+			allowed = {
+				original_tag = UNS 
+			}
+			available = {
+				has_completed_focus = UNS_our_sky
+				has_completed_focus = UNS_gm_side
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { heavy_aircraft_manufacturer medium_aircraft_manufacturer }
+		}
+		UNS_bell_heli = {
+			allowed = {
+				original_tag = UNS 
+			}
+			available = {
+				has_completed_focus = UNS_our_sky
+				has_completed_focus = UNS_ford_side
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { light_aircraft_manufacturer CAS_manufacturer }
+		}
+	}
+	naval_manufacturer = {
+		
+		designer = yes 
+		
+		UNS_philadelphia_dockyard = {
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				has_completed_focus = UNS_new_fleet
+			}
+			traits = { old_world_shipyard }
+		}
+	}
+	
+	air_chief = {
+		
+		UNS_captain_pettaine = {
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				has_completed_focus = UNS_our_sky
+			}
+			traits = { human_air_leader }
+		}
+	}
+	
+	theorist = {
+		
+		UNS_colonel_karnel = {
+			allowed = {
+				original_tag = UNS 
+			}
+			available = {
+				has_completed_focus = UNS_army
+			}
+			traits = { army_planning_master_chief }
+		}
+	}
+				
 }

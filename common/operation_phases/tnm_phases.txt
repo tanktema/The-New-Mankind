@@ -1,0 +1,25 @@
+cross_the_border = {  # Код нашей фазы операции
+	name = cross_the_border_name # Ключ локализации
+	desc = cross_the_border_desc # Локализация описания
+	outcome = cross_the_border_outcome # Результат 
+	picture = "GFX_phase_infiltration_airplane" # Ну вы поняли надеюсь?
+	icon = "GFX_phase_exfiltration_air_pickup_small" # А это иконка, которая будет отображаться в меню операций 
+	equipment = {
+		transport_plane_equipment = 1 # Нам понадобится транспортник, не будем же мы пешком отправлять агента?
+	}
+	return_on_complete = yes # А самолетик нам еще понадобится, то есть снаряжение вернется на склад
+}
+place_the_nuke = {
+	name = place_the_nuke_name
+	desc = place_the_nuke_desc
+	outcome = place_the_nuke_outcome
+	picture = "GFX_phase_infiltration_airplane"
+	icon = "GFX_phase_exfiltration_air_pickup_small"
+}
+escape_with_army = {
+	name = escape_with_army_name
+	desc = escape_with_army_desc
+	outcome = escape_with_army_outcome
+	picture = "GFX_phase_exfiltration_air_pickup"
+	icon = "GFX_phase_exfiltration_air_pickup_small"
+}

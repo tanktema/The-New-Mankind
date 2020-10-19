@@ -18,3 +18,105 @@ raise_human_rage = {
 		}
 	}
 }
+acceptance_expand = {
+	if = {
+		limit = {
+			check_variable = { acceptance_value < 95 }
+		}
+		add_to_variable = {
+			acceptance_value = 5
+		}
+		
+	}
+	if = {
+		limit = {
+			check_variable = { acceptance_value > 95 }
+		}
+		set_temp_variable = { accept_temp_check = acceptance_value }
+		set_temp_variable = { temp_hundred = 100 }
+		subtract_from_temp_variable = { temp_hundred = accept_temp_check }
+		set_temp_variable = { vartoadd_accept = temp_hundred }
+		add_to_variable = { acceptance_value = vartoadd_accept }
+	}
+	custom_effect_tooltip = expand_acceptance_tt
+}
+
+acceptance_expand_extra = {
+	custom_effect_tooltip = expand_acceptance_tt_exta
+	if = {
+		limit = {
+			check_variable = { acceptance_value < 90 }
+		}
+		add_to_variable = {
+			acceptance_value = 10
+		}
+		
+	}
+	if = {
+		limit = {
+			check_variable = { acceptance_value > 90 }
+		}
+		set_temp_variable = { accept_temp_check = acceptance_value }
+		set_temp_variable = { temp_hundred = 100 }
+		subtract_from_temp_variable = { temp_hundred = accept_temp_check }
+		set_temp_variable = { vartoadd_accept = temp_hundred }
+		add_to_variable = { acceptance_value = vartoadd_accept }
+	}
+}
+decrease_broken_level_tooltip = {
+	if = {
+		limit = {
+			has_idea = SOU_industry_broken_lvl1
+		}
+		swap_ideas = {
+			remove_idea = SOU_industry_broken_lvl1
+			add_idea = SOU_industry_broken_lvl2
+		}
+	}
+	if = {
+		limit = {
+			has_idea = SOU_industry_broken_lvl2
+		}
+		swap_ideas = {
+			remove_idea = SOU_industry_broken_lvl2
+			add_idea = SOU_industry_broken_lvl3
+		}
+	}
+	if = {
+		limit = {
+			has_idea = SOU_industry_broken_lvl3
+		}
+		swap_ideas = {
+			remove_idea = SOU_industry_broken_lvl3
+			add_idea = SOU_industry_broken_lvl4
+		}
+	}
+}
+
+check_german_supports_level = {
+	clamp_variable = {
+		var = fasc_support
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = comm_support 
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = demo_support
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = goebbels_support
+		min = 0
+		max = fasc_support
+	}
+	clamp_variable = {
+		var = himmler_support
+		min = 0
+		max = fasc_support
+	}
+}

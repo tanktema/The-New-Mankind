@@ -1,0 +1,9 @@
+l_english:
+    uns_steel_1:0 "We found steel"
+    uns_aluminium_1:0 "We found aluminium"
+    uns_rubber_1:0 "We now can produce rubber"
+    uns_oil_1:0 "We found oil"
+    uns_crystals_1:0 "We found crystals"
+    uns_chromium_1:0 "We found chromium"
+    uns_tungsten_1:0 "We found tungsten"
+    kennedy_killed:0 "Kennedy was killed!"

@@ -8,5 +8,14 @@
     canterlot_visit:0 "Визит в Кантерлот"
     stalliongrad_visit:0 "Визит в Сталлионград"
     accept_politics:0 "Принимает политику"
-    decline_politics:0 "Не одобряет политику"
-    
+    decline_politics:0 "Не одобряет политику"'
+    twilight_accepted:0 "Визит Твайлайт"
+    christmas:0 "Рождество"
+    heartwarming:0 "День очага"
+    supported_enemy:0 "Поддержка врагу"
+    supported_us:0 "Поддержали нас"
+    human_friendship:0 "Дружба"
+    married_sunbutt:0 "Королевская Свадьба"
+    broken_heart:0 "Отказ"
+    friendship_between:0 "Дружба между нами"
+    tsardom_of_eqvus:0 "Царство Эквуса"
