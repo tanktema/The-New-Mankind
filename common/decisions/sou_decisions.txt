@@ -279,6 +279,54 @@ state_renaming_category = {
 	}
 }
 sou_industrial_effort = {
+	ai_destruction_reduce = {
+		available = {
+			is_ai = yes 
+		}
+		visible = {
+			is_ai = yes 
+		}
+		days_remove = 90
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = diminish_1
+					}
+				}
+				swap_ideas = {
+					remove_idea = SOU_industry_broken_lvl1
+					add_idea = SOU_industry_broken_lvl2
+				}
+				set_country_flag = diminish_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = diminish_1
+				}
+				swap_ideas = {
+					remove_idea = SOU_industry_broken_lvl2
+					add_idea = SOU_industry_broken_lvl3
+				} 
+				set_country_flag = diminish_2
+			}
+			else_if = {
+				limit = {
+					has_country_flag = diminish_2
+				}
+				swap_ideas = {
+					remove_idea = SOU_industry_broken_lvl3
+					add_idea = SOU_industry_broken_lvl4
+				}
+				set_country_flag = diminish_3
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+				
 	update_industry_destruc_level_1 = {
 		available = {
 			has_completed_focus = SOU_first_contact

@@ -380,12 +380,221 @@ technologies = {
 		on_research_complete = {
 			unlock_decision_category_tooltip = extra_worktime_human_category
 			set_variable = {
-				var = rage_hum_meter
+				var = human_rage
 				value = 0
+			}
+			add_dynamic_modifier = {
+				modifier = hum_rage_modifier
 			}
 		}
 	}
 	
+	###### Armor and army upgrades 
+	
+	upgrade_armor_vests = {
+		depencies = {
+			human_race = 1
+			magical_weapons = 1
+		}
+		path = {
+			leads_to_tech = upgraded_vests 
+			research_cost_coeff = 1
+		}
+		path = {	
+			leads_to_tech = magical_technical_upgrades
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 9 y = 0 }
+		}
+		research_cost = 1
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			defense = 0.05
+			max_strength = 1
+			armor_value = 0.01
+		}
+	}
+	upgraded_vests = {
+		path = {
+			leads_to_tech = heavy_inf_armor
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 8 y = 2 }
+		}
+		research_cost = 1
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			defense = 0.05
+			speed = -0.01
+			max_strength = 1
+		}
+	}
+	heavy_inf_armor = {
+		path = {
+			leads_to_tech = battlearmor_prototype 
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 8 y = 4 }
+		}
+		research_cost = 1
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			defense = 0.1
+			speed = -0.05
+			max_strength = 2
+			armor_value = 0.05
+			urban = {
+				attack = 0.1
+				movement = -0.1
+			}
+		}
+	}
+	battlearmor_prototype = {
+		path = {
+			leads_to_tech = advanced_polymer_armor 
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 8 y = 6 }
+		}
+		research_cost = 1.5
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			defense = 0.15
+			speed = 0.05
+			max_strength = 2
+			armor_value = 0.06
+		}
+	}
+	advanced_polymer_armor = {
+		folder = {
+			name = human_folder
+			position = { x = 8 y = 8 }
+		}
+		research_cost = 2.5
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			defense = 0.15
+			speed = 0.05
+			max_strength = 3
+			armor_value = 0.04
+			initiative = 0.1
+		}
+	}
+	magical_technical_upgrades = {
+		path = {
+			leads_to_tech = magical_sights
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 10 y = 2 }
+		}
+		research_cost = 1.5
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			attack  = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+	}
+	magical_sights = {
+		path = {
+			leads_to_tech = magical_scanning_system
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 10 y = 4 }
+		}
+		research_cost = 1.5
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			attack  = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.05
+			recon = 1
+		}
+	}
+	magical_scanning_system = {
+		path = {
+			leads_to_tech = magical_permeter_barrier
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 10 y = 6 }
+		}
+		research_cost = 1.5
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			attack  = 0.1
+			soft_attack = 0.1
+			breakthrough = 0.05
+			initiative = 0.2
+		}
+	}
+	
+	magical_permeter_barrier = {
+		folder = {
+			name = human_folder
+			position = { x = 10 y = 8 }
+		}
+		research_cost = 2
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+		infantry = {
+			attack  = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.05
+			defense = 0.05
+			breakthrough = 0.05
+			initiative = 0.25
+			recon = 1
+		}
+	}
 }
 
 		

@@ -73,5 +73,14 @@ opinion_modifiers = {
 		value = 70
 		months = 6
 	}
+	hates_race = {
+		value = -100
+	}
+	forgiven_mistake = {
+		value = 150
+	}
+	antifascist_politics = {
+		value = -50
+	}
 }
 	

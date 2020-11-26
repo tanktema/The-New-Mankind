@@ -8,6 +8,8 @@ spriteTypes = {
 		texturefile = "gfx//interface//manpower_icon_2.dds"
 	}
 	spriteType = {
-		name = "GFX_alpha_logo"
-		texturefile = "gfx/interface/alphalogo.dds"
+		name = "GFX_rage_meter_value"
+		texturefile = "gfx//interface//human_rage_value.dds"
 	}
+	
+	

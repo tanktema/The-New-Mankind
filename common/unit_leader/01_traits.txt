@@ -153,7 +153,22 @@ leader_traits = {
         }
 	}
 	
+	other_race_general = {
+		type = corps_commander
+		modifier = {
+			attack_bonus_against_cores = 0.1
+			army_speed_factor = 0.1
+			max_dig_in = 1
+		}
+		corps_commander_modifier = {
+            max_commander_army_size = 6
+        }
+	}
+	
+	
+	
 	operative_secret_service = { # Название трейта 
+		random = no
 		type = operative  # Тип трейта - он для оперативников 
 		trait_type = personality_trait  # Личностный трейт 
 		modifier = {  # Это все модификаторы, они есть на вики. Взял для примера

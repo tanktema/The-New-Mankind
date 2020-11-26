@@ -553,6 +553,13 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+			gridboxtype = {
+				name = "upgrade_armor_vests_tree"
+				position = { x = 270 y = 200 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 
 		}
 
@@ -3406,18 +3413,6 @@ guiTypes = {
 				}
 			}
 			
-			gridboxtype = {
-				name = "human_doctrine_tree"
-				position = { x = 2000 y = 172 }
-				size = { width = 478 height = 1350 }
-				slotsize = { width = 60 height = 60 }
-				format = "UP"
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_fullborder_tiled"
-					position = { x=0 y=-150 }
-				}
-			}
 
 			gridboxtype = {
 				name = "superior_firepower_tree"
@@ -7270,7 +7265,7 @@ guiTypes = {
 		}
 	}
 	
-		containerWindowType = {
+	containerWindowType = {
 		name = "techtree_human_folder_small_item"
 		position = { x=0 y=0 }
 		size = { width = 72 height = 72 }

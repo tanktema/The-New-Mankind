@@ -20,11 +20,11 @@
     ### GEM
     GEM_fascism:0 "Третий Рейх"
     GEM_democratic:0 "Федеративная Республика Германия"
-    GEM_communism:0 "Германская Демократическая Республика"
+    GEM_communism:0 "Социалистическая Республика Германия"
     GEM_neutrality:0 "Германская Империя"
-    GEM_fascism_DEF:0 "ТР"
+    GEM_fascism_DEF:0 "Третий Рейх"
     GEM_democratic_DEF:0 "ФРГ"
-    GEM_communism_DEF:0 "ГДР"
+    GEM_communism_DEF:0 "СРГ"
     GEM_neutrality_DEF:0 "ГИ"
     GEM_fascism_ADJ:0 "Немецк."
     GEM_democratic_ADJ:0 "Немецк."
@@ -63,5 +63,5 @@
     SOU_SSR_puppet:0 "[Root.GetAdj]. ССР"
     
     SOU_neobol_fascism:0 "Советский революционный совет"
-    SOU_neobol_fascism_DEF:0 "ССС"
+    SOU_neobol_fascism_DEF:0 "СРС"
     SOU_neobol_fascism_ADJ:0 "Советск."

@@ -1,7 +1,18 @@
 human_acceptance_politlevel = {	
-	icon = GFX_idea_acceptance_value
+	
 	enable = {
 		is_human_race = yes 
 	}
 	political_power_gain = acceptance_value_polit_ideology
+	offensive_war_stability_factor = -acceptance_value_tension
+}
+
+
+hum_rage_modifier = {
+	enable = {
+		has_tech = prod_time_work
+	}
+	stability_factor = human_rage_dynamic 
+	war_support_factor = human_rage_dynamic
+	political_power_gain = human_rage_dynamic
 }

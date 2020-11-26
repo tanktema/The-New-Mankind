@@ -194,12 +194,18 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = gem.8.a 
-		custom_effect_tooltip = rations_military_system
+		effect_tooltip = {
+			add_ideas = GEM_military_ration_system
+		}
+		custom_effect_tooltip = needs_a_decision
 		set_country_flag = chosen_rations_food_idea
 	}
 	option = {
 		name = gem.8.b 
-		custom_effect_tooltip = comm_food_workers
+		effect_tooltip = {
+			add_ideas = GEM_more_food_for_workers
+		}
+		custom_effect_tooltip = needs_a_decision
 		set_country_flag = comm_give_food_workers
 		add_popularity = {
 			ideology = communism
@@ -208,7 +214,10 @@ country_event = {
 	}
 	option = {
 		name = gem.8.c 
-		custom_effect_tooltip = demos_food_people
+		effect_tooltip = {
+			add_ideas = GEM_equal_rations
+		}
+		custom_effect_tooltip = needs_a_decision
 		set_country_flag = demos_stopped_rations
 		add_popularity = {
 			ideology = democratic
@@ -267,11 +276,17 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = gem.10.a 
+		trigger = {
+			has_country_flag = opposition_himmler_solution
+		}
 		set_country_flag = choise_of_broken_glass
 		custom_effect_tooltip = choise_of_broken_glass_tt
 	}
 	option = {
 		name = gem.10.b 
+		trigger = {
+			has_country_flag = opposition_goebbels_solution
+		}
 		set_country_flag = choise_of_claw
 		custom_effect_tooltip = choise_of_claw_tt
 	}
@@ -359,7 +374,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = gem.14.b 
+		name = gem.13.b 
 	}
 }
 
@@ -384,7 +399,7 @@ country_event = {
 	option = {
 		name = gem.15.a 
 		FROM = {
-			country_event = { id = gem.6 }
+			country_event = { id = gem.16 }
 		}
 	}
 	option = {
@@ -456,7 +471,7 @@ country_event = {
 	desc = gem.19.desc 
 	is_triggered_only = yes 
 	option = {
-		name = 19.a 
+		name = gem.19.a 
 		custom_effect_tooltip = himmler_remembers
 		set_country_flag = himmler_civil_war 
 		hidden_effect = {
@@ -468,5 +483,348 @@ country_event = {
 				traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
 			}
 		}
+	}
+}
+country_event = {
+	id = gem.20 
+	title = gem.20.t 
+	desc = gem.20.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.20.a 
+		every_state = {
+			limit = {
+				OR = {
+					state = 322 
+					state = 320
+					state = 323
+					state = 315
+					state = 311
+					state = 262
+					state = 314 
+					state = 264
+				}
+			}
+			add_core_of = FROM
+			remove_core_of = ROOT 
+			add_ideas = GEM_military_mission
+		}
+		FROM = {
+			country_event = { id = gem.21 }
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = gem.20.b 
+	}
+}
+country_event = {
+	id = gem.21 
+	title = gem.21.t 
+	desc = gem.21.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.21.a 
+		transfer_state = 322
+		transfer_state = 320
+		transfer_state = 323
+		transfer_state = 315
+		transfer_state = 311
+		transfer_state = 262 
+		transfer_state = 314
+		transfer_state = 264
+	}
+}
+
+country_event = {
+	id = gem.22 
+	title = gem.22.t 
+	desc = gem.22.t 
+	is_triggered_only = yes 
+	option = {
+		name = gem.22.a 
+		add_ideas = GEM_natives_police 
+	}
+	option = {
+		name = gem.22.b 
+		custom_effect_tooltip = gem_native_ss_squads 
+		set_country_flag = native_police_squads
+		hidden_effect = {
+			division_template = {
+				name = "Polizisten"
+				is_locked = yes 
+				priority = 0
+				division_names_group = GEM_POL_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					military_police = { x = 0 y = 0 }
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = gem.23
+	title = gem.23.t 
+	desc = gem.23.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.23.a 
+		custom_effect_tooltip = gem_parade_tt_1 
+		add_stability = 0.05
+		add_war_support = 0.1
+	}
+}
+
+country_event = {
+	id = gem.24 
+	title = gem.24.t 
+	desc = gem.24.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.24.a 
+		FROM = {
+			country_event = { id = gem.25 }
+		}
+		effect_tooltip = {
+			FROM = {
+				puppet = ROOT 
+				set_autonomy = {
+					target = ROOT 
+					autonomy_state = autonomy_reichsprotectorate
+				}
+			}
+			
+		}
+	}
+	option = {
+		name = gem.24.b 
+		FROM = {
+			country_event = { id = gem.26 }
+		}
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					target = ROOT 
+					type = puppet_wargoal_focus 
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = gem.25 
+	title = gem.25.t 
+	desc = gem.25.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.25.a 
+		ROOT = {
+			puppet = FROM 
+			set_autonomy = {
+				target = FROM 
+				autonomy_state = autonomy_reichsprotectorate
+		
+			}
+			
+		}
+	}
+}
+country_event = {
+	id = gem.26
+	title = gem.26.t 
+	desc = gem.26.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.26.a 
+		create_wargoal = {
+			target = FROM 
+			type = puppet_wargoal_focus
+		}
+	}
+}
+	
+country_event = {
+	id = gem.27
+	title = gem.27.t 
+	desc = gem.27.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.27.a 
+		add_popularity = {
+			ideology = fascism 
+			popularity = -0.2
+		}
+	}
+}
+
+country_event = {
+	id = gem.28 
+	title = gem.28.t 
+	desc = gem.28.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.28.a 
+	}
+}
+
+country_event = {
+	id = gem.29 
+	title = gem.29.t 
+	desc = gem.29.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.29.a 
+		add_stability = 0.05
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.1
+		}
+	}
+	option = {
+		name = gem.29.b 
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.15
+		}
+	}
+}
+
+country_event = {
+	id = gem.30
+	title = gem.30.t 
+	desc = gem.30.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.30.a 
+		CHN = {
+			add_tech_bonus = {
+				category = land_doctrine
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = ss_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+		add_tech_bonus = {
+			category = race_tech
+			bonus = 0.75
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = magical_tech
+			bonus = 1
+			uses = 1
+		}
+	}
+	option = {
+		name = gem.30.b 
+		EQS = {
+			add_tech_bonus = {
+				category = land_doctrine
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = ss_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+		add_tech_bonus = {
+			category = race_tech
+			bonus = 0.75
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = magical_tech
+			bonus = 1
+			uses = 1
+		}
+	}
+	option = {
+		name = gem.30.c
+		STG = {
+			add_tech_bonus = {
+				category = land_doctrine
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = ss_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+		add_tech_bonus = {
+			category = race_tech
+			bonus = 0.75
+			uses = 1
+		}
+		add_tech_bonus = {
+			category = magical_tech
+			bonus = 1
+			uses = 1
+		}
+	}
+}
+
+country_event = {
+	id = gem.31
+	title = gem.31.t 
+	desc = gem.31.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.31.a 
+		trigger = {
+			has_government = fascism
+		}
+		CHN = {
+			add_ideas = GEM_researching
+		}
+		add_ideas = GEM_researching_CHN 
+	}
+	option = {
+		name = gem.31.b
+		trigger = {
+			has_government = democratic
+		}
+		EQS = {
+			add_ideas = GEM_researching
+		}
+		add_ideas = GEM_researching_EQS
+	}
+	option = {
+		name = gem.31.c
+		trigger = {
+			has_government = communism
+		}
+		STG = {
+			add_ideas = GEM_researching
+		}
+		add_ideas = GEM_researching_STG
 	}
 }

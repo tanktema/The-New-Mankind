@@ -1,32 +1,127 @@
 spriteTypes = {
 
 	spriteType = {
-		name = "GFX_technology_human_folder_small_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+		name = "GFX_technology_human_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_researched_item_bg.dds"
 	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_human_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
 	spriteType = {
 		name = "GFX_technology_human_folder_small_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
 	}
+
 	spriteType = {
-		name = "GFX_technology_human_folder_small_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+		name = "GFX_technology_human_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
 	}
+
 	spriteType = {
-		name = "GFX_technology_human_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/technology_unavailable_item_bg.dds"
-	}
-	spriteType = {
-		name = "GFX_technology_human_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/technology_available_item_bg.dds"
-	}
-	spriteType = {
-		name = "GFX_technology_human_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/technology_researched_item_bg.dds"
+		name = "GFX_technology_human_folder_small_branch_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_branch_item_bg.dds"
 	}
 	SpriteType = {
 		name = "GFX_archetype_magical_equipment_medium"
 		texturefile = "gfx/interface/archetype_infantry_equipment.dds"
+	}
+	SpriteType = {
+		name = "GFX_human_snipers_corps_medium"
+		textureFile = "gfx/interface/technologies/sniper_corps_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_optics_medium"
+		textureFile = "gfx/interface/technologies/sniper_optics_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_camo_cover_medium"
+		textureFile = "gfx/interface/technologies/snipers_camo_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_uav_medium"
+		textureFile = "gfx/interface/technologies/snipers_uav_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_double_medium"
+		textureFile = "gfx/interface/technologies/snipers_double_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_targeting_systems_medium"
+		textureFile = "gfx/interface/technologies/snipers_targeting_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_locking_system_medium"
+		textureFile = "gfx/interface/technologies/sniper_lock_systems_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_high_caliber_medium"
+		textureFile = "gfx/interface/technologies/snipers_high_cal_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_snipers_at_rifles_medium"
+		textureFile = "gfx/interface/technologies/sniper_at_weap.dds"
+	}
+	SpriteType = {
+		name = "GFX_sniper_nigt_vision_medium"
+		textureFile = "gfx/interface/technologies/snipers_nv_scopes_base.dds"
+	}
+	SpriteType = {
+		name = "GFX_conveyor_prod_human_medium"
+		textureFile = "gfx/interface/technologies/prod_conveyor.dds"
+	}
+	SpriteType = {
+		name = "GFX_prod_autom_human_medium"
+		textureFile = "gfx/interface/technologies/prod_automat.dds"
+	}
+	SpriteType = {
+		name = "GFX_prod_time_work_medium"
+		textureFile = "gfx/interface/technologies/prod_extrashift.dds"
+	}
+	SpriteType = {
+		name = "GFX_upgrade_armor_vests_medium"
+		textureFile = "gfx/interface/technologies/upgrades_vests.dds"
+	}
+	SpriteType = {
+		name = "GFX_upgraded_vests_medium"
+		textureFile = "gfx/interface/technologies/upgrades_5ac.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_inf_armor_medium"
+		textureFile = "gfx/interface/technologies/upgrades_heavyarmor.dds"
+	}
+	SpriteType = {
+		name = "GFX_battlearmor_prototype_medium"
+		textureFile = "gfx/interface/technologies/upgrades_polymer_bap.dds"
+	}
+	SpriteType = {
+		name = "GFX_advanced_polymer_armor_medium"
+		textureFile = "gfx/interface/technologies/upgrades_battlearmor.dds"
+	}
+	SpriteType = {
+		name = "GFX_magical_technical_upgrades_medium"
+		textureFile = "gfx/interface/technologies/upgrades_magical_update.dds"
+	}
+	SpriteType = {
+		name = "GFX_magical_sights_medium"
+		textureFile = "gfx/interface/technologies/upgrades_sights.dds"
+	}
+	SpriteType = {
+		name = "GFX_magical_scanning_system_medium"
+		textureFile = "gfx/interface/technologies/upgrades_pda.dds"
+	}
+	SpriteType = {
+		name = "GFX_magical_permeter_barrier_medium"
+		textureFile = "gfx/interface/technologies/upgrades_shield.dds"
 	}
 	SpriteType = {
 		name = "GFX_UNS_magical_weapons_medium"
@@ -384,4 +479,139 @@ spriteTypes = {
 
 	
 	
-		
+	SpriteType = {
+		name = "GFX_GEM_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mag1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mag2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_magical_weapons2_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mag3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_magical_weapons3_medium"
+		texturefile = "gfx/interface/technologies/GEM/Gem_mag4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_musket.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_weap_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mp40.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_gewehr43.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_stg44.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_hkg3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_hk416.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_gkg36.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_gwtank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_gwtank.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_lt1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_lt2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_lt3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_light_tank_a_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_lt4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_light_tank_b_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_lt5.dds"
+	} 
+	SpriteType = {
+		name = "GFX_GEM_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mt1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mt2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mt3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_main_battle_tank_a_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_main_battle_tank_b_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_main_battle_tank_c_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_main_battle_tank_d_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_main_battle_tank_e_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_ht1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_ht2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_ht3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_sht1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_super_heavy_tank_a_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_sht2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_super_heavy_tank_b_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_sht3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_motor.dds"
+	}	

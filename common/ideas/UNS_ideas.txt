@@ -180,6 +180,7 @@ ideas = {
 				tag = EQS
 				attack_bonus_against = 0.1
 				defense_bonus_against = 0.1
+				conscription = -0.1
 			}
 		}
 		UNS_neutrality_over = {

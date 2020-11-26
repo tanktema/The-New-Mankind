@@ -93,7 +93,7 @@ leader_traits = {
 			stability_factor = -0.05
 		}
 		onwheel_master = {
-			random = 0
+			random = no
 			equipment_bonus = {
 				armor = {
 					maximum_speed = 0.05
@@ -253,7 +253,53 @@ leader_traits = {
 			fascism_drift = 0.01
 			drift_defence_factor = 0.2
 		} 
+		military_reichministr = {
+			random = no 
+			production_speed_arms_factory_factor = 0.15
+			production_oil_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
 		
+		rock_band_hum = {
+			random = no
+			fascism_drift = 0.01
+			drift_defence_factor = 0.2
+			stability_factor = 0.1
+			war_support_factor = 0.1
+		}
+		
+		computer_pioneer = {
+			random = no
+			research_speed_factor = 0.05 
+		}
+		
+		world_war_veteran = {
+			random = no 
+			offence = 0.07
+			defence = 0.07
+			experience_gain_army = 0.02
+		}
+		
+		airborne_creator = {
+			random = no 
+			experience_gain_air = 0.02
+			special_forces_min = 10
+			extra_paratrooper_supply_grace = 24
+			paratrooper_count_per_plane = 2
+		}
+		
+		medical_company_trait = {
+			random = no 
+			research_speed_factor = 0.05
+			MONTHLY_POPULATION = 0.25
+			experience_loss_factor = -0.05
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.15
+				}
+			}
+		}
 	}
 	
 		

@@ -25,17 +25,11 @@ scripted_gui = {
 		
 		}
 	}
-	alpha_logo_icon = {
-		window_name = "alpha_logo_icon_container"
+	human_rage_meter = {
+		window_name = "human_rage_meter_container"
 		context_type = player_context
 		visible = {
-			always = yes
+			is_human_race = yes 
+			has_tech = prod_time_work
 		}
-		effects = {
-		
-		}
-		triggers = {
-		
-		}
-	
-}
+	}

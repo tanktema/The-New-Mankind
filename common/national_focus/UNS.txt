@@ -514,7 +514,7 @@ focus_tree = {
 		id = UNS_new_way
 		x = 19
 		y = 5
-		icon = GFX_goal_new_ways
+		icon = GFX_goal_new_ways_pol
 		prerequisite = {
 			focus = UNS_fasc_1
 		}
