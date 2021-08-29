@@ -2902,5 +2902,29 @@ focus_tree = {
 		y = 1
 		relative_position_id = GRB_recreation_zones
 		prerequisite = { focus = GRB_recreation_zones }
+		cost = 5
+		completion_reward = {
+			FBK = {
+				set_cosmetic_tag = GRB_SUBJ_FBK_NEW
+				every_state = {
+					limit = {
+						is_claimed_by = FBK 
+					}
+					add_core_of = FBK 
+				}
+			}
+			custom_effect_tooltip = change_state_owner
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_claimed_by = FBK 
+					}
+					FBK = {
+						transfer_state = PREV 
+					}
+				}
+			}
+		}
+	}
 			
 			
