@@ -1,0 +1,12 @@
+SpriteTypes = {
+	
+	SpriteType = {
+		name = "GFX_tnm_sevents_bg"
+		texturefile = "gfx/interface/mech/sevents_tnm_base.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_purpleplague_cure_pict"
+		texturefile = "gfx/interface/mech/PP_cure_pict.dds"
+	}
+}

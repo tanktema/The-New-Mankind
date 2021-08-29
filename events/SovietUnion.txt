@@ -525,12 +525,14 @@ country_event = {
 	option = {
 		name = sou.25.a 
 		ai_chance = { base = 100 }
-		ROOT = {
-			add_to_faction = FROM 
-			add_ideas = married_sunbutt_human
-		}
-		FROM = {
-			add_ideas = married_sunbutt_human
+		effect_tooltip = {
+			ROOT = {
+				add_to_faction = FROM 
+				add_ideas = married_sunbutt_human
+			}
+			FROM = {
+				add_ideas = married_sunbutt_human
+			}
 		}
 		news_event = { id = sou.26 }
 		ROOT = {
@@ -573,7 +575,23 @@ news_event = {
 			}
 		}
 		name = sou.26.a 
+		hidden_effect = {
+			EQS = {
+				add_ai_strategy = {
+					type = alliance
+					id = SOU
+					value = 999
+				}
+				add_ideas = married_sunbutt_human
+			}
+			SOU = {
+				add_to_faction = EQS
+				add_ideas = married_sunbutt_human
+			}
+		}
 	}
+	
+	
 	option = {
 		trigger = {
 			is_human_race = yes 

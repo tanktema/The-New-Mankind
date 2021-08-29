@@ -14,3 +14,9 @@
     SOU_fasc_desc_yasnov:0 "Nikita Yasnov is one of the Iron Guard commanders"
     neo_bolshevism_desc:0 "Neo-Bolshevism is a revision of the ideas of Bolshevism, in contrast to which it seeks to build a system in which the working class is United not around a Marxist ideology and belief in a Communist future, but around a state that, naturally, is declared socialist, although in fact it is not. There is no communism, there is no revolution, there is only the state and the party, and prohibition is the greatest freedom!"
     neo_bolshevism:0 "Neo-Bolshevism"
+    
+    GEM_fasc_desc:0 "Military Council consists of NSDAP heads. It was formed in 1960 after death of Adolph Hitler"
+    GEM_comm_desc:0 "Walter Ulbricht is the head of GSDP"
+    GEM_demo_desc:0 "Willy Brandt is the haed of GRP"
+    GEM_HIMMLER_DESC:0 "Heinrich Himmler is the head of NSDAP and strong Hitler supporter"
+    GEM_GOEBBELS_DESC:0 "Joseph Goebbels is the head of NSDAP and strong Hitler supporter"

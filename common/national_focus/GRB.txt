@@ -1,0 +1,2906 @@
+focus_tree = {
+	id = grb_focus_base
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GRB
+		}
+	}
+	
+	continuous_focus_position = { x = 0 y = 10  }
+	  
+	default = no
+	
+	focus = {
+		id = GRB_evac_focus
+		x = 20
+		y = 0
+		cost = 5
+		select_effect = {
+			country_event = { id = grb.1 days = 7 }
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = grb.1 days = 15 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_exploration
+		x = 0
+		y = 1
+		relative_position_id = GRB_evac_focus
+		prerequisite = { focus = GRB_evac_focus }
+		cost = 5
+		select_effect = {
+			country_event = { id = grb.5 days = 15 }
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = grb.5 days = 15 }
+			}
+		}
+	}
+	focus = {
+		id = GRB_contact
+		x = 0
+		y = 1
+		relative_position_id = GRB_exploration
+		prerequisite = { focus = GRB_exploration }
+		cost = 1
+		completion_reward = {
+			acceptance_expand_extra = yes
+			country_event = { id = grb.7 }
+			hidden_effect = {
+				363 = {
+					add_core_of = ROOT 
+					remove_core_of = EQC
+				}
+				364 = {
+					add_core_of = ROOT 
+					remove_core_of = EQC 
+				}
+				365 = {
+					set_state_category = large_city
+					set_state_name = "STATE_903"
+				}
+				set_province_name = {
+					id = 12305
+					name = "STATE_903"
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_death_of_churchill
+		x = -10
+		y = 1
+		relative_position_id = GRB_contact
+		prerequisite = { focus = GRB_contact }
+		available = {
+			OR = {
+				always = no
+				hidden_trigger = {
+					is_debug = yes 
+				}
+			
+			}
+		}
+				
+		
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			hidden_effect = {
+				add_political_power = 250 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_citizenship_question
+		x = -4
+		y = 1
+		prerequisite = { focus = GRB_death_of_churchill }
+		relative_position_id = GRB_death_of_churchill
+		cost = 2 
+		completion_reward = {
+			country_event = { id = grb.10 days = 5 }
+		}
+	}
+	
+	focus = {
+		id = GRB_workers_protests
+		x = 0
+		y = 1
+		prerequisite = { focus = GRB_death_of_churchill }
+		relative_position_id = GRB_death_of_churchill 
+		cost = 2 
+		completion_reward = {
+			country_event = { id = grb.11 days = 5 }
+		}
+	}
+	
+	focus = {
+		id = GRB_budget_resizing
+		x = 4
+		y = 1
+		prerequisite = { focus = GRB_death_of_churchill }
+		relative_position_id = GRB_death_of_churchill
+		cost = 2
+		completion_reward = {
+			country_event = { id = grb.12 days = 5 }
+		}
+	}
+	
+	focus = {
+		id = GRB_human_rights
+		x = -1 
+		y = 1
+		relative_position_id = GRB_citizenship_question
+		prerequisite = { focus = GRB_citizenship_question }
+		mutually_exclusive = { focus = GRB_equal_rights }
+		cost = 2
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			every_owned_state = {
+				add_to_variable = { var = reg_fasc_support_gb value = 5 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				check_british_regs_values = yes 
+				calculate_british_map_frames = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_equal_rights
+		x = 1 
+		y = 1
+		relative_position_id = GRB_citizenship_question
+		prerequisite = { focus = GRB_citizenship_question }
+		mutually_exclusive = { focus = GRB_human_rights }
+		cost = 2
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			every_owned_state = {
+				add_to_variable = { var = reg_demo_support_gb value = 5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+				check_british_regs_values = yes 
+				calculate_british_map_frames = yes
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_workers_salary
+		x = -1
+		y = 1 
+		relative_position_id = GRB_workers_protests
+		prerequisite = { focus = GRB_workers_protests }
+		mutually_exclusive = { focus = GRB_miltary_payment }
+		cost = 2
+		completion_reward = {
+			every_owned_state = {
+				add_to_variable = { var = reg_comm_support_gb value = 5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+				check_british_regs_values = yes 
+				calculate_british_map_frames = yes
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.07
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_miltary_payment
+		x = 1
+		y = 1
+		relative_position_id = GRB_workers_protests
+		prerequisite = { focus = GRB_workers_protests }
+		mutually_exclusive = { focus = GRB_workers_salary }
+		cost = 2
+		completion_reward = {
+			every_owned_state = {
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				check_british_regs_values = yes 
+				calculate_british_map_frames = yes
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.07
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_military_academy
+		x = -1
+		y = 1
+		relative_position_id = GRB_budget_resizing
+		prerequisite = { focus = GRB_budget_resizing }
+		cost = 2
+		completion_reward = {
+			hidden_effect = { 
+				country_event = { id = grb.13 days = 120 }
+			}
+			custom_effect_tooltip = new_generals_tt_grb
+		}
+	}
+	
+	focus = {
+		id = GRB_science_facility
+		x = 1
+		y = 1
+		relative_position_id = GRB_budget_resizing
+		prerequisite = { focus = GRB_budget_resizing }
+		cost = 2
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = GRB_contact_neighbours
+		x = 1
+		y = 1
+		relative_position_id = GRB_human_rights
+		prerequisite = { focus = GRB_human_rights OR = GRB_equal_rights }
+		cost = 2
+		completion_reward = {
+			every_neighbor_country = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		
+		}
+	}
+	
+	focus = {
+		id = GRB_constitution
+		x = 1
+		y = 1
+		relative_position_id = GRB_workers_salary 
+		prerequisite = { focus = GRB_workers_salary OR = GRB_miltary_payment } 
+		cost = 2
+		completion_reward = {
+			country_event = { id = grb.15 days = 10 }
+		}
+	}
+	
+	focus = {
+		id = GRB_science_question 
+		x = 1
+		y = 1 
+		relative_position_id = GRB_military_academy
+		prerequisite = { focus = GRB_military_academy }
+		prerequisite = { focus = GRB_science_facility }
+		cost = 2
+		completion_reward = {
+			country_event = { id = grb.14 days = 5 }
+		}
+		
+	}
+	
+	
+	focus = {
+		id = GRB_contact_humans
+		x = 1 
+		y = 1
+		relative_position_id = GRB_contact_neighbours
+		prerequisite = { focus = GRB_contact_neighbours }
+		cost = 2
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_human_race = yes 
+				}
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_monarchy_question
+		x = -1
+		y = 1
+		relative_position_id = GRB_constitution
+		prerequisite = { focus = GRB_constitution }
+		cost = 2
+		completion_reward = {
+			country_event = { id = grb.16 days = 10 }
+		}
+	}
+	
+	focus = {
+		id = GRB_expand_military_rights
+		x = 1
+		y = 1
+		relative_position_id = GRB_constitution
+		prerequisite = { focus = GRB_constitution }
+		mutually_exclusive = { focus = GRB_military_limits }
+		cost = 2
+		completion_reward = {
+			every_owned_state = {
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				check_british_regs_values = yes 
+				calculate_british_map_frames = yes
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.07
+			}
+		}
+	}
+	
+	focus = { 
+		id = GRB_military_limits 
+		x = -1
+		y = 1 
+		relative_position_id = GRB_science_question
+		prerequisite = { focus = GRB_science_question }
+		mutually_exclusive = { focus = GRB_expand_military_rights }
+		cost = 2
+		completion_reward = {
+			every_owned_state = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 5 tooltip = demo_var_change_grb }
+				check_british_regs_values = yes 
+				calculate_british_map_frames = yes
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.07
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.07
+			} 
+		}
+	}
+	
+	focus = {
+		id = GRB_who_rules_britannia 
+		x = 1
+		y = 1
+		available = {
+			has_completed_focus = GRB_regional_politics
+		}
+		bypass = {
+			has_country_flag = neutrality_leading
+		}
+		relative_position_id = GRB_contact_humans
+		prerequisite = { focus = GRB_contact_humans }
+		prerequisite = { focus = GRB_monarchy_question }
+		cost = 2
+		completion_reward = {
+			country_event = { id = grb.17 days = 10 }
+		}
+	}
+	 
+	
+	focus = {
+		id = GRB_regional_politics
+		x = 1
+		y = 1
+		
+		relative_position_id = GRB_expand_military_rights
+		prerequisite = { focus = GRB_expand_military_rights OR = GRB_military_limits }
+		cost = 2
+		completion_reward = {
+			custom_effect_tooltip = stop_enemy_moves
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							check_variable = { 363.reg_demo_support_gb < 50 }
+							check_variable = { 364.reg_demo_support_gb < 50 }
+							check_variable = { 365.reg_demo_support_gb < 50 }
+						}
+					}
+					country_event = { id = grb.18 days = 5 }
+				
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_what_is_next
+		x = 2
+		y = 1
+		relative_position_id = GRB_who_rules_britannia 
+		prerequisite = { focus = GRB_who_rules_britannia }
+		prerequisite = { focus = GRB_regional_politics }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = load_focus_tree_of_winner
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	################## DEMOCRATIC FOCUSES
+	
+	
+	focus = {
+		id = GRB_fix_relationship ########## Ивент с выборами через год
+		x = 0
+		y = 1
+		allow_branch = {
+			has_government = democratic
+			has_completed_focus = GRB_what_is_next
+		}
+		relative_position_id = GRB_what_is_next
+		prerequisite = { focus = GRB_what_is_next }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = GRB_contact_UNS 
+		x = -2
+		y = 1
+		relative_position_id = GRB_fix_relationship
+		prerequisite = { focus = GRB_fix_relationship }
+		cost = 5
+		mutually_exclusive = { focus = GRB_contact_EQS }
+		mutually_exclusive = { focus = GRB_contact_RCT }
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.07 }
+			UNS = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				custom_effect_tooltip = expand_our_contacts
+			}
+		}
+		
+	}
+	focus = {
+		id = GRB_contact_EQS 
+		x = 0
+		y = 1
+		relative_position_id = GRB_fix_relationship
+		prerequisite = { focus = GRB_fix_relationship }
+		cost = 5
+		mutually_exclusive = { focus = GRB_contact_UNS }
+		mutually_exclusive = { focus = GRB_contact_RCT }
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.07 }
+			EQS = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				custom_effect_tooltip = expand_our_contacts
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = GRB_contact_RCT 
+		x = 2
+		y = 1
+		relative_position_id = GRB_fix_relationship
+		prerequisite = { focus = GRB_fix_relationship }
+		cost = 5
+		mutually_exclusive = { focus = GRB_contact_UNS }
+		mutually_exclusive = { focus = GRB_contact_EQS }
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.07 }
+			EQS = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				custom_effect_tooltip = expand_our_contacts
+			}
+		}
+		
+	}
+	
+	
+	focus = {
+		id = GRB_alliance_with_chosen
+		x = 1
+		y = 1
+		relative_position_id = GRB_contact_UNS
+		prerequisite = { focus = GRB_contact_EQS OR = GRB_contact_UNS }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = alliance_with_chosen_country
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = GRB_contact_UNS
+						UNS = {
+							is_in_faction = no 
+						}
+					}
+					UNS = {
+						add_ai_strategy = {
+							type = alliance
+							id = GRB 
+							value = 500
+						}
+					}
+					create_faction = GRB_UNS_ALLIANCE
+					add_to_faction = UNS
+				}
+				if = {
+					limit = {
+						has_completed_focus = GRB_contact_UNS
+						UNS = {
+							AND = {
+								is_in_faction = yes 
+								is_faction_leader = no 
+							}
+						}
+					}
+					UNS.Faction_leader = {
+						add_ai_strategy = {
+							type = alliance
+							id = GRB 
+							value = 500
+						}
+						country_event = { id = generic.2 }
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = GRB_contact_UNS
+						UNS = {
+							AND = {
+								is_in_faction = yes 
+								is_faction_leader = yes 
+							}
+						}
+					}
+					UNS = {
+						add_ai_strategy = {
+							type = alliance
+							id = GRB 
+							value = 500
+						}
+						add_to_faction = ROOT 
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = GRB_contact_EQS
+					}
+					EQS = {
+						add_ai_strategy = {
+							type = alliance
+							id = GRB 
+							value = 500
+						}
+						country_event = { id = generic.2 }
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_alliance_RCT
+		x = 0
+		y = 1
+		relative_position_id = GRB_contact_RCT
+		prerequisite = { focus = GRB_contact_RCT }
+		cost = 5
+		completion_reward = {
+			RCT = {
+				add_ai_strategy = {
+					type = alliance
+					id = GRB 
+					value = 500
+				}
+				country_event = { id = generic.2 }
+			}
+		}
+	} 
+	
+	
+	focus = {
+		id = GRB_embass_crystal_empire
+		x = 0
+		y = 1
+		relative_position_id = GRB_alliance_with_chosen
+		prerequisite = { focus = GRB_alliance_with_chosen }
+		cost = 5
+		completion_reward = {
+			CRY = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+			}
+			add_stability = 0.07
+			give_guarantee = CRY
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_embass_griffon_republic
+		x = 0
+		y = 1
+		relative_position_id = GRB_alliance_RCT
+		prerequisite = { focus = GRB_alliance_RCT }
+		cost = 5
+		completion_reward = {
+			FAT = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				
+			}
+			add_political_power = 25
+			
+		}	
+	}
+	
+	
+	
+	focus = {
+		id = GRB_defenders_of_peace
+		x = 1
+		y = 1
+		relative_position_id = GRB_embass_crystal_empire
+		prerequisite = { focus = GRB_embass_crystal_empire OR = GRB_embass_griffon_republic }
+		cost = 5
+		completion_reward = {
+			set_major = yes 
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = GRB_volunteers_of_peace_idea
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_contact_SOU 
+		x = -3
+		y = 1
+		relative_position_id = GRB_defenders_of_peace
+		prerequisite = { focus = GRB_defenders_of_peace }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = { id = generic.5 }
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.08
+					}
+					add_stability = 0.05
+					add_ai_strategy = {
+						type = befriend
+						id = GRB 
+						value = 500 
+					}
+					diplomatic_relation = {
+						country = ROOT 
+						relation = non_aggression_pact
+						active = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_contact_GEM
+		x = -1
+		y = 1
+		relative_position_id = GRB_defenders_of_peace 
+		prerequisite = { focus = GRB_defenders_of_peace }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					country_event = { id = generic.5 }
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.15
+					}
+					add_stability = 0.05
+					
+				}
+				add_ideas = GRB_GEM_friendship
+			}
+			add_ideas = GRB_GEM_friendship
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_contact_GRI
+		x = 1
+		y = 1
+		relative_position_id = GRB_defenders_of_peace 
+		prerequisite = { focus = GRB_defenders_of_peace }
+		cost = 5
+		completion_reward = {
+			GRI = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.08
+				}
+				add_stability = 0.05
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_contact_HLR
+		x = 3
+		y = 1
+		relative_position_id = GRB_defenders_of_peace
+		prerequisite = { focus = GRB_defenders_of_peace }
+		cost = 5
+		completion_reward = {
+			HLR = {
+				country_event = { id = grb.19 days = 5 }
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_army_trainings_with_SOU
+		x = 0
+		y = 1
+		relative_position_id = GRB_contact_SOU
+		prerequisite = { focus = GRB_contact_SOU }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_SOU_experience
+			SOU = {
+				add_ideas = GRB_SOU_experience
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_peace_treaty_GEM
+		x = 0
+		y = 1
+		relative_position_id = GRB_contact_GEM
+		prerequisite = { focus = GRB_contact_GEM }
+		cost = 5
+		completion_reward = {
+			GEM = {	
+				if = {
+					limit = {
+						NOT = {
+							has_government = democratic
+						}
+					}
+					add_popularity = {
+						ideology = democratic
+						popularity = 0.1
+					}
+					add_stability = 0.1
+					add_war_support = -0.1
+					add_ai_strategy = {
+						type = befriend
+						id = GRB 
+						value = 500 
+					}
+					diplomatic_relation = {
+						country = ROOT 
+						relation = non_aggression_pact
+						active = yes 
+					}
+				}
+			}
+		}
+	}
+		
+		
+		
+	focus = {
+		id = GRB_royal_meeting_GRI
+		x = 0
+		y = 1
+		relative_position_id = GRB_contact_GRI
+		prerequisite = { focus = GRB_contact_GRI }
+		cost = 5
+		completion_reward = {
+			GRI = {
+				add_stability = 0.07
+				add_ai_strategy = {
+					type = befriend
+					id = GRB 
+					value = 500 
+				}
+				diplomatic_relation = {
+					country = ROOT 
+					relation = non_aggression_pact
+					active = yes 
+				}
+				country_event = { id = grb.20 days = 3 }
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_support_HLR 
+		x = 0
+		y = 1
+		relative_position_id = GRB_contact_HLR
+		prerequisite = { focus = GRB_contact_HLR }
+		cost = 5
+		completion_reward = {
+			
+			country_event = { id = grb.21 days = 5 }
+		}
+		
+	}
+	
+	
+	focus = {
+		id = GRB_our_gala_with_bj_and_whores
+		x = 1
+		y = 1
+		relative_position_id = GRB_peace_treaty_GEM
+		prerequisite = { focus = GRB_peace_treaty_GEM }
+		prerequisite = { focus = GRB_army_trainings_with_SOU }
+		prerequisite = { focus = GRB_royal_meeting_GRI }
+		prerequisite = { focus = GRB_support_HLR }
+		cost = 20
+		select_effect = {
+		
+		}
+		completion_reward = {
+			custom_effect_tooltip = multiple_events_tt
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_guarantee_EQS
+		x = -2
+		y = 1
+		relative_position_id = GRB_our_gala_with_bj_and_whores
+		prerequisite = { focus = GRB_our_gala_with_bj_and_whores }
+		cost = 5
+		completion_reward = {
+			give_guarantee = EQS 
+			add_stability = 0.05
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = GRB_EQS_infrastructure
+		x = -1
+		y = 1
+		relative_position_id = GRB_guarantee_EQS
+		prerequisite = { focus = GRB_guarantee_EQS }
+		cost = 5
+		completion_reward = {
+			EQS = { 
+				add_timed_idea = {
+					idea = GRB_equestrian_debt
+					days = 720
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				14 = {
+					if = {
+						limit = {
+							is_owned_and_controlled_by = EQS
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						instant_build = yes
+						province = 585
+					}
+				}
+				172 = {
+					if = {
+						limit = {
+							is_owned_and_controlled_by = EQS
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 705
+					}
+				}
+				136 = {
+					if = {
+						limit = {
+							is_owned_and_controlled_by = EQS
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 3
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes
+						province = 748
+					}
+				}
+				137 = {
+					if = {
+						limit = {
+							is_owned_and_controlled_by = EQS
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 3
+						instant_build = yes
+					}
+					
+				}
+				
+				45 = {
+					if = {
+						limit = {
+							is_owned_and_controlled_by = EQS
+						}
+					}
+					add_building_construction = {
+						type = infrastructure 
+						level = 4
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_canterlot_reinforcements
+		x = 1
+		y = 1
+		relative_position_id = GRB_guarantee_EQS
+		prerequisite = { focus = GRB_guarantee_EQS }
+		cost = 5
+		completion_reward = {
+			3 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					instant_build = yes 
+					province = 179
+				}
+			}
+			EQS = {
+				add_political_power = -25
+				add_war_support = 0.15
+				add_stability = 0.15
+			}
+			add_political_power = 50
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_preemptive_strike
+		x = 1
+		y = 1
+		relative_position_id = GRB_EQS_infrastructure
+		prerequisite = { focus = GRB_EQS_infrastructure }
+		prerequisite = { focus = GRB_canterlot_reinforcements }
+		cost = 5
+		bypass = {
+			OR = {
+				has_war_with = CHN 
+				CHN = {
+					OR = {
+						exists = no
+						is_subject_of = EQS
+						is_subject_of = ROOT 
+					}
+				}
+			}
+				
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHN 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_guarantee_FAT
+		x = 2
+		y = 1
+		relative_position_id = GRB_our_gala_with_bj_and_whores
+		prerequisite = { focus = GRB_our_gala_with_bj_and_whores }
+		cost = 5
+		completion_reward = {
+			give_guarantee = FAT
+			acceptance_expand_extra = yes			
+		}
+	}
+	
+	focus = {
+		id = GRB_support_FAT
+		x = -1
+		y = 1
+		relative_position_id = GRB_guarantee_FAT
+		prerequisite = { focus = GRB_guarantee_FAT }
+		cost = 5
+		completion_reward = {
+			FAT = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { 
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = { 
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+				}
+				add_political_power = -50
+				add_stability = 0.05
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.07
+				}
+			}
+			add_political_power = 75
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.07
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_reinforce_north
+		x = 1
+		y = 1
+		relative_position_id = GRB_guarantee_FAT
+		prerequisite = { focus = GRB_guarantee_FAT }
+		cost = 5
+		completion_reward = {
+			FAT = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = { 
+							OR = {
+								is_owned_by = GRI 
+								is_owned_by = STW
+								is_owned_by = FEA 
+								is_owned_by = MNC
+							
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = GRB_northern_thread
+		x = 1
+		y = 1
+		relative_position_id = GRB_support_FAT
+		prerequisite = { focus = GRB_support_FAT}
+		prerequisite = { focus = GRB_reinforce_north }
+		cost = 5
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				category = dd_tech
+				category = ss_tech
+				category = bb_tech
+				uses = 2
+				bonus = 0.75
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes 
+				}
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes 
+					province = {
+						limit_to_victory_point = yes
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_britany_of_heroes 
+		x = 2
+		y = 1
+		relative_position_id = GRB_preemptive_strike
+		prerequisite = { focus = GRB_preemptive_strike }
+		prerequisite = { focus = GRB_northern_thread }
+		cost = 10
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_manpower = 15000
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	####################### RED BITCHES
+	
+	
+	focus = {
+		id = GRB_end_of_dictatorship
+		allow_branch = {
+			AND = {
+				has_completed_focus = GRB_what_is_next 
+				has_government = communism
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GRB_what_is_next 
+		prerequisite = { focus = GRB_what_is_next }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.25
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_SOU_contact
+		x = -1
+		y = 1
+		relative_position_id = GRB_end_of_dictatorship
+		prerequisite = { focus = GRB_end_of_dictatorship }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = GRB_COMMPACT
+			}
+			SOU = {
+				add_ai_strategy = {
+					type = alliance
+					id = GRB 
+					value = 500
+				}
+				country_event = { id = generic.5 days = 2}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_GRIFF_contact
+		x = 1
+		y = 1
+		relative_position_id = GRB_end_of_dictatorship
+		prerequisite = { focus = GRB_end_of_dictatorship }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = GRB_COMMPACT
+			}
+			every_other_country = {
+
+				limit = {
+					AND = {
+						
+						has_government = communism
+						OR = {
+							is_western_griffonia_country = yes
+							is_southern_griffonia_country = yes
+							is_eastern_griffonia_country = yes
+							is_central_griffonia_country = yes
+							is_northern_griffonia_country = yes
+						}
+					}
+				}
+				
+				add_ai_strategy = {
+					type = alliance
+					id = GRB 
+					value = 500
+				}
+				country_event = { id = generic.5 days = 2}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = GRB_support_EQS_communists
+		x = -1
+		y = 1
+		relative_position_id = GRB_SOU_contact
+		prerequisite = { focus = GRB_SOU_contact OR = GRB_GRIFF_contact }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.25
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_support_GEM_communists
+		x = 1
+		y = 1
+		relative_position_id = GRB_SOU_contact
+		prerequisite = { focus = GRB_SOU_contact OR = GRB_GRIFF_contact }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.25
+				}
+				if = {
+					limit = {
+						has_government = communism
+					}
+					country_event = { id = generic.5 }
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_support_LSC
+		x = 1
+		y = 1
+		relative_position_id = GRB_GRIFF_contact
+		prerequisite = { focus = GRB_SOU_contact OR = GRB_GRIFF_contact }
+		cost = 5
+		bypass = {
+			LSC = {
+				exists = no 
+			}
+		}
+		completion_reward = {
+			LSC = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.25
+				}
+				add_stability = 0.15
+				add_war_support = 0.15
+				country_event = { id = generic.5 days = 5 }
+				
+			}
+			give_guarantee = LSC
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_we_support_them
+		x = -1
+		y = 1
+		relative_position_id = GRB_support_EQS_communists
+		prerequisite = { focus = GRB_support_EQS_communists }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_communism_defenders
+		}
+	}
+	
+	focus = {
+		id = GRB_pressure_others
+		x = 1
+		y = 1
+		relative_position_id = GRB_support_EQS_communists
+		prerequisite = { focus = GRB_support_GEM_communists }
+		prerequisite = { focus = GRB_support_LSC }
+		prerequisite = { focus = GRB_support_EQS_communists }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				add_timed_idea = {
+					idea = GRB_communism_influence
+					days = 180
+				}
+			}
+			custom_effect_tooltip = start_the_world_revolution_later
+		}
+	}
+	
+	focus = {
+		id = GRB_rifles_for_revolution_focus
+		x = 1
+		y = 1
+		relative_position_id = GRB_support_GEM_communists
+		prerequisite = { focus = GRB_support_GEM_communists }
+		prerequisite = { focus = GRB_support_LSC }
+		prerequisite = { focus = GRB_support_EQS_communists }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_rifles_for_revolution
+		}
+	}
+	
+	focus = {
+		id = GRB_communism_volunteers
+		x = 1
+		y = 1
+		relative_position_id = GRB_support_LSC
+		prerequisite = { focus = GRB_support_LSC }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_communism_army
+		}
+	}
+	
+	
+	
+	focus = {
+		id = GRB_otkryvai_padla_communism_idet
+		x = 1
+		y = 1
+		relative_position_id = GRB_pressure_others 
+		prerequisite = { focus = GRB_pressure_others }
+		prerequisite = { focus = GRB_rifles_for_revolution_focus }
+		cost = 10
+		completion_reward = {
+			unlock_decision_category_tooltip = GRB_communist_revolt_decisions
+			unlock_decision_category_tooltip = GRB_communist_revolt_starting
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_keep_supporting
+		x = 0
+		y = 1
+		relative_position_id = GRB_otkryvai_padla_communism_idet
+		prerequisite = { focus = GRB_otkryvai_padla_communism_idet }
+		cost = 5
+		completion_reward = {
+			add_political_power = 25
+			add_manpower = -15000
+			add_to_variable = { var = num_of_commie_recruits value = 15000 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = 3000 tooltip = add_commie_rifles }
+		}
+	}
+	
+	focus = {
+		id = GRB_conquer_remains
+		x = 0
+		y = 1
+		bypass = {
+			all_country = {
+				is_in_faction_with = ROOT 
+			}
+		}
+		relative_position_id = GRB_keep_supporting 
+		prerequisite = { focus = GRB_keep_supporting }
+		cost = 10
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					NOT = {
+						OR = {
+							original_tag = HLR 
+							original_tag = DED 
+							is_in_faction_with = ROOT 
+						}
+					}
+				}
+				GRB = {
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_red_triumph
+		x = 0
+		y = 1
+		relative_position_id = GRB_conquer_remains
+		prerequisite = { focus = GRB_conquer_remains }
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = way_to_red_victory
+			add_political_power = 25
+			add_popularity = { ideology = communism popularity = 0.15 }
+		}
+	}
+	
+	
+	
+	
+	
+	##################### Mosley branch
+	
+	
+	focus = {
+		id = GRB_rule_britannia
+		allow_branch = {
+			AND = {
+				has_completed_focus = GRB_what_is_next
+				has_government = fascism
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = GRB_what_is_next
+		prerequisite = { focus = GRB_what_is_next }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			add_political_power = 25
+			add_war_support = 0.15
+		}
+	}
+	
+	focus = {
+		id =  GRB_fight_the_crisis
+		x = 0
+		y = 1
+		relative_position_id = GRB_rule_britannia
+		prerequisite = { focus = GRB_rule_britannia }
+		cost = 5
+		completion_reward = {
+			add_timed_idea =  { idea = GRB_crisis_retaiment days = 365 }
+		}
+	}
+	
+	focus = {
+		id = GRB_reinstall_the_order
+		x = 0
+		y = 1
+		relative_position_id = GRB_fight_the_crisis
+		prerequisite = { focus = GRB_fight_the_crisis }
+		cost = 5
+		completion_reward = {
+			add_popularity = { 
+				ideology = communism
+				popularity = -0.15
+			}
+			add_popularity = { 
+				ideology = democratic
+				popularity = -0.15
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_weapons_development
+		x = -2
+		y = 1
+		relative_position_id = GRB_reinstall_the_order
+		prerequisite = { focus = GRB_reinstall_the_order }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				category = race_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+		
+	}
+	
+	
+	focus = {
+		id = GRB_natives_question
+		x = 0
+		y = 1
+		relative_position_id = GRB_weapons_development
+		prerequisite = { focus = GRB_weapons_development }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_native_people
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_workplaces
+		x = 2
+		y = 1
+		relative_position_id = GRB_reinstall_the_order
+		prerequisite = { focus = GRB_reinstall_the_order }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_place_to_work
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_military_strength
+		x = 0
+		y = 1
+		relative_position_id = GRB_workplaces
+		prerequisite = { focus = GRB_workplaces }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = { 
+		id = GRB_expand_conscription
+		x = 0
+		y = 1
+		relative_position_id = GRB_reinstall_the_order
+		prerequisite = { focus = GRB_reinstall_the_order }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_extra_conscription
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_reinforce_borders
+		x = 0
+		y = 1
+		relative_position_id = GRB_expand_conscription
+		prerequisite = { focus = GRB_expand_conscription }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT 
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_invade_aquellia
+		x = 0
+		y = 1
+		relative_position_id = GRB_reinforce_borders
+		prerequisite = { focus = GRB_reinforce_borders }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JER 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_appease_south
+		x = -1
+		y = 1
+		relative_position_id = GRB_invade_aquellia
+		prerequisite = { focus = GRB_invade_aquellia }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = EQC 
+			}
+		}
+		
+	}
+	
+	
+	focus = {
+		id = GRB_march_karthin
+		x = 1
+		y = 1
+		relative_position_id = GRB_invade_aquellia
+		prerequisite = { focus = GRB_invade_aquellia }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = WNG 
+			}
+			every_other_country = {
+				limit = {
+					OR = {
+						is_in_faction_with = WNG
+						is_subject_of = WNG 
+					}
+				}
+				ROOT = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_prepare_invasion
+		x = 0
+		y = 1
+		relative_position_id = GRB_appease_south
+		prerequisite = { focus = GRB_appease_south }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+			add_tech_bonus = {
+				category = tp_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	
+	focus = {	
+		id = GRB_destroy_remains
+		x = 0
+		y = 1
+		relative_position_id = GRB_march_karthin
+		prerequisite = { focus = GRB_march_karthin }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOI 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BAN 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIC 
+			}
+			
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_invade_lands_of_harmony
+		x = 0
+		y = 1
+		relative_position_id = GRB_prepare_invasion
+		prerequisite = { focus = GRB_prepare_invasion }
+		cost = 5 
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus 
+				target = EQS 
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus 
+				target = CRY 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_raid_the_east
+		x = 0
+		y = 1
+		relative_position_id = GRB_destroy_remains
+		prerequisite = { focus = GRB_destroy_remains }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BRF 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CYA 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = MIT 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LUS 
+			}
+		}
+		
+	}
+	
+	
+	focus = {
+		id = GRB_destroy_STG
+		x = 0
+		y = 1
+		relative_position_id = GRB_invade_lands_of_harmony
+		prerequisite = { focus = GRB_invade_lands_of_harmony }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					owns_state = 153
+				}
+				GRB = {
+					create_wargoal = {
+						type = puppet_wargoal_focus 
+						target = PREV 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_appease_the_frontier
+		x = 0
+		y = 1
+		relative_position_id = GRB_raid_the_east
+		prerequisite = { focus = GRB_raid_the_east }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HLQ 
+			}
+			
+			if = {
+				limit = {
+					country_exists = LNS
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LNS 
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LSC
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LNS 
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LSM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LNS 
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_end_of_the_hehemony
+		x = 0
+		y = 1
+		relative_position_id = GRB_destroy_STG
+		prerequisite = { focus = GRB_destroy_STG }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHN 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_territorial_claims
+		x = 0
+		y = 1
+		relative_position_id = GRB_appease_the_frontier
+		prerequisite = { focus = GRB_appease_the_frontier }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRI 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_new_face_of_britain
+		x = 1
+		y = 1
+		relative_position_id = GRB_end_of_the_hehemony
+		prerequisite = { focus = GRB_end_of_the_hehemony }
+		prerequisite = { focus = GRB_territorial_claims }
+		cost = 5
+		completion_reward = {
+			set_cosmetic_tag = GRB_EMP
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	##################### Queen branch 
+	
+	
+	focus = {
+		id = GRB_all_hail_the_queen
+		x = 0
+		y = 1
+		relative_position_id = GRB_what_is_next
+		prerequisite = { focus = GRB_what_is_next }
+		cost = 5
+		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.25 }
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_royal_guard
+		x = -1
+		y = 1
+		relative_position_id = GRB_all_hail_the_queen
+		prerequisite = { focus = GRB_all_hail_the_queen }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_royal_guard_idea
+		}
+	}
+	
+	focus = {
+		id = GRB_economical_reform
+		x = 1
+		y = 1
+		relative_position_id = GRB_all_hail_the_queen
+		prerequisite = { focus = GRB_all_hail_the_queen }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_eco_reform
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_ruler_of_the_seas
+		x = 1
+		y = 1
+		relative_position_id = GRB_royal_guard
+		prerequisite = { focus = GRB_royal_guard }
+		prerequisite = { focus = GRB_economical_reform }
+		cost = 10
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+			add_tech_bonus = {
+				category = tp_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	
+	########### Davi pingvinov suka
+	
+	
+	focus = {
+		id = GRB_northern_equus
+		x = -10
+		y = 1
+		relative_position_id = GRB_ruler_of_the_seas
+		prerequisite = { focus = GRB_ruler_of_the_seas }
+		cost = 10
+		completion_reward = {
+			country_event = { id = grb.23 days = 30 }
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Colonial Invasion Group"
+						}
+					}
+					
+					division_template = {
+						name = "Colonial Invasion Group"
+						division_names_group = GEM_PCK_01
+						priority = 1
+						is_locked = yes
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
+							
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							field_hospital = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_develop_penguin_lands
+		x = -2
+		y = 1
+		relative_position_id = GRB_northern_equus
+		prerequisite = { focus = GRB_northern_equus }
+		cost = 5
+		available = {
+			PNG = {
+				is_subject_of = ROOT 
+			}
+		}
+		completion_reward = {
+			PNG = {
+				every_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						instant_build = yes 
+						level = 3
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+				}
+
+				add_ideas = GRB_PNG_infl
+			}
+			
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_PNG_expansion
+		x = 2
+		y = 1
+		relative_position_id = GRB_northern_equus
+		prerequisite = { focus = GRB_northern_equus }
+		cost = 5
+		completion_reward = {
+			add_manpower = 15000
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_fire_or_famine
+		x = 0
+		y = 1
+		relative_position_id = GRB_develop_penguin_lands
+		prerequisite = { focus = GRB_develop_penguin_lands } 
+		cost = 5
+		completion_reward = {
+			PNG = {
+				add_ideas = GRB_stop_famine
+			}
+			
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_penguin_resources
+		x = -2
+		y = 1
+		relative_position_id = GRB_develop_penguin_lands
+		prerequisite = { focus = GRB_develop_penguin_lands }
+		cost = 5
+		completion_reward = {
+			266 = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			
+			292 = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+				add_resource = {
+					type = aluminium
+					amount = 8
+				}
+			}
+			
+			284 = {
+				add_resource = {
+					type = oil
+					amount = 15
+				}
+			}
+			
+			PNG = {
+				add_ideas = GRB_royal_representation
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_northern_industrialization
+		x = -4
+		y = 1
+		relative_position_id = GRB_develop_penguin_lands
+		prerequisite = { focus = GRB_develop_penguin_lands }
+		cost = 5
+		completion_reward = {
+			PNG = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_penguin_talents 
+		x = 1
+		y = 1
+		relative_position_id = GRB_northern_industrialization
+		prerequisite = { focus = GRB_northern_industrialization }
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GRB_reinforce_penguins
+		x = -1
+		y = 1
+		relative_position_id = GRB_fire_or_famine
+		prerequisite = { focus = GRB_fire_or_famine }
+		cost = 5
+		completion_reward = {
+			PNG = {
+				add_tech_bonus = {
+					category = infantry_weapons
+					uses = 1
+					bonus = 1
+				}
+				add_tech_bonus = {
+					category = support_tech
+					uses = 1
+					bonus = 1
+				}
+				add_manpower = 15000
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_native_army
+		x = 0
+		y = 2
+		relative_position_id = GRB_penguin_resources
+		prerequisite = { focus = GRB_penguin_resources }
+		cost = 5
+		completion_reward = {
+			PNG = {
+				add_manpower = -20000
+			}
+			add_manpower = 20000
+		}
+	}
+	
+	focus = {
+		id = GRB_north_saxxonia
+		x = 3
+		y = 1
+		relative_position_id = GRB_native_army
+		prerequisite = { focus = GRB_native_army }
+		prerequisite = { focus = GRB_appease_lands }
+		cost = 5
+		completion_reward = {
+			PNG = {
+				set_cosmetic_tag = GRB_SUBJ_PNG_NEW
+				every_state = {
+					limit = {
+						is_claimed_by = PNG 
+					}
+					add_core_of = PNG 
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_expand_south
+		x = -1
+		y = 1
+		relative_position_id = GRB_PNG_expansion
+		prerequisite = { focus = GRB_PNG_expansion }
+		cost = 10
+		completion_reward = {
+			PNG = {
+				add_state_claim = 283
+				add_state_claim = 277
+				add_state_claim = 288
+				add_state_claim = 287
+				add_state_claim = 286
+				add_state_claim = 281
+				add_state_claim = 278
+			}
+			if = {
+				limit = {
+					country_exists = GRF 
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = GRF 
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GFF 
+				}
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = GFF 
+				}
+			}
+			else = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = 283.Owner					
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_penguin_west
+		x = 1
+		y = 1
+		relative_position_id = GRB_PNG_expansion
+		prerequisite = { focus = GRB_PNG_expansion }
+		cost = 10
+		completion_reward = {
+			PNG = {
+				add_state_claim = 290
+				add_state_claim = 289
+				add_state_claim = 272
+				add_state_claim = 265
+				add_state_claim = 280
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PLB 
+			}
+			if = {
+				limit = {
+					PLB = {
+						is_subject = yes 
+					}
+				}
+				
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = PLB.Overlord 
+				}
+			}
+
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_appease_lands
+		x = 1
+		y = 1
+		relative_position_id = GRB_expand_south
+		prerequisite = { focus = GRB_expand_south }
+		prerequisite = { focus = GRB_penguin_west }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = change_state_owner
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_claimed_by = PNG 
+					}
+					PNG = {
+						transfer_state = PREV 
+					}
+				}
+			}
+			add_political_power = 100
+			add_stability = 0.05
+			add_war_support = 0.05 
+		}
+	}
+	
+	
+	
+	
+	############## Farbrook Colony 
+	
+	
+	focus = {
+		id = GRB_northern_griffonia
+		x = 0
+		y = 1
+		relative_position_id = GRB_ruler_of_the_seas
+		prerequisite = { focus = GRB_ruler_of_the_seas }
+		cost = 5
+		completion_reward = {
+			country_event = { id = grb.24 days = 20 }
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Colonial Invasion Group"
+						}
+					}
+					
+					division_template = {
+						name = "Colonial Invasion Group"
+						division_names_group = GEM_PCK_01
+						priority = 1
+						is_locked = yes
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
+							
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							field_hospital = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_farbrooks_forests 
+		x = -3
+		y = 1
+		relative_position_id = GRB_northern_griffonia
+		prerequisite = { focus = GRB_northern_griffonia }
+		cost = 5
+		available = {
+			FBK = {
+				is_subject_of = ROOT 
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = monthly_gains_in_pp
+			FBK = {
+				add_ideas = GRB_PNG_infl
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = GRB_ruchegrad_magicians
+		x = -2
+		y = 1
+		prerequisite = { focus = GRB_farbrooks_forests }
+		relative_position_id = GRB_farbrooks_forests
+		cost = 5
+		available = {
+			OR = {
+				AND = {
+					WAT = {
+						exists = no 
+					}
+					642 = {
+						is_owned_and_controlled_by = ROOT 
+						is_owned_and_controlled_by = FBK 
+					}
+				}
+				WAT = {
+					is_subject_of = ROOT 
+				}
+			}
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				category = race_tech
+				uses = 3
+				bonus = 0.75
+			}
+			add_tech_bonus = {
+				category = magical_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_FIR_woods
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				AND = {
+					FIR = {
+						exists = no 
+					}
+					454 = {
+						is_owned_and_controlled_by = ROOT 
+						is_owned_and_controlled_by = FBK 
+					}
+				}
+				FIR = {
+					is_subject_of = ROOT 
+				}
+			}
+		}
+		relative_position_id = GRB_farbrooks_forests 
+		prerequisite = { focus = GRB_farbrooks_forests }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = modify_chances
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_expand_food
+		x = 2
+		y = 1
+		relative_position_id = GRB_farbrooks_forests
+		prerequisite = { focus = GRB_farbrooks_forests }
+		cost = 5
+		completion_reward = {
+			FBK = {
+				add_ideas = GRB_food_places
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_new_piligrimms
+		x = 0
+		y = 1
+		relative_position_id = GRB_FIR_woods
+		prerequisite = { focus = GRB_FIR_woods }
+		prerequisite = { focus = GRB_expand_food }
+		prerequisite = { focus = GRB_ruchegrad_magicians }
+		cost = 5
+		completion_reward = {
+			FBK = {
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+					}
+					add_manpower = 10000
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { 
+						type = industrial_complex
+						level = 3
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+					}
+					add_manpower = 10000
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = { 
+						type = industrial_complex
+						level = 3
+						instant_build = yes 
+					}
+				}
+				
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_recreation_zones
+		x = 0
+		y = 1
+		relative_position_id = GRB_new_piligrimms
+		prerequisite = { focus = GRB_new_piligrimms }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.25
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_west_expansion
+		x = 3
+		y = 1
+		relative_position_id = GRB_northern_griffonia
+		prerequisite = { focus = GRB_northern_griffonia }
+		cost = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = FIR 
+				}
+				FBK = {
+					add_state_claim = PREV 
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FIR 
+			}
+			hidden_effect = {
+				every_other_country = {
+					diplomatic_relation = {
+						country = FIR 
+						relation = guarantee
+						active = no 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_northern_threat_neut
+		x = -1
+		y = 1
+		relative_position_id = GRB_west_expansion
+		prerequisite = { focus = GRB_west_expansion }
+		cost = 5
+		completion_reward = {
+			diplomatic_relation = {
+				relation = non_aggression_pact
+				country = HLR 
+				active = yes 
+			}
+			give_guarantee = HLR 
+		}
+	}
+	
+	focus = {
+		id = GRB_ultimatum_wat
+		x = 1
+		y = 1
+		relative_position_id = GRB_west_expansion
+		prerequisite = { focus = GRB_west_expansion }
+		cost = 5
+		completion_reward = {
+			hidden_effect = {
+				every_other_country = {
+					diplomatic_relation = {
+						country = WAT 
+						relation = guarantee
+						active = no 
+					}
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = WAT 
+			}
+			every_state = {
+				limit = {
+					is_core_of = WAT 
+				}
+				FBK = {
+					add_state_claim = PREV 
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = GRB_modernization
+		x = 1
+		y = 1
+		relative_position_id = GRB_northern_threat_neut
+		prerequisite = { focus = GRB_northern_threat_neut }
+		prerequisite = { focus = GRB_ultimatum_wat }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_subject_of = ROOT 
+				}
+				add_tech_bonus = {
+					category = infantry_weapons
+					uses = 3
+					bonus = 1
+				}
+				add_tech_bonus = {
+					category = armor 
+					uses = 3
+					bonus = 1
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_east_canada
+		x = 3
+		y = 1
+		relative_position_id = GRB_recreation_zones
+		prerequisite = { focus = GRB_recreation_zones }
+			
+			

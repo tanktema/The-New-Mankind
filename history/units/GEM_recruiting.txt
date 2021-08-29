@@ -1,0 +1,142 @@
+units = {
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Infanteriedivision"
+		location = 12305
+		division_template = "Infanteriedivision"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Panzerbrigade"
+		location = 12305
+		division_template = "Panzerbrigade"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Panzerbrigade"
+		location = 12305
+		division_template = "Panzerbrigade"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Panzerbrigade"
+		location = 12305
+		division_template = "Panzerbrigade"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Panzerbrigade"
+		location = 12305
+		division_template = "Panzerbrigade"
+		start_equipment_factor = 1
+		start_experience_factor = 0.25
+	}
+}

@@ -2,6 +2,8 @@ technology_categories = {
 	human_tech
 	snipers_tech
 	human_industrial_tech
+	human_army_upgrades
+	human_special_tech
 }
 technology_folders = {
 	human_folder = {

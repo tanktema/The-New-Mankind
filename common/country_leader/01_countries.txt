@@ -93,7 +93,7 @@ leader_traits = {
 			stability_factor = -0.05
 		}
 		onwheel_master = {
-			random = 0
+			random = no
 			equipment_bonus = {
 				armor = {
 					maximum_speed = 0.05
@@ -253,7 +253,137 @@ leader_traits = {
 			fascism_drift = 0.01
 			drift_defence_factor = 0.2
 		} 
+		military_reichministr = {
+			random = no 
+			production_speed_arms_factory_factor = 0.15
+			production_oil_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
 		
+		rock_band_hum = {
+			random = no
+			fascism_drift = 0.01
+			drift_defence_factor = 0.2
+			stability_factor = 0.1
+			war_support_factor = 0.1
+		}
+		
+		computer_pioneer = {
+			random = no
+			research_speed_factor = 0.05 
+		}
+		
+		world_war_veteran = {
+			random = no 
+			offence = 0.07
+			defence = 0.07
+			experience_gain_army = 0.02
+		}
+		
+		airborne_creator = {
+			random = no 
+			experience_gain_air = 0.02
+			special_forces_min = 10
+			extra_paratrooper_supply_grace = 24
+			paratrooper_count_per_plane = 2
+		}
+		
+		medical_company_trait = {
+			random = no 
+			research_speed_factor = 0.05
+			MONTHLY_POPULATION = 0.25
+			experience_loss_factor = -0.05
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.15
+				}
+			}
+		}
+		
+		exiled_german_communist = {
+			random = no 
+			fascism_drift = -0.02
+			communism_drift = 0.02
+			stability_factor = 0.05
+			war_support_factor = 0.07
+			communism_acceptance = 25
+			fascism_acceptance = -50
+		}
+		
+		statesoc_trait = {
+			random = no 
+			stability_factor = 0.1
+			ai_focus_aggressive_factor = 0.5
+			crypto_strength = 10
+			encryption_factor = 0.1
+		}
+		
+		railroad_builder = {
+			random = no 
+			production_speed_infrastructure_factor = 0.25
+			dig_in_speed = 2
+			army_speed_factor = 0.15
+		}
+		
+		
+		dies_soon_trait = {
+		
+			random = no 
+			custom_modifier_tooltip = dies_soon_tt 
+		}
+		
+		lyra_human_lover = {
+			random = no 
+			custom_modifier_tooltip = acceptance_10_modifier
+			
+		}
+		
+		
+		nuclear_pacifist = {
+			research_speed_factor = 0.1
+			research_bonus = {
+				nuclear = 0.1
+			}
+			stability_factor = -0.07
+			war_support_factor = -0.1
+		}
+		
+		
+		magical_human_assistant = {
+			random = no 
+			research_speed_factor = 0.05
+			
+		}
+		
+		gromyko_minist_trait = {
+			random = no 
+			custom_modifier_tooltip = acceptance_10_modifier
+			
+		}
+		gromyko_selhoz_trait = {
+			random = no 
+			MONTHLY_POPULATION = 0.25 
+			stability_factor = 0.02
+		}
+		
+		gen_yazov = {
+			random = no 
+			offence = 0.08
+			defence = 0.1 
+			army_org_factor = 0.15
+			political_power_gain = -0.1
+			stability_factor = -0.07
+			war_support_factor = 0.06
+		}
+		
+		
+		altidiya_sssr = {
+			random = no 
+			drift_defence_factor = 0.15
+			communism_drift = 0.02
+			stability_factor = 0.05
+		}
 	}
 	
 		

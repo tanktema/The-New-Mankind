@@ -1,0 +1,37 @@
+scripted_gui = {
+
+	GRB_political_decisions_gui = {
+		context_type = decision_category
+		window_name = "british_politics_decision"
+		
+
+		
+		effects = {
+			brit_reg_363_button_click = {
+				set_variable = { reg_num_brit_pol = 3 }
+			}
+			brit_reg_364_button_click = {
+				set_variable = { reg_num_brit_pol = 2 }
+			}
+			brit_reg_365_button_click = {
+				set_variable = { reg_num_brit_pol = 1 }
+			}
+		}
+		
+		triggers = {
+		
+		}
+		
+		properties = {
+			brit_reg_363_button = {
+				frame = ROOT.rg_363_stat_frame
+			}
+			brit_reg_364_button = {
+				frame = ROOT.rg_364_stat_frame
+			}
+			brit_reg_365_button = {
+				frame = ROOT.rg_365_stat_frame
+			}
+		}
+		
+	}

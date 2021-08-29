@@ -1,0 +1,229 @@
+defined_text = {
+	name = GetTNMSeventTitle
+	text = {
+		trigger = {
+			has_global_flag = harmony_victory_flag
+		}
+		localization_key = harmony_victory_flag_sevent_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = purple_plague_cured_flag
+		}
+		localization_key = purple_plague_cured_flag_sevent_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = victory_of_stetesoc
+		}
+		localization_key = victory_of_stetesoc_sevent_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = shepherd_ambitions
+		}
+		localization_key = shepherd_ambitions_flag_sevent_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = ext_the_supernova
+		}
+		localization_key = ext_the_supernova_sevent_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = new_rockwells_order
+		}
+		localization_key = new_rockwells_order_sevent_title
+	}
+	text = {
+		trigger = {
+			has_global_flag = american_socialistic_victory
+		}
+		localization_key = american_socialistic_victory_sevent_title
+	}
+}
+
+defined_text = {
+	name = GetTNMSeventPicture
+	text = {
+		trigger = {
+			has_global_flag = harmony_victory_flag
+		}
+		localization_key = harmony_victory_flag_sevent_pict
+	}
+	text = {
+		trigger = {
+			has_global_flag = purple_plague_cured_flag
+		}
+		localization_key = purple_plague_cured_flag_sevent_pict
+	}
+	text = {
+		trigger = {
+			has_global_flag = victory_of_stetesoc
+		}
+		localization_key = victory_of_stetesoc_sevent_pict
+	}
+	text = {
+		trigger = {
+			has_global_flag = shepherd_ambitions
+		}
+		localization_key = shepherd_ambitions_flag_sevent_pict
+	}
+	text = {
+		trigger = {
+			has_global_flag = ext_the_supernova
+		}
+		localization_key = ext_the_supernova_sevent_pict
+	}
+	text = {
+		trigger = {
+			has_global_flag = new_rockwells_order
+		}
+		localization_key = new_rockwells_order_sevent_pict
+	}
+	text = {
+		trigger = {
+			has_global_flag = american_socialistic_victory
+		}
+		localization_key = american_socialistic_victory_sevent_pict
+	}
+}
+
+defined_text = {
+	name = GetTNMSeventQuote
+	text = {
+		trigger = {
+			has_global_flag = harmony_victory_flag
+		}
+		localization_key = harmony_victory_flag_sevent_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = purple_plague_cured_flag
+		}
+		localization_key = purple_plague_cured_flag_sevent_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = victory_of_stetesoc
+		}
+		localization_key = victory_of_stetesoc_sevent_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = shepherd_ambitions
+		}
+		localization_key = shepherd_ambitions_flag_sevent_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = ext_the_supernova
+		}
+		localization_key = ext_the_supernova_sevent_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = new_rockwells_order
+		}
+		localization_key = new_rockwells_order_sevent_quote
+	}
+	text = {
+		trigger = {
+			has_global_flag = american_socialistic_victory
+		}
+		localization_key = american_socialistic_victory_sevent_quote
+	}
+}
+
+defined_text = {
+	name = GetTNMSeventText
+	text = {
+		trigger = {
+			has_global_flag = harmony_victory_flag
+		}
+		localization_key = harmony_victory_flag_sevent_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = purple_plague_cured_flag
+		}
+		localization_key = purple_plague_cured_flag_sevent_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = victory_of_stetesoc
+		}
+		localization_key = victory_of_stetesoc_sevent_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = shepherd_ambitions
+		}
+		localization_key = shepherd_ambitions_flag_sevent_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = ext_the_supernova
+		}
+		localization_key = ext_the_supernova_sevent_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = new_rockwells_order
+		}
+		localization_key = new_rockwells_order_sevent_text
+	}
+	text = {
+		trigger = {
+			has_global_flag = american_socialistic_victory
+		}
+		localization_key = american_socialistic_victory_sevent_text
+	}
+}
+
+defined_text = {
+	name = GetTNMSeventAnswer
+	text = {
+		trigger = {
+			has_global_flag = harmony_victory_flag
+		}
+		localization_key = harmony_victory_flag_sevent_answer
+	}
+	text = {
+		trigger = {
+			has_global_flag = purple_plague_cured_flag
+		}
+		localization_key = purple_plague_cured_flag_sevent_answer
+	}
+	text = {
+		trigger = {
+			has_global_flag = victory_of_stetesoc
+		}
+		localization_key = victory_of_stetesoc_sevent_answer
+	}
+	text = {
+		trigger = {
+			has_global_flag = shepherd_ambitions
+		}
+		localization_key = shepherd_ambitions_flag_sevent_answer
+	}
+	text = {
+		trigger = {
+			has_global_flag = ext_the_supernova
+		}
+		localization_key = ext_the_supernova_sevent_answer
+	}
+	text = {
+		trigger = {
+			has_global_flag = new_rockwells_order
+		}
+		localization_key = new_rockwells_order_sevent_answer
+	}
+	text = {
+		trigger = {
+			has_global_flag = american_socialistic_victory
+		}
+		localization_key = american_socialistic_victory_sevent_answer
+	}
+}

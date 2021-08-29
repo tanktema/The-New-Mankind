@@ -1746,6 +1746,12 @@ news_event = {
 				original_tag = EQS
 			}
 		}
+		if = {
+			limit = {
+				original_tag = UNS 
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 }
 

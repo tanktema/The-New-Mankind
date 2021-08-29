@@ -18,47 +18,515 @@ on_actions = {
 					}
 				}
 			}
-			UNS = {
-				country_event = { id = uns.37 days = 210 }
+			#UNS = {
+			#	country_event = { id = uns.37 days = 210 }
+			#	set_country_flag = TNO_opening_screen_show
+			#}
+			GRB = {
+				set_variable = { 363.reg_fasc_support_gb = 100 }
+				set_variable = { 364.reg_comm_support_gb = 100 }
+				set_variable = { 365.reg_demo_support_gb = 100 }
 			}
+			
 		}
 	}
 	
 	on_daily = {
 		effect = {
-			every_country = {
-				if = {
-					limit = {
-						is_human_race = yes 
-					}
-					set_temp_variable = { acceptance_value_temp = acceptance_value } 
-					divide_temp_variable = { acceptance_value_temp = 100 }
-					set_variable = { acceptance_value_polit = acceptance_value_temp }
-					set_temp_variable = { acceptance_value_temp2 = acceptance_value }
-					divide_temp_variable = { acceptance_value_temp2 = 5 }
-					set_variable = { acceptance_value_tension = acceptance_value_temp2 }
+			
+			if = {
+				limit = {
+					has_country_flag = turned_on_extra_worktime
+					has_tech = prod_time_work
+					is_human_race = yes 
+				}
+				add_to_variable = { human_rage = 1 }
+				set_temp_variable = { temp_human_rage = human_rage }
+				divide_temp_variable = { temp_human_rage = -200 }
+				set_variable = { human_rage_dynamic = temp_human_rage }
+				#force_update_dynamic_modifier = yes
+				clamp_variable = {
+					var = human_rage
+					min = 0 
+					max = 100 
+				}
 				
-				}
-				if = {
-					limit = {
-						has_government = fascism
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = turned_on_extra_worktime
 					}
-					set_temp_variable = { acceptance_value_temp_ideology = acceptance_value_polit }
-					divide_temp_variable = { acceptance_value_temp_ideology = 4 }
-					set_variable = { acceptance_value_polit_ideology = acceptance_value_temp_ideology}
+					is_human_race = yes 
+					has_tech = prod_time_work
 				}
-				if = {
+				add_to_variable = { human_rage = -0.5 }
+				set_temp_variable = { temp_human_rage = human_rage }
+				divide_temp_variable = { temp_human_rage = -200 }
+				set_variable = { human_rage_dynamic = temp_human_rage }
+				#force_update_dynamic_modifier = yes
+				clamp_variable = {
+					var = human_rage
+					min = 0 
+					max = 100 
+				}
+				
+				
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						original_tag = UNS 
+						has_completed_focus = UNS_red_world
+					}
+				}
+				set_variable = { num_of_american_allies = 0 }
+				every_other_country = {
 					limit = {
+						is_in_faction_with = UNS 
+					}
+					add_to_variable = { UNS.num_of_american_allies = 1 }
+					
+				}
+				every_other_country = {
+					add_to_variable = { UNS.num_total_countries = 1 }
+				}
+				set_variable = { num_of_american_allies_disp = num_of_american_allies }
+				divide_variable = { num_of_american_allies = num_total_countries }
+				set_variable = { american_allies_influence_negative = num_of_american_allies }
+				set_variable = { american_allies_influence_positive = num_of_american_allies }
+				divide_variable = { american_allies_influence = -1 }
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						original_tag = UNS 
+						has_completed_focus = UNS_we_are_strong
+					}
+				}
+				set_temp_variable = { var_uns_unity = uns_unity_statesoc }
+				add_to_temp_variable = { var_uns_unity = -0.5 }
+				divide_temp_variable = { var_uns_unity = 2 }
+				set_variable = { uns_unity_influence = var_uns_unity }
+			}
+					
+		}
+	}
+	
+	
+	on_government_change = {
+		effect = {
+			
+			if = {
+				limit = {
+					AND = {
+						is_human_race = yes 
 						OR = {
+							has_government = fascism
 							has_government = communism
-							has_government = neutrality
 						}
 					}
-					set_temp_variable = { acceptance_value_temp_ideology = acceptance_value_polit }
-					divide_temp_variable = { acceptance_value_temp_ideology = 2 }
-					set_variable = { acceptance_value_polit_ideology = acceptance_value_temp_ideology}
+				}
+				set_variable = { acceptance_militarism_penalty = 0 }
+				divide_variable = { acceptance_stability = 2.5 }
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						is_human_race = yes 
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+					}
+				}
+				set_temp_variable = { acceptance_militarism_penalty_idch = acceptance_value }
+				divide_temp_variable = { acceptance_militarism_penalty_idch = -200 }
+				set_variable = { acceptance_militarism_penalty = acceptance_militarism_penalty_idch }
+				divide_variable = { acceptance_stability = 2.5 }
+			}
+		}
+	}
+
+	on_weekly_GRB = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = GRB_regional_politics
+							has_country_flag = debug_stop_moves 
+						}
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							NOT = {
+								has_country_flag = player_democrats_choose
+							}
+							has_political_power > 49 
+						}
+					}
+					random_list = {
+						33 = {
+						
+						}
+						33 = {
+						
+						}
+						34 = {
+							random_list = {
+								33 = { activate_decision = demo_decision_control_military }
+								33 = { activate_decision = demo_decision_control_workers }
+								33 = { activate_decision = demo_decision_newspapers_control }
+								1 = {
+								
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						AND = {
+							NOT = {
+								has_country_flag = player_communists_choose
+							}
+							has_political_power > 49 
+						}
+					}
+					random_list = {
+						33 = {
+						
+						}
+						33 = {
+						
+						}
+						34 = {
+							random_list = {
+								33 = { activate_decision = comm_decision_control_military }
+								33 = { activate_decision = comm_decision_control_workers }
+								33 = { activate_decision = comm_decision_newspapers_control }
+								1 = {
+								
+								}
+							}
+						}
+					}
+					
+				}
+				
+				if = {
+					limit = {
+						AND = {
+							NOT = {
+								has_country_flag = player_fascism_choose
+							}
+							has_political_power > 49 
+						}
+					}
+					random_list = {
+						33 = {
+						
+						}
+						33 = {
+						
+						}
+						34 = {
+							random_list = {
+								33 = { activate_decision = fasc_decision_control_military }
+								33 = { activate_decision = fasc_decision_control_workers }
+								33 = { activate_decision = fasc_decision_newspapers_control }
+								1 = {
+								
+								}
+							}
+						}
+					}
+				}
+					
+				calculate_british_map_frames = yes
+			}
+			if = {
+				limit = {
+					OR = {
+						has_completed_focus = GRB_otkryvai_padla_communism_idet
+						is_debug = yes 
+					}
+				}
+				set_variable = { allies_infl_max_revolt = faction_members }
+				divide_variable = { allies_infl_max_revolt = 4 }
+				round_variable = allies_infl_max_revolt
+				clamp_variable = { var = allies_infl_max_revolt min = 1 }
+			}
+		}
+	}
+	
+	on_monthly_GRB = {
+		effect = {
+			if = {
+				limit = {
+					has_completed_focus = GRB_farbrooks_forests
+				}
+				random_list = {
+					70 = {
+						add_political_power = 50
+					}
+					
+					10 = {
+						add_offsite_building = {
+							type = arms_factory
+							level = 2
+						}
+					}
+					10 = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+					10 = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+						add_offsite_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GRB_FIR_woods
+				}
+				random_list = {
+					40 = {
+						add_political_power = 60
+					}
+					
+					20 = {
+						add_offsite_building = {
+							type = arms_factory
+							level = 2
+						}
+					}
+					20 = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 2
+						}
+					}
+					20 = {
+						add_offsite_building = {
+							type = industrial_complex
+							level = 1
+						}
+						add_offsite_building = {
+							type = arms_factory
+							level = 1
+						}
+					}
 				}
 			}
 		}
 	}
+	
+	
+	
+	on_nuke_drop = {
+		effect = {
+			if = { 
+				limit = {
+				
+					FROM = {
+						state = 312 
+					}
+					OR = {
+						original_tag = SOU 
+						original_tag = UNS 
+					}
+				}
+				FROM = {
+					set_state_flag = nuked_by_hum
+				}
+			}
+			
+		}
+	}
+	
+	
+				
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						AND = {
+							original_tag = SOU 
+							OR = {
+								has_completed_focus = SOU_diplomatic_intrigues
+								has_completed_focus = SOU_world_rev
+							}
+						}
+					}
+				}
+				ROOT = {
+					set_cosmetic_tag = SOU_SSR
+					set_autonomy = {
+						target = ROOT 
+						autonomy_state = autonomy_socialistic_republic
+					}
+				}
+			}
+		}
+	}
+	
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						AND = {
+							original_tag = UNS 
+							has_completed_focus = UNS_we_are_society
+						}
+					}
+				}
+				ROOT = {
+					add_to_variable = { uns_unity_statesoc = -0.25 }
+					check_statesoc_level = yes
+				}
+			}
+		}
+	}
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = UNS 
+						has_completed_focus = UNS_capture_daybreaker
+					}
+					FROM = {
+						original_tag = EQS 
+					}
+				}
+				FROM = {
+					drop_cosmetic_tag = yes 
+				}
+				ROOT = {
+					every_owned_state = {
+						limit = {
+							is_core_of = EQS 
+							NOT = {
+								OR = {
+									is_core_of = ROOT 
+									is_claimed_by = ROOT 
+								}
+							}
+						}
+						EQS = {
+							transfer_state = THIS 
+						}
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					AND = {
+						ROOT = { original_tag = GRB }
+						FROM = { has_government = communism }
+					}
+				}
+				FROM = {
+					clr_country_flag = is_grb_revolt_target
+				}
+			}
+			
+			if = {
+				limit = {
+					FROM = {
+						has_country_flag = is_grb_revolt_target
+					}
+					add_to_variable = { GRB.started_revolts_value = -1 }
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						AND = {
+							original_tag = GRB
+							has_completed_focus = GRB_northern_equus
+						}
+					}
+					FROM = {
+						original_tag = PNG 
+					}
+				}
+				ROOT = {
+					set_autonomy = {
+						target = FROM 
+						autonomy_state = autonomy_dominion
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = FROM 
+						}
+						FROM = {
+							transfer_state = PREV
+						}
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = GRB_SUBJ_PNG
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						AND = {
+							original_tag = GRB
+							has_completed_focus = GRB_northern_griffonia
+						}
+					}
+					FROM = {
+						original_tag = FBK 
+					}
+				}
+				ROOT = {
+					set_autonomy = {
+						target = FROM 
+						autonomy_state = autonomy_dominion
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = FROM 
+						}
+						FROM = {
+							transfer_state = PREV
+						}
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = GRB_SUBJ_FBK
+				}
+			}
+						
+		}
+	}
+	
+	on_capitulation = {
+		effect = {
+			
+		}
+	}
+}
 			

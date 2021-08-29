@@ -1,0 +1,133 @@
+﻿l_russian:
+  # Game Rules:
+  ############
+  #
+  #  Эти достижения были взяты из Old World Blues С РАЗРЕШЕНИЯ АВТОРА МЕХАНИКИ
+  #  Пожалуйста, не пишите "Ты украл механику" и т.д, я получил разрешение создателя и указал его авторство 
+  #  The New Mankind подтверждает авторство LimonenZitrone#5661
+  #########
+   OPEN_ACHIEVEMENTS_WINDOW_TT: "Open or close the list of §YIn-Game Achievements§!.\nMechanic is made by LimonenZitrone#5661, all rights reserved and permission is given"
+
+  ACHIEVEMENTS_TITLE: "Achievements"
+  ACHIEVEMENTS_DESC: "Here you can find a list of §YIn-Game Achievements§!. Those can be earned each game, even without using §YIronman Mode§!. §OThey will not carry over to new save games!§! \n\nIn total you have unlocked §Y[?num_of_unlocked_achievements]§! achievements at the moment. \nThe mod offers §Y[?global.custom_achievements_array^num]§! achievements currently."
+
+  SET_COUNTRY_ACHIEVEMENT_CHECK_TIME_TITLE: "Set §YNational§! Achievement Check Time"
+  DECREASE_COUNTRY_ACHIEVEMENT_CHECK_TIME_TT: "[!decrease_country_achievement_check_time_button_click_enabled]"
+  DECREASE_COUNTRY_ACHIEVEMENT_CHECK_TIME_TT_DELAYED: "Reduce the time span (in days) in which the game will check whether §Y[Root.GetName]§! meets the requirements of achievements. \n--------------\n§GClick§! to subtract §Y1§!. \n§GShift + Click§! to subtract §Y10§!. \n§GCtrl + Click§! to set to the minimum value (§Y1§!)."
+  COUNTRY_ACHIEVEMENT_CHECK_TIME_VALUE_TT: "Currently the game will check whether you meet the requirements of achievements every §Y[?achievement_check_time]§! days. \nA higher value might increase performance, however it could make it harder to complete (some) achievements. \n\nThe next check is in §Y[?achievement_check_time_current]§! days."
+  INCREASE_COUNTRY_ACHIEVEMENT_CHECK_TIME_TT: "Increase the time span (in days) in which the game will check whether §Y[Root.GetName]§! meets the requirements of achievements."
+  INCREASE_COUNTRY_ACHIEVEMENT_CHECK_TIME_TT_DELAYED: "§GClick§! to add §Y1§!. \n§GShift + Click§! to add §Y10§!."
+
+  ACHIEVEMENT_CHECK_TIME_MORE_THAN_1: "The value is higher than §Y1§!"
+
+  SHOW_SORT_MENU_BUTTON_TT: "§GClick§! to open the menu to sort achievements."
+  HIDE_SORT_MENU_BUTTON_TT: "§GClick§! to close the menu to sort achievements."
+
+  REPOPULAE_VISIBLE_ACHIEVEMENT_ARRAYS_BUTTON_TT: "§GClick§! to repopulate the shown achievement lists."
+  REPOPULAE_VISIBLE_ACHIEVEMENT_ARRAYS_BUTTON_TT_DELAYED: "You can use this button in case there are no achievements displayed in one of the lists."
+
+  SORT_ACHIEVEMENTS_ONLY_AVAILABLE_VISIBLE: "Hide unavailable achievements"
+  SORT_ACHIEVEMENTS_ONLY_AVAILABLE_VISIBLE_TT: "§GClick§! to hide all achievements that are §Yunavailable§! for you. This refers to achievements of which you don't fulfil the starting requirements (e.g. you are not a required tag). \nAchievements that have a red §RX§! on their icon are unavailable."
+  SORT_ACHIEVEMENTS_ALL_VISIBLE: "Show unavailable achievements"
+  SORT_ACHIEVEMENTS_ALL_VISIBLE_TT: "§GClick§! to show all achievements that are §Yunavailable§! for you again. This refers to achievements of which you don't fulfil the starting requirements (e.g. you are not a required tag). \nAchievements that have a red §RX§! on their icon are unavailable."
+  SORT_COMPLETED_ACHIEVEMENTS_ON_TOP: "Completed achievements first"
+  SORT_COMPLETED_ACHIEVEMENTS_ON_TOP_TT: "§GClick§! to sort the list of achievements so that the achievements you §Ycompleted§! are listed on the top. \nOnly has an effect, if you completed at least one achievement."
+  SORT_COMPLETED_ACHIEVEMENTS_ON_TOP_TT_DELAYED: "[!sort_completed_achievements_on_top_button_click_enabled]"
+  SORT_COMPLETED_ACHIEVEMENTS_ON_BOTTOM: "Completed achievements last"
+  SORT_COMPLETED_ACHIEVEMENTS_ON_BOTTOM_TT: "§GClick§! to sort the list of achievements so that the achievements you §Ycompleted§! are listed on the bottom. \nOnly has an effect, if you completed at least one achievement."
+  SORT_COMPLETED_ACHIEVEMENTS_ON_BOTTOM_TT_DELAYED: "[!sort_completed_achievements_on_bottom_button_click_enabled]"
+  SORT_HIDE_COMPLETED_ACHIEVEMENTS: "Hide completed achievements"
+  SORT_HIDE_COMPLETED_ACHIEVEMENTS_TT: "§GClick§! to hide all achievements that you already §Ycompleted§! from the list."
+  SORT_HIDE_COMPLETED_ACHIEVEMENTS_TT_DELAYED: "[!sort_hide_completed_achievements_button_click_enabled]"
+  SORT_SHOW_COMPLETED_ACHIEVEMENTS: "Show completed achievements"
+  SORT_SHOW_COMPLETED_ACHIEVEMENTS_TT: "§GClick§! to show all achievements that you already §Ycompleted§! again in the list."
+  SORT_PRINT_TO_GAMELOG: "Print Achievements to game log"
+  SORT_PRINT_TO_GAMELOG_TT: "§GClick§! to make an entry in the §Ygame.log§! for all achievements you currently have completed. \n§GRight-click§! to make an entry in the §Ygame.log§! for all achievements all countries currently have completed."
+  SORT_PRINT_TO_GAMELOG_TT_DELAYED: "[!sort_print_to_gamelog_button_click_enabled]"
+  SORT_SHOW_MANUALLY_HIDDEN_ACHIEVEMENTS: "Show hidden achievements"
+  SORT_SHOW_MANUALLY_HIDDEN_ACHIEVEMENTS_TT: "§GClick§! to show the achievements again that you manually hid by clicking on their small §YX§! button on the right. \nThey will be put to the end of the list."
+  SORT_SHOW_MANUALLY_HIDDEN_ACHIEVEMENTS_TT_DELAYED: "[!sort_show_manually_hidden_achievements_button_click_enabled]"
+  SORT_SHOW_ACHIEVEMENTS_DIFFICULTY: "Show difficulty icon"
+  SORT_SHOW_ACHIEVEMENTS_DIFFICULTY_TT: "§GClick§! to show the §Ggreen§!, §Yyellow§!, §Oorange§! or §Rred§! icon in the bottom left corner of each achievement, which indicates the difficulty of the achievement."
+  SORT_HIDE_ACHIEVEMENTS_DIFFICULTY: "Hide difficulty icon"
+  SORT_HIDE_ACHIEVEMENTS_DIFFICULTY_TT: "§GClick§! to hide the §Ggreen§!, §Yyellow§!, §Oorange§! or §Rred§! icon in the bottom left corner of each achievement, which indicates the difficulty of the achievement."
+  SORT_ACHIEVEMENTS_AFTER_DIFFICULTY: "Sort after difficulty"
+  SORT_ACHIEVEMENTS_AFTER_DIFFICULTY_TT: "§GClick§! to sort the achievements after their difficulty."
+
+  HAS_HIDDEN_ONE_ACHIEVEMENT_MANUALLY_IN_SELECTED_CATEGORY: "Has hidden at least §Y1§! achievement manually"
+
+  ACHIEVEMENT_UNLOCKED_TT: "This achievement already was §GUNLOCKED§!."
+  ACHIEVEMENT_LOCKED_TT: "This achievement is still §RLOCKED§!."
+  ACHIEVEMENT_UNAVAILABLE_TT: "This achievement can §RNOT§! be earned."
+
+  ACHIEVEMENT_UNLOCKED_TITLE: "Achievement unlocked"
+  UNLOCKED_ACHIEVEMENT_TITLE: "[This.GetAchievementTitle]"
+  ACHIEVEMENT_UNLOCKED_BUTTON_TT_DELAYED: "Notification automatically dismisses after §Y1§! in-game day. \n--------------\n§GClick§! to dismiss all and open the §YAchievements§! window. \n§GRight-click§! to dismiss. \n§GCtrl + Shift + Right-click§! to dismiss all and never show unlock notifications anymore."
+
+  HIDE_THIS_ACHIEVEMENT_BUTTON_TT: "§GClick§! to hide this achievement. \n§GRight-click§! to put this achievement at the end of the list. \n§GCtrl + Right-click§! to put this achievement at the top of the list."
+  HIDE_THIS_ACHIEVEMENT_BUTTON_TT_DELAYED: "If you hide it, you can show it again by using the '§YShow hidden achievements§!' option in the menu to sort achievements."
+
+  ACHIEVEMENT: "[This.GetAchievementTitle]"
+  ACHIEVEMENT_DESC: "[This.GetAchievementDesc]"
+  ACHIEVEMENT_TRIGGER_TT: "Unlock conditions: \n[!achievement_icon_grey_click_enabled] [This.GetAchievementDebugInfo]"
+  ACHIEVEMENT_UNAVAILABLE_CONDITIONS_TT: "Is available, if: \n[!achievement_icon_visible] [This.GetAchievementDebugInfo]"
+  ACHIEVEMENT_UNLOCKED_TT_DELAYED: "Unlocked on §Y[This.GetAchievementUnlockDate]§!. [This.GetAchievementDebugInfo]"
+
+  ACHIEVEMENT_DIFFICULTY_EASY_TT: "The §Ydifficulty§! of this achievement is §Geasy§!."
+  ACHIEVEMENT_DIFFICULTY_NORMAL_TT: "The §Ydifficulty§! of this achievement is §Ynormal§!."
+  ACHIEVEMENT_DIFFICULTY_HARD_TT: "The §Ydifficulty§! of this achievement is §Ohard§!."
+  ACHIEVEMENT_DIFFICULTY_IMPOSSIBLE_TT: "The §Ydifficulty§! of this achievement is §Rimpossible§!."
+
+  # Scripted Triggers:
+  
+  ACHIEVEMENT_DID_NOT_HAVE_FRACTION:0 "Was not in fraction on start"
+  IS_HUMAN_COUNTRY_YES:0 "Human country"
+  nuked_by_hum:0 "Nuclear bomb was dropped"
+  hum_rage_100_tt:0 "Unsatisfaction level is 100%"
+  num_modern_tank_bats_60:0 "Number of Modern Tanks batallions deployed is at least 60"
+
+  # Scripted Localisation:
+  string_achievement_debug_info_tt: "\n--------------\n§DEBUG INFO:§! \n  ACHIEVEMENT ID: §Y[?v]§! \n  INDEX: §Y[?i]§!"
+
+  # Achievements:
+  ACHIEVEMENT_1: "A true friend is a friend in need"
+  ACHIEVEMENT_1_DESC: "Join a faction"
+  ACHIEVEMENT_2: "Dejavu"
+  ACHIEVEMENT_2_DESC: "As a human country, have at least one nuclear bomb"
+  ACHIEVEMENT_3: "Improvise. Adapt. Overcome"
+  ACHIEVEMENT_3_DESC: "Expand your acceptance level by 100%"
+  ACHIEVEMENT_4: "There can be only one left"
+  ACHIEVEMENT_4_DESC: "As a human country, conquer all other human countries"
+  ACHIEVEMENT_5: "I can see you"
+  ACHIEVEMENT_5_DESC: "Research all the snipers technologies"
+  ACHIEVEMENT_6: "I am the senate"
+  ACHIEVEMENT_6_DESC: "Playing as USA, set up Military Government"
+  ACHIEVEMENT_7: "Eternal night? I prefer light"
+  ACHIEVEMENT_7_DESC: "Playing as USA, stay democratic, and help Equestria to defeat Lunar Emire without Celestia turning into Daybreaker"
+  ACHIEVEMENT_8: "Knowledge is power"
+  ACHIEVEMENT_8_DESC: "Playing as USA, open the Equus scientifical centre"
+  ACHIEVEMENT_9: "Freedom or Death!"
+  ACHIEVEMENT_9_DESC: "Playing as USA, rebuild the Liberty Statue"
+  ACHIEVEMENT_10: "One, Two, Three, Four - I Love Marines Corp!"
+  ACHIEVEMENT_10_DESC: "Playing as USA, recall the Marines Corp"
+  ACHIEVEMENT_11: "Well... Okay..."
+  ACHIEVEMENT_11_DESC: "As a Soviet Union, have a dynastial marriage with Equestria"
+  ACHIEVEMENT_12: "That is a fake communism!"
+  ACHIEVEMENT_12_DESC: "As a Soviet Union have the Neo-Bolshewism government"
+  ACHIEVEMENT_13: "War? What war?"
+  ACHIEVEMENT_13_DESC: "Playing as Soviet Union, finish Industry rebuilding and have at least 40 industrial complexes and arms factories"
+  ACHIEVEMENT_14: "Red Banner is over the World!"
+  ACHIEVEMENT_14_DESC: "Playing as a Soviet Union, have the socialistic revolution in Griffon Empire, River Republic, Equestria and Changeling Lands"
+  ACHIEVEMENT_15: "Kalashnikov&Co"
+  ACHIEVEMENT_15_DESC: "Playing as a Soviet Union, research last Weapons or Magical Weapons tech"
+  ACHIEVEMENT_16: "Last for thousand years"
+  ACHIEVEMENT_16_DESC: "Playing as Germany, make Himmler's ambitions true!"
+  ACHIEVEMENT_17: "The New World - The Old Scores"
+  ACHIEVEMENT_17_DESC: "Playing as USA or Soviet Union, nuke the New Berlin"
+  ACHIEVEMENT_18: "The New Order"
+  ACHIEVEMENT_18_DESC: "Playing as Germany, show this word the true power of Germany!"
+  ACHIEVEMENT_19: "Blietzkrieg!"
+  ACHIEVEMENT_19_DESC: "Playing as Germany, have at least 60 Modern Tanks batallions in the field"
+  ACHIEVEMENT_20: "The townsman are furious"
+  ACHIEVEMENT_20_DESC: "Playing as Human Country, rise Unsatisfaction Level to 100%"
+  

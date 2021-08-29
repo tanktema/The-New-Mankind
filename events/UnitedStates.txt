@@ -1,5 +1,6 @@
 add_namespace = uns
 add_namespace = tst
+add_namespace = uns_supernova
 	# Эвакуация
 
 
@@ -239,7 +240,7 @@ news_event = {
 	id = uns.8
 	title = uns.contact.1
 	desc = uns.contact.1.desc
-	major = yes
+
 	is_triggered_only = yes
 	option = {
 		name = uns.contact.1.a
@@ -404,7 +405,7 @@ country_event = {
 			desc = "Shepherd_leader_desc"
 			picture = "Shep.dds"
 			expire = 1965.1.1
-			ideology = militarism
+			ideology = nazism
 			traits = {
 				military_leader
 				human_leader
@@ -1221,3 +1222,1093 @@ country_event = {
 		name = uns.37.b
 	}
 }
+
+country_event = {
+	id = uns.38 
+	title = uns.38.t 
+	desc = uns.38.desc 
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	option = {
+		name = uns.38.a 
+		effect_tooltip = {
+			add_ideas = UNS_science_mission
+		}
+		FROM = {
+			country_event = { id = uns.39 days = 2 }
+		}
+	}
+	option = {
+		name = uns.38.b 
+	}
+}
+
+country_event = {
+	id = uns.39 
+	title = uns.39.t 
+	desc = uns.39.desc 
+	is_triggered_only = yes 
+	fire_only_once = yes 
+	option = {
+		name = uns.39.a 
+		add_ideas = UNS_science_mission
+		FROM = {
+			add_ideas = UNS_science_mission
+		}
+	}
+}
+
+country_event = {
+	id = uns.40
+	title = uns.40.t 
+	desc = uns.40.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.40.a 
+		add_political_power = -10
+		add_ideas = UNS_human_fair 
+		FROM = {
+			add_opinion_modifier = {
+				modifier = joined_fair
+				target = ROOT 
+			}
+			reverse_add_opinion_modifier = {
+				modifier = joined_fair
+				target = ROOT 
+			}
+			add_stability = 0.02
+		}
+	}
+	option = {
+		name = uns.40.b 
+	}
+}
+
+
+country_event = {
+	id = uns.41 ###########  Визит Каденцы и Шайнинг Куколда, приглашение
+	title = uns.41.t 
+	desc = uns.41.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.41.a 
+		FROM = {
+			news_event = { id = uns.42 days = 5 }
+		}
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = uns.41.b 
+	}
+}
+
+news_event = {
+	id = uns.42 
+	title = uns.42.t 
+	desc = uns.42.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.42.a
+		acceptance_expand_extra = yes 
+	}
+}
+		
+		
+country_event = {
+	id = uns.43
+	title = uns.43.t 
+	desc = uns.43.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.43.a 
+		add_ideas = UNS_support
+	}
+}
+
+country_event = {
+	id = uns.44
+	title = uns.44.t 
+	desc = uns.44.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.44.a 
+		FROM = {
+			give_guarantee = ROOT 
+		}
+	}
+}
+
+
+country_event = {
+	id = uns.45
+	title = uns.45.t
+	desc = uns.45.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.45.a 
+		hidden_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment 
+				amount = 2500
+				producer = FROM 
+			}
+			add_equipment_to_stockpile = {
+				type  =support_equipment 
+				amount = 1500
+				producer = FROM 
+			}
+			load_oob = "HLR_UNS_corps"
+		}
+	}
+}
+
+
+news_event = {
+	id = uns.46
+	title = uns.46.t 
+	desc = uns.46.desc 
+	is_triggered_only = yes 
+	immediate = {
+		clear_supervent_flags = yes 
+	}
+	major = yes 
+	option = {
+		name = uns.46.a #### UNS Answer
+		trigger = {
+			original_tag = UNS 
+		}
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					is_pony_race = yes 
+				}
+				add_opinion_modifier = {
+					modifier = puprle_plague_cured
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = puprle_plague_cured
+					target = ROOT 
+				}
+			}
+			country_event = { id = uns.999 days = 5 }
+			set_global_flag = purple_plague_cured_flag
+		}
+	}
+	option = {
+		name = uns.46.b 
+		trigger = {
+			is_pony_race = yes 
+		}
+	}
+	option = {
+		name = uns.46.c 
+		trigger = {
+			OR = {
+				is_pony_race = no 
+				NOT = {
+					original_tag = UNS 
+				}
+			}
+		}
+	}
+}
+
+
+news_event = {
+	id = uns.47 
+	title = uns.47.t 
+	desc = uns.47.desc 
+	is_triggered_only = yes
+	immediate = {
+		clear_supervent_flags = yes 
+	}
+	major = yes 
+	
+	option = {
+		name = uns.47.a 
+		trigger = {
+			original_tag = UNS 
+		}
+		hidden_effect = {
+			country_event = { id = uns.999 days = 5 }
+			set_global_flag = harmony_victory_flag
+		}
+	}
+	option = {
+		name = uns.47.b 
+		trigger = {
+			NOT = {
+				original_tag = UNS 
+			}
+		}
+	}
+	
+}
+
+
+country_event = {
+	id = uns.48
+	title = uns.48.t 
+	desc = uns.48.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.48.a 
+		FROM = {
+			set_autonomy = {
+				target = ROOT 
+				autonomy_state = autonomy_socialistic_republic
+			}
+		}
+		trigger = {
+			FROM = {
+				has_government = communism
+			}
+		}
+	}
+	option = {
+		name = uns.48.a 
+		FROM = {
+			set_autonomy = {
+				target = ROOT 
+				autonomy_state = autonomy_reichsprotectorate
+			}
+		}
+		trigger = {
+			FROM = {
+				has_government = fascism
+			}
+		}
+	}
+	option = {
+		name = uns.48.b 
+		FROM = {
+			create_wargoal = {
+				target = ROOT 
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+country_event = {
+	id = uns.49
+	title = uns.49.t 
+	desc = uns.49.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.49.a 
+		FROM = {
+			add_to_faction = ROOT
+		}
+	}
+	
+	option = {
+		name = uns.49.b 
+		FROM = {
+			create_wargoal = {
+				target = ROOT 
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+
+news_event = {
+	id = uns.50
+	title = uns.50.t 
+	desc = uns.50.desc 
+	is_triggered_only = yes 
+	immediate = {
+		clear_supervent_flags = yes 
+	}
+	major = yes 
+	option = {
+		name = uns.50.a 
+		trigger = {
+			original_tag = UNS 
+		}
+		hidden_effect = {
+			country_event = { id = uns.999 days = 15 }
+			set_global_flag = american_socialistic_victory
+		}
+	}
+	
+	option = {
+		name = uns.50.b 
+		trigger = {
+			NOT = {
+				original_tag = UNS 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns.51 
+	title = uns.51.t 
+	desc = uns.51.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.51.a 
+		start_civil_war = {
+			ideology = communism
+			ruling_party = ROOT 
+			size = var_uns_comm_support
+		}
+	}
+}
+
+
+country_event = {
+	id = uns.52 
+	title = uns.52.t 
+	desc = uns.52.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.52.a 
+		add_ideas = UNS_paratroopers_invasion
+		country_event = { id = uns.53 days = 30}
+		country_event = { id = uns.56 days = 120 }
+	}
+	option = {
+		name = uns.52.b 
+		add_ideas = UNS_marines_invasion
+		country_event = { id = uns.53 days = 30}
+		country_event = { id = uns.57 days = 120 }
+	}
+	option = {
+		name = uns.52.c 
+		trigger = {
+			has_completed_focus = UNS_marines_corp
+		}
+		add_ideas = UNS_usmc_invasion
+		country_event = { id = uns.53 days = 30}
+		country_event = { id = uns.57 days = 120 }
+	}
+}
+
+country_event = {
+	id = uns.53 
+	title = uns.53.t 
+	desc = uns.53.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.53.a
+		trigger = {
+			OR = {
+				EQC = {
+					OR = {
+						is_in_faction_with = ROOT 
+						is_subject_of = ROOT 
+					}
+				}
+				owns_state = 362
+			}
+		}
+	}
+	option = {
+		name = uns.53.b 
+		HAU = {
+			country_event = { id = uns.54 days = 5 }
+		}
+	}
+	option = {
+		name = uns.53.c 
+		trigger = {
+			NOT = {
+				EQC = {
+					OR = {
+						is_in_faction_with = ROOT 
+						is_subject_of = ROOT 
+					}
+				}
+				owns_state = 362
+			}
+		}
+		EQC = {
+			country_event = { id = uns.54 days = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = uns.54 
+	title = uns.54.t 
+	desc = uns.54.desc 
+	is_triggered_only = yes 
+	option = {
+		name  = uns.54.a 
+		FROM = {
+			set_autonomy = {
+				target = ROOT 
+				autonomy_state = autonomy_socialistic_republic
+			}
+			set_politics = {
+				ruling_party = communism 
+			}
+			add_popularity = {
+				ideology = communism 
+				popularity = 0.4
+			}
+		}
+	}
+	
+	option = {
+		name = uns.54.b 
+		FROM  = {
+			country_event = { id = uns.55 days = 5 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+}
+
+country_event = {
+	id = uns.55 
+	title = uns.55.t 
+	desc = uns.55.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.55.a 
+		create_wargoal = {
+			type = annex_everything
+			target = FROM 
+		}
+	}
+}
+		
+country_event = {
+	id = uns.56 
+	title = uns.56.t 
+	desc = uns.56.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.56.a 
+		add_ideas = UNS_fighters_for_war 
+		country_event = { id = uns.58 days = 30 }
+	}
+	option = {
+		name = uns.56.b 
+		add_ideas = UNS_heavy_aircraft
+		country_event = { id = uns.58 days = 30 }
+	}
+}
+
+country_event = {
+	id = uns.57 
+	title = uns.57.t 
+	desc = uns.57.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.57.a 
+		add_ideas = UNS_build_ships
+		country_event = { id = uns.58 days = 30 }		
+	}
+	
+	option = {
+		name = uns.57.b 
+		add_ideas = UNS_build_dockyards 
+		country_event = { id = uns.58 days = 30 }
+	}
+}
+
+country_event = {
+	id = uns.58
+	title = uns.58.t 
+	desc = uns.58.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.58.a 
+		create_corps_commander = {
+			name = "Maximillian Carter"
+			portrait_path = "gfx/leaders/UNS/Carter.dds"
+			traits = { griffon_infiltrator tankist_commander_hum }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			logistics_skill = 5
+			planning_skill = 3
+		}
+			
+	}
+	option = {
+		name = uns.58.b 
+		create_corps_commander = {
+			name = "Maximillian Carter"
+			portrait_path = "gfx/leaders/UNS/Carter.dds"
+			traits = { griffon_infiltrator infantry_commander_hum }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			logistics_skill = 5
+			planning_skill = 3
+		}
+	}
+}
+
+country_event = {
+	id = uns.59 
+	title = uns.59.t 
+	desc = uns.59.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.59.a 
+		create_wargoal = {
+			type = annex_everything 
+			target = GRI 
+		}
+	}
+}
+
+news_event = {
+	id = uns.60 
+	title = uns.60.t 
+	desc = uns.60.desc 
+	is_triggered_only = yes 
+	immediate = {
+		clear_supervent_flags = yes 
+	}
+	option = {
+		name = uns.60.a 
+		trigger = {
+			original_tag = UNS 
+		}
+	}
+	option = {
+		name = uns.60.b 
+		trigger = {
+			NOT = {
+				original_tag = UNS 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns.61
+	title = uns.61.t 
+	desc = uns.61.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.61.a 
+		add_tech_bonus = {
+			category = cat_mobile_warfare
+			uses = 3
+			bonus = 0.75
+		}
+		country_event = { id = uns.62 days = 20 }
+	}
+	option = {
+		name = uns.61.b 
+		add_tech_bonus = {
+			category = cat_mass_assault
+			uses = 3
+			bonus = 0.75
+		}
+		country_event = { id = uns.62 days = 20 }
+	}
+}
+
+country_event = {
+	id = uns.62 
+	title = uns.62.t 
+	desc = uns.62.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.62.a 
+		every_owned_state = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes 
+			}
+		}
+		country_event = { id = uns.63 days = 20 }
+	}
+}
+country_event = {
+	id = uns.63 
+	title = uns.63.t 
+	desc = uns.63.desc
+	is_triggered_only = yes 
+	option = {
+		name = uns.63.a 
+		every_owned_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes 
+			}
+			country_event = {
+				id = uns.64 
+				days = 25
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns.64 
+	title = uns.64.t 
+	desc = uns.64.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.64.a 
+		create_wargoal = {
+			type = annex_everything
+			target = EQS 
+		}
+	}
+}
+country_event = {
+	id = uns.65
+	title = uns.65.t 
+	desc = uns.65.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.65.a 
+		add_tech_bonus = {
+			category = cat_strategic_destruction
+			uses = 3
+			bonus = 0.75
+		}
+		country_event = {
+			id = uns.66 days = 20 
+		}
+	}
+	option = {
+		name = uns.65.b 
+		add_tech_bonus = {
+			category = cat_battlefield_support
+			uses = 3
+			bonus = 0.75
+		}
+		country_event = {
+			id = uns.66 days = 20 
+		}
+	}
+}
+country_event = {
+	id = uns.66
+	title = uns.66.t 
+	desc = uns.66.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.66.a 
+		add_tech_bonus = {
+			category = cat_trade_interdiction
+			uses = 2
+			bonus = 1
+		}
+		country_event = { id = uns.67 days = 20 }
+	}
+}
+
+country_event = {
+	id = uns.67 
+	title = uns.67.t 
+	desc = uns.67.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.67.a 
+		create_wargoal = {
+			type = annex_everything
+			target = CHN 
+		}
+	}
+}
+country_event = {
+	id = uns.68 
+	title = uns.68.t 
+	desc = uns.68.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.68.a 
+		add_ideas = UNS_paratroopers_invasion
+		country_event = { id = uns.69 days = 30}
+		country_event = { id = uns.70 days = 120 }
+	}
+	option = {
+		name = uns.68.b 
+		add_ideas = UNS_marines_invasion
+		country_event = { id = uns.69 days = 30}
+		country_event = { id = uns.70 days = 120 }
+	}
+	option = {
+		name = uns.68.c 
+		trigger = {
+			has_completed_focus = UNS_marines_corp
+		}
+		add_ideas = UNS_usmc_invasion
+		country_event = { id = uns.69 days = 30}
+		country_event = { id = uns.70 days = 120 }
+	}
+}
+country_event = {
+	id = uns.69
+	title = uns.69.t 
+	desc = uns.69.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.69.a 
+		add_ideas = UNS_fighters_for_war 
+		country_event = { id = uns.58 days = 30 }
+	}
+	option = {
+		name = uns.69.b 
+		add_ideas = UNS_heavy_aircraft
+		country_event = { id = uns.58 days = 30 }
+	}
+}
+
+country_event = {
+	id = uns.70 
+	title = uns.70.t 
+	desc = uns.70.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns.70.a 
+		add_ideas = UNS_build_ships
+		country_event = { id = uns.71 days = 30 }		
+	}
+	
+	option = {
+		name = uns.70.a 
+		add_ideas = UNS_build_dockyards 
+		country_event = { id = uns.71 days = 30 }
+	}
+}
+
+country_event = {
+	id = uns.71
+	title = uns.71.t 
+	desc = uns.71.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns.71.a 
+		create_wargoal = {
+			type = annex_everything
+			target = GRI 
+		}
+	}
+}
+
+news_event = {
+	id = uns.72 
+	title = uns.72.t 
+	desc = uns.72.desc 
+	is_triggered_only = yes 
+	immediate = {
+		clear_supervent_flags = yes
+		country_event = { id = uns.999 days = 15 } 		
+	}
+	major = yes 
+	option = {
+		name = uns.72.a
+		trigger = {
+			original_tag = UNS 
+		}
+		set_global_flag = shepherd_ambitions
+	}	
+	option = {
+		name = uns.72.b 
+		trigger = {
+			NOT = {
+				original_tag = UNS 
+			}
+		}
+	}
+}
+
+news_event = {
+	id = uns.73
+	title = uns.73.t 
+	desc = uns.73.desc 
+	is_triggered_only = yes 
+	option = {	
+		name = uns.73.a 
+	}
+}
+
+news_event = {
+	id = uns.74
+	title = uns.74.t 
+	desc = uns.74.desc
+	major = yes 
+	immediate = {
+		clear_supervent_flags = yes 
+		country_event = { id = uns.999 days = 15 } 	
+	}
+	is_triggered_only = yes 
+	option = {
+		name = uns.74.a 
+		trigger = {
+			original_tag = UNS 
+		}
+		set_global_flag = rebuilt_equestria
+	}
+	option = {
+		name = uns.74.b 
+		trigger = {
+			NOT = {
+				original_tag = UNS 
+			}
+		}
+	}
+}
+country_event = {
+	id = uns.999
+	
+	is_triggered_only = yes 
+	
+	hidden = yes 
+	
+	immediate = {
+		set_global_flag = Super_Event_Visible
+	}
+	
+	option = {
+		name = uns.999.a
+	}
+}
+
+
+country_event = {
+	id = uns_supernova.1 
+	title = uns_supernova.1.t 
+	desc = uns_supernova.1.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.1.a 
+	}
+}
+country_event = {
+	id = uns_supernova.2 
+	title = uns_supernova.2.t 
+	desc = uns_supernova.2.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.2.a 
+	}
+}
+country_event = {
+	id = uns_supernova.3 
+	title = uns_supernova.3.t 
+	desc = uns_supernova.3.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.3.a 
+	}
+}
+country_event = {
+	id = uns_supernova.4 
+	title = uns_supernova.4.t 
+	desc = uns_supernova.4.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.4.a 
+	}
+}
+country_event = {
+	id = uns_supernova.5 
+	title = uns_supernova.5.t 
+	desc = uns_supernova.5.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.5.a 
+	}
+}
+country_event = {
+	id = uns_supernova.6 
+	title = uns_supernova.6.t 
+	desc = uns_supernova.6.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.6.a 
+		EQS = {
+			custom_effect_tooltip = unavailable_advisor 
+			hidden_effect = {
+				country_event = { id = uns_supernova.7 days = 2 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns_supernova.7
+	title = uns_supernova.7.t
+	desc = uns_supernova.7.desc
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.7.a 
+		set_country_flag = UNS_twilight_captured_supernova
+	}
+}
+
+country_event = { 
+	id = uns_supernova.8
+	title = uns_supernova.8.t 
+	desc = uns_supernova.8.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.8.a 
+		random_list = {
+			90 = {
+				country_event = { id = uns_supernova.9 days = 5 }
+			}
+			10 = {
+				country_event = { id = uns_supernova.10 days = 5 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns_supernova.9 
+	title = uns_supernova.9.t 
+	desc = uns_supernova.9.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.9.a 
+		complete_national_focus = UNS_supernova_success
+	}
+}
+
+country_event = {
+	id = uns_supernova.10
+	title = uns_supernova.10.t 
+	desc = uns_supernova.10.desc
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.10.a 
+		complete_national_focus = UNS_supernova_failure
+	}
+}
+
+country_event = {
+	id = uns_supernova.11
+	title = uns_supernova.11.t 
+	desc uns_supernova.11.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.11.a 
+	}
+}
+
+country_event = {
+	id = uns_supernova.12
+	title = uns_supernova.12.t 
+	desc = uns_supernova.12.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.12.a 
+	}
+}
+country_event = {
+	id = uns_supernova.13
+	title = uns_supernova.13.t 
+	desc = uns_supernova.13.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.13.a 
+		complete_national_focus = UNS_supernova_success
+	}
+}
+country_event = {
+	id = uns_supernova.14
+	title = uns_supernova.14.t 
+	desc = uns_supernova.14.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.14.a 
+	}
+}
+
+country_event = {
+	id = uns_supernova.15
+	title = uns_supernova.15.t 
+	desc = uns_supernova.15.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.15.a 
+	}
+}
+country_event = {
+	id = uns_supernova.16
+	title = uns_supernova.16.t 
+	desc = uns_supernova.16.desc 
+	is_triggered_only = yes 
+	option = {
+		name = uns_supernova.16.a 
+		hidden_effect = {
+			news_event = { id = uns_supernova.17 days = 20 }
+			EQS = {
+				drop_cosmetic_tag = yes 
+				load_focus_tree = {
+					tree = equestria_focus
+					keep_completed = yes
+				}
+				create_country_leader = {
+					name = "Princess Celestia"
+					expire = "1965.1.1"
+					picture = GFX_CelestiaPortrait
+					desc = "POLITICS_CELESTIA_DESC"
+					ideology = alicornrule
+					female = yes
+					traits = {
+						princess_of_ponies
+						stout_defender
+					}
+				}
+			}
+			set_autonomy = {
+				target = EQS 
+				autonomy_state = autonomy_demilitarized_puppet
+			}
+		}
+	}
+}
+news_event = {
+	id = uns_supernova.17
+	title = uns_supernova.17.t 
+	desc = uns_supernova.17.desc 
+	is_triggered_only = yes 
+	major = yes 
+	immediate = {
+		clear_supervent_flags = yes 
+		country_event = { id = uns.999 days = 15 }
+	}
+	option = {
+		name = uns_supernova.17.a 
+		trigger = {
+			original_tag = UNS 
+		}
+		set_global_flag = ext_the_supernova
+		
+	}
+	option = {
+		name = uns_supernova.17.b 
+		trigger = {
+			NOT = {
+				original_tag = UNS 
+			}
+		}
+	}
+}
+		

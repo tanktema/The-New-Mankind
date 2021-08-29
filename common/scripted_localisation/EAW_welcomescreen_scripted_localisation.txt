@@ -23,6 +23,10 @@ defined_text = { # Country
 		localization_key = EAW_WS_SOU
 	}
 	text = {
+		trigger = { original_tag = GEM }
+		localization_key = EAW_WS_GEM
+	}
+	text = {
 		trigger = { original_tag = DED }
 		localization_key = EAW_WS_DED
 	}
@@ -329,6 +333,14 @@ defined_text = {
 	text = {
 		trigger = { original_tag = UNS }
 		localization_key = EAW_WS_UNS_desc
+	}
+	text = {
+		trigger = { original_tag = SOU }
+		localization_key = EAW_WS_SOU_desc
+	}
+	text = {
+		trigger = { original_tag = GEM }
+		localization_key = EAW_WS_GEM_desc
 	}
 	text = {
 		trigger = { original_tag = DED }

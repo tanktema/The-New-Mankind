@@ -18,6 +18,9 @@
     UNS_nasizm_party_long:0 "Национал-Социалистическая Американская Рабочая Партия"
     UNS_militarizm_party:0 "ООА"
     UNS_militarizm_party_long:0 "Организация Обороны Америки"
+    
+    UNS_statesoc_name_long:0 "STATESOC"
+    UNS_statesoc_name:0 "STATESOC"
     ### GEM
     GEM_fascism_party:0 "НСДАП"
     GEM_fascism_party_long:0 "Национал-Социалистическая Немецкая Рабочая Партия"
@@ -29,14 +32,14 @@
     GEM_neutrality_party_long:0 "Сторонники Кайзера"
      
     ### GRB
-    GRB_fascism_party:0 "РПБ"
-    GRB_fascism_party_long:0 "Рабочая Партия Британии"
-    GRB_communism_party:0 "КПБ"
-    GRB_communism_party_long:0 "Коммунистическая Патрия Британии"
-    GRB_democratic_party:0 "ДПБ"
-    GRB_democratic_party_long:0 "Демократическая Партия Британии"
-    GRB_neutrality_party:0 "КС"
-    GRB_neutrality_party_long:0 "Королевская Семья"
+    GRB_fascism_party:0 "Британский союз"
+    GRB_fascism_party_long:0 "Британский союз"
+    GRB_communism_party:0 "Лейбористы"
+    GRB_communism_party_long:0 "Лейбористская партия"
+    GRB_democratic_party:0 "КПВ"
+    GRB_democratic_party_long:0 "Консервативная партия Великоритании"
+    GRB_neutrality_party:0 "Королевская семья"
+    GRB_neutrality_party_long:0 "Королевская семья"
      
     ### SOU
     SOU_fascism_party:0 "ИПСС"

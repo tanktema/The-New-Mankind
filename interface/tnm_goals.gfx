@@ -80,6 +80,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/new_way.dds"
 	}
 	SpriteType = {
+		name = "GFX_goal_new_ways_pol"
+		texturefile = "gfx/interface/goals/new_way_pol.dds"
+	}
+	SpriteType = {
 		name = "GFX_goal_chn_friendship"
 		texturefile = "gfx/interface/goals/changeling_friendship.dds"
 	}
@@ -1027,9 +1031,1480 @@ spriteTypes = {
 		name = "GFX_goal_SOU_breaking_sea"
 		texturefile = "gfx/interface/goals/SOU_power_of_fleet.dds"
 	}
-#	SpriteType = {
-#		name = ""
-#		texturefile = "gfx/interface/goals/.dds"
-#	}
+	SpriteType = {
+		name = "GFX_goal_GEM_evac"
+		texturefile = "gfx/interface/goals/GEM_evac.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_exploration"
+		texturefile = "gfx/interface/goals/GEM_scouting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_contact"
+		texturefile = "gfx/interface/goals/GEM_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_party_meeting"
+		texturefile = "gfx/interface/goals/GEM_council.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_goebbels_speech"
+		texturefile = "gfx/interface/goals/GEM_goebbels.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_rations"
+		texturefile = "gfx/interface/goals/GEM_rations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_opposition"
+		texturefile = "gfx/interface/goals/GEM_opposition.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_night_of_broken_glass"
+		texturefile = "gfx/interface/goals/GEM_broken_glass.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_oppose_nazis"
+		texturefile = "gfx/interface/goals/GEM_support_opposition.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_destroy_opposition"
+		texturefile = "gfx/interface/goals/SOU_radicalism.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_iron_guard"
+		texturefile = "gfx/interface/goals/GEM_iron_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_a_little_freedom"
+		texturefile = "gfx/interface/goals/GEM_a_little_freedom.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_red_variant"
+		texturefile = "gfx/interface/goals/SOU_comm_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_people_spirit"
+		texturefile = "gfx/interface/goals/GEM_people_voice.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_comendant_hour"
+		texturefile = "gfx/interface/goals/GEM_coemendant.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_xenos"
+		texturefile = "gfx/interface/goals/SOU_world_domination.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_world_arena"
+		texturefile = "gfx/interface/goals/GEM_arena.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_milsquads"
+		texturefile = "gfx/interface/goals/GEM_ss_stormtroopers.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_war_never_changes"
+		texturefile = "gfx/interface/goals/GEM_war_never_changes.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_work_manifest"
+		texturefile = "gfx/interface/goals/GEM_work_manifest.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_SOU_assist"
+		texturefile = "gfx/interface/goals/GEM_soviet_assist.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_rise_people"
+		texturefile = "gfx/interface/goals/uns_comintern.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_equality"
+		texturefile = "gfx/interface/goals/GEM_equality.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_war_echo"
+		texturefile = "gfx/interface/goals/SOU_no_mistakes.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_coups"
+		texturefile = "gfx/interface/goals/workers_power.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_UNS"
+		texturefile = "gfx/interface/goals/reich_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_natives"
+		texturefile = "gfx/interface/goals/human_pony_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_elections"
+		texturefile = "gfx/interface/goals/GEM_elect.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_CHN_contact"
+		texturefile = "gfx/interface/goals/SOU_no_xenophobia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_liberal"
+		texturefile = "gfx/interface/goals/GEM_a_little_freedom.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_dialog_himmler"
+		texturefile = "gfx/interface/goals/GEM_dialogue_himmler.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_arrest_himmler"
+		texturefile = "gfx/interface/goals/GEM_arrest_himmler.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fight_xenophilia"
+		texturefile = "gfx/interface/goals/SOU_pony_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_ss_question"
+		texturefile = "gfx/interface/goals/GEM_ss_question.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_black_day"
+		texturefile = "gfx/interface/goals/GEM_save_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_adaptation"
+		texturefile = "gfx/interface/goals/GEM_know_enemy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_goeb_radicalism"
+		texturefile = "gfx/interface/goals/GEM_radicals.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_ss_disbanding"
+		texturefile = "gfx/interface/goals/GEM_disband_ss.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_shoot_the_dissidents"
+		texturefile = "gfx/interface/goals/GEM_shoot_unbeliefs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_etnos_question"
+		texturefile = "gfx/interface/goals/GEM_race_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_xeno_fighting"
+		texturefile = "gfx/interface/goals/GEM_anti_xenos.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_race"
+		texturefile = "gfx/interface/goals/GEM_race_superiority.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_milpolice"
+		texturefile = "gfx/interface/goals/GEM_new_police.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_mobilize_civils"
+		texturefile = "gfx/interface/goals/second_edition.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_CHN_alliance"
+		texturefile = "gfx/interface/goals/chn_uns_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_limit"
+		texturefile = "gfx/interface/goals/GEM_limit_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_expansion"
+		texturefile = "gfx/interface/goals/GEM_unlimit_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_ask_territory"
+		texturefile = "gfx/interface/goals/GEM_first_son_rule.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_attack_EQS"
+		texturefile = "gfx/interface/goals/SOU_friendship_is_over.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_stel_gambit"
+		texturefile = "gfx/interface/goals/SOU_invade_stallion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_attack_yak"
+		texturefile = "gfx/interface/goals/SOU_invade_yak.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_gem_unification"
+		texturefile = "gfx/interface/goals/GEM_attack_hum.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_north"
+		texturefile = "gfx/interface/goals/SOU_griffon_invade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_swap_the_roles"
+		texturefile = "gfx/interface/goals/SOU_not_a_pawn.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_propaganda"
+		texturefile = "gfx/interface/goals/GEM_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_arrests_himm"
+		texturefile = "gfx/interface/goals/GEM_shoot_unbeliefs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_brandenburg"
+		texturefile = "gfx/interface/goals/GEM_Brand_800.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_purge"
+		texturefile = "gfx/interface/goals/GEM_party_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_native_police"
+		texturefile = "gfx/interface/goals/GEM_native_squads.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_mil_cond"
+		texturefile = "gfx/interface/goals/GEM_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_prewar_preparation"
+		texturefile = "gfx/interface/goals/GEM_last_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_new_mobil_way"
+		texturefile = "gfx/interface/goals/GEM_limit_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_first_son"
+		texturefile = "gfx/interface/goals/GEM_first_son_rule.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_doubleration"
+		texturefile = "gfx/interface/goals/GEM_double_rations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_eco_mobiliz"
+		texturefile = "gfx/interface/goals/GEM_eco_mobiliz.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_himmlerunge"
+		texturefile = "gfx/interface/goals/GEM_gimmlerugend.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_youth_training"
+		texturefile = "gfx/interface/goals/GEM_youth_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_military_parade"
+		texturefile = "gfx/interface/goals/GEM_mil_parade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_supporters"
+		texturefile = "gfx/interface/goals/SOU_axis.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_influence"
+		texturefile = "gfx/interface/goals/GEM_agents.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_taboritskiy"
+		texturefile = "gfx/interface/goals/GEM_contact_tabor.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_rockwell"
+		texturefile = "gfx/interface/goals/GEM_contact_rockw.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_claims"
+		texturefile = "gfx/interface/goals/GEM_claim_land.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_know_enemy"
+		texturefile = "gfx/interface/goals/GEM_know_enemy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_time_has_come"
+		texturefile = "gfx/interface/goals/chn_ole_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_attack_eqs"
+		texturefile = "gfx/interface/goals/alicorn_fall.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_way_north"
+		texturefile = "gfx/interface/goals/GEM_attack_PLB.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_attack_yacks"
+		texturefile = "gfx/interface/goals/SOU_invade_yak.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invade_griff"
+		texturefile = "gfx/interface/goals/SOU_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invade_stg"
+		texturefile = "gfx/interface/goals/SOU_invade_stallion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invade_hum"
+		texturefile = "gfx/interface/goals/GEM_attack_hum.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_destroy_empire"
+		texturefile = "gfx/interface/goals/SOU_sea_lion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_attack_WNG"
+		texturefile = "gfx/interface/goals/GEM_attack_WNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_attack_SRS"
+		texturefile = "gfx/interface/goals/GEM_attack_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_HLQ"
+		texturefile = "gfx/interface/goals/GEM_ultimatum_HLQ.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_way_east"
+		texturefile = "gfx/interface/goals/GEM_attack_RIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_end_tyranny"
+		texturefile = "gfx/interface/goals/GEM_end_tyranny.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_human_spirit"
+		texturefile = "gfx/interface/goals/GEM_workers_power.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_equality"
+		texturefile = "gfx/interface/goals/SOU_soc_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_forget_past"
+		texturefile = "gfx/interface/goals/GEM_forget_the_past.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_ganging"
+		texturefile = "gfx/interface/goals/GEM_hang_them.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_asking"
+		texturefile = "gfx/interface/goals/GEM_courtthem.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_human_decide"
+		texturefile = "gfx/interface/goals/GEM_ask_people.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_unity_focus"
+		texturefile = "gfx/interface/goals/GEM_brotherhood.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invite_STG"
+		texturefile = "gfx/interface/goals/uns_stg_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invite_SOU"
+		texturefile = "gfx/interface/goals/GEM_alliance_SOU.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_second_chance"
+		texturefile = "gfx/interface/goals/invade_chn.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_crush_them"
+		texturefile = "gfx/interface/goals/GEM_attack_CHN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_triumph_vesalipolis"
+		texturefile = "gfx/interface/goals/GEM_vesalipolis_triumph.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_bears"
+		texturefile = "gfx/interface/goals/GEM_attack_PLB.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_yask"
+		texturefile = "gfx/interface/goals/SOU_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_deers"
+		texturefile = "gfx/interface/goals/GEM_attack_OLE.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_EQS_attack"
+		texturefile = "gfx/interface/goals/SOU_invade_equestria.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_RW"
+		texturefile = "gfx/interface/goals/workers_unite.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_stop_radicals"
+		texturefile = "gfx/interface/goals/GEM_arrest_himmler.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_court"
+		texturefile = "gfx/interface/goals/GEM_courtthem.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_peace"
+		texturefile = "gfx/interface/goals/peaceful_policy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_peacekeepers"
+		texturefile = "gfx/interface/goals/end_neutrality.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_peqceprop"
+		texturefile = "gfx/interface/goals/peace_garantie.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_peacekeeping_divs"
+		texturefile = "gfx/interface/goals/GEM_blue_hats.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_UN"
+		texturefile = "gfx/interface/goals/GEM_united_nations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_invitation_north"
+		texturefile = "gfx/interface/goals/GEM_aliance_PLB.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invite_griffs"
+		texturefile = "gfx/interface/goals/GEM_aliance_GRF.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_invite_yak"
+		texturefile = "gfx/interface/goals/GEM_aliance_YAK.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_eqs_support"
+		texturefile = "gfx/interface/goals/uns_afterwar_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_buy_equipment"
+		texturefile = "gfx/interface/goals/GEM_buy_american.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_soviet_tanks"
+		texturefile = "gfx/interface/goals/GEM_buy_soviet.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_destroy_the_past"
+		texturefile = "gfx/interface/goals/GEM_end_past_dem.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_antifasc"
+		texturefile = "gfx/interface/goals/GEM_antifasc_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_comtacts"
+		texturefile = "gfx/interface/goals/diminish_depence.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_no_xenophobia"
+		texturefile = "gfx/interface/goals/SOU_pony_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_new_germany"
+		texturefile = "gfx/interface/goals/GEM_phoenix.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_arrests_unbelief"
+		texturefile = "gfx/interface/goals/GEM_radicals.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_GEM_stop_offwork"
+		texturefile = "gfx/interface/goals/SOU_rebuild_start.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_new_factories"
+		texturefile = "gfx/interface/goals/SOU_end_of_destroy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_road_networks"
+		texturefile = "gfx/interface/goals/GEM_road_networks.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_New_dockyard"
+		texturefile = "gfx/interface/goals/build_dockyards.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_autoban"
+		texturefile = "gfx/interface/goals/GEM_road_building.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_resources"
+		texturefile = "gfx/interface/goals/SOU_resources.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_trade_tech"
+		texturefile = "gfx/interface/goals/SOU_tech_trade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_ask_lasts"
+		texturefile = "gfx/interface/goals/GEM_oldones.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_synt_oil"
+		texturefile = "gfx/interface/goals/oil_rework.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_sell_res"
+		texturefile = "gfx/interface/goals/trade_treaty.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fund_research"
+		texturefile = "gfx/interface/goals/power_of_science.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_magical_weapons"
+		texturefile = "gfx/interface/goals/GEM_magical_weapones.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_hidden_war"
+		texturefile = "gfx/interface/goals/GEM_hidden_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_computers"
+		texturefile = "gfx/interface/goals/GEM_computers.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_military_factories"
+		texturefile = "gfx/interface/goals/SOU_keep_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_factories"
+		texturefile = "gfx/interface/goals/rise_the_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_workshift"
+		texturefile = "gfx/interface/goals/GEM_workshift.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_rifles"
+		texturefile = "gfx/interface/goals/SOU_sell_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_armor"
+		texturefile = "gfx/interface/goals/GEM_new_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_city_update"
+		texturefile = "gfx/interface/goals/GEM_cities.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_recycle"
+		texturefile = "gfx/interface/goals/reusing.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_railroad"
+		texturefile = "gfx/interface/goals/GEM_railroads.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_electricity"
+		texturefile = "gfx/interface/goals/electrics.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_light_heavy_industry"
+		texturefile = "gfx/interface/goals/expand_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_indstry_development"
+		texturefile = "gfx/interface/goals/SOU_finish_rebuild.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_explore_ionosphere"
+		texturefile = "gfx/interface/goals/GEM_ionosphere.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_building"
+		texturefile = "gfx/interface/goals/SOU_five_years.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_medical_research"
+		texturefile = "gfx/interface/goals/GEM_med_research.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_rocketry"
+		texturefile = "gfx/interface/goals/GEM_icbm.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_wunderwaffe"
+		texturefile = "gfx/interface/goals/uns_wmd.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_brandenburg_gates"
+		texturefile = "gfx/interface/goals/GEM_brand_gates.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_GEM_mobilization"
+		texturefile = "gfx/interface/goals/GEM_mobilization.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_wehrmacht"
+		texturefile = "gfx/interface/goals/GEM_wehrmacht.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_sivispacem"
+		texturefile = "gfx/interface/goals/SOU_defence_demo.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_parabellum"
+		texturefile = "gfx/interface/goals/army_update.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_schutzstaffen"
+		texturefile = "gfx/interface/goals/GEM_ss_recruiting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_blietzkrieg"
+		texturefile = "gfx/interface/goals/GEM_blietzkrieg.dds" 
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fire_from_sky"
+		texturefile = "gfx/interface/goals/SOU_artillery_effort.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_planning"
+		texturefile = "gfx/interface/goals/SOU_art_of_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_schmeisser"
+		texturefile = "gfx/interface/goals/GEM_schmeisser.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_bunkers"
+		texturefile = "gfx/interface/goals/coastal_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_training"
+		texturefile = "gfx/interface/goals/uns_milacademy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_vests"
+		texturefile = "gfx/interface/goals/GEM_vests_upgrade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_magical_experiments"
+		texturefile = "gfx/interface/goals/share_the_science.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_luftwaffe"
+		texturefile = "gfx/interface/goals/SOU_pierce_the_sky.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fighters"
+		texturefile = "gfx/interface/goals/SOU_upgrade_avia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_heavy_air"
+		texturefile = "gfx/interface/goals/SOU_naval_aircraft.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_explore_air"
+		texturefile = "gfx/interface/goals/air_doctrine.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_early_detect"
+		texturefile = "gfx/interface/goals/defend_the_sky.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_aces"
+		texturefile = "gfx/interface/goals/exp_off_two_wars.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_air_superiority"
+		texturefile = "gfx/interface/goals/doctrine_dev_air.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_airports"
+		texturefile = "gfx/interface/goals/SOU_new_airbases.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_reactive_air"
+		texturefile = "gfx/interface/goals/air_superiority.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_sky_soldiers"
+		texturefile = "gfx/interface/goals/SRS_aviation_dreams.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fleet"
+		texturefile = "gfx/interface/goals/SOU_rebuild_the_fleet.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_expand_docks"
+		texturefile = "gfx/interface/goals/build_dockyards.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_blueprints"
+		texturefile = "gfx/interface/goals/SOU_naval_treaty.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_underwater"
+		texturefile = "gfx/interface/goals/SOU_submarines.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fleet_tactics"
+		texturefile = "gfx/interface/goals/new_way.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_naval_base"
+		texturefile = "gfx/interface/goals/SOU_navy_ind.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_convoy_hunting"
+		texturefile = "gfx/interface/goals/SOU_destroy_convoys.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_shark"
+		texturefile = "gfx/interface/goals/GEM_shark_teeth.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_research_ship"
+		texturefile = "gfx/interface/goals/fleet_rebirth.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEM_fleet_power"
+		texturefile = "gfx/interface/goals/naval_superiority.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_contacts_people"
+		texturefile = "gfx/interface/goals/SOU_find_allies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_spaceprog"
+		texturefile = "gfx/interface/goals/UNS_spaceprog.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_exhibit"
+		texturefile = "gfx/interface/goals/UNS_hum_exhibit.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_hum_first"
+		texturefile = "gfx/interface/goals/UNS_rise_humanity.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_equus"
+		texturefile = "gfx/interface/goals/UNS_equus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ponies"
+		texturefile = "gfx/interface/goals/SOU_pony_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invite_royals_CRY"
+		texturefile = "gfx/interface/goals/UNS_royal_family_CRY.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_UNS_meet_CRY"
+		texturefile = "gfx/interface/goals/UNS_meet_cry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_EQS_training"
+		texturefile = "gfx/interface/goals/SOU_attack_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_history"
+		texturefile = "gfx/interface/goals/UNS_history.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_technology_barter"
+		texturefile = "gfx/interface/goals/SOU_tech_trade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_defend_harmony"
+		texturefile = "gfx/interface/goals/GEM_united_nations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_victory_of_harmony"
+		texturefile = "gfx/interface/goals/UNS_victory_of_freedom.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_griffonia"
+		texturefile = "gfx/interface/goals/UNS_griffonia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_fat"
+		texturefile = "gfx/interface/goals/UNS_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_republican_treaty"
+		texturefile = "gfx/interface/goals/SOU_find_allies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_guarantee_FAT"
+		texturefile = "gfx/interface/goals/UNS_guarantee_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_destroy_empire"
+		texturefile = "gfx/interface/goals/SOU_sea_lion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_honor_glory"
+		texturefile = "gfx/interface/goals/UNS_HLR.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_support_HLR"
+		texturefile = "gfx/interface/goals/SOU_sell_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_river"
+		texturefile = "gfx/interface/goals/UNS_RIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_dogs"
+		texturefile = "gfx/interface/goals/UNS_dogs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_WIT"
+		texturefile = "gfx/interface/goals/UNS_WIT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_NIM"
+		texturefile = "gfx/interface/goals/UNS_NIM.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_HLQ"
+		texturefile = "gfx/interface/goals/GEM_ultimatum_HLQ.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_ppc"
+		texturefile = "gfx/interface/goals/UNS_cure_pp.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_proletariat"
+		texturefile = "gfx/interface/goals/GEM_workers_power.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_friends"
+		texturefile = "gfx/interface/goals/SOU_soc_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SOU"
+		texturefile = "gfx/interface/goals/embass_ussr.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_STG"
+		texturefile = "gfx/interface/goals/embass_stalliongrad.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_commdef"
+		texturefile = "gfx/interface/goals/uns_comintern.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_antifa"
+		texturefile = "gfx/interface/goals/GEM_forget_the_past.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_eqs_comm_support"
+		texturefile = "gfx/interface/goals/UNS_EQS_comm_support.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_ulbricht"
+		texturefile = "gfx/interface/goals/UNS_ulbricht.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_CRY"
+		texturefile = "gfx/interface/goals/UNS_meet_cry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_Redworld"
+		texturefile = "gfx/interface/goals/GEM_equality.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_commsuper"
+		texturefile = "gfx/interface/goals/GEM_workers_power.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_enhance"
+		texturefile = "gfx/interface/goals/GEM_work_manifest.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_equality"
+		texturefile = "gfx/interface/goals/SOU_comm_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_red_march"
+		texturefile = "gfx/interface/goals/SOU_invade_equestria.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_attack_EQS"
+		texturefile = "gfx/interface/goals/SOU_attack_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_crush_bugs"
+		texturefile = "gfx/interface/goals/GEM_attack_CHN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_way_north"
+		texturefile = "gfx/interface/goals/SOU_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_kill_eagle"
+		texturefile = "gfx/interface/goals/GEM_party_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_COM_GRI"
+		texturefile = "gfx/interface/goals/SOU_sea_lion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_FAT_inv"
+		texturefile = "gfx/interface/goals/UNS_invade_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_support_SRS"
+		texturefile = "gfx/interface/goals/UNS_SRS_friends.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_support_LSC"
+		texturefile = "gfx/interface/goals/UNS_LSC_friends.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_WNG"
+		texturefile = "gfx/interface/goals/GEM_attack_WNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_RIV"
+		texturefile = "gfx/interface/goals/GEM_attack_RIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_no_weakness"
+		texturefile = "gfx/interface/goals/UNS_no_weakness.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_no_suffer"
+		texturefile = "gfx/interface/goals/UNS_no_suffer.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_we_protect"
+		texturefile = "gfx/interface/goals/UNS_we_protect.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_we_help"
+		texturefile = "gfx/interface/goals/UNS_we_help.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_we_salvation"
+		texturefile = "gfx/interface/goals/UNS_we_salvation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_hull_is_weak"
+		texturefile = "gfx/interface/goals/UNS_hul_is_weak.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_we_are_strong"
+		texturefile = "gfx/interface/goals/UNS_we_are_strong.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_prove"
+		texturefile = "gfx/interface/goals/UNS_we_will_proove.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_minpeace_focus"
+		texturefile = "gfx/interface/goals/UNS_minpeace.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_minwar_focus"
+		texturefile = "gfx/interface/goals/UNS_minwar.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_minmor_focus"
+		texturefile = "gfx/interface/goals/UNS_minmor.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_medcenters"
+		texturefile = "gfx/interface/goals/UNS_hospitals.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_Schools"
+		texturefile = "gfx/interface/goals/UNS_schools.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_workplaces"
+		texturefile = "gfx/interface/goals/UNS_works.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_medicine"
+		texturefile = "gfx/interface/goals/UNS_medics.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_magical_teach"
+		texturefile = "gfx/interface/goals/UNS_magic.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_be_prepared"
+		texturefile = "gfx/interface/goals/UNS_be_ready.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_armor"
+		texturefile = "gfx/interface/goals/UNS_armor.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_work_together"
+		texturefile = "gfx/interface/goals/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_Best_weap"
+		texturefile = "gfx/interface/goals/UNS_best_weap.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_machines_of_death"
+		texturefile = "gfx/interface/goals/UNS_machines_of_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_angels_of_death"
+		texturefile = "gfx/interface/goals/UNS_angels_of_death.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_war_coming"
+		texturefile = "gfx/interface/goals/UNS_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_paint_portraits"
+		texturefile = "gfx/interface/goals/UNS_paint_portr.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_tear_pages"
+		texturefile = "gfx/interface/goals/UNS_burn_the_books.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_burn_flags"
+		texturefile = "gfx/interface/goals/UNS_burn_the_flags.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_forget_names"
+		texturefile = "gfx/interface/goals/UNS_forget_names.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_we_history"
+		texturefile = "gfx/interface/goals/UNS_we_are_history.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_we_will_win"
+		texturefile = "gfx/interface/goals/UNS_we_will_win.dds"
+	} 
+	SpriteType = {
+		name = "GFX_goal_UNS_society"
+		texturefile = "gfx/interface/goals/UNS_society.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_fake_harmony"
+		texturefile = "gfx/interface/goals/UNS_STC_EQS.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_fake_brotherhood"
+		texturefile = "gfx/interface/goals/UNS_STC_STG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_fake_unity"
+		texturefile = "gfx/interface/goals/UNS_STC_CHN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_barbarians"
+		texturefile = "gfx/interface/goals/UNS_STC_YAK.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_tiranny"
+		texturefile = "gfx/interface/goals/UNS_STC_OLE.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_destroy_sou"
+		texturefile = "gfx/interface/goals/UNS_STC_SOU.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_destroy_gem"
+		texturefile = "gfx/interface/goals/UNS_STC_GEM.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_no_doubts"
+		texturefile = "gfx/interface/goals/UNS_STC_END.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_fate_kennedy"
+		texturefile = "gfx/interface/goals/UNS_paint_portr.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_locals"
+		texturefile = "gfx/interface/goals/UNS_equus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_friend_GEM"
+		texturefile = "gfx/interface/goals/embass_reich.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_changelings"
+		texturefile = "gfx/interface/goals/embass_changeling.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_meet_himmler"
+		texturefile = "gfx/interface/goals/GEM_dialogue_himmler.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_alliance_CHN"
+		texturefile = "gfx/interface/goals/SOU_experience_changing.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_ubivat"
+		texturefile = "gfx/interface/goals/UNS_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_attack_plan"
+		texturefile = "gfx/interface/goals/SOU_attack_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_land"
+		texturefile = "gfx/interface/goals/alicorn_fall.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_attack_eqs"
+		texturefile = "gfx/interface/goals/crush_the_natives.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_attack_sou"
+		texturefile = "gfx/interface/goals/SOU_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_attack_STG_rock"
+		texturefile = "gfx/interface/goals/SOU_backstab_stg.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_griffonia_friends"
+		texturefile = "gfx/interface/goals/UNS_griffonia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_grif_emp"
+		texturefile = "gfx/interface/goals/UNS_friend_empire.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_grif_emp_alliance"
+		texturefile = "gfx/interface/goals/UNS_alliance_empire.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_HAU"
+		texturefile = "gfx/interface/goals/UNS_invade_hau.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_FAT_attack"
+		texturefile = "gfx/interface/goals/GEM_attack_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_JER_attack"
+		texturefile = "gfx/interface/goals/UNS_invade_jer.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_BOI_attack"
+		texturefile = "gfx/interface/goals/GEM_anti_xenos.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_HLQ"
+		texturefile = "gfx/interface/goals/GEM_ultimatum_HLQ.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_WNG_friend"
+		texturefile = "gfx/interface/goals/UNS_friend_wingb.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_alliance_wng"
+		texturefile = "gfx/interface/goals/UNS_wingbardy_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_FAL_Attack"
+		texturefile = "gfx/interface/goals/UNS_invade_fal.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SIC_attack"
+		texturefile = "gfx/interface/goals/UNS_invade_sic.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_CYA_atacck"
+		texturefile = "gfx/interface/goals/UNS_invade_cya.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_MIT_attack"
+		texturefile = "gfx/interface/goals/UNS_invade_mit.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_prywhen"
+		texturefile = "gfx/interface/goals/UNS_invade_brf.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_executions"
+		texturefile = "gfx/interface/goals/GEM_party_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_officer_purges"
+		texturefile = "gfx/interface/goals/GEM_iron_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_maritime_measures"
+		texturefile = "gfx/interface/goals/GEM_coemendant.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_army_check"
+		texturefile = "gfx/interface/goals/UNS_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_propaganda"
+		texturefile = "gfx/interface/goals/GEM_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_work_for_victory"
+		texturefile = "gfx/interface/goals/UNS_works.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_charlie"
+		texturefile = "gfx/interface/goals/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_recruitment"
+		texturefile = "gfx/interface/goals/GEM_limit_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_native_soldiers"
+		texturefile = "gfx/interface/goals/GEM_native_squads.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_native_officers"
+		texturefile = "gfx/interface/goals/GEM_know_enemy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_last_preparations"
+		texturefile = "gfx/interface/goals/GEM_last_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_EQS"
+		texturefile = "gfx/interface/goals/SOU_friendship_is_over.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_CRY"
+		texturefile = "gfx/interface/goals/SOU_wild_west.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_STG"
+		texturefile = "gfx/interface/goals/SOU_invade_stallion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_CHN"
+		texturefile = "gfx/interface/goals/GEM_attack_CHN.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_YAK"
+		texturefile = "gfx/interface/goals/SOU_invade_yak.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_attack_OLE"
+		texturefile = "gfx/interface/goals/GEM_attack_OLE.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SOU_ultimatum"
+		texturefile = "gfx/interface/goals/SOU_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_GEM_ultimatum"
+		texturefile = "gfx/interface/goals/GEM_antifasc_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_attack_novagriff"
+		texturefile = "gfx/interface/goals/SOU_griffon_invade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_big_hunt"
+		texturefile = "gfx/interface/goals/GEM_attack_PLB.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_way_east"
+		texturefile = "gfx/interface/goals/SOU_submarines.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_HAU"
+		texturefile = "gfx/interface/goals/UNS_invade_hau.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_VED"
+		texturefile = "gfx/interface/goals/UNS_invade_ved.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_FAT_invade"
+		texturefile = "gfx/interface/goals/UNS_invade_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_empire"
+		texturefile = "gfx/interface/goals/SOU_sea_lion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_invade_BOI"
+		texturefile = "gfx/interface/goals/GEM_race_superiority.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_JER_invade"
+		texturefile = "gfx/interface/goals/UNS_invade_jer.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_long_invade"
+		texturefile = "gfx/interface/goals/SOU_radicalism.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_WNG_invade"
+		texturefile = "gfx/interface/goals/GEM_attack_WNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_riverlands"
+		texturefile = "gfx/interface/goals/GEM_attack_RIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_parade_wash"
+		texturefile = "gfx/interface/goals/GEM_vesalipolis_triumph.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_EQS_contact"
+		texturefile = "gfx/interface/goals/embass_canterlot.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_EQS_military_corps"
+		texturefile = "gfx/interface/goals/uns_allies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_guarantee_EQS"
+		texturefile = "gfx/interface/goals/peace_defence.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_harmonical_pact"
+		texturefile = "gfx/interface/goals/uns_eqs_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_EQS_milmission"
+		texturefile = "gfx/interface/goals/SOU_no_mistakes.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_EQS_defence_plan"
+		texturefile = "gfx/interface/goals/SOU_attack_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_reinforce_west"
+		texturefile = "gfx/interface/goals/SOU_defence_demo.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_reiforce_north"
+		texturefile = "gfx/interface/goals/UNS_reinforcements.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_bestrong"
+		texturefile = "gfx/interface/goals/SOU_artillery_effort.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_CRY_relationship"
+		texturefile = "gfx/interface/goals/UNS_meet_cry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_infrast"
+		texturefile = "gfx/interface/goals/GEM_road_building.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_huffball_stadium"
+		texturefile = "gfx/interface/goals/SOU_five_years.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_electrotrains"
+		texturefile = "gfx/interface/goals/SOU_infrastr.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_manh_maneh"
+		texturefile = "gfx/interface/goals/GEM_cities.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_power_of_friendship"
+		texturefile = "gfx/interface/goals/UNS_power_of_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_aft_support"
+		texturefile = "gfx/interface/goals/SOU_sell_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_rebuilding"
+		texturefile = "gfx/interface/goals/SOU_finish_rebuild.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_poryadok"
+		texturefile = "gfx/interface/goals/GEM_radicals.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_heal_wounds"
+		texturefile = "gfx/interface/goals/SOU_pony_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_supernova"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_project_supernova.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_magicians"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_invite_magician.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_research"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_researches.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_library"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_canterlot_library.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_top_secret"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_top_secret.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_hostaging"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_kidnapping.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_first_attempt"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_experiment.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_failure"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_fail.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_containment"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_containment.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_repair_mistakes"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_fix_mistakes.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_success"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_success.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_main_question"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_main_question.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_psycho_report"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_psychologist.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_invade_SOL"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_invade_sol.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_UNS_SNOVA_extinguish"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_extinguish.dds"
+	}
 	
 }

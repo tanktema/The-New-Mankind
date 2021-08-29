@@ -6,3 +6,21 @@ is_eqcus_country = {
 		is_on_continent = europe
 	}
 }
+
+is_riverlands_country = {
+	any_owned_state = {
+		AND = {
+			OR = {
+				state = 619
+				state = 544
+				state = 387
+				state = 637
+				state = 617
+				state = 580
+				state = 645
+				state = 649
+			}
+			is_capital = yes 
+		}
+	}
+}

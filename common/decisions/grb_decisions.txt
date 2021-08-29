@@ -1,0 +1,1030 @@
+GRB_political_affairs_category = {
+	
+	
+	
+	
+	demo_decision_control_military = {
+		available = {
+			has_country_flag = player_democrats_choose
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		modifier = {
+			experience_gain_army_factor = -0.15
+			conscription_factor = -0.2
+			political_power_gain = -0.15
+			
+		}
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	demo_decision_control_workers = {
+		available = {
+			has_country_flag = player_democrats_choose
+		}
+		days_remove = 15
+		days_re_enable = 15
+		
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = 0.15
+		}
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			} 
+			365 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	demo_decision_newspapers_control = {
+		available = {
+			has_country_flag = player_democrats_choose
+		}
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.1
+			political_power_gain = 0.1
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	comm_decision_control_military = {
+		available = {
+			has_countrY_flag = player_communists_choose
+		}
+		modifier = {
+			war_support_factor = -0.15
+			experience_gain_army_factor = -0.2
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	comm_decision_control_workers = {
+		available = {
+			has_country_flag = player_communists_choose
+		}
+		modifier = {
+			political_power_gain = 0.05
+			stability_factor = -0.05
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	comm_decision_newspapers_control = {
+		available = {
+			has_country_flag = player_communists_choose
+		}
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = 0.15
+			production_speed_buildings_factor = -0.15
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	fasc_decision_control_military = {
+		available = {
+			has_country_flag = player_fascism_choose
+		}
+		
+		modifier = {
+			fascism_drift = 0.01 
+			political_power_gain = -0.1
+			stability_factor = -0.1
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	fasc_decision_control_workers = {
+		available = {
+			has_country_flag = player_fascism_choose
+		}
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = 0.15
+		}
+		days_re_enable = 15
+		cost = 25
+		days_remove = 15
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	fasc_decision_newspapers_control = {
+		available = {
+			has_country_flag = player_fascism_choose
+		}
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = 0.15
+			experience_gain_army_factor = 0.25
+		}
+		days_re_enable = 15
+		cost = 25
+		days_remove = 15
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+}
+
+
+
+GRB_communist_revolt_decisions = {
+	debug_add_all_commie_to_alliance = {
+		allowed = {
+			is_debug = yes 
+		}
+		complete_effect = {
+			set_politics = { ruling_party = communism }
+			create_faction = DEBUG_COMM
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+				country_event = { id = generic.5 days = 3 }
+			}
+		}
+	}
+	debug_remove_all_commie_from_alliance = {
+		allowed = {
+			is_debug = yes 
+		}
+		complete_effect = {
+			dismantle_faction = yes
+		}
+	}
+	GRB_add_manpower_to_commie_country = {
+		available = {
+			has_manpower > 4999 
+			has_army_experience > 4.99
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+		modifier = {
+			experience_gain_army_factor = -0.25
+			experience_gain_army = -0.25
+			training_time_army_factor = 0.5
+		}
+		remove_effect = {
+			add_manpower = -5000
+			add_to_variable = { var = num_of_commie_recruits value = 5000 tooltip = add_commie_recruits }
+		}
+	}
+	
+	GRB_add_infantry_weapons = {
+		available = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -2000 }
+			add_to_variable = { var = num_of_commie_rifles value = 2000 tooltip = add_commie_rifles }
+		}
+	}
+	
+	GRB_add_special_equipment = {
+		available = {
+			has_equipment = { support_equipment > 499 }
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = -500 }
+			add_to_variable = { var = num_of_commie_support value = 500 tooltip = add_commie_support }
+		}
+	}
+	
+	GRB_add_artillery = {
+		
+		available = {
+			has_equipment = { artillery_equipment > 249 }
+			custom_trigger_tooltip = {
+				tooltip = min_8_allies
+				check_variable = { allies_infl_max_revolt > 1 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = artillery_equipment amount = -250 }
+			add_to_variable = { var = num_of_commie_artillery value = 250 tooltip = add_commie_artillery }
+		}
+	}
+	
+	GRB_add_antitank = {
+		
+		available = {
+			has_equipment = { anti_tank_equipment > 249 }
+			custom_trigger_tooltip = {
+				tooltip = min_12_allies
+				check_variable = { allies_infl_max_revolt > 2 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = anti_tank_equipment amount = -250 }
+			add_to_variable = { var = num_of_commie_atguns value = 250 tooltip = add_commie_atitank }
+		}
+	}
+	
+	GRB_add_transport = {
+		available = {
+			has_equipment = { motorized_equipment > 499 }
+			custom_trigger_tooltip = {
+				tooltip = min_12_allies
+				check_variable = { allies_infl_max_revolt > 2 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = -500 }
+			add_to_variable = { var = num_of_commie_cars value = 500 tooltip = add_commie_transport }
+		}
+	}
+	
+	GRB_add_medium_tanks = {
+		available = {
+			has_equipment = { medium_tank_equipment > 199 }
+			custom_trigger_tooltip = {
+				tooltip = min_20_allies
+				check_variable = { allies_infl_max_revolt > 4 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = medium_tank_equipment amount = -200 }
+			add_to_variable = { var = num_of_commie_medtanks value = 200 tooltip = add_commie_tanks }
+		}
+	}
+	
+	
+}
+
+
+
+GRB_communist_revolt_starting = { 
+	debug_check_tag = {
+		target_trigger = {
+			FROM = { 
+				has_civil_war = yes
+				NOT = { has_government = communism }
+			}
+			
+		}
+		allowed = {
+			is_debug = yes 
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = FROM 
+					NOT = {
+						has_government = communism 
+					} 
+				}
+			}
+			add_stability = 0.01 
+		}
+	}
+	GRB_start_revolt_in_country = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { ROOT.started_revolts_value < ROOT.allies_infl_max_revolt }
+				tooltip = less_revolts_than_available
+			}
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						original_tag = GRB 
+						is_subject_of = ROOT 
+						is_in_faction_with = ROOT 
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
+		}
+		visible = {
+			check_variable = { ROOT.started_revolts_value < ROOT.allies_infl_max_revolt }
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 45
+		complete_effect = {
+			add_to_variable = { started_revolts_value = 1 }
+		} 
+		remove_effect = {
+			FROM = {
+				start_civil_war = {
+					ruling_party = communism
+					ideology = FROM 
+					size = 0.8
+				}
+				set_country_flag = is_grb_revolt_target
+				hidden_effect = {
+					set_technology = { tech_engineers = 1 }
+					set_technology = { tech_recon = 1 }
+					set_technology = { tech_field_hospital = 1 }
+					set_technology = { tech_logistics_company = 1 }
+					set_technology = { tech_signal_company = 1 }
+					set_technology = { tech_military_police = 1 }
+					set_technology = { tech_maintenance_company = 1 }
+					set_technology = { motorised_infantry = 1 }
+					set_technology = { radio =  1}
+				}
+			}
+		}
+	}
+	
+	
+	GRB_add_from_to_faction = {
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				OR = {
+					has_country_flag = is_grb_revolt_target
+					has_government = communism 
+				}
+
+				is_in_faction = no 
+				
+			}
+		}
+		available = {
+			FROM = {
+				has_civil_war = no
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		days_remove = 5
+		remove_effect = {
+			FROM = {
+				country_event = { id = generic.5 days = 3 }
+			}
+			hidden_effect = {
+				add_to_variable = { ROOT.started_revolts_value = -1 }
+				FROM = {
+					clr_country_flag = is_grb_revolt_target
+				}
+			}
+		}
+	}
+}
+
+
+
+GRB_communist_support = {
+	GRB_send_helping_brigades = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 7999 }
+				check_variable = { ROOT.num_of_commie_rifles > 399 }
+				tooltip = vlunteers_brigade_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -8000 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -400 tooltip = add_commie_rifles }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Volunteer Brigade"
+							}
+						}
+						division_template = {
+							name = "Volunteer Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+					
+						create_unit = {
+							division = "name = \"Volunteers\" division_template = \"Volunteer Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Volunteers\" division_template = \"Volunteer Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_grb_tt
+				
+				
+			}
+			
+		}
+	}
+				
+	GRB_send_helping_divs = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 19599 }
+				check_variable = { ROOT.num_of_commie_rifles > 1819 }
+				check_variable = { ROOT.num_of_commie_support > 109 }
+				tooltip = vlunteers_divs_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -19600 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1820 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -110 tooltip = add_commie_support }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Volunteer Division"
+							}
+						}
+						division_template = {
+							name = "Volunteer Division"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								infantry = { x = 2 y = 0 }
+								infantry = { x = 2 y = 1 }
+								infantry = { x = 2 y = 2 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Volunteers Division\" division_template = \"Volunteer Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Volunteers Division\" division_template = \"Volunteer Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_bigger_grb_tt
+				
+			}
+			
+		}
+	}
+	
+	GRB_send_artillery_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 18199 }
+				check_variable = { ROOT.num_of_commie_rifles > 1419 }
+				check_variable = { ROOT.num_of_commie_support > 109 }
+				check_variable = { ROOT.num_of_commie_artillery > 167 }
+				tooltip = vlunteers_art_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -18200 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1420 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -110 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_artillery value = -168 tooltip = add_commie_artillery }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Artillery Division"
+							}
+						}
+						division_template = {
+							name = "Artillery Division"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								infantry = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+								artillery_brigade = { x = 2 y = 2 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Artillery Division\" division_template = \"Artillery Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Artillery Division\" division_template = \"Artillery Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_artillery_grb_tt
+			}
+			
+		}
+	}
+	
+	GRB_send_antitank_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 18199 }
+				check_variable = { ROOT.num_of_commie_rifles > 1419 }
+				check_variable = { ROOT.num_of_commie_support > 109 }
+				check_variable = { ROOT.num_of_commie_artillery > 167 }
+				check_variable = { ROOT.num_of_commie_atguns > 191 }
+				tooltip = vlunteers_at_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -18200 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1420 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -110 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_artillery value = -168 tooltip = add_commie_artillery }
+			add_to_variable = { var = num_of_commie_atguns value = -192 tooltip = add_commie_atitank }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Volunteer Antitank Brigade"
+							}
+						}
+						division_template = {
+							name = "Volunteer Antitank Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								artillery_brigade = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+								anti_tank_brigade = { x = 2 y = 2 }
+								anti_tank_brigade = { x = 2 y = 3 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+								anti_tank = { x = 0 y = 3 }
+								recon = { x = 0 y = 4 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Volunteer Antitank Brigade\" division_template = \"Volunteer Antitank Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Volunteer Antitank Brigade\" division_template = \"Volunteer Antitank Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_antitank_grb_tt
+			}
+			
+		}
+	}
+	
+	
+	
+	GRB_send_transport_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 20899 }
+				check_variable = { ROOT.num_of_commie_rifles > 1419 }
+				check_variable = { ROOT.num_of_commie_support > 209 }
+				check_variable = { ROOT.num_of_commie_artillery > 167 }
+				check_variable = { ROOT.num_of_commie_cars > 959 }
+				tooltip = vlunteers_cars_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -20900 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1420 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -210 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_artillery value = -168 tooltip = add_commie_artillery }
+			add_to_variable = { var = num_of_commie_cars value = -960 tooltip = add_commie_transport }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Motorized Brigade"
+							}
+						}
+						division_template = {
+							name = "Motorized Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								motorized = { x = 0 y = 0 }
+								motorized = { x = 0 y = 1 }
+								motorized = { x = 0 y = 2 }
+								motorized = { x = 1 y = 0 }
+								motorized = { x = 1 y = 1 }
+								motorized = { x = 1 y = 2 }
+								motorized = { x = 2 y = 0 }
+								mot_artillery_brigade = { x = 2 y = 1 }
+								mot_artillery_brigade = { x = 2 y = 2 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+								field_hospital = { x = 0 y = 3 }
+								logistics_company = { x = 0 y = 4 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Motorized Brigade\" division_template = \"Motorized Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Motorized Brigade\" division_template = \"Motorized Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_transport_grb_tt
+			}
+			
+		}
+	}
+	
+	
+	GRB_send_armor_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 17999 }
+				check_variable = { ROOT.num_of_commie_rifles > 819 }
+				check_variable = { ROOT.num_of_commie_support > 209 }
+				check_variable = { ROOT.num_of_commie_cars > 459 }
+				check_variable = { ROOT.num_of_commie_medtanks > 299 }
+				tooltip = vlunteers_tank_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -18000 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -820 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -210 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_medtanks value = -300 tooltip = add_commie_tanks }
+			add_to_variable = { var = num_of_commie_cars value = -460 tooltip = add_commie_transport }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Armored Brigade"
+							}
+						}
+						division_template = {
+							name = "Armored Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								medium_armor = { x = 0 y = 0 }
+								medium_armor = { x = 0 y = 1 }
+								medium_armor = { x = 0 y = 2 }
+								medium_armor = { x = 1 y = 0 }
+								medium_armor = { x = 1 y = 1 }
+								medium_armor = { x = 1 y = 2 }
+								mot_artillery_brigade = { x = 2 y = 0 }
+								mot_artillery_brigade = { x = 2 y = 1 }
+								mot_artillery_brigade = { x = 2 y = 2 }
+								mot_artillery_brigade = { x = 2 y = 3 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								
+								field_hospital = { x = 0 y = 2 }
+								logistics_company = { x = 0 y = 3 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Armored Brigade\" division_template = \"Armored Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_armored_grb_tt
+			}
+			
+		}
+	}

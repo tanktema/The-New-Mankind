@@ -112,3 +112,28 @@ defined_text = {
 		localization_key = OppositionColorCyanTwo
 	}
 }
+
+defined_text = {
+	name = GetMeterStatus
+	text = {
+		trigger = {
+			check_variable = { human_rage < 30 }
+		}
+		localization_key = rage_meter_green
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { human_rage > 29 }
+				check_variable = { human_rage < 60 }
+			}
+		}
+		localization_key = rage_meter_yellow
+	}
+	text = {
+		trigger = {
+			check_variable = { human_rage > 59 }
+		}
+		localization_key = rage_meter_red 
+	}
+}

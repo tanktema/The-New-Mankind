@@ -3,3 +3,33 @@ spriteTypes = {
 		name = "GFX_autonomy_socialistic_republic_icon"
 		textureFile = "gfx/interface/autonomy/socialistic_republic_puppet.dds"
 	}
+	frameAnimatedSpriteType = {
+		name = "GFX_statesoc_animated"
+		textureFile = "gfx/leaders/UNS/statesoc.dds"
+		
+		noOfFrames = 10
+		animation_rate_fps = 12
+		looping = yes
+		
+		play_on_show = yes
+	}
+	SpriteType = {
+		name = "GFX_market_top_bottom"
+		texturefile = "gfx/interface/mech/market_top_bottom.dds"
+	}
+	SpriteType = {
+		name = "GFX_minpeace"
+		textureFile = "gfx/interface/mech/minpeace_logo.dds"
+	}
+	SpriteType = {
+		name = "GFX_minwar"
+		textureFile = "gfx/interface/mech/minwar_logo.dds"
+	}
+	SpriteType = {
+		name = "GFX_minmor"
+		textureFile = "gfx/interface/mech/minmor_logo.dds"
+	}
+	SpriteType = {
+		name = "GFX_statesoc_unity"
+		textureFile = "gfx/interface/mech/unity_level.dds"
+	}

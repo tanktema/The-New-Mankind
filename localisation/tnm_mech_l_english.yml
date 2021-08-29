@@ -1,2 +1,13 @@
 ﻿l_english:
     hum_acceptance_desc:0 "§YAcceptance level§!\n\n-------------------\n\nThe level of your acceptance in this world.\n\nThe high adaptation level you will get bonuces for peaceful politics and penalties for agressive actions\n\nAcceptance level could be expanded with some focuses and decisions\n\nYour acceptance bonus: §G[?root.acceptance_value_polit]§!\n\nYour acceptance penalty:§R[?root.acceptance_value_tension]§!\n\n§CCommunists and Neutrals receivve only half of bonuces and penalties, Democrates receive full bonuces and penalties, Supremasists get only 25% of bonus and no penalty§!"
+    rage_meter_green:0 "§G[?human_rage]%§!"
+    rage_meter_yellow:0 "§Y[?human_rage]%§!"
+    rage_meter_red:0 "§R[?human_rage]%§!"
+    hum_rage_mech_desc:0 "§CHuman Unsatisfaction§!\n\n-------------------\n\Labor unsatisfaction level. If the §GExtra Shift§! is activated, it will grow up 1% a day. If the §GExtra Shift§! is deactivated, it will lose 0.5% a day. While the §RUnsatisfaction§! is above 0, you will get stability and war support penalty in size of 50% of your §RUnsatisfaction§! level and political power growth penalty in size of 1\200 of your §RUnsatisfaction§! level."
+        
+        
+    statesoc_unity_desc:0 "§CUnity§! level\n\n-------------------\n\n§CUnity§! level of your state. The higher §CUnity§! is, the higher is yyour stability and willing to fight. Current Unity level: §Y[?ROOT.uns_unity_statesoc|%]§!.\n\n§CUnity§! level can be increased with focuses and decisions"
+    UNS_unity_of_statesoc:0 "§CUnity§! level"
+    UNS_minpeace_mod:0 "Ministry of §CPeace§! funding"
+    UNS_minwar_mod:0 "Ministry of §RWar§! funding"
+    UNS_minmor_mod:0 "Ministry of §gMorale§! funding"

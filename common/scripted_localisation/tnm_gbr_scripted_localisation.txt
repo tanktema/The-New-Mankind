@@ -1,0 +1,89 @@
+defined_text = {
+	name = GetPoliticsRegName
+	
+	text = {
+		trigger = {
+			check_variable = { reg_num_brit_pol = 1  }
+		}
+		localization_key = [365.GetName]
+	}
+	text = {
+		trigger = {
+			check_variable = { reg_num_brit_pol = 2  }
+		}
+		localization_key = [364.GetName]
+	}
+	text = {
+		trigger = {
+			check_variable = { reg_num_brit_pol = 3  }
+		}
+		localization_key = [363.GetName]
+	}
+}
+
+
+defined_text = {
+	name = GetRegDemoSupport
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 1 }
+		}
+		localization_key = [?365.reg_demo_support_gb]
+	}
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 2 }
+		}
+		localization_key = [?364.reg_demo_support_gb]
+	}
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 3 }
+		}
+		localization_key = [?363.reg_demo_support_gb]
+	}
+}
+
+defined_text = {
+	name = GetRegCommSupport
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 1 }
+		}
+		localization_key = [?365.reg_comm_support_gb]
+	}
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 2 }
+		}
+		localization_key = [?364.reg_comm_support_gb]
+	}
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 3 }
+		}
+		localization_key = [?363.reg_comm_support_gb]
+	}
+}
+
+defined_text = {
+	name = GetRegFascSupport
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 1 }
+		}
+		localization_key = [?365.reg_fasc_support_gb]
+	}
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 2 }
+		}
+		localization_key = [?364.reg_fasc_support_gb]
+	}
+	text = {
+		trigger = { 
+			check_variable = { reg_num_brit_pol = 3 }
+		}
+		localization_key = [?363.reg_fasc_support_gb]
+	}
+}
