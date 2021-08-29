@@ -49,16 +49,10 @@ bookmarks = {
 				GEM_new_view_of_germany
 			}
 		}
-		"GRB"={
-			history = "GRB_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-			
-			}
-			focuses = {
-				GRB_evac_focus
-				GRB_who_rules_britannia
-			}
+		"SOL"={
+			history = "RANDOM_GATHERING_STORM_DESC_TNM"
+			ideology = neutrality
+
 		}
 		
 

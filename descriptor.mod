@@ -10,5 +10,5 @@ dependencies={
 	"Equestria at War"
 }
 supported_version="1.10.*"
+
 path="C:/Users/tankt/OneDrive/Documents/Paradox Interactive/Hearts of Iron IV/mod/thenewmankind"
-remote_file_id="2157414899"

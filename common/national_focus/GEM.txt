@@ -1,5 +1,5 @@
 focus_tree = {
-	id = gem_focus_base
+	id = gem_focus
 	
 	country = {
 		factor = 0
@@ -1011,20 +1011,6 @@ focus_tree = {
 					other_race_general 
 					infantry_officer
 					cavalry_officer
-				}
-				skill = 4
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 4
-				logistics_skill = 2
-			}
-			create_corps_commander = {
-				name = "Aliz Neumann"
-				portrait_path = "gfx/leaders/GEM/Aliz.dds"
-				traits = {
-					other_race_general 
-					infantry_officer
-					spetsnaz_officer
 				}
 				skill = 4
 				attack_skill = 3

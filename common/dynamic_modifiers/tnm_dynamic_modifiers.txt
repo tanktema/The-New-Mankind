@@ -3,8 +3,8 @@ human_acceptance_politlevel = {
 	enable = {
 		is_human_race = yes 
 	}
-	stability_factor = acceptance_stability
-	offensive_war_stability_factor = acceptance_militarism_penalty
+	political_power_gain = acceptance_value_polit_ideology
+	offensive_war_stability_factor = -acceptance_value_tension
 }
 
 
@@ -15,63 +15,4 @@ hum_rage_modifier = {
 	stability_factor = human_rage_dynamic 
 	war_support_factor = human_rage_dynamic
 	political_power_gain = human_rage_dynamic
-}
-
-
-UNS_modifier_redworld = {
-	enable = {
-		AND = {
-			original_tag = UNS 
-			has_completed_focus = UNS_red_world
-		}
-	}
-	
-	justify_war_goal_time = american_allies_influence_negative
-	offensive_war_stability_factor = american_allies_influence_positive
-}
-	
-	
-UNS_unity_of_statesoc = {
-	enable = {
-		AND = {
-			original_tag = UNS
-			has_completed_focus = UNS_we_are_strong
-		}
-	}
-	
-	stability_factor = uns_unity_influence
-	war_support_factor = uns_unity_influence
-	political_power_gain = uns_unity_influence
-}
-
-UNS_minpeace_mod = {
-	AND = {
-		original_tag = UNS
-		has_completed_focus = UNS_minpeace_focus
-		
-		
-	}
-	political_power_gain = minpeace_use_pol
-	civilian_factory_ues = minpeace_use_fact
-	
-}
-
-UNS_minwar_mod = {
-	AND = {
-		original_tag = UNS
-		has_completed_focus = UNS_minwar_focus
-	}
-	political_power_gain = minwar_use_pol
-	civilian_factory_ues = minwar_use_fact
-	
-}
-
-UNS_minmor_mod = {
-	AND = {
-		original_tag = UNS
-		has_completed_focus = UNS_minmorale_focus
-	}
-	
-	political_power_gain = minmor_use_pol
-	civilian_factory_ues = minmor_use_fact
 }

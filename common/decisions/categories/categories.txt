@@ -2,44 +2,42 @@ resource_exploring_human_category = {
 	icon = generic_formable_nations
 	picture = GFX_resources
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 christmas_celebrating_category = {
 	icon = generic_formable_nations
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		is_human_race = yes
 	}
 }
 equestria_communist_support_category = {
 	icon = generic_formable_nations
 	allowed = {
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
-	}
-	visible = {
-		has_completed_focus = UNS_red_march
 	}
 }
 resource_keep_exploring_human_category = {
 	icon = generic_formable_nations
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 political_actions_category = {
 	icon = generic_formable_nations
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 extra_worktime_human_category = {
 	icon = generic_formable_nations
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		is_human_race = yes 
 		
 	}
@@ -47,7 +45,7 @@ extra_worktime_human_category = {
 scientifical_park_human_category = {
 	icon = generic_formable_nations
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
@@ -55,49 +53,49 @@ scientifical_expand_human_category = {
 	icon = generic_formable_nations
 
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }	
 industral_rebuild_category = {
 	icon = generic_formable_nations
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 fleet_reconstruction_category = {
 	icon = generic_formable_nations
 	allowed = {
-		
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 soviet_pressure_category = {
 	icon = generic_formable_nations
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 soviet_diplomacy_category = {
 	icon = generic_formable_nations
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }
 soviet_tsar_coring_decisions = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 state_renaming_category = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		
 	}
 	visible = { always = no }
@@ -112,21 +110,21 @@ sou_industrial_effort = {
 		
 	} 
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 SOU_resource_effort_category = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 SOU_resource_selling = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
@@ -139,7 +137,7 @@ SOU_vdnh_category = {
 		}
 	}
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 	picture = GFX_decision_sou_vdnh_picture
@@ -150,7 +148,7 @@ SOU_cremlin_category = {
 		has_completed_focus = SOU_rebuild_cremlin
 	}
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }
@@ -160,14 +158,14 @@ UNS_liberty_statue_category = {
 		has_completed_focus = UNS_liberty_statue
 	}
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 SOU_fleet_remake_category = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }
@@ -187,14 +185,14 @@ GEM_political_crisis_category = {
 		}
 	}
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }
 GEM_resources_category = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -202,7 +200,7 @@ GEM_resources_category = {
 GEM_resources_trading = {
 	icon = generic_formable_nations
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -210,7 +208,7 @@ GEM_resources_trading = {
 GEM_brand_gates = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -218,7 +216,7 @@ GEM_brand_gates = {
 GEM_fleet_remake_category = {
 	icon = generic_formable_nations
 	allowed = {
-
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -226,7 +224,7 @@ GEM_fleet_remake_category = {
 GEM_native_police_squads = {
 	icon = generic_formable_nations
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }
@@ -234,115 +232,7 @@ GEM_native_police_squads = {
 GEM_himmler_coring_decisions = {
 	icon = generic_formable_nations
 	allowed = {
-	
+		has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
-}
-
-
-
-UNS_soviet_pressure_category = {
-	allowed = {
-		original_tag = UNS
-	}
-}
-
-UNS_ministry_of_peace_cat = {
-	allowed = {
-		original_tag = UNS 
-	}
-	visible = {
-		check_variable = { minpeace_opened = 1 }
-	}
-	priority = 1000
-}
-UNS_ministry_of_war_cat = {
-	allowed = {
-		original_tag = UNS 
-	}
-	visible = {
-		check_variable = { minwar_opened = 1  }
-	}
-	priority = 999
-}
-UNS_ministry_of_morale_cat = { 
-	allowed = {
-		original_tag = UNS 
-	}
-	visible = {
-		check_variable = { minmorale_opened = 1  }
-	}
-	priority = 998
-}
-
-
-GRB_political_affairs_category = {
-	allowed = {
-		original_tag = GRB 
-	}
-	visible = {
-		OR = {
-			AND = {
-				has_completed_focus = GRB_death_of_churchill
-				NOT = {
-					has_country_flag = politics_solved 
-				}
-			}
-			AND = {
-				is_debug = yes 
-				NOT = {
-					has_country_flag = politics_solved 
-				}
-			}
-		}
-		
-	}
-	visible_when_empty = yes 
-	scripted_gui = GRB_political_decisions_gui
-	priority = 999
-}
-
-
-
-GRB_communist_revolt_decisions = {
-	allowed = {
-		original_tag = GRB 
-	}
-	visible = {
-		OR = {
-			has_completed_focus = GRB_otkryvai_padla_communism_idet
-			is_debug = yes 
-		}
-		
-	}
-	priority = 500
-}
-
-GRB_communist_revolt_starting = { 
-	allowed = {
-		original_tag = GRB 
-	}
-	visible = {
-		OR = {
-			has_completed_focus = GRB_otkryvai_padla_communism_idet
-			is_debug = yes 
-		}
-	}
-	priority = 498
-	visible_when_empty = yes
-}
-
-
-GRB_communist_support = {
-	allowed = {
-		original_tag = GRB 
-	}
-	visible = {
-		OR = {
-			has_completed_focus = GRB_otkryvai_padla_communism_idet
-			is_debug = yes 
-		}
-	}
-	priority = 499
-	visible_when_empty = yes
 }

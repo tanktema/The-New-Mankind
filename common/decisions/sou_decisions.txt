@@ -299,7 +299,6 @@ sou_industrial_effort = {
 					add_idea = SOU_industry_broken_lvl2
 				}
 				set_country_flag = diminish_1
-				add_to_variable = { industrial_broken_sou = -33 }
 			}
 			else_if = {
 				limit = {
@@ -310,7 +309,6 @@ sou_industrial_effort = {
 					add_idea = SOU_industry_broken_lvl3
 				} 
 				set_country_flag = diminish_2
-				add_to_variable = { industrial_broken_sou = -33 }
 			}
 			else_if = {
 				limit = {
@@ -321,9 +319,7 @@ sou_industrial_effort = {
 					add_idea = SOU_industry_broken_lvl4
 				}
 				set_country_flag = diminish_3
-				add_to_variable = { industrial_broken_sou = -33 }
 			}
-			
 		}
 		
 		ai_will_do = {
@@ -862,149 +858,211 @@ SOU_resource_effort_category = {
 SOU_resource_selling = {
 	sell_resources_to_other_sou = {
 		visible = {
-			FROM = {
-				OR = {
-					has_resources_amount = {
-						resource = steel 
-						amount > 0
-					} 
-					has_resources_amount = {
-						resource = chromium
-						amount > 0
-					} 
-					has_resources_amount = {
-						resource = oil 
-						amount > 0 
-					}
-					has_resources_amount = {
-						resource = tungsten
-						amount > 0
-					}
-				}
+			OR = {
+				has_completed_focus = SOU_sell_resources
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
 			}
 		}
 		state_target = yes 
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				is_core_of = ROOT
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT 
+				is_fully_controlled_by = ROOT 
+			}
+		}
 		target_array = ROOT.controlled_states
-		cost = 50 
-		days_remove = 30
+		cost = 50
+		days_remove = 60
 		days_re_enable = 60
 		complete_effect = {
-			FROM = {
-				set_variable = { selling_res_country = 0 }
-				set_variable = { had_steel_before_sell = resource@steel }
-				set_variable = { had_chrom_before_sell = resource@chromium }
-				set_variable = { had_oil_before_sell = resource@oil }
-				set_variable = { had_tungs_before_sell = resource@tungsten }
-				set_temp_variable = { steel_to_remove = FROM.resource@steel }
-				set_temp_variable = { chrom_to_remove = FROM.resource@chromium }
-				set_temp_variable = { oil_to_remove = FROM.resource@oil }
-				set_temp_variable = { tungs_to_remove = FROM.resource@tungsten }
-				divide_temp_variable = { steel_to_remove = -1 }
-				divide_temp_variable = { chrom_to_remove = -1 }
-				divide_temp_variable = { oil_to_remove = -1 }
-				divide_temp_variable = { tungs_to_remove = -1 }
-				set_variable = { steel_removing = steel_to_remove }
-				set_variable = { chrom_removing = chrom_to_remove } 
-				set_variable = { steel_removing = oil_removing }
-				set_variable = { chrom_removing = tungs_removing } 
-				custom_effect_tooltip = uns_factor_tt_1 
-				
+			if = {
+				limit = {
+					has_completed_focus = SOU_sell_resources
+				}
+				random_neighbor_country = {
+					give_resource_rights = { state = FROM }
+					set_country_flag = res_sold_from_sou
+				}
+				set_variable = { var_resource_sell = 0 }
 			}
-			hidden_effect = {
-				add_resource = {
-					type = steel 
-					amount = FROM.steel_removing
-					state = FROM
+			else_if = {
+				limit = {
+					has_completed_focus = SOU_geological_treaty
 				}
-				add_resource = {
-					type = chromium
-					amount = FROM.chrom_removing
-					state = FROM 
+				give_resource_rights = { state = FROM receiver = STG }
+				set_variable = { var_resource_sell = 0 }
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SOU_resource_griff
 				}
-				add_resource = {
-					type = steel 
-					amount = FROM.oil_removing
-					state = FROM
-				}
-				add_resource = {
-					type = chromium
-					amount = FROM.tungs_removing
-					state = FROM 
-				}
+				give_resource_rights = { state = FROM receiver = GRF }
+				set_variable = { var_resource_sell = 0 }
 			}
 		}
 		remove_effect = {
-			hidden_effect = {
-				add_resource = {
-					type = steel 
-					amount = FROM.had_steel_before_sell
-					state = FROM 
+			if = {
+				limit = {
+					has_completed_focus = SOU_sell_resources
 				}
-				add_resource = {
-					type = chromium 
-					amount = FROM.had_chrom_before_sell
-					state = FROM 
-				}
-				add_resource = {
-					type = steel 
-					amount = FROM.had_oil_before_sell
-					state = FROM 
-				}
-				add_resource = {
-					type = chromium 
-					amount = FROM.had_tungs_before_sell
-					state = FROM 
-				}
-			
-				FROM = {	
-					clamp_variable = { 
-						var = had_steel_before_sell
-						min = 0
-						max = 15
+				random_neighbor_country = {
+					limit = {
+						has_country_flag = res_sold_from_sou
 					}
-					clamp_variable = { 
-						var = had_chrom_before_sell
-						min = 0
-						max = 15
-					}
-					clamp_variable = { 
-						var = had_oil_before_sell
-						min = 0
-						max = 15
-					}
-					clamp_variable = { 
-						var = had_tungs_before_sell
-						min = 0
-						max = 15
-					}
-					divide_variable = { had_steel_before_sell = 5 }
-					divide_variable = { had_chrom_before_sell = 5 }
-					divide_variable = { had_tungs_before_sell = 5 }
-					divide_variable = { had_oil_before_sell = 5 }
-					round_variable = had_steel_before_sell
-					round_variable = had_chrom_before_sell
-					round_variable = had_tungs_before_sell
-					round_variable = had_oil_before_sell
-					set_variable = { resources_to_get_amount = 0 }
-					add_to_variable = { resources_to_get_amount = had_steel_before_sell }
-					add_to_variable = { resources_to_get_amount = had_tungs_before_sell }
-					add_to_variable = { resources_to_get_amount = had_chrom_before_sell }
-					add_to_variable = { resources_to_get_amount = had_oil_before_sell }
-					divide_variable = { resources_to_get_amount = 2 }
-					round_variable = resources_to_get_amount
+					remove_resource_rights = FROM 
 				}
-
-				add_offsite_building = {
-					type = industrial_complex
-					level = FROM.resources_to_get_amount
+			}
+			if = {
+				limit = {
+					has_completed_focus = SOU_geological_treaty
 				}
-				add_offsite_building = {
-					type = arms_factory
-					level = FROM.resources_to_get_amount
+				STG = {
+					remove_resource_rights = FROM 
 				}
-			}	
+			}
+			if = {
+				limit = {
+					has_completed_focus = SOU_resource_griff
+				}
+				GRF = {
+					remove_resource_rights = FROM 
+				}
+			}
 			custom_effect_tooltip = uns_factor_tt_1
+			hidden_effect = {
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				set_temp_variable = { var_res_temp = var_resource_sell }
+				divide_temp_variable = { var_res_temp = 2 }
+				round_temp_variable =  var_res_temp 
+				set_variable = { var_resources_factories = var_res_temp }
+				add_offsite_building = { 
+					type = industrial_complex
+					level = root.var_resources_factories
+					instant_build = yes 
+				}
+				add_offsite_building = { 
+					type = arms_factory
+					level = root.var_resources_factories
+					instant_build = yes 
+				}
+			}
+			
 		}
+		
 	}
 }
 SOU_vdnh_category = {

@@ -51,7 +51,7 @@ opinion_modifiers = {
 		value = 60
 	}
 	friendship_between = {
-		value = 25
+		value = 75
 	}
 	anticommunsim_politics = {
 		value = -50
@@ -81,14 +81,6 @@ opinion_modifiers = {
 	}
 	antifascist_politics = {
 		value = -50
-	}
-	
-	embassy_opened = {
-		value = 30
-	}
-	
-	joined_fair = {
-		value = 50
 	}
 }
 	
