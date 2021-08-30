@@ -245,4 +245,80 @@
     
     GEM_bayer:0 "Bayer"
     GEM_siemens:0 "Siemens"
+<<<<<<< HEAD
     medical_company_trait:0 "Медицинская лаборатория"
+    
+    UNS_no_suffer:0 "Забыть про страдания"
+    UNS_we_protect:0 "Мы защищаем"
+    UNS_we_help:0 "Мы помогаем"
+    UNS_salvation:0 "Мы - спасение"
+    UNS_minpeace_healthdep_idea:0 "Раздача медикаментов"
+    UNS_minpeace_edudep_idea:0 "Открыты новые школы"
+    UNS_minpeace_satdep_idea:0 "Люди довольны"
+    UNS_biobombings:0 "Последствия биооружия"
+    UNS_work_together:0 "Работаем вместе!"
+    UNS_angels_of_death_idea:0 "Ангелы Смерти"
+    UNS_victory_is_ours:0 "Победа близка"
+    UNS_officers_purge:0 "Чистки среди офицеров"
+    UNS_wartime_measures_idea:0 "Меры военного времени"
+    UNS_propaganda_mil:0 "Военная пропаганда"
+    UNS_native_army:0 "Местные солдаты"
+    UNS_war_preparation:0 "Подготовка к войне"
+    UNS_equestrian_defplan:0 "План обороны Эквестрии"
+    UNS_bestrong:0 "Стой до конца!" 
+    UNS_statesoc_broadcast:0 "Пропаганда STATESOC"
+    UNS_prepared_for_war:0 "Готовы к войне"
+    UNS_nukes_by_wmd:0 "Разработка ОМП"
+    UNS_soviet_trainings:0 "Американо-Советские учения"
+    UNS_german_scientists:0 "Немецкие Ученые"
+    UNS_humanity_first_idea:0 "Человечество не падет!" 
+    UNS_frienship_perfections:0 "Идеалы дружбы"
+    UNS_afterwar_support_idea:0 "Послевоенная поддержка"
+    UNS_afterwar_support_idea_uns:0 "Послевоенная поддержка"
+    UNS_harmony_defender_idea:0 "Защитник Гармонии"
+    UNS_red_march_idea:0 "Красный Марш"
+    UNS_paratroopers_invasion:0 "Ставка на десант"
+    UNS_marines_invasion:0 "Морское вторжение"
+    UNS_usmc_invasion:0 "Ставка на морпехов"
+    UNS_fighters_for_war:0 "Ставка на Истребители"
+    UNS_heavy_aircraft:0 "Тяжелая авиация"
+    UNS_build_ships:0 "Строить больше кораблей"
+    UNS_build_dockyards:0 "Строить больше верфей"
+    UNS_comm_superiority:0 "Превосходство Коммунизма"
+    UNS_support:0 "Поддержка США"
+    UNS_vittenland_science:0 "Виттэнлендские ученые"
+    UNS_dogs_geologists:0 "Геологи Алмазной Горы"
+    UNS_ulbricht_exile:0 "Вальтер Ульбрихт"
+    UNS_rarity:0 "Рэрити"
+    exiled_german_communist:0 "Коммунист в Изгнании"
+    UNS_pacific_equestrian_railroad:0 "Pacific-Equestrian Railroad"
+    railroad_builder:0 "Железнодорожный магнат"
+    
+    
+    
+    
+    
+    
+    
+    UNS_lyra_heartsrings:0 "Лира Хартсрингс"
+    UNS_lyra_heartsrings_desc:0 "-А вы правда человеки? Настоящие? А у вас есть пальцы? А ноги? А у вас действительно нет хвоста? Ой мамочки, вы действительно настоящие!"
+    UNS_robert_oppenheimer:0 "Роберт Оппенгеймер"
+    UNS_sky_star:0 "Скай Стар"
+    general_bradley:0 "Генерал Брэдли"
+    
+    SOU_gromyko_selhoz:0 "Андрей Громыко"
+    SOU_gromyko_mininist:0 "Андрей Громыко"
+    SOU_altidya:0 "Альтидия"
+    dmitry_yazov:0 "Дмитрий Язов"
+    
+    
+    lyra_human_lover:0 "Фанат человечества"
+    nuclear_pacifist:0 "Ядерщик-Пацифист"
+    magical_human_assistant:0 "Маг-помощник"
+    gromyko_minist_trait:0 "Министр Иностранных дел"
+    gromyko_selhoz_trait:0 "Министр Сельского Хозяйства"
+    gen_yazov:0 "Командир-Ветеран"
+    altidiya_sssr:0 "Коммунист на пенсии"
+=======
+    medical_company_trait:0 "Медицинская лаборатория"
+>>>>>>> 986c19d2ac3138690e167a6826a295cffbb7991f

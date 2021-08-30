@@ -300,6 +300,94 @@ leader_traits = {
 				}
 			}
 		}
+		
+		exiled_german_communist = {
+			random = no 
+			fascism_drift = -0.02
+			communism_drift = 0.02
+			stability_factor = 0.05
+			war_support_factor = 0.07
+			communism_acceptance = 25
+			fascism_acceptance = -50
+		}
+		
+		statesoc_trait = {
+			random = no 
+			stability_factor = 0.1
+			ai_focus_aggressive_factor = 0.5
+			crypto_strength = 10
+			encryption_factor = 0.1
+		}
+		
+		railroad_builder = {
+			random = no 
+			production_speed_infrastructure_factor = 0.25
+			dig_in_speed = 2
+			army_speed_factor = 0.15
+		}
+		
+		
+		dies_soon_trait = {
+		
+			random = no 
+			custom_modifier_tooltip = dies_soon_tt 
+		}
+		
+		
+		lyra_human_lover = {
+			random = no 
+			custom_modifier_tooltip = acceptance_10_modifier
+			
+		}
+		
+		
+		nuclear_pacifist = {
+			research_speed_factor = 0.05
+			research_bonus = {
+				nuclear = 0.1
+			}
+			stability_factor = -0.07
+			war_support_factor = -0.1
+		}
+		
+		
+		magical_human_assistant = {
+			random = no 
+			research_speed_factor = 0.05
+			research_bonus = {
+				magical_tech = 0.08
+				race_tech = 0.1
+			}
+		}
+		
+		gromyko_minist_trait = {
+			random = no 
+			custom_modifier_tooltip = acceptance_10_modifier
+			
+		}
+		gromyko_selhoz_trait = {
+			random = no 
+			MONTHLY_POPULATION = 0.25 
+			stability_factor = 0.02
+		}
+		
+		gen_yazov = {
+			random = no 
+			offence = 0.08
+			defence = 0.1 
+			army_org_factor = 0.15
+			political_power_gain = -0.1
+			stability_factor = -0.07
+			war_support_factor = 0.06
+		}
+		
+		
+		altidiya_sssr = {
+			random = no 
+			drift_defence_factor = 0.15
+			communism_drift = 0.02
+			stability_factor = 0.05
+		}
 	}
 	
 		

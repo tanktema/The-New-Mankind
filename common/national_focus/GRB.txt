@@ -2902,11 +2902,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = GRB_recreation_zones
 		prerequisite = { focus = GRB_recreation_zones }
+		prerequisite = { focus = GRB_modernization }
 		cost = 5
 		completion_reward = {
 			FBK = {
 				set_cosmetic_tag = GRB_SUBJ_FBK_NEW
-				every_state = {
+				every_state = { 
 					limit = {
 						is_claimed_by = FBK 
 					}

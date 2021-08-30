@@ -448,6 +448,7 @@ technologies = {
 			position = { x = 9 y = 0 }
 		}
 		research_cost = 1
+		start_year = 1008
 		categories = {
 			race_tech
 			human_tech
@@ -455,7 +456,7 @@ technologies = {
 		}
 		infantry = {
 			defense = 0.05
-			max_strength = 1
+			max_strength = 0.1
 			armor_value = 0.01
 		}
 	}
@@ -468,7 +469,8 @@ technologies = {
 			name = human_folder
 			position = { x = 8 y = 2 }
 		}
-		research_cost = 1
+		research_cost = 2
+		start_year = 1010
 		categories = {
 			race_tech
 			human_tech
@@ -477,7 +479,7 @@ technologies = {
 		infantry = {
 			defense = 0.05
 			speed = -0.01
-			max_strength = 1
+			max_strength = 0.25
 		}
 	}
 	heavy_inf_armor = {
@@ -489,7 +491,8 @@ technologies = {
 			name = human_folder
 			position = { x = 8 y = 4 }
 		}
-		research_cost = 1
+		research_cost = 3
+		start_year = 1012
 		categories = {
 			race_tech
 			human_tech
@@ -498,7 +501,7 @@ technologies = {
 		infantry = {
 			defense = 0.1
 			speed = -0.05
-			max_strength = 2
+			max_strength = 0.5
 			armor_value = 0.05
 			urban = {
 				attack = 0.1
@@ -515,7 +518,8 @@ technologies = {
 			name = human_folder
 			position = { x = 8 y = 6 }
 		}
-		research_cost = 1.5
+		research_cost = 4
+		start_year = 1014
 		categories = {
 			race_tech
 			human_tech
@@ -524,7 +528,7 @@ technologies = {
 		infantry = {
 			defense = 0.15
 			speed = 0.05
-			max_strength = 2
+			max_strength = 0.7
 			armor_value = 0.06
 		}
 	}
@@ -533,7 +537,8 @@ technologies = {
 			name = human_folder
 			position = { x = 8 y = 8 }
 		}
-		research_cost = 2.5
+		research_cost = 5
+		start_year = 1016
 		categories = {
 			race_tech
 			human_tech
@@ -542,7 +547,7 @@ technologies = {
 		infantry = {
 			defense = 0.15
 			speed = 0.05
-			max_strength = 3
+			max_strength = 1
 			armor_value = 0.04
 			initiative = 0.1
 		}
@@ -587,7 +592,7 @@ technologies = {
 			attack  = 0.05
 			soft_attack = 0.05
 			breakthrough = 0.05
-			recon = 1
+			recon = 0.12
 		}
 	}
 	magical_scanning_system = {

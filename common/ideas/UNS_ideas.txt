@@ -1303,9 +1303,6 @@ ideas = {
 				}
 			}
 			traits = { nuclear_pacifist }
-			research_bonus = {
-				nuclear = 0.1
-			}
 		}
 		
 		UNS_sky_star = {
@@ -1317,10 +1314,6 @@ ideas = {
 				}
 			}
 			traits = { magical_human_assistant }
-			research_bonus = {
-				magical_tech = 0.08
-				race_tech = 0.1
-			}
 		}
 	}
 	army_chief = {

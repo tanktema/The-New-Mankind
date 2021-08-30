@@ -49,9 +49,9 @@ bookmarks = {
 				GEM_new_view_of_germany
 			}
 		}
-		"SOL"={
-			history = "RANDOM_GATHERING_STORM_DESC_TNM"
-			ideology = neutrality
+		"GRB"={
+			history = "GRB_GATHERING_STORM_DESC_TNM"
+			ideology = democratic
 
 		}
 		
