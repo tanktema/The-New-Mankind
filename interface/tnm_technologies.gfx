@@ -237,7 +237,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_UNS_advanced_light_tank_b_medium"
-		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank4.dds"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank5.dds"
 	} 
 	SpriteType = {
 		name = "GFX_UNS_basic_medium_tank_medium"
@@ -615,7 +615,7 @@ spriteTypes = {
 		name = "GFX_GEM_motorised_infantry_medium"
 		texturefile = "gfx/interface/technologies/GEM/GEM_motor.dds"
 	}	
-<<<<<<< HEAD
+
 
 
 	SpriteType = {
@@ -658,5 +658,39 @@ spriteTypes = {
 		name = "GFX_GEM_amphibious_mechanized_infantry_5_medium"
 		texturefile = "gfx/interface/technologies/GEM/GEM_puma.dds"
 	}
-=======
->>>>>>> 986c19d2ac3138690e167a6826a295cffbb7991f
+
+
+
+
+	SpriteType = {
+		name = "GFX_GRB_melee_weapons_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_enfield.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_melee_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lee_enfield.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_enfield_1917.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_bren.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_improved_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_sten.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_sterling.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_infantry_weapons_b_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_enfieldem2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_infantry_weapons_e_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_enfieldl85.dds"
+	}

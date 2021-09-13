@@ -236,3 +236,93 @@ GEM_himmler_coring_decisions = {
 		original_tag = GEM
 	}
 }
+
+
+UNS_soviet_pressure_category = {
+	allowed = {
+		original_tag = UNS
+	}
+}
+
+UNS_ministry_of_peace_cat = {
+	allowed = {
+		original_tag = UNS 
+	}
+	visible = {
+		check_variable = { minpeace_opened = 1 }
+	}
+	priority = 1000
+}
+UNS_ministry_of_war_cat = {
+	allowed = {
+		original_tag = UNS 
+	}
+	visible = {
+		check_variable = { minwar_opened = 1  }
+	}
+	priority = 999
+}
+UNS_ministry_of_morale_cat = { 
+	allowed = {
+		original_tag = UNS 
+	}
+	visible = {
+		check_variable = { minmorale_opened = 1  }
+	}
+	priority = 998
+}
+
+
+GRB_political_affairs_category = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		OR = {
+			AND = {
+				has_completed_focus = GRB_death_of_churchill
+				NOT = {
+					has_country_flag = politics_solved 
+				}
+			}
+			is_debug = yes 
+		}
+		
+	}
+	visible_when_empty = yes 
+	scripted_gui = GRB_political_decisions_gui
+	priority = 999
+}
+
+GRB_communist_revolt_decisions = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		has_completed_focus = GRB_otkryvai_padla_communism_idet
+	}
+	
+	visible_when_empty = yes 
+}
+
+GRB_communist_revolt_starting = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		has_completed_focus = GRB_otkryvai_padla_communism_idet
+	}
+	
+	visible_when_empty = yes 
+}
+
+GRB_communist_support = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		has_completed_focus = GRB_otkryvai_padla_communism_idet
+	}
+	
+	visible_when_empty = yes 
+}

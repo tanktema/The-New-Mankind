@@ -79,3 +79,10 @@
     GRB_SUBJ_FBK_NEW_neutrality:0 "Ист-Канада"
     GRB_SUBJ_PNG_NEW_neutrality:0 "Норт-Саксония"
     GRB_SUBJ_ZES_NEW_neutrality:0 "Нью-Индия"
+    
+    GRB_JER_knight_fascism:0 "Аквелийская Земля"
+    GRB_GRI_knight_fascism:0 "Земли Герцланда"
+    GRB_WNG_knight_fascism:0 "Южногрифоньи Земли"
+    GRB_GRF_knight_fascism:0 "Земли Ист-Грифонии"
+    GRB_STG_knight_fascism:0 "Северянская Земля"
+    GRB_EQS_knight_fascism:0 "Эквусские Земли"

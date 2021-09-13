@@ -273,6 +273,79 @@ ideas = {
 			}
 		}
 		
+		
+		GRB_zebra_goods = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_factor = 0.25
+				consumer_goods_factor = 0.025
+				civilian_factory_use = 2
+				army_morale_factor = 0.15
+				army_attack_factor = 0.07
+			}
+		}
+		 
+		GRB_inquisition = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				non_core_manpower = -0.25
+				boost_resistance_factor = -0.25
+				starting_compliance = 0.1
+				#root_out_resistance_effectiveness_factor = -0.1
+			}
+		}
+		
+		GRB_knights = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.015
+				war_support_factor = 0.05
+			}
+		}
+		
+		GRB_army_preparation_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				#conscription = 0.015
+				special_forces_cap = 0.15
+				training_time_factor = -0.15
+				army_attack_factor = 0.07
+				army_defence_factor = 0.07
+			}
+		}
+		
+		GRB_mi6_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				agency_upgrade_time = -0.15 
+				civilian_intel_factor = 0.1
+				army_intel_factor = 0.1
+				army_intel_factor = 0.1
+				airforce_intel_factor = 0.1
+				crypto_strength = 25
+				operative_slot = 1
+			}
+		}
+		
+		GRB_cross_ocean = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				special_forces_cap = 0.2
+				
+			}
+			targeted_modifier = {
+				attack_bonus_against = 0.1
+				tag = EQS
+			}
+		}
+		
+		
 	}
 	
 	
@@ -284,7 +357,9 @@ ideas = {
 			allowed = {
 				original_tag = GRB 
 			}
-
+			available = {
+				has_completed_focus = GRB_contact_olds
+			}
 			research_bonus = {
 				armor = 0.15
 			}
@@ -294,7 +369,9 @@ ideas = {
 			allowed = {
 				original_tag = GRB
 			}
-
+			available = {
+				has_government = neutrality
+			}
 			research_bonus = {
 				armor = 0.1
 				magical_tech = 0.05
@@ -307,11 +384,13 @@ ideas = {
 	
 		designer = yes
 
-		GRB_holland_and_holland = {
+		GRB_holland_and_holland = { ### EQS
 			allowed = {
 				original_tag = GRB 
 			}
-
+			available = {
+				has_completed_focus = GRB_equestrian_companies
+			}
 			research_bonus = {
 				infantry = 0.1
 				magical_tech = 0.1
@@ -322,7 +401,9 @@ ideas = {
 			allowed = {
 				original_tag = GRB
 			}
-
+			available = {
+				has_completed_focus = GRB_contact_olds
+			}
 			research_bonus = {
 				infantry = 0.1
 				sniper_tech = 0.1
@@ -345,44 +426,36 @@ ideas = {
 		
 		designer = yes 
 		
-		GRB_drax_powerplant = {
-			allowed = {
-				original_tag = GRB 
-			}
-
-			research_bonus = {
-				industry = 0.1
-			}
-			traits = { master_of_building }
-		}
 		
-		GRB_baratt_development = {
+		
+		GRB_baratt_development = { ### EQS
 			allowed = {
 				OR = {
 					original_tag = GRB 
 					original_tag = EQS 
 				}
 			}
-			
+			available = {
+				has_completed_focus = GRB_equestrian_companies
+			}
 			traits = { railroad_builder }
 		}
 		
-		GRB_vedanta_resources = {
+		GRB_vedanta_resources = { ### JER
 			allowed = {
 				OR = {
 					original_tag = GRB 
-					original_tag = EQS 
+					original_tag = JER 
 				}
 			}
-			
-			traits = { railroad_builder }
+			available = {	
+				has_completed_focus = GRB_griffonian_companies
+			}
+			traits = { trading_company_grb }
 		}
 		GRB_cnh_industrial = {
 			allowed = {
-				OR = {
-					original_tag = GRB 
-					original_tag = EQS 
-				}
+				original_tag = GRB 
 			}
 			
 			traits = { railroad_builder }
@@ -396,13 +469,32 @@ ideas = {
 					original_tag = ZES
 				}
 			}
+			available = {
+				always = no 
+			}
 			visible = {
 				if = {
 					limit = {
 						original_tag = PNG
 					}
 					GRB = {
-						has_completed_focus = GRB_penguin_resources
+						has_completed_focus = GRB_northern_equus
+					}
+				}
+				if = {
+					limit = {
+						original_tag = FBK
+					}
+					GRB = {
+						has_completed_focus = GRB_northern_griffonia
+					}
+				}
+				if = {
+					limit = {
+						original_tag = ZES
+					}
+					GRB = {
+						has_completed_focus = GRB_east_of_griphonya
 					}
 				}
 			}
@@ -424,18 +516,22 @@ ideas = {
 			allowed = {
 				original_tag = GRB 
 			}
-			available = {
+			#available = {
 	
 			research_bonus = {
 				air_equipment = 0.10
 			}
 			traits = { heavy_aircraft_manufacturer medium_aircraft_manufacturer }
 		}
+		
+		
 		GRB_bristol = {
 			allowed = {
 				original_tag = GRB 
 			}
-
+			available = {
+				has_completed_focus = GRB_contact_olds
+			}
 			research_bonus = {
 				air_equipment = 0.10
 			}
@@ -452,5 +548,24 @@ ideas = {
 			}
 		
 			traits = { old_world_shipyard }
+		}
+		
+		GRB_mistral = { #### JER
+			allowed = {
+				original_tag = GRB
+			}
+			available = {
+				has_completed_focus = GRB_griffonian_companies
+			}
+			traits = { old_world_shipyard }
+			equipment_bonus = {
+				
+				ship_hull_heavy = {
+					armor_value = 0.05
+					anti_air_attack = 0.05
+					surface_visibility = -0.05
+					instant = yes
+				}
+			}
 		}
 	}

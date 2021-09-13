@@ -388,6 +388,13 @@ leader_traits = {
 			communism_drift = 0.02
 			stability_factor = 0.05
 		}
+		
+		trading_company_grb = {
+			random = no 
+			production_speed_industrial_complex_factor = 0.1
+			local_resources_factor = 0.15
+			stability_factor = 0.05
+		}
 	}
 	
 		

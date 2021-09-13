@@ -1356,3 +1356,32 @@ GRB_SUBJ_ZES_NEW = {
 	color = rgb { 41 102 53 }
 	color_ui = rgb ( 60 120 56 }
 }
+GRB_JER_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb ( 60 120 56 }
+}
+
+GRB_GRI_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb ( 60 120 56 }
+}
+
+GRB_WNG_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb ( 60 120 56 }
+}
+
+GRB_GRF_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb ( 60 120 56 }
+} 
+
+GRB_STG_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb ( 60 120 56 }
+}
+
+GRB_EQS_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb ( 60 120 56 }
+}

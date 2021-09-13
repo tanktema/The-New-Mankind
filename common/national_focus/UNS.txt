@@ -4692,6 +4692,10 @@ focus_tree = {
 		icon = GFX_goal_UNS_SNOVA_supernova
 		available = {
 			has_government = democratic
+			has_country_leader = {
+				name = "General Gershell fon Shepherd"
+				ruling_only = yes 
+			}
 		}
 		allow_branch = {
 			EQS = {

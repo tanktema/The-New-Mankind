@@ -33,7 +33,7 @@ on_actions = {
 	
 	on_daily = {
 		effect = {
-<<<<<<< HEAD
+
 			
 			if = {
 				limit = {
@@ -336,31 +336,53 @@ on_actions = {
 					}
 				}
 			}
-		}
-	}
-	
-	
-	
-	on_nuke_drop = {
-		effect = {
-			if = { 
+			
+			if = {
 				limit = {
-				
-					FROM = {
-						state = 312 
-					}
-					OR = {
-						original_tag = SOU 
-						original_tag = UNS 
-					}
+					has_completed_focus = GRB_plantations
 				}
-				FROM = {
-					set_state_flag = nuked_by_hum
+				add_political_power = 25
+				random_list = {
+					50 = {
+					
+					}
+					50 = {
+						add_equipment_to_stockpile = {
+							type = infantry_equipment
+							amount = 750
+							producer = ROOT 
+						}
+						
+						add_equipment_to_stockpile = {
+							type = support_equipment
+							amount = 250
+							producer = ROOT 
+						}
+						add_equipment_to_stockpile = {
+							type = artillery_equipment
+							amount = 250
+							producer = ROOT 
+						}
+						random_list = {
+							75 = {
+							
+							}
+							25 = {
+								add_offsite_building = {
+									type = arms_factory
+									level = 1
+								}
+							}
+						}
+					}
 				}
 			}
-			
 		}
 	}
+	
+	
+	
+	
 	
 	
 				
@@ -378,7 +400,7 @@ on_actions = {
 						}
 					}
 				}
-				ROOT = {
+				FROM = {
 					set_cosmetic_tag = SOU_SSR
 					set_autonomy = {
 						target = ROOT 
@@ -403,7 +425,8 @@ on_actions = {
 				ROOT = {
 					add_to_variable = { uns_unity_statesoc = -0.25 }
 					check_statesoc_level = yes
-=======
+				}
+			}
 			if = {
 				limit = {
 					is_human_race = yes 
@@ -488,7 +511,7 @@ on_actions = {
 				OR = {
 					original_tag = SOU 
 					original_tag = UNS 
->>>>>>> 986c19d2ac3138690e167a6826a295cffbb7991f
+					original_tag = GRB
 				}
 			}
 			FROM = {
@@ -496,7 +519,7 @@ on_actions = {
 			}
 		}
 	}
-<<<<<<< HEAD
+
 	on_peaceconference_ended = {
 		effect = {
 			if = {
@@ -578,6 +601,24 @@ on_actions = {
 				}
 				FROM = {
 					set_cosmetic_tag = GRB_SUBJ_PNG
+					add_ideas = GRB_PNG_infl
+					create_country_leader = {
+						name = "Colonial Administration"
+						desc = "GRB_SANTODES"
+						picture = "gfx/leaders/GRB/montypiton.dds"
+						expire = 1999.9.9
+						ideology = neofeudalism
+						traits = {
+						
+						}
+					}
+					
+					set_party_name = {
+						ideology = neutrality
+						long_name = GRB_SUBJ_neutral_party_long
+						name = GRB_SUBJ_neutral_party
+						
+					}
 				}
 			}
 			if = {
@@ -608,18 +649,79 @@ on_actions = {
 				}
 				FROM = {
 					set_cosmetic_tag = GRB_SUBJ_FBK
+					add_ideas = GRB_PNG_infl
+					create_country_leader = {
+						name = "Colonial Administration"
+						desc = "GRB_SANTODES"
+						picture = "gfx/leaders/GRB/montypiton.dds"
+						expire = 1999.9.9
+						ideology = neofeudalism
+						traits = {
+						
+						}
+					}
+					
+					set_party_name = {
+						ideology = neutrality
+						long_name = GRB_SUBJ_neutral_party_long
+						name = GRB_SUBJ_neutral_party
+						
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					ROOT = {
+						AND = {
+							original_tag = GRB
+							has_completed_focus = GRB_east_of_griphonya
+						}
+					}
+					FROM = {
+						original_tag = ZES 
+					}
+				}
+				ROOT = {
+					set_autonomy = {
+						target = FROM 
+						autonomy_state = autonomy_dominion
+					}
+					every_owned_state = {
+						limit = {
+							is_core_of = FROM 
+						}
+						FROM = {
+							transfer_state = PREV
+						}
+					}
+				}
+				FROM = {
+					set_cosmetic_tag = GRB_SUBJ_ZES
+					add_ideas = GRB_PNG_infl
+					create_country_leader = {
+						name = "Colonial Administration"
+						desc = "GRB_SANTODES"
+						picture = "gfx/leaders/GRB/montypiton.dds"
+						expire = 1999.9.9
+						ideology = neofeudalism
+						traits = {
+						
+						}
+					}
+					
+					set_party_name = {
+						ideology = neutrality
+						long_name = GRB_SUBJ_neutral_party_long
+						name = GRB_SUBJ_neutral_party
+						
+					}
 				}
 			}
 						
 		}
 	}
 	
-	on_capitulation = {
-		effect = {
-			
-		}
-	}
-=======
->>>>>>> 986c19d2ac3138690e167a6826a295cffbb7991f
+	
 }
 			

@@ -1,20 +1,20 @@
 ﻿l_russian:
-    UNS_melee_equipment_0:0 "Винтовка Пибоди-Мартини"
-    UNS_melee_equipment_0_short:0 "Пибоди-Мартини"
-    UNS_melee_equipment_1:0 "Springfield M1903"
+    UNS_melee_equipment_0:0 "Винтовка Пибоди-Мартини" ### Энфилд
+    UNS_melee_equipment_0_short:0 "Пибоди-Мартини" 
+    UNS_melee_equipment_1:0 "Springfield M1903" ### Ли-Энфилд
     UNS_melee_equipment_1_short:0 "M1903"
-    UNS_infantry_equipment_0:0 "Enfield M1917 и нож Ka-Bar"
+    UNS_infantry_equipment_0:0 "Enfield M1917 и нож Ka-Bar" ### Энфилд м1917
     UNS_infantry_equipment_0_short:0 "Enfield M1917"
-    UNS_infantry_equipment_1:0 "M1 Garand"
+    UNS_infantry_equipment_1:0 "M1 Garand" ### Пулемет Льюис
     UNS_infantry_equipment_1_short:0 "M1 Garand"
-    UNS_infantry_equipment_2:0 "M14 "
+    UNS_infantry_equipment_2:0 "M14 " ### Стен
     UNS_infantry_equipment_2_short:0 "M14"
-    UNS_infantry_equipment_3:0 "Colt M16 и MK153 SMAW"
+    UNS_infantry_equipment_3:0 "Colt M16 и MK153 SMAW" ### Стерлинг L2
     UNS_infantry_equipment_3_short:0 "M16"
-    UNS_infantry_equipment_x:0 "Sig-Sauer 516"
-    UNS_infantry_equipment_x_short:0 "SIG 516"
-    UNS_infantry_equipment_x_2:0 "FN Scar-H"
-    UNS_infantry_equipment_x_2_short:0 "Scar-H"
+    UNS_infantry_equipment_x:0 "Colt M4" #### EM-2
+    UNS_infantry_equipment_x_short:0 "M4"
+    UNS_infantry_equipment_x_2:0 "FN Scar-L" ### L85
+    UNS_infantry_equipment_x_2_short:0 "Scar-L"
     UNS_magical_equipment_1:0 "M14 EBR"
     UNS_magical_equipment_1_short:0 "M14 Energy Battle Rifle"
     UNS_magical_equipment_1_desc:0 "Исследования показали, что магические кристаллы являются мощным источником энергии. M-14 EBR является экспериментальным образцом. В конструкцию его магазина входят кристалльные батареи, выделяющие энергию при выстреле."
@@ -69,10 +69,12 @@
     GEM_infantry_equipment_2_short:0 "StG 44"
     GEM_infantry_equipment_3:0 "Hekler&Koch G3"
     GEM_infantry_equipment_3_short:0 "HK G3"
-    GEM_infantry_equipment_x:0 "Hekler&Koch 416"
-    GEM_infantry_equipment_x_short:0 "HK 416"
-    GEM_infantry_equipment_x_2:0 "Hekler&Koch G36"
-    GEM_infantry_equipment_x_2_short:0 "HK G36"
+    GEM_infantry_equipment_x_2:0 "Hekler&Koch 416"
+    GEM_infantry_equipment_x_2_short:0 "HK 416"
+    GEM_infantry_equipment_x:0 "Hekler&Koch G36"
+    GEM_infantry_equipment_x_short:0 "HK G36"
+    GEM_infantry_equipment_x_2:0 "Hekler&Koch 416"
+    GEM_infantry_equipment_x_2_short:0 "HK 416"
     GEM_magical_equipment_1:0 "Прототип Энергокарабина"
     GEM_magical_equipment_1_short:0 "ЭК 1011"
     GEM_magical_equipment_1_desc:0 "Первая попытка реализовать систему энергооружия. Основана на теориях Николы Тесла и использует энергокристалы в качестве источника питания" 
@@ -89,25 +91,25 @@
     
     UNS_motorized_equipment_1:0 "GMC CCKW 353"
     UNS_motorized_equipment_1_short:0 "\"Джимми\""
-    UNS_mechanized_equipment_1:0 "Armored Utility Vehicle M39"
+    UNS_mechanized_equipment_1:0 "Armored Utility Vehicle M39" #### M3
     UNS_mechanized_equipment_1_short:0 "М39"
-    UNS_mechanized_equipment_2:0 "Armored Utility Vehicle M44"
+    UNS_mechanized_equipment_2:0 "Armored Utility Vehicle M44" #### M39
     UNS_mechanized_equipment_2_short:0 "М44"
-    UNS_mechanized_equipment_3:0 "Cadillac commando"
+    UNS_mechanized_equipment_3:0 "Cadillac commando" ### Cadillac V
     UNS_mechanized_equipment_3_short:0 "Cadillac V"
-    UNS_mechanized_equipment_x:0 "M1117 Armored Security Vehicle"
+    UNS_mechanized_equipment_x:0 "M1117 Armored Security Vehicle"  ## LAV-25
     UNS_mechanized_equipment_x_short:0 "М1117 ASV"
-    UNS_mechanized_equipment_x_2:0 "Mine Resistant Ambush Protected"
+    UNS_mechanized_equipment_x_2:0 "Mine Resistant Ambush Protected" ### M1126 ICV Striker
     UNS_mechanized_equipment_x_2_short:0 "MRAP"
-    UNS_amphibious_mechanized_equipment_1:0 "Landing Vehicle Tracked Personnel"
+    UNS_amphibious_mechanized_equipment_1:0 "Landing Vehicle Tracked Personnel" #### LVT(P)5
     UNS_amphibious_mechanized_equipment_1_short:0 "LVT(P)5"
-    UNS_amphibious_mechanized_equipment_2:0 "Armored Infantry Vehicle M75"
+    UNS_amphibious_mechanized_equipment_2:0 "Armored Infantry Vehicle M75" ######## M59
     UNS_amphibious_mechanized_equipment_2_short:0 "М75"
-    UNS_amphibious_mechanized_equipment_3:0 "Armored Personnel Carrier M59"
+    UNS_amphibious_mechanized_equipment_3:0 "Armored Personnel Carrier M59" ###M113
     UNS_amphibious_mechanized_equipment_3_short:0 "М59"
-    UNS_amphibious_mechanized_equipment_4:0 "Amphibious Assault Vehicle 7"
+    UNS_amphibious_mechanized_equipment_4:0 "Amphibious Assault Vehicle 7" ### AAV-7
     UNS_amphibious_mechanized_equipment_4_short:0 "AAV-7"
-    UNS_amphibious_mechanized_equipment_5:0 "M1126 Infantry Carrier Vehicle"
+    UNS_amphibious_mechanized_equipment_5:0 "M1126 Infantry Carrier Vehicle" #### M2 Bradley
     UNS_amphibious_mechanized_equipment_5_short:0 "Striker"
     
     SOU_motorized_equipment_1:0 "ЗиС-5"
@@ -122,54 +124,78 @@
     SOU_mechanized_equipment_x_short:0 "БТР-80"
     SOU_mechanized_equipment_x_2:0 "БТР-90"
     SOU_mechanized_equipment_x_2_short:0 "БТР-90"
-    SOU_amphibious_mechanized_equipment_1:0 "БМП-1"
+    SOU_amphibious_mechanized_equipment_1:0 "БМП-1" #### БМП-1 
     SOU_amphibious_mechanized_equipment_1_short:0 "БМП-1"
-    SOU_amphibious_mechanized_equipment_2:0 "БМП-2"
+    SOU_amphibious_mechanized_equipment_2:0 "БМП-2" ### БМП-1П
     SOU_amphibious_mechanized_equipment_2_short:0 "БМП-2"
-    SOU_amphibious_mechanized_equipment_3:0 "БМП-3"
+    SOU_amphibious_mechanized_equipment_3:0 "БМП-3" ### БМП-2
     SOU_amphibious_mechanized_equipment_3_short:0 "БМП-3"
-    SOU_amphibious_mechanized_equipment_4:0 "БМП-4"
+    SOU_amphibious_mechanized_equipment_4:0 "БМП-4" ### БМП-3
     SOU_amphibious_mechanized_equipment_4_short:0 "БМП-4"
-    SOU_amphibious_mechanized_equipment_5:0 "БМП-5"
+    SOU_amphibious_mechanized_equipment_5:0 "БМП-5" ### БМП-3М; Т6 - Драгун-125
     SOU_amphibious_mechanized_equipment_5_short:0 "БМП-5"
     
-    UNS_gw_tank_equipment:0 "M4A3"
+    
+    GEM_motorized_equipment_1:0 "Opel Blitz S/A"
+    GEM_motorized_equipment_1_short:0 "Opel Blitz"
+    GEM_mechanized_equipment_1:0 "Sonderkraftfahrzeug 251"
+    GEM_mechanized_equipment_1_short:0 "Sd.Kfz 251"
+    GEM_mechanized_equipment_2:0 "M1113 AG"
+    GEM_mechanized_equipment_2_short:0 "M1113 AG"
+    GEM_mechanized_equipment_3:0 "Transportpanzer Fuchs"
+    GEM_mechanized_equipment_3_short:0 "TPz 1 Fuchs"
+    GEM_mechanized_equipment_x:0 "UR-425"
+    GEM_mechanized_equipment_x_short:0 "UR-425"
+    GEM_mechanized_equipment_x_2:0 "Boxer"
+    GEM_mechanized_equipment_x_2_short:0 "Boxer"
+    GEM_amphibious_mechanized_equipment_1:0 "HS.30"
+    GEM_amphibious_mechanized_equipment_1_short:0 "Sd.Kfz. 175"
+    GEM_amphibious_mechanized_equipment_2:0 "Marder A1"
+    GEM_amphibious_mechanized_equipment_2_short:0 "Marder A1"
+    GEM_amphibious_mechanized_equipment_3:0 "Marder A2"
+    GEM_amphibious_mechanized_equipment_3_short:0 "Marder A2"
+    GEM_amphibious_mechanized_equipment_4:0 "Schützenpanzer Puma"
+    GEM_amphibious_mechanized_equipment_4_short:0 "Puma"
+    GEM_amphibious_mechanized_equipment_5:0 "Lynx"
+    GEM_amphibious_mechanized_equipment_5_short:0 "Lynx"
+    
+    UNS_gw_tank_equipment:0 "M4A3" ### M3 Stuart
     UNS_gw_tank_equipment_short:0 "M4A3"
-    UNS_light_tank_equipment_1:0 "М24 Chaffee"
+    UNS_light_tank_equipment_1:0 "М24 Chaffee" ### 
     UNS_light_tank_equipment_1_short:0 "M24"
-    UNS_light_tank_equipment_2:0 "T-92 LT"
-    UNS_light_tank_equipment_2_short:0 "T-92"
-    UNS_light_tank_equipment_3:0 "M41 Sheridan"
+    UNS_light_tank_equipment_2:0 "T-92 LT" 
+    UNS_light_tank_equipment_2_short:0 "T-92"  
+    UNS_light_tank_equipment_3:0 "M41 Bulldog"
     UNS_light_tank_equipment_3_short:0 "M41"
     UNS_light_tank_equipment_x:0 "M551 Sheridan"
     UNS_light_tank_equipment_x_short:0 "M551"
-    UNS_light_tank_equipment_x_2:0 "M8 Stingray"
+    UNS_light_tank_equipment_x_2:0 "M8 Stingray"  ### LT6 - Stingray II
     UNS_light_tank_equipment_x_2_short:0 "M8"
-    UNS_medium_tank_equipment_1:0 "M4A4"
-    UNS_medium_tank_equipment_1_short:0 "M4A4"
+    UNS_medium_tank_equipment_1:0 "M4A1"
+    UNS_medium_tank_equipment_1_short:0 "M4A1"
     UNS_medium_tank_equipment_2:0 "M4A3E8"
     UNS_medium_tank_equipment_2_short:0 "M4A3E8"
     UNS_medium_tank_equipment_3:0 "М46 Patton"
     UNS_medium_tank_equipment_3_short:0 "M46"
-    UNS_modern_tank_equipment_1:0 "M47 Patton"
+    UNS_modern_tank_equipment_1:0 "M47 Patton"  ###M48 Patton
     UNS_modern_tank_equipment_1_short:0 "M47"
-    UNS_modern_tank_equipment_x:0 "M48 Patton"
+    UNS_modern_tank_equipment_x:0 "M48 Patton" ####M60
     UNS_modern_tank_equipment_x_short:0 "M48"
-    UNS_modern_tank_equipment_x_2:0 "M60A1"
+    UNS_modern_tank_equipment_x_2:0 "M60A1" #### M60A3
     UNS_modern_tank_equipment_x_2_short:0 "M60A1"
-    UNS_modern_tank_equipment_x_3:0 "M60A3"
+    UNS_modern_tank_equipment_x_3:0 "M60A3"  ### M1 Abrams
     UNS_modern_tank_equipment_x_3_short:0 "M60A3"
-    UNS_modern_tank_equipment_x_4:0 "MBT-70"
+    UNS_modern_tank_equipment_x_4:0 "MBT-70" #### Abrams M1A2
     UNS_modern_tank_equipment_x_4_short:0 "MBT-70"
-    UNS_modern_tank_equipment_x_5:0 "M1 Abrams"
+    UNS_modern_tank_equipment_x_5:0 "M1 Abrams" ### Abrams XM1A3
     UNS_modern_tank_equipment_x_5_short:0 "M1 Abrams"
-    UNS_heavy_tank_equipment_1:0 "M26"
+    UNS_heavy_tank_equipment_1:0 "M26 Pershing" ### M6 
     UNS_heavy_tank_equipment_1_short:0 "M26"
     UNS_heavy_tank_equipment_2:0 "T29"
     UNS_heavy_tank_equipment_2_short:0 "Т29"
-    UNS_heavy_tank_equipment_3:0 "T-58"
-    UNS_heavy_tank_equipment_3_short:0 "T-58"
-    UNS_super_heavy_tank_equipment_1:0 "T77"
+    UNS_heavy_tank_equipment_3:0 "T-57"
+    UNS_heavy_tank_equipment_3_short:0 "T-57"
+    UNS_super_heavy_tank_equipment_1:0 "T77" ### T95
     UNS_super_heavy_tank_equipment_1_short:0 "T77"
     UNS_super_heavy_tank_equipment_x:0 "M103A1"
     UNS_super_heavy_tank_equipment_x_short:0 "M103A1"
@@ -182,11 +208,11 @@
     SOU_light_tank_equipment_1_short:0 "БТ-5"
     SOU_light_tank_equipment_2:0 "БТ-7"
     SOU_light_tank_equipment_2_short:0 "БТ-7"
-    SOU_light_tank_equipment_3:0 "Т-60"
-    SOU_light_tank_equipment_3_short:0 "Т-60"
-    SOU_light_tank_equipment_x:0 "Т-70"
+    SOU_light_tank_equipment_3:0 "Т-60" ###### T-70
+    SOU_light_tank_equipment_3_short:0 "Т-60" 
+    SOU_light_tank_equipment_x:0 "Т-70" #### АСУ-57
     SOU_light_tank_equipment_x_short:0 "Т-70"
-    SOU_light_tank_equipment_x_2:0 "АСУ-57"
+    SOU_light_tank_equipment_x_2:0 "АСУ-57" ### БМПТ; ЛТ6 - БМПТ-72
     SOU_light_tank_equipment_x_2_short:0 "АСУ-57"
     SOU_medium_tank_equipment_1:0 "Т-28"
     SOU_medium_tank_equipment_1_short:0 "Т-28"
@@ -194,17 +220,17 @@
     SOU_medium_tank_equipment_2_short:0 "Т-34/85"
     SOU_medium_tank_equipment_3:0 "Т-44"
     SOU_medium_tank_equipment_3_short:0 "Т-44"
-    SOU_modern_tank_equipment_1:0 "Т-64"
+    SOU_modern_tank_equipment_1:0 "Т-64" ### T-62
     SOU_modern_tank_equipment_1_short:0 "Т-64"
-    SOU_modern_tank_equipment_x:0 "Т-64М"
+    SOU_modern_tank_equipment_x:0 "Т-64М" ### T-64 
     SOU_modern_tank_equipment_x_short:0 "Т-64М"
-    SOU_modern_tank_equipment_x_2:0 "Т-72"
+    SOU_modern_tank_equipment_x_2:0 "Т-72" #### T-72
     SOU_modern_tank_equipment_x_2_short:0 "Т-72"
-    SOU_modern_tank_equipment_x_3:0 "Т-80"
+    SOU_modern_tank_equipment_x_3:0 "Т-80" #### T-72Б
     SOU_modern_tank_equipment_x_3_short:0 "Т-80"
-    SOU_modern_tank_equipment_x_4:0 "Т-80Б"
+    SOU_modern_tank_equipment_x_4:0 "Т-80Б" ### T-90
     SOU_modern_tank_equipment_x_4_short:0 "Т-80Б"
-    SOU_modern_tank_equipment_x_5:0 "Т-90"
+    SOU_modern_tank_equipment_x_5:0 "Т-90" ### T-14
     SOU_modern_tank_equipment_x_5_short:0 "Т-90"
     SOU_heavy_tank_equipment_1:0 "КВ-1"
     SOU_heavy_tank_equipment_1_short:0 "КВ-1"
@@ -224,13 +250,13 @@
     GEM_gw_tank_equipment_short:0 "Pz I"
     GEM_light_tank_equipment_1:0 "Panzerkampfwagen II"
     GEM_light_tank_equipment_1_short:0 "Pz II"
-    GEM_light_tank_equipment_2:0 "Panzerkampfwagen I C"
+    GEM_light_tank_equipment_2:0 "Panzerkampfwagen I C" ## Pz IIG
     GEM_light_tank_equipment_2_short:0 "Pz I C"
     GEM_light_tank_equipment_3:0 "Panzerkampfwagen 2 \"Luchs\""
     GEM_light_tank_equipment_3_short:0 "Luchs"
     GEM_light_tank_equipment_x:0 "SP I C"
     GEM_light_tank_equipment_x_short:0 "SP I C"
-    GEM_light_tank_equipment_x_2:0 "Spahpanzer Ru 251"
+    GEM_light_tank_equipment_x_2:0 "Spahpanzer Ru 251" ### LT6 - Kurz SPz 11-2 
     GEM_light_tank_equipment_x_2_short:0 "Ru 251"
     GEM_medium_tank_equipment_1:0 "Panzerkampfwagen III"
     GEM_medium_tank_equipment_1_short:0 "Pz III"
@@ -238,21 +264,21 @@
     GEM_medium_tank_equipment_2_short:0 "Pz IV"
     GEM_medium_tank_equipment_3:0 "Panzerkampfwagen V \"Panther\""
     GEM_medium_tank_equipment_3_short:0 "Panther"
-    GEM_modern_tank_equipment_1:0 "Leopard 1"
+    GEM_modern_tank_equipment_1:0 "Leopard 1" ### Leopard 1
     GEM_modern_tank_equipment_1_short:0 "Leopard 1"
-    GEM_modern_tank_equipment_x:0 "Leopard 1M"
+    GEM_modern_tank_equipment_x:0 "Leopard 1M" ### Leopard 1A5
     GEM_modern_tank_equipment_x_short:0 "Leopard 1M"
-    GEM_modern_tank_equipment_x_2:0 "Leopard 1A4"
+    GEM_modern_tank_equipment_x_2:0 "Leopard 1A4" ### Leopard 2AV
     GEM_modern_tank_equipment_x_2_short:0 "Leopard 1A4"
-    GEM_modern_tank_equipment_x_3:0 "Leopard 2"
+    GEM_modern_tank_equipment_x_3:0 "Leopard 2" #### Leopard 2
     GEM_modern_tank_equipment_x_3_short:0 "Leopard 2"
-    GEM_modern_tank_equipment_x_4:0 "Leopard 2M"
+    GEM_modern_tank_equipment_x_4:0 "Leopard 2M" #### Leopard 2A6
     GEM_modern_tank_equipment_x_4_short:0 "Leopard 2M"
-    GEM_modern_tank_equipment_x_5:0 "Leopard 2A5"
+    GEM_modern_tank_equipment_x_5:0 "Leopard 2A5" ### Leopard 2AX
     GEM_modern_tank_equipment_x_5_short:0 "Leopard 2A5"
     GEM_heavy_tank_equipment_1:0 "VK 30.01 H"
     GEM_heavy_tank_equipment_1_short:0 "VK 30.01 H"
-    GEM_heavy_tank_equipment_2:0 "Panzerkampfwagen IV \"Tiger\""
+    GEM_heavy_tank_equipment_2:0 "Panzerkampfwagen VI \"Tiger\""
     GEM_heavy_tank_equipment_2_short:0 "Tiger"
     GEM_heavy_tank_equipment_3:0 "Tiger II"
     GEM_heavy_tank_equipment_3_short:0 "Tiger II"
@@ -263,3 +289,98 @@
     GEM_super_heavy_tank_equipment_x_2:0 "Maus"
     GEM_super_heavy_tank_equipment_x_2_short:0 "Maus"
     
+    
+    GRB_gw_tank_equipment:0 "Cruiser Mk.I"
+    GRB_gw_tank_equipment_short:0 "Cruiser Mk.I"
+    GRB_light_tank_equipment_1:0 "Cruiser III"
+    GRB_light_tank_equipment_1_short:0 "Cruiser Mk.III"
+    GRB_light_tank_equipment_2:0 "Crusader"
+    GRB_light_tank_equipment_2_short:0 "Crusader"
+    GRB_light_tank_equipment_3:0 "GSR3301 Setter"
+    GRB_light_tank_equipment_3_short:0 "Setter"
+    GRB_light_tank_equipment_x:0 "Manticore"
+    GRB_light_tank_equipment_x_short:0 "Manticore"
+    GRB_light_tank_equipment_x_2:0 "FV101 Scorpion" ###  ЛТ6 - FV107 Scimitar
+    GRB_light_tank_equipment_x_2_short:0 "FV101 Scorpion"
+    GRB_medium_tank_equipment_1:0 "Matilda"
+    GRB_medium_tank_equipment_1_short:0 "Matilda"
+    GRB_medium_tank_equipment_2:0 "Cromwell"
+    GRB_medium_tank_equipment_2_short:0 "Cromwell"
+    GRB_medium_tank_equipment_3:0 "Centurion Mk.I"
+    GRB_medium_tank_equipment_3_short:0 "Centurion Mk.I"
+    GRB_modern_tank_equipment_1:0 "Chieftain Mk.2" 
+    GRB_modern_tank_equipment_1_short:0 "Chieftain Mk.2"
+    GRB_modern_tank_equipment_x:0 "Chieftain Mk.10" 
+    GRB_modern_tank_equipment_x_short:0 "Chieftain Mk.10"
+    GRB_modern_tank_equipment_x_2:0 "Chieftain 900" ### Leopard 2AV
+    GRB_modern_tank_equipment_x_2_short:0 "Chieftain 900"
+    GRB_modern_tank_equipment_x_3:0 "Challenger 1" #### Leopard 2
+    GRB_modern_tank_equipment_x_3_short:0 "Challenger 1"
+    GRB_modern_tank_equipment_x_4:0 "Challenger 2" #### Leopard 2A6
+    GRB_modern_tank_equipment_x_4_short:0 "Challenger 2"
+    GRB_modern_tank_equipment_x_5:0 "Challenger 2 ATDU" ### Leopard 2AX
+    GRB_modern_tank_equipment_x_5_short:0 "Challenger 2 ATDU"
+    GRB_heavy_tank_equipment_1:0 "Churchill I"
+    GRB_heavy_tank_equipment_1_short:0 "Churchill I"
+    GRB_heavy_tank_equipment_2:0 "Black Prince"
+    GRB_heavy_tank_equipment_2_short:0 "Black Prince"
+    GRB_heavy_tank_equipment_3:0 "Super Conqueror"
+    GRB_heavy_tank_equipment_3_short:0 "Super Conqueror"
+    GRB_super_heavy_tank_equipment_1:0 "Excelsior"
+    GRB_super_heavy_tank_equipment_1_short:0 "Excelsior"
+    GRB_super_heavy_tank_equipment_x:0 "TOG II"
+    GRB_super_heavy_tank_equipment_x_short:0 "TOG II"
+    GRB_super_heavy_tank_equipment_x_2:0 "Caernarvon Acion X"
+    GRB_super_heavy_tank_equipment_x_2_short:0 "Caernarvon Acion X"
+    
+    GRB_motorized_equipment_1:0 "Albion FT-11"
+    GRB_motorized_equipment_1_short:0 "FT-11"
+    GRB_mechanized_equipment_1:0 "Universal Carrier" 
+    GRB_mechanized_equipment_1_short:0 "Universal Carrier"
+    GRB_mechanized_equipment_2:0 "M30 Kangaroo" 
+    GRB_mechanized_equipment_2_short:0 "M30 Kangaroo"
+    GRB_mechanized_equipment_3:0 "FV603 Saracen"
+    GRB_mechanized_equipment_3_short:0 "Saracen"
+    GRB_mechanized_equipment_x:0 "FV432"
+    GRB_mechanized_equipment_x_short:0 "FV432"
+    GRB_mechanized_equipment_x_2:0 "FV510 Warrior"
+    GRB_mechanized_equipment_x_2_short:0 "FV4333"
+    GRB_amphibious_mechanized_equipment_1:0 "LVT(P)-5" 
+    GRB_amphibious_mechanized_equipment_1_short:0 "LVT(P)5"
+    GRB_amphibious_mechanized_equipment_2:0 "Armored Infantry Vehicle M75"
+    GRB_amphibious_mechanized_equipment_2_short:0 "M75"
+    GRB_amphibious_mechanized_equipment_3:0 "Armored Assault Vehicle - 7"
+    GRB_amphibious_mechanized_equipment_3_short:0 "AAV-7"
+    GRB_amphibious_mechanized_equipment_4:0 "FV430" ### 
+    GRB_amphibious_mechanized_equipment_4_short:0 "FV430"
+    GRB_amphibious_mechanized_equipment_5:0 "FV4333 Stormer" 
+    GRB_amphibious_mechanized_equipment_5_short:0 "Stormer"
+    
+    GRB_melee_equipment_0:0 "Enfield"
+    GRB_melee_equipment_0_short:0 "Enfield"
+    GRB_melee_equipment_1:0 "Lee-Enfield"
+    GRB_melee_equipment_1_short:0 "Lee-Enfield"
+    GRB_infantry_equipment_0:0 "Enfield M1917"
+    GRB_infantry_equipment_0_short:0 "Enfield M1917
+    GRB_infantry_equipment_1:0 "Bren LMG"
+    GRB_infantry_equipment_1_short:0 "Bren"
+    GRB_infantry_equipment_2:0 "Sten Mk.2"
+    GRB_infantry_equipment_2_short:0 "Sten"
+    GRB_infantry_equipment_3:0 "Sterling L2"
+    GRB_infantry_equipment_3_short:0 "Sterling"
+    GRB_infantry_equipment_x:0 "Enfield EM-2"
+    GRB_infantry_equipment_x_short:0 "EM-2"
+    GRB_infantry_equipment_x_2:0 "Enfield L85"
+    GRB_infantry_equipment_x_2_short:0 "L85"
+    GRB_magical_equipment_1:0 "Прототип Энергокарабина"
+    GRB_magical_equipment_1_short:0 "ЭК 1011"
+    GRB_magical_equipment_1_desc:0 "Первая попытка реализовать систему энергооружия. Основана на теориях Николы Тесла и использует энергокристалы в качестве источника питания" 
+    GRB_magical_equipment_2:0 "Лазергевер Мк1"
+    GRB_magical_equipment_2_short:0 "ЛГ-1"
+    GRB_magical_equipment_2_desc:0 "Энергооружие, стреляющее плазмой. За основу взято оружие Чейнджлингов. Экспериментальный образец" 
+    GRB_magical_equipment_3:0 "Лазеркрафтверк"
+    GRB_magical_equipment_3_short:0 "Лазеркрафтверк"
+    GRB_magical_equipment_3_desc:0 "Совмещенное оружие и инструмент, Лазеркрафтверк поставляется в инженерные войска в качестве оружия поддержки." 
+    GRB_magical_equipment_4:0 "Лазган М1"
+    GRB_magical_equipment_4_short:0 "Лазган М1"
+    GRB_magical_equipment_4_desc:0 "Первое серийное энергетическое оружие. Имеет несколько режимов стрельбы" 

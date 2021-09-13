@@ -76,7 +76,7 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_death_of_churchill
-		x = -10
+		x = -12
 		y = 1
 		relative_position_id = GRB_contact
 		prerequisite = { focus = GRB_contact }
@@ -1304,6 +1304,7 @@ focus_tree = {
 			add_stability = 0.15
 			add_war_support = 0.15
 			add_manpower = 15000
+			custom_effect_tooltip = alpha_placeholder
 		}
 	}
 	
@@ -1613,7 +1614,7 @@ focus_tree = {
 		prerequisite = { focus = GRB_conquer_remains }
 		cost = 10
 		completion_reward = {
-			custom_effect_tooltip = way_to_red_victory
+			custom_effect_tooltip = alpha_placeholder
 			add_political_power = 25
 			add_popularity = { ideology = communism popularity = 0.15 }
 		}
@@ -1933,6 +1934,12 @@ focus_tree = {
 		id = GRB_invade_lands_of_harmony
 		x = 0
 		y = 1
+		bypass = {
+			AND = {
+				has_war_with = EQS 
+				has_war_with = CRY 
+			}
+		}
 		relative_position_id = GRB_prepare_invasion
 		prerequisite = { focus = GRB_prepare_invasion }
 		cost = 5 
@@ -2087,6 +2094,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			set_cosmetic_tag = GRB_EMP
+			custom_effect_tooltip = alpha_placeholder
 		}
 	}
 	
@@ -2103,6 +2111,12 @@ focus_tree = {
 		id = GRB_all_hail_the_queen
 		x = 0
 		y = 1
+		allow_branch = {
+			has_government = neutrality
+			NOT = {
+				has_country_flag = queen_has_lost
+			}
+		}
 		relative_position_id = GRB_what_is_next
 		prerequisite = { focus = GRB_what_is_next }
 		cost = 5
@@ -2173,6 +2187,7 @@ focus_tree = {
 				uses = 2
 				bonus = 1
 			}
+			create_faction = GRB_fraction_neutral
 		}
 	}
 	
@@ -2266,7 +2281,7 @@ focus_tree = {
 					}
 				}
 
-				add_ideas = GRB_PNG_infl
+				#add_ideas = GRB_PNG_infl
 			}
 			
 		}
@@ -2548,6 +2563,9 @@ focus_tree = {
 		id = GRB_appease_lands
 		x = 1
 		y = 1
+		available = {
+			has_war = no 
+		}
 		relative_position_id = GRB_expand_south
 		prerequisite = { focus = GRB_expand_south }
 		prerequisite = { focus = GRB_penguin_west }
@@ -2638,9 +2656,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = monthly_gains_in_pp
-			FBK = {
-				add_ideas = GRB_PNG_infl
-			}
+			
 			
 		}
 	}
@@ -2900,6 +2916,9 @@ focus_tree = {
 		id = GRB_east_canada
 		x = 3
 		y = 1
+		available = {
+			has_war = no 
+		}
 		relative_position_id = GRB_recreation_zones
 		prerequisite = { focus = GRB_recreation_zones }
 		prerequisite = { focus = GRB_modernization }
@@ -2929,3 +2948,1184 @@ focus_tree = {
 	}
 			
 			
+			
+	########## Zebras
+	
+	
+	focus = {
+		id = GRB_east_of_griphonya
+		x = 10
+		y = 1
+		relative_position_id = GRB_ruler_of_the_seas
+		prerequisite = { focus = GRB_ruler_of_the_seas }
+		cost = 5
+		completion_reward = {
+			country_event = { id = grb.25 days = 20 }
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = {
+							has_template = "Colonial Invasion Group"
+						}
+					}
+					
+					division_template = {
+						name = "Colonial Invasion Group"
+						division_names_group = GEM_PCK_01
+						priority = 1
+						is_locked = yes
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 0 y = 4 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
+							
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							field_hospital = { x = 0 y = 1 }
+							engineer = { x = 0 y = 2 }
+							maintenance_company = { x = 0 y = 3 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = GRB_zebra_exotics
+		x = -2
+		y = 1
+		available = {
+			ZES = {
+				is_subject_of = ROOT 
+			}
+		}
+		relative_position_id = GRB_east_of_griphonya
+		prerequisite = { focus = GRB_east_of_griphonya }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.07
+			add_political_power = 25
+			add_ideas = GRB_zebra_goods
+			
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_olenian_factories
+		x = -1
+		y = 1
+		available = {
+			OLV = {
+				OR = {
+					AND = {
+						exists = no 
+						412 = {
+							OR = {
+								is_owned_and_controlled_by = ROOT 
+								is_owned_and_controlled_by = ZES 
+							}
+						}
+					}
+					is_subject_of = ROOT 
+					is_subject_of = ZES 
+				}
+			}
+		}
+							
+		relative_position_id = GRB_zebra_exotics
+		prerequisite = { focus = GRB_zebra_exotics }
+		cost = 5
+		completion_reward = {
+			ZES = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = GRB_barrad_lands_cleanup
+		x = 1
+		y = 1
+		relative_position_id = GRB_zebra_exotics
+		prerequisite = { focus = GRB_zebra_exotics }
+		available = {
+			BAR = {
+				OR = {
+					AND = {
+						exists = no 
+						624 = {
+							OR = {
+								is_owned_and_controlled_by = ROOT 
+								is_owned_and_controlled_by = ZES 
+							}
+						}
+					}
+					is_subject_of = ROOT 
+					is_subject_of = ZES 
+				}
+			}
+		}
+		cost = 5
+		completion_reward = {
+			624 = {
+				set_state_category = city
+			}
+			625 = {
+				set_state_category = pastoral
+			}
+			626 = {
+				set_state_category = city
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_barrad_magicians
+		x = 0
+		y = 1
+		relative_position_id = GRB_barrad_lands_cleanup
+		prerequisite = { focus = GRB_barrad_lands_cleanup }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = magical_tech
+				uses = 2
+				bonus = 0.75
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_plantations 
+		x = 0
+		y = 1
+		relative_position_id = GRB_olenian_factories
+		prerequisite = { focus = GRB_olenian_factories }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = planataions_niggers_all_shit
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_invade_kaza
+		x = 2
+		y = 1
+		relative_position_id = GRB_east_of_griphonya
+		prerequisite = { focus = GRB_east_of_griphonya }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus 
+				target = OLV 
+			}
+			ZES = {
+				add_state_claim = 579
+				add_state_claim = 412 
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_invade_BAR
+		x = -1
+		y = 1
+		relative_position_id = GRB_invade_kaza
+		prerequisite = { focus = GRB_invade_kaza }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus 
+				target = BAR 
+			}
+			ZES = {
+				add_state_claim = 624
+				add_state_claim = 625 
+				add_state_claim = 626 
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_nortland
+		x = 1
+		y = 1
+		relative_position_id = GRB_invade_kaza
+		prerequisite = { focus = GRB_invade_kaza }
+		cost = 5
+		completion_reward = {
+			
+			ZES = {
+				add_state_claim = 452
+				add_state_claim = 621 
+				add_state_claim = 618 
+				add_state_claim = 681
+				add_state_claim = 580 
+				add_state_claim = 627 
+				add_state_claim = 629
+				add_state_claim = 628 
+				add_state_claim = 616 
+				add_state_claim = 617
+			}
+			RCT.faction_leader = {
+				country_event = { id = grb.26 days = 15 }
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_move_west
+		x = 1
+		y = 1
+		relative_position_id = GRB_invade_BAR
+		prerequisite = { focus = GRB_invade_BAR }
+		prerequisite = { focus = GRB_nortland }
+		cost = 5
+		completion_reward = {
+			ZES = {
+				add_state_claim = 630
+				add_state_claim = 611
+				add_state_claim = 612 
+				add_state_claim = 598
+				add_state_claim = 609
+				add_state_claim = 630
+				add_state_claim = 623
+				add_state_claim = 595 
+				add_state_claim = 600 
+				add_state_claim = 599
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRY 
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRU 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_east_india
+		x = 3
+		y = 2
+		available = {
+			has_war = no 
+		}
+		relative_position_id = GRB_plantations
+		prerequisite = { focus = GRB_plantations }
+		prerequisite = { focus = GRB_move_west }
+		cost = 5
+		completion_reward = {
+			ZES = {
+				set_cosmetic_tag = GRB_SUBJ_ZES_NEW
+				every_state = { 
+					limit = {
+						is_claimed_by = ZES 
+					}
+					add_core_of = ZES 
+				}
+			}
+			custom_effect_tooltip = change_state_owner
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_claimed_by = ZES 
+					}
+					ZES = {
+						transfer_state = PREV 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	
+	focus = {
+		id = GRB_new_britany
+		x = 0
+		y = 1
+		relative_position_id = GRB_east_canada
+		prerequisite = { focus = GRB_east_canada }
+		prerequisite = { focus = GRB_north_saxxonia }
+		prerequisite = { focus = GRB_east_india }
+		cost = 10
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			custom_effect_tooltip = alpha_placeholder
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_destroy_the_doubts
+		x = 0
+		y = 1 
+		allow_branch = {
+			AND = {
+				has_government = neutrality
+				has_country_flag = queen_has_lost
+			}
+		}
+		relative_position_id = GRB_what_is_next
+		prerequisite = { focus = GRB_what_is_next }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = check_new_ways 
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
+			create_faction = GRB_fraction_neutral
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_power_of_church
+		x = -6
+		y = 1
+		relative_position_id = GRB_destroy_the_doubts
+		prerequisite = { focus = GRB_destroy_the_doubts }
+		mutually_exclusive = { focus = GRB_new_dynasty }
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			create_country_leader = {
+				name = "Brother Santodes"
+				desc = "GRB_SANTODES"
+				picture = "gfx/leaders/GRB/montypiton.dds"
+				expire = 1999.9.9
+				ideology = holy_order_f
+				traits = {
+				
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_kill_supporters
+		x = -1
+		y = 1
+		relative_position_id = GRB_power_of_church
+		prerequisite = { focus = GRB_power_of_church }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_new_inquisition
+		x = 1
+		y = 1
+		relative_position_id = GRB_power_of_church
+		prerequisite = { focus = GRB_power_of_church }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = inquisition_law
+		}
+	} 
+	
+	
+	focus = {
+		id = GRB_knight_traditions
+		x = 0
+		y = 1
+		relative_position_id = GRB_kill_supporters
+		prerequisite = { focus = GRB_kill_supporters }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_knights
+		}
+	}
+	
+	focus = {
+		id = GRB_kick_non_natives
+		x = 0
+		y = 1
+		relative_position_id = GRB_new_inquisition
+		prerequisite = { focus = GRB_new_inquisition }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				add_manpower = -15000
+				add_state_modifier = {
+					modifier = {
+						#local_manpower = 0.15
+						monthly_population = 0.45
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_antixeno_propaganda
+		x = 1
+		y = 1
+		relative_position_id = GRB_kick_non_natives
+		prerequisite = { focus = GRB_kick_non_natives }
+		prerequisite = { focus = GRB_knight_traditions }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.15
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = GRB_great_british_fleet
+		x = -1
+		y = 1
+		relative_position_id = GRB_kick_non_natives
+		prerequisite = { focus = GRB_kick_non_natives }
+		prerequisite = { focus = GRB_knight_traditions }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_break_EQC_EQS_ties
+		x = -1
+		y = 1
+		available = {
+			EQC = {
+				is_subject_of = EQS
+			}
+		}
+		bypass = {
+			EQC = {
+				NOT = {
+					is_subject_of = EQS 
+				}
+			}
+		}
+		relative_position_id = GRB_knight_traditions
+		prerequisite = { focus = GRB_kick_non_natives }
+		prerequisite = { focus = GRB_knight_traditions }
+		cost = 10
+		completion_reward = {
+			EQS = {
+				remove_from_faction = EQC 
+				set_autonomy = {
+					target = EQC 
+					autonomy_state = autonomy_free
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_southern_expansion
+		x = 0
+		y = 1
+		relative_position_id = GRB_great_british_fleet
+		prerequisite = { focus = GRB_great_british_fleet }
+		prerequisite = { focus = GRB_break_EQC_EQS_ties }
+		prerequisite = { focus = GRB_antixeno_propaganda }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = EQC  
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_prepare_for_last_war
+		x = 0
+		y = 1
+		available = {
+			has_war = no 
+		}
+		relative_position_id = GRB_southern_expansion
+		prerequisite = { focus = GRB_southern_expansion }
+		cost = 10
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = EQC 
+				}
+				add_core_of = ROOT 
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_expand_military_production
+		x = -3
+		y = 1
+		relative_position_id = GRB_prepare_for_last_war
+		prerequisite = { focus = GRB_prepare_for_last_war }
+		cost = 10
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_army_preparation
+		x = -1
+		y = 1
+		relative_position_id = GRB_prepare_for_last_war
+		prerequisite = { focus = GRB_prepare_for_last_war }
+		cost = 10
+		completion_reward = {
+			add_ideas = GRB_army_preparation_idea
+		}
+	}
+	
+	focus = {
+		id = GRB_expand_secret_network
+		x = 1
+		y = 1
+		relative_position_id = GRB_prepare_for_last_war
+		prerequisite = { focus = GRB_prepare_for_last_war }
+		cost = 10
+		completion_reward = {
+			add_ideas = GRB_mi6_idea
+		}
+	}
+	
+	focus = {
+		id = GRB_conscription_focus
+		x = 3
+		y = 1
+		relative_position_id = GRB_prepare_for_last_war
+		prerequisite = { focus = GRB_prepare_for_last_war }
+		cost = 10
+		completion_reward = {
+			add_ideas = GRB_extra_conscription
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_the_great_crusade
+		x = 0
+		y = 2
+		relative_position_id = GRB_prepare_for_last_war
+		prerequisite = { focus = GRB_prepare_for_last_war }
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = is_this_wh40k_reference
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_human_race = no 
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV 
+						}
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_human_race = yes 
+					}
+					if = {
+						limit = {
+							has_government = fascism
+						}
+						country_event = { id = generic.5 }
+					}
+					if = {
+						limit = {
+							NOT = {
+								is_in_faction_with = ROOT 
+							}
+						}
+						ROOT = {
+							create_wargoal = {
+								type = annex_everything
+								target = PREV 
+							}
+						}
+					}
+				}
+							
+			}
+		}
+	} 
+	
+	focus = {
+		id = GRB_new_dynasty
+		x = 6
+		y = 1
+		relative_position_id = GRB_destroy_the_doubts
+		prerequisite = { focus = GRB_destroy_the_doubts }
+		mutually_exclusive = { focus = GRB_power_of_church }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.25
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			create_country_leader = {
+				name = "Lord Michael John Brougham"
+				desc = "GRB_SANTODES"
+				picture = "gfx/leaders/GRB/montypiton.dds"
+				expire = 1999.9.9
+				ideology = neofeudalism
+				traits = {
+				
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_reward_for_soldiers
+		x = -2
+		y = 1
+		relative_position_id = GRB_new_dynasty
+		prerequisite = { focus = GRB_new_dynasty }
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = GRB_stop_supporters
+		x = 0
+		y = 1
+		relative_position_id = GRB_new_dynasty
+		prerequisite = { focus = GRB_new_dynasty }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_army_expansion
+		x = 2
+		y = 1
+		relative_position_id = GRB_new_dynasty
+		prerequisite = { focus = GRB_new_dynasty }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_extra_conscription
+		}
+	}
+	
+	focus = {
+		id = GRB_prewar_preparation
+		x = 0
+		y = 1
+		relative_position_id = GRB_stop_supporters
+		prerequisite = { focus = GRB_stop_supporters }
+		cost = 10
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory 
+					level = 2
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_attack_EQC
+		x = 0
+		y = 1
+		relative_position_id = GRB_prewar_preparation
+		prerequisite = { focus = GRB_prewar_preparation }
+		cost = 5
+		completion_reward = {	
+			create_wargoal = {
+				type = annex_everything
+				target = EQC 
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_war_of_north_and_south
+		x = -1
+		y = 1
+		relative_position_id = GRB_attack_EQC 
+		prerequisite = { focus = GRB_attack_EQC }
+		cost = 5
+		completion_reward = {
+			create_wargoal = { 
+				type = annex_everything
+				target = JER 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_across_the_ocean
+		x = 1
+		y = 1
+		relative_position_id = GRB_attack_EQC
+		prerequisite = { focus = GRB_attack_EQC }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_war_with = EQS 
+						has_wargoal_against = EQS 
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = EQS
+				}
+			}
+			add_ideas = GRB_cross_ocean
+		}
+	}
+	
+	focus = {
+		id = GRB_conquer_herzland
+		x = 1
+		y = 1
+		relative_position_id = GRB_war_of_north_and_south
+		prerequisite = { focus = GRB_war_of_north_and_south OR = GRB_across_the_ocean }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRI 
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_north_exp_keep
+		x = 1
+		y = 1
+		relative_position_id = GRB_across_the_ocean
+		prerequisite = { focus = GRB_across_the_ocean }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRF 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = STG 				
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_east_attack
+		x = -1
+		y = 1
+		relative_position_id = GRB_war_of_north_and_south
+		prerequisite = { focus = GRB_war_of_north_and_south }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = WNG 
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_feudals
+		x = 0
+		y = 1
+		available = {
+			has_war = no 
+		}
+		relative_position_id = GRB_conquer_herzland
+		prerequisite = { focus = GRB_conquer_herzland }
+		prerequisite = { focus = GRB_east_attack }
+		prerequisite = { focus = GRB_north_exp_keep }
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = create_feods
+			hidden_effect = {
+				clear_array = ROOT.feudal_countries
+				release_puppet = JER 
+				release_puppet = STG 
+				release_puppet = GRF 
+				release_puppet = GRI 
+				release_puppet = WNG 
+				release_puppet = EQS
+				add_to_array = { ROOT.feudal_countries = JER }
+				add_to_array = { ROOT.feudal_countries = STG }
+				add_to_array = { ROOT.feudal_countries = GRF }
+				add_to_array = { ROOT.feudal_countries = GRI }
+				add_to_array = { ROOT.feudal_countries = WNG }
+				add_to_array = { ROOT.feudal_countries = EQS }
+				for_each_scope_loop = {
+					array = ROOT.feudal_countries
+					#value = v
+					meta_effect = {
+						text = {
+							every_state = { 
+								limit = {
+									is_core_of = PREV
+								}
+								PREV = {
+									transfer_state = PREV 
+								}
+							}
+		
+							set_cosmetic_tag = GRB_[FEUDAL]_knight
+							create_country_leader = {
+								name = "Lord-Protector of His Majesty"
+								desc = "GRB_LORD"
+								picture = "gfx/leaders/GRB/LORD.dds"
+								expire = 1999.9.9
+								ideology = neofeudalism
+								traits = {
+								
+								}
+							}
+							set_party_name = {
+								ideology = fascism
+								long_name = GRB_feudal_party_long
+								name = GRB_feudal_party
+								
+							}
+							
+							
+						}
+						FEUDAL = "[THIS.GetTag]"
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_restart_industry
+		x = 0
+		y = 1
+		relative_position_id = GRB_contact
+		prerequisite = { focus = GRB_contact }
+		cost = 5
+		completion_reward = {	
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_contact_olds
+		x = 3
+		y = 1
+		relative_position_id = GRB_restart_industry
+		prerequisite = { focus = GRB_restart_industry }
+		mutually_exclusive = { focus = GRB_find_new_companies }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_designer 
+			show_ideas_tooltip = GRB_vickers_armstrong
+			custom_effect_tooltip = available_designer 
+			show_ideas_tooltip = GRB_holland_and_holland
+			custom_effect_tooltip = available_designer 
+			show_ideas_tooltip = GRB_bristol
+		}
+	}
+	
+	focus = {
+		id = GRB_find_new_companies
+		x = -3
+		y = 1
+		relative_position_id = GRB_restart_industry
+		prerequisite = { focus = GRB_restart_industry }
+		mutually_exclusive = { focus = GRB_contact_olds }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			custom_effect_tooltip = new_designers_choose
+		}
+	}
+	
+	focus = {
+		id = GRB_equestrian_companies
+		x = -1
+		y = 1
+		relative_position_id = GRB_find_new_companies
+		prerequisite = { focus = GRB_find_new_companies }
+		mutually_exclusive = { focus = GRB_griffonian_companies }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GRB_baratt_development
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GRB_holland_and_holland
+		}
+	}
+	
+	focus = {
+		id = GRB_griffonian_companies
+		x = 1
+		y = 1
+		relative_position_id = GRB_find_new_companies
+		prerequisite = { focus = GRB_find_new_companies }
+		mutually_exclusive = { focus = GRB_equestrian_companies }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GRB_vedanta_resources
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = GRB_mistral
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_dispersed_industry
+		x = 1
+		y = 1
+		relative_position_id = GRB_equestrian_companies
+		prerequisite = { focus = GRB_equestrian_companies OR = GRB_griffonian_companies }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				uses = 2
+				bonus = 0.75
+			}
+			add_tech_bonus = {
+				category = dispersed_industry_category
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
