@@ -229,7 +229,7 @@ christmas_celebrating_category = {
 		cost = 0
 		fire_only_once = yes
 		days_remove = 5
-		remove_effect = {
+		complete_effect = {
 			set_country_flag = celebrate_christmas
 		}
 		
@@ -259,30 +259,12 @@ christmas_celebrating_category = {
 					is_pony_race = yes
 				}
 				add_opinion_modifier = {
-					target = UNS
+					target = ROOT
 					modifier = heartwarming
 				}
 			}
 			custom_effect_tooltip = expand_acceptance_tt
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			
-			}
+			acceptance_expand = yes
 		}
 		
 	}
@@ -324,125 +306,112 @@ christmas_celebrating_category = {
 
 
 equestria_communist_support_category = {
-	find_contacts_in_eqs = {
+	
+	UNS_start_contact_comms = {
 		available = {
-			original_tag = UNS 
-			network_national_coverage = {
-				target = EQS
-				value > 15
+			FROM = {
+				communism > 0
 			}
 		}
-		visible = {
-			original_tag = UNS 
-			has_completed_focus = UNS_starlight_help
-		}
-		days_remove = 25
-		cost = 25
-		fire_only_once = yes 
-		remove_effect = {
-			EQS = {
-				set_country_flag = EQS_communists_supported
-			}
-			custom_effect_tooltip = EQS_communist_contact
-			set_variable = { equestria_comm_size = 0 }
-		}
-	}
-	UNS_send_weapons = {
-		icon = 111
-		available = {
-			original_tag = UNS
-			has_equipment = {
-				support_equipment > 2499
-			}
-			has_equipment = {
-				infantry_equipment > 4999
-			}
-			EQS = {
-				has_country_flag = EQS_communists_supported
-			}
-		}
-		visible = {
-			has_completed_focus = UNS_starlight_help
-		}
-		cost = 25
-		fire_only_once = yes
-		days_remove = 15
-		ai_will_do = {
-			factor = 0
-		}
-		remove_effect = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -5000
-			}
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = -2500
-			}
-			add_to_variable = {
-				var = equestria_comm_size
-				value = 0.2
-			}
-			custom_effect_tooltip = uns_comm_eqs_tt_1
-		}
-	}
-	UNS_send_training = {
-		icon = 111
-		available = {
-			original_tag = UNS
-			EQS = {
-				has_country_flag = EQS_communists_supported
-			}
-			has_army_experience > 8
-		}
-		visible = {
-			has_completed_focus = UNS_starlight_help
-		}
-		cost = 50
-		days_remove = 90
-		fire_only_once = yes
-		ai_will_do = {
-			factor = 0
-		}
-		modifier = {
-			experience_gain_army = -0.1
-			experience_gain_army_factor = -0.5
-		}
-		remove_effect = { 
-			
-			add_to_variable = {
-				var = equestria_comm_size
-				value = 0.3
-			}
-			custom_effect_tooltip = uns_comm_eqs_tt_2
-		}
-	}
-	UNS_start_comm_fire = {
-		available = {
-			EQS = {
-				has_country_flag = EQS_communists_supported
-			}
-			has_government = communism
-			has_war_with = EQS 
-		}
-		visible = {
-			has_completed_focus = UNS_starlight_help
-		}
-		days_remove = 10
-		remove_effect = {
-			hidden_effect = {
-				EQS = {
-					start_civil_war = {
-						ideology = communism 
-						size = ROOT.equestria_comm_size
-					}
+		target_trigger = {
+			FROM = {
+				AND = {
+					exists = yes 
+					has_country_flag = american_comm_target
 				}
 			}
-			custom_effect_tooltip = uns_time_has_come
+		}
+		visible = {
+			FROM = {
+				has_country_flag = american_comm_target
+			}
+		}
+		
+		cost = 25
+		complete_effect = {
+			FROM = {
+				set_variable = { var_uns_comm_support = 0 }
+			}
+			
+		}
+		remove_effect = {
+			custom_effect_tooltip = add_comm_size
+			hidden_effect = {
+				FROM = {
+					add_to_variable = { var_uns_comm_support = 0.1 }
+				}
+			}
+		}
+		fire_only_once = yes 
+	}
+	
+	UNS_send_weapons_to_from = {
+		available = {
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				support_equipment > 499 
+			}
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				has_country_flag = american_comm_target
+				check_variable = { var_uns_comm_support > 0 }
+			}
+			
+		}
+		
+		visible = {
+			FROM = {
+				check_variable = { var_uns_comm_support > 0 }
+			}
+		}
+		
+		fire_only_once = no 
+		days_re_enable = 30
+		cost = 50
+		days_remove = 30
+		
+		remove_effect = {
+			custom_effect_tooltip = add_comm_size
+			hidden_effect = {
+				FROM = {
+					add_to_variable = { var_uns_comm_support = 0.07 }
+				}
+			}
 		}
 	}
-		
 	
+	UNS_ready_for_war = {
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				has_country_flag = american_comm_target
+				check_variable = { var_uns_comm_support > 0 }
+			}
+			
+		}
+		
+		visible = {
+			FROM = {
+				check_variable = { var_uns_comm_support > 0 }
+			}
+		}
+		
+		cost = 10
+		
+		complete_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM 
+			}
+			FROM = {
+				country_event = { id = uns.51 days = 5 }
+			}
+		}
+	}
 }
 
 resource_keep_exploring_human_category = {
@@ -680,148 +649,92 @@ resource_keep_exploring_human_category = {
 }
 
 extra_worktime_human_category = {
-	extra_work = {
+	extra_work_on = {
 		icon = 111
+		allowed = {
+			is_human_race = yes 
+		}
 		available = {
-			OR = {
-				original_tag = UNS
-				original_tag = SOU 
+			NOT = {
+				has_country_flag = paying_for_diminish
 			}
 		}
 		visible = {
 			has_tech = prod_time_work
+			NOT = {
+				has_country_flag = turned_on_extra_worktime
+			}
+
 		}
-		cost = 25
-		days_remove = 30
-		days_re_enable = 30
-		modifier = {
-			stability_weekly = -0.05
-			production_factory_max_efficiency_factor = 0.3
-			production_factory_efficiency_gain_factor = 0.3
-			production_speed_buildings_factor = 0.3
-		}
-		remove_effect = {
-			custom_effect_tooltip = expand_people_rage
+		complete_effect = {
+			set_country_flag = turned_on_extra_worktime
+			custom_effect_tooltip = turn_on_worktime
 			hidden_effect = {
-				if = {
-					limit = {
-						check_variable = { rage_hum_meter < 5 }
-					}
-					add_to_variable = {
-						var = rage_hum_meter
-						value = 1
-					}
-				}
-				if = {
-					limit = {
-						check_variable = { rage_hum_meter = 5 }
-					}
-					add_ideas = human_coups
-				}
+				add_ideas = human_production_extraworktime
 			}
 		}
+
+		
 	}
-	extra_measures_payment = {
+	extra_work_off = {
 		icon = 111
+		allowed = {
+			is_human_race = yes 
+		}
 		available = {
-			OR = {
-				original_tag = UNS
-				original_tag = SOU 
-			}
-			custom_trigger_tooltip = {
-				tooltip = uns_extra_work_trigger_tt_1
-				check_variable = { rage_hum_meter > 1 }
-			}
+		
 		}
 		visible = {
-			#OR = {
-			#	has_idea = human_coups
-			##	has_idea = human_coups_up
-			#	has_idea = human_hate
-			#}
+			has_tech = prod_time_work
+			has_country_flag = turned_on_extra_worktime
+		}
+		complete_effect = {
+			clr_country_flag = turned_on_extra_worktime
+			custom_effect_tooltip = turn_off_worktime
+			hidden_effect = {
+				remove_ideas = human_production_extraworktime
+			}
+		}
+
+		
+	}
+	extra_work_diminish_by_payment = {
+		allowed = {
+			is_human_race = yes 
+		}
+		available = {
+			check_variable = { human_rage > 0 }
+		}
+		visible = {
 			has_tech = prod_time_work
 		}
-		days_remove = 15
+		cost = 50
 		modifier = {
 			political_power_gain = -0.25
-			stability_weekly = -0.05
 		}
-		remove_effect = {
+		days_remove = 20
+		complete_effect = {
+			set_country_flag = paying_for_diminish
+			custom_effect_tooltip = turn_off_worktime
+			custom_effect_tooltip = paying_for_diminish_tt
+			add_to_variable = { var = human_rage value = -20 tooltip = add_human_rage }
 			hidden_effect = {
-				if = {
-					limit = {
-						has_idea = human_coups
-					}
-					remove_ideas = human_coups
-				}
-				if = {
-					limit = {
-						has_idea = human_coups_up
-					}
-					swap_ideas =  {
-						remove_idea = human_coups_up
-						add_idea = human_coups
-					}
-				}
-				if = {
-					limit = {
-						has_idea = human_hate
-					}
-					swap_ideas = {
-						remove_idea = human_hate
-						add_idea = human_coups_up
-					}
-				}
-				substract_from_variable = {
-					var = rage_hum_meter
-					value = 2
+				activate_decision = extra_work_off
+				clr_country_flag = turned_on_extra_worktime
+				clamp_variable = {
+					var = human_rage
+					min = 0 
+					max = 100 
 				}
 			}
-			custom_effect_tooltip = diminish_human_rage
+		}
+		remove_effect = {
+			clr_country_flag = paying_for_diminish
+			custom_effect_tooltip = available_extra_worktime
 		}
 	}
-	extra_measures_military = {
-		available = {
-			OR = {
-				original_tag = UNS
-				original_tag = SOU 
-			}
-			divisions_in_state = {
-				size > 0
-				state = 96
-			}
-			check_variable = { rage_hum_meter = 5 }
-		}
-		visible = {
-			has_tech = prod_time_work
-		}
-		days_remove = 15
-		modifier = {
-			stability_weekly = -0.05
-			weekly_manpower = -10
-		}
-		remove_effect = {
-			hidden_effect = {
-				random_list = {
-					25 = {
-						country_event = {
-							id = uns.31
-						}
-					}
-					50 = {
-						country_event = {
-							id = uns.32
-						}
-					}
-					25 = {
-					
-					}
-				}
 		
-			}
-			custom_effect_tooltip = diminsh_coup_hum_tt_1
-		}
-	}
+		
 } 
 
 scientifical_expand_human_category = {
@@ -1488,5 +1401,1233 @@ UNS_liberty_statue_category = {
 	}
 }
 					
+UNS_soviet_pressure_category = {
+		
+	UNS_declare_war_on_from = {
+		
+		available = {
+			has_completed_focus = UNS_red_world
+		}
+		
+		visible = {
+			has_completed_focus = UNS_red_world
+		}
+		
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				any_neighbor_country = {
+					OR = {
+						original_tag = UNS 
+						is_subject_of = ROOT 
+						is_puppet_of = ROOT 
+						is_in_faction_with = ROOT 
+					}
+						
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		
+		cost = 50
+		
+		days_remove = 30
+		
+		fire_only_once = yes 
+		
+		remove_effect = {
+			FROM = {
+				country_event = { id = uns.48 }
+			}
+		}
+	}
 	
+	UNS_invite_to_faction = {
+		
+		available = {
+			has_completed_focus = UNS_red_world
+		}
+		
+		visible = {
+			has_completed_focus = UNS_red_world
+		}
+		
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				has_government = communism
+				NOT = {
+					is_in_faction_with = ROOT 
+				}
+			}
+		}
+		
+		cost = 50
+		
+		days_remove = 60
+		
+		fire_only_once = yes 
+		
+		remove_effect = {
+			FROM = {
+				country_event = { id = uns.49 }
+			}
+		}
+	}
+}
+
+UNS_ministry_of_peace_cat = {
+	UNS_fund_minpeace = {
+		available = {
+			has_completed_focus = UNS_we_will_proove_that
+		}
+		cost = 10
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = minpeace_founded
+			set_variable = { minpeace_use_fact = 1 }
+			set_variable = { minpeace_use_pol = -0.1 }
+			set_variable = { minpeace_level = 1 }
+			complete_national_focus = UNS_minpeace_focus
+			hidden_effect = {	
+				add_dynamic_modifier = {
+					modifier = UNS_minpeace_mod
+				}
+			}
 				
+		}
+	}
+	UNS_upgrade_minpeace_l2 = {
+		
+		available = {
+			AND = {
+				has_country_flag = minpeace_healthdep
+				has_country_flag = minpeace_sciencedep
+				has_country_flag = minpeace_satisfdep
+				num_of_civilian_factories_available_for_projects > 4 
+			}
+		}
+		visible = {
+			has_country_flag = minpeace_founded
+		}
+		cost = 50
+		
+		fire_only_once = yes 
+		
+		complete_effect = {
+			add_to_variable = { minpeace_use_fact = 4 }
+			add_to_variable = { minpeace_use_pol = -0.2 }
+			add_to_variable = { minpeace_level = 1 }
+			custom_effect_tooltip = upgrade_ministry_to_lvl2
+			set_country_flag = minpeace_v_2
+		}
+	}
+	UNS_upgrade_minpeace_l3 = {
+		available = {
+			AND = {
+				has_country_flag = minpeace_expmeddep
+				has_country_flag = minpeace_milhealdep
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		visible = {
+			has_country_flag = minpeace_v_2
+		}
+		cost = 100 
+		
+		fire_only_once = yes 
+		
+		complete_effect = {
+			add_to_variable = { minpeace_use_fact = 5 }
+			add_to_variable = { minpeace_use_pol = -0.2 }
+			add_to_variable = { minpeace_level = 1 }
+			custom_effect_tooltip = upgrade_ministry_to_lvl3
+			set_country_flag = minpeace_v_3
+		}
+	}
+	
+	UNS_found_healthdep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		visible = {
+			has_country_flag = minpeace_founded 
+		}
+		days_remove = 25
+		cost = 25
+		fire_only_once = yes 
+		remove_effect = {
+			set_country_flag = minpeace_healthdep
+			add_to_variable = { var = uns_unity_statesoc value = 0.01 tooltip = change_unity_level }
+			custom_effect_tooltip = new_dept_minist
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_meds_giveaway = {
+		visible = {
+			has_country_flag = minpeace_healthdep
+		}
+		available = {
+			has_completed_focus = UNS_open_medcentres
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 60 
+		
+		remove_effect = {
+			add_timed_idea = {
+				idea = UNS_minpeace_healthdep_idea
+				days = 30 
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	UNS_found_edudep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		visible = {
+			has_country_flag = minpeace_founded 
+		}
+		cost = 25
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			set_country_flag = minpeace_sciencedep
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			custom_effect_tooltip = new_dept_minist
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_open_new_schools = {
+		visible = {
+			has_country_flag = minpeace_sciencedep
+		}
+		available = {
+			has_completed_focus = UNS_open_schools
+		}
+		cost = 50
+		days_remove = 60
+		days_re_enable = 90 
+		remove_effect = {
+			add_timed_idea = {
+				idea = UNS_minpeace_edudep_idea
+				days = 60 
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_found_satisf_dept = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		visible = {
+			has_country_flag = minpeace_founded 
+		}
+		cost = 25
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minpeace_satisfdep
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_charity = {
+		visible = {
+			has_country_flag = minpeace_satisfdep 
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 60 
+		remove_effect = {
+			add_timed_idea = {
+				idea = UNS_minpeace_satdep_idea
+				days = 30 
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_found_militaryhelp_dep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_25 
+				check_variable = { uns_unity_statesoc > 0.24 }
+			}
+			has_country_flag = minpeace_v_2
+		}
+		visible = {
+			has_country_flag = minpeace_founded 
+			has_country_flag = minpeace_v_2
+		}
+		cost = 50
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minpeace_milhealdep
+			add_to_variable = { var  = uns_unity_statesoc value = 0.04 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_send_doctors_to_frontier = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_25
+				check_variable = { uns_unity_statesoc > 0.24 }
+			}
+			has_completed_focus = UNS_study_them_medicine
+		}
+		
+		visible = {
+			has_country_flag = minpeace_milhealdep
+			has_war = yes
+		}
+		cost = 75 
+		days_remove = 60
+		days_re_enable = 150 
+		
+		remove_effect = {
+			set_temp_variable = { people_to_return = casualties }
+			multiply_temp_variable = { people_to_return = 0.1 }
+			add_manpower = people_to_return
+			add_to_variable = { var  = uns_unity_statesoc value = 0.07 tooltip = change_unity_level }
+			check_statesoc_level = yes
+			custom_effect_tooltip = revive_10_losses
+		}
+	}
+	
+	UNS_found_expmedical_dep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_40
+				check_variable = { uns_unity_statesoc > 0.39 }
+			}
+			has_country_flag = minpeace_v_2
+		}
+		visible = {
+			has_country_flag = minpeace_founded 
+			has_country_flag = minpeace_v_2
+			
+		}
+		cost = 50
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minpeace_expmeddep
+			add_to_variable = { var = uns_unity_statesoc value = 0.04 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_secret_experiments = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_25
+				check_variable = { uns_unity_statesoc > 0.24 }
+			}
+		}
+		
+		visible = {
+			has_country_flag = minpeace_milhealdep
+			has_war = yes 
+		}
+		cost = 75 
+		days_remove = 60
+		days_re_enable = 150 
+		
+		remove_effect = {
+			add_tech_bonus = {
+				category = support_tech
+				bonus = 0.75
+				uses = 4
+			}
+			set_temp_variable = { steal_from_enemy = 0 }
+			randomize_temp_variable = {
+				var = steal_from_enemy
+				distribution = uniform
+				min = 15
+				max = 45
+			}
+			multiply_temp_variable = { steal_from_enemy = -1 }
+			random_enemy_country = {
+				add_manpower = steal_from_enemy
+				add_stability = -0.05
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = 0.07 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_arcane_medical_dept = {
+		visible = {
+			has_country_flag = minpeace_v_3 
+			has_country_flag = minpeace_founded 
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_70
+				check_variable = { uns_unity_statesoc > 0.69 }
+			}
+		}
+		fire_only_once = yes 
+		cost = 125
+		days_remove = 25 
+		
+		remove_effect = {
+			set_country_flag = minpeace_wmddep
+			custom_effect_tooltip = new_dept_minist
+			add_to_variable = { var  = uns_unity_statesoc value = -0.03 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_create_chemical_weapon = {
+		available = {
+			has_country_flag = minpeace_wmddep
+		}
+		visible = {
+			has_country_flag = minpeace_v_3 
+		}
+		cost = 150 
+		
+		days_remove = 120 
+		
+		fire_only_once = yes 
+		
+		remove_effect = {
+			set_technology = { chemical_weapons = 1 }
+			add_to_variable = { var  = uns_unity_statesoc value = -0.1 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_create_biological_weapon = {
+		available = {
+			has_country_flag = minpeace_wmddep
+		}
+		visible = {
+			has_country_flag = minpeace_v_3 
+		}
+		cost = 150 
+		
+		days_remove = 120 
+		
+		fire_only_once = yes 
+		
+		remove_effect = {
+			custom_effect_tooltip = available_biobombing 
+			set_country_flag = biobombs_developed
+			add_to_variable = { var  = uns_unity_statesoc value = -0.1 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_biobombing_FROM = {
+		visible = {
+			has_country_flag = biobombs_developed
+		}
+		available = {
+			FROM = {
+				has_war_with = ROOT 
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT 
+			}
+		}
+		days_re_enable = 240 
+		cost = 50
+		
+		complete_effect = {
+			FROM = {
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_timed_idea = {
+					idea = UNS_biobombings 
+					days = 90 
+				}
+				add_manpower = -1000 
+			}
+		}
+	}
+}
+
+
+UNS_ministry_of_war_cat = {
+	UNS_fund_minwar = {
+		available = {
+			has_completed_focus = UNS_we_will_proove_that
+		}
+		cost = 10
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = minwar_founded
+			set_variable = { minwar_use_fact = 1 }
+			set_variable = { minwar_use_pol = -0.1 }
+			set_variable = { minwar_level = 1 }
+			complete_national_focus = UNS_minwar_focus
+			hidden_effect = {	
+				add_dynamic_modifier = {
+					modifier = UNS_minwar_mod
+				}
+			}
+		}
+	}
+	UNS_upgrade_minwar_l2 = {
+		
+		available = {
+			AND = {
+				has_country_flag = minwar_armordep
+				has_country_flag = minwar_armsdep
+				has_country_flag = minwar_nsdep
+				num_of_civilian_factories_available_for_projects > 4 
+			}
+		}
+		visible = {
+			has_country_flag = minwar_founded
+		}
+		cost = 50
+		
+		fire_only_once = yes 
+		
+		complete_effect = {
+			add_to_variable = { minwar_use_fact = 4 }
+			add_to_variable = { minwar_use_pol = -0.2 }
+			add_to_variable = { minwar_level = 1 }
+			custom_effect_tooltip = upgrade_ministry_to_lvl2
+			set_country_flag = minwar_v_2
+		}
+	}
+	UNS_upgrade_minwar_l3 = {
+		available = {
+			AND = {
+				has_country_flag = minwar_wmddep
+				has_country_flag = minwar_specopsdep
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		visible = {
+			has_country_flag = minwar_v_2
+		}
+		cost = 100 
+		
+		fire_only_once = yes 
+		
+		complete_effect = {
+			add_to_variable = { minwar_use_fact = 5 }
+			add_to_variable = { minwar_use_pol = -0.2 }
+			add_to_variable = { minwar_level = 1 }
+			custom_effect_tooltip = upgrade_ministry_to_lvl3
+			set_country_flag = minwar_v_3
+		}
+	}
+	
+	UNS_found_armordep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+		}
+		days_remove = 25
+		cost = 25
+		fire_only_once = yes 
+		remove_effect = {
+			set_country_flag = minwar_armordep
+			custom_effect_tooltip = new_dept_minist
+		}
+	}
+	
+	UNS_armor_development = {
+		visible = {
+			has_country_flag = minwar_armordep
+		}
+		available = {
+			has_completed_focus = UNS_give_them_best_armor
+		}
+		cost = 50
+		days_remove = 30
+		days_re_enable = 60 
+		
+		remove_effect = {
+			add_tech_bonus = {
+				category = armor 
+				category = human_army_upgrades
+				uses = 2
+				bonus = 1
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	UNS_found_armsdep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+		}
+		cost = 25
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			set_country_flag = minwar_armsdep
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			custom_effect_tooltip = new_dept_minist
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_develop_weapons = {
+		visible = {
+			has_country_flag = minwar_armsdep
+		}
+		available = {
+			has_completed_focus = UNS_best_weapons
+		}
+		cost = 50
+		days_remove = 45
+		days_re_enable = 150
+		remove_effect = {
+			add_tech_bonus = {
+				category = infantry_tech
+				category = magical_tech
+				uses = 2
+				bonus = 1
+			}
+			
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_found_antiterror_dept = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+		}
+		cost = 25
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minwar_nsdep
+		}
+	}
+	
+	UNS_antiterror_operation = {
+		visible = {
+			has_country_flag = minwar_nsdep 
+		}
+		cost = 50
+		days_remove = 90
+		days_re_enable = 150 
+		modifier = {
+			crypto_strength = 5
+			decryption_power = 5
+			intelligence_agency_defense = 0.1
+			intelligence_agency_defense = 2
+		}
+		remove_effect = {
+			add_manpower = -50
+			add_to_variable = { var  = uns_unity_statesoc value = 0.04 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+			
+	}
+	
+	UNS_found_wmd_dep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_15 
+				check_variable = { uns_unity_statesoc > 0.14 }
+			}
+			has_country_flag = minwar_v_2
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+			has_country_flag = minwar_v_2
+		}
+		cost = 50
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minwar_wmddep
+		}
+	}
+	
+	UNS_develop_nukes = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_45
+				check_variable = { uns_unity_statesoc > 0.44 }
+			}
+		}
+		
+		visible = {
+			has_country_flag = minwar_wmddep
+		}
+		cost = 95 
+		days_remove = 150
+		fire_only_once = yes 
+		
+		remove_effect = {
+			add_tech_bonus = {
+				category = nuclear
+				bonus = 1.5
+				uses = 2
+			}
+			add_ideas = UNS_nukes_by_wmd
+			add_to_variable = { var  = uns_unity_statesoc value = -0.1 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_found_specops_dep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_40
+				check_variable = { uns_unity_statesoc > 0.39 }
+			}
+			has_country_flag = minwar_v_2
+			has_tech = human_snipers_corps
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+			has_country_flag = minwar_v_2
+			
+		}
+		cost = 50
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minwar_specopsdep
+			hidden_effect = {
+				division_template = {
+					name = "Special Forces"
+					is_locked = yes 
+					priority = 2
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						sniper_corps = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_secret_service_recall = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_25
+				check_variable = { uns_unity_statesoc > 0.24 }
+			}
+		}
+		
+		visible = {
+			has_country_flag = minpeace_milhealdep
+		}
+		cost = 90 
+		days_remove = 150
+		days_re_enable = 150
+		
+		remove_effect = {
+			custom_effect_tooltip = deploy_8_special_divs
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+					create_unit = {
+						division = "name = \"Special Forces\" division_template = \"Special Forces\"  start_experience_factor = 0.75 start_equipment_factor = 1"
+						owner = ROOT 
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_experim_weap_dept = {
+		visible = {
+			has_country_flag = minwar_v_3 
+			has_country_flag = minwar_founded 
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_70
+				check_variable = { uns_unity_statesoc > 0.69 }
+			}
+		}
+		fire_only_once = yes 
+		cost = 125
+		days_remove = 25 
+		
+		remove_effect = {
+			set_country_flag = minwar_expweapdep
+			custom_effect_tooltip = new_dept_minist
+		}
+	}
+	
+	UNS_soldier_of_future = {
+		available = {
+			has_country_flag = minwar_expweapdep
+		}
+		visible = {
+			has_country_flag = minpeace_v_3 
+		}
+		cost = 150 
+		
+		days_remove = 120 
+		
+		fire_only_once = yes 
+		
+		remove_effect = {
+			set_technology = { soldiers_of_future_tech = 1 }
+		}
+	}
+	
+}
+
+UNS_ministry_of_morale_cat = {
+	UNS_fund_minmor = {
+		available = {
+			has_completed_focus = UNS_we_will_proove_that
+		}
+		cost = 10
+		fire_only_once = yes
+		complete_effect = {
+			set_country_flag = minmor_founded
+			set_variable = { minmor_use_fact = 1 }
+			set_variable = { minmor_use_pol = -0.1 }
+			set_variable = { minmor_level = 1 }
+			complete_national_focus = UNS_minmorale_focus
+			hidden_effect = {	
+				add_dynamic_modifier = {
+					modifier = UNS_minmor_mod
+				}
+			}
+		}
+	}
+	UNS_upgrade_minmor_l2 = {
+		
+		available = {
+			AND = {
+				has_country_flag = minmor_happydep
+				has_country_flag = minmor_printdep
+				has_country_flag = minmor_artsdep
+				num_of_civilian_factories_available_for_projects > 4 
+			}
+		}
+		visible = {
+			has_country_flag = minmor_founded
+		}
+		cost = 50
+		
+		fire_only_once = yes 
+		
+		complete_effect = {
+			add_to_variable = { minmor_use_fact = 4 }
+			add_to_variable = { minmor_use_pol = -0.2 }
+			add_to_variable = { minmor_level = 1 }
+			custom_effect_tooltip = upgrade_ministry_to_lvl2
+			set_country_flag = minmor_v_2
+		}
+	}
+	UNS_upgrade_minmor_l3 = {
+		available = {
+			AND = {
+				has_country_flag = minmor_broaddep
+				has_country_flag = minmor_tradedep
+				num_of_civilian_factories_available_for_projects > 4
+			}
+		}
+		visible = {
+			has_country_flag = minmor_v_2
+		}
+		cost = 100 
+		
+		fire_only_once = yes 
+		
+		complete_effect = {
+			add_to_variable = { minmor_use_fact = 5 }
+			add_to_variable = { minmor_use_pol = -0.2 }
+			add_to_variable = { minmor_level = 1 }
+			custom_effect_tooltip = upgrade_ministry_to_lvl3
+			set_country_flag = minmor_v_3
+		}
+	}
+	
+	UNS_found_happines_dept = {
+		visible = {
+			has_country_flag = minmor_founded
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		days_remove = 25
+		cost = 25
+		fire_only_once = yes 
+		remove_effect = {
+			set_country_flag = minmor_happydep
+			custom_effect_tooltip = new_dept_minist
+		}
+	}
+	
+	UNS_socopros = {
+		visible = {
+			has_country_flag = minmor_happydep
+		}
+		cost = 10
+		days_re_enable = 15
+		days_remove = 3
+		
+		remove_effect = {
+			add_stability = 0.01
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_found_printdep = {
+		visible = {
+			has_country_flag = minmor_founded
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		days_remove = 25
+		cost = 25
+		fire_only_once = yes 
+		remove_effect = {
+			set_country_flag = minmor_printdep
+			custom_effect_tooltip = new_dept_minist
+		}
+	}
+	
+	UNS_newspapers = {
+		visible = {
+			has_country_flag = minmor_printdep
+		}
+		days_remove = 90
+		cost = 50
+		days_re_enable = 60
+		modifier = {
+			political_power_gain = -0.02
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_war_support = 0.04
+			acceptance_expand = yes 
+			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_arts_depart = {
+		visible = {
+			has_country_flag = minmor_founded
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_0 
+				check_variable = { uns_unity_statesoc > 0 }
+			}
+		}
+		days_remove = 25
+		cost = 25
+		fire_only_once = yes 
+		remove_effect = {
+			set_country_flag = minmor_artsdep
+			custom_effect_tooltip = new_dept_minist
+		}
+	}
+			
+	UNS_censorship = {
+		visible = {
+			has_country_flag = minmor_artsdep
+		}
+		days_remove = 30
+		cost = 50
+		days_re_enable = 60
+		remove_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_to_variable = { var  = uns_unity_statesoc value = -0.02 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	UNS_found_broaddep = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_40
+				check_variable = { uns_unity_statesoc > 0.39 }
+			}
+			has_country_flag = minwar_v_2
+
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+			has_country_flag = minwar_v_2
+			
+		}
+		cost = 50
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minmor_broaddep
+		}
+	}
+	
+	UNS_propaganda_against_from = {
+		visible = {
+			has_country_flag = minmor_broaddep
+			has_war = yes 
+		}
+		available = {
+			FROM = {
+				has_war_with = ROOT 
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT 
+			}
+		}
+		days_re_enable = 240
+		cost = 50
+		days_remove = 90
+		remove_effect = {
+			FROM = {
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_timed_idea = {
+					idea = UNS_statesoc_broadcast 
+					days = 90 
+				}
+			}
+		}
+	}
+	
+	UNS_found_trading_dept = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_40
+				check_variable = { uns_unity_statesoc > 0.39 }
+			}
+			has_country_flag = minwar_v_2
+		}
+		visible = {
+			has_country_flag = minwar_founded 
+			has_country_flag = minwar_v_2
+			
+		}
+		cost = 50
+		fire_only_once = yes  
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minmor_tradedep
+		}
+	}
+	
+	UNS_trading_search = {
+		visible = {
+			has_country_flag = minmor_tradedep
+		}
+		days_re_enable = 90
+		cost = 75
+		days_remove = 60
+		modifier = {
+			civilian_intel_factor = 0.15
+			army_intel_factor = 0.15
+			navy_intel_factor = 0.15
+			airforce_intel_factor = 0.1
+		}
+	}
+	
+	UNS_found_propaganda_center = {
+		visible = {
+			has_country_flag = minmor_v_3
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = level_of_loyalty_70
+				check_variable = { uns_unity_statesoc > 0.69 }
+			}
+		}
+
+		fire_only_once = yes 
+		
+		cost = 150
+		days_remove = 25
+		remove_effect = {
+			custom_effect_tooltip = new_dept_minist
+			set_country_flag = minmor_propdep
+			hidden_effect = {
+				division_template = {
+					name = "Deserteers"
+					is_locked = yes 
+					priority = 0
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+			}
+		}
+	}
+		
+	UNS_propaganda_of_equality = {
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT 
+			}
+		}
+		available = {
+			FROM = {
+				has_war_with = ROOT 
+			}
+		}
+		visible = {
+			has_country_flag = minmor_propdep
+		}
+		cost = 150
+		days_remove = 30
+		fire_only_once = yes 
+		remove_effect = {
+			FROM = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -4000 
+				}
+				add_manpower = -16000
+			}
+			hidden_effect = {
+				random_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = ROOT 
+						}
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+					create_unit = {
+						division = "name = \"Deserteer squad\" division_template = \"Deserteers\" start_equipment_factor = 1 start_experience_factor = 0.25"
+					}
+				}
+			}
+			custom_effect_tooltip = 10_divs_desert_tt
+		}
+	}

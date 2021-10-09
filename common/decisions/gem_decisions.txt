@@ -2,9 +2,25 @@ GEM_political_crisis_category = {
 	your_politics_finishing = {
 		visible = {
 			has_completed_focus = GEM_party_meeting
+			NOT = {
+				OR = {
+					has_completed_focus = GEM_iron_guard
+					has_completed_focus = GEM_a_little_freedom
+					has_completed_focus = GEM_red_variant
+					has_completed_focus = GEM_people_spirit
+				}
+			}
 		}
 		activation = {
 			has_completed_focus = GEM_party_meeting
+			NOT = {
+				OR = {
+					has_completed_focus = GEM_iron_guard
+					has_completed_focus = GEM_a_little_freedom
+					has_completed_focus = GEM_red_variant
+					has_completed_focus = GEM_people_spirit
+				}
+			}
 		}
 		available = {
 			OR = {
@@ -17,10 +33,46 @@ GEM_political_crisis_category = {
 		is_good = yes 
 		days_mission_timeout = 365
 		timeout_effect = {
-			country_event = { id = gem.11 }
+			if = {
+				limit = {
+					is_ai = yes 
+				}
+				random_list = {
+					25 = {
+						complete_national_focus = GEM_iron_guard
+						create_country_leader = {
+							name = "Heinrich Himmler"
+							desc = "GEM_HIMMLER_DESC"
+							picture = "gfx/leaders/GEM/Himmler.dds"
+							ideology = nazism
+							traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
+						}
+					}
+					25 = {
+						complete_national_focus = GEM_a_little_freedom
+						create_country_leader = {
+							name = "Joseph Goebbels"
+							desc = "GEM_GOEBBELS_DESC"
+							picture = "gfx/leaders/GEM/Goebbels.dds"
+							ideology = nazism
+							traits = { propaganda_master_hum human_leader }
+						}
+					}
+					25 = {
+						complete_national_focus = GEM_red_variant
+					}
+					25 = {
+						complete_national_focus = GEM_people_spirit
+					}
+				}
+			}
+			else = {
+				country_event = { id = gem.11 }
+			}
 		}
 		complete_effect  = {
 			custom_effect_tooltip = gem_meeting_tt_1
+			
 		}
 	}
 	nsdap_consolidation = {
@@ -421,11 +473,11 @@ GEM_political_crisis_category = {
 	}
 	secret_meeting = {
 		available = {
-			has_country_flag = opposition_destroyed
+			has_completed_focus = GEM_destroy_the_opposition
 			has_country_flag = himmler_is_in_lead_of_nsdap
 		}
 		visible = {
-			has_completed_focus = opposition_destroyed
+			has_completed_focus = GEM_destroy_the_opposition
 		}
 		complete_effect = {
 			add_popularity = {
@@ -447,11 +499,11 @@ GEM_political_crisis_category = {
 	}
 	last_strike = {
 		available = {
-			has_completed_focus = opposition_destroyed
+			has_completed_focus = GEM_destroy_the_opposition
 			has_country_flag = goebbels_is_in_lead_of_nsdap
 		}
 		visible = {
-			has_completed_focus = opposition_destroyed
+			has_completed_focus = GEM_destroy_the_opposition
 		}
 		complete_effect = {
 			add_popularity = {
@@ -482,7 +534,7 @@ GEM_political_crisis_category = {
 		complete_effect = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.5
+				popularity = 0.2
 			}
 			complete_national_focus = GEM_red_variant
 			set_country_flag = commie_won
@@ -505,3 +557,605 @@ GEM_political_crisis_category = {
 			set_country_flag = demo_won
 		}
 	}
+	
+}
+
+GEM_resources_category = { 
+	steel_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 312
+			controls_state = 312
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			312 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				set_state_flag = sou_steel_1
+			}
+			
+		}
+	}
+	alum_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 312
+			controls_state = 312
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			312 = {
+				add_resource = {
+					type = aluminium
+					amount = 24
+				}
+				set_state_flag = sou_aluminium_1
+			}
+			
+		}
+	}
+	tung_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 312
+			controls_state = 312
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			312 = {
+				add_resource = {
+					type = tungsten
+					amount = 24
+				}
+				set_state_flag = sou_tungsten_1
+			}
+			
+		}
+	}
+	chrom_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 311
+			controls_state = 311
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			311 = {
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+				set_state_flag = sou_chromium_1
+			}
+			
+		}
+	}
+	cryst_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 311
+			controls_state = 311
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			311 = {
+				add_resource = {
+					type = crystals
+					amount = 18
+				}
+			}
+		}
+	}
+	oil_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 314
+			controls_state = 314
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			314 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+		}
+	}
+	rubber_search_gem = {
+		visible = {
+			has_completed_focus = GEM_resource_searching_focus
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 314
+			controls_state = 314
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			314 = {
+				add_resource = {
+					type = rubber
+					amount = 24
+				}
+			}
+		}
+	}
+}
+
+GEM_resources_trading = {
+	sell_resources_to_other_gem = {
+		visible = {
+			has_completed_focus = GEM_sell_resources
+		}
+		state_target = yes 
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				is_core_of = ROOT
+			}
+			NOT = {
+				has_war_with = CHN 
+			}
+			CHN = {
+				OR = {
+					is_subject = no
+					is_subject_of = ROOT 
+				}
+			}
+	
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT 
+				is_fully_controlled_by = ROOT 
+			}
+		}
+		target_array = ROOT.controlled_states
+		cost = 50
+		days_remove = 60
+		days_re_enable = 60
+		complete_effect = {
+			give_resource_rights = { receiver = CHN state = FROM }
+
+			set_variable = { var_resource_sell = 0 }
+			
+		}
+		remove_effect = {
+			CHN = {
+				remove_resource_rights = FROM 
+			}			
+			custom_effect_tooltip = uns_factor_tt_1
+			hidden_effect = {
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				set_temp_variable = { var_res_temp = var_resource_sell }
+				divide_temp_variable = { var_res_temp = 2 }
+				round_temp_variable =  var_res_temp 
+				set_variable = { var_resources_factories = var_res_temp }
+				add_offsite_building = { 
+					type = industrial_complex
+					level = root.var_resources_factories
+					instant_build = yes 
+				}
+				add_offsite_building = { 
+					type = arms_factory
+					level = root.var_resources_factories
+					instant_build = yes 
+				}
+			}
+			
+		}
+		
+	}
+}
+
+
+
+GEM_brand_gates = {
+	GEM_finish_rebuilding = {
+		visible = {
+			check_variable = { brand_gate_build > 2 }
+			NOT = {
+				has_idea = GEM_brand_gates_idea
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				trigger = {
+					check_variable = { brand_gate_build > 2 }
+				}
+				tooltip = brand_gate_build_3_time
+			}
+		}
+		fire_only_once = yes
+		days_remove = 45		
+		modifier = {
+			production_speed_buildings_factor = -0.2
+		}
+		remove_effect = {
+			add_ideas = GEM_brand_gates_idea
+		}
+		cost = 50
+	}
+	GEM_finish_one_building = {
+		visible = {
+			has_completed_focus = GEM_brandenburg_gates
+			check_variable = { brand_gate_build < 3 }
+		}
+		days_remove = 30
+		cost = 25
+		modifier = {
+			production_speed_buildings_factor = -0.2
+		}
+		remove_effect = {
+			add_to_variable = { brand_gate_build = 1 }
+			custom_effect_tooltip = build_libstat_tt_1 
+		}
+	}
+}
+
+GEM_fleet_remake_category = {
+	GEM_start_production_of_battlsehip = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = GEM_fleet_rebuild
+		}
+		visible = {
+			has_completed_focus = GEM_fleet_rebuild
+		}
+		cost = 25
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 25
+		remove_effect = {
+			set_country_flag = UNS_founded_bb
+			custom_effect_tooltip = UNS_founded_bb_tt
+		}
+	}
+	
+	GEM_build_the_guns = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 25
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		days_remove = 40
+		remove_effect = {
+			set_country_flag = UNS_built_guns
+			custom_effect_tooltip = UNS_built_guns_tt
+		}
+		fire_only_once = yes
+	}
+	GEM_build_the_engine = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 35
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 80
+		remove_effect = {
+			set_country_flag = UNS_built_engine
+			custom_effect_tooltip = UNS_built_engine_tt
+		}
+	}
+	GEM_build_the_controls = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 35
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 80
+		remove_effect = {
+			set_country_flag = UNS_built_controls
+			custom_effect_tooltip = UNS_built_controls_tt
+		}
+	}
+	GEM_build_the_paluba = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = GEM_fleet_rebuild
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 25
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			set_country_flag = UNS_built_paluba
+			custom_effect_tooltip = UNS_built_paluba_tt
+		}
+	}
+	GEM_build_the_ship = {
+		available = {
+			has_country_flag = UNS_built_controls
+			has_country_flag = UNS_built_engine
+			has_country_flag = UNS_built_guns
+			has_country_flag = UNS_built_paluba
+			capital_scope = {
+				naval_base > 0
+			}
+		}
+		visible = {
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 60
+		modifier = {
+			industrial_capacity_dockyard = -0.8
+		}
+		fire_only_once = yes
+		days_remove = 80
+		remove_effect = {
+			hidden_effect = {
+				load_oob = "GEM_built_the_bb"
+			}
+			custom_effect_tooltip = gem_bb_built_ship_tt
+		}
+		fire_only_once = yes
+	}
+}
+
+GEM_native_police_squads = {
+	GEM_police_squad_from = {
+		visible = {
+			has_country_flag = native_police_squads
+			has_war = yes 
+		}
+		state_target = yes 
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				NOT = {
+					is_core_of = ROOT 
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				NOT = {
+					is_core_of = ROOT 
+				}
+			}
+		}
+		target_array = ROOT.controlled_states
+		fire_only_once = yes 
+		cost = 25
+		days_remove = 30
+		remove_effect = {
+			FROM = {
+				create_unit = {
+					division = "name = \"Polizisten\" division_template = \"Polizisten\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT 
+				}
+			}
+		}
+	}
+}
+
+
+GEM_himmler_coring_decisions = {
+	GEM_himmler_core_state = {
+		visible = {
+			has_completed_focus = GEM_natives_police_squads
+			FROM = {
+				NOT = {
+					is_core_of = ROOT 
+				}
+				is_owned_by = ROOT
+
+			}
+		}
+		state_target = yes
+		available = {
+			FROM = {
+				resistance < 10
+				compliance > 40
+			}
+		}
+		cost = 50
+		days_remove = 25
+		fire_only_once = yes 
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT 
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "TNM_sevent_window"
+		
+		size = { width = 1167 height = 675}
+		position = { x=-583 y=-297 }
+		Orientation = center
+		moveable = no
+		clipping = no
+		background = {
+			name = "TNM_sevents_bg"
+			quadTextureSprite = "GFX_tnm_sevents_bg"
+		}
+		
+		intantTextBoxType = {
+			name = "TNM_sevents_picture"
+			position = { x = 50 y = 50 }
+			font = "hoi_36header"
+			text = [ROOT.GetTNMSeventPicture]
+			format = center 
+			masxWidth = 600
+			masHeight = 600
+		} 
+		

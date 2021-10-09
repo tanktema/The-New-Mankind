@@ -16,15 +16,18 @@
     UNS_MIL_DEF:0 "АВК"
     UNS_MIL_ADJ:0 "Американск."
     
+    UNS_statesoc_communism:0 "Американское Братство"
+    UNS_statesoc_communism_DEF:0 "Американское Братство"
+    UNS_statesoc_communism_ADJ:0 "Американск"
 
     ### GEM
     GEM_fascism:0 "Третий Рейх"
     GEM_democratic:0 "Федеративная Республика Германия"
-    GEM_communism:0 "Германская Демократическая Республика"
+    GEM_communism:0 "Социалистическая Республика Германия"
     GEM_neutrality:0 "Германская Империя"
-    GEM_fascism_DEF:0 "ТР"
+    GEM_fascism_DEF:0 "Третий Рейх"
     GEM_democratic_DEF:0 "ФРГ"
-    GEM_communism_DEF:0 "ГДР"
+    GEM_communism_DEF:0 "СРГ"
     GEM_neutrality_DEF:0 "ГИ"
     GEM_fascism_ADJ:0 "Немецк."
     GEM_democratic_ADJ:0 "Немецк."
@@ -32,15 +35,15 @@
     GEM_neutrality_ADJ:0 "Немецк."
 
     ### RGB
-    GRB_fascsim:0 "Британская Империя"
+    GRB_fascism:0 "Британская Империя"
     GRB_democratic:0 "Великобритания"
     GRB_communism:0 "Британская Коммуна"
-    GRB_neutrality:0 "Англия"
-    GRB_fascsim_DEF:0 "БИ"
-    GRB_democratic_DEF:0 "ВБ"
+    GRB_neutrality:0 "Королевство Англия"
+    GRB_fascism_DEF:0 "БИ"
+    GRB_democratic_DEF:0 "Великобритания"
     GRB_communism_DEF:0 "БК"
-    GRB_neutrality_DEF:0 "Анг"
-    GRB_fascsim_ADJ:0 "Британск."
+    GRB_neutrality_DEF:0 "Англия"
+    GRB_fascism_ADJ:0 "Британск."
     GRB_democratic_ADJ:0 "Британск."
     GRB_communism_ADJ:0 "Британск."
     GRB_neutrality_ADJ:0 "Английск."
@@ -63,5 +66,23 @@
     SOU_SSR_puppet:0 "[Root.GetAdj]. ССР"
     
     SOU_neobol_fascism:0 "Советский революционный совет"
-    SOU_neobol_fascism_DEF:0 "ССС"
+    SOU_neobol_fascism_DEF:0 "СРС"
     SOU_neobol_fascism_ADJ:0 "Советск."
+
+    autonomy_trade_republic_grb:0 "Торговая Республика"
+
+
+    GRB_SUBJ_FBK_neutrality:0 "Британский Фарбрук"
+    GRB_SUBJ_PNG_neutrality:0 "Британский Пингленд"
+    GRB_SUBJ_ZES_neutrality:0 "Британская Зебрика"
+    
+    GRB_SUBJ_FBK_NEW_neutrality:0 "Ист-Канада"
+    GRB_SUBJ_PNG_NEW_neutrality:0 "Норт-Саксония"
+    GRB_SUBJ_ZES_NEW_neutrality:0 "Нью-Индия"
+    
+    GRB_JER_knight_fascism:0 "Аквелийская Земля"
+    GRB_GRI_knight_fascism:0 "Земли Герцланда"
+    GRB_WNG_knight_fascism:0 "Южногрифоньи Земли"
+    GRB_GRF_knight_fascism:0 "Земли Ист-Грифонии"
+    GRB_STG_knight_fascism:0 "Северянская Земля"
+    GRB_EQS_knight_fascism:0 "Эквусские Земли"

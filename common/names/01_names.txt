@@ -1,15 +1,61 @@
 UNS = {
 	male = {
-		names = { John Jack Kyle Jason Johnatan Codey Sheldon Leonard Howard Stephen
-				  Sam Meryl Rick Allen Charles Hunter Pierce Samuel Albey Spenser Floyd
-				  Raynold Eden Jerry Dunkan
-				 }
-		}
+		names = { 
+			John Jack Kyle Jason Johnatan Codey Sheldon Leonard Howard Stephen Sam Meryl Rick Allen Charles Hunter Pierce Samuel Albey Spenser Floyd Raynold Eden Jerry Dunkan
+	    }
+	}
 	female = {
-		names = { Claire Katryn Jennifer Rachel }
+		names = { 
+			Claire Katryn Jennifer Rachel
 		}
+	}
 	surnames = {
-			Shepard Johnson Valley Mactavish Price Stewens Stark Raynolds Jackman Ramirs Fawley Dunse
-			Peterson Stewey Pitt }
-	callsigns = { ANvil Hammer Arrow Storm Fury Metal }
+		Shepard Johnson Valley Mactavish Price Stewens Stark Raynolds Jackman Ramirs Fawley Dunse	Peterson Stewey Pitt 
+	}
+	callsigns = { Anvil Hammer Arrow Storm Fury Metal }
+}
+
+SOU = {
+	male = {
+		names = { 
+			Viktor Semyon Andrey Vasily Semen Igor Egor Nikita Stepan Bogdan Artyom Dmiitry
+		}
+		surnames = {
+			Semyonov Kramarov Kravchenko Egorov Ivanov Petrov Beria Stalin Serpov
+		}
+	}
+	female = {
+		names = {
+			Ekaterina Viktoriya Anna Inna Anastasia Elena 
+		}
+		surnames = {
+			Vasilyeva Klementyeva Savickaya Kravchenko Kramarova
+		}
+	}
+	callsigns = {	
+		Desyatka Serp Molot Idiot 
+	}
+}
+
+GEM = {
+	male = {
+		names = {
+			Paul Heinrich Joseph Adolf Albert Hugo Peter
+		}
+		surnames = {
+			Muller Bormann Krauz
+		}
+	}
+	female = {
+		names = {
+			Helga Ingrid 
+		}
+		surnames = {
+			Bormann Krauz 
+		}
+	}
+	callsigns = {
+		Fritz Shtirlitz 
+	}
+}
 	

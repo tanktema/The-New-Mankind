@@ -1,5 +1,5 @@
 focus_tree = {
-	id = uns_focus
+	id = uns_focus_base
 	country = {
 		factor = 0
 		modifier = {
@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	
-	continuous_focus_position = { x = 200 y = 2500 }
+	continuous_focus_position = { x = 250 y = 100  }
 	
 	default = no
 	
@@ -21,30 +21,31 @@ focus_tree = {
 		icon = GFX_goal_evac_focus
 		x = 30
 		y = 0
-		cost = 5
+		cost = 0.2
 		ai_will_do = {
 			factor = 4
 		}
 		select_effect = {
 			country_event = {
 				id = uns.1
-				days = 10
-				}
+				days = 1
+			}
 			
 			country_event = {
 				id = uns.2
-				days = 20
-				}
+				days = 5
+			}
 			country_event = {
 				id = uns.3
-				days = 30
-				}
+				days = 7
 			}
+		}
 			
 		completion_reward = {
 			effect_tooltip = {
 				country_event = uns.1
 			}		
+			
 		}
 	}
 	focus = { ### Разведка Местности
@@ -52,7 +53,7 @@ focus_tree = {
 		icon = GFX_goal_stalk
 		x = 30
 		y = 1
-		cost = 5
+		cost = 0.2
 		prerequisite = {
 			focus = UNS_evac
 		}
@@ -62,11 +63,11 @@ focus_tree = {
 		select_effect = {
 			country_event = {
 				id = uns.6
-				days = 15
+				days = 3
 			}
 			country_event = {
 				id = uns.7
-				days = 30
+				days = 6
 			}
 		}
 		completion_reward = {
@@ -82,7 +83,7 @@ focus_tree = {
 		x = 30
 		y = 2
 		icon = GFX_goal_settle
-		cost = 2
+		cost = 1
 		prerequisite = {
 			focus = UNS_stalk
 		}
@@ -94,24 +95,7 @@ focus_tree = {
 				id = uns.8
 			}
 			add_ideas = UNS_equestria_depence
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
+			acceptance_expand = yes 
 			custom_effect_tooltip = expand_acceptance_tt
 			hidden_effect = {
 				48 = {
@@ -135,7 +119,8 @@ focus_tree = {
 	}
 	############## Leading party
 	focus = { ### Борьба со внутренним арвгом
-		id = UNS_enemy_inside
+		id = UNS_enemy_inside 
+		
 		x = 13
 		y = 3
 		icon = GFX_goal_eninside
@@ -154,6 +139,15 @@ focus_tree = {
 	############# Democracy
 	focus = { ### Оплот Демократии
 		id = UNS_demo_1
+		available = {
+			all_state = {
+				limit = {
+					is_core_of = GRY 
+				}
+				
+				#is_owned_by = ROOT 
+			}
+		}
 		x = 7
 		y = 4
 		icon = GFX_goal_demo_1
@@ -214,7 +208,7 @@ focus_tree = {
 		x = 7
 		y = 6
 		icon = GFX_goal_demo_reform
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UNS_constitution 
 		}
@@ -298,33 +292,9 @@ focus_tree = {
 			factor = 4
 		}
 		completion_reward = {
-			add_ideas = {
-				idea = UNS_peacekeeping
-			}
-			set_rule = {
-				can_create_factions = yes
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
-				
-			custom_effect_tooltip = expand_acceptance_tt
+			
+		
+			acceptance_expand = yes 
 		}
 		
 	}
@@ -433,15 +403,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = uns_comm_tooltip_1
-			unlock_decision_category_tooltip = equestria_communist_support_category
-		}
-		hidden_effect = {
 			EQS = {
-				set_country_flag = UNS_equestria_communist_support 
-			}
-			set_variable = {
-				var = equestria_comm_size
-				value = 0
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
 			}
 		}
 	}
@@ -449,7 +415,7 @@ focus_tree = {
 		id = UNS_soc_state
 		x = 13
 		y = 7
-		cost = 10
+		cost = 5
 		icon = GFX_goal_usa_socialism
 		prerequisite = {
 			focus = UNS_starlight_help
@@ -471,7 +437,7 @@ focus_tree = {
 		id = UNS_workers_power
 		x = 13
 		y = 8
-		cost = 10
+		cost = 5
 		icon = GFX_goal_workers_power
 		prerequisite = {
 			focus = UNS_soc_state
@@ -514,7 +480,7 @@ focus_tree = {
 		id = UNS_new_way
 		x = 19
 		y = 5
-		icon = GFX_goal_new_ways
+		icon = GFX_goal_new_ways_pol
 		prerequisite = {
 			focus = UNS_fasc_1
 		}
@@ -562,7 +528,7 @@ focus_tree = {
 		id = UNS_rifle_human
 		x = 21
 		y = 6
-		cost = 10
+		cost = 5
 		icon = GFX_goal_second_change
 		prerequisite = {
 			focus = UNS_new_way
@@ -571,9 +537,7 @@ focus_tree = {
 			factor = 4
 		}
 		completion_reward = {
-			add_ideas = {
-				idea = UNS_militarized_people
-			}
+			add_ideas = UNS_militarized_people
 		}
 	}
 	focus = { ### Образец Третьего Рейха
@@ -660,7 +624,7 @@ focus_tree = {
 		id = UNS_world_situation
 		x = 13
 		y = 10
-		cost = 10
+		cost = 5
 		icon = GFX_goal_world_situation
 		prerequisite = {
 			focus = UNS_workers_power OR = UNS_demo_ever OR = UNS_fasc_rev
@@ -674,6 +638,7 @@ focus_tree = {
 				id = uns.15
 			}
 			custom_effect_tooltip = expand_acceptance_tt_exta
+			mark_focus_tree_layout_dirty = yes
 			if = {
 				limit = {
 					check_variable = { acceptance_value < 90 }
@@ -695,224 +660,18 @@ focus_tree = {
 			}
 		}
 	} 
-	focus = { ### Посольство в Весалиполис
-		id = UNS_changeling
-		x = 3
-		y = 11
-		cost = 5
-		icon = GFX_goal_embass_chn
-		prerequisite = {
-			focus = UNS_world_situation
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					tag = CHN
-				}
-				add_opinion_modifier = {
-					target = UNS
-					modifier = embassy_vesalipolis
-				}
-			}
-			UNS = {
-				add_opinion_modifier = {
-					target = CHN
-					modifier = embassy_vesalipolis
-				}
-			}
-			country_event = {
-				id = uns.17
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
-			custom_effect_tooltip = expand_acceptance_tt
-		}
-	} 
-	focus = { ### Посольство в Хьортланд
-		id = UNS_embass_hjortland
-		x = 7
-		y = 11
-		cost = 5
-		icon = GFX_goal_embass_ole
-		prerequisite = {
-			focus = UNS_world_situation
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					tag = OLE
-				}
-				add_opinion_modifier = {
-					target = UNS
-					modifier = embassy_hjortland
-				}
-			}
-			UNS = {
-				add_opinion_modifier = {
-					target = OLE
-					modifier = embassy_hjortland
-				}
-			}
-			country_event = {
-				id = uns.16
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-			
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
-			custom_effect_tooltip = expand_acceptance_tt
-		}
-		bypass = {
-			OLE = {
-				exists = no
-			}
-		}		
-	} 
-	focus = { ### Кантерлотское Соглашение
-		id = UNS_Canterlot_meeting
-		x = 11
-		y = 11
-		cost = 5
-		icon = GFX_goal_embass_eqs
-		prerequisite = {
-			focus = UNS_world_situation
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					tag = EQS
-				}
-				add_opinion_modifier = {
-					target = UNS
-					modifier = canterlot_visit
-				}
-			}
-			UNS = {
-				add_opinion_modifier = {
-					target = EQS
-					modifier = canterlot_visit
-					
-				}
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-			
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
-			custom_effect_tooltip = expand_acceptance_tt
-			country_event = {
-				id = uns.18
-			}
-		}
-	} 
-	focus = { ### Визит в Сталлионград
-		id = UNS_Stalliongrad_visit
-		x = 15
-		y = 11
-		cost = 5
-		icon = GFX_goal_embass_stg
-		prerequisite = {
-			focus = UNS_world_situation
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					tag = STG
-				}
-				add_opinion_modifier = {
-					target = UNS
-					modifier = stalliongrad_visit
-				}
-			}
-			UNS = {
-				add_opinion_modifier = {
-					target = STG
-					modifier = stalliongrad_visit
-				}
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 95 }
-				}
-				add_to_variable = {
-					acceptance_value = 5
-				}
-			}
-			
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 95 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
-			custom_effect_tooltip = expand_acceptance_tt
-		}
-	} 
+	
 	focus = { ### Саммит в Кантерлоте
 		id = UNS_canterlot_summit
-		x = 19
-		y = 11
+		x = 0
+		y = 1
+		relative_position_id = UNS_world_situation
+		allow_branch = {
+			AND = {
+				has_completed_focus = UNS_world_situation
+				has_government = democratic
+			}
+		}
 		cost = 5
 		icon = GFX_goal_canterlot_summit
 		prerequisite = {
@@ -940,97 +699,950 @@ focus_tree = {
 			country_event = {
 				id = uns.20
 			}
-			custom_effect_tooltip = alpha_tt_1
 		}
 	} 
-	focus = { ### Реакция на восстание Найтмэр Мун
-		id = UNS_eqs_civilwar
-		x = 25
-		y = 11
+	
+	focus = {
+		id = UNS_contact_people
+		icon = GFX_goal_UNS_contacts_people
+		x = -8
+		y = 1
+		relative_position_id = UNS_canterlot_summit
+		prerequisite = { focus = UNS_canterlot_summit }
 		cost = 5
-		icon = GFX_react_civilwar
-		available = {
-			any_country = {
-				original_tag = EQS
-				has_government = democratic
-				has_civil_war = yes
+		completion_reward = {
+			add_political_power = 50
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	focus = {
+		id = UNS_embass_britain
+		icon = GFX_goal_embass_britain
+		x = -4
+		y = 1
+		relative_position_id = UNS_contact_people
+		prerequisite = { focus = UNS_contact_people }
+		cost = 5
+		completion_reward = {
+			GRB = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+			add_political_power = 25
+			#custom_effect_tooltip = britain_unavailable 
+		}
+	}
+	
+	focus = {
+		id = UNS_air_corridor
+		x = -1
+		y = 1
+		relative_position_id = UNS_embass_britain
+		prerequisite = { focus = UNS_embass_britain }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes 
+				}
+			}
+			GRB = {
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 3
+						instant_build = yes 
+					}
+				}
+			}
+			add_tech_bonus = {
+				category = tp_tech
+				uses = 2
+				bonus = 1
 			}
 		}
-		prerequisite = {
-			focus = UNS_world_situation
-		}
-		ai_will_do = {
-			factor = 4
-		}
+	}
+	
+	focus = {
+		id = UNS_allies_meeting
+		x = 1
+		y = 1
+		relative_position_id = UNS_embass_britain
+		prerequisite = { focus = UNS_embass_britain }
+		cost = 5
 		completion_reward = {
+			GRB = {
+				add_stability = 0.15
+			}
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = UNS_reclaim_allies
+		x = 1
+		y = 1
+		relative_position_id = UNS_air_corridor
+		prerequisite = { focus = UNS_air_corridor }
+		prerequisite = { focus = UNS_allies_meeting }
+		cost = 4
+		completion_reward = {
+			GRB = {
+				add_ai_strategy = {
+					type = alliance
+					value = 250
+					id = UNS
+				}
+			}
+			if = {
+				limit = {
+					GRB = {
+						is_in_faction = no 
+					}
+				}
+				create_faction = HUMAN_FRACTION_UNS 
+				GRB = {
+					country_event = { id = generic.3 }
+				}
+			}
+			if = {
+				limit = {
+					GRB = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = yes 
+						}
+						
+					}
+				}
+				GRB = {
+					country_event = { id = generic.2 }
+				}
+			}
+			if = {
+				limit = {
+					GRB = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = no 
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_in_faction_with = GRB 
+							is_faction_leader = yes 
+						}
+					}
+					country_event = { id = generic.2 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_guarantee_grb
+		x = -1
+		y = 1
+		relative_position_id = UNS_reclaim_allies
+		prerequisite = { focus = UNS_reclaim_allies }
+		cost = 5
+		completion_reward = {
+			give_guarantee = GRB
 			add_political_power = 25
 		}
-	} 
-	focus = { ### Война Оленей и Оборотней
-		id = UNS_cha_ole_war
-		x = 5
-		y = 12
-		cost = 2
-		icon = GFX_goal_chaolewar
-		prerequisite = {
-			focus = UNS_changeling OR = UNS_embass_hjortland
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			country_event = {
-				id = uns.21
-			}
-		}
-	} 
-	focus = { ### Политика Умиротворения
-		id = UNS_peace_politics
+	}
+	
+	focus = {
+		id = UNS_fleet_and_air
 		x = 1
-		y = 12
+		y = 1
+		relative_position_id = UNS_reclaim_allies
+		prerequisite = { focus = UNS_reclaim_allies }
 		cost = 5
-		icon = GFX_goal_peace_pol
-		prerequisite = {
-			focus = UNS_changeling
+		completion_reward = {
+			add_tech_bonus = {
+				category = light_fighter
+				category = tactical_bomber
+				category = cas_bomber
+				uses = 5
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = dd_tech
+				category = bb_tech
+				category = shbb_tech
+				uses = 2
+				bonus = 2
+			}
+			GRB = {
+				add_tech_bonus = {
+					category = light_fighter
+					category = tactical_bomber
+					category = cas_bomber
+					uses = 5
+					bonus = 1
+				}
+				add_tech_bonus = {
+					category = dd_tech
+					category = bb_tech
+					category = shbb_tech
+					uses = 2
+					bonus = 2
+				}
+			}
 		}
+	}
+	
+	focus = {
+		id = UNS_we_are_united
+		x = 1
+		y = 1
+		relative_position_id = UNS_guarantee_grb
+		prerequisite = { focus = UNS_guarantee_grb }
+		prerequisite = { focus = UNS_fleet_and_air }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			add_political_power = 25
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UNS_embass_russia
+		icon = GFX_goal_embass_ussr
+		x = 0
+		y = 1
+		relative_position_id = UNS_contact_people
+		prerequisite = { focus = UNS_contact_people }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_soviet_scientifical_mission 
+		icon = GFX_goal_SOU_techno_barter
+		x = -1
+		y = 1
+		relative_position_id = UNS_embass_russia
+		prerequisite = { focus = UNS_embass_russia }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				country_event = { id = uns.38 }
+			}
+		}
+	}
+	focus = {
+		id = UNS_soviet_trading 
+		icon = GFX_goal_SOU_trade_union
+		x = 1
+		y = 1
+		relative_position_id = UNS_embass_russia
+		prerequisite = { focus = UNS_embass_russia }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				add_opinion_modifier = {
+					modifier = trading_treaty_uns  
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = trading_treaty_uns
+					target = ROOT 
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_space_program_sou 
+		icon = GFX_goal_UNS_spaceprog
+		x = 0 
+		y = 1
+		relative_position_id = UNS_soviet_scientifical_mission
+		prerequisite = { focus = UNS_soviet_scientifical_mission }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = rocketry
+				uses = 1
+				bonus = 1.5
+			}
+			SOU = {
+				add_tech_bonus = {
+					category = rocketry
+					uses = 1
+					bonus = 1.5
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_train_together 
+		icon = GFX_goal_SOU_defending
+		x = 0
+		y = 1
+		relative_position_id = UNS_soviet_trading
+		prerequisite = { focus = UNS_soviet_trading }
+		cost = 5
+		completion_reward = {
+			army_experience = 25
+			add_ideas = UNS_soviet_trainings
+			SOU = {
+				army_experience = 25
+				add_ideas = UNS_soviet_trainings
+			}
+		}
+	}
+	focus = { ### Новый Коминтерн
+		id = UNS_aliance_sov
+		x = 1
+		y = 1
+		relative_position_id = UNS_space_program_sou
+		cost = 5
+		icon = GFX_goal_comintern
+		prerequisite = {
+			focus = UNS_space_program_sou
+		}
+		prerequisite = { 
+			focus  = UNS_train_together
+		}
+		completion_reward = {
+			SOU = {
+				add_ai_strategy = {
+					type = alliance
+					value = 250
+					id = UNS
+				}
+			}
+			if = {
+				limit = {
+					SOU = {
+						is_in_faction = no 
+					}
+				}
+				create_faction = HUMAN_FRACTION_UNS 
+				SOU = {
+					country_event = { id = generic.3 }
+				}
+			}
+			if = {
+				limit = {
+					SOU = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = yes 
+						}
+						
+					}
+				}
+				SOU = {
+					country_event = { id = generic.2 }
+				}
+			}
+			if = {
+				limit = {
+					SOU = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = no 
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_in_faction_with = SOU 
+							is_faction_leader = yes 
+						}
+					}
+					country_event = { id = generic.2 }
+				}
+			}
+		}
+		
+			
 		ai_will_do = {
 			factor = 4
 		}
 	} 
-	focus = { ### Дипломатический Протест
-		id = UNS_diplomacy_protest
-		x = 3
-		y = 13
-		cost = 4
-		icon = GFX_goal_diplo_prot
-		prerequisite = {
-			focus = UNS_cha_ole_war 
+	
+	
+	focus = {
+		id = UNS_human_exhibition 
+		icon = GFX_goal_UNS_exhibit
+		x = 0 
+		y = 1
+		relative_position_id = UNS_aliance_sov
+		prerequisite = { focus = UNS_aliance_sov }
+		cost = 5
+		completion_reward = {
+			add_political_power = -25
+			every_country = {
+				limit = {
+					AND = {
+						is_human_race = no 
+						is_major = yes 
+					}
+				}
+				country_event = { id = uns.40 days = 5 }
+			}
 		}
-		mutually_exclusive = {
-			focus = UNS_join_war
+	}
+
+	focus = {
+		id = UNS_embass_berlin
+		icon = GFX_goal_embass_germany
+		x = 4
+		y = 1
+		relative_position_id = UNS_contact_people
+		prerequisite = { focus = UNS_contact_people }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_forget_the_past 
+		x = 0
+		icon = GFX_goal_SOU_tsarizm
+		y = 1
+		relative_position_id = UNS_embass_berlin
+		prerequisite = { focus = UNS_embass_berlin }
+		cost = 5
+		completion_reward = {
+			add_stability = -0.05
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = UNS_old_enemies_meeting 
+		icon = GFX_goal_GEM_dialog_himmler
+		x = -1
+		y = 1
+		relative_position_id = UNS_forget_the_past
+		prerequisite = { focus = UNS_forget_the_past }
+		cost = 5 
+		completion_reward = {
+			GEM = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.15
+				}
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UNS_invite_german_scientists 
+		icon = GFX_goal_GEM_magical_weapons
+		x = 1
+		y = 1
+		relative_position_id = UNS_forget_the_past
+		prerequisite = { focus = UNS_forget_the_past }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_german_scientists
+		}
+	}
+		
+	focus = {
+		id = UNS_hum_assistance_germ
+		icon = GFX_goal_buy_equipment
+		x = 0 
+		y = 1
+		relative_position_id = UNS_old_enemies_meeting
+		prerequisite = { focus = UNS_old_enemies_meeting }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = UNS 
+				}
+				add_stability = 0.05
+				add_political_power = -50
+			}
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = UNS_research_with_gem
+		icon = GFX_goal_GEM_hidden_war
+		x = 0
+		y = 1
+		relative_position_id = UNS_invite_german_scientists
+		prerequisite = { focus = UNS_invite_german_scientists }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_tech_bonus = {
+					category = industry
+					uses = 1
+					bonus = 1
+				}
+				add_tech_bonus = {
+					category = cat_heavy_armor
+					category = cat_light_armor
+					category = cat_medium_armor
+					uses = 2
+					bonus = 0.75
+				}
+			}
+			add_tech_bonus  = {
+				category = electronics
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = cat_heavy_armor
+				category = cat_light_armor
+				category = cat_medium_armor
+				uses = 2
+				bonus = 0.75
+			
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_deamonic_union
+		icon = GFX_goal_SOU_axis
+		x = 1
+		y = 1
+		relative_position_id = UNS_hum_assistance_germ
+		prerequisite = { focus = UNS_hum_assistance_germ }
+		prerequisite = { focus = UNS_research_with_gem }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_ai_strategy = {
+					type = alliance
+					value = 250
+					id = UNS
+				}
+			}
+			if = {
+				limit = {
+					GEM = {
+						is_in_faction = no 
+					}
+				}
+				create_faction = HUMAN_FRACTION_UNS 
+				GEM = {
+					country_event = { id = generic.3 }
+				}
+			}
+			if = {
+				limit = {
+					GEM = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = yes 
+						}
+						
+					}
+				}
+				GEM = {
+					country_event = { id = generic.2 }
+				}
+			}
+			if = {
+				limit = {
+					GEM = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = no 
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_in_faction_with = GEM 
+							is_faction_leader = yes 
+						}
+					}
+					country_event = { id = generic.2 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_humanity_first
+		icon = GFX_goal_UNS_hum_first
+		x = 0
+		y = 1
+		relative_position_id = UNS_human_exhibition
+		prerequisite = { focus = UNS_human_exhibition }
+		prerequisite = { focus = UNS_we_are_united }
+		prerequisite = { focus = UNS_deamonic_union }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_humanity_first_idea 
+			every_other_country = {
+				limit = {
+					AND = {
+						is_in_faction_with = ROOT 
+						is_human_race = yes 
+					}
+				}
+				add_ideas = UNS_humanity_first_idea
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = UNS_contact_natives
+		icon = GFX_goal_GEM_UN
+		x = 8
+		y = 1
+		relative_position_id = UNS_canterlot_summit
+		prerequisite = { focus = UNS_canterlot_summit }
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	focus = {
+		id = UNS_equus
+		x = -5
+		y = 1
+		icon = GFX_goal_UNS_equus
+		relative_position_id = UNS_contact_natives 
+		prerequisite = { focus = UNS_contact_natives }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+					is_human_race = no 
+				}
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_contact_pones
+		icon = GFX_goal_ponies
+		x = -2
+		y = 1
+		relative_position_id = UNS_equus
+		prerequisite = { focus = UNS_equus }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.05
+			EQS = {
+				add_stability = 0.05 
+			}
+			CRY = {
+				add_stability = 0.05 
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = UNS_speak_to_CRY 
+		icon = GFX_goal_UNS_meet_CRY
+		x = -1
+		y = 1
+		relative_position_id = UNS_contact_pones 
+		prerequisite = { focus = UNS_contact_pones }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes
+		}
+	}
+	
+	focus = {
+		id = UNS_speak_to_EQS
+		icon = GFX_goal_embass_eqs
+		x = 1
+		y = 1
+		relative_position_id = UNS_contact_pones 
+		prerequisite = { focus = UNS_contact_pones }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = UNS_invite_royal_family
+		icon = GFX_goal_UNS_invite_royals_CRY
+		available = {
+			CRY = {
+				has_country_leader = {
+					name = "Princess Mi Amore Cadenza"
+					ruling_only = yes 
+				}
+				has_civil_war = no 
+			}
+		}
+		bypass = {
+			CRY = {
+				has_government = communism
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = UNS_speak_to_CRY
+		prerequisite = { focus = UNS_speak_to_CRY }
+		cost = 5
+		completion_reward = {
+			CRY = {
+				country_event = { id = uns.41 days = 2 }
+			}
+		}
+	}
+	focus = { ### Пригласить Твайлайт Спаркл в Вашингтон
+		id = UNS_twilight
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = UNS_speak_to_EQS
+		icon = GFX_goal_twilight_visit
+		prerequisite = {
+			focus = UNS_speak_to_EQS
 		}
 		ai_will_do = {
 			factor = 4
 		}
 		completion_reward = {
-			add_opinion_modifier = {
-				modifier = decline_politics
-				target = CHN 
-			}
-			reverse_add_opinion_modifier = {
-				modifier = decline_politics
-				target = CHN 
+			EQS = {
+				country_event = {
+					id = uns.26
+					days = 1
+				}
 			}
 		}
 	} 
-	focus = { ### Оказать Военную помощь
+	
+	focus = { ### Гарант Независимости
+		id = UNS_guarantee_independence
+		x = 1
+		y = 1
+		relative_position_id = UNS_invite_royal_family
+		cost = 5
+		icon = GFX_goal_give_guarentee
+		prerequisite = {
+			focus = UNS_invite_royal_family
+		}
+		prerequisite = { focus = UNS_twilight }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			give_guarantee = EQS
+			give_guarantee = CRY
+		}
+	} 
+	
+	
+	focus = {
+		id = UNS_EQS_trainings 
+		icon = GFX_goal_UNS_EQS_training
+		x = -2
+		y = 1
+		relative_position_id = UNS_guarantee_independence
+		prerequisite = { focus = UNS_guarantee_independence }
+		cost = 5
+		completion_reward = {
+			army_experience = 25
+			EQS = {
+				army_experience = 25
+			}
+			CRY = {
+				army_experience = 25 
+			}
+			add_war_support = 0.05
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_history_books
+		icon = GFX_goal_UNS_history
+		x = 0 
+		y = 1
+		relative_position_id = UNS_guarantee_independence
+		prerequisite = { focus = UNS_guarantee_independence }
+		cost = 5 
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = UNS_technology_barter
+		icon = GFX_goal_UNS_technology_barter
+		x = 2
+		y = 1
+		relative_position_id = UNS_guarantee_independence
+		prerequisite = { focus = UNS_guarantee_independence }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				add_tech_bonus = {
+					category = industry 
+					bonus = 1
+					uses = 1
+				}
+			}
+			CRY = {
+				add_tech_bonus = {
+					category = industry
+					bonus = 1
+					uses = 1
+				}
+			}
+			add_tech_bonus = {
+				category = magical_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_harmonical_pact
+		icon = GFX_goal_uns_eqs_alliance
+		x = 0
+		y = 1
+		relative_position_id = UNS_history_books
+		prerequisite = { focus = UNS_history_books }
+		prerequisite = { focus = UNS_technology_barter }
+		prerequisite = { focus = UNS_EQS_trainings }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = alliance
+					id = UNS 
+					value = 500
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_harmony_defender
+		icon = GFX_goal_UNS_defend_harmony
+		x = 0 
+		y = 1
+		relative_position_id = UNS_harmonical_pact
+		prerequisite = { focus = UNS_harmonical_pact }
+		cost = 5 
+		completion_reward = {
+			add_ideas = UNS_harmony_defender_idea
+		}
+	}
+	
+	focus = {
+		id = UNS_victory_of_harmony
+		icon = GFX_goal_UNS_victory_of_harmony
+		x = 0
+		y = 1
+		relative_position_id = UNS_harmony_defender
+		prerequisite = { focus = UNS_harmony_defender }
+		available = {
+			CHN = {
+				OR = {
+					exists = no 
+					is_subject_of = ROOT 
+					is_subject_of = EQS 
+				}
+			}
+		}
+		cost = 2
+		completion_reward = {
+			news_event = {
+				id = uns.47 days = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_contact_others
+		icon = GFX_goal_embass_ole
+		x = 2 
+		y = 1
+		relative_position_id = UNS_equus
+		prerequisite = { focus = UNS_equus }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
 		id = UNS_join_war
-		x = 7
-		y = 13
+		x = 0
+		y = 1
+		relative_position_id = UNS_contact_others
 		cost = 5
 		icon = GFX_goal_mil_support
 		prerequisite = {
-			focus = UNS_cha_ole_war 
+			focus = UNS_contact_others 
 		}
 		available = {
 			OLE = {
@@ -1056,88 +1668,55 @@ focus_tree = {
 				}
 			}
 		}
-		mutually_exclusive = {
-			focus = UNS_diplomacy_protest
+	}
+	
+	focus = {
+		id = UNS_peacekeeping_forces
+		icon = GFX_goal_end_neutrality
+		x = 0
+		y = 1
+		relative_position_id = UNS_join_war
+		prerequisite = { focus = UNS_join_war }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_peacekeeping
 		}
-		ai_will_do = {
-			factor = 4
-		}
-		bypass = {
-			OLE = {
-				exists = no
-			}
-		}
-		continue_if_invalid = yes
-		
-	} 
-	focus = { ### Союз с Оборотнями
-		id = UNS_changeling_alliance
-		available = {
-			is_in_faction = no
-			has_government = fascism
-		}
-		x = 1
-		y = 14
-		cost = 6
-		icon = GFX_goal_alliance_CHN
+	}
+	
+	focus = { ### Дипломатический Протест
+		id = UNS_diplomacy_protest
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = UNS_peacekeeping_forces
+		icon = GFX_goal_diplo_prot
 		prerequisite = {
-			focus = UNS_peace_politics 
-		}
-		prerequisite = {
-			focus = UNS_diplomacy_protest
+			focus = UNS_peacekeeping_forces 
 		}
 		ai_will_do = {
 			factor = 4
 		}
 		completion_reward = {
-			CHN = {
-				country_event = {
-					id = generic.2
-					days = 1
-				}
+			add_opinion_modifier = {
+				modifier = decline_politics
+				target = CHN 
+			}
+			reverse_add_opinion_modifier = {
+				modifier = decline_politics
+				target = CHN 
 			}
 		}
 	} 
-	focus = { ### Падение Аликорна
-		id = UNS_alicorn_fall
-		x = 1
-		y = 15
-		cost = 30
-		icon = GFX_goal_alicorn_fall_uns
-		prerequisite = {
-			focus = UNS_changeling_alliance
-		}
-		mutually_exclusive = {
-			focus = UNS_chang_war
-		}
-		mutually_exclusive = {
-			focus = UNS_neytrality
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			create_wargoal = {
-				target = EQS 
-				type = annex_everything
-			}
-		}
-			
-	} 
+	
 	focus = { ### Война с Оборотнями
 		id = UNS_chang_war
-		x = 7
-		y = 15
+		x = 0
+		y = 1
+		relative_position_id = UNS_diplomacy_protest
 		cost = 5
 		icon = GFX_goal_invade_CHN_uns
 		prerequisite = {
-			focus = UNS_join_war
-		}
-		mutually_exclusive = {
-			focus = UNS_neytrality
-		}
-		mutually_exclusive = {
-			focus = UNS_alicorn_fall
+			focus = UNS_diplomacy_protest
 		}
 		ai_will_do = {
 			factor = 4
@@ -1149,367 +1728,3404 @@ focus_tree = {
 			}
 		}
 	} 
-	focus = { ### Сохранять Нейтралитет
-		id = UNS_neytrality
+	
+	focus = {
+		id = UNS_griffonia
+		icon = GFX_goal_UNS_griffonia
 		x = 4
-		y = 15
-		cost = 6
-		icon = GFX_goal_neutrality
-		prerequisite = {
-			focus = UNS_diplomacy_protest
-		}
-		mutually_exclusive = {
-			focus = UNS_chang_war
-		}
-		mutually_exclusive = {
-			focus = UNS_alicorn_fall
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			diplomatic_relation = {
-				relation = non_aggression_pact
-				country = CHN 
-				active = yes 
-			}
-			diplomatic_relation = {
-				relation = non_aggression_pact
-				country = EQS  
-				active = yes 
-			}
-		}
-	} 
-	focus = { ### Обмен Технологиями
-		id = UNS_tech_trade
-		available = {
-			is_in_faction = yes 
-		}
-		x = 9
-		y = 12
+		y = 1
+		relative_position_id = UNS_contact_natives
+		prerequisite = { focus = UNS_contact_natives }
 		cost = 5
-		icon = GFX_goal_trade_tech
-		prerequisite = {
-			focus = UNS_Canterlot_meeting
-		}
-		ai_will_do = {
-			factor = 4
-		}
 		completion_reward = {
-			hidden_effect = {
-				every_other_country = {
-					is_in_faction_with = ROOT 
-				}
-				add_to_tech_sharing_group = uns_tech_group
-			}
-			custom_effect_tooltip = uns_alliance_sharing_tt
-		}
-	} 
-	focus = { ### Акт о Дружбе Людей и Пони
-		id = UNS_pony_human_friendship
-		x = 13
-		y = 12
-		icon = GFX_goal_hum_pony_friendship
-		cost = 6
-		prerequisite = {
-			focus = UNS_Canterlot_meeting OR = UNS_Stalliongrad_visit
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			custom_effect_tooltip = expand_acceptance_tt_exta
-			if = {
+			every_other_country = {
 				limit = {
-					check_variable = { acceptance_value < 90 }
+					capital_scope = {
+						is_on_continent = europe
+					}
+					is_human_race = no 
 				}
-				add_to_variable = {
-					acceptance_value = 10
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
 				}
-				
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_northern_look
+		icon = GFX_goal_UNS_fat
+		x = -2
+		y = 1
+		relative_position_id = UNS_griffonia
+		prerequisite = { focus = UNS_griffonia }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = UNS_republican_treaty
+		icon = GFX_goal_UNS_republican_treaty
+		x = -1 
+		y = 1
+		relative_position_id = UNS_northern_look
+		prerequisite = { focus = UNS_northern_look }
+		cost = 5
+		completion_reward = {
+			FAT = {
+				add_ai_strategy = {
+					type = alliance
+					value = 250
+					id = UNS
+				}
 			}
 			if = {
 				limit = {
-					check_variable = { acceptance_value > 90 }
+					FAT = {
+						is_in_faction = no 
+					}
 				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
+				create_faction = REPUBLICAN_PACT_UNS 
+				FAT = {
+					country_event = { id = generic.3 }
+				}
+			}
+			if = {
+				limit = {
+					FAT = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = yes 
+						}
+						
+					}
+				}
+				FAT = {
+					country_event = { id = generic.2 }
+				}
+			}
+			if = {
+				limit = {
+					FAT = {
+						AND = {
+							is_in_faction = yes 
+							is_faction_leader = no 
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						AND = {
+							is_in_faction_with = GEM 
+							is_faction_leader = yes 
+						}
+					}
+					country_event = { id = generic.2 }
+				}
 			}
 		}
-	} 
-	focus = { ### Пригласить Твайлайт Спаркл в Вашингтон
-		id = UNS_twilight
-		x = 11
-		y = 13
+	}
+	focus =  {
+		id = UNS_guarantee_republic
+		icon = GFX_goal_UNS_guarantee_FAT
+		x = 0
+		y = 1
+		prerequisite = { focus = UNS_republican_treaty }
+		relative_position_id = UNS_republican_treaty
 		cost = 5
-		icon = GFX_goal_twilight_visit
-		prerequisite = {
-			focus = UNS_Canterlot_meeting
-		}
-		ai_will_do = {
-			factor = 4
-		}
 		completion_reward = {
-			EQS = {
-				country_event = {
-					id = uns.26
-					days = 1
-				}
-			}
+			give_guarantee = FAT 
 		}
-	} 
-	focus = { ### Союз со Сталлионградом
-		id = UNS_stal_uns_alliance
-		available = {
-			is_in_faction = no
-			has_government = communism
-		}
-		x = 15
-		y = 13
-		cost = 10
-		icon = GFX_goal_uns_stg_alliance
-		prerequisite = {
-			focus = UNS_Stalliongrad_visit
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			create_faction = UNS_STG_FOCUS_FACTION
-			STG = {
-				country_event = {
-					id = uns.28
-					days = 0
-				}
-			}
-		}
-	} 
-	focus = { ### Союз с Эквестрией
-		id = UNS_eqs_uns_alliance
-		available = {
-			is_in_faction = no
-			has_government = democratic
-		}
-		x = 11
-		y = 14
-		cost = 10
-		icon = GFX_goal_uns_eqs_alliance
-		prerequisite = {
-			focus = UNS_twilight
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			EQS = {
-				country_event = {
-					id = uns.29
-					days = 0
-				}
-			}
-		}
-	} 
-	focus = { ### Мировая Революция
-		id = UNS_world_rev
-		x = 15
-		y = 14
+	}
+	
+	focus = {
+		id = UNS_challenge_the_empire 
+		icon = GFX_goal_UNS_destroy_empire
+		x = 0
+		y = 1
+		relative_position_id = UNS_guarantee_republic
+		prerequisite = { focus = UNS_guarantee_republic }
 		cost = 5
-		icon = GFX_goal_world_rev
-		prerequisite = {
-			focus = UNS_stal_uns_alliance
+		completion_reward = {
+			create_wargoal = {
+				target = GRI 
+				type = annex_everything
+			}
 		}
-		ai_will_do = {
-			factor = 4
+	}
+	
+	focus = {
+		id = UNS_honor_and_glory 
+		icon = GFX_goal_UNS_honor_glory
+		x = 1
+		y = 1
+		relative_position_id = UNS_northern_look
+		prerequisite = { focus = UNS_northern_look }
+		cost = 5
+		completion_reward = {
+			HLR = {
+				effect_tooltip = {
+					add_ideas = UNS_support 
+				}
+				hidden_effect = {
+					country_event = { id = uns.43 }
+				}
+			}
 		}
+	}
+		
+	focus = {
+		id = UNS_contact_order
+		icon = GFX_goal_UNS_support_HLR
+		x = 0
+		y = 1
+		relative_position_id = UNS_honor_and_glory
+		prerequisite = { focus = UNS_honor_and_glory }
+		cost = 5
+		completion_reward = {
+			effect_tooltip = {
+				give_guarantee = HLR 
+			}
+			HLR = {
+				country_event = { id = uns.44 }
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_river_federation
+		icon = GFX_goal_UNS_river
+		x = 2 
+		y = 1 
+		relative_position_id = UNS_griffonia
+		prerequisite = { focus = UNS_griffonia }
+		cost = 7.2
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_riverlands_country = yes 
+				}
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_diamonddogs_geologists
+		icon = GFX_goal_UNS_dogs
+		x = -1
+		y = 1
+		relative_position_id = UNS_river_federation
+		prerequisite = { focus = UNS_river_federation }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_dogs_geologists
+		}
+	}
+	
+	focus = { 
+		id = UNS_vittenland_scientists
+		icon = GFX_goal_UNS_WIT
+		x = 1
+		y = 1
+		relative_position_id = UNS_river_federation
+		prerequisite = { focus = UNS_river_federation }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_vittenland_science
+		}
+	}
+	
+	focus = {
+		id = UNS_nimbussia_art
+		icon = GFX_goal_UNS_NIM
+		x = 0 
+		y = 1
+		relative_position_id = UNS_diamonddogs_geologists
+		prerequisite = { focus = UNS_diamonddogs_geologists }
+		cost = 7.2
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			add_stability = 0.15
+		}
+	}
+	
+	focus = {
+		id = UNS_hellquill_solution
+		icon = GFX_goal_UNS_HLQ
+		x = 0
+		y = 1
+		relative_position_id = UNS_vittenland_scientists
+		prerequisite = { focus = UNS_vittenland_scientists }
+		cost = 7.2
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					is_riverlands_country = yes 
+				}
+				ROOT = {
+					give_guarantee = PREV 
+				}
+			}
+			if = {
+				limit = {
+					HLQ = {
+						has_war_with = RIV 
+					}
+				}
+				create_wargoal = {
+					target = HLQ
+					type = puppet_wargoal_focus 
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = UNS_cure_the_purple_plague
+		icon = GFX_goal_UNS_ppc
+		x = 1
+		y = 1
+		relative_position_id = UNS_nimbussia_art
+		prerequisite = { focus = UNS_nimbussia_art }
+		prerequisite = { focus = UNS_hellquill_solution }
+		cost = 5
+		completion_reward = {
+			news_event = { id = uns.46 days = 15 }
+		}
+	}
+	########### Тут коммуняки 
+	
+	
+	focus = {
+		id = UNS_proletariat
+		icon = GFX_goal_UNS_proletariat
+		allow_branch = {
+			AND = {
+				has_completed_focus = UNS_world_situation
+				has_government = communism
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = UNS_world_situation
+		prerequisite = { focus = UNS_world_situation }
+		cost = 5
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
-				popularity = 0.25
+				popularity = 0.1
+			}
+		}
+	}
+	
+	################# Gus Hall focuses
+	
+	
+	focus = {
+		id = UNS_friendship_of_people
+		icon = GFX_goal_UNS_friends
+		x = -5
+		y = 1
+		mutually_exclusive = { focus = UNS_forget_the_weakness }
+		relative_position_id = UNS_proletariat
+		prerequisite = { focus = UNS_proletariat }
+		cost = 7.2
+		completion_reward = {
+			add_political_power = 25
+			set_rule = { can_create_factions = yes }
+			create_faction = UNS_SOC_PACT
+		}
+	}
+	
+	focus = {
+		id = UNS_soviet_alliance
+		icon = GFX_goal_UNS_SOU
+		x = -1
+		y = 1
+		relative_position_id = UNS_friendship_of_people
+		prerequisite = { focus = UNS_friendship_of_people }
+		cost = 7.2
+		completion_reward = {
+			SOU = {
+				country_event = { id = generic.3 days = 3 }
+				add_ai_strategy = {
+					type = alliance
+					id = UNS
+					value = 500
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_stalliongrad_alliance
+		icon = GFX_goal_UNS_STG
+		x = 1
+		y = 1
+		relative_position_id = UNS_friendship_of_people
+		prerequisite = { focus = UNS_friendship_of_people }
+		cost = 7.2
+		completion_reward = {
+			STG = {
+				country_event = { id = generic.3 days = 3 }
+				add_ai_strategy = {
+					type = alliance
+					id = UNS
+					value = 500
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_communism_defender
+		icon = GFX_goal_UNS_commdef
+		x = -2
+		y = 1
+		relative_position_id = UNS_soviet_alliance
+		prerequisite = { focus = UNS_soviet_alliance }
+		prerequisite = { focus = UNS_stalliongrad_alliance }
+		mutually_exclusive = { focus = UNS_red_march }
+		cost = 5
+		ai_will_do = { factor = 0 }
+		completion_reward = {
+			add_political_power = 25
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_antifasc_propaganda
+		icon = GFX_goal_UNS_antifa 
+		x = -1
+		y = 1
+		relative_position_id = UNS_communism_defender
+		prerequisite = { focus = UNS_communism_defender }
+		cost = 7.2
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.07
+			}
+			every_other_country = {
+				limit = {
+					has_government = fascism
+				}
+				add_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_support_equestrian_communists
+		icon = GFX_goal_UNS_eqs_comm_support
+		x = 1
+		y = 1
+		relative_position_id = UNS_communism_defender
+		prerequisite = { focus = UNS_communism_defender }
+		cost = 7.2
+		completion_reward = {
+			EQS = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				
+			}
+			add_collaboration = {
+				target = EQS 
+				value = 0.3
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_invite_ulbricht
+		icon = GFX_goal_UNS_ulbricht
+		x = 0
+		y = 1
+		relative_position_id = UNS_antifasc_propaganda
+		prerequisite = { focus = UNS_antifasc_propaganda }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = UNS_ulbricht_exile
+		}
+	}
+	
+	focus = {
+		id = UNS_crystal_republic
+		icon = GFX_goal_UNS_CRY
+		x = 0
+		y = 1
+		relative_position_id = UNS_support_equestrian_communists
+		prerequisite = { focus = UNS_support_equestrian_communists }
+		cost = 7.2
+		completion_reward = {
+			CRY = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				
+			}
+			add_collaboration = {
+				target = CRY 
+				value = 0.3
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_red_world 
+		icon = GFX_goal_UNS_Redworld
+		x = 1
+		y = 1
+		relative_position_id = UNS_invite_ulbricht
+		prerequisite = { focus = UNS_invite_ulbricht }
+		prerequisite = { focus = UNS_crystal_republic }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_soviet_pressure_category
+			hidden_effect = {
+				add_dynamic_modifier = { 
+					modifier = UNS_modifier_redworld
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_communism_superiority
+		icon = GFX_goal_UNS_commsuper
+		x = -1
+		y = 1
+		relative_position_id = UNS_red_world
+		prerequisite = { focus = UNS_red_world }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_comm_superiority
+		}
+	}
+	
+	
+	focus = {
+		id = UNS_enhance_lives
+		icon = GFX_goal_UNS_enhance
+		x = 1
+		y = 1
+		relative_position_id = UNS_red_world
+		prerequisite = { focus = UNS_red_world }
+		cost = 7.2
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			add_stability = 0.07
+		}
+	}
+	
+	focus = {
+		id = UNS_brotherhood_equality
+		icon = GFX_goal_UNS_equality
+		available = {
+			all_country = {
+				OR = {
+					is_in_faction_with = ROOT 
+					is_subject_of = ROOT 
+					original_tag = UNS 
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = UNS_communism_superiority
+		prerequisite = { focus = UNS_communism_superiority }
+		prerequisite = { focus = UNS_enhance_lives }
+		cost = 5
+		completion_reward = {
+			news_event = { id = uns.50 }
+		}
+	}
+	
+	focus = {
+		id = UNS_red_march
+		icon = GFX_goal_UNS_red_march
+		x = 2
+		y = 1
+		relative_position_id = UNS_stalliongrad_alliance
+		prerequisite = { focus = UNS_soviet_alliance }
+		prerequisite = { focus = UNS_stalliongrad_alliance }
+		mutually_exclusive = { focus = UNS_communism_defender }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_red_march_idea
+		}
+	}
+			
+	focus = {
+		id = UNS_attack_equestria
+		icon = GFX_goal_UNS_attack_EQS
+		bypass = {
+			has_war_with = EQS 
+		}
+		x = -1
+		y = 1
+		relative_position_id = UNS_red_march 
+		prerequisite = { focus = UNS_red_march }
+		cost = 7.2
+		completion_reward = {
+			effect_tooltip  = {
+				create_wargoal = {
+					type = annex_everything
+					target = EQS 
+				}
+			}
+			custom_effect_tooltip = become_communist_attack_target
+			hidden_effect = {
+				EQS = {
+					set_country_flag = american_comm_target
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_crush_the_bugs
+		icon = GFX_goal_UNS_crush_bugs
+		x = 1
+		y = 1
+		relative_position_id = UNS_red_march
+		prerequisite = { focus = UNS_red_march }
+		cost = 7.2
+		completion_reward = {
+			effect_tooltip  = {
+				create_wargoal = {
+					type = annex_everything
+					target = CHN 
+				}
+			}
+			custom_effect_tooltip = become_communist_attack_target
+			hidden_effect = {
+				CHN = {
+					set_country_flag = american_comm_target
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_way_north 
+		icon = GFX_goal_UNS_way_north
+		x = 0
+		y = 1
+		relative_position_id = UNS_attack_equestria
+		prerequisite = { focus = UNS_attack_equestria }
+		cost = 7.2
+		completion_reward = {
+			effect_tooltip  = {
+				create_wargoal = {
+					type = annex_everything
+					target = JAK 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = YAK 
+				}
+			}
+			custom_effect_tooltip = become_communist_attack_target
+			hidden_effect = {
+				YAK = {
+					set_country_flag = american_comm_target
+				}
+				JAK = {
+					set_country_flag = american_comm_target
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_kill_the_eagle
+		icon = GFX_goal_UNS_kill_eagle
+		x = 0
+		y = 1
+		relative_position_id = UNS_crush_the_bugs
+		prerequisite = { focus = UNS_crush_the_bugs }
+		cost = 7.2 
+		completion_reward = {
+			effect_tooltip  = {
+				create_wargoal = {
+					type = annex_everything
+					target = GEM 
+				}
+			}
+			custom_effect_tooltip = become_communist_attack_target
+			hidden_effect = {
+				GEM = {
+					set_country_flag = american_comm_target
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = UNS_challenge_the_empire_com
+		icon = GFX_goal_UNS_COM_GRI
+		x = 1
+		y = 1
+		relative_position_id = UNS_way_north
+		prerequisite = { focus = UNS_way_north }
+		prerequisite = { focus = UNS_kill_the_eagle }
+		cost = 21.5
+		select_effect = {
+			country_event = { id = uns.52 days = 30 }
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = uns.52 days = 30 }
+				create_wargoal = {
+					target = GRI
+					type = annex_everything
+				}
+			}
+			hidden_effect = {
+				country_event = { id = uns.59 days = 5 }
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_republic_invasion
+		icon = GFX_goal_UNS_FAT_inv
+		x = 0
+		y = 1
+		relative_position_id = UNS_challenge_the_empire_com
+		prerequisite = { focus = UNS_challenge_the_empire_com }
+		cost = 7.2
+		completion_reward = {
+			FAT = {
+				country_event = { id = uns.54  days = 10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_support_skynavia 
+		bypass = {
+			SRS = {
+				exists = no 
+			}
+		}
+		icon = GFX_goal_UNS_support_SRS
+		x = -1
+		y = 1
+		relative_position_id = UNS_republic_invasion
+		prerequisite = { focus = UNS_republic_invasion }
+		cost = 7.2
+		completion_reward = {
+			give_guarantee = SRS 
+			SRS = {
+				country_event = { id = uns.49 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_support_longsword
+		icon = GFX_goal_UNS_support_LSC
+		bypass = {
+			LSC = {
+				exists = no 
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = UNS_republic_invasion
+		prerequisite = { focus = UNS_republic_invasion }
+		cost = 7.2
+		completion_reward = {
+			give_guarantee = LSC 
+			LSC = {
+				country_event = { id = uns.49 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_wingbardia_question 
+		icon = GFX_goal_UNS_invade_WNG
+		x = 0
+		y = 1
+		relative_position_id = UNS_support_skynavia
+		prerequisite = { focus = UNS_support_skynavia }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = desicion_on_ruling_party
+			if = {
+				limit = {
+					WNG = {
+						has_government = communism 
+					}
+				}
+				WNG = {
+					country_event = { id = uns.49 days = 5 }
+				}
+			}
+			else = {
+				create_wargoal = {
+					target = WNG 
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_river_socialism
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_RIV
+		relative_position_id = UNS_support_longsword
+		prerequisite = { focus = UNS_support_longsword }
+		cost = 7.2
+		completion_reward = {
+			effect_tooltip  = {
+				create_wargoal = {
+					type = annex_everything
+					target = RIV 
+				}
+			}
+			custom_effect_tooltip = become_communist_attack_target
+			hidden_effect = {
+				RIV = {
+					set_country_flag = american_comm_target
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_human_faced_social
+		icon = GFX_goal_world_rev
+		available = {
+			has_war = no 
+		}
+		x = 1
+		y = 1
+		relative_position_id = UNS_wingbardia_question
+		prerequisite = { focus = UNS_wingbardia_question }
+		prerequisite = { focus = UNS_river_socialism }
+		cost = 5
+		completion_reward = {
+			news_event = { id = uns.60 days = 15 }
+		}
+	}
+	
+	########## STATESOC BRANCH 
+	
+	
+	focus = {
+		id = UNS_forget_the_weakness 
+		icon = GFX_goal_UNS_no_weakness
+		x = 6
+		y = 1
+		relative_position_id = UNS_proletariat
+		prerequisite = { focus = UNS_proletariat }
+		mutually_exclusive = { focus = UNS_friendship_of_people }
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = UNS_forget_the_suffer
+		icon = GFX_goal_UNS_no_suffer
+		x = 0
+		y = 1
+		relative_position_id = UNS_forget_the_weakness
+		prerequisite = { focus = UNS_forget_the_weakness }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_no_suffer
+		}
+	}
+	
+	focus = {
+		id = UNS_we_protect_you
+		icon = GFX_goal_UNS_we_protect
+		x = -1
+		y = 1
+		relative_position_id = UNS_forget_the_suffer
+		prerequisite = { focus = UNS_forget_the_suffer }
+		cost = 7.2 
+		completion_reward = {
+			add_ideas = UNS_we_protect 
+		}
+	}
+	
+	focus = {
+		id = UNS_we_help_you
+		icon = GFX_goal_UNS_we_help
+		x = 1
+		y = 1
+		relative_position_id = UNS_forget_the_suffer 
+		prerequisite = { focus = UNS_forget_the_suffer }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_we_help 
+		}
+	}
+		
+	focus = {
+		id = UNS_we_are_salvation 
+		icon = GFX_goal_UNS_we_salvation
+		x = 1
+		y = 1
+		relative_position_id = UNS_we_protect_you
+		prerequisite = { focus = UNS_we_protect_you }
+		prerequisite = { focus = UNS_we_help_you }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_salvation
+		}
+	}
+	
+	focus = {
+		id = UNS_hull_is_weak
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_hull_is_weak
+		relative_position_id = UNS_we_are_salvation
+		prerequisite = { focus = UNS_we_are_salvation }
+		cost = 1
+		completion_reward = {
+			retire_country_leader = yes 
+			create_country_leader = {
+				name = "STATESOC Counsil"
+				picture = "GFX_statesoc_animated"
+				desc = "UNS_STATESOC_DESC"
+				expire = "1300.1.1"
+				ideology = equalism
+				traits = { statesoc_trait }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_we_are_strong
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_we_are_strong
+		relative_position_id = UNS_hull_is_weak
+		prerequisite = { focus = UNS_hull_is_weak }
+		cost = 1
+		completion_reward = {
+			set_party_name = {
+				ideology = communism
+				long_name = UNS_statesoc_name_long
+				name = UNS_statesoc_name
+			}
+			set_cosmetic_tag = UNS_statesoc
+			add_dynamic_modifier = {
+				modifier = UNS_unity_of_statesoc
+			}
+			set_variable = { uns_unity_statesoc = 0.01 }
+		}
+	}
+	
+	focus = {
+		id = UNS_we_will_proove_that
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_prove
+		relative_position_id = UNS_we_are_strong
+		prerequisite = { focus = UNS_we_are_strong }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_ministry_of_peace_cat
+			unlock_decision_category_tooltip = UNS_ministry_of_war_cat
+			unlock_decision_category_tooltip = UNS_ministry_of_morale_cat
+		}
+	}
+	
+	focus = {
+		id = UNS_minpeace_focus 
+		available = { always = no }
+		x = -4 
+		y = 1
+		icon = GFX_goal_UNS_minpeace_focus
+		relative_position_id = UNS_we_will_proove_that
+		prerequisite = { focus = UNS_we_will_proove_that }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	
+	focus = {
+		id = UNS_minwar_focus
+		available = { always = no }
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_minwar_focus
+		relative_position_id = UNS_we_will_proove_that
+		prerequisite = { focus = UNS_we_will_proove_that }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	
+	focus = {
+		id = UNS_minmorale_focus 
+		available = { always = no }
+		x = 4 
+		y = 1
+		icon = GFX_goal_UNS_minmor_focus
+		relative_position_id = UNS_we_will_proove_that
+		prerequisite = { focus = UNS_we_will_proove_that }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	
+	focus = {
+		id = UNS_open_medcentres 
+		available = {
+			has_country_flag = minpeace_healthdep
+		}
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_medcenters
+		relative_position_id = UNS_minpeace_focus
+		prerequisite = { focus = UNS_minpeace_focus }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_tooltip = UNS_meds_giveaway
+		}
+	}
+	focus = {
+		id = UNS_open_schools 
+		available = {
+			has_country_flag = minpeace_sciencedep
+		}
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_Schools
+		relative_position_id = UNS_minpeace_focus
+		prerequisite = { focus = UNS_minpeace_focus }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_tooltip = UNS_open_new_schools
+		}
+	}
+	focus = {
+		id = UNS_workplaces
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_workplaces
+		relative_position_id = UNS_open_medcentres
+		prerequisite = { focus = UNS_open_medcentres }
+		prerequisite = { focus = UNS_open_schools }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT 
+				}
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT 
+				}
+				add_extra_state_shared_building_slots = 3 
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_study_them_medicine 
+		available = {
+			has_country_flag = minpeace_milhealdep
+		}
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_medicine
+		relative_position_id = UNS_workplaces
+		prerequisite = { focus = UNS_workplaces }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_tooltip = UNS_send_doctors_to_frontier
+		}
+	}
+	
+	focus = {
+		id = UNS_teach_them_magic 
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_magical_teach
+		relative_position_id = UNS_workplaces
+		prerequisite = { focus = UNS_workplaces }
+		cost = 7.2
+		completion_reward = {
+			add_tech_bonus = {
+				category = magical_tech
+				category = race_tech
+				uses = 3
+				bonus = 0.75 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_be_prepared 
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_be_prepared
+		relative_position_id = UNS_study_them_medicine 
+		prerequisite = { focus = UNS_study_them_medicine }
+		prerequisite = { focus = UNS_teach_them_magic }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_prepared_for_war 
+		}
+	}
+	
+	focus = {
+		id = UNS_give_them_best_armor
+		available = {
+			has_country_flag = minwar_armordep
+		}
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_armor
+		relative_position_id = UNS_minwar_focus
+		prerequisite = { focus = UNS_minwar_focus }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_tooltip = UNS_armor_development
+		}
+	}
+	focus = {
+		id = UNS_make_them_work_together 
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_work_together
+		relative_position_id = UNS_minwar_focus 
+		prerequisite = { focus = UNS_minwar_focus }
+		cost = 7.2 
+		completion_reward = {
+			add_ideas = UNS_work_together
+		}
+	}
+	focus = {
+		id = UNS_best_weapons 
+		available = {
+			has_country_flag = minwar_armsdep
+		}
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_Best_weap
+		relative_position_id = UNS_give_them_best_armor
+		prerequisite = { focus = UNS_give_them_best_armor }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_tooltip = UNS_develop_weapons
+		}
+	}
+	
+	focus = {
+		id = UNS_create_machines_of_death 
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_machines_of_death
+		relative_position_id = UNS_make_them_work_together
+		prerequisite = { focus = UNS_make_them_work_together }
+		cost = 7.2
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor 
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_angels_of_death
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_angels_of_death
+		relative_position_id = UNS_best_weapons
+		prerequisite = { focus = UNS_best_weapons }
+		prerequisite = { focus = UNS_create_machines_of_death }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_angels_of_death_idea
+		}
+	}
+	
+	focus = {
+		id = UNS_war_is_coming
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_war_coming
+		relative_position_id = UNS_angels_of_death 
+		prerequisite = { focus = UNS_angels_of_death }
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UNS_paint_portraits
+		available = {
+			has_country_flag = minmor_artsdep
+		}
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_paint_portraits
+		relative_position_id = UNS_minmorale_focus
+		prerequisite = { focus = UNS_minmorale_focus }
+		cost = 7.2 
+		completion_reward = {
+			unlock_decision_tooltip = UNS_censorship
+		}
+	}
+	
+	focus = {
+		id = UNS_tear_the_pages
+		available = {
+			has_country_flag = minmor_printdep
+		}
+		icon = GFX_goal_UNS_tear_pages
+		x = 1
+		y = 1
+		relative_position_id = UNS_minmorale_focus
+		prerequisite = { focus = UNS_minmorale_focus }
+		cost = 7.2 
+		completion_reward = {
+			unlock_decision_tooltip = UNS_newspapers
+		}
+	}
+	
+	focus = {
+		id = UNS_burn_the_flags
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_burn_flags
+		relative_position_id = UNS_paint_portraits
+		prerequisite = { focus = UNS_paint_portraits }
+		cost = 7.2
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_forget_the_names
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_forget_names
+		relative_position_id = UNS_tear_the_pages
+		prerequisite = { focus = UNS_tear_the_pages }
+		cost = 7.2
+		completion_reward = {
+			kill_ideology_leader = democratic
+			kill_ideology_leader = fascism
+			add_political_power = -50
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_we_are_history
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_we_history
+		relative_position_id = UNS_burn_the_flags 
+		prerequisite = { focus = UNS_burn_the_flags }
+		prerequisite = { focus = UNS_forget_the_names }
+		cost = 5
+		completion_reward = {
+			add_to_variable = { var  = uns_unity_statesoc value = 0.1 tooltip = change_unity_level }
+			check_statesoc_level = yes
+		}
+	}
+	
+	focus = {
+		id = UNS_we_will_win
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_we_will_win
+		relative_position_id = UNS_we_are_history
+		prerequisite = { focus = UNS_we_are_history }
+		cost = 7.2
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UNS_we_are_society
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_society
+		relative_position_id = UNS_war_is_coming
+		prerequisite = { focus = UNS_be_prepared }
+		prerequisite = { focus = UNS_war_is_coming }
+		prerequisite = { focus = UNS_we_will_win }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_victory_is_ours
+		}
+	}
+	
+	focus = {
+		id = UNS_fake_harmony
+		x = 0
+		y = 1
+		bypass = {
+			AND = {
+				has_war_with = EQS 
+				has_war_with = CRY 
+			}
+		}
+		icon = GFX_goal_UNS_fake_harmony
+		relative_position_id = UNS_we_are_society
+		prerequisite = { focus = UNS_we_are_society }
+		cost = 15
+		completion_reward = {
+			create_wargoal = {
+				target = EQS 
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = CRY 
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	
+	focus = {
+		id = UNS_destroy_fake_brotherhood 
+		x = -1
+		y = 1
+		bypass = {
+			has_war_with = STG 
+		}
+		icon = GFX_goal_UNS_fake_brotherhood
+		relative_position_id = UNS_fake_harmony
+		prerequisite = { focus = UNS_fake_harmony }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = STG  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	
+	focus = {
+		id = UNS_true_unity
+		x = 1
+		y = 1
+		bypass = {
+			has_war_with = CHN
+		}
+		icon = GFX_goal_UNS_fake_unity
+		relative_position_id = UNS_fake_harmony
+		prerequisite = { focus = UNS_fake_harmony }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = CHN  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	focus = {
+		id = UNS_bring_civilization
+		x = 0
+		y = 1
+		bypass = {
+			OR = {
+				has_war_with = YAK 
+				has_war_with = JAK 
+			}
+		}
+		icon = GFX_goal_UNS_barbarians
+		relative_position_id = UNS_destroy_fake_brotherhood
+		prerequisite = { focus = UNS_destroy_fake_brotherhood }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = YAK  
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = JAK  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	
+	focus = {
+		id = UNS_finish_the_tyranny
+		x = 0
+		y = 1
+		bypass = {
+			has_war_with = OLE 
+		}
+		icon = GFX_goal_UNS_tiranny
+		relative_position_id = UNS_true_unity
+		prerequisite = { focus = UNS_true_unity }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = OLE  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	focus = {
+		id = UNS_destroy_russia 
+		x = 0
+		y = 1
+		bypass = {
+			has_war_with = SOU 
+		}
+		icon = GFX_goal_UNS_destroy_sou
+		relative_position_id = UNS_bring_civilization
+		prerequisite = { focus = UNS_bring_civilization }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = SOU  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	
+	focus = {
+		id = UNS_revenge_the_past
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_destroy_gem
+		relative_position_id = UNS_finish_the_tyranny
+		prerequisite = { focus = UNS_finish_the_tyranny }
+		cost = 5
+		bypass = {
+			has_war_with = GEM 
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = GEM  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	
+	focus = {
+		id = UNS_destroy_the_doubts
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_no_doubts
+		relative_position_id = UNS_destroy_russia
+		prerequisite = { focus = UNS_destroy_russia }
+		prerequisite = { focus = UNS_revenge_the_past }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = GRF  
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = GFF  
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = PLB  
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = PNG  
+				type = puppet_wargoal_focus
+			}
+			custom_effect_tooltip = annex_unity_fall
+		}
+	}
+	
+	################ STUPID BITCH BRANCH 
+	
+	focus = {
+		id = UNS_fate_of_president
+		allow_branch = {
+			has_government = fascism
+			has_completed_focus = UNS_world_situation 
+			NOT = {
+				has_country_leader = {
+					name = "General Gershell fon Shepherd"
+				}
+			}
+		}
+		icon = GFX_goal_UNS_fate_kennedy
+		x = 0
+		y = 1
+		relative_position_id = UNS_world_situation 
+		prerequisite = { focus = UNS_world_situation }
+		cost = 7.2
+		completion_reward = {
+			kill_ideology_leader = democratic
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_local_friends 
+		x = -4
+		y = 1
+		icon = GFX_goal_UNS_locals
+		relative_position_id = UNS_fate_of_president
+		prerequisite = { focus = UNS_fate_of_president }
+		mutually_exclusive = {
+			focus = UNS_griffonia_experience 
+		}
+		cost = 5
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = UNS_friends_germany
+		available = {
+			GEM = {
+				has_government = fascism
+			}
+		}
+		x = -1 
+		y = 1
+		icon = GFX_goal_UNS_friend_GEM
+		relative_position_id = UNS_local_friends
+		prerequisite = { focus = UNS_local_friends }
+		cost = 7.2
+		completion_reward = {
+			GEM = {
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = human_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = human_friendship
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_friends_changeling
+		x = 1 
+		y = 1
+		icon = GFX_goal_UNS_changelings
+		relative_position_id = UNS_local_friends
+		prerequisite = { focus = UNS_local_friends }
+		cost = 7.2
+		completion_reward = {
+			CHN = {
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = human_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = human_friendship
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_meet_fuhrer
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_meet_himmler
+		relative_position_id = UNS_friends_germany
+		prerequisite = { focus = UNS_friends_germany }
+		cost = 7.2
+		completion_reward = {
+			give_guarantee = GEM 
+			GEM = {	
+				give_guarantee = ROOT 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_alliance_chn
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_alliance_CHN
+		relative_position_id = UNS_friends_changeling
+		prerequisite = { focus = UNS_friends_changeling }
+		cost = 7.2
+		completion_reward = {
+			CHN = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = alliance
+					id = UNS 
+					value = 500
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_start_war 
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_ubivat
+		relative_position_id = UNS_meet_fuhrer
+		prerequisite = { focus = UNS_meet_fuhrer }
+		prerequisite = { focus = UNS_alliance_chn }
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = UNS_preparation
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_attack_plan
+		relative_position_id = UNS_start_war
+		prerequisite = { focus = UNS_start_war }
+		cost = 7.2 
+		completion_reward = {
+			add_ideas = SOU_prepared_invasion
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT 
+				}
+				add_ideas = SOU_prepared_invasion
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_territory_claims
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_land
+		relative_position_id = UNS_preparation 
+		prerequisite = { focus = UNS_preparation }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns.23 }
+		}
+	}
+	
+	focus = {
+		id = UNS_invade_eqs 
+		x = 0
+		y = 1
+		icon = GFX_goal_attack_eqs
+		relative_position_id = UNS_territory_claims
+		prerequisite = { focus = UNS_territory_claims }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = EQS 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_sou
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_attack_sou
+		relative_position_id = UNS_invade_eqs
+		prerequisite = { focus = UNS_invade_eqs }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOU 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_stg
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_attack_STG_rock
+		relative_position_id = UNS_invade_eqs
+		prerequisite = { focus = UNS_invade_eqs }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = STG 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_griffonia_experience
+		x = 3
+		y = 1
+		icon = GFX_goal_UNS_griffonia_friends
+		relative_position_id = UNS_fate_of_president
+		prerequisite = { focus = UNS_fate_of_president }
+		mutually_exclusive = { focus = UNS_local_friends }
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	
+	focus = {
+		id = UNS_gri_friendship
+		x = -2
+		y = 1
+		icon = GFX_goal_UNS_grif_emp
+		relative_position_id = UNS_griffonia_experience
+		prerequisite = { focus = UNS_griffonia_experience }
+		mutually_exclusive = { focus = UNS_speak_to_wingbardy }
+		cost = 7.2
+		completion_reward = {
+			army_experience = 25
+			GRI = {
+				army_experience = 25
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_alliance_gri
+		x = 0
+		y = 1 
+		icon = GFX_goal_UNS_grif_emp_alliance
+		relative_position_id = UNS_gri_friendship
+		prerequisite = { focus = UNS_gri_friendship }
+		cost = 7.2
+		completion_reward =  {
+			GRI = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = alliance
+					id = UNS 
+					value = 500 
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_invade_haukland
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_HAU
+		relative_position_id = UNS_alliance_gri
+		prerequisite = { focus = UNS_alliance_gri }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HAU 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_republic
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_FAT_attack
+		relative_position_id = UNS_invade_haukland
+		prerequisite = { focus = UNS_invade_haukland }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = FAT 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_aquilla
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_JER_attack
+		relative_position_id = UNS_invade_haukland
+		prerequisite = { focus = UNS_invade_haukland }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JER 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_griffonstoun
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_BOI_attack
+		relative_position_id = UNS_invade_republic
+		prerequisite = { focus = UNS_invade_republic }
+		prerequisite = { focus = UNS_invade_aquilla }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOI 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_hellquill
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_HLQ
+		relative_position_id = UNS_invade_griffonstoun
+		prerequisite = { focus = UNS_invade_griffonstoun }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HLQ 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_speak_to_wingbardy
+		available = {
+			WNG = {
+				has_government = fascism
+				has_civil_war = no 
+			}
+		}
+		x = 2
+		y = 1
+		icon = GFX_goal_UNS_WNG_friend
+		relative_position_id = UNS_griffonia_experience
+		prerequisite = { focus = UNS_griffonia_experience }
+		mutually_exclusive = { focus = UNS_gri_friendship }
+		cost = 7.2
+		completion_reward = {
+			WNG = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_alliance_wng
+		x = 0
+		y = 1 
+		icon = GFX_goal_UNS_alliance_wng
+		relative_position_id = UNS_speak_to_wingbardy
+		prerequisite = { focus = UNS_speak_to_wingbardy }
+		cost = 7.2
+		completion_reward =  {
+			WNG = {
+				add_ai_strategy = {
+					type = alliance
+					id = UNS 
+					value = 500 
+				}
+				country_event = { id = generic.2 }
+				
+			}
+			
+		}
+	}
+	focus = {
+		id = UNS_invade_falcor
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_FAL_Attack
+		relative_position_id = UNS_alliance_wng
+		prerequisite = { focus = UNS_alliance_wng }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = FAL 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_sicameon
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_SIC_attack
+		relative_position_id = UNS_invade_falcor
+		prerequisite = { focus = UNS_invade_falcor }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SIC 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_cianol
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_CYA_atacck
+		relative_position_id = UNS_invade_falcor
+		prerequisite = { focus = UNS_invade_falcor }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CYA 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_aster
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_MIT_attack
+		relative_position_id = UNS_invade_sicameon
+		prerequisite = { focus = UNS_invade_sicameon }
+		prerequisite = { focus = UNS_invade_cianol }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MIT 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_prywhen
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_invade_prywhen
+		relative_position_id = UNS_invade_aster
+		prerequisite = { focus = UNS_invade_aster }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRW 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BRF 
+			}
+		}
+	}
+	
+	############# Shepherd branch here 
+	
+	focus = {	
+		id = UNS_executions 
+		allow_branch = {
+			AND = {
+				has_completed_focus = UNS_world_situation 
+				has_country_leader = {
+					name = "General Gershell fon Shepherd"
+					ruling_only = yes 
+				}
+			}
+		}
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_executions
+		relative_position_id = UNS_world_situation
+		prerequisite = { focus = UNS_world_situation }
+		cost = 5
+		completion_reward = {
+			add_manpower = -25
+			add_political_power = -25
+			add_war_support = -0.02
+			add_stability = -0.02
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			set_rule = { can_create_factions = yes }
+		}
+	}
+	focus = {
+		id = UNS_officers_purging
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_officer_purges
+		relative_position_id = UNS_executions
+		prerequisite = { focus = UNS_executions }
+		cost = 7.2
+		completion_reward = {
+			army_experience = -10 
+			add_timed_idea = {
+				idea = UNS_officers_purge
+				days = 120 
+			}
+		}
+	}
+	focus = {
+		id = UNS_wartime_measures
+		available = {
+			has_war = yes 
+		}
+		x = 0
+		y = 2
+		icon = GFX_goal_UNS_maritime_measures
+		relative_position_id = UNS_officers_purging
+		prerequisite = { focus = UNS_officers_purging }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_wartime_measures_idea
+		}
+	}
+	
+	focus = {
+		id = UNS_army_checking
+		x = -4
+		y = 1
+		icon = GFX_goal_UNS_army_check
+		relative_position_id = UNS_officers_purging
+		prerequisite = { focus = UNS_officers_purging }
+		mutually_exclusive = { focus = UNS_diplomacy_with_equestria }
+		cost = 7.2
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = UNS_propaganda_campaign
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_propaganda
+		relative_position_id = UNS_army_checking
+		prerequisite = { focus = UNS_army_checking }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_propaganda_mil
+		}
+	}
+	focus = {
+		id = UNS_work_for_victory
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_work_for_victory
+		relative_position_id = UNS_army_checking
+		prerequisite = { focus = UNS_army_checking }
+		cost = 7.2
+		completion_reward = {
+			every_owned_state = {
+				limit = {	
+					is_core_of = ROOT 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_charlie_dont_surf
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_charlie
+		relative_position_id = UNS_propaganda_campaign
+		prerequisite = { focus = UNS_propaganda_campaign }
+		prerequisite = { focus = UNS_work_for_victory }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = army_is_coming
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 250
+			}
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment
+				amount = 150
+			}
+			create_corps_commander = {
+				name = "Maximillian Carter"
+				portrait_path = "gfx/leaders/UNS/Carter.dds"
+				traits = { griffon_infiltrator infantry_commander_hum }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 3
+			}
+			hidden_effect = {
+				load_oob = "UNS_shep_lead_oob"
+			}
+		}
+	}
+	focus = {
+		id = UNS_recruitment_expansion
+		x = 0
+		y = 1
+		relative_position_id = UNS_charlie_dont_surf
+		prerequisite = { focus = UNS_charlie_dont_surf }
+		cost = 7.2
+		icon = GFX_goal_UNS_recruitment
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = disarmed_nation
+				}
+				add_ideas = volunteer_only
+			}
+			if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				add_ideas = limited_conscription
+			}
+			if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				add_ideas = extensive_conscription
+			}
+			if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				add_ideas = service_by_requirement
+			}
+		}
+	}
+	focus = {
+		id = UNS_native_soldiers
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_native_soldiers
+		relative_position_id = UNS_recruitment_expansion
+		prerequisite = { focus = UNS_recruitment_expansion }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_native_army
+		}
+	}
+	focus = {
+		id = UNS_native_officers
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_native_officers
+		relative_position_id = UNS_recruitment_expansion
+		prerequisite = { focus = UNS_recruitment_expansion }
+		cost = 7.2
+		completion_reward = {
+			create_corps_commander = {
+				name = "Sivill Ironshield"
+				portrait_path = "gfx/leaders/UNS/Sivill.dds"
+				traits = { infantry_officer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 3
+				logistics_skill = 5
+				planning_skill = 2
+			}
+			create_corps_commander = {
+				name = "Carlax"
+				portrait_path = "gfx/leaders/UNS/Carlax.dds"
+				traits = { armor_officer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 2
+			}
+			create_corps_commander = {
+				name = "Lina Cypher"
+				portrait_path = "gfx/leaders/UNS/Cypher.dds"
+				traits = { other_race_general reactive_pony }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 1
+			}
+		}
+	}
+	focus = {
+		id = UNS_last_preparations
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_last_preparations
+		relative_position_id = UNS_native_soldiers
+		prerequisite = { focus = UNS_native_soldiers }
+		prerequisite = { focus = UNS_native_officers }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_war_preparation
+		}
+	}
+	
+	focus = {
+		id = UNS_equestrian_invasion
+		x = -2
+		y = 1
+		icon = GFX_goal_UNS_invade_EQS
+		relative_position_id = UNS_last_preparations
+		prerequisite = { focus = UNS_last_preparations }
+		cost = 5
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = EQS 
+				}
+				country_event = {
+					id = uns.61 
+				}
+			}
+		}
+		select_effect = {
+			country_event = { id = uns.61 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_attack_crystal
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_invade_CRY
+		relative_position_id = UNS_equestrian_invasion
+		prerequisite = { focus = UNS_equestrian_invasion }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CRY 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_stg_shep
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_invade_STG
+		relative_position_id = UNS_equestrian_invasion
+		prerequisite = { focus = UNS_equestrian_invasion }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = STG 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_invade_chn_shep
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_invade_CHN
+		relative_position_id = UNS_attack_crystal
+		prerequisite = { focus = UNS_attack_crystal }
+		prerequisite = { focus = UNS_invade_stg_shep }
+		cost = 5
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = { 
+					type = annex_everything
+					target = CHN 
+				}
+				country_event = {
+					id = uns.65 
+				}
+			}
+		}
+		select_effect = {
+			country_event = { id = uns.65 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_invade_yaks
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_invade_YAK
+		relative_position_id = UNS_invade_chn_shep
+		prerequisite = { focus = UNS_invade_chn_shep }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YAK
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = JAK
+			}
+		}
+	}
+	focus = {
+		id = UNS_attack_olenia
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_attack_OLE
+		relative_position_id = UNS_invade_chn_shep
+		prerequisite = { focus = UNS_invade_chn_shep }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = OLE 
+			}
+		}
+	}
+	focus = {
+		id = UNS_soviet_ultimatum
+		x = 0
+		y = 1 
+		icon = GFX_goal_UNS_SOU_ultimatum
+		relative_position_id = UNS_invade_yaks
+		prerequisite = { focus = UNS_invade_yaks }
+		cost = 7.2
+		completion_reward = {
+			SOU = {
+				country_event = { id = uns.48 days = 5 }
+			}
+		}
+	}
+	focus = {
+		id = UNS_german_ultimatum
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_GEM_ultimatum
+		relative_position_id = UNS_attack_olenia
+		prerequisite = { focus = UNS_attack_olenia }
+		cost = 7.2
+		completion_reward = {
+			GEM = {
+				country_event = { id = uns.48 days = 5 }
+			}
+		}
+	}
+	focus = {
+		id = UNS_attack_novgrif
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_attack_novagriff
+		relative_position_id = UNS_soviet_ultimatum
+		prerequisite = { focus = UNS_soviet_ultimatum } 
+		prerequisite = { focus = UNS_german_ultimatum }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRF 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = GFF 
+			}
+		}
+	}
+	focus = {
+		id = UNS_big_hunt
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_big_hunt
+		relative_position_id = UNS_attack_novgrif
+		prerequisite = { focus = UNS_attack_novgrif }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PLB 
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = PNG 
+			}
+		}
+	}
+	focus = {
+		id = UNS_way_east
+		x = 2
+		y = 1
+		icon = GFX_goal_UNS_way_east
+		relative_position_id = UNS_last_preparations
+		prerequisite = { focus = UNS_last_preparations }
+		cost = 7.2
+		completion_reward = {
+			add_tech_bonus = {
+				category = tp_tech
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_haukland_shep
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_invade_HAU
+		relative_position_id = UNS_way_east
+		prerequisite = { focus = UNS_way_east }
+		cost = 7.2 
+		completion_reward = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = HAU 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_vedina_shep
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_VED
+		relative_position_id = UNS_way_east
+		prerequisite = { focus = UNS_way_east }
+		cost = 7.2 
+		completion_reward = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = VED 
+			}
+		}
+	}
+	focus = {
+		id = UNS_invade_republic_shep
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_FAT_invade
+		relative_position_id = UNS_invade_haukland_shep
+		prerequisite = { focus = UNS_invade_haukland_shep }
+		prerequisite = { focus = UNS_invade_vedina_shep }
+		cost = 7.2 
+		completion_reward = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = FAT 
+			}
+		}
+	}
+	focus = {
+		id = UNS_battle_of_empires
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_invade_empire
+		relative_position_id = UNS_invade_republic_shep
+		prerequisite = { focus = UNS_invade_republic_shep }
+		cost = 20
+		completion_reward = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = GRI 
+				}
+				country_event = { id = uns.68 }
+			}
+			
+		}
+		select_effect = {
+			country_event = { id = uns.68 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_invade_griffonstoun_shep
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_invade_BOI
+		relative_position_id = UNS_battle_of_empires
+		prerequisite = { focus = UNS_battle_of_empires }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BOI
+			}
+			
+		}
+	}
+	focus = {
+		id = UNS_attack_aquila
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_JER_invade
+		relative_position_id = UNS_battle_of_empires
+		prerequisite = { focus = UNS_battle_of_empires }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JER 
+			}
+		}
+	}
+	focus = {
+		id = UNS_approach_frontier
+		x = 0
+		y = 1 
+		icon = GFX_goal_UNS_long_invade
+		relative_position_id = UNS_invade_griffonstoun_shep
+		prerequisite = { focus = UNS_invade_griffonstoun_shep }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HLQ
+			}
+			if = {
+				limit = {
+					country_exists = LNS 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LNS
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LSC 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LSC
+				}
+			}
+			if = {
+				limit = {
+					country_exists = LSM 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = LSM
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_destroy_wingbardy
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_WNG_invade
+		relative_position_id = UNS_attack_aquila
+		prerequisite = { focus = UNS_attack_aquila }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = WNG
+			}
+		}
+	}
+	focus = {
+		id = UNS_destroy_the_dreams
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_riverlands
+		relative_position_id = UNS_approach_frontier
+		prerequisite = { focus = UNS_approach_frontier }
+		prerequisite = { focus = UNS_destroy_wingbardy }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = RIV
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = WIT
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LCT
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_washington_parade
+		x = 2
+		y = 1
+		icon = GFX_goal_UNS_parade_wash
+		relative_position_id = UNS_big_hunt
+		prerequisite = { focus = UNS_big_hunt }
+		prerequisite = { focus = UNS_destroy_the_dreams }
+		cost = 5
+		completion_reward = {
+			news_event = { id = uns.72 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_diplomacy_with_equestria
+		x = 4
+		y = 1
+		icon = GFX_goal_UNS_EQS_contact
+		relative_position_id = UNS_officers_purging
+		prerequisite = { focus = UNS_officers_purging }
+		mutually_exclusive = { focus = UNS_army_checking }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			custom_effect_tooltip = change_to_democratic
+		}
+	}
+	focus = {
+		id = UNS_equestrian_garrison
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_EQS_military_corps
+		relative_position_id = UNS_diplomacy_with_equestria
+		prerequisite = { focus = UNS_diplomacy_with_equestria }
+		cost = 7.2 
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.1
+			}
+			EQS = {
+				give_military_access = ROOT 
+			}
+			
+			give_military_access = EQS 
+			custom_effect_tooltip = create_corps_in_eqs
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							state = 59 
+							state = 14
+							state = 70
+							state = 74 
+							state = 3
+							state = 2
+							state = 12
+							state = 75
+							state = 13
+							state = 38
+							state = 66
+						}
+					}
+					create_unit = {
+						division = "name = \"Garrison Regiments\" division_template = \"U.S. Infantry Division\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						owner = UNS 
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_guarantee_equestria
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_guarantee_EQS
+		relative_position_id = UNS_diplomacy_with_equestria
+		prerequisite = { focus = UNS_diplomacy_with_equestria }
+		cost = 7.2
+		completion_reward = {
+			add_popularity = { 
+				ideology = democratic
+				popularity = 0.07
+			}
+			give_guarantee = EQS 
+			if = {
+				limit = {
+					CRY = {
+						is_in_faction_with = EQS 
+					}
+				}
+				give_guarantee = CRY 
+			}
+		}
+	}
+	focus = {
+		id = UNS_harmony_treaty
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_harmonical_pact
+		relative_position_id = UNS_equestrian_garrison
+		prerequisite = { focus = UNS_equestrian_garrison }
+		prerequisite = { focus = UNS_guarantee_equestria }
+		cost = 5
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.13
+			}
+			create_country_leader = {
+				name = "General Gershell fon Shepherd"
+				desc = "Shepherd_leader_desc"
+				picture = "Shep.dds"
+				expire = 1965.1.1
+				ideology = harmonic_libertarianism
+				traits = {
+					military_leader
+					human_leader
+				}
+			}
+			EQS = {
+				add_ai_strategy = {
+					type = alliance
+					id = UNS 
+					value = 600
+				}
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+	focus = {
+		id = UNS_equestrian_milmission
+		x = -2
+		y = 1
+		icon = GFX_goal_UNS_EQS_milmission
+		relative_position_id = UNS_harmony_treaty
+		prerequisite = { focus = UNS_harmony_treaty }
+		cost = 7.2
+		completion_reward = {
+			army_experience = 25
+			add_war_support = 0.1
+			EQS = {	
+				army_experience = 25
+				add_war_support = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_defence_plan 
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_EQS_defence_plan
+		relative_position_id = UNS_equestrian_milmission
+		prerequisite = { focus = UNS_equestrian_milmission }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_equestrian_defplan
+			EQS = {
+				add_ideas = UNS_equestrian_defplan 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_reinforce_west 
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_reinforce_west
+		relative_position_id = UNS_defence_plan
+		prerequisite = { focus = UNS_defence_plan }
+		mutually_exclusive = { focus =  UNS_reinforce_northeast }
+		cost = 7.2 
+		completion_reward = {
+			EQS = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = { is_owned_by = CHN }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = UNS_reinforce_northeast
+		x = 1
+		y = 1
+		relative_position_id = UNS_defence_plan
+		prerequisite = { focus = UNS_defence_plan }
+		mutually_exclusive = { focus = UNS_reinforce_west }
+		cost = 7.2 
+		icon = GFX_goal_UNS_reiforce_north
+		completion_reward = {
+			EQS = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = { is_owned_by = STG }
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_stay_strong
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_bestrong
+		relative_position_id = UNS_reinforce_west
+		prerequisite = { focus = UNS_reinforce_northeast focus = UNS_reinforce_west }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_bestrong
+			EQS = {
+				add_ideas = UNS_bestrong
+			}
+		}
+	}
+	
+	focus = {	
+		id = UNS_vacation
+		x = 2
+		y = 1
+		icon = GFX_goal_UNS_CRY_relationship
+		relative_position_id = UNS_harmony_treaty
+		prerequisite = { focus = UNS_harmony_treaty }
+		cost = 7.2
+		completion_reward = {	
+			acceptance_expand_extra = yes 
+			add_stability = 0.07
+			CRY = {
+				add_stability = 0.1
+				add_political_power = 50
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_infrastructure_assistant 
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_infrast
+		relative_position_id = UNS_vacation
+		prerequisite = { focus = UNS_vacation }
+		cost = 7.2
+		completion_reward = {
+			CRY = {
+				capital_scope = {
+					add_building_construction = {
+						type = infrastructure 
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+			EQS = {
+				capital_scope = {
+					add_building_construction = {
+						type = infrastructure 
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+			add_political_power = 75
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = UNS_pacific_equestrian_railroad
+		}
+	}
+	
+	focus = {
+		id = UNS_huffbol_stadium
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_huffball_stadium
+		relative_position_id = UNS_infrastructure_assistant
+		prerequisite = { focus = UNS_infrastructure_assistant }
+		cost = 7.2
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			add_political_power = 25
+			news_event = { id = uns.73 days = 5 }
+		}
+	}
+	
+	focus = {
+		id = UNS_electrotrains
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_electrotrains
+		relative_position_id = UNS_infrastructure_assistant
+		prerequisite = { focus = UNS_infrastructure_assistant }
+		cost = 7.2
+		completion_reward = {
+			acceptance_expand_extra = yes 
+			CRY = {
+				add_tech_bonus = {
+					category = electronics
+					uses = 2
+					bonus = 0.75 
+				}
+			}
+			EQS = {
+				add_tech_bonus = {
+					category = electronics
+					uses = 2
+					bonus = 0.75 
+				}
+			}
+			add_tech_bonus = {
+				category = race_tech
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_manhattan_manehattan
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_manh_maneh
+		relative_position_id = UNS_huffbol_stadium
+		prerequisite = { focus = UNS_huffbol_stadium }
+		prerequisite = { focus = UNS_electrotrains }
+		cost = 5
+		completion_reward = {	
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = UNS_rarity
+		}
+	}
+	
+	focus = {
+		id = UNS_friendship_is_power
+		x = 2
+		y = 1
+		icon = GFX_goal_UNS_power_of_friendship
+		relative_position_id = UNS_stay_strong
+		prerequisite = { focus = UNS_stay_strong }
+		prerequisite = { focus = UNS_manhattan_manehattan }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_frienship_perfections
+		}
+	}
+	focus = {
+		id = UNS_afterwar_support 
+		icon = GFX_goal_UNS_aft_support
+		available = {
+			CCN = {
+				OR = {
+					is_subject_of = ROOT 
+					is_subject_of = EQS 
+				}
+			}
+			CHN = {
+				OR = {
+					exists = no 
+					is_subject_of = ROOT 
+					is_subject_of = EQS
+				}
+			}
+			EQS = {
+				NOT = {
+					has_country_leader = {	
+						name = "Daybreaker"
+						ruling_only = yes 
+					}
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = UNS_friendship_is_power
+		prerequisite = { focus = UNS_friendship_is_power }
+		cost = 7.2
+		completion_reward = {
+			EQS = {
+				add_ideas = UNS_afterwar_support_idea
+			}
+			add_ideas = UNS_afterwar_support_idea_uns
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = UNS_cities_rebuild
+		icon = GFX_goal_UNS_rebuilding
+		available = {
+			EQS = {
+				NOT = {
+					has_country_leader = {	
+						name = "Daybreaker"
+						ruling_only = yes 
+					}
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = UNS_friendship_is_power
+		prerequisite = { focus = UNS_friendship_is_power }
+		cost = 7.2
+		completion_reward = {
+			EQS = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							has_state_category = city
+							has_state_category = metropolis
+							has_state_category = megalopolis
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes 
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes 
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			acceptance_expand_extra = yes 
+			add_stability = 0.1
+			add_political_power = 50
+			add_tech_bonus = {
+				category = race_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_ordnung
+		available = {
+			EQS = {
+				NOT = {
+					has_country_leader = {	
+						name = "Daybreaker"
+						ruling_only = yes 
+					}
+				}
+			}
+		}
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_poryadok
+		relative_position_id = UNS_afterwar_support
+		prerequisite = { focus = UNS_afterwar_support }
+		prerequisite = { focus = UNS_cities_rebuild }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = -0.2
+			add_political_power = 150 
+		}
+	}
+	
+	focus = {
+		id = UNS_heal_the_wounds
+		x = 0
+		icon = GFX_goal_UNS_heal_wounds
+		y = 1
+		relative_position_id = UNS_ordnung
+		prerequisite = { focus = UNS_ordnung }
+		cost = 5
+		completion_reward = {
+			news_event = { id = uns.74 days = 5 }
+		}
+	}
+	
+	################## SUPERNOVA EXTINGUISHING
+	
+	focus = {
+		id = UNS_supernova
+		icon = GFX_goal_UNS_SNOVA_supernova
+		available = {
+			has_government = democratic
+			has_country_leader = {
+				name = "General Gershell fon Shepherd"
+				ruling_only = yes 
+			}
+		}
+		allow_branch = {
+			EQS = {
+				has_country_leader = {
+					name = "Daybreaker"
+					ruling_only = yes 
+				}
+			}
+		}
+		x = 24
+		y = 13
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.1 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_invite_magicians
+		icon = GFX_goal_UNS_SNOVA_magicians
+		x = -1
+		y = 1
+		relative_position_id = UNS_supernova
+		prerequisite = { focus = UNS_supernova }
+		cost = 7.2 
+		completion_reward = {
+			country_event = { id = uns_supernova.2 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_secret_research
+		icon = GFX_goal_UNS_SNOVA_research 
+		x = 1
+		y = 1
+		relative_position_id = UNS_supernova
+		prerequisite = { focus = UNS_supernova }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.3 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_infiltrate_canterlot_library
+		icon = GFX_goal_UNS_SNOVA_library
+		x = 0
+		y = 1
+		relative_position_id = UNS_invite_magicians
+		prerequisite = { focus = UNS_invite_magicians }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.4 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_top_secret
+		icon = GFX_goal_UNS_SNOVA_top_secret
+		x = 0
+		y = 1
+		relative_position_id = UNS_secret_research
+		prerequisite = { focus = UNS_secret_research }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.5 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_hostaging
+		icon = GFX_goal_UNS_SNOVA_hostaging
+		x = 1
+		y = 1
+		relative_position_id = UNS_infiltrate_canterlot_library
+		prerequisite = { focus = UNS_infiltrate_canterlot_library }
+		prerequisite = { focus = UNS_top_secret }
+		cost = 7.2 
+		completion_reward = {
+			country_event = { id = uns_supernova.6 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_first_attempt
+		icon = GFX_goal_UNS_SNOVA_first_attempt
+		x = 0
+		y = 1
+		relative_position_id = UNS_hostaging 
+		prerequisite = { focus = UNS_hostaging }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.8 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_supernova_failure 
+		icon = GFX_goal_UNS_SNOVA_failure
+		icon = GFX_goal
+		available = {
+			always = no 
+		}
+		x = -1
+		y = 1
+		relative_position_id = UNS_first_attempt
+		prerequisite = { focus = UNS_first_attempt }
+		cost = 7.2 
+		completion_reward = {
+			custom_effect_tooltip = focus_complete_on_event
+		}
+	}
+	focus = {
+		id = UNS_containment 
+		icon = GFX_goal_UNS_SNOVA_containment
+		x = -1
+		y = 1
+		relative_position_id = UNS_supernova_failure
+		prerequisite = { focus = UNS_supernova_failure }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.11 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_work_for_mistake 
+		icon = GFX_goal_UNS_SNOVA_repair_mistakes
+		x = 1
+		y = 1
+		relative_position_id = UNS_supernova_failure
+		prerequisite = { focus = UNS_supernova_failure }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.12 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_second_chance
+		icon = GFX_goal_UNS_SNOVA_first_attempt
+		x = 1
+		y = 1
+		relative_position_id = UNS_containment
+		prerequisite = { focus = UNS_containment }
+		prerequisite = { focus = UNS_work_for_mistake }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.13 days = 10 }
+		}
+	}
+	
+	focus = {
+		id = UNS_supernova_success
+		icon = GFX_goal_UNS_SNOVA_success
+		x = 2
+		y = 1
+		relative_position_id = UNS_second_chance
+		prerequisite = { focus = UNS_second_chance focus = UNS_first_attempt }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = focus_complete_on_event
+		}
+	}
+	
+	focus = {
+		id = UNS_main_question
+		icon = GFX_goal_UNS_SNOVA_main_question
+		x = -1
+		y = 1
+		relative_position_id = UNS_supernova_success
+		prerequisite = { focus = UNS_supernova_success }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.14 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_psychologist 
+		icon = GFX_goal_UNS_SNOVA_psycho_report
+		x = 1
+		y = 1
+		relative_position_id = UNS_supernova_success
+		prerequisite = { focus = UNS_supernova_success }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.15 days = 10 }
+		}
+	}
+	focus = {
+		id = UNS_capture_daybreaker
+		icon = GFX_goal_UNS_SNOVA_invade_SOL
+		x = 1
+		y = 1
+		relative_position_id = UNS_main_question
+		prerequisite = { focus = UNS_main_question }
+		prerequisite = { focus = UNS_psychologist }
+		cost = 7.2
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = EQS 
+			}
+			custom_effect_tooltip = every_state_return 
+		}
+	}
+	focus = {
+		id = UNS_extinguish_supernova
+		icon = GFX_goal_UNS_SNOVA_extinguish
+		available = {
+			has_war = no 
+			EQS = {
+				is_subject_of = ROOT 
+			}
+		}
+		x = 0 
+		y = 1
+		relative_position_id = UNS_capture_daybreaker
+		prerequisite = { focus = UNS_capture_daybreaker }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = uns_supernova.16 days = 10 }
+		}
+	}
+	
+	
+	focus = { ### Реакция на восстание Найтмэр Мун
+		id = UNS_eqs_civilwar
+		allow_branch = {
+			eqs_has_civil_war = yes 
+		}
+		x = -1
+		y = 11
+		cost = 5
+		icon = GFX_react_civilwar
+		available = {
+			any_country = {
+				original_tag = EQS
+				has_government = democratic
+				has_civil_war = yes
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_political_power = 25
+			set_rule = {
+				can_send_volunteers = yes 
 			}
 		}
 	} 
-	focus = { ### Конец политике Нейтралитета
-		id = UNS_end_neytrality
-		x = 13
-		y = 15
-		cost = 10
-		icon = GFX_goal_end_neutrality
-		prerequisite = {
-			focus = UNS_pony_human_friendship
-		}
-		prerequisite = {
-			focus = UNS_eqs_uns_alliance OR = UNS_world_rev
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			add_war_support = 0.2
-			add_stability = 0.3
-			add_ideas = UNS_neutrality_over
-		}
-	} 
-	focus = { ### Гарант Независимости
-		id = UNS_guarantee_independence
-		x = 13
-		y = 16
-		cost = 10
-		icon = GFX_goal_give_guarentee
-		prerequisite = {
-			focus = UNS_end_neytrality
-		}
-		ai_will_do = {
-			factor = 4
-		}
-		completion_reward = {
-			give_guarantee = EQS
-			give_guarantee = CRY
-			give_guarantee = STG 
-		}
-	} 
-	focus = { ### Дружба с СССР
-		id = UNS_soviet_relation
-		x = 17
-		y = 12
-		icon = GFX_goal_embass_ussr
-		cost = 10
-		prerequisite = {
-			focus = UNS_canterlot_summit
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Дружба с Британией
-		id = UNS_british_relation
-		x = 19
-		y = 12
-		cost = 10
-		icon = GFX_goal_embass_britain
-		prerequisite = {
-			focus = UNS_canterlot_summit
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	}  
-	focus = { ### Примириться с Германией
-		id = UNS_germany_relation
-		x = 21
-		y = 12
-		icon = GFX_goal_embass_germany
-		cost = 10 
-		prerequisite = {
-			focus = UNS_canterlot_summit
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Новый Коминтерн
-		id = UNS_aliance_sov
-		x = 17
-		y = 13
-		cost = 5
-		icon = GFX_goal_comintern
-		prerequisite = {
-			focus = UNS_soviet_relation
-		}
-		mutually_exclusive = {
-			focus = UNS_brit_alliance
-		}
-		mutually_exclusive = {
-			focus = UNS_germany_alliance
-		}
-			
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Возродить Альянс
-		id = UNS_brit_alliance
-		x = 19
-		y = 13
-		cost = 5 
-		icon = GFX_goal_allies
-		prerequisite = {
-			focus = UNS_british_relation
-		}
-		mutually_exclusive = {
-			focus = UNS_aliance_sov
-		}
-		mutually_exclusive = {
-			focus = UNS_germany_alliance
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Ось Нового Мира
-		id = UNS_germany_alliance
-		x = 21
-		y = 13
-		cost = 5
-		icon = GFX_goal_axis
-		prerequisite = {
-			focus = UNS_germany_relation
-		}
-		mutually_exclusive = {
-			focus = UNS_aliance_sov
-		}
-		mutually_exclusive = {
-			focus = UNS_brit_alliance
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Социализм всему Миру
-		id = UNS_world_soc
-		x = 17
-		y = 14
-		icon = GFX_goal_world_soc
-		cost = 7 
-		prerequisite = {
-			focus = UNS_aliance_sov
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Защита Свободы
-		id = UNS_new_allies
-		x = 19
-		y = 14
-		icon = GFX_goal_demo_defence
-		cost = 7 
-		prerequisite = {
-			focus = UNS_brit_alliance
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
-	focus = { ### Высшая Раса
-		id = UNS_axis_new
-		x = 21
-		y = 14
-		icon = GFX_goal_best_race
-		cost = 7
-		prerequisite = {
-			focus = UNS_germany_alliance
-		}
-		ai_will_do = {
-			factor = 4
-		}
-	} 
+	
 	focus = { ### Поддержать Эквестрию
 		id = UNS_help_equestria
-		x = 24
-		y = 12
+		x = -1
+		y = 1
+		relative_position_id = UNS_eqs_civilwar
 		cost = 8 
 		icon = GFX_goal_help_eqs
 		prerequisite = {
@@ -1557,8 +5173,9 @@ focus_tree = {
 	} 
 	focus = { ### Поддержать Восстание
 		id = UNS_support_moon
-		x = 26
-		y = 12
+		x = 1
+		y = 1
+		relative_position_id = UNS_eqs_civilwar
 		cost = 8 
 		icon = GFX_goal_help_nlr
 		prerequisite = {
@@ -1606,8 +5223,9 @@ focus_tree = {
 	} 
 	focus = { ### Миротворческие Силы
 		id = UNS_peacemakers
-		x = 24
-		y = 13
+		x = 0
+		y = 1
+		relative_position_id = UNS_help_equestria
 		cost = 5
 		icon = GFX_goal_volunteering
 		prerequisite = {
@@ -1626,8 +5244,9 @@ focus_tree = {
 	} 
 	focus = { ### Военная Помощь
 		id = UNS_military_support
-		x = 26
-		y = 13
+		x = 0
+		y = 1
+		relative_position_id = UNS_support_moon
 		cost = 5 
 		icon = GFX_goal_send_military
 		prerequisite = {
@@ -1646,8 +5265,9 @@ focus_tree = {
 	} 
 	focus = { ### Гуманитарная Помощь
 		id = UNS_hum_assist
-		x = 24
-		y = 14
+		x = 0
+		y = 1
+		relative_position_id = UNS_peacemakers
 		cost = 3 
 		icon = GFX_goal_humanitarity
 		prerequisite = {
@@ -1689,8 +5309,9 @@ focus_tree = {
 	} 
 	focus = { ### Послать оружие
 		id = UNS_send_guns
-		x = 26
-		y = 14
+		x = 0
+		y = 1
+		relative_position_id = UNS_military_support
 		cost = 3 
 		icon = GFX_goal_send_guns
 		prerequisite = {
@@ -1732,10 +5353,11 @@ focus_tree = {
 	} 
 	focus = { ### Послевоенная Поддержка
 		id = UNS_continue_support
-		x = 24
-		y = 15
+		x = 0
+		y = 1
+		relative_position_id = UNS_hum_assist
 		icon = GFX_goal_afterwar_support
-		cost = 10 
+		cost = 5 
 		prerequisite = {
 			focus = UNS_hum_assist
 		}
@@ -1751,8 +5373,9 @@ focus_tree = {
 	} 
 	focus = { ### Выдать Беженцев
 		id = UNS_resend_runaways
-		x = 26
-		y = 15
+		x = 0
+		y = 1
+		relative_position_id = UNS_send_guns
 		cost =	10 
 		icon = GFX_goal_resend_runaways
 		prerequisite = {
@@ -2000,7 +5623,7 @@ focus_tree = {
 		relative_position_id = UNS_rubber
 		prerequisite = { focus = UNS_rubber }
 		prerequisite = { focus = UNS_plastic }
-		cost = 10
+		cost = 5
 		icon = GFX_goal_metal_rework
 		completion_reward = {
 			capital_scope = {
@@ -2065,7 +5688,7 @@ focus_tree = {
 		y = 1 
 		relative_position_id = UNS_concetrated_ind
 		prerequisite = { focus = UNS_dispersed_ind OR = UNS_concetrated_ind }
-		cost = 10
+		cost = 5
 		icon = GFX_goal_diminish_eqs
 		completion_reward = {
 			swap_ideas = {
@@ -2401,7 +6024,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_vuz_uns
 		prerequisite = { focus = UNS_vuz_uns OR = UNS_full_modernization OR = UNS_metal_rework }
-		cost = 10
+		cost = 5
 		icon = GFX_goal_uns_liberty_statue
 		completion_reward = {
 			effect_tooltip = {
@@ -2438,7 +6061,7 @@ focus_tree = {
 		x = 50
 		y = 4
 		icon = GFX_goal_uns_army
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UNS_military
 		}
@@ -2535,6 +6158,7 @@ focus_tree = {
 		id = UNS_exp_of_two_wars
 		x = 1
 		y = 1
+		cost = 5
 		icon = GFX_goal_two_war_exp
 		relative_position_id = UNS_doctrine_development
 		prerequisite = { focus = UNS_doctrine_development }
@@ -2550,7 +6174,7 @@ focus_tree = {
 		x = 58
 		y = 4
 		icon = 111
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UNS_military
 		}
@@ -2710,7 +6334,7 @@ focus_tree = {
 		x = 66
 		y = 4
 		icon = GFX_goal_navy
-		cost = 10
+		cost = 5
 		prerequisite = {
 			focus = UNS_military
 		}
@@ -2825,7 +6449,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = UNS_marines_corp
-		cost = 10
+		cost = 5
 		prerequisite = { focus = UNS_marines_corp }
 		icon = GFX_goal_uns_coastal_defense
 		completion_reward = {
@@ -2923,7 +6547,7 @@ focus_tree = {
 		relative_position_id = UNS_trade_treeaty
 		prerequisite = { focus = UNS_expand_ports }
 		prerequisite = { focus = UNS_trade_treeaty }
-		cost = 10
+		cost = 5
 		icon = GFX_goal_power_of_fleet
 		completion_reward = {
 			add_ideas = UNS_power_of_fleet_idea

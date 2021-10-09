@@ -153,7 +153,61 @@ leader_traits = {
         }
 	}
 	
+	other_race_general = {
+		type = corps_commander
+		modifier = {
+			attack_bonus_against_cores = 0.1
+			army_speed_factor = 0.1
+			max_dig_in = 1
+		}
+		corps_commander_modifier = {
+            max_commander_army_size = 6
+        }
+	}
+	
+	griffon_infiltrator = {
+		type = corps_commander
+		targeted_modifier = { 
+			tag = GRI 
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		modifier = {
+			army_speed_factor = 0.1
+		}
+	}
+	
+	tankist_commander_hum = {
+		type = corps_commander
+		modifier = {
+			army_armor_attack_factor = 0.1
+			army_armor_defence_factor = 0.1
+		}
+	}
+	
+	infantry_commander_hum = {	
+		type = corps_commander
+		modifier = {
+			army_infantry_attack_factor = 0.1
+			army_infantry_defence_factor = 0.1
+			army_morale_factor = 0.25
+		}
+	}
+	
+	equestrian_supporter = {
+		type = corps_commander
+		modifier = {
+			army_infantry_attack_factor = 0.05
+			army_infantry_defence_factor = 0.07
+			max_commander_army_size = 6
+		}
+	}
+			
+	
+	
+	
 	operative_secret_service = { # Название трейта 
+		random = no
 		type = operative  # Тип трейта - он для оперативников 
 		trait_type = personality_trait  # Личностный трейт 
 		modifier = {  # Это все модификаторы, они есть на вики. Взял для примера

@@ -1,4 +1,4 @@
-version="0.2"
+version="0.4.1"
 tags={
 	"Events"
 	"National Focuses"
@@ -9,6 +9,6 @@ name="The New Mankind"
 dependencies={
 	"Equestria at War"
 }
-supported_version="1.9.*"
-path="C:/Users/tanktema/Documents/Paradox Interactive/Hearts of Iron IV/mod/thenewmankind"
-remote_file_id="2157414899"
+supported_version="1.10.*"
+
+path="C:/Users/tankt/OneDrive/Documents/Paradox Interactive/Hearts of Iron IV/mod/thenewmankind"

@@ -1,0 +1,181 @@
+defined_text = {
+	name = GetMinpeaceStatusDep1
+	
+	text = {
+		trigger = {
+			has_country_flag = minpeace_healthdep
+		}
+		localization_key = minpeace_healthdep
+	}
+	
+}
+defined_text = {
+	name = GetMinpeaceStatusDep2
+	text = {
+		trigger = {
+			has_country_flag = minpeace_sciencedep
+		}
+		localization_key = minpeace_sciencedep
+	}
+	
+}
+defined_text = {
+	name = GetMinpeaceStatusDep3
+	text = {
+		trigger = {
+			has_country_flag = minpeace_satisfdep
+		}
+		localization_key = minpeace_satisfdep
+	}
+	
+}
+defined_text = {
+	name = GetMinpeaceStatusDep4
+	text = {
+		trigger = {
+			has_country_flag = minpeace_expmeddep
+		}
+		localization_key = minpeace_expmeddep
+	}
+	
+}
+defined_text = {
+	name = GetMinpeaceStatusDep5
+	text = {
+		trigger = {
+			has_country_flag = minpeace_milhealdep
+		}
+		localization_key = minpeace_milhealdep
+	}
+	
+}
+defined_text = {
+	name = GetMinpeaceStatusDep6
+	text = {
+		trigger = {
+			has_country_flag = minpeace_wmddep
+		}
+		localization_key = minpeace_wmddep
+	}
+	
+	
+}
+
+defined_text = {	
+	name = GetMinwarStatusDep1
+	
+	text = {
+		trigger = {
+			has_country_flag = minwar_armordep
+		}
+		localization_key = minwar_armordep
+	}
+	
+}
+defined_text = {	
+	name = GetMinwarStatusDep2
+	text = {
+		trigger = {
+			has_country_flag = minwar_armsdep
+		}
+		localization_key = minwar_armsdep
+	}
+	
+}
+defined_text = {	
+	name = GetMinwarStatusDep3
+	text = {
+		trigger = {
+			has_country_flag = minwar_nsdep
+		}
+		localization_key = minwar_nsdep
+	}
+	
+}
+defined_text = {	
+	name = GetMinwarStatusDep4
+	text = {
+		trigger = {
+			has_country_flag = minwar_wmddep
+		}
+		localization_key = minwar_wmddep
+	}
+
+}
+defined_text = {	
+	name = GetMinwarStatusDep5
+	text = {
+		trigger = {
+			has_country_flag = minwar_specopsdep
+		}
+		localization_key = minwar_specopsdep
+	}
+	
+}
+defined_text = {	
+	name = GetMinwarStatusDep6
+	text = {
+		trigger = {
+			has_country_flag = minwar_expweapdep
+		}
+		localization_key = minwar_expweapdep
+	}
+	
+}
+
+defined_text = {
+	name = GetMinmorStatusDep1
+	
+	text = {
+		trigger = {
+			has_country_flag = minmor_happydep
+		}
+		localization_key = minmor_happydep
+	}
+}
+defined_text = {
+	name = GetMinmorStatusDep2
+	text = {
+		trigger = {
+			has_country_flag = minmor_printdep
+		}
+		localization_key = minmor_printdep
+	}
+}
+defined_text = {
+	name = GetMinmorStatusDep3
+	text = {
+		trigger = {
+			has_country_flag = minmor_artsdep
+		}
+		localization_key = minmor_artsdep
+	}
+}
+defined_text = {
+	name = GetMinmorStatusDep4
+	text = {
+		trigger = {
+			has_country_flag = minmor_broaddep
+		}
+		localization_key = minmor_broaddep
+	}
+}
+defined_text = {
+	name = GetMinmorStatusDep5
+	text = {
+		trigger = {
+			has_country_flag = minmor_tradedep
+		}
+		localization_key = minmor_tradedep
+	}
+}
+defined_text = {
+	name = GetMinmorStatusDep6
+	text = {
+		trigger = {
+			has_country_flag = minmor_propdep
+		}
+		localization_key = minmor_propdep
+	}
+}
+	

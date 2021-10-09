@@ -59,6 +59,14 @@ unlock_conditions_met_for_achievement_4 = {
 					is_owned_by = ROOT 
 				}
 			}
+			OR = {
+				GEM = {
+					is_subject_of = ROOT 
+				}
+				312 = {
+					is_owned_by = ROOT 
+				}
+			}
 		}
 		AND = {
 			original_tag = UNS 
@@ -67,6 +75,33 @@ unlock_conditions_met_for_achievement_4 = {
 					is_subject_of = ROOT 
 				}
 				332 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GEM = {
+					is_subject_of = ROOT 
+				}
+				312 = {
+					is_owned_by = ROOT 
+				}
+			}
+		}
+		AND = {
+			original_tag = GEM
+			OR = {
+				SOU = {
+					is_subject_of = ROOT 
+				}
+				332 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				UNS = {
+					is_subject_of = ROOT 
+				}
+				96 = {
 					is_owned_by = ROOT 
 				}
 			}
@@ -207,5 +242,94 @@ unlock_conditions_met_for_achievement_15 = {
 		has_tech = magical_weapons3
 	}
 } 
+available_conditions_met_for_achievement_16 = {
+	original_tag = GEM 
+}
+unlock_conditions_met_for_achievement_16 = {
+	available_conditions_met_for_achievement_16 = yes 
+	has_country_leader = {
+		name = "Heinrich Himmler"
+		ruling_only = yes 
+	}
+	has_completed_focus = GEM_way_east
+	RIV = {
+		OR = {
+			exists = no 
+			is_subject_of = GEM 
+		}
+	}
+}
+available_conditions_met_for_achievement_17 = {
+	OR = {
+		original_tag = UNS 
+		original_tag = SOU 
+	}
+}
+unlock_conditions_met_for_achievement_17 = {
+	has_tech = nukes
+	custom_trigger_tooltip = {
+		tooltip = new_berlin_nuked
+		312 = {
+			has_state_flag = nuked_by_hum
+		}
+	}
+}
+available_conditions_met_for_achievement_18 = {
+	original_tag = GEM 
+}
+unlock_conditions_met_for_achievement_18 = {
+	all_country = {
+		limit = {
+			OR = {
+				original_tag = EQS 
+				original_tag = CHN 
+				original_tag = SOU 
+				original_tag = UNS 
+				original_tag = OLE 
+				original_tag = YAK 
+				original_tag = JAK 
+				original_tag = GRF 
+				original_tag = GFF
+				original_tag = STG
+				original_tag = PLB
+				original_tag = PNG
+				original_tag = CRY
+				original_tag = BUF
+				original_tag = DRG 
+			}
+		}
+	
+		OR = {
+			exists = no 
+			is_subject_of = GEM 
+		}
+		GEM = {
+			exists = yes 
+			is_subject = no
+		}
+	}
+}
 
+available_conditions_met_for_achievement_19 = {
+	original_tag = GEM 
+}
+unlock_conditions_met_for_achievement_19 = {
+	has_tech = main_battle_tank
+	custom_trigger_tooltip = {
+		tooltip = num_modern_tank_bats_60
+		check_variable = { num_battalions_with_type@modern_armor > 59 }
+	}
+}
 
+available_conditions_met_for_achievement_20 = {
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+}
+unlock_conditions_met_for_achievement_20 = {
+	custom_trigger_tooltip = {
+		tooltip = hum_rage_100_tt
+		check_variable = { human_rage > 99 }
+	}
+}

@@ -4,12 +4,19 @@ state={
 	provinces={
 		1523 7449 7462 7607 10333 12305
 	}
-	manpower=8973256
+	manpower=17098345
 	history={
 		owner = GEM
 		add_core_of = GEM
 		victory_points = {
 			12305 30
+		}
+		buildings = {
+			12305 = {
+				naval_base = 1
+
+			}
+
 		}
 	}
 

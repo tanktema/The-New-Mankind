@@ -1,0 +1,113 @@
+units = {
+	division = {
+		name = "Shadow Company"
+		location = 9406
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 13095
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 11311
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 11231
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 9251
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 9329
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 11147
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 3045
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 9406
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 13095
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 11311
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 11231
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 9251
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 9329
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 11147
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Shadow Company"
+		location = 3045
+		division_template = "U.S. Infantry Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}

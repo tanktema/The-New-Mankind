@@ -34,6 +34,7 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.1
 			}
+			traits = { science_idea }
 			allowed_to_remove = {
                 always = no
             }
@@ -57,6 +58,7 @@ ideas = {
 				research_speed_factor = 0.05
 				local_resources_factor = 0.1
 			}
+			traits = { society_idea }
 		}
 	}
 }

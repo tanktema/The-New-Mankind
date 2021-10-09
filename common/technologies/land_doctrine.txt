@@ -1,40 +1,12 @@
 technologies = {
 
-	human_doctrine = {
-		doctrine_name = "HUMAN_WARFARE_DOCTRINE"
-		xp_research_type = army 
-		xp_research_cost = 100
-		xp_research_bonus = 1.00
-		
-		xor = { mobile_warfare superior_firepower trench_warfare mass_assault } 
-		
-		dependencies = {
-			infantry_weapons = 1
-			human_race = 1
-		}
-		category_all_armor = {
-			breakthrough = 0.4
-		}
-		planning_speed = 10
-		
-		folder = {
-			name = land_doctrine_folder
-			position = { x = 0 y = 0 }
-		}
-		categories = {
-			land_doctrine
-			cat_mobile_warfare
-			ai_continued_start
-		}
-	}
-
 	mobile_warfare = {
 		doctrine_name = "MOBILE_WARFARE_DOCTRINE"
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		
-		xor = { superior_firepower trench_warfare mass_assault  human_doctrine } 
+		xor = { superior_firepower trench_warfare mass_assault } 
 
 		path = {
 			leads_to_tech = delay 
@@ -988,7 +960,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		
-		xor = { mobile_warfare trench_warfare mass_assault human_doctrine } 
+		xor = { mobile_warfare trench_warfare mass_assault } 
 
 		path = {
 			leads_to_tech = sup_delay 
@@ -1858,7 +1830,7 @@ technologies = {
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
 		
-		xor = { mobile_warfare superior_firepower mass_assault human_doctrine } 
+		xor = { mobile_warfare superior_firepower mass_assault } 
 	
 		max_dig_in = 10
 		dig_in_speed_factor = 0.25 #25% bonus
@@ -2726,7 +2698,7 @@ technologies = {
 		xp_research_type = army
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
-		xor = { mobile_warfare superior_firepower trench_warfare human_doctrine } 
+		xor = { mobile_warfare superior_firepower trench_warfare } 
 
 		path = {
 			leads_to_tech = pocket_defence 

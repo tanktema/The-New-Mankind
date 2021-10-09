@@ -1,0 +1,783 @@
+ideas = {
+
+
+	country = {
+		
+		
+		GRB_industry_financies = {
+			
+			removal_cost = -1
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.07 
+				production_speed_industrial_complex_factor = 0.05
+				consumer_goods_factor = -0.04
+			}
+		}
+		
+		GRB_military_financies = {
+			removal_cost = -1
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.08
+				conscription_factor = 0.15
+				conscription = 0.005
+				training_time_factor = -0.1 
+			}
+		}
+		
+		
+		GRB_pony_science = {
+			removal_cost = -1
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05 
+				
+			}
+			research_bonus = {
+					human_tech = 0.05
+					magical_tech = 0.05 
+			}
+		}
+		
+		
+		GRB_human_science = {
+			removal_cost = -1
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+			
+		GRB_volunteers_of_peace_idea = {
+			removal_cost = -1
+			allowed = {
+				original_tag = GRB 
+			}
+			modifier = {
+				guarantee_tension = -0.15
+				guarantee_cost = -0.25
+				send_volunteers_tension = -0.15
+				send_volunteer_divisions_required = -0.25
+			}
+		}
+		
+		GRB_GEM_friendship = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				democratic_drift = 0.01
+				democratic_acceptance = 75
+				stability_factor = 0.05
+				
+			}
+		}
+		
+		
+		GRB_SOU_experience = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				experience_gain_factor = 0.25
+				experience_gain_army = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		
+		GRB_equestrian_debt = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = -0.25
+				political_advisor_cost_factor = 0.15
+				stability_factor = -0.1
+				war_support_factor = 0.1
+				political_power_gain = -0.2
+			}
+			targeted_modifier = {
+				tag = GRB 
+				cic_to_target_factor = 0.25
+				extra_trade_to_target_factor = 0.5
+				mic_to_target_factor = 0.25
+				trade_cost_for_target_factor = -0.25
+			}
+		}
+		
+		
+		GRB_communism_defenders = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				communism_drift = 0.05
+				drift_defence_factor = 1
+				stability_factor = 0.15
+				war_support_factor = 0.15
+			}
+		}
+		
+		GRB_communism_influence = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				communism_drift = 0.05
+				drift_defence_factor = -0.25
+			}
+		}
+		
+		GRB_communism_army = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				send_volunteers_tension = -0.15
+				send_volunteer_divisions_required = -0.25
+				send_volunteer_size = 6
+				conscription = 0.02
+				conscription_factor = 0.25
+			
+			}
+		}
+		
+		
+		GRB_rifles_for_revolution = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_speed_arms_factory_factor = 0.25
+				production_speed_dockyard_factor = 0.25
+			}
+		}
+		
+		
+		GRB_crisis_retaiment = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.1
+				fascism_drift = 0.03
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.15
+				
+			}
+		}
+		
+		
+		GRB_native_people = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				non_core_manpower = 0.25
+				starting_compliance = 15
+			}
+		}
+		
+		GRB_place_to_work = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.07
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		
+		
+		GRB_extra_conscription = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.02
+				conscription_factor = 0.15
+				weekly_manpower = 300
+			}
+		}
+		
+		
+		GRB_royal_guard_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.005
+				drift_defence_factor = 0.75
+				neutrality_drift = 0.03
+				stability_factor = 0.05
+				army_core_defence_factor = 0.07
+			}
+		}
+		
+		
+		GRB_eco_reform = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+				political_power_gain = 0.1
+				stability_factor = -0.05
+				war_support_factor = -0.07
+			}
+		}
+		
+		GRB_PNG_infl = {  
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				drift_defence_factor = 1
+				political_power_gain = -0.05
+			}
+			targeted_modifier = {
+				tag = GRB 
+				cic_to_target_factor = 0.25
+				extra_trade_to_target_factor = 0.5
+				mic_to_target_factor = 0.25
+				#trade_cost_for_target_factor = -0.25
+			}
+		}
+		
+		GRB_stop_famine = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = 0.08
+				monthly_population = 0.75
+				weekly_manpower = 150
+				conscription = 0.01
+				autonomy_manpower_share = 0.1
+			}
+		}
+		
+		GRB_food_places = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				monthly_population = 1
+				political_power_gain = 0.2
+				weekly_manpower = 200
+				global_building_slots = -0.3
+			}
+		}
+		
+		
+		GRB_zebra_goods = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_factor = 0.25
+				consumer_goods_factor = 0.025
+				civilian_factory_use = 2
+				army_morale_factor = 0.15
+				army_attack_factor = 0.07
+			}
+		}
+		 
+		GRB_inquisition = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				non_core_manpower = -0.25
+				boost_resistance_factor = -0.25
+				starting_compliance = 0.1
+				#root_out_resistance_effectiveness_factor = -0.1
+			}
+		}
+		
+		GRB_knights = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.015
+				war_support_factor = 0.05
+			}
+		}
+		
+		GRB_army_preparation_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				#conscription = 0.015
+				special_forces_cap = 0.15
+				training_time_factor = -0.15
+				army_attack_factor = 0.07
+				army_defence_factor = 0.07
+			}
+		}
+		
+		GRB_mi6_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				agency_upgrade_time = -0.15 
+				civilian_intel_factor = 0.1
+				army_intel_factor = 0.1
+				army_intel_factor = 0.1
+				airforce_intel_factor = 0.1
+				crypto_strength = 25
+				operative_slot = 1
+			}
+		}
+		
+		GRB_cross_ocean = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				special_forces_cap = 0.2
+				
+			}
+			targeted_modifier = {
+				attack_bonus_against = 0.1
+				tag = EQS
+			}
+		}
+		
+		GRB_TRD_trading = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_factor = 0.08
+				stability_factor = 0.02
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		
+		GRB_crops = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				weekly_manpower = 250
+				monthly_population = 0.25
+				stability_factor = 0.05
+			}
+		}
+		
+		GRB_sterlings = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				drift_defence_factor = 0.25
+				political_power_gain = 0.25
+			}
+		}
+		
+		
+		GRB_building_factories = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		GRB_resources_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.07
+				local_resources_factor = 0.1
+				country_resource_steel = 10
+			}
+		}
+		
+		GRB_economics_peace = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = -0.07
+				political_power_gain = 0.1
+			}
+		}
+		
+		GRB_market_filling = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.15
+				political_power_gain = -0.05
+			}
+		}
+		
+		GRB_funds_sterling = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.25
+			}
+		}
+		
+		GRB_eco_integration = {
+			removal_cost = -1
+			allowed = { always = yes }
+			targeted_modifier = {
+				tag = GRB 
+				cic_to_target_factor = 0.5
+				
+				mic_to_target_factor = 0.5
+				#trade_cost_for_target_factor = -0.25
+			}
+		}
+		
+		GRB_naval_power = {
+			removal_cost = -1
+			allowed = { always = yes }
+			equipment_bonus = {
+				ship_hull_light = {
+					fire_range = 0.07
+					shore_bombardment = 0.1
+					naval_range = 0.1
+					surface_visibility  = -0.2
+				}
+				ship_hull_heavy = {	
+					fire_range = 0.1
+					shore_bombardment = 0.1
+					naval_range = 0.2
+					surface_visibility  = -0.2
+				}
+				ship_hull_carrier = {
+					naval_range = 0.1
+				}
+				
+			}
+		}
+		
+		GRB_naval_academy_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				navy_leader_start_attack_level = 2
+				navy_leader_start_defense_level = 2
+				navy_leader_start_maneuvering_level = 2
+				navy_leader_start_coordination_level = 2
+				navy_leader_cost_factor = 0.25
+				navy_leader_start_level = 1
+			}
+		}
+		
+		GRB_radio_systems_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				air_interception_defence_factor = 0.15
+				air_close_air_support_defence_factor = 0.1
+			}
+		}
+		
+		GRB_conscription_rising = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.02
+				conscription_factor = 0.15
+			}
+		}
+		GRB_legion = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.025
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				war_support_factor = 0.1
+				army_morale_factor = 0.15
+				weekly_manpower = 1000
+			}
+		}
+			
+		
+		GRB_we_rule_the_war = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.01
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				war_support_factor = 0.15
+				army_morale_factor = 0.25
+			}
+		}
+				
+		
+	}
+	
+	
+	tank_manufacturer = {
+
+		designer = yes
+		
+		GRB_vickers_armstrong = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_contact_olds
+			}
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { onwheel_master }
+		}
+		GRB_royal_arsenal = {
+			allowed = {
+				original_tag = GRB
+			}
+			available = {
+				has_government = neutrality
+			}
+			research_bonus = {
+				armor = 0.1
+				magical_tech = 0.05
+			}
+			traits = { onwheel_master }
+		}
+		
+		GRB_porsche = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_german_tanks
+			}
+			traits = { medium_tank_producer }
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+		
+	}
+	materiel_manufacturer = {
+	
+		designer = yes
+
+		GRB_holland_and_holland = { ### EQS
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_equestrian_companies
+			}
+			research_bonus = {
+				infantry = 0.1
+				magical_tech = 0.1
+			}
+			traits = { arms_dealer_m }
+		}
+		GRB_accuracy_international = {
+			allowed = {
+				original_tag = GRB
+			}
+			available = {
+				has_completed_focus = GRB_contact_olds
+			}
+			research_bonus = {
+				infantry = 0.1
+				sniper_tech = 0.1
+			}
+			traits = { arms_dealer }
+		}
+		GRB_westley_richards = {
+			allowed = {
+				original_tag = GRB
+			}
+
+			research_bonus = {
+				infantry = 0.1
+				sniper_tech = 0.1
+			}
+			traits = { arms_dealer }
+		}
+		GRB_kalashnikov = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_contact_soviet_arms_dealers
+			}
+			research_bonus = {
+				sniper_tech = 0.15
+				infantry = 0.1
+			}
+			traits = { arms_dealer_m }
+		}
+	}
+	industrial_concern = {
+		
+		designer = yes 
+		
+		
+		
+		GRB_baratt_development = { ### EQS
+			allowed = {
+				OR = {
+					original_tag = GRB 
+					original_tag = EQS 
+				}
+			}
+			available = {
+				has_completed_focus = GRB_equestrian_companies
+			}
+			traits = { railroad_builder }
+		}
+		
+		GRB_vedanta_resources = { ### JER
+			allowed = {
+				OR = {
+					original_tag = GRB 
+					original_tag = JER 
+				}
+			}
+			available = {	
+				has_completed_focus = GRB_griffonian_companies
+			}
+			traits = { trading_company_grb }
+		}
+		GRB_cnh_industrial = {
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			traits = { railroad_builder }
+		}
+		
+		GRB_royal_representation = {
+			allowed = {
+				OR = {
+					original_tag = PNG
+					original_tag = FBK
+					original_tag = ZES
+				}
+			}
+			available = {
+				always = no 
+			}
+			visible = {
+				if = {
+					limit = {
+						original_tag = PNG
+					}
+					GRB = {
+						has_completed_focus = GRB_northern_equus
+					}
+				}
+				if = {
+					limit = {
+						original_tag = FBK
+					}
+					GRB = {
+						has_completed_focus = GRB_northern_griffonia
+					}
+				}
+				if = {
+					limit = {
+						original_tag = ZES
+					}
+					GRB = {
+						has_completed_focus = GRB_east_of_griphonya
+					}
+				}
+			}
+			modifier = {
+				autonomy_gain = -0.2
+				mic_to_overlord_factor = 0.1
+				cic_to_overlord_factor = 0.1
+			}
+			allowed_to_remove = {
+                always = no
+            }
+		}
+	}
+	aircraft_manufacturer = {
+		
+		designer = yes 
+		
+		GRB_supermarine = {
+			allowed = {
+				original_tag = GRB 
+			}
+			#available = {
+	
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { heavy_aircraft_manufacturer medium_aircraft_manufacturer }
+		}
+		
+		
+		GRB_bristol = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_contact_olds
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { light_aircraft_manufacturer CAS_manufacturer }
+		}
+		
+		GRB_boeing = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_american_aircraft
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { heavy_aircraft_manufacturer medium_aircraft_manufacturer }
+		}
+	}
+	naval_manufacturer = {
+		
+		designer = yes 
+		
+		GRB_harland_and_wolves = {
+			allowed = {
+				original_tag = GRB
+			}
+		
+			traits = { old_world_shipyard }
+		}
+		
+		GRB_mistral = { #### JER
+			allowed = {
+				original_tag = GRB
+			}
+			available = {
+				has_completed_focus = GRB_griffonian_companies
+			}
+			traits = { old_world_shipyard }
+			equipment_bonus = {
+				
+				ship_hull_heavy = {
+					armor_value = 0.05
+					anti_air_attack = 0.05
+					surface_visibility = -0.05
+					instant = yes
+				}
+			}
+		}
+	}

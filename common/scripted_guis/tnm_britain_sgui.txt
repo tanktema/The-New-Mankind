@@ -1,0 +1,96 @@
+scripted_gui = {
+
+	GRB_political_decisions_gui = {
+		context_type = decision_category
+		window_name = "british_politics_decision"
+		
+
+		
+		effects = {
+			brit_reg_363_button_click = {
+				set_variable = { reg_num_brit_pol = 3 }
+			}
+			brit_reg_364_button_click = {
+				set_variable = { reg_num_brit_pol = 2 }
+			}
+			brit_reg_365_button_click = {
+				set_variable = { reg_num_brit_pol = 1 }
+			}
+		}
+		
+		triggers = {
+		
+		}
+		
+		properties = {
+			brit_reg_363_button = {
+				frame = ROOT.rg_363_stat_frame
+			}
+			brit_reg_364_button = {
+				frame = ROOT.rg_364_stat_frame
+			}
+			brit_reg_365_button = {
+				frame = ROOT.rg_365_stat_frame
+			}
+		}
+		
+	}
+	
+	GRB_trading_mech_category_button = {
+		context_type = selected_country_context
+		window_name = "british_trading_button_window"
+		
+		parent_window_token = selected_country_view
+		
+		visible = {
+			OR = {
+				ROOT = { has_completed_focus = GRB_todd_howard }
+				is_debug = yes 
+			}
+			NOT = {
+				FROM = {
+					original_tag = GRB 
+				}
+			}
+		}
+		
+		effects = {
+			offer_trading_click = {
+			
+				country_event = { id = grb.29 }
+					
+			}
+			
+			open_trading_click = {	
+				set_variable = { trade_decisions_opened = 1 }
+			}
+			close_trading_click = {
+				set_variable = { trade_decisions_opened = 0 }
+			}
+		}
+		
+		triggers = {
+			offer_trading_visible = {
+				NOT = {
+					has_country_flag = british_tc_opened
+				}
+			}
+			offer_trading_click_enabled = {
+				NOT = {
+					has_country_flag = grb_tc_refuse
+				}
+			}
+			open_trading_visible = {	
+				AND = {
+					check_variable = { trade_decisions_opened = 0 }
+					has_country_flag = british_tc_opened
+				}
+			}
+			close_trading_visible = {
+				AND = {
+					check_variable = { trade_decisions_opened = 1 }
+					has_country_flag = british_tc_opened
+				}
+			}
+			
+	}

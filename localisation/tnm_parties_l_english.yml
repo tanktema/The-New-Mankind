@@ -23,4 +23,12 @@
     SOU_neutrality_party:0 "SD"
     SOU_neutrality_party_long:0 "Dynasty of Smolyaniy"
     
+    GEM_fascism_party:0 "NSDAP"
+    GEM_fascism_party_long:0 "National-Socialistic German Labor Party"
+    GEM_communism_party:0 "GSDP"
+    GEM_communism_party_long:0 "German Social-Democratic Party"
+    GEM_democratic_party:0 "GRP"
+    GEM_democratic_party_long:0 "German Republican Party"
+    GEM_neutrality_party:0 "Caesar Supporters"
+    GEM_neutrality_party_long:0 "Caesar Supporters"
     

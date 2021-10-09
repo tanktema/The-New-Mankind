@@ -155,7 +155,7 @@ ideologies = {
 		}
 
 	}
-
+	
 	fascism = {
 		types = {
 			nazism = {

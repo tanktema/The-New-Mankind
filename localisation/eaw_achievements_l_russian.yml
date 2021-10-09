@@ -1,5 +1,11 @@
 ﻿l_russian:
   # Game Rules:
+  ############
+  #
+  #  Эти достижения были взяты из Old World Blues С РАЗРЕШЕНИЯ АВТОРА МЕХАНИКИ
+  #  Пожалуйста, не пишите "Ты украл механику" и т.д, я получил разрешение создателя и указал его авторство 
+  #  The New Mankind подтверждает авторство LimonenZitrone#5661
+  #########
   RULE_ALLOW_OWB_CUSTOM_ACHIEVEMENTS: "Внутриигровые достижения"
   RULE_ALLOW_OWB_CUSTOM_ACHIEVEMENTS_ENABLED: "Включены"
   RULE_ALLOW_OWB_CUSTOM_ACHIEVEMENTS_ENABLED_DESC: "Мод §YOld World Blues§! отключает достижения стима, но также имеет при себе собственные внутриигровые достижения. С §Gвключенным§! внутриигровымим достижениями, все игроки §Gсмогут§! выполнять достижения, созданные специально для Old World Blues."
@@ -80,50 +86,12 @@
   ACHIEVEMENT_DIFFICULTY_IMPOSSIBLE_TT: "§YСложность§! этого достижения - §Rневозможная§!."
 
   # Scripted Triggers:
-  HAS_COMPLETED_AT_LEAST_ONE_ACHIEVEMENT: "Выполнено как минимум §Y1§! достижение"
-  ACHIEVEMENT_DID_NOT_START_AS_A_MAJOR: "НЕ крупная нация с начала"
-  ACHIEVEMENT_MADE_A_PURCHASE_WITH_CAPS: "Провели сделку с §Y[This.GetCapType]§!"
-  ACHIEVEMENT_IS_ADVANCED: "§YПродвинутый§!"
-  ACHIEVEMENT_CAPS_ARE_TOGGLED_ON: "Есть правило на разрешение крышек"
-  ACHIEVEMENT_RRG_ELECTION_HELD: "Выборы прошли"
-  ACHIEVEMENT_IS_NOT_A_MEXICAN_NATION: "НЕ §Yмексиканския§! нация"
-  ACHIEVEMENT_OWN_ALL_NON_MEXICAN_STATES: "Владеете всеми территориями §YЗападного Побережья§!, §YВосточного Побережья§!, §YСеверных земел§! и §YСреднего Запада§!"
-  ACHIEVEMENT_OWN_ALL_OF_MEXICO_AS_MEXICAN: "Владеете всей §YМексикой§!"
-  ACHIEVEMENT_HAS_COMPLETED_THE_SPECIAL_FORCES_DOCTRINE: "Исследовали все технологии в доктрине §Yспециализированной войны§!"
-  ACHIEVEMENT_FORMED_NEW_MARIPOSA: "Вы - §YНовая Марипоза§!"
-  ACHIEVEMENT_FORMED_DESERET: "Вы - §YДезерет§!"
-  ACHIEVEMENT_FORMED_MLYEH: "Вы - §YМ'лайхе§!"
-  ACHIEVEMENT_NCR_CIVIL_WAR_WAS_NOT_TRIGGERED: "Гражданская война §Y[NCR.GetNameDef]§! НЕ произошла"
-  ACHIEVEMENT_OWN_ALL_STATES_IN_NEW_MEXICO: "§Y[This.GetName]§! владеет всеми территориями §YНью-Мехико§!"
-  ACHIEVEMENT_OWN_ALL_STATES_IN_ARIZONA: "§Y[This.GetName]§! владеет всеми территориями §YАризоны§!"
-  ACHIEVEMENT_OWN_ALL_STATES_IN_CALIFORNIA: "§Y[This.GetName]§! владеет всеми территориями §YКалифорнии§!"
-  ACHIEVEMENT_OWN_ALL_STATES_IN_TEXAS: "§Y[This.GetName]§! владеет всеми территориями §YТехаса§!"
-  ACHIEVEMENT_ALL_BROTHERHOOD_NATIONS_ARE_OUR_SUBJECT_OR_IN_OUR_FACTION: "Все существующие подразделения §YБратства Стали§! либо марионетки §Y[This.GetAdjective]§! либо находятся в альнсе, лидер которого - §Y[This.GetName]§!"
-  ACHIEVEMENT_NUKED_NEW_VEGAS: "Сбросили ядерную бомбу на §Y[211.GetName]§!"
-  ACHIEVEMENT_AREA_51_MYSTERY_SOLVED: "Решили загадку §YЗоны 51§!"
-  ACHIEVEMENT_AREA_51_DISEASE_SURVIVED: "Пережили чуму"
-  ACHIEVEMENT_CONTROL_ALL_STATES_IN_MOJAVE: "§Y[This.GetName]§! владеет всеми территориями §YСеверного§! и §YЮжного Мохаве§!"
-  ACHIEVEMENT_FORMED_THRADDS_LEGION: "Вы - §YЛегион Традда§!"
-  ACHIEVEMENT_HAS_DROPPED_A_NUKE: "Сброшена ядерная бомба"
-  ACHIEVEMENT_IS_NOT_A_BROTHERHOOD_NATION: "НЕ подразделение §YБратства Стали§!"
-  ACHIEVEMENT_TLALOCS_DEMISE_DID_NOT_HAPPEN_YET: "§YГибель Тлалока§! НЕ произошла"
-  ACHIEVEMENT_NOT_FORMED_ENCLAVE: "НЕ §YАнклав§!"
-  ACHIEVEMENT_OWN_ALL_STATES_IN_CANADA: "§Y[This.GetName]§! владеет всеми доступными территориями §YКанады§!"
-  ACHIEVEMENT_OWN_ALL_STATES_BORDERING_THE_PACIFIC_OCEAN: "§Y[This.GetName]§! владеет всеми прибрежными территориями §YТихого океана§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_3: "Проникнуть в §YУбежище 3§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_6: "Проникнуть в §YУбежище 6§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_13: "Проникнуть в §YУбежище 13§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_15: "Проникнуть в §YУбежище 15§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_19: "Проникнуть в §YУбежище 19§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_21: "Проникнуть в §YУбежище 21§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_22: "Проникнуть в §YУбежище 22§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_29: "Проникнуть в §YУбежище 29§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_34: "Проникнуть в §YУбежище 34§!"
-  ACHIEVEMENT_DELVED_INTO_VAULT_70: "Проникнуть в §YУбежище 70§!"
-  ACHIEVEMENT_WAS_AT_WAR_WITH_EVERY_OTHER_MAJOR_AFTER_2278: "Был в войне со всеми (другими) крупными нациями с §Y1 января 2278§!"
-  CONQUERED_ALL_DRAGON_ISLAND:0 "Захватил все драконьи острова"
+  
   ACHIEVEMENT_DID_NOT_HAVE_FRACTION:0 "Не состоял во фракции в начале игры"
   IS_HUMAN_COUNTRY_YES:0 "Страна людей"
+  nuked_by_hum:0 "Сброшена атомная бомба"
+  hum_rage_100_tt:0 "Уровень недовольства - 100%"
+  num_modern_tank_bats_60:0 "Число развернутых батальонов Современных Танков - хотя бы 60"
 
   # Scripted Localisation:
   string_achievement_debug_info_tt: "\n--------------\n§RОТЛАДОЧНАЯ ИНФОРМАЦИЯ:§! \n   ID ДОСТИЖЕНИЯ: §Y[?v]§! \n   ИНДЕКС: §Y[?i]§!"
@@ -139,9 +107,9 @@
   ACHIEVEMENT_4_DESC: "Играя за любую страну людей, захватите остальные страны людей"
   ACHIEVEMENT_5: "Я все вижу"
   ACHIEVEMENT_5_DESC: "Полностью исследуйте ветку технологий Снайперов"
-  ACHIEVEMENT_6: "Этот совет был распущен. Мной"
+  ACHIEVEMENT_6: "Это я ваш Сенат!"
   ACHIEVEMENT_6_DESC: "Играя за США, приведите к власти военное правительство"
-  ACHIEVEMENT_7: "Вечнаяя ночь? Нет, спасибо!"
+  ACHIEVEMENT_7: "Вечная ночь? Нет, спасибо!"
   ACHIEVEMENT_7_DESC: "Играя за Демократические США, помогите Эквестрии одержать победу в Войне Двух Сестер, не допустив возвышения Дэйбрейкер"
   ACHIEVEMENT_8: "Ученье - свет"
   ACHIEVEMENT_8_DESC: "Играя за США, откройте научный центр Эквуса"
@@ -159,16 +127,19 @@
   ACHIEVEMENT_14_DESC: "Играя за СССР, проведите социалистическую революцию в Империи Грифонов, Речной Республике, Эквестрии, Чейнджлингии и Вингбардии"
   ACHIEVEMENT_15: "Калашников&Co"
   ACHIEVEMENT_15_DESC: "При игре за СССР исследуйте последние технологии оружия или магического оружия"
-  ACHIEVEMENT_16: "Доказать, что Хэнлон ошибается"
-  ACHIEVEMENT_16_DESC: "При игре за §Y[NCR.GetNameWithFlag]§!, контролируйте §Y[252.GetName]§! и покончите с террором §YЦезаря§!."
-  ACHIEVEMENT_17: "Отомстить за Президента Ричардсона"
-  ACHIEVEMENT_17_DESC: "При игре за любую нацию Анклава, аннексируйте §Y[337.GetName]§!."
-  ACHIEVEMENT_18: "Мы считаем эти истины очевидными..."
-  ACHIEVEMENT_18_DESC: "При игре за любую не-мексиканскую нацию, владейте всеми территориями §Y[USA.GetNameWithFlag]§!."
-  ACHIEVEMENT_19: "Фусан"
-  ACHIEVEMENT_19_DESC: "При игре за §Y[SHI.GetNameWithFlag]§!, контролируйте §Y[157.GetName]§! и §Y[253.GetName]§!."
-  ACHIEVEMENT_20: "Мастера Войны"
-  ACHIEVEMENT_20_DESC: "При игре за любую нацию, выполните древы §Yназемной доктрины§!, §Yвоздушной доктрины§!, §Yвоенно-морской доктрины§! и §Yдоктрины спецназа§!."
+  ACHIEVEMENT_16: "Тысяча лет процветания"
+  ACHIEVEMENT_16_DESC: "Играя за Германию, осуществите амбиции Гиммлера"
+  ACHIEVEMENT_17: "Новый Мир - Старые Счеты"
+  ACHIEVEMENT_17_DESC: "Играя за СССР или США, нанесите ядерный удар по Новому Берлину"
+  ACHIEVEMENT_18: "Новый Порядок"
+  ACHIEVEMENT_18_DESC: "Играя за Германию, подчините себе все государства Эквуса"
+  ACHIEVEMENT_19: "Блицкриг!"
+  ACHIEVEMENT_19_DESC: "Играя за Германию, изучите технологию Современных Танков и имейте в армии хотя бы 60 батальонов Современных Танков"
+  ACHIEVEMENT_20: "Народ бунтует, милорд"
+  ACHIEVEMENT_20_DESC: "Играя за человеческую страну, поднимите уровень Недовольства до 100%"
+<<<<<<< HEAD
+ 
+=======
   ACHIEVEMENT_21: "Пиу!"
   ACHIEVEMENT_21_DESC: "При игре за любую продвинутую нацию, исследуйте последний уровень §Yлазерного§!, §Yплазменного§! или §Yгауссового оружия§!."
   ACHIEVEMENT_22: "Создатель жив!"
@@ -231,3 +202,4 @@
   ACHIEVEMENT_50_DESC: "При игре за любую нацию Волт-Тек, овладейте всеми территориями с убежищами."
   ACHIEVEMENT_51: "Ядерная зима"
   ACHIEVEMENT_51_DESC: "При игре за любую нацию, к §Y2278§! году объявите каждой (другой) крупной нации войну и останьтесь в живых до §Y2285§!."
+>>>>>>> 986c19d2ac3138690e167a6826a295cffbb7991f

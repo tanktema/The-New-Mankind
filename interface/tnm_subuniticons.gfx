@@ -1,11 +1,11 @@
 spriteTypes = {
 	spriteType = {
-		name = "GFX_unit_sniper_unit_icon_medium"
+		name = "GFX_unit_sniper_corps_icon_medium"
 		texturefile = "gfx/interface/counters/divisions_large/unit_sniper_icon.dds"
 		noOfFrames = 2
 	}
 	spriteType = {
-		name = "GFX_unit_sniper_unit_icon_medium_white"
+		name = "GFX_unit_sniper_corps_icon_medium_white"
 		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}

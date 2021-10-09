@@ -1,0 +1,24 @@
+music = {
+	song = "Purple Plague Cure"
+	chance = {	
+		modifier = {
+			factor = 999
+			AND = {
+				check_variable = { shown_sevents_tnm > 0 }
+				has_country_flag = purple_plague_cured_flag
+			}
+		}
+	}
+
+}
+
+music = {
+	song = "Statesoc Maintheme"
+	chance = {
+		modifier = {
+			factor = 5
+			original_tag = UNS 
+			has_completed_focus = UNS_we_are_strong
+		}
+	}
+}
