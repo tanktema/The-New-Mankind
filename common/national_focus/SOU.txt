@@ -1023,6 +1023,29 @@ focus_tree = {
 					modifier = democratic_reform
 				}
 			}
+			hidden_effect = {
+				create_corps_commander = {
+					name = "Captain Alexey Smirnov"
+					portrait_path = "gfx/leaders/SOU/Smirnov_hum.dds"
+					traits = { tankist_commander_hum }
+					skill = 5 
+					attack_skill = 4
+					defense_skill = 6
+					planning_skill = 3
+					logistics_skill = 5
+				}
+				
+				create_field_marshal = {
+					name = "General Sergey Izotov"
+					portrait_path = "gfx/leaders/SOU/Izotov.dds"
+					traits = { logistics_wizard defensive_doctrine }
+					skill = 5 
+					attack_skill = 4
+					defense_skill = 6
+					planning_skill = 3
+					logistics_skill = 5
+				}
+			}
 			acceptance_expand = yes 
 		}
 	}
@@ -1724,7 +1747,7 @@ focus_tree = {
 		relative_position_id = SOU_great_purge
 		prerequisite = { focus = SOU_arrest_others }
 		prerequisite = { focus = SOU_great_purge }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = SOU_time_has_come
 		}
@@ -1771,7 +1794,36 @@ focus_tree = {
 		prerequisite = { focus = SOU_verify_your_clock }
 		cost = 5
 		completion_reward = {
-			
+			create_corps_commander = {
+				name = "Maksim Suvorov"
+				portrait_path = "gfx/leaders/SOU/Suvorov.dds"
+				traits = { infantry_commander_hum combined_arms_expert }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
+			create_corps_commander = {
+				name = "Leonid Sytnikov"
+				portrait_path = "gfx/leaders/SOU/Sytnikov.dds"
+				traits = { tankist_commander_hum winter_specialist }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
+			create_field_marshal = {
+				name = "German Limonov"
+				portrait_path = "gfx/leaders/SOU/Limonov.dds"
+				traits = { thorough_planner unyielding_defender }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
 		}
 	}
 	
@@ -1999,30 +2051,7 @@ focus_tree = {
 						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
 						owner = SOU
 					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
+					
 				}
 			}
 						
@@ -2059,7 +2088,36 @@ focus_tree = {
 		relative_position_id = SOU_extra_conscription
 		prerequisite = { focus = SOU_extra_conscription }
 		completion_reward = {
-			
+			create_corps_commander = {
+				name = "Viktor Domashev"
+				portrait_path = "gfx/leaders/SOU/Domashev.dds"
+				traits = { tankist_commander_hum winter_specialist }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
+			create_corps_commander = {
+				name = "Nikita Izmaylov"
+				portrait_path = "gfx/leaders/SOU/Izmaylov.dds"
+				traits = { tankist_commander_hum winter_specialist }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
+			create_field_marshal = {
+				name = "Vasiliy Kalagin"
+				portrait_path = "gfx/leaders/SOU/Kalagin.dds"
+				traits = { tankist_commander_hum winter_specialist }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
 		}
 	}
 	
@@ -2074,7 +2132,8 @@ focus_tree = {
 		}
 		cost = 1
 		completion_reward = {
-		
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = general_kryukov
 		}
 	}
 	
@@ -2284,7 +2343,37 @@ focus_tree = {
 		prerequisite = { focus = SOU_extermination }
 		cost = 5
 		completion_reward = {
-			
+			every_state = {
+				limit = {
+					OR = {
+						state = 312
+						state = 251
+						state = 252
+						state = 309
+						state = 259
+					}
+				}
+				set_state_category = rural
+				add_to_variabele = { ROOT.arms_factory_get = building_level@arms_factory }
+				remove_building = {
+					type = arms_factory
+					level = building_level@arms_factory
+				}
+				add_to_variabele = { ROOT.industrial_complex_get = building_level@industrial_complex }
+				remove_building = {
+					type = industrial_complex
+					level = building_level@industrial_complex
+				}
+				
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = industrial_complex_get
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = arms_factory_get
+			}		
 		}
 	}
 		

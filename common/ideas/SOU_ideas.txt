@@ -682,19 +682,7 @@ ideas = {
 			}
 		}
 		
-		SOU_altidya = {
-			allowed = { original_tag = SOU }
-			available = { 
-				STG = {
-					NOT = {
-						has_country_leader = { name = "Altidiya" ruling_only = yes }
-					}
-				}
-				has_government = communism
-				
-			}
-			traits = { altidiya_sssr }
-		}
+		
 	}
 	
 	theorist = {
@@ -729,8 +717,11 @@ ideas = {
 				original_tag = SOU 
 			}
 			available = {
-				NOT = {
-					has_government = fascism
+				OR = {
+					NOT = {
+						has_government = fascism
+					}
+					has_completed_focus = SOU_appease_kryokov
 				}
 			}
 			traits = { army_chief_offensive_1 }

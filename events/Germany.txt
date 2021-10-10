@@ -829,3 +829,22 @@ country_event = {
 		add_ideas = GEM_researching_STG
 	}
 }
+
+
+country_event = {
+	id = gem.32
+	title = gem.32.t 
+	desc = gem.32.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.32.a 
+		
+		FROM = {
+			leave_faction = yes 
+			create_faction = GERMAN_AXIS
+			add_to_faction = ROOT
+		}
+	}
+}

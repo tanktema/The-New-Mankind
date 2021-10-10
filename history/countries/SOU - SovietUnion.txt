@@ -194,6 +194,21 @@ create_field_marshal = {
 	logistics_skill = 4
 	id = 1999
 }
+create_field_marshal = {
+   name = "Dmitry Yazov"
+   desc = "SOU_Yazov_desc"
+   portrait_path = "gfx/leaders/SOU/Yazov.dds"
+   traits = { 
+		old_guard
+		offensive_doctrine
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 4
+	id = 1998
+}
 
 
 create_corps_commander = {

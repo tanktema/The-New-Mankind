@@ -478,6 +478,7 @@ focus_tree = {
 							OR = {
 								has_country_flag = player_fascism_choose
 								has_country_flag = player_communists_choose
+							}
 						}
 					}
 					country_event = { id = grb.32 days = 5 }
@@ -2462,7 +2463,26 @@ focus_tree = {
 		prerequisite = { focus = GRB_northern_industrialization }
 		cost = 5
 		completion_reward = {
-			
+			create_corps_commander = {
+				name = "Ian Merritt"
+				portrait_path = "gfx/leaders/GRB/Merritt.dds"
+				traits = { other_race_general winter_specialist }
+				skill = 3 
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Markus Gulseth"
+				portrait_path = "gfx/leaders/GRB/Gulseth.dds"
+				traits = { tankist_commander_hum winter_specialist }
+				skill = 3 
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 5
+			}
 		}
 	}
 	

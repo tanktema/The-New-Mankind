@@ -447,35 +447,35 @@ country_event = {
 			check_variable = { acceptance_value < 0.25 }
 		}
 		hidden_effect = {
-				create_corps_commander = {
-				name = "Jason Broady"
-				portrait_path = "gfx/leaders/UNS/gen_broady.dds"
+			create_corps_commander = {
+				name = "Dominic Harrison"
+				portrait_path = "gfx/leaders/GRB/gen_broady.dds"
 				traits = { trait_cautious }
 				skill = 3 
-				attack_skill = 3
+				attack_skill = 2
 				defense_skill = 3
 				planning_skill = 3
-				logistics_skill = 3
+				logistics_skill = 4
 			}
 			create_corps_commander = {
-				name = "Adam Savage"
-				portrait_path = "gfx/leaders/YNS/gen_savage.dds"
-				traits = { infantry_officer }
+				name = "Alistar Ward"
+				portrait_path = "gfx/leaders/GRB/gen_savage.dds"
+				traits = { infantry_commander_hum }
 				skill = 3
 				attack_skill = 4
 				defense_skill = 2
-				logistics_skill = 5
+				logistics_skill = 3
 				planning_skill = 3
 			}
 			create_corps_commander = {
-				name = "Colonel Barton"
-				portrait_path = "gfx/leaders/UNS/gen_barton.dds"
+				name = "Louie Carter"
+				portrait_path = "gfx/leaders/GRB/gen_barton.dds"
 				traits = { armor_officer }
 				skill = 4
 				attack_skill = 4
 				defense_skill = 4
-				logistics_skill = 6
-				planning_skill = 7
+				logistics_skill = 4
+				planning_skill = 6
 			}
 		}
 		custom_effect_tooltip = new_officers_uns_tt
@@ -490,39 +490,40 @@ country_event = {
 		}
 		hidden_effect = {
 			create_corps_commander = {
-				name = "Jason Broady"
-				portrait_path = "gfx/leaders/UNS/gen_broady.dds"
+				name = "Dominic Harrison"
+				portrait_path = "gfx/leaders/GRB/gen_broady.dds"
 				traits = { trait_cautious }
 				skill = 3 
-				attack_skill = 3
+				attack_skill = 2
 				defense_skill = 3
 				planning_skill = 3
-				logistics_skill = 3
+				logistics_skill = 4
 			}
 			create_corps_commander = {
-				name = "Adam Savage"
-				portrait_path = "gfx/leaders/UNS/gen_savage.dds"
-				traits = { infantry_officer }
+				name = "Alistar Ward"
+				portrait_path = "gfx/leaders/GRB/gen_savage.dds"
+				traits = { infantry_commander_hum }
 				skill = 3
 				attack_skill = 4
 				defense_skill = 2
-				logistics_skill = 5
+				logistics_skill = 3
 				planning_skill = 3
 			}
 			create_corps_commander = {
-				name = "Colonel Barton"
-				portrait_path = "gfx/leaders/UNS/gen_barton.dds"
+				name = "Louie Carter"
+				portrait_path = "gfx/leaders/GRB/gen_barton.dds"
 				traits = { armor_officer }
 				skill = 4
 				attack_skill = 4
 				defense_skill = 4
-				logistics_skill = 6
-				planning_skill = 7
+				logistics_skill = 4
+				planning_skill = 6
 			}
+		
 			create_corps_commander = {
-				name = "Moonstriker"
+				name = "Blast Guard"
 				portrait_path = "gfx/leaders/UNS/moonstriker.dds"
-				traits = { moonstriker_service paladin_of_moon } 
+				traits = { terrain_penalty_reduction = 0.25 } 
 				skill = 6
 				attack_skill = 7
 				defense_skill = 8
@@ -1398,3 +1399,45 @@ country_event = {
 		}
 	}
 }
+
+
+country_event = {
+	id = grb.32 
+	desc = grb.32.desc 
+	title = grb.32.t 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.32.a 
+		
+		create_country_leader = {
+			name = "Margaret Hilda Thatcher"
+			desc = "GRB_THATCHER_DESC"
+			picture = "gfx/leaders/GRB/Thatcher.dds"
+			expire = "1999.9.9"
+			ideology = conservatism
+			traits = {
+				human_leader
+			}
+		}
+	}
+	
+	option = {
+		name = grb.32.b 
+		trigger = {
+			check_variable = { acceptance_value > 0.39 }
+		}
+		create_country_leader = {
+			name = "Herman Buecher"
+			desc = "GRB_BUECHER_DESC"
+			picture = "gfx/leaders/GRB/Buecher.dds"
+			expire = "1999.9.9"
+			ideology = conservatism
+			traits = {
+				first_nonhuman_leader
+			}
+		}
+	}
+}
+		

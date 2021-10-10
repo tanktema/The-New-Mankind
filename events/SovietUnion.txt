@@ -891,7 +891,7 @@ country_event = {
 		country_event = { id = sou.37 days = 60 }
 	}
 	option = {
-		name = sou.36.a
+		name = sou.36.b
 		trigger = {
 			democratic < 0.4
 		}
@@ -994,7 +994,7 @@ country_event = {
 			popularity = 0.1
 		}
 		
-		add_political_power = -75
+		add_political_power = -25
 	}
 }
 
@@ -1064,6 +1064,7 @@ country_event = {
 			picture = "gfx/leaders/SOU/Yazov.dds"
 			expire = "1999.9.9"
 			ideology = neo_bolshevism
+			traits = { human_leader }
 		}
 	}
 }

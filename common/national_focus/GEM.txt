@@ -948,6 +948,22 @@ focus_tree = {
 				target = CHN 
 				type = puppet_wargoal_focus
 			}
+			if = {
+				limit = {
+					AND = {
+						is_in_faction_with = SOU 
+						SOU = {
+							OR = {
+								is_subject = no
+								is_subject_of = ROOT 
+							}
+						}
+					}
+				}
+				SOU = { 
+					country_event = { id = gem.32 }
+				}
+			}
 		}
 	}
 	

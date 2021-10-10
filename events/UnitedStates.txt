@@ -1061,7 +1061,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Adam Savage"
-				portrait_path = "gfx/leaders/YNS/gen_savage.dds"
+				portrait_path = "gfx/leaders/UNS/gen_savage.dds"
 				traits = { infantry_officer }
 				skill = 3
 				attack_skill = 4
