@@ -2,42 +2,42 @@ resource_exploring_human_category = {
 	icon = generic_formable_nations
 	picture = GFX_resources
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 christmas_celebrating_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		is_human_race = yes
 	}
 }
 equestria_communist_support_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 resource_keep_exploring_human_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 political_actions_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 extra_worktime_human_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		is_human_race = yes 
 		
 	}
@@ -45,7 +45,7 @@ extra_worktime_human_category = {
 scientifical_park_human_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
@@ -53,49 +53,49 @@ scientifical_expand_human_category = {
 	icon = generic_formable_nations
 
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }	
 industral_rebuild_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 fleet_reconstruction_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 soviet_pressure_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 soviet_diplomacy_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }
 soviet_tsar_coring_decisions = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 state_renaming_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		always = no 
 		
 	}
 	visible = { always = no }
@@ -110,21 +110,21 @@ sou_industrial_effort = {
 		
 	} 
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 SOU_resource_effort_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
 SOU_resource_selling = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }	
@@ -137,7 +137,7 @@ SOU_vdnh_category = {
 		}
 	}
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 	picture = GFX_decision_sou_vdnh_picture
@@ -148,7 +148,7 @@ SOU_cremlin_category = {
 		has_completed_focus = SOU_rebuild_cremlin
 	}
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }
@@ -158,14 +158,14 @@ UNS_liberty_statue_category = {
 		has_completed_focus = UNS_liberty_statue
 	}
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = UNS
 	}
 }
 SOU_fleet_remake_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = SOU
 	}
 }
@@ -185,14 +185,14 @@ GEM_political_crisis_category = {
 		}
 	}
 	allowed = {
-		has_dlc = "Waking the Tiger"
+	#	has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }
 GEM_resources_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -200,7 +200,7 @@ GEM_resources_category = {
 GEM_resources_trading = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -208,7 +208,7 @@ GEM_resources_trading = {
 GEM_brand_gates = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -216,7 +216,7 @@ GEM_brand_gates = {
 GEM_fleet_remake_category = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }	
@@ -224,7 +224,7 @@ GEM_fleet_remake_category = {
 GEM_native_police_squads = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }
@@ -232,7 +232,7 @@ GEM_native_police_squads = {
 GEM_himmler_coring_decisions = {
 	icon = generic_formable_nations
 	allowed = {
-		has_dlc = "Waking the Tiger"
+		#has_dlc = "Waking the Tiger"
 		original_tag = GEM
 	}
 }
@@ -325,4 +325,49 @@ GRB_communist_support = {
 	}
 	
 	visible_when_empty = yes 
+}
+
+
+GRB_resources = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		OR = {
+			has_completed_focus = GRB_resource_searching
+			has_completed_focus = GRB_resource_searching_hum
+		}
+	}
+}
+
+GRB_bigben_category = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		has_completed_focus = GRB_rebuild_bigben
+	}
+}
+
+GRB_tower_category = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		has_completed_focus = GRB_rebuild_tower
+	}
+}
+
+
+GRB_trading_category = {
+	allowed = {
+		original_tag = GRB 
+	}
+	visible = {
+		OR = {
+			has_completed_focus = GRB_todd_howard
+			is_debug = yes 
+		}
+	}
+	visible_when_empty = yes
 }

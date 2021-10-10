@@ -32,7 +32,7 @@ technologies = {
 		category_army = {
 			soft_attack = 0.1
 			hard_attack = 0.1
-			#max_organization = 15
+			max_organization = 15
 			reliability = 0.5
 			maximum_speed = -0.1
 			breakthrough = 0.1
@@ -84,7 +84,7 @@ technologies = {
 	#Снайперы
 	
 	human_snipers_corps = {
-		dependencies  = {
+		depencies = {
 			human_race = 1
 			tech_support = 1
 		}
@@ -350,7 +350,7 @@ technologies = {
 			name = human_folder
 			position = { x = 2 y = 12 }
 		}
-		dependencies  = {
+		depencies = {
 			night_vision = 1
 		}
 		research_cost = 1
@@ -362,7 +362,7 @@ technologies = {
 		land_night_attack = 0.2
 	}
 	conveyor_prod_human = {
-		dependencies  = {
+		depencies = {
 			improved_machine_tools = 1
 		}
 		path = {
@@ -431,7 +431,7 @@ technologies = {
 	###### Armor and army upgrades 
 	
 	upgrade_armor_vests = {
-		dependencies  = {
+		depencies = {
 			human_race = 1
 			magical_weapons = 1
 		}
@@ -467,7 +467,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 4 y = 2 }
+			position = { x = 8 y = 2 }
 		}
 		research_cost = 2
 		start_year = 1010
@@ -489,7 +489,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 4 y = 4 }
+			position = { x = 8 y = 4 }
 		}
 		research_cost = 3
 		start_year = 1012
@@ -516,7 +516,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 4 y = 6 }
+			position = { x = 8 y = 6 }
 		}
 		research_cost = 4
 		start_year = 1014
@@ -535,7 +535,7 @@ technologies = {
 	advanced_polymer_armor = {
 		folder = {
 			name = human_folder
-			position = { x = 4 y = 8 }
+			position = { x = 8 y = 8 }
 		}
 		research_cost = 5
 		start_year = 1016
@@ -559,7 +559,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 16 y = 2 }
+			position = { x = 10 y = 2 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -580,7 +580,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 16 y = 4 }
+			position = { x = 10 y = 4 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -602,7 +602,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 16 y = 6 }
+			position = { x = 10 y = 6 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -621,7 +621,7 @@ technologies = {
 	magical_permeter_barrier = {
 		folder = {
 			name = human_folder
-			position = { x = 16 y = 8 }
+			position = { x = 10 y = 8 }
 		}
 		research_cost = 2
 		categories = {

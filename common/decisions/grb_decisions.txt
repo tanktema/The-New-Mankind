@@ -1028,3 +1028,667 @@ GRB_communist_support = {
 			
 		}
 	}
+	
+
+}
+
+GRB_resources = {
+	GRB_search_steel = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				set_state_flag = GRB_steel_1
+			}
+			
+		}
+	}
+	GRB_search_aluminium = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = GRB_aluminium_1
+			}
+		}
+	}
+	GRB_search_rubber = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 363
+			controls_state = 363
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			366 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+				set_state_flag = GRB_rubber_1
+			}
+		}
+	}
+	GRB_search_oil = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 364
+			controls_state = 364
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			364 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+				set_state_flag = GRB_oil_1
+			}
+		}
+	}
+	GRB_search_crystals = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 364
+			controls_state = 364
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			364 = {
+				add_resource = {
+					type = crystals
+					amount = 10
+				}
+				set_state_flag = GRB_crystals_1
+			}
+		}
+	}
+	GRB_search_chromium = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				set_state_flag = GRB_chromium_1
+			}
+		}
+	}
+	GRB_search_tungsten = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+				set_state_flag = GRB_tungsten_1
+			}
+		}
+	}
+}
+
+
+GRB_trading_category = {
+	GRB_fill_market = {
+		
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+		modifier = {
+			consumer_goods_factor = 0.25 
+		}
+		cost = 25 
+		complete_effect = {
+			FROM = {	
+				add_ideas = GRB_market_filling
+			}
+		}
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = GRB_market_filling
+			}
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.03 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+		
+	}
+		
+		
+	GRB_buy_resources = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		days_remove = 30
+		days_re_enable = 60
+		modifier = {
+			consumer_goods_factor = 0.25 
+		}
+		cost = 25 
+		complete_effect = {
+			FROM = {
+				random_owned_state = {
+					limit = {
+						OR = {
+							has_resources_amount = {
+								resource = steel 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = aluminium 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = tungsten 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = chromium 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = oil 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = rubber 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = crystals 
+								amount > 0 
+							}
+						}
+					}
+					set_state_flag = resource_buiying_by_grb@FROM 
+					give_resource_rights = { state = THIS receiver = ROOT }
+				}
+			}
+		}
+		
+		remove_effect = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = resource_buiying_by_grb@FROM 
+					}
+					ROOT = { remove_resource_rights = PREV }
+						
+				}
+			}
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.04 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+	}
+	
+	GRB_industrial_investment = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				
+				check_variable = { trade_decisions_opened > 0 }
+					
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_12
+				check_variable = { FROM.grb_trading_influence > 0.11 }
+			}
+		}
+		fixed_random_seed = no 
+		days_remove = 45
+		days_re_enable = 45
+		
+		modifier = {
+			production_speed_buildings_factor = -0.1
+		}
+		cost = 25
+		remove_effect = {
+			FROM = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					random_list = {
+						33 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes 
+							}
+							ROOT = {
+								add_offsite_building = { type = industrial_complex level = 2 }
+							}
+						}
+						33 = {
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes 
+							}
+							ROOT = {
+								add_offsite_building = { type = arms_factory level = 2 }
+							}
+						}
+						33 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes 
+							}
+							add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes 
+							}
+							ROOT = {
+								add_offsite_building = { type = industrial_complex level = 1 }
+								add_offsite_building = { type = arms_factory level = 1 }
+							}
+						}
+						
+					}
+				}
+			}
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.05 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+			#custom_effect_tooltip = random_industry_receive
+		}
+	}
+			
+			
+	GRB_geological_research = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				
+				check_variable = { trade_decisions_opened > 0 }
+					
+				
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_25
+				check_variable = { FROM.grb_trading_influence > 0.24 }
+			}
+		}
+		cost = 25 
+		days_remove = 45
+		days_re_enable = 45
+		fixed_random_seed = no 
+		remove_effect = {	
+			FROM = {
+				hidden_effect = {
+					randomize_temp_variable = {
+						var = var_days_mech_temp
+						distribution = binomial
+						min = 5
+						max = 10
+						
+					}
+					round_variable = var_days_mech_temp
+				
+					random_owned_state = {
+						
+						random_list = {
+							25 = {
+								add_resource = {
+									type = steel
+									amount = var_days_mech_temp
+								}
+								add_resource = {
+									type = aluminium
+									amount = var_days_mech_temp
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_steel_value = var_days_mech_temp }
+								add_to_variable = { ROOT.grb_alum_value = var_days_mech_temp }
+							}
+							
+							25 = {
+								add_resource = {
+									type = chromium
+									amount = var_days_mech_temp
+								}
+								add_resource = {
+									type = tungsten
+									amount = var_days_mech_temp	
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_chrom_value = var_days_mech_temp }
+								add_to_variable = { ROOT.grb_tungs_value = var_days_mech_temp }
+									
+							}
+							
+							25 = {
+								add_resource = {
+									type = oil
+									amount = var_days_mech_temp
+								}
+								add_resource = {
+									type = rubber
+									amount = var_days_mech_temp
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_oil_value = var_days_mech_temp }
+								add_to_variable = { ROOT.grb_rubb_value = var_days_mech_temp }
+							}
+							
+							25 = {
+								add_resource = {
+									type = crystals
+									amount = var_days_mech_temp
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_cryst_value = var_days_mech_temp }
+								
+							}
+						}
+						#fixed_random_seed = no 
+					}
+				}
+				custom_effect_tooltip = random_resource_receive
+			}
+			custom_effect_tooltip = random_resource_receive_root
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.05 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+	}
+	
+	
+	GRB_sterling_giving = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = check_variable = { trade_decisions_opened = 1 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_60
+				check_variable = { FROM.grb_trading_influence > 0.59 }
+			}
+		}
+					 
+		days_remove = 45
+		days_re_enable = 45
+		
+		cost = 25 
+		
+		remove_effect = {
+			FROM = {
+				add_ideas = GRB_funds_sterling
+			}
+			add_to_variable = { grb_political_power_gain = 0.1 }
+			custom_effect_tooltip = add_political_gain
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.15 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+	}
+	
+	
+	GRB_economical_integration = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_80
+				check_variable = { FROM.grb_trading_influence > 0.79 }
+				
+			}
+		}
+		cost = 50
+		fire_only_once = yes 
+		days_remove = 30
+		
+		remove_effect = {
+			FROM = {
+				every_owned_state = {
+					give_resource_rights = { state = THIS receiver = ROOT }
+				}
+				add_ideas = GRB_eco_integration
+			}
+		}
+	}
+	
+	
+	GRB_economical_puppet = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_100
+				check_variable = { FROM.grb_trading_influence = 1 }
+			}
+		}
+		
+		fire_only_once = yes 
+		days_remove = 30
+		
+		remove_effect = {
+			set_autonomy = {
+				target = FROM 
+				autonomy_state = autonomy_trade_republic_grb
+				#freedom_level = 25
+			}
+			
+			custom_effect_tooltip = block_decisions_not_invest
+			add_to_variable = { num_of_tcs_nopupp = -1 }
+		}
+	} 
+}

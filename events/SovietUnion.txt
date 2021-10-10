@@ -20,7 +20,7 @@ country_event = {
 				instant_build = yes
 			}
 		}
-		country_event = { id = sou.2 days = 10 }
+		#country_event = { id = sou.2 days = 10 }
 	}
 	option = {
 		name = sou.1.b 
@@ -37,7 +37,7 @@ country_event = {
 				instant_build = yes
 			}
 		}
-		country_event = { id = sou.2 days = 10 }
+		#country_event = { id = sou.2 days = 10 }
 	}
 }
 country_event = {
@@ -72,7 +72,7 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = sou_tooltip_recruit_1
-		country_event = { id = sou.3 days = 5 }
+		#country_event = { id = sou.3 days = 5 }
 	}
 }
 country_event = {
@@ -109,7 +109,7 @@ country_event = {
 	option = {
 		name = sou.4.a 
 		transfer_state = 234
-		country_event = { id = sou.5 days = 10 }
+	#	country_event = { id = sou.5 days = 10 }
 	}
 }
 country_event = {
@@ -125,7 +125,7 @@ country_event = {
 news_event = {
 	id = sou.6
 	title = sou.6.t 
-	major = yes 
+	#major = yes 
 	desc = sou.6.desc 
 	is_triggered_only = yes 
 	option = {
@@ -208,7 +208,7 @@ country_event = {
 			popularity = 0.03
 		}
 	}
-}
+} 
 country_event = {
 	id = sou.12 
 	title = sou.12.t 
@@ -225,19 +225,9 @@ country_event = {
 			elections_frequency = 36
 		}
 	}
+	
 	option = {
 		name = sou.12.b 
-		trigger = {
-			communism > 0.4
-		}
-		add_popularity = {
-			ideology = communism 
-			popularity = 0.1
-		}
-		complete_national_focus = SOU_world_arena
-	}
-	option = {
-		name = sou.12.c 
 		trigger = {
 			communism < 0.3
 			democratic > 0.4
@@ -246,10 +236,14 @@ country_event = {
 			ideology = communism 
 			popularity = 0.3
 		}
+		add_ideas = SOU_bund_blyat
 		add_stability = -0.2
 		hidden_effect = {
-			country_event = { id = sou.13 days = 30 }
+			complete_national_focus = SOU_protests_against_fakes
 		}
+		#hidden_effect = {
+			#country_event = { id = sou.13 days = 30 }
+		#}
 		custom_effect_tooltip = democratic_unstable_tt_1
 	}
 }
@@ -346,13 +340,7 @@ country_event = {
 	title = sou.16.t 
 	desc = sou.16.desc 
 	is_triggered_only = yes 
-	option = {
-		name = sou.16.a
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.1
-		}
-	}
+	
 	option = {
 		name = sou.16.b 
 		add_popularity = {
@@ -383,17 +371,7 @@ country_event = {
 	title = sou.18.t
 	desc = sou.18.desc 
 	is_triggered_only = yes 
-	option = {
-		name = sou.18.a 
-		random_list = {
-			75 = {
-				country_event = { id = sou.19 }
-			}
-			25 = {
-				country_event = { id = sou.20 }
-			}
-		}
-	}
+	
 	option = {
 		name = sou.18.b 
 		trigger = {
@@ -545,6 +523,7 @@ country_event = {
 				modifier = married_sunbutt
 			}
 		}
+		
 	}
 	option = {
 		name = sou.25.b 
@@ -583,9 +562,10 @@ news_event = {
 					value = 999
 				}
 				add_ideas = married_sunbutt_human
+				add_to_faction = SOU
 			}
 			SOU = {
-				add_to_faction = EQS
+				set_faction_leader = yes 
 				add_ideas = married_sunbutt_human
 			}
 		}
@@ -874,3 +854,320 @@ country_event = {
 		add_ideas = SOU_suvorov_academy
 	}
 }
+
+
+country_event = {
+	id = sou.35
+	title = sou.35.t 
+	desc = sou.35.desc
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.35.a 
+		every_other_country = {
+			limit = {
+				AND = {
+					original_tag = EQS
+					has_government = communism 
+				}
+			}
+			country_event = { id = generic.3 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sou.36
+	title = sou.36.t 
+	desc = sou.36.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.36.a
+		trigger = {
+			democratic > 0.4
+		}
+		country_event = { id = sou.37 days = 60 }
+	}
+	option = {
+		name = sou.36.a
+		trigger = {
+			democratic < 0.4
+		}
+		country_event = { id = sou.38 days = 60 }
+	}
+}
+
+country_event = {
+	id = sou.37
+	
+	title = sou.37.t 
+	desc = sou.37.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.37.a
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no 
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.4
+		}
+		remove_ideas = SOU_bund_blyat
+		complete_national_focus = SOU_new_beginning
+	}
+}
+
+country_event = {
+	id = sou.38
+	
+	title = sou.38.t 
+	desc = sou.38.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.38.a
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = ROOT 
+			size = 0.3 
+		}
+		
+		#complete_national_focus = SOU_new_beginning
+	}
+}
+
+country_event = {
+	id = sou.39
+	
+	title = sou.39.t 
+	desc = sou.39.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.39.a
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.4
+		}
+		remove_ideas = SOU_bund_blyat
+		complete_national_focus = SOU_new_beginning
+	}
+}
+
+country_event = {
+	id = sou.40 
+	title = sou.40.t 
+	desc = sou.40.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.40.a 
+		
+		FROM = {
+			country_event = { id = sou.41 days = 5 }
+		}
+	}
+}
+
+
+country_event = {
+	id = sou.41 
+	title = sou.41.t 
+	desc = sou.41.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.41.a 
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		
+		add_political_power = -75
+	}
+}
+
+country_event = {
+	id = sou.42 
+	
+	title = sou.42.t 
+	desc = sou.42.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.42.a 
+		army_experience = -25
+		add_political_power = -15
+		add_timed_idea = {
+			idea = SOU_purges
+			days = 365
+		}
+	}
+	
+	option = {
+		name = sou.42.b 
+		hidden_effect = {
+			country_event = { id = sou.43 days = 45 }
+		}
+	}
+	
+}
+
+
+country_event = {
+	id = sou.43
+	
+	title = sou.43.t 
+	desc = sou.43.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.43.a 
+		hidden_effect = {
+			create_country_leader = {
+			   name = "Sergey Taboritskiy"
+			   desc = "SOU_fasc_desc"
+			   picture = "gfx/leaders/SOU/Taboritskiy.dds"
+			   expire = "1989.1.1"
+			   ideology = despotism 
+			   traits = { 
+					human_leader
+					#fasc_leader
+				}
+			}
+			
+		}
+		start_civil_war = {
+			ideology = neutrality 
+			ruling_party = fascism
+			size = 0.3
+			only_own_territory = yes 
+		}
+		
+		set_country_flag = officers_bund
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = SOU_officers_bund
+		create_country_leader = {
+			name = "Dmitry Yazov"
+			desc = "TNM_YAZOV_DESC"
+			picture = "gfx/leaders/SOU/Yazov.dds"
+			expire = "1999.9.9"
+			ideology = neo_bolshevism
+			traits = { human_leader }
+		}
+	}
+}
+
+country_event = {
+	id = sou.44
+	
+	title = sou.44.t 
+	desc = sou.44.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.44.a 
+		complete_national_focus = SOU_execute_traitor
+	}
+}
+
+
+country_event = {
+	id = sou.45 
+	
+	title = sou.45.t 
+	desc = sou.45.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.45.a 
+		create_corps_commander = {
+			name = "Emerald Dusk"
+			desc = "EMERALD_DUSK_NAME"
+			portrait_path = "gfx/leaders/SOU/EmeraldDusk.dds"
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 2
+			planning_skill = 3
+			traits = {
+				equestrian_supporter
+				other_race_general
+			}
+		}
+	}
+	
+}
+
+
+country_event = {
+	id = sou.46
+	
+	title = sou.46.t 
+	desc = sou.46.desc
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.46.a 
+		
+		add_stability = 0.07
+		add_war_support = 0.07
+		
+		every_unit_leader = {
+			OR = {
+				has_id = 1999
+				has_id = 1998
+			}
+			remove_unit_leader = yes 
+		}
+	}
+}
+
+country_event = {
+	id = sou.47
+	
+	title = sou.47.t 
+	desc = sou.47.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.47.a 
+		FROM = {
+			puppet = ROOT 
+			set_autonomy = {
+				target = ROOT 
+				autonomy_state = autonomy_vassal
+			}
+		}
+	}
+	
+	option = {
+		name = sou.47.b 
+		effect_tooltip = {
+			FROM = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT 
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = sou.8 days = 5 }
+		}
+	}
+}
+

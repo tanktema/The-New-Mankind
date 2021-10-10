@@ -83,6 +83,39 @@ acceptance_expand_extra = {
 		}
 
 }
+
+d_acceptance_expand_extra = {
+	custom_effect_tooltip = expand_acceptance_tt_exta
+	add_to_variable = {
+			acceptance_value = 10
+		}
+		if = {
+			limit = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			add_to_variable = { acceptance_stability = 0.05 }
+			add_to_variable = { acceptance_militarism_penalty = -0.05 }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+			}
+			add_to_variable = { acceptance_stability = 0.02 }
+
+		}
+		clamp_variable = {
+			var = acceptance_value
+			min = 0
+			max = 100
+		}
+
+}
 decrease_broken_level_tooltip = {
 	if = {
 		limit = {

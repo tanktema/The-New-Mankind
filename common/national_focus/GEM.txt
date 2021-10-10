@@ -18,9 +18,21 @@ focus_tree = {
 		icon = GFX_goal_GEM_evac
 		x = 20
 		y = 0
-		cost = 5
+		cost = 0.2
 		select_effect = {
-			country_event = { id = gem.1 days = 10 }
+			country_event = {
+				id = gem.1
+				days = 1
+			}
+			
+			country_event = {
+				id = gem.2
+				days = 5
+			}
+			country_event = {
+				id = gem.3
+				days = 7
+			}
 		}
 		completion_reward = {
 			effect_tooltip = {
@@ -36,9 +48,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_evac_focus
 		prerequisite = { focus = GEM_evac_focus }
-		cost = 5
+		cost = 0.2
 		select_effect = {
-			country_event = { id = gem.4 days = 15 }
+			country_event = {
+				id = gem.4
+				days = 3
+			}
+			country_event = {
+				id = gem.5
+				days = 6
+			}
 		}
 		completion_reward = {
 			effect_tooltip = {

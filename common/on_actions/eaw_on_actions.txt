@@ -8218,6 +8218,14 @@ on_actions = {
 						}
 						add_unit_leader_trait = griffon_race_trait
 					}
+					
+					else_if = {
+						limit = {
+							var:creator = { 
+								is_human_race = yes 
+							}
+						}
+					}
 					else_if = {
 						limit = {
 							var:creator = { 
