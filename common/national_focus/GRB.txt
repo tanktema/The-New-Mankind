@@ -521,6 +521,9 @@ focus_tree = {
 			add_stability = 0.1
 			add_political_power = 50
 			acceptance_expand_extra = yes 
+			hidden_effect = {
+				country_event = { id = grb.32 days = 90 }
+			}
 		}
 	}
 	
@@ -2466,7 +2469,7 @@ focus_tree = {
 			create_corps_commander = {
 				name = "Ian Merritt"
 				portrait_path = "gfx/leaders/GRB/Merritt.dds"
-				traits = { other_race_general }
+				traits = { other_race_general winter_specialist }
 				skill = 3 
 				attack_skill = 2
 				defense_skill = 3
@@ -2476,7 +2479,7 @@ focus_tree = {
 			create_corps_commander = {
 				name = "Markus Gulseth"
 				portrait_path = "gfx/leaders/GRB/Gulseth.dds"
-				traits = { tankist_commander_hum }
+				traits = { tankist_commander_hum winter_specialist }
 				skill = 3 
 				attack_skill = 1
 				defense_skill = 1
