@@ -4,11 +4,3 @@
     rage_meter_green:0 "§G[?human_rage]%§!"
     rage_meter_yellow:0 "§Y[?human_rage]%§!"
     rage_meter_red:0 "§R[?human_rage]%§!"
-    
-    
-    create_trade_embassy:0 "Основать торговое представительство\n\n\nОсновать торговое предстваительство в государстве §C[From.GetName]§!\nВ случае отказа, повторное предложение можно сделать через 90 дней\n[!offer_trading_click_enabled]"
-    show_decisions_trd:0 "§CПоказать§! решения для данной страны"
-    close_decisions_trd:0 "§CСкрыть§! решения для данной страны"
-    grb_trade_value:0 "Уровень §CТоргового Влияния§!"
-    grb_tc_refuse:0 "После предыдущего предложения прошло менее §Y90 дней§!"
-    

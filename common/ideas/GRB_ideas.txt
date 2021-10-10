@@ -345,179 +345,6 @@ ideas = {
 			}
 		}
 		
-		GRB_TRD_trading = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				political_power_factor = 0.08
-				stability_factor = 0.02
-				consumer_goods_factor = -0.05
-			}
-		}
-		
-		
-		GRB_crops = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				weekly_manpower = 250
-				monthly_population = 0.25
-				stability_factor = 0.05
-			}
-		}
-		
-		GRB_sterlings = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				consumer_goods_factor = -0.05
-				stability_factor = 0.1
-				drift_defence_factor = 0.25
-				political_power_gain = 0.25
-			}
-		}
-		
-		
-		GRB_building_factories = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				production_speed_buildings_factor = 0.15
-				consumer_goods_factor = -0.05
-				stability_factor = -0.05
-				production_factory_efficiency_gain_factor = 0.15
-				production_factory_max_efficiency_factor = 0.1
-			}
-		}
-		GRB_resources_idea = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				consumer_goods_factor = 0.07
-				local_resources_factor = 0.1
-				country_resource_steel = 10
-			}
-		}
-		
-		GRB_economics_peace = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				stability_factor = 0.08
-				war_support_factor = -0.07
-				political_power_gain = 0.1
-			}
-		}
-		
-		GRB_market_filling = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				consumer_goods_factor = -0.15
-				political_power_gain = -0.05
-			}
-		}
-		
-		GRB_funds_sterling = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				consumer_goods_factor = -0.05
-				political_power_gain = -0.25
-			}
-		}
-		
-		GRB_eco_integration = {
-			removal_cost = -1
-			allowed = { always = yes }
-			targeted_modifier = {
-				tag = GRB 
-				cic_to_target_factor = 0.5
-				
-				mic_to_target_factor = 0.5
-				#trade_cost_for_target_factor = -0.25
-			}
-		}
-		
-		GRB_naval_power = {
-			removal_cost = -1
-			allowed = { always = yes }
-			equipment_bonus = {
-				ship_hull_light = {
-					fire_range = 0.07
-					shore_bombardment = 0.1
-					naval_range = 0.1
-					surface_visibility  = -0.2
-				}
-				ship_hull_heavy = {	
-					fire_range = 0.1
-					shore_bombardment = 0.1
-					naval_range = 0.2
-					surface_visibility  = -0.2
-				}
-				ship_hull_carrier = {
-					naval_range = 0.1
-				}
-				
-			}
-		}
-		
-		GRB_naval_academy_idea = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				navy_leader_start_attack_level = 2
-				navy_leader_start_defense_level = 2
-				navy_leader_start_maneuvering_level = 2
-				navy_leader_start_coordination_level = 2
-				navy_leader_cost_factor = 0.25
-				navy_leader_start_level = 1
-			}
-		}
-		
-		GRB_radio_systems_idea = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				air_interception_defence_factor = 0.15
-				air_close_air_support_defence_factor = 0.1
-			}
-		}
-		
-		GRB_conscription_rising = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				conscription = 0.02
-				conscription_factor = 0.15
-			}
-		}
-		GRB_legion = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				conscription = 0.025
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
-				war_support_factor = 0.1
-				army_morale_factor = 0.15
-				weekly_manpower = 1000
-			}
-		}
-			
-		
-		GRB_we_rule_the_war = {
-			removal_cost = -1
-			allowed = { always = yes }
-			modifier = {
-				conscription = 0.01
-				army_attack_factor = 0.1
-				army_defence_factor = 0.1
-				war_support_factor = 0.15
-				army_morale_factor = 0.25
-			}
-		}
-				
 		
 	}
 	
@@ -550,19 +377,6 @@ ideas = {
 				magical_tech = 0.05
 			}
 			traits = { onwheel_master }
-		}
-		
-		GRB_porsche = {
-			allowed = {
-				original_tag = GRB 
-			}
-			available = {
-				has_completed_focus = GRB_german_tanks
-			}
-			traits = { medium_tank_producer }
-			research_bonus = {
-				armor = 0.1
-			}
 		}
 		
 	}
@@ -606,19 +420,6 @@ ideas = {
 				sniper_tech = 0.1
 			}
 			traits = { arms_dealer }
-		}
-		GRB_kalashnikov = {
-			allowed = {
-				original_tag = GRB 
-			}
-			available = {
-				has_completed_focus = GRB_contact_soviet_arms_dealers
-			}
-			research_bonus = {
-				sniper_tech = 0.15
-				infantry = 0.1
-			}
-			traits = { arms_dealer_m }
 		}
 	}
 	industrial_concern = {
@@ -735,19 +536,6 @@ ideas = {
 				air_equipment = 0.10
 			}
 			traits = { light_aircraft_manufacturer CAS_manufacturer }
-		}
-		
-		GRB_boeing = {
-			allowed = {
-				original_tag = GRB 
-			}
-			available = {
-				has_completed_focus = GRB_american_aircraft
-			}
-			research_bonus = {
-				air_equipment = 0.10
-			}
-			traits = { heavy_aircraft_manufacturer medium_aircraft_manufacturer }
 		}
 	}
 	naval_manufacturer = {

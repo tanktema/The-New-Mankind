@@ -1385,8 +1385,3 @@ GRB_EQS_knight = {
 	color = rgb { 41 102 53 }
 	color_ui = rgb ( 60 120 56 }
 }
-
-SOU_TNO = {
-	color = rgb { 93 25 0 }
-	color_ui = rgb { 75 25 0 }
-}

@@ -504,7 +504,7 @@ ideas = {
 			removal_cost = -1
 			allowed = {
 				NOT = {
-					has_war_with = EQS
+					has_war_with = CHN
 				}
 			}
 			research_bonus = {
@@ -516,7 +516,7 @@ ideas = {
 			removal_cost = -1
 			allowed = {
 				NOT = {
-					has_war_with = STG
+					has_war_with = CHN
 				}
 			}
 			research_bonus = {

@@ -152,34 +152,6 @@ on_actions = {
 			}
 		}
 	}
-	
-	on_civil_war_end = {
-		effect = {
-			if = {
-				limit = {
-					AND = {
-						original_tag = SOU 
-						has_government = democratic
-					}
-				}
-				SOU = {
-					country_event = { id = sou.39 days = 5 }
-				}
-			}
-			
-			if = {
-				limit = {
-					AND = {
-						original_tag = SOU 
-						has_completed_focus = SOU_officers_bund
-					}
-				}
-				SOU = {
-					country_event = { id = sou.44 days = 5 }
-				}
-			}
-		}
-	}
 
 	on_weekly_GRB = {
 		effect = {

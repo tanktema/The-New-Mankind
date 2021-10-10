@@ -395,14 +395,6 @@ leader_traits = {
 			local_resources_factor = 0.15
 			stability_factor = 0.05
 		}
-		
-		first_nonhuman_leader = {
-			random = no 
-			stability_factor = 0.05
-			drift_defence_factor = 0.15
-			democratic_drift = 0.02
-			political_power_gain = 0.1
-		}
 	}
 	
 		

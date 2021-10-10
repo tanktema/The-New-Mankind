@@ -17,21 +17,9 @@ focus_tree = {
 		icon = GFX_goal_SOU_evac
 		x = 20
 		y = 0
-		cost = 0.2
+		cost = 5
 		select_effect = {
-			country_event = {
-				id = sou.1
-				days = 1
-			}
-			
-			country_event = {
-				id = sou.2
-				days = 5
-			}
-			country_event = {
-				id = sou.3
-				days = 7
-			}
+			country_event = { id = sou.1 days = 10 }
 		}
 		completion_reward = {
 			effect_tooltip = {
@@ -45,18 +33,10 @@ focus_tree = {
 		relative_position_id = SOU_evac_focus
 		x = 0
 		y = 1
-		cost = 0.2
+		cost = 5
 		prerequisite = { focus = SOU_evac_focus }
 		select_effect = {
-			country_event = {
-				id = sou.4
-				days = 3
-			}
-			country_event = {
-				id = sou.5
-				days = 6
-			}
-		
+			country_event = { id = sou.4 days = 10 }
 		}
 		completion_reward = {
 			effect_tooltip = { 
@@ -111,7 +91,7 @@ focus_tree = {
 	focus = {
 		id = SOU_communism_focus
 		icon = GFX_goal_SOU_comm
-		x = -30
+		x = -10
 		y = 1
 		relative_position_id = SOU_political_crisis
 		prerequisite = { focus = SOU_political_crisis }
@@ -125,37 +105,78 @@ focus_tree = {
 				popularity = 0.05 
 			}
 			add_stability = 0.15
-			kill_ideology_leader = neutrality
-			kill_ideology_leader = fascism
-			
 		}
 	}
-	
 	focus = {
-		id = SOU_expand_kgb
-		icon = GFX_goal_SOU_kgb
+		id = SOU_burn_nat_symbols
+		icon = GFX_goal_SOU_burn_symb_naz
 		x = -1
 		y = 1
 		relative_position_id = SOU_communism_focus
 		prerequisite = { focus = SOU_communism_focus }
 		cost = 5
 		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			add_stability = -0.05
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = SOU_crush_the_dissidents
+		icon = GFX_goal_crush_diss
+		x = 1
+		y = 1
+		relative_position_id = SOU_communism_focus
+		prerequisite = { focus = SOU_communism_focus }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+	}
+	focus = {
+		id = SOU_expand_kgb
+		icon = GFX_goal_SOU_kgb
+		x = 0
+		y = 1
+		relative_position_id = SOU_burn_nat_symbols
+		prerequisite = { focus = SOU_burn_nat_symbols }
+		cost = 5
+		completion_reward = {
 			add_ideas = SOU_kgb_defence
 		}
 	}
-	
+	focus = {
+		id = SOU_com_propaganda
+		icon = GFX_goal_SOU_Prop
+		x = 0  
+		y = 1 
+		relative_position_id = SOU_crush_the_dissidents
+		prerequisite = { focus = SOU_crush_the_dissidents }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_propaganda
+		}
+	}
 	focus = {
 		id = SOU_support_workers
 		icon = GFX_goal_SOU_workers_sup
-		x = 0 
+		x = 1 
 		y = 1
 		relative_position_id = SOU_expand_kgb
 		prerequisite = { focus = SOU_expand_kgb }
-		#prerequisite = { focus = SOU_com_propaganda }
+		prerequisite = { focus = SOU_com_propaganda }
 		cost = 5
 		completion_reward = {
-			add_stability = 0.1
-			add_war_support = 0.1
+			add_stability = 0.15
+			add_war_support = 0.2
 			if = {
 				limit = {
 					has_idea = SOU_gromyko_selhoz
@@ -167,48 +188,29 @@ focus_tree = {
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_friend_stalliongrad
-		x = 1
-		y = 1
-		relative_position_id = SOU_communism_focus
-		prerequisite = { focus = SOU_communism_focus }
-		cost = 5
-		completion_reward = {
-			add_opinion_modifier = {
-				modifier = friendship_between
-				target = STG 
-			}
-			reverse_add_opinion_modifier = {
-				modifier = friendship_between
-				target = STG 
-			}
-			acceptance_expand_extra = yes 
-			hidden_effect = { set_major = yes }
-		}
-	}
-	
-	focus = {
-		id = SOU_national_reform
+		id = SOU_world_arena
+		icon = GFX_goal_SOU_world
 		x = 0
-		y = 1
-		relative_position_id = SOU_friend_stalliongrad
-		prerequisite = { focus = SOU_friend_stalliongrad }
-		cost = 5
+		y = 1 
+		relative_position_id = SOU_support_workers
+		prerequisite = { focus = SOU_support_workers }
+		cost = 10
 		completion_reward = {
-			add_ideas = SOU_state_reforms
+			set_major = yes
+			acceptance_expand_extra = yes
+			set_rule = {
+				can_create_factions = yes
+			}
 		}
 	}
-
 	focus = {
 		id = SOU_stalliongrad_alliance
 		icon = GFX_goal_stalliongrad_pact
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = SOU_support_workers
-		prerequisite = { focus = SOU_national_reform }
-		prerequisite = { focus = SOU_support_workers }
+		relative_position_id = SOU_world_arena
+		prerequisite = { focus = SOU_world_arena }
 		cost = 5
 		completion_reward = {
 			create_faction = SOU_STG_PACT
@@ -217,84 +219,6 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = SOU_contact_eqs
-		x = -2
-		y = 1
-		relative_position_id = SOU_stalliongrad_alliance
-		prerequisite = { focus = SOU_stalliongrad_alliance }
-		cost = 5
-		completion_reward = {
-			add_opinion_modifier = {
-				modifier = friendship_between
-				target = EQS 
-			}
-			reverse_add_opinion_modifier = {
-				modifier = friendship_between
-				target = EQS 
-			}
-			acceptance_expand = yes 
-			EQS = { 
-				add_popularity = {
-					ideology = communism
-					popularity = 0.1
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_contact_uns
-		x = 0
-		y = 1
-		relative_position_id = SOU_stalliongrad_alliance
-		prerequisite = { focus = SOU_stalliongrad_alliance }
-		cost = 5
-		completion_reward = {
-			add_opinion_modifier = {
-				modifier = friendship_between
-				target = UNS 
-			}
-			reverse_add_opinion_modifier = {
-				modifier = friendship_between
-				target = UNS 
-			}
-			acceptance_expand = yes 
-			UNS = { 
-				add_popularity = {
-					ideology = communism
-					popularity = 0.1
-				}
-			}
-		}
-	}
-	focus = {
-		id = SOU_contact_gem
-		x = 2
-		y = 1
-		relative_position_id = SOU_stalliongrad_alliance
-		prerequisite = { focus = SOU_stalliongrad_alliance }
-		cost = 5
-		completion_reward = {
-			add_opinion_modifier = {
-				modifier = friendship_between
-				target = GEM 
-			}
-			reverse_add_opinion_modifier = {
-				modifier = friendship_between
-				target = GEM 
-			}
-			acceptance_expand = yes 
-			GEM = { 
-				add_popularity = {
-					ideology = communism
-					popularity = 0.1
-				}
-			}
-		}
-	}
-	
 	focus = {
 		id = SOU_support_pantsushenko
 		available = {
@@ -314,10 +238,10 @@ focus_tree = {
 			}
 		}
 		icon = GFX_goal_SOU_vasiliy
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = SOU_contact_eqs
-		prerequisite = { focus = SOU_contact_eqs }
+		relative_position_id = SOU_stalliongrad_alliance
+		prerequisite = { focus = SOU_stalliongrad_alliance }
 		mutually_exclusive = { focus = SOU_support_serov }
 		cost = 5
 		completion_reward = {
@@ -340,92 +264,98 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOU_support_eqs_socialists
+		id = SOU_equestrian_friendship
+		icon = GFX_goal_SOU_equestria
 		x = 0
 		y = 1
 		relative_position_id = SOU_support_pantsushenko
 		prerequisite = { focus = SOU_support_pantsushenko }
 		cost = 5
 		completion_reward = {
+			acceptance_expand = yes
 			EQS = {
-				add_popularity = {
-					ideology = communism
-					popularity = 0.1
-				}
 				add_ideas = SOU_equestrian_friendship
 			}
-			add_stability = 0.05
-			add_political_power = 50
-			add_war_support = 0.05
+			add_ideas = SOU_equestrian_friendship
 		}
 	}
-	
 	focus = {
-		id = SOU_weter_influence
-		x = -2
-		y = 1
-		relative_position_id = SOU_support_eqs_socialists
-		prerequisite = { focus = SOU_support_eqs_socialists }
-		cost = 5
-		completion_reward = {
-			GRF = {
-				add_ideas = SOU_influence
-				if = {
-					limit = {
-						has_government = communism
-					}
-					country_event = { id = generic.3 }
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_crystal_influence
+		id = SOU_griffon_friendship
+		icon = GFX_goal_SOU_griffons
 		x = 0
 		y = 1
-		relative_position_id = SOU_support_eqs_socialists
-		prerequisite = { focus = SOU_support_eqs_socialists }
+		relative_position_id = SOU_equestrian_friendship
+		prerequisite = { focus = SOU_equestrian_friendship }
 		cost = 5
 		completion_reward = {
-			CRY = {
-				add_ideas = SOU_influence
-				if = {
-					limit = {
-						has_government = communism
-					}
-					country_event = { id = generic.3 }
+			acceptance_expand = yes
+			GRF = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = friendly_government
 				}
+				add_ideas = SOU_influence 
+			}
+			add_opinion_modifier = {
+				target = GRF 
+				modifier = friendly_government
+			}
+			
+		}
+	}
+	focus = {
+		id = SOU_crush_the_bugs
+		bypass = {
+			OR = {
+				any_other_country = {
+					limit = { 
+						is_in_faction_with = ROOT 
+					}
+					has_war_with = CHN 
+				}
+				has_war_with = CHN 
+			}
+		}
+		icon = GFX_goal_SOU_crush_bugs
+		x = 2
+		y = 1
+		relative_position_id = SOU_griffon_friendship
+		prerequisite = { focus = SOU_destroy_equestria OR  = SOU_griffon_friendship }
+		prerequisite = { focus = SOU_northern_crusade OR  = SOU_griffon_friendship }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = CHN
+				type = puppet_wargoal_focus
 			}
 		}
 	}
 	focus = {
-		id = SOU_equestrian_so_revolution
+		id = SOU_world_rev
+		icon = GFX_goal_World_revolution
 		x = 1
 		y = 1
-		relative_position_id = SOU_weter_influence
-		prerequisite = { focus = SOU_weter_influence }
-		prerequisite = { focus = SOU_crystal_influence }
+		relative_position_id = SOU_crush_the_bugs
+		mutually_exclusive = { focus = SOU_diplomatic_intrigues }
+		prerequisite = { focus = SOU_crush_the_bugs }
 		cost = 5
 		completion_reward = {
-			EQS = {
-				start_civil_war = {
-					ideology = communism
-					size = 0.6
-					only_own_territory = yes 
-					capital = 67
-					states = {
-						167 653 662 525 661 229 228 231
-					}
-				}
-			}
-			hidden_effect = {
-				country_event = { id = sou.35 days = 5 }
-			}
+			unlock_decision_category_tooltip = soviet_pressure_category
 		}
 	}
-	
-	
+	focus = {
+		id = SOU_diplomatic_intrigues 
+		icon = GFX_goal_SOU_diplomacy
+		x = -1
+		y = 1
+		relative_position_id = SOU_crush_the_bugs
+		prerequisite = { focus = SOU_crush_the_bugs }
+		mutually_exclusive = { focus = SOU_world_rev }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = soviet_diplomacy_category
+		}
+	}
 	focus = {
 		id = SOU_support_serov
 		icon = GFX_goal_SOU_support_serov
@@ -445,10 +375,10 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = SOU_contact_gem
-		prerequisite = { focus = SOU_contact_gem }
+		relative_position_id = SOU_stalliongrad_alliance
+		prerequisite = { focus = SOU_stalliongrad_alliance }
 		mutually_exclusive = { focus = SOU_support_pantsushenko }
 		cost = 5
 		completion_reward = {
@@ -470,421 +400,115 @@ focus_tree = {
 			acceptance_expand_extra = yes 
 		}
 	}
-	
 	focus = {
-		id = SOU_trainings_with_stg 
+		id = SOU_approach_yaki
+		icon = GFX_goal_SOU_approach_yaki
+		bypass = {
+			OR = {
+				has_war_with = YAK 
+				has_war_with = JAK 
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = SOU_support_serov
 		prerequisite = { focus = SOU_support_serov }
 		cost = 5
 		completion_reward = {
-			army_experience = 50
-			STG = {
-				army_experience = 50 
+			if = {
+				limit = {
+					country_exists = YAK 
+				}
+				create_wargoal = {
+					target = YAK
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = JAK
+				}
+				create_wargoal = {
+					target = JAK
+					type = annex_everything
+				}
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_soc_prop_eqs
-		x = 2
-		y = 1
-		relative_position_id = SOU_support_serov
-		prerequisite = { focus = SOU_support_serov }
-		cost = 5
-		completion_reward = {
-			EQS = {
-				add_ideas = SOU_influence
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_equstrian_invasion
-		x = 1
-		y = 1
+		id = SOU_destroy_equestria
+		icon = GFX_goal_SOU_destroy_equestria
 		bypass = {
 			OR = {
 				has_war_with = EQS 
-				EQC = {
-					exists = no 
+				has_war_with = NLR 
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = SOU_approach_yaki
+		prerequisite = { focus = SOU_approach_yaki }
+		cost = 10
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = EQS 
+				}
+				create_wargoal = {
+					target = EQS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					country_exists = NLR 
+				}
+				create_wargoal = {
+					target = NLR
+					type = annex_everything
 				}
 			}
 		}
-		relative_position_id = SOU_trainings_with_stg
-		prerequisite = { focus = SOU_trainings_with_stg }
-		prerequisite = { focus = SOU_soc_prop_eqs }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = EQS 
-			}
-		}
 	}
-	
 	focus = {
-		id = SOU_war_propaganda
-		x = 0
-		y = 1
-		available = {
-			has_war_with = EQS
-		}
-		bypass = {
-			NOT = {
-				country_exists = EQS 
-			}
-		}
-		relative_position_id = SOU_equstrian_invasion
-		prerequisite = { focus = SOU_equstrian_invasion }
-		cost = 5
-		completion_reward = {
-			add_war_support = 0.1
-			add_stability = 0.1
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_invade_CHN 
-		x = -3
-		y = 1
+		id = SOU_northern_crusade
+		icon = GFX_goal_SOU_northern_crusade
 		bypass = {
 			OR = {
-				has_war_with = CHN 
-				CHN = { exists = no }
+				has_war_with = GRF 
+				has_war_with = GFF
 			}
 		}
-		relative_position_id = SOU_war_propaganda
-		prerequisite = { focus = SOU_war_propaganda OR = SOU_equestrian_so_revolution }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = CHN 
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_eqvus_soc
-		x = -3
-		y = 1
-		relative_position_id = SOU_invade_CHN
-		prerequisite = { focus = SOU_invade_CHN }
-		cost = 5
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					AND = {
-						is_on_equestrian_continent = yes 
-						has_government = communism
-					}
-				}
-				country_event = { id = generic.3 }
-			}
-			every_other_country = {
-				limit = {
-					AND = {
-						is_on_equestrian_continent = yes 
-						NOT = { has_government = communism }
-					}
-				}
-				add_ideas = SOU_influence
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_olenian_ultimatum
-		x = -1
-		y = 1
-		bypass = {
-			OLE = {
-				is_in_faction_with = ROOT 
-			}
-		}
-		relative_position_id = SOU_eqvus_soc
-		prerequisite = { focus = SOU_eqvus_soc }
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = {
-					OLE = {
-						NOT = { has_government = communism }
-					}
-				}
-				OLE = { country_event = { id = sou.7 } }
-			}
-			if = {
-				limit = {
-					OLE = {
-						has_government = communism 
-					}
-				}
-				OLE = { country_event = { id = generic.3 } }
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_pressure_yaks
 		x = 1
 		y = 1
-		relative_position_id = SOU_eqvus_soc
-		prerequisite = { focus = SOU_eqvus_soc }
-		cost = 5
+		relative_position_id = SOU_approach_yaki
+		prerequisite = { focus = SOU_approach_yaki }
+		cost = 10
 		completion_reward = {
 			if = {
 				limit = {
-					YAK = {
-						NOT = { has_government = communism }
-					}
+					country_exists = GRF 
 				}
-				YAK = { country_event = { id = sou.7 } }
+				create_wargoal = {
+					target = GRF
+					type = annex_everything
+				}
 			}
 			if = {
 				limit = {
-					YAK = {
-						has_government = communism 
-					}
+					country_exists = GFF
 				}
-				YAK = { country_event = { id = generic.3 } }
-			}
-			if = {
-				limit = {
-					JAK = {
-						has_government = communism 
-					}
-				}
-				JAK = { country_event = { id = generic.3 } }
-			}
-			if = {
-				limit = {
-					JAK = {
-						NOT = { has_government = communism }
-					}
-				}
-				JAK = { country_event = { id = sou.7 } }
-			}
-		}
-	}
-	focus = {
-		id = SOU_northern_friends
-		x = 1
-		y = 1
-		relative_position_id = SOU_olenian_ultimatum
-		prerequisite = { focus = SOU_olenian_ultimatum }
-		prerequisite = { focus = SOU_pressure_yaks }
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = {
-					PLB = {
-						NOT = { has_government = communism }
-					}
-				}
-				PLB = { country_event = { id = sou.7 } }
-			}
-			if = {
-				limit = {
-					PLB = {
-						has_government = communism 
-					}
-				}
-				PLB = { country_event = { id = generic.3 } }
-			}
-			if = {
-				limit = {
-					PNG = {
-						has_government = communism 
-					}
-				}
-				PNG = { country_event = { id = generic.3 } }
-			}
-			if = {
-				limit = {
-					PNG = {
-						NOT = { has_government = communism }
-					}
-				}
-				PNG = { country_event = { id = sou.7 } }
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_griffon_soc
-		x = 3
-		y = 1
-		relative_position_id = SOU_invade_CHN
-		prerequisite = { focus = SOU_invade_CHN }
-		cost = 5
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					AND = {
-						is_on_griffon_continent = yes 
-						has_government = communism
-					}
-				}
-				country_event = { id = generic.3 }
-			}
-			every_other_country = {
-				limit = {
-					AND = {
-						is_on_griffon_continent = yes 
-						NOT = { has_government = communism }
-						NOT = { original_tag = DED }
-						NOT = { original_tag = HLR }
-					}
-				}
-				add_ideas = SOU_influence
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_go_through_north
-		x = -1
-		y = 1
-		bypass = {
-			SRS = {
-				is_in_faction_with = ROOT 
-			}
-		}
-		relative_position_id = SOU_griffon_soc
-		prerequisite = { focus = SOU_griffon_soc }
-		mutually_exclusive = { focus = SOU_go_through_south }
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = {
-					SRS = {
-						has_government = communism
-					}
-				}
-				SRS = { country_event = { id = generic.3 } }
-			}
-			else = {
-				SRS = {
-					country_event = { id = sou.7 }
+				create_wargoal = {
+					target = GFF
+					type = annex_everything
 				}
 			}
 		}
 	}
-	
-	focus = {
-		id = SOU_go_through_south
-		x = 1
-		y = 1
-		bypass = {
-			EQC = {
-				is_in_faction_with = ROOT 
-			}
-		}
-		relative_position_id = SOU_griffon_soc
-		prerequisite = { focus = SOU_griffon_soc }
-		mutually_exclusive = { focus = SOU_go_through_north }
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = {
-					EQC = {
-						has_government = communism
-					}
-				}
-				EQC = { country_event = { id = generic.3 } }
-			}
-			else = {
-				EQC = {
-					country_event = { id = sou.7 }
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_northern_placdarm
-		x = 1
-		y = 1
-		relative_position_id = SOU_go_through_north
-		prerequisite = { focus = SOU_go_through_north OR =  SOU_go_through_south }
-		cost = 5
-		completion_reward = {
-			FAT = {
-				if = {
-					limit = {
-						has_government = communism
-					}
-					country_event = { id = generic.3 }
-				}
-				else = {
-					country_event = { id = sou.7 }
-				}
-			}
-		}
-	}
-	
-	
-	
-	focus = {
-		id = SOU_world_rev
-		icon = GFX_goal_World_revolution
-		x = 2
-		y = 1
-		relative_position_id = SOU_northern_friends
-		mutually_exclusive = { focus = SOU_diplomatic_intrigues }
-		prerequisite = { focus = SOU_northern_friends }
-		prerequisite = { focus = SOU_northern_placdarm }
-		cost = 5
-		completion_reward = {
-			unlock_decision_category_tooltip = soviet_pressure_category
-		}
-	}
-	focus = {
-		id = SOU_diplomatic_intrigues 
-		icon = GFX_goal_SOU_diplomacy
-		x = -2
-		y = 1
-		relative_position_id = SOU_northern_placdarm
-		prerequisite = { focus = SOU_northern_friends }
-		prerequisite = { focus = SOU_northern_placdarm }
-		cost = 5
-		mutually_exclusive = { focus = SOU_world_rev }
-
-		completion_reward = {
-			unlock_decision_category_tooltip = soviet_diplomacy_category
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_red_sunrise
-		x = 1
-		y = 1
-		available = {
-			all_country = {
-				has_government = communism
-			}
-		}
-		relative_position_id = SOU_world_rev
-		prerequisite = { focus = SOU_world_rev OR = SOU_diplomatic_intrigues }
-		cost = 5
-		completion_reward = {
-			add_popularity = {	
-				ideology = communism
-				popularity = 0.25
-			}
-			custom_effect_tooltip = alpha_placeholder
-		}
-	}
-	######### Democratic branch
 	focus = {
 		id = SOU_people_voice
 		icon = GFX_goal_SOU_people_voice
-		x = -19
+		x = -3
 		y = 1
 		relative_position_id = SOU_political_crisis
 		prerequisite = { focus = SOU_political_crisis }
@@ -909,7 +533,6 @@ focus_tree = {
 			add_ideas = SOU_protests_democrates
 		}
 	}
-	
 	focus = {
 		id = SOU_international_support
 		icon = GFX_goal_SOU_international_support
@@ -917,7 +540,7 @@ focus_tree = {
 		y = 1 
 		relative_position_id = SOU_peaceful_protests
 		prerequisite = { focus = SOU_peaceful_protests }
-		#mutually_exclusive = { focus = SOU_people_support }
+		mutually_exclusive = { focus = SOU_people_support }
 		cost = 5
 		completion_reward = {
 			acceptance_expand_extra = yes
@@ -936,28 +559,13 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SOU_new_reforms
-		x = 0
-		y = 1
-		relative_position_id = SOU_international_support
-		prerequisite = { focus = SOU_international_support }
-		cost = 5
-		completion_reward = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.08
-			}
-			add_stability = 0.07
-		}
-	}
-	focus = {
 		id = SOU_people_support
 		icon = GFX_goal_SOU_people_support
 		x = 1
 		y = 1
 		relative_position_id = SOU_peaceful_protests
 		prerequisite = { focus = SOU_peaceful_protests }
-		#mutually_exclusive = { focus = SOU_international_support }
+		mutually_exclusive = { focus = SOU_international_support }
 		cost = 5
 		completion_reward = {
 			add_popularity = {
@@ -966,27 +574,13 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = SOU_public_speeches
-		x = 0
-		y = 1
-		relative_position_id = SOU_people_support
-		prerequisite = { focus = SOU_people_support }
-		cost = 5
-		completion_reward = {
-			add_stability = 0.1
-			add_political_power = 50
-		}
-	}
 	focus = {
 		id = SOU_elections
 		icon = GFX_goal_SOU_elections
 		x = 1
-		y = 2
+		y = 1
 		relative_position_id = SOU_international_support
-		prerequisite = { focus = SOU_new_reforms }
-		prerequisite = { focus = SOU_public_speeches }
+		prerequisite = { focus = SOU_international_support OR = SOU_people_support }
 		cost = 5
 		completion_reward = {
 			country_event = { id = sou.12 days = 2 }
@@ -996,16 +590,12 @@ focus_tree = {
 		id = SOU_democratic_reform
 		available = {
 			has_government = democratic
-			NOT = {
-				has_idea = SOU_bund_blyat
-			}
 		}
 		icon = GFX_goal_SOU_demo_reform
-		x = 4
+		x = 0
 		y = 1
 		relative_position_id = SOU_elections
 		prerequisite = { focus = SOU_elections } 
-		mutually_exclusive = { focus = SOU_protests_against_fakes }
 		cost = 5
 		completion_reward = {
 			acceptance_expand = yes
@@ -1023,558 +613,257 @@ focus_tree = {
 					modifier = democratic_reform
 				}
 			}
-			hidden_effect = {
-				create_corps_commander = {
-					name = "Captain Alexey Smirnov"
-					portrait_path = "gfx/leaders/SOU/Smirnov_hum.dds"
-					traits = { tankist_commander_hum }
-					skill = 5 
-					attack_skill = 4
-					defense_skill = 6
-					planning_skill = 3
-					logistics_skill = 5
+			acceptance_expand = yes 
+		}
+	}
+	focus = {
+		id = SOU_friends_griffon
+		available = {
+			FAT = {
+				has_government = democratic
+				NOT = {
+					has_war_with = FAT 
 				}
-				
-				create_field_marshal = {
-					name = "General Sergey Izotov"
-					portrait_path = "gfx/leaders/SOU/Izotov.dds"
-					traits = { logistics_wizard defensive_doctrine }
-					skill = 5 
-					attack_skill = 4
-					defense_skill = 6
-					planning_skill = 3
-					logistics_skill = 5
+			}
+			has_government = democratic
+		}
+		icon = GFX_goal_SOU_griff_friend
+		x = -2
+		y = 1
+		relative_position_id = SOU_democratic_reform
+		prerequisite = { focus = SOU_democratic_reform }
+		mutually_exclusive = { focus = SOU_friends_unitedstates }
+		mutually_exclusive = { focus = SOU_friends_equestria }
+		cost = 5
+		completion_reward = {
+			acceptance_expand = yes
+			FAT = {
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = friendship_between
 				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = friendship_between
+				}
+				set_country_flag = sou_friendship_flag
 			}
 			acceptance_expand = yes 
 		}
 	}
-	
 	focus = {
-		id = SOU_contact_natives
+		id = SOU_friends_equestria
+		available = {
+			EQS = {
+				has_government = democratic
+				NOT = {
+					has_war_with = EQS 
+				}
+			}
+			has_government = democratic
+		}
+		icon = GFX_goal_SOU_eques_friend
 		x = 0
 		y = 1
 		relative_position_id = SOU_democratic_reform
 		prerequisite = { focus = SOU_democratic_reform }
+		mutually_exclusive = { focus = SOU_friends_griffon }
+		mutually_exclusive = { focus = SOU_friends_unitedstates }
 		cost = 5
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					AND = {
-						is_human_race = no 
-						OR = {
-							has_government = neutrality
-							has_government = democratic
-						}
-					}
-				}
+			acceptance_expand = yes
+			EQS = {
 				add_opinion_modifier = {
-					modifier = friendship_between
 					target = ROOT 
+					modifier = friendship_between
 				}
 				reverse_add_opinion_modifier = {
-					modifier = friendship_between
 					target = ROOT 
+					modifier = friendship_between
 				}
+				set_country_flag = sou_friendship_flag
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_eqvus_friends
-		x = -3
-		y = 1
-		relative_position_id = SOU_contact_natives
-		prerequisite = { focus = SOU_contact_natives }
-		mutually_exclusive = { focus = SOU_griphonia_Friends }
-		cost = 5
-		completion_reward = {
-			acceptance_expand_extra = yes 
-			add_stability = 0.1
+		id = SOU_friends_unitedstates
+		available = {
+			UNS = {
+				has_government = democratic
+				NOT = {
+					has_war_with = UNS 
+				}
+			}
+			has_government = democratic
 		}
-	}
-	
-	focus = {
-		id = SOU_UNS_friendship
-		x = -1
+		icon = GFX_goal_SOU_america_friend
+		x = 2
 		y = 1
-		relative_position_id = SOU_eqvus_friends
-		prerequisite = { focus = SOU_eqvus_friends }
+		relative_position_id = SOU_democratic_reform
+		prerequisite = { focus = SOU_democratic_reform }
+		mutually_exclusive = { focus = SOU_friends_griffon }
+		mutually_exclusive = { focus = SOU_friends_equestria }
 		cost = 5
 		completion_reward = {
 			UNS = {
-				give_guarantee = ROOT 
-				hidden_effect = {
-					add_ai_strategy = {
-						type = alliance
-						id = SOU 
-						value = 750 
-					}
-				}
-			}
-			give_guarantee = UNS 
-			add_political_power = 25
-			
-		}
-	}
-	
-	focus = {
-		id = SOU_EQS_friendship
-		x = 1
-		y = 1
-		relative_position_id = SOU_eqvus_friends
-		prerequisite = { focus = SOU_eqvus_friends }
-		cost = 5
-		completion_reward = {
-			give_guarantee = EQS 
-			EQS = { 
-				country_event = { id = generic.2 }
-				hidden_effect = {
-					add_ai_strategy = {
-						type = alliance
-						id = SOU 
-						value = 750 
-					}
-				}
-			}
-			add_political_power = 25
-			
-		}
-	}
-	
-	focus = {
-		id = SOU_human_pony_alliance
-		x = 1
-		y = 1
-		relative_position_id = SOU_UNS_friendship
-		prerequisite = { focus = SOU_UNS_friendship }
-		prerequisite = { focus = SOU_EQS_friendship }
-		mutually_exclusive = { focus = SOU_help_pact_rivfed }
-		cost = 5
-		completion_reward = {
-			EQS = {
-				set_faction_name = EQS_hum_pony_alliance
-				acceptance_expand_extra = yes 
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_griphonia_friends
-		x = 3
-		y = 1
-		relative_position_id = SOU_contact_natives
-		prerequisite = { focus = SOU_contact_natives }
-		mutually_exclusive = { focus = SOU_eqvus_friends }
-		cost = 5
-		completion_reward = {
-			acceptance_expand_extra = yes 
-			add_stability = 0.1
-		}
-	}
-	
-	focus = {
-		id = SOU_contact_grb
-		x = -1
-		y = 1
-		relative_position_id = SOU_griphonia_friends
-		prerequisite = { focus = SOU_griphonia_friends }
-		cost = 5
-		completion_reward = {
-			GRB = {
-				give_guarantee = ROOT 
-					hidden_effect = {
-					add_ai_strategy = {
-						type = alliance
-						id = SOU 
-						value = 750 
-					}
-				}
-			}
-			give_guarantee = GRB 
-			add_political_power = 25
-			
-		}
-	}
-	
-	focus = {
-		id = SOU_contact_rifved
-		x = 1
-		y = 1
-		relative_position_id = SOU_griphonia_friends
-		prerequisite = { focus = SOU_griphonia_friends }
-		cost = 5
-		completion_reward = {
-			every_other_country = {
-				limit = {
-					is_riverlands_country = yes 
-				}
 				add_opinion_modifier = {
-					modifier = friendship_between
 					target = ROOT 
+					modifier = friendship_between
 				}
 				reverse_add_opinion_modifier = {
-					modifier = friendship_between
 					target = ROOT 
+					modifier = friendship_between
 				}
+				set_country_flag = sou_friendship_flag
 			}
 		}
 	}
-	
-	
 	focus = {
-		id = SOU_help_pact_rivfed
-		x = 1
-		y = 1
-		relative_position_id = SOU_contact_grb
-		prerequisite = { focus = SOU_contact_grb }
-		prerequisite = { focus = SOU_contact_rifved }
-		mutually_exclusive = { focus = SOU_human_pony_alliance }
-		cost = 5
-		completion_reward = {
-			RCT = {
-				faction_leader = {
-					country_event = { id = generic.2 }
-				}
-			}
-			every_other_country = {
-				limit = {
-					is_riverlands_country = yes 
-				}
-				ROOT = { give_guarantee = PREV }
-			}
-			
-				
-		}
-	}
-	
-	focus = {
-		id = SOU_end_the_cpss_heritage
-		x = 3
-		y = 1
-		relative_position_id = SOU_human_pony_alliance
-		prerequisite = { focus = SOU_human_pony_alliance OR = SOU_help_pact_rivfed }
-		cost = 5
-		completion_reward = {
-			add_popularity = {
-				ideology = communism
-				popularity = -0.15
-			}
-			add_stability = 0.1
-			add_war_support = 0.1
-			add_political_power = 25
-			acceptance_expand_extra = yes
-		}
-	}
-				
-				
-	focus = {
-		id = SOU_protests_against_fakes
-		x = -4
-		y = 1
-		relative_position_id = SOU_elections
-		available = { always = no }
-		prerequisite = { focus = SOU_elections }
-		mutually_exclusive = { focus = SOU_democratic_reform }
-		cost = 0
-		completion_reward = {
-			custom_effect_tooltip = focus_on_decision_complete
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_international_support_rev
-		x = -1
-		y = 1
-		relative_position_id = SOU_protests_against_fakes 
-		prerequisite = { focus = SOU_protests_against_fakes }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_global_support
-			acceptance_expand_extra = yes
-		}
-	}
-	
-	focus = {
-		id = SOU_people_inspire
-		x = 1
-		y = 1
-		relative_position_id = SOU_protests_against_fakes
-		prerequisite = { focus = SOU_protests_against_fakes }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_people_support
-		}
-	}
-	
-	focus = {
-		id = SOU_revolution ###### Again, motherfuckers....
-		x = 1
-		y = 1
-		relative_position_id = SOU_international_support_rev
-		prerequisite = { focus = SOU_international_support_rev }
-		prerequisite = { focus = SOU_people_inspire }
-		cost = 5
-		completion_reward = {
-			country_event = { id = sou.36 days = 5 }
-			custom_effect_tooltip = check_demo_support
-		}
-	}
-	
-	focus = {
-		id = SOU_new_beginning
+		id = SOU_peacekeepers
+		icon = GFX_goal_SOU_peqcekeeprs
 		x = 0
 		y = 1
-		relative_position_id = SOU_revolution
-		prerequisite = { focus = SOU_revolution }
-		available = { always = no }
-		cost = 0
-		completion_reward = {
-			custom_effect_tooltip = focus_on_decision_complete
-		}
-	}
-	
-	focus = {
-		id = SOU_new_constitution
-		x = -2
-		y = 1
-		relative_position_id = SOU_new_beginning
-		prerequisite = { focus = SOU_new_beginning }
+		relative_position_id = SOU_friends_equestria
+		prerequisite = { focus = SOU_friends_equestria OR = SOU_friends_griffon OR = SOU_friends_unitedstates }
 		cost = 5
 		completion_reward = {
-			add_stability = 0.1
-			add_popularity = {
-				ideology = democratic
-				popularity = 0.1
-			}
-			acceptance_expand_extra = yes 
-		}
-	}
-	
-	focus = {
-		id = SOU_state_reforms_demo
-		x = 0
-		y = 1
-		relative_position_id = SOU_new_beginning
-		prerequisite = { focus = SOU_new_beginning }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_state_reforms
-		}
-	}
-	
-	focus = {
-		id = SOU_rebuild_cities
-		x = 2
-		y = 1
-		relative_position_id = SOU_new_beginning
-		prerequisite = { focus = SOU_new_beginning }
-		cost = 5
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_core_of = ROOT 
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes 
-				}
-			}
-			add_tech_bonus = {
-				category = construction_tech
-				uses = 2
-				bonus = 1
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_destroy_the_cult
-		x = 0
-		y = 1
-		relative_position_id = SOU_state_reforms_demo
-		prerequisite = { focus = SOU_state_reforms_demo }
-		cost = 5
-		completion_reward = {
-			add_popularity = {
-				ideology = communism 
-				popularity = -0.1
-			}
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_peacemakers
-		x = 4
-		y = 1
-		relative_position_id = SOU_destroy_the_cult
-		prerequisite = { focus = SOU_end_the_cpss_heritage OR = SOU_destroy_the_cult }
-		cost = 5
-		completion_reward = {
+			add_ideas = soviet_peacekeepers
 			set_rule = {
 				can_send_volunteers = yes 
 			}
-			add_ideas = soviet_peacekeepers
+		}
+	}
+	focus = {
+		id = SOU_find_allies 
+		icon = GFX_goal_SOU_allies
+		x = 0
+		y = 1
+		relative_position_id = SOU_peacekeepers
+		prerequisite = { focus = SOU_peacekeepers }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = soviet_demo_tt_1
+			hidden_effect = {
+				if = {
+					limit = {
+						EQS = {
+							has_country_flag = sou_friendship_flag
+						}
+					}
+					EQS = { 
+						country_event = { id = generic.2 }
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT 
+							value = 500
+						}
+					}
+				}
+				if = {
+					limit = {
+						FAT = {
+							has_country_flag = sou_friendship_flag
+						}
+						
+					}
+					create_faction = SOU_DEMO_FAC_1
+					FAT = {
+						country_event = { id = generic.3 }
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT 
+							value = 500
+						}
+					}
+				}
+				if = {
+					limit = {
+						UNS = {
+							has_country_flag = sou_friendship_flag
+						}
+						
+					}
+					create_faction = SOU_DEMO_FAC_1
+					UNS = {
+						country_event = { id = generic.3 }
+						add_ai_strategy = {
+							type = alliance
+							id = ROOT 
+							value = 500
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = SOU_attacking 
+		icon = GFX_goal_SOU_attacking
+		x = -1
+		y = 1
+		relative_position_id = SOU_find_allies
+		prerequisite = { focus = SOU_find_allies }
+		mutually_exclusive = { focus = SOU_defending }
+		cost = 5
+		completion_reward = {
 			add_ideas = soviet_attack_bonus
 		}
 	}
-	
-	
 	focus = {
-		id = SOU_olenian_conflict
-		x = -4
-		y = 1
-		relative_position_id = SOU_peacemakers
-		prerequisite = { focus = SOU_peacemakers }
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = {
-					OLE = {
-						AND = { 
-							exists = yes 
-							has_war_with = CHN 
-						}
-					}
-				}
-
-				add_to_war = {
-					targeted_alliance = OLE 
-					enemy = CHN 
-					hostility_reason = peacekeeping_process
-				}
-			}
-			else_if = {
-				limit = {
-					OLE = {
-						OR = {
-							exists = no 
-							is_subject_of = CHN 
-						}
-					}
-				}
-				create_wargoal = {
-					target = CHN
-					type = liberate_wargoal
-				}
-			}
-			else = {
-				give_guarantee = OLE 
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_assist_nova_griffonia
-		x = -2
-		y = 1
-		relative_position_id = SOU_peacemakers
-		prerequisite = { focus = SOU_peacemakers }
-		cost = 5
-		completion_reward = {
-			give_guarantee = GRF 
-		}
-	}
-	
-	focus = {
-		id = SOU_imperial_agression
+		id = SOU_defending 
+		icon = GFX_goal_SOU_defending
 		x = 1
 		y = 1
-		relative_position_id = SOU_peacemakers
-		prerequisite = { focus = SOU_peacemakers }
+		relative_position_id = SOU_find_allies
+		prerequisite = { focus = SOU_find_allies }
+		mutually_exclusive = { focus = SOU_attacking }
 		cost = 5
 		completion_reward = {
-			give_guarantee = FAT 
-			give_guarantee = TRD 
-			give_guarantee = JER
+			add_ideas = soviet_defence_bonus
 		}
 	}
 	focus = {
-		id = SOU_carthinian_arbitrage
-		x = 3
+		id = SOU_friendship
+		icon = GFX_goal_SOU_friendship
+		x = 1
 		y = 1
-		relative_position_id = SOU_peacemakers
-		prerequisite = { focus = SOU_peacemakers }
+		relative_position_id = SOU_attacking
+		prerequisite = { focus = SOU_attacking OR = SOU_defending }
 		cost = 5
 		completion_reward = {
-			give_guarantee = EQC
-			give_guarantee = CYA
-			give_guarantee = SIC 
-			give_guarantee = MIT
-		}
-	}
-	focus = {
-		id = SOU_appease_hellquill
-		x = 5
-		y = 1
-		relative_position_id = SOU_peacemakers
-		prerequisite = { focus = SOU_peacemakers }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = topple_government
-				target = HLQ 
+			acceptance_expand_extra = yes
+			every_other_country = {
+				limit = {
+					is_pony_race = yes 
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = human_friendship
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = human_friendship
+				}
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_new_look_of_eqvus
-		x = 1
-		y = 1
-		relative_position_id = SOU_olenian_conflict
-		prerequisite = { focus = SOU_olenian_conflict }
-		prerequisite = { focus = SOU_assist_nova_griffonia }
-		cost = 5
-		completion_reward = {
-			acceptance_expand_extra = yes 
-			custom_effect_tooltip = alpha_placeholder
-		}
-	}
-	
-	focus = {
-		id = SOU_last_stand
+		id = SOU_destroy_xenophobia
+		icon = GFX_goal_SOU_crush_xenophob
 		x = 0
 		y = 1
-		relative_position_id = SOU_carthinian_arbitrage
-		prerequisite = { focus = SOU_imperial_agression }
-		prerequisite = { focus = SOU_carthinian_arbitrage }
-		prerequisite = { focus = SOU_appease_hellquill }
+		relative_position_id = SOU_friendship
+		prerequisite = { focus = SOU_friendship }
 		cost = 5
 		completion_reward = {
-			create_wargoal = {
-				type = topple_government
-				target = GRI 
-			}
-			custom_effect_tooltip = alpha_placeholder
-		}
-	}
-	
-	focus = {
-		id = SOU_triumph_of_harmony
-		x = 3
-		y = 1
-		relative_position_id = SOU_new_look_of_eqvus
-		prerequisite = { focus = SOU_new_look_of_eqvus }
-		prerequisite = { focus = SOU_last_stand }
-		cost = 5
-		completion_reward = {
-			add_stability = 0.15
-			add_war_support = 0.15
+			add_ideas = destroyed_xenophobia
 			acceptance_expand_extra = yes 
-			custom_effect_tooltip = alpha_placeholder
 		}
 	}
-	
-	##### ONE BIG TNO REFERENCE
 	focus = {
 		id = SOU_radicalism
 		icon = GFX_goal_radicalism
-		x = -2
+		x = 5
 		y = 1
 		relative_position_id = SOU_political_crisis
 		mutually_exclusive = { focus = SOU_communism_focus }
@@ -1583,801 +872,505 @@ focus_tree = {
 		prerequisite = { focus = SOU_political_crisis }
 		cost = 5
 		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
-			add_stability = 0.05
-			
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = nikita_yasnov
+			country_event = { id = sou.14 }
 		}
 	}
-	
 	focus = {
-		id = SOU_military_assistance
+		id = SOU_iron_hand
+		icon = GFX_goal_SOU_ironhand
 		x = -1
 		y = 1
 		relative_position_id = SOU_radicalism
 		prerequisite = { focus = SOU_radicalism }
+		mutually_exclusive = { focus = SOU_rob_the_wares }
 		cost = 5
 		completion_reward = {
-			add_ideas = SOU_military_coup_f
-		}
-	}
-	
-	focus = {
-		id = SOU_german_assistance
-		x = 1
-		y = 1
-		bypass = {
-			GEM = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-		relative_position_id = SOU_radicalism
-		prerequisite = { focus = SOU_radicalism }
-		cost = 5
-		completion_reward = {
-			GEM = {
-				country_event = { id = sou.40 days = 5 }
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_join_state
-		x = 0
-		y = 1
-		relative_position_id = SOU_military_assistance
-		prerequisite = { focus = SOU_military_assistance }
-		cost = 5
-		completion_reward = {
+			add_political_power = 50
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.1
 			}
-			add_stability = -0.07
-			add_war_support = -0.05
-			add_political_power = -25
 		}
 	}
-	
 	focus = {
-		id = SOU_prepare_the_future
-		x = 0
-		y = 1
-		relative_position_id = SOU_german_assistance
-		prerequisite = { focus = SOU_german_assistance }
-		cost = 5
-		completion_reward = {
-			add_political_power = 25
-			set_rule = { can_create_factions = yes }
+		id = SOU_rob_the_wares
+		available = {
+			has_country_flag = fascist_suppressed
 		}
-	}
-	
-	focus = {
-		id = SOU_gkchp_suka
+		icon = GFX_goal_SOU_robwares
 		x = 1
 		y = 1
-		bypass = {
-			has_government = fascism 
+		relative_position_id = SOU_radicalism
+		prerequisite = { focus = SOU_radicalism }
+		mutually_exclusive = { focus = SOU_iron_hand }
+		cost = 5
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment 
+				amount = -1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment 
+				amount = -500
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
-		relative_position_id = SOU_join_state
-		prerequisite = { focus = SOU_join_state }
-		prerequisite = { focus = SOU_prepare_the_future }
+	}
+	focus = {
+		id = SOU_antisov_propaganda
+		icon = GFX_goal_antisov_prop
+		x = 0
+		y = 1
+		relative_position_id = SOU_iron_hand
+		prerequisite = { focus = SOU_iron_hand }
+		cost = 5
+		completion_reward = {
+			add_country_leader_trait = foolish_leader
+			add_popularity = {
+				ideology = communism 
+				popularity = -0.1
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SOU_diversions
+		icon = GFX_goal_SOU_diversions
+		x = 0
+		y = 1
+		relative_position_id = SOU_rob_the_wares
+		prerequisite = { focus = SOU_rob_the_wares }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+			}
+			random_owned_state = {
+				damage_building = {
+					type = arms_factory 
+					damage = 2
+				}
+			}
+			random_owned_state = {
+				damage_building = {
+					type = industrial_complex 
+					damage = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = SOU_no_coups
+		icon = GFX_goal_SOU_no_coups
+		x = 0
+		y = 1
+		relative_position_id = SOU_antisov_propaganda
+		prerequisite = { focus = SOU_antisov_propaganda }
 		cost = 5
 		completion_reward = {
 			set_politics = {
 				ruling_party = fascism
-				elections_allowed = no 
+				elections_allowed = no
 			}
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.25
-			}
+			add_stability = -0.1
 		}
 	}
-	
 	focus = {
-		id = SOU_supress_bund
+		id = SOU_buuund 
+		icon = GFX_goal_SOU_bundblyat
 		x = 0
 		y = 1
-		relative_position_id = SOU_gkchp_suka
-		prerequisite = { focus = SOU_gkchp_suka }
+		relative_position_id = SOU_diversions
+		prerequisite = { focus = SOU_diversions }
 		cost = 5
 		completion_reward = {
-			add_stability = 0.1
-			add_popularity = {
-				ideology = communism
-				popularity = -0.15
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = ROOT 
+				size = 0.5
+				keep_unit_leaders = { 1491 }
 			}
-		}
-	}
-	
-	focus = {
-		id = SOU_great_purge
-		x = -1
-		y = 1
-		relative_position_id = SOU_supress_bund
-		prerequisite = { focus = SOU_supress_bund }
-		cost = 5
-		completion_reward = {
-			country_event = {
-				id = sou.42 days = 5
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_arrest_others
-		x = 1
-		y = 1
-		relative_position_id = SOU_supress_bund
-		prerequisite = { focus = SOU_supress_bund }
-		cost = 5
-		completion_reward = {
-			add_stability = -0.08
-			add_political_power = -15
-			add_manpower = -150
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.07
-			}
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_verify_your_clock
-		x = 1
-		y = 1
-		available = {
-			AND = {
-				has_civil_war = no 
-				NOT = {
-					has_country_leader = {
-						name = "Dmitry Yazov"
-						ruling_only = yes 
-					}
+			create_country_leader = {
+				name = "Nikita Yasnov"
+				desc = "SOU_fasc_desc_yasnov"
+				picture = "gfx/leaders/SOU/Photon.dds"
+				expire = "1989.1.1"
+				ideology = fascism_ideology 
+				traits = { 
+					human_leader
+					fascist_politician_yasnov
 				}
 			}
+			set_cosmetic_tag = SOU_neobol
+			country_event = { id = sou.15 }
 		}
-		cancel_if_invalid = yes 
-		relative_position_id = SOU_great_purge
-		prerequisite = { focus = SOU_arrest_others }
-		prerequisite = { focus = SOU_great_purge }
+	}
+	focus = {
+		id = SOU_claim_ourselves
+		available = {
+			has_government = fascism
+			has_civil_war = no 
+		}
+		icon = GFX_goal_SOU_claim_ourselves
+		x = 1
+		y = 1
+		relative_position_id = SOU_no_coups
+		prerequisite = { focus = SOU_no_coups OR = SOU_buuund }
 		cost = 10
 		completion_reward = {
-			add_ideas = SOU_time_has_come
-		}
-	}
-	
-	focus = {
-		id = SOU_regain_trust
-		x = -2
-		y = 1
-		relative_position_id = SOU_verify_your_clock
-		prerequisite = { focus = SOU_verify_your_clock }
-		cost = 5
-		completion_reward = {
-			add_stability = 0.15
-		}
-	}
-	
-	focus = {
-		id = SOU_contact_germany
-		x = 0
-		y = 1
-		relative_position_id = SOU_verify_your_clock
-		prerequisite = { focus = SOU_verify_your_clock }
-		cost = 5
-		completion_reward = {
-			add_opinion_modifier = {
-				modifier = friendly_government
-				target = GEM 
-			}
-			reverse_add_opinion_modifier = {
-				modifier = friendly_government
-				target = GEM 
-			}
-			add_political_power = 25
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_new_officers
-		x = 2
-		y = 1
-		relative_position_id = SOU_verify_your_clock
-		prerequisite = { focus = SOU_verify_your_clock }
-		cost = 5
-		completion_reward = {
-			create_corps_commander = {
-				name = "Maksim Suvorov"
-				portrait_path = "gfx/leaders/SOU/Suvorov.dds"
-				traits = { infantry_commander_hum combined_arms_expert }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
-			}
-			create_corps_commander = {
-				name = "Leonid Sytnikov"
-				portrait_path = "gfx/leaders/SOU/Sytnikov.dds"
-				traits = { tankist_commander_hum winter_specialist }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
-			}
-			create_field_marshal = {
-				name = "German Limonov"
-				portrait_path = "gfx/leaders/SOU/Limonov.dds"
-				traits = { thorough_planner unyielding_defender }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
+			set_major = yes 
+			set_rule = {
+				can_create_factions = yes 
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_military_reforms
-		x = 1
-		y = 1
-		relative_position_id = SOU_regain_trust
-		prerequisite = { focus = SOU_regain_trust }
-		prerequisite = { focus = SOU_contact_germany }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_milit_reform
-		}
-		
-	}
-	
-	focus = {
-		id = SOU_supress_comm_harm
-		x = 1
-		y = 1
-		relative_position_id = SOU_contact_germany
-		prerequisite = { focus = SOU_new_officers }
-		prerequisite = { focus = SOU_contact_germany }
-		cost = 5
-		completion_reward = {
-			retire_ideology_leader = communism
-			retire_ideology_leader = democratic
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.25
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_all_hail_the_empire
-		x = 1
-		y = 1
-		relative_position_id = SOU_military_reforms
-		prerequisite = { focus = SOU_military_reforms }
-		prerequisite = { focus = SOU_supress_comm_harm }
-		cost = 5
-		completion_reward = {
-			add_stability = 0.15
-			add_war_support = 0.1
-		}
-	}
-	focus = {
-		id = SOU_alliance_with_germany
-		x = 0
-		y = 1
-		relative_position_id = SOU_all_hail_the_empire
-		prerequisite = { focus = SOU_all_hail_the_empire }
-		cost = 5
-		completion_reward = {
-			if = {
-				limit = {
-					GEM = {
-						AND = {
-							is_in_faction = yes 
-							is_faction_leader = yes 
-						}
-					}
-				}
-				GEM = {
-					country_event = { id = generic.2 }
-				}
-			}
-			else_if = {
-				limit = {
-					GEM = {
-						AND = {
-							is_in_faction = yes 
-							is_faction_leader = no 
-						}
-					}
-				}
-				GEM = {
-					faction_leader = { country_event = { id = generic.2 } }
-				}
-			}
-			else = {
-				create_faction = SOU_GEM_AXIS_FACT
-				GEM = { country_event = { id = generic.3 } }
-			}
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_roa_focus
-		x = -2
-		y = 1
-		relative_position_id = SOU_alliance_with_germany
-		prerequisite = { focus = SOU_alliance_with_germany }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_roa 
-		}
-	}
-	
-	focus = {
-		id = SOU_expand_conscription
-		x = 2
-		y = 1
-		relative_position_id = SOU_alliance_with_germany
-		prerequisite = { focus = SOU_alliance_with_germany }
-		cost = 5
-		completion_reward = {
-			add_ideas = GRB_extra_conscription 
-		}
-	}
-	
-	focus = {
-		id = SOU_invade_STG
-		x = 0
-		y = 1
-		relative_position_id = SOU_alliance_with_germany
-		prerequisite = { focus = SOU_alliance_with_germany }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = STG 
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_piece_of_cake
+		id = SOU_changeling
+		icon = GFX_goal_SOU_changeling
 		x = -1
 		y = 1
-		relative_position_id = SOU_invade_STG
-		prerequisite = { focus = SOU_invade_STG }
+		relative_position_id = SOU_claim_ourselves
+		mutually_exclusive = { focus = SOU_old_enemy }
+		prerequisite = { focus = SOU_claim_ourselves }
 		cost = 5
 		completion_reward = {
+			CHN = { 
+				country_event = { id = generic.2 }
+			}
+		}
+	}
+	focus = {
+		id = SOU_stop_xenophobs
+		icon = GFX_goal_SOU_stop_xenophobs
+		x = 0
+		y = 1
+		relative_position_id = SOU_changeling
+		prerequisite = { focus = SOU_changeling }
+		cost = 5
+		completion_reward = {
+			add_country_leader_trait = xeno_tolerant
+		}
+	}
+	focus = {
+		id = SOU_experience_visit
+		available = {
+			is_in_faction_with = CHN 
+		}
+		icon = GFX_goal_SOU_experience_visit
+		x = -2
+		y = 0
+		relative_position_id = SOU_stop_xenophobs
+		prerequisite = { focus = SOU_changeling }
+		cost = 5
+		completion_reward = {
+			CHN = {
+				army_experience = 25
+				add_ideas = SOU_CHN_trainings
+			}
+			army_experience = 25
+			add_ideas = SOU_CHN_trainings
+		}
+	}
+	focus = {
+		id = SOU_military_sovet
+		icon = GFX_goal_SOU_military_sovet
+		x = 0
+		y = 1
+		relative_position_id = SOU_experience_visit
+		prerequisite = { focus = SOU_experience_visit }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_prepared_invasion
+		}
+	}
+	focus = {
+		id = SOU_piece_of_cake
+		icon = GFX_goal_SOU_piece_of_cake
+		x = 0
+		y = 1
+		relative_position_id = SOU_stop_xenophobs
+		prerequisite = { focus = SOU_stop_xenophobs }
+		cost = 5
+		completion_reward = {	
 			every_state = {
 				limit = {
 					is_core_of = STG 
+				}
+				add_core_of = ROOT
+			}
+			67 = {
+				add_core_of = ROOT 
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 57
+						state = 525
+						state = 231
+						state = 230
+						state = 349
+						state = 232 
+						state = 102
+						state = 151
+						state = 150
+						state = 64
+						state = 98 
+						state = 236
+						state = 339
+						state = 268
+						state = 274 
+						state = 253
+						state = 337
+						state = 239
+						state = 238 
+						state = 336
+						state = 58
+						state = 241
+						state = 338
+						state = 222
+					}
 				}
 				add_core_of = ROOT 
 			}
 		}
 	}
-	
-	focus = {	
-		id = SOU_trainings_with_gem
-		x = 1
-		y = 1
-		relative_position_id = SOU_invade_STG
-		prerequisite = { focus = SOU_invade_STG }
-		cost = 5
-		completion_reward = {
-			army_experience = 15
-			navy_experience = 15
-			air_experience = 15
-			GEM = { 
-				army_experience = 15
-				navy_experience = 15
-				air_experience = 15
-			}
-			
-		}
-	}
-	
-	
 	focus = {
-		id = SOU_crush_the_harmony
+		id = SOU_smash_the_equestria
+		icon = GFX_goal_SOU_smash_EQS 
+		bypass = {
+			has_war_with = EQS 
+		}
 		x = 1
 		y = 1
-		relative_position_id = SOU_piece_of_cake
+		relative_position_id = SOU_military_sovet
+		prerequisite = { focus = SOU_military_sovet }
 		prerequisite = { focus = SOU_piece_of_cake }
-		prerequisite = { focus = SOU_trainings_with_gem }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything 
-				target = EQS 
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = CRY 
-			}
-		}
-	}
-	
-	focus = { 
-		id = SOU_officers_bund
-		x = -4
-		y = 1
-		relative_position_id = SOU_great_purge
-		prerequisite = { focus = SOU_great_purge } 
-		available = { always = no }
-		allow_branch = {
-			has_country_flag = officers_bund 
-		}
-		cost = 5
-		completion_reward = {
-			custom_effect_tooltip = focus_on_decision_complete
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_extra_conscription
-		x = -1
-		y = 1
-		relative_position_id = SOU_officers_bund
-		bypass = {
-			has_civil_war = no 
-		}
-		cost = 1
-		prerequisite = { focus = SOU_officers_bund }
-		cost = 1
-		completion_reward = {
-			custom_effect_tooltip = deploy_divisions_sou
-			hidden_effect = {
-				capital_scope = {
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					create_unit = {
-						division = " name = \"Revolucionnaya Diviziya\" division_template = \"Pekhotnaya Diviziya\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
-						owner = SOU
-					}
-					
-				}
-			}
-						
-		}
-	}
-	
-	focus = {
-		id = SOU_buy_rifles
-		x = 1
-		y = 1
-		relative_position_id = SOU_officers_bund
-		bypass = {
-			has_civil_war = no 
-		}
-		cost = 1
-		prerequisite = { focus = SOU_officers_bund }
-		#cost = 1
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 10000
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_old_officers
-		x = 0
-		y = 1
-		bypass = {
-			has_civil_war = no 
-		}
-		cost = 1
-		relative_position_id = SOU_extra_conscription
-		prerequisite = { focus = SOU_extra_conscription }
-		completion_reward = {
-			create_corps_commander = {
-				name = "Viktor Domashev"
-				portrait_path = "gfx/leaders/SOU/Domashev.dds"
-				traits = { tankist_commander_hum winter_specialist }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
-			}
-			create_corps_commander = {
-				name = "Nikita Izmaylov"
-				portrait_path = "gfx/leaders/SOU/Izmaylov.dds"
-				traits = { tankist_commander_hum winter_specialist }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
-			}
-			create_field_marshal = {
-				name = "Vasiliy Kalagin"
-				portrait_path = "gfx/leaders/SOU/Kalagin.dds"
-				traits = { tankist_commander_hum winter_specialist }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_appease_kryukov
-		x = 0
-		y = 1
-		relative_position_id = SOU_buy_rifles
-		prerequisite = { focus = SOU_buy_rifles }
-		bypass = {
-			has_civil_war = no 
-		}
-		cost = 1
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = general_kryukov
-		}
-	}
-	
-	focus = {
-		id = SOU_execute_traitor
-		x = 1
-		y = 1
-		relative_position_id = SOU_old_officers
-		prerequisite = { focus = SOU_old_officers }
-		prerequisite = { focus = SOU_appease_kryukov }
-		
-		cost = 0
-		available = { always = no }
-		completion_reward = {
-			custom_effect_tooltip = focus_on_decision_complete
-		}
-	}
-	
-	focus = {
-		id = SOU_clean_garbage
-		x = 0
-		y = 1
-		relative_position_id = SOU_execute_traitor
-		prerequisite = { focus = SOU_execute_traitor }
-		cost = 5
-		completion_reward = {
-			add_stability = 0.15
-			add_war_support = 0.05
-		}
-	}
-	
-	focus = {
-		id = SOU_country_rebuild
-		x = -1
-		y = 1
-		relative_position_id = SOU_clean_garbage 
-		prerequisite = { focus = SOU_clean_garbage }
-		cost = 5
-		completion_reward = {
-			every_owned_state = {
-				limit = {
-					is_core_of = ROOT 
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes 
-				}
-			}
-			every_owned_state = {
-				limit = {
-					is_core_of = ROOT 
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes 
-				}
-			}
-			every_owned_state = {
-				limit = {
-					is_core_of = ROOT 
-				}
-				
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes 
-				}
-			}
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_conscript_all
-		x = 1
-		y = 1
-		relative_position_id = SOU_clean_garbage 
-		prerequisite = { focus = SOU_clean_garbage }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_roa
-		}
-	}
-	
-	focus = {
-		id = SOU_childwork
-		x = -1 
-		y = 1
-		relative_position_id = SOU_country_rebuild
-		prerequisite = { focus = SOU_country_rebuild }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_childwork
-		}
-	}
-	
-	focus = {
-		id = SOU_workcamps
-		x = 1
-		y = 1
-		relative_position_id = SOU_country_rebuild
-		prerequisite = { focus = SOU_country_rebuild }
-		prerequisite = { focus = SOU_conscript_all }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_yazov_camps 
-		}
-	}
-	
-	focus = {
-		id = SOU_enemies_across
-		x = 1
-		y = 1
-		relative_position_id = SOU_conscript_all
-		prerequisite = { focus = SOU_conscript_all }
-		cost = 5
-		completion_reward = {
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.15
-			}
-			add_ideas = SOU_enemies_here
-		}
-	}
-	
-	focus = {
-		id = SOU_the_power_of_soviets
-		x = 0
-		y = 1
-		relative_position_id = SOU_workcamps
-		prerequisite = { focus = SOU_workcamps }
-		prerequisite = { focus = SOU_enemies_across }
-		prerequisite = { focus = SOU_childwork }
-		cost = 5
-		completion_reward = {
-			add_stability = 0.15
-			add_war_support = 0.15
-			add_ideas = SOU_mighty_union
-		}
-	}
-	
-	focus = {
-		id = SOU_old_enemies
-		x = -1
-		y = 1
-		relative_position_id = SOU_the_power_of_soviets
-		prerequisite = { focus = SOU_the_power_of_soviets }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = GEM 
-			}
-			create_wargoal = {
-				type = annex_everything 
-				target = UNS 
-			}
-			
-		}
-	}
-	
-	focus = {
-		id = SOU_ex_friends
-		x = 1
-		y = 1
-		relative_position_id = SOU_the_power_of_soviets
-		prerequisite = { focus = SOU_the_power_of_soviets }
-		cost = 5
+		cost = 20
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
 				target = EQS 
 			}
+		}
+	}
+	focus = {
+		id = SOU_northern_attack
+		icon = GFX_goal_SOU_north_approach
+		x = -1
+		y = 1
+		relative_position_id = SOU_smash_the_equestria
+		prerequisite = { focus = SOU_smash_the_equestria }
+		cost = 10
+		completion_reward = {
 			create_wargoal = {
-				type = annex_everything 
+				type = annex_everything
+				target = GRF 
+			}
+		}
+	}
+	focus = {
+		id = SOU_destroy_stalliongrad
+		icon = GFX_goal_SOU_stallion_approach
+		x = 1
+		y = 1
+		relative_position_id = SOU_smash_the_equestria
+		prerequisite = { focus = SOU_smash_the_equestria }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
 				target = STG 
 			}
-			
 		}
 	}
-	
 	focus = {
-		id = SOU_extermination
-		x = 1
+		id = SOU_empire_fall
+		icon = GFX_goal_SOU_empire_fall
+		x = -1
 		y = 1
-		relative_position_id = SOU_old_enemies
-		prerequisite = { focus = SOU_ex_friends }
-		prerequisite = { focus = SOU_old_enemies }
-		cost = 5
+		relative_position_id = SOU_destroy_stalliongrad
+		prerequisite = { focus = SOU_destroy_stalliongrad }
+		prerequisite = { focus = SOU_northern_attack }
+		cost = 15
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
-				target = CHN 
+				target = GRI 
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_the_great_trial ########### HERE IT COMES!!!!!!!!!!
+		id = SOU_old_enemy 
+		icon = GFX_goal_SOU_old_enemy
+		x = 1
+		y = 1
+		relative_position_id = SOU_claim_ourselves
+		prerequisite = { focus = SOU_claim_ourselves }
+		mutually_exclusive = { focus = SOU_changeling }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = friendship_between
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = friendship_between
+				}
+			}
+		}
+	}
+	focus = {
+		id = SOU_axis_moscow_berlin
+		icon = GFX_goal_SOU_axis
 		x = 0
 		y = 1
-		relative_position_id = SOU_extermination
-		prerequisite = { focus = SOU_extermination }
+		relative_position_id = SOU_old_enemy
+		prerequisite = { focus = SOU_old_enemy }
+		cost = 5
+		completion_reward = {
+			create_faction = SOU_GEM_FACTION
+			GEM = {
+				country_event = { id = generic.3 }
+			}
+		}
+	}
+	focus = {
+		id = SOU_backstabbing
+		icon = GFX_goal_SOU_backstab
+		x = 0
+		y = 1
+		relative_position_id = SOU_axis_moscow_berlin
+		prerequisite = { focus = SOU_axis_moscow_berlin }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = STG
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SOU_attack_north
+		icon = GFX_goal_SOU_attack_north
+		x = 2
+		y = 0
+		relative_position_id = SOU_backstabbing
+		prerequisite = { focus = SOU_axis_moscow_berlin }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = GRF 
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SOU_southern_crusade
+		icon = GFX_goal_SOU_attack_south
+		x = 0
+		y = 1
+		relative_position_id = SOU_backstabbing
+		prerequisite = { focus = SOU_backstabbing }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = EQS 
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SOU_wild_west
+		icon = GFX_goal_SOU_wild_west
+		x = 0
+		y = 1
+		relative_position_id = SOU_attack_north
+		prerequisite = { focus = SOU_attack_north }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = YAK 
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = JAK 
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = SOU_sea_lion
+		icon = GFX_goal_sealion
+		x = 1
+		y = 1
+		relative_position_id = SOU_southern_crusade
+		prerequisite = { focus = SOU_southern_crusade }
+		prerequisite = { focus = SOU_wild_west }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = GRI
+				type = annex_everything 
+			}
+		}
+	}
+	focus = {
+		id = SOU_world_domination
+		icon = GFX_goal_SOU_world_domination
+		x = 0
+		y = 1
+		relative_position_id = SOU_sea_lion
+		prerequisite = { focus = SOU_sea_lion }
 		cost = 5
 		completion_reward = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 312
-						state = 251
-						state = 252
-						state = 309
-						state = 259
+						is_core_of = STG
+						state = 67
+						state = 57
+						state = 525
+						state = 231
+						state = 230
+						state = 349
+						state = 232 
+						state = 102
+						state = 151
+						state = 150
+						state = 64
+						state = 98 
+						state = 236
+						state = 339
+						state = 268
+						state = 274 
+						state = 253
+						state = 337
+						state = 239
+						state = 238 
+						state = 336
+						state = 58
+						state = 241
+						state = 338
+						state = 222
 					}
 				}
-				set_state_category = rural
-				add_to_variabele = { ROOT.arms_factory_get = building_level@arms_factory }
-				remove_building = {
-					type = arms_factory
-					level = building_level@arms_factory
-				}
-				add_to_variabele = { ROOT.industrial_complex_get = building_level@industrial_complex }
-				remove_building = {
-					type = industrial_complex
-					level = building_level@industrial_complex
-				}
-				
+				add_core_of = ROOT 
 			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = industrial_complex_get
-			}
-			add_offsite_building = {
-				type = arms_factory
-				level = arms_factory_get
-			}		
 		}
 	}
-		
-	######### Here comes Andryuha
 	focus = {	
 		id = SOU_tsarizm
 		icon = GFX_goal_SOU_tsarizm
@@ -2393,361 +1386,290 @@ focus_tree = {
 			add_ideas = SOU_tsarizm
 		}
 	}
-	
 	focus = {
-		id = SOU_bloody_sunday
-		x = 0
+		id = SOU_followers
+		icon = GFX_goal_SOU_followers
+		x = -1
 		y = 1
 		relative_position_id = SOU_tsarizm
 		prerequisite = { focus = SOU_tsarizm }
 		cost = 5
 		completion_reward = {
-			country_event = { id = sou.16 days = 2 }
+			country_event = { id = sou.16 }
 		}
 	}
-	
 	focus = {
-		id = SOU_government_support
-		x = -3
+		id = SOU_monarch_propaganda
+		icon = GFX_goal_SOU_monarch_prop
+		x = 1
 		y = 1
-		relative_position_id = SOU_bloody_sunday
-		prerequisite = { focus = SOU_bloody_sunday }
+		relative_position_id = SOU_tsarizm
+		prerequisite = { focus = SOU_tsarizm }
 		cost = 5
 		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
+			country_event = { id = sou.17 }
+		}
+	}
+	focus = {
+		id = SOU_army_with_tsar
+		icon = GFX_goal_SOU_army_support_tsar
+		x = 0
+		y = 1
+		relative_position_id = SOU_followers
+		prerequisite = { focus = SOU_followers }
+		cost = 5
+		completion_reward = {
+			country_event = { id = sou.18 }
+		}
+	}
+	focus = {
+		id = SOU_print_allies
+		icon = GFX_goal_SOU_pechat_soyuz
+		x = 0
+		y = 1
+		relative_position_id = SOU_monarch_propaganda
+		prerequisite = { focus = SOU_monarch_propaganda }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_printing_allied
+		}
+	}
+	focus = {
+		id = SOU_reinstall_tsar
+		icon = GFX_goal_reinstall_tsar
+		x = 1
+		y = 1
+		relative_position_id = SOU_army_with_tsar
+		prerequisite = { focus = SOU_print_allies } 
+		prerequisite = { focus = SOU_army_with_tsar }
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = sou_reinstallation_of_tsar_tt_1
+			news_event = { id = sou.23 }
+			hidden_effect = {
+				if = {
+					limit = {
+						any_army_leader = {
+							has_id = 1491 
+							has_unit_leader_flag = serpov_supported_tsar
+						}
+					}
+					country_event = { id = sou.21 days = 5 }
+				}
+				if = {
+					limit = {
+						any_army_leader = {
+							has_id = 1491 
+							NOT = {
+								has_unit_leader_flag = serpov_supported_tsar
+							}
+						}
+					}
+					country_event = { id = sou.22 days = 5 }
+				}
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no 
+				}
+				if = {
+					limit = {
+						has_country_flag = sou_bloody_sunday
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.4
+					}
+					add_popularity = {
+						ideology = communism
+						popularity = -0.4
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = sou_bloody_sunday
+						}
+					}
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.12
+					}
+				}
+			}
+		}  
+	}
+	focus = {
+		id = SOU_expand_own
+		icon = GFX_goal_SOU_expansion
+		x = -1
+		y = 1
+		relative_position_id = SOU_reinstall_tsar
+		prerequisite = { focus = SOU_reinstall_tsar }
+		cost = 10
+		completion_reward = {
+			create_wargoal = {
+				target = STG
+				type = annex_everything 
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_appease_serpov
-		x = -1
-		y = 1
-		relative_position_id = SOU_bloody_sunday
-		prerequisite = { focus = SOU_bloody_sunday }
-		cost = 5
-		completion_reward = {
-			country_event = { id = sou.18 days = 5 }
-		}
-	}
-	
-	focus = {
-		id = SOU_anticomm_agitation
+		id = SOU_destroy_communist
+		icon = GFX_goal_destroy_commie
 		x = 1
 		y = 1
-		relative_position_id = SOU_bloody_sunday
-		prerequisite = { focus = SOU_bloody_sunday }
-		cost = 5
+		relative_position_id = SOU_reinstall_tsar
+		prerequisite = { focus = SOU_reinstall_tsar }
+		cost = 10
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
-				popularity = -0.1
+				popularity = -0.25
 			}
 		}
 	}
-	
 	focus = {
-		id = SOU_visit_equestria
-		x = 3
-		y = 1
-		relative_position_id = SOU_bloody_sunday
-		prerequisite = { focus = SOU_bloody_sunday }
-		cost = 5
-		completion_reward = {
-			country_event = { id = sou.45 days = 5 }
-		}
-	}
-	
-	focus = {
-		id = SOU_end_revolution
-		x = 1
-		y = 1
-		relative_position_id = SOU_appease_serpov
-		prerequisite = { focus = SOU_appease_serpov }
-		prerequisite = { focus = SOU_visit_equestria }
-		prerequisite = { focus = SOU_government_support }
-		prerequisite = { focus = SOU_anticomm_agitation }
-		cost = 5
-		completion_reward = {
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no 
-			}
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.25
-			}
-			add_political_power = 25
-		}
-	}
-	
-	focus = {
-		id = SOU_new_royal_guard
-		x = -2
-		y = 1
-		relative_position_id = SOU_end_revolution
-		prerequisite = { focus = SOU_end_revolution }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_royal_guard
-		}
-	}
-	
-	focus = {
-		id = SOU_kill_traitors
+		id = SOU_nation_and_people
+		icon = GFX_goal_SOU_nation_and_people
 		x = 0
 		y = 1
-		relative_position_id = SOU_end_revolution
-		prerequisite = { focus = SOU_end_revolution }
-		cost = 5
-		completion_reward = {
-			country_event = { id = sou.46 days = 1 }
-			effect_tooltip = {
-				add_stability = 0.07
-				add_war_support = 0.07
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_speak_to_people
-		x = 2
-		y = 1
-		relative_position_id = SOU_end_revolution
-		prerequisite = { focus = SOU_end_revolution }
-		cost = 5
-		completion_reward = {
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_coronation
-		x = 0
-		y = 1
-		relative_position_id = SOU_kill_traitors
-		prerequisite = { focus = SOU_kill_traitors }
-		prerequisite = { focus = SOU_speak_to_people }
-		prerequisite = { focus = SOU_new_royal_guard }
-		cost = 5
-		completion_reward = {
-			country_event = { id = sou.21 days = 5 }
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_restruct_government
-		x = -3
-		y = 1
-		relative_position_id = SOU_coronation 
-		prerequisite = { focus = SOU_coronation }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_state_reforms
-		}
-	}
-	
-	focus = {
-		id = SOU_eco_reforms
-		x = -1
-		y = 1
-		relative_position_id = SOU_coronation 
-		prerequisite = { focus = SOU_coronation }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_eco_reforms_idea
-		}
-	}
-	
-	
-	focus = {
-		id = SOU_pravoslavniye_vperde
-		x = 1
-		y = 1
-		relative_position_id = SOU_coronation 
-		prerequisite = { focus = SOU_coronation }
-		cost = 5
-		completion_reward = {
-			add_ideas = SOU_rpz
-		}
-	}
-	
-	focus = {
-		id = SOU_reward_the_worthy
-		x = 3
-		y = 1
-		relative_position_id = SOU_coronation 
-		prerequisite = { focus = SOU_coronation }
-		cost = 5
-		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.07
-			add_popularity = {
-				ideology = neutrality
-				popularity = 0.07
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_attack_stg
-		x = 0
-		y = 2
-		relative_position_id = SOU_coronation
-		prerequisite = { focus = SOU_coronation }
-		cost = 5
-		completion_reward = {
-			create_wargoal = {
-				type = annex_everything
-				target = STG 
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_conquer_nova_griffonia
-		x = -1
-		y = 1
-		relative_position_id = SOU_attack_stg 
-		prerequisite = { focus = SOU_attack_stg }
-		cost = 5
-		completion_reward = {
-			GRF = {
-				country_event = { id = sou.47 }
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_new_gubernies
-		x = 1
-		y = 1
-		relative_position_id = SOU_attack_stg
-		prerequisite = { focus = SOU_attack_stg }
-		cost = 5
+		relative_position_id = SOU_expand_own
+		prerequisite = { focus = SOU_expand_own }
+		cost = 10
 		completion_reward = {
 			unlock_decision_category_tooltip = soviet_tsar_coring_decisions
 		}
 	}
-	
 	focus = {
-		id = SOU_friend_eqs 
-		x = 1
+		id = SOU_anticommunism_tsar
+		icon = GFX_goal_SOU_antic
+		x = 0
 		y = 1
-		relative_position_id = SOU_conquer_nova_griffonia
-		prerequisite = { focus = SOU_conquer_nova_griffonia }
-		prerequisite = { focus = SOU_new_gubernies }
+		relative_position_id = SOU_destroy_communist 
+		prerequisite = { focus = SOU_destroy_communist }
 		cost = 5
 		completion_reward = {
-			EQS = {
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
 				add_opinion_modifier = {
-					modifier = friendly_government
 					target = ROOT 
+					modifier = anticommunsim_politics
 				}
 				reverse_add_opinion_modifier = {
-					modifier = friendly_government
-					target = ROOT 
+					target = ROOT
+					modifier = anticommunsim_politics
 				}
+			}
+		}
+	}
+	focus = {
+		id = SOU_god_chained_alliance
+		icon = GFX_goal_SOU_marriage
+		x = 1
+		y = 1
+		relative_position_id = SOU_nation_and_people
+		prerequisite = { focus = SOU_nation_and_people }
+		prerequisite = { focus = SOU_anticommunism_tsar }
+		cost = 10
+		completion_reward = {
+			EQS = {
+				country_event = { id = sou.25 days = 5 }
 				add_ai_strategy = {
 					type = alliance
 					id = SOU 
-					value = 999
+					value = 750
 				}
 			}
-			give_guarantee = EQS 
 			
 		}
 	}
-	
 	focus = {
-		id = SOU_marriage
+		id = SOU_davi_zhukov_blyat
+		bypass = {
+			has_war_with = CHN
+		}
+		icon = GFX_goal_davi_zhukov
 		x = 0
 		y = 1
-		relative_position_id = SOU_friend_eqs
-		prerequisite = { focus = SOU_friend_eqs }
-		cost = 5
-		completion_reward = {
-			EQS = {
-				country_event = { id = sou.25 days = 5 } 
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_eqs_training
-		x = -1
-		y = 1
-		relative_position_id = SOU_marriage
-		prerequisite = { focus = SOU_marriage }
-		cost = 5
-		completion_reward = {
-			army_experience = 25
-			EQS = {
-				army_experience = 25
-				add_ideas = soviet_defence_bonus
-			}
-			add_ideas = soviet_defence_bonus
-		}
-	}
-	
-	focus = {
-		id = SOU_strength_borders
-		x = 1
-		y = 1
-		bypass = {
-			EQS = {
-				has_war_with = CHN 
-			}
-		}
-		relative_position_id = SOU_marriage
-		prerequisite = { focus = SOU_marriage }
-		cost = 5
-		completion_reward = {
-			EQS = {
-				every_owned_state = {
-					limit = {
-						any_neighbor_state = { is_owned_by = CHN }
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						instant_build = yes 
-						province = {
-							all_provinces = yes 
-							limit_to_border = yes 
-						}
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = SOU_changeling_threat
-		x = 1
-		y = 1
-		relative_position_id = SOU_eqs_training
-		prerequisite = { focus = SOU_eqs_training }
-		prerequisite = { focus = SOU_strength_borders }
-		bypass = {
-			has_war_with = CHN 
-		}
-		cost = 5
+		relative_position_id = SOU_god_chained_alliance
+		prerequisite = { focus = SOU_god_chained_alliance }
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
-				type = puppet_wargoal_focus
 				target = CHN 
+				type = puppet_wargoal_focus 
 			}
 		}
 	}
-	
-	################ Industry
+	focus = {
+		id = SOU_great_empire 
+		icon = GFX_goal_great_empire
+		x = 0
+		y = 1
+		relative_position_id = SOU_davi_zhukov_blyat
+		prerequisite = { focus = SOU_davi_zhukov_blyat }
+		cost = 10
+		completion_reward = {
+			create_wargoal = { 
+				target = GRF 
+				type = puppet_wargoal_focus
+			}
+			if = {
+				limit = {
+					country_exists = GFF 
+				}
+				create_wargoal = {
+					target = GFF 
+					type = puppet_wargoal_focus
+				}
+			}
+			create_wargoal = {
+				target = PLB 
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = PNG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = SOU_tsar_of_all
+		available = {
+			custom_trigger_tooltip = {
+				every_other_country = {
+					limit = {
+						any_owned_state = {
+							is_on_continent = europe
+						}
+					}
+					is_subject_of = ROOT 
+				}
+				tooltip = sou_tsar_of_all_tt_1
+			}
+		}
+		icon = GFX_goal_tsar_of_all
+		x = 0
+		y = 1
+		relative_position_id = SOU_great_empire
+		prerequisite = { focus = SOU_great_empire }
+		cost = 10
+		completion_reward = {
+			EQS = {
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = tsardom_of_eqvus
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = tsardom_of_eqvus
+				}
+			}
+			add_country_leader_trait = tsar_of_all
+		}
+	}
 	focus = {
 		id = SOU_keep_industry
 		icon = GFX_goal_SOU_industry
@@ -2828,9 +1750,6 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			every_owned_state = {
-				limit = {
-					is_core_of = ROOT 
-				}
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -3028,7 +1947,6 @@ focus_tree = {
 				remove_ideas = SOU_industry_broken_lvl4
 			}
 			set_country_flag = industry_rebuilt_yes
-			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -3061,20 +1979,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOU_ask_griffonia }
 		cost = 5
 		completion_reward = {
-			STG = {
-				add_ideas = SOU_STG_help
-			}
-			every_owned_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes 
-				}
-			}
+		
 		}
 	}
 	focus = {
@@ -3086,8 +1991,7 @@ focus_tree = {
 		prerequisite = { focus = SOU_help_from_stalliongrad }
 		cost = 5 
 		completion_reward = {
-			add_ideas = GRB_crops
-			
+		
 		}
 	}
 	focus = {
@@ -3236,25 +2140,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOU_help_from_stalliongrad }
 		cost = 5
 		completion_reward = {
-			GRF = {
-				capital_scope = {
-					
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes 
-					}
-				}
-			}
-			capital_scope = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes 
-				}
-			}
+		
 		}
 	}
 	focus = {
@@ -3456,7 +2342,6 @@ focus_tree = {
 				remove_ideas = SOU_industry_broken_lvl4
 			}
 			set_country_flag = industry_rebuilt_yes
-			add_research_slot = 1
 		}
 	}
 	focus = {

@@ -33,11 +33,11 @@ focus_tree = {
 			
 			country_event = {
 				id = uns.2
-				days = 5
+				days = 8
 			}
 			country_event = {
 				id = uns.3
-				days = 7
+				days = 15
 			}
 		}
 			
@@ -208,7 +208,7 @@ focus_tree = {
 		x = 7
 		y = 6
 		icon = GFX_goal_demo_reform
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = UNS_constitution 
 		}
@@ -415,7 +415,7 @@ focus_tree = {
 		id = UNS_soc_state
 		x = 13
 		y = 7
-		cost = 5
+		cost = 10
 		icon = GFX_goal_usa_socialism
 		prerequisite = {
 			focus = UNS_starlight_help
@@ -437,7 +437,7 @@ focus_tree = {
 		id = UNS_workers_power
 		x = 13
 		y = 8
-		cost = 5
+		cost = 10
 		icon = GFX_goal_workers_power
 		prerequisite = {
 			focus = UNS_soc_state
@@ -528,7 +528,7 @@ focus_tree = {
 		id = UNS_rifle_human
 		x = 21
 		y = 6
-		cost = 5
+		cost = 10
 		icon = GFX_goal_second_change
 		prerequisite = {
 			focus = UNS_new_way
@@ -624,7 +624,7 @@ focus_tree = {
 		id = UNS_world_situation
 		x = 13
 		y = 10
-		cost = 5
+		cost = 10
 		icon = GFX_goal_world_situation
 		prerequisite = {
 			focus = UNS_workers_power OR = UNS_demo_ever OR = UNS_fasc_rev
@@ -723,200 +723,20 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_contact_people
 		prerequisite = { focus = UNS_contact_people }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			GRB = {
 				add_opinion_modifier = {
-					modifier = friendship_between
+					modifier = embassy_opened
 					target = ROOT 
 				}
 				reverse_add_opinion_modifier = {
-					modifier = friendship_between
+					modifier = embassy_opened
 					target = ROOT 
 				}
 			}
 			add_political_power = 25
-			#custom_effect_tooltip = britain_unavailable 
-		}
-	}
-	
-	focus = {
-		id = UNS_air_corridor
-		x = -1
-		y = 1
-		relative_position_id = UNS_embass_britain
-		prerequisite = { focus = UNS_embass_britain }
-		cost = 5
-		completion_reward = {
-			capital_scope = {
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes 
-				}
-			}
-			GRB = {
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 3
-						instant_build = yes 
-					}
-				}
-			}
-			add_tech_bonus = {
-				category = tp_tech
-				uses = 2
-				bonus = 1
-			}
-		}
-	}
-	
-	focus = {
-		id = UNS_allies_meeting
-		x = 1
-		y = 1
-		relative_position_id = UNS_embass_britain
-		prerequisite = { focus = UNS_embass_britain }
-		cost = 5
-		completion_reward = {
-			GRB = {
-				add_stability = 0.15
-			}
-			add_stability = 0.1
-			add_war_support = 0.1
-		}
-	}
-	
-	focus = {
-		id = UNS_reclaim_allies
-		x = 1
-		y = 1
-		relative_position_id = UNS_air_corridor
-		prerequisite = { focus = UNS_air_corridor }
-		prerequisite = { focus = UNS_allies_meeting }
-		cost = 4
-		completion_reward = {
-			GRB = {
-				add_ai_strategy = {
-					type = alliance
-					value = 250
-					id = UNS
-				}
-			}
-			if = {
-				limit = {
-					GRB = {
-						is_in_faction = no 
-					}
-				}
-				create_faction = HUMAN_FRACTION_UNS 
-				GRB = {
-					country_event = { id = generic.3 }
-				}
-			}
-			if = {
-				limit = {
-					GRB = {
-						AND = {
-							is_in_faction = yes 
-							is_faction_leader = yes 
-						}
-						
-					}
-				}
-				GRB = {
-					country_event = { id = generic.2 }
-				}
-			}
-			if = {
-				limit = {
-					GRB = {
-						AND = {
-							is_in_faction = yes 
-							is_faction_leader = no 
-						}
-					}
-				}
-				every_country = {
-					limit = {
-						AND = {
-							is_in_faction_with = GRB 
-							is_faction_leader = yes 
-						}
-					}
-					country_event = { id = generic.2 }
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = UNS_guarantee_grb
-		x = -1
-		y = 1
-		relative_position_id = UNS_reclaim_allies
-		prerequisite = { focus = UNS_reclaim_allies }
-		cost = 5
-		completion_reward = {
-			give_guarantee = GRB
-			add_political_power = 25
-		}
-	}
-	
-	focus = {
-		id = UNS_fleet_and_air
-		x = 1
-		y = 1
-		relative_position_id = UNS_reclaim_allies
-		prerequisite = { focus = UNS_reclaim_allies }
-		cost = 5
-		completion_reward = {
-			add_tech_bonus = {
-				category = light_fighter
-				category = tactical_bomber
-				category = cas_bomber
-				uses = 5
-				bonus = 1
-			}
-			add_tech_bonus = {
-				category = dd_tech
-				category = bb_tech
-				category = shbb_tech
-				uses = 2
-				bonus = 2
-			}
-			GRB = {
-				add_tech_bonus = {
-					category = light_fighter
-					category = tactical_bomber
-					category = cas_bomber
-					uses = 5
-					bonus = 1
-				}
-				add_tech_bonus = {
-					category = dd_tech
-					category = bb_tech
-					category = shbb_tech
-					uses = 2
-					bonus = 2
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = UNS_we_are_united
-		x = 1
-		y = 1
-		relative_position_id = UNS_guarantee_grb
-		prerequisite = { focus = UNS_guarantee_grb }
-		prerequisite = { focus = UNS_fleet_and_air }
-		cost = 5
-		completion_reward = {
-			acceptance_expand_extra = yes 
-			add_political_power = 25
-			add_stability = 0.1
+			custom_effect_tooltip = britain_unavailable 
 		}
 	}
 	
@@ -927,15 +747,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_contact_people
 		prerequisite = { focus = UNS_contact_people }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			SOU = {
 				add_opinion_modifier = {
-					modifier = friendship_between
+					modifier = embassy_opened
 					target = ROOT 
 				}
 				reverse_add_opinion_modifier = {
-					modifier = friendship_between
+					modifier = embassy_opened
 					target = ROOT 
 				}
 			}
@@ -984,7 +804,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_soviet_scientifical_mission
 		prerequisite = { focus = UNS_soviet_scientifical_mission }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_tech_bonus = {
 				category = rocketry
@@ -1008,7 +828,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_soviet_trading
 		prerequisite = { focus = UNS_soviet_trading }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			army_experience = 25
 			add_ideas = UNS_soviet_trainings
@@ -1099,7 +919,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_aliance_sov
 		prerequisite = { focus = UNS_aliance_sov }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_political_power = -25
 			every_country = {
@@ -1121,15 +941,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_contact_people
 		prerequisite = { focus = UNS_contact_people }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			GEM = {
 				add_opinion_modifier = {
-					modifier = friendship_between
+					modifier = embassy_opened
 					target = ROOT 
 				}
 				reverse_add_opinion_modifier = {
-					modifier = friendship_between
+					modifier = embassy_opened
 					target = ROOT 
 				}
 			}
@@ -1143,7 +963,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_embass_berlin
 		prerequisite = { focus = UNS_embass_berlin }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_stability = -0.05
 			add_war_support = 0.05
@@ -1193,7 +1013,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_old_enemies_meeting
 		prerequisite = { focus = UNS_old_enemies_meeting }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			GEM = {
 				add_equipment_to_stockpile = {
@@ -1216,7 +1036,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_invite_german_scientists
 		prerequisite = { focus = UNS_invite_german_scientists }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			GEM = {
 				add_tech_bonus = {
@@ -1256,7 +1076,7 @@ focus_tree = {
 		relative_position_id = UNS_hum_assistance_germ
 		prerequisite = { focus = UNS_hum_assistance_germ }
 		prerequisite = { focus = UNS_research_with_gem }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			GEM = {
 				add_ai_strategy = {
@@ -1319,9 +1139,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_human_exhibition
 		prerequisite = { focus = UNS_human_exhibition }
-		prerequisite = { focus = UNS_we_are_united }
 		prerequisite = { focus = UNS_deamonic_union }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_humanity_first_idea 
 			every_other_country = {
@@ -1358,7 +1177,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_equus
 		relative_position_id = UNS_contact_natives 
 		prerequisite = { focus = UNS_contact_natives }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -1406,7 +1225,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_contact_pones 
 		prerequisite = { focus = UNS_contact_pones }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			acceptance_expand_extra = yes
 		}
@@ -1419,7 +1238,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_contact_pones 
 		prerequisite = { focus = UNS_contact_pones }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			acceptance_expand_extra = yes 
 		}
@@ -1446,7 +1265,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_speak_to_CRY
 		prerequisite = { focus = UNS_speak_to_CRY }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			CRY = {
 				country_event = { id = uns.41 days = 2 }
@@ -1457,7 +1276,7 @@ focus_tree = {
 		id = UNS_twilight
 		x = 0
 		y = 1
-		cost = 5
+		cost = 10
 		relative_position_id = UNS_speak_to_EQS
 		icon = GFX_goal_twilight_visit
 		prerequisite = {
@@ -1481,7 +1300,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = UNS_invite_royal_family
-		cost = 5
+		cost = 10
 		icon = GFX_goal_give_guarentee
 		prerequisite = {
 			focus = UNS_invite_royal_family
@@ -1571,7 +1390,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_history_books }
 		prerequisite = { focus = UNS_technology_barter }
 		prerequisite = { focus = UNS_EQS_trainings }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			EQS = {
 				country_event = { id = generic.2 }
@@ -1591,7 +1410,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_harmonical_pact
 		prerequisite = { focus = UNS_harmonical_pact }
-		cost = 5 
+		cost = 10 
 		completion_reward = {
 			add_ideas = UNS_harmony_defender_idea
 		}
@@ -1628,7 +1447,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_equus
 		prerequisite = { focus = UNS_equus }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			acceptance_expand_extra = yes 
 		}
@@ -1677,7 +1496,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_join_war
 		prerequisite = { focus = UNS_join_war }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_peacekeeping
 		}
@@ -1736,7 +1555,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_contact_natives
 		prerequisite = { focus = UNS_contact_natives }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -1764,7 +1583,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_griffonia
 		prerequisite = { focus = UNS_griffonia }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			acceptance_expand_extra = yes 
 		}
@@ -1777,7 +1596,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_northern_look
 		prerequisite = { focus = UNS_northern_look }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			FAT = {
 				add_ai_strategy = {
@@ -1852,7 +1671,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_guarantee_republic
 		prerequisite = { focus = UNS_guarantee_republic }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = GRI 
@@ -1868,7 +1687,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_northern_look
 		prerequisite = { focus = UNS_northern_look }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			HLR = {
 				effect_tooltip = {
@@ -1888,7 +1707,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_honor_and_glory
 		prerequisite = { focus = UNS_honor_and_glory }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			effect_tooltip = {
 				give_guarantee = HLR 
@@ -2005,7 +1824,7 @@ focus_tree = {
 		relative_position_id = UNS_nimbussia_art
 		prerequisite = { focus = UNS_nimbussia_art }
 		prerequisite = { focus = UNS_hellquill_solution }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			news_event = { id = uns.46 days = 15 }
 		}
@@ -2103,7 +1922,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_soviet_alliance }
 		prerequisite = { focus = UNS_stalliongrad_alliance }
 		mutually_exclusive = { focus = UNS_red_march }
-		cost = 5
+		cost = 10
 		ai_will_do = { factor = 0 }
 		completion_reward = {
 			add_political_power = 25
@@ -2220,7 +2039,7 @@ focus_tree = {
 		relative_position_id = UNS_invite_ulbricht
 		prerequisite = { focus = UNS_invite_ulbricht }
 		prerequisite = { focus = UNS_crystal_republic }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_soviet_pressure_category
 			hidden_effect = {
@@ -2276,7 +2095,7 @@ focus_tree = {
 		relative_position_id = UNS_communism_superiority
 		prerequisite = { focus = UNS_communism_superiority }
 		prerequisite = { focus = UNS_enhance_lives }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			news_event = { id = uns.50 }
 		}
@@ -2291,7 +2110,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_soviet_alliance }
 		prerequisite = { focus = UNS_stalliongrad_alliance }
 		mutually_exclusive = { focus = UNS_communism_defender }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_red_march_idea
 		}
@@ -2552,7 +2371,7 @@ focus_tree = {
 		relative_position_id = UNS_wingbardia_question
 		prerequisite = { focus = UNS_wingbardia_question }
 		prerequisite = { focus = UNS_river_socialism }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			news_event = { id = uns.60 days = 15 }
 		}
@@ -2569,7 +2388,7 @@ focus_tree = {
 		relative_position_id = UNS_proletariat
 		prerequisite = { focus = UNS_proletariat }
 		mutually_exclusive = { focus = UNS_friendship_of_people }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
@@ -2582,7 +2401,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_forget_the_weakness
 		prerequisite = { focus = UNS_forget_the_weakness }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_no_suffer
 		}
@@ -2622,7 +2441,7 @@ focus_tree = {
 		relative_position_id = UNS_we_protect_you
 		prerequisite = { focus = UNS_we_protect_you }
 		prerequisite = { focus = UNS_we_help_you }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_salvation
 		}
@@ -2766,7 +2585,7 @@ focus_tree = {
 		relative_position_id = UNS_open_medcentres
 		prerequisite = { focus = UNS_open_medcentres }
 		prerequisite = { focus = UNS_open_schools }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			random_owned_state = {
 				limit = {
@@ -2844,7 +2663,7 @@ focus_tree = {
 		relative_position_id = UNS_study_them_medicine 
 		prerequisite = { focus = UNS_study_them_medicine }
 		prerequisite = { focus = UNS_teach_them_magic }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_prepared_for_war 
 		}
@@ -2918,7 +2737,7 @@ focus_tree = {
 		relative_position_id = UNS_best_weapons
 		prerequisite = { focus = UNS_best_weapons }
 		prerequisite = { focus = UNS_create_machines_of_death }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_angels_of_death_idea
 		}
@@ -2931,7 +2750,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_war_coming
 		relative_position_id = UNS_angels_of_death 
 		prerequisite = { focus = UNS_angels_of_death }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
@@ -3018,7 +2837,7 @@ focus_tree = {
 		relative_position_id = UNS_burn_the_flags 
 		prerequisite = { focus = UNS_burn_the_flags }
 		prerequisite = { focus = UNS_forget_the_names }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.1 tooltip = change_unity_level }
 			check_statesoc_level = yes
@@ -3047,7 +2866,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_be_prepared }
 		prerequisite = { focus = UNS_war_is_coming }
 		prerequisite = { focus = UNS_we_will_win }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_victory_is_ours
 		}
@@ -3090,7 +2909,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_fake_brotherhood
 		relative_position_id = UNS_fake_harmony
 		prerequisite = { focus = UNS_fake_harmony }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = STG  
@@ -3110,7 +2929,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_fake_unity
 		relative_position_id = UNS_fake_harmony
 		prerequisite = { focus = UNS_fake_harmony }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = CHN  
@@ -3132,7 +2951,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_barbarians
 		relative_position_id = UNS_destroy_fake_brotherhood
 		prerequisite = { focus = UNS_destroy_fake_brotherhood }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = YAK  
@@ -3156,7 +2975,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_tiranny
 		relative_position_id = UNS_true_unity
 		prerequisite = { focus = UNS_true_unity }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = OLE  
@@ -3175,7 +2994,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_destroy_sou
 		relative_position_id = UNS_bring_civilization
 		prerequisite = { focus = UNS_bring_civilization }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = SOU  
@@ -3192,7 +3011,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_destroy_gem
 		relative_position_id = UNS_finish_the_tyranny
 		prerequisite = { focus = UNS_finish_the_tyranny }
-		cost = 5
+		cost = 10
 		bypass = {
 			has_war_with = GEM 
 		}
@@ -3213,7 +3032,7 @@ focus_tree = {
 		relative_position_id = UNS_destroy_russia
 		prerequisite = { focus = UNS_destroy_russia }
 		prerequisite = { focus = UNS_revenge_the_past }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				target = GRF  
@@ -3274,7 +3093,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UNS_griffonia_experience 
 		}
-		cost = 5
+		cost = 10
 		completion_reward = {
 			set_rule = { can_create_factions = yes }
 			add_political_power = 50
@@ -3373,7 +3192,7 @@ focus_tree = {
 		relative_position_id = UNS_meet_fuhrer
 		prerequisite = { focus = UNS_meet_fuhrer }
 		prerequisite = { focus = UNS_alliance_chn }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
@@ -3466,7 +3285,7 @@ focus_tree = {
 		relative_position_id = UNS_fate_of_president
 		prerequisite = { focus = UNS_fate_of_president }
 		mutually_exclusive = { focus = UNS_local_friends }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_political_power = 50
 			set_rule = { can_create_factions = yes }
@@ -3744,7 +3563,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_executions
 		relative_position_id = UNS_world_situation
 		prerequisite = { focus = UNS_world_situation }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_manpower = -25
 			add_political_power = -25
@@ -3846,7 +3665,7 @@ focus_tree = {
 		relative_position_id = UNS_propaganda_campaign
 		prerequisite = { focus = UNS_propaganda_campaign }
 		prerequisite = { focus = UNS_work_for_victory }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			custom_effect_tooltip = army_is_coming
 			add_equipment_to_stockpile = {
@@ -3968,7 +3787,7 @@ focus_tree = {
 		relative_position_id = UNS_native_soldiers
 		prerequisite = { focus = UNS_native_soldiers }
 		prerequisite = { focus = UNS_native_officers }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_war_preparation
 		}
@@ -3981,7 +3800,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_invade_EQS
 		relative_position_id = UNS_last_preparations
 		prerequisite = { focus = UNS_last_preparations }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			effect_tooltip = {
 				create_wargoal = {
@@ -4004,7 +3823,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_invade_CRY
 		relative_position_id = UNS_equestrian_invasion
 		prerequisite = { focus = UNS_equestrian_invasion }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -4019,7 +3838,7 @@ focus_tree = {
 		icon = GFX_goal_UNS_invade_STG
 		relative_position_id = UNS_equestrian_invasion
 		prerequisite = { focus = UNS_equestrian_invasion }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -4036,7 +3855,7 @@ focus_tree = {
 		relative_position_id = UNS_attack_crystal
 		prerequisite = { focus = UNS_attack_crystal }
 		prerequisite = { focus = UNS_invade_stg_shep }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			effect_tooltip = {
 				create_wargoal = { 
@@ -4334,7 +4153,7 @@ focus_tree = {
 		relative_position_id = UNS_approach_frontier
 		prerequisite = { focus = UNS_approach_frontier }
 		prerequisite = { focus = UNS_destroy_wingbardy }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -4359,7 +4178,7 @@ focus_tree = {
 		relative_position_id = UNS_big_hunt
 		prerequisite = { focus = UNS_big_hunt }
 		prerequisite = { focus = UNS_destroy_the_dreams }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			news_event = { id = uns.72 days = 10 }
 		}
@@ -4372,7 +4191,7 @@ focus_tree = {
 		relative_position_id = UNS_officers_purging
 		prerequisite = { focus = UNS_officers_purging }
 		mutually_exclusive = { focus = UNS_army_checking }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			EQS = {
 				add_opinion_modifier = {
@@ -4467,7 +4286,7 @@ focus_tree = {
 		relative_position_id = UNS_equestrian_garrison
 		prerequisite = { focus = UNS_equestrian_garrison }
 		prerequisite = { focus = UNS_guarantee_equestria }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			set_politics = {
 				ruling_party = democratic
@@ -4710,7 +4529,7 @@ focus_tree = {
 		relative_position_id = UNS_huffbol_stadium
 		prerequisite = { focus = UNS_huffbol_stadium }
 		prerequisite = { focus = UNS_electrotrains }
-		cost = 5
+		cost = 10
 		completion_reward = {	
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = UNS_rarity
@@ -4725,7 +4544,7 @@ focus_tree = {
 		relative_position_id = UNS_stay_strong
 		prerequisite = { focus = UNS_stay_strong }
 		prerequisite = { focus = UNS_manhattan_manehattan }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_ideas = UNS_frienship_perfections
 		}
@@ -4845,7 +4664,7 @@ focus_tree = {
 		relative_position_id = UNS_afterwar_support
 		prerequisite = { focus = UNS_afterwar_support }
 		prerequisite = { focus = UNS_cities_rebuild }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			add_stability = 0.15
 			add_war_support = -0.2
@@ -4860,7 +4679,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_ordnung
 		prerequisite = { focus = UNS_ordnung }
-		cost = 5
+		cost = 10
 		completion_reward = {
 			news_event = { id = uns.74 days = 5 }
 		}
@@ -5357,7 +5176,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_hum_assist
 		icon = GFX_goal_afterwar_support
-		cost = 5 
+		cost = 10 
 		prerequisite = {
 			focus = UNS_hum_assist
 		}
@@ -5623,7 +5442,7 @@ focus_tree = {
 		relative_position_id = UNS_rubber
 		prerequisite = { focus = UNS_rubber }
 		prerequisite = { focus = UNS_plastic }
-		cost = 5
+		cost = 10
 		icon = GFX_goal_metal_rework
 		completion_reward = {
 			capital_scope = {
@@ -5688,7 +5507,7 @@ focus_tree = {
 		y = 1 
 		relative_position_id = UNS_concetrated_ind
 		prerequisite = { focus = UNS_dispersed_ind OR = UNS_concetrated_ind }
-		cost = 5
+		cost = 10
 		icon = GFX_goal_diminish_eqs
 		completion_reward = {
 			swap_ideas = {
@@ -6024,7 +5843,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_vuz_uns
 		prerequisite = { focus = UNS_vuz_uns OR = UNS_full_modernization OR = UNS_metal_rework }
-		cost = 5
+		cost = 10
 		icon = GFX_goal_uns_liberty_statue
 		completion_reward = {
 			effect_tooltip = {
@@ -6061,7 +5880,7 @@ focus_tree = {
 		x = 50
 		y = 4
 		icon = GFX_goal_uns_army
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = UNS_military
 		}
@@ -6174,7 +5993,7 @@ focus_tree = {
 		x = 58
 		y = 4
 		icon = 111
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = UNS_military
 		}
@@ -6334,7 +6153,7 @@ focus_tree = {
 		x = 66
 		y = 4
 		icon = GFX_goal_navy
-		cost = 5
+		cost = 10
 		prerequisite = {
 			focus = UNS_military
 		}
@@ -6449,7 +6268,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = UNS_marines_corp
-		cost = 5
+		cost = 10
 		prerequisite = { focus = UNS_marines_corp }
 		icon = GFX_goal_uns_coastal_defense
 		completion_reward = {
@@ -6547,7 +6366,7 @@ focus_tree = {
 		relative_position_id = UNS_trade_treeaty
 		prerequisite = { focus = UNS_expand_ports }
 		prerequisite = { focus = UNS_trade_treeaty }
-		cost = 5
+		cost = 10
 		icon = GFX_goal_power_of_fleet
 		completion_reward = {
 			add_ideas = UNS_power_of_fleet_idea
