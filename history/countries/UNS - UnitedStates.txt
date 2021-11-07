@@ -6,6 +6,7 @@ set_research_slots = 2
 save_global_event_target_as = UNS
 
 set_technology = {
+	atomic_research = 1
 	human_race = 1
 	infantry_weapons1 = 1
    	melee_weapons = 1
@@ -182,16 +183,65 @@ create_field_marshal = {
 	defense_skill = 5
 	planning_skill = 6
 	logistics_skill = 4
-	id = 1490
+	id = 1499
+}
+
+create_corps_commander = {
+	name = "Connor Kent"
+	desc = ""
+	portrait_path = "gfx/leaders/UNS/Kent.dds"
+	traits = {
+		infantry_commander_hum
+		infantry_officer
+		ambusher
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 4
+	logistics_skill = 5
+	
+}
+
+create_corps_commander = {
+	name = "Arthur West"
+	desc = ""
+	portrait_path = "gfx/leaders/UNS/West.dds"
+	traits = {
+		fortress_buster
+		panzer_expert
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+	
+}
+
+create_corps_commander = {
+	name = "Elian Chaney"
+	desc = ""
+	portrait_path = "gfx/leaders/UNS/Chaney.dds"
+	traits = {
+		trait_engineer
+		combined_arms_expert
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 5
+	logistics_skill = 3
+	
 }
 
 create_operative_leader = {
-	name = "Edvard Snowden" # Имя оперативника
-	GFX = GFX_portrait_richard_sorge # Портрет
-	traits = { operative_secret_service } # Трейты оперативника. Могут быть взяты из файла common/unit_leader/00_traits.txt или из созданного. Допустим, наш трейт будет иметь такой код
-	bypass_recruitment = yes # Если Yes, оперативник будет доступен с самого начала, но вам все равно придется иметь свободные ячейки
-	available_to_spy_master = yes # Вот тут я честно без понятия
-	nationalities = { UNS EQS } # Национальности агента 
+	name = "Edvard Snowden" 
+	GFX = GFX_portrait_richard_sorge 
+	traits = { operative_secret_service } 
+	bypass_recruitment = yes 
+	available_to_spy_master = yes 
+	nationalities = { UNS EQS } 	
 }
 create_equipment_variant = {
 	name = "Atlantic Class"

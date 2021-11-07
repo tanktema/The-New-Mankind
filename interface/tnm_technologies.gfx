@@ -176,6 +176,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/UNS/UNS_transport.dds"
 	}
 	SpriteType = {
+		name = "GFX_UNS_motorised_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_transport2.dds"
+	}
+	SpriteType = {
+		name = "GFX_UNS_motorised_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_transport3.dds"
+	}
+	SpriteType = {
 		name = "GFX_UNS_mechanised_infantry_medium"
 		texturefile = "gfx/interface/technologies/UNS/UNS_lav1.dds"
 	}
@@ -239,6 +247,12 @@ spriteTypes = {
 		name = "GFX_UNS_advanced_light_tank_b_medium"
 		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank5.dds"
 	} 
+	SpriteType = {
+		name = "GFX_UNS_advanced_light_tank_c_medium"
+		texturefile = "gfx/interface/technologies/UNS/UNS_light_tank6.dds"
+	} 
+	
+	
 	SpriteType = {
 		name = "GFX_UNS_basic_medium_tank_medium"
 		texturefile = "gfx/interface/technologies/UNS/UNS_medium_tank1.dds"
@@ -353,6 +367,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOU/SOU_transport.dds"
 	}
 	SpriteType = {
+		name = "GFX_SOU_motorised_infantry_2_medium" 
+		texturefile = "gfx/interface/technologies/SOU/SOU_transport_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_motorised_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/SOU/SOU_transport_3.dds"
+	}
+	SpriteType = {
 		name = "GFX_SOU_mechanised_infantry_medium"
 		texturefile = "gfx/interface/technologies/SOU/SOU_btr_1.dds"
 	}
@@ -417,6 +439,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/SOU/SOU_light_tank_5.dds"
 	} 
 	SpriteType = {
+		name = "GFX_SOU_advanced_light_tank_c_medium"
+		texturefile = "gfx/interface/technologies/SOU/SOU_light_tank_6.dds"
+	} 
+	SpriteType = {
 		name = "GFX_SOU_basic_medium_tank_medium"
 		texturefile = "gfx/interface/technologies/SOU/SOU_medium_tank_1.dds"
 	}
@@ -430,27 +456,27 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_SOU_main_battle_tank_medium"
-		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_1_2.dds"
+		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_SOU_main_battle_tank_a_medium"
-		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_1_2.dds"
+		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_2.dds"
 	}
 	SpriteType = {
 		name = "GFX_SOU_main_battle_tank_b_medium"
-		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_3_4.dds"
+		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_3.dds"
 	}
 	SpriteType = {
 		name = "GFX_SOU_main_battle_tank_c_medium"
-		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_3_4.dds"
+		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_4.dds"
 	}
 	SpriteType = {
 		name = "GFX_SOU_main_battle_tank_d_medium"
-		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_5_6.dds"
+		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_5.dds"
 	}
 	SpriteType = {
 		name = "GFX_SOU_main_battle_tank_e_medium"
-		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_5_6.dds"
+		texturefile = "gfx/interface/technologies/SOU/SOU_modern_tank_6.dds"
 	}
 	SpriteType = {
 		name = "GFX_SOU_basic_heavy_tank_medium"
@@ -521,11 +547,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_GEM_advanced_infantry_weapons_b_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_hk416.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_gkg36.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_advanced_infantry_weapons_e_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_gkg36.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_hk416.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_gwtank_medium"
@@ -552,6 +578,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/GEM/GEM_lt5.dds"
 	} 
 	SpriteType = {
+		name = "GFX_GEM_advanced_light_tank_c_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_lt6.dds"
+	}
+	SpriteType = {
 		name = "GFX_GEM_basic_medium_tank_medium"
 		texturefile = "gfx/interface/technologies/GEM/GEM_mt1.dds"
 	}
@@ -565,27 +595,27 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_GEM_main_battle_tank_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1_3.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_main_battle_tank_a_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1_3.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_2.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_main_battle_tank_b_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_1_3.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_3.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_main_battle_tank_c_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4_6.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_main_battle_tank_d_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4_6.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_5.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_main_battle_tank_e_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_4_6.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mbt_6.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_basic_heavy_tank_medium"
@@ -615,48 +645,56 @@ spriteTypes = {
 		name = "GFX_GEM_motorised_infantry_medium"
 		texturefile = "gfx/interface/technologies/GEM/GEM_motor.dds"
 	}	
+	SpriteType = {
+		name = "GFX_GEM_motorised_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_motor2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GEM_motorised_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/GEM/GEM_motor3.dds"
+	}
 
 
 
 	SpriteType = {
 		name = "GFX_GEM_mechanised_infantry_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_13.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mech1.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_mechanised_infantry2_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_222.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mech2.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_mechanised_infantry3_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_251.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mech3.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_mechanised_infantry_a_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_234.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mech4.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_mechanised_infantry_b_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_tpz_1.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_mech5.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_amphibious_mechanized_infantry_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_175.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_amph1.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_amphibious_mechanized_infantry_2_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_420.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_amph2.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_amphibious_mechanized_infantry_3_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_sdkfz_231.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_amph3.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_amphibious_mechanized_infantry_4_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_marder.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_amph4.dds"
 	}
 	SpriteType = {
 		name = "GFX_GEM_amphibious_mechanized_infantry_5_medium"
-		texturefile = "gfx/interface/technologies/GEM/GEM_puma.dds"
+		texturefile = "gfx/interface/technologies/GEM/GEM_amph5.dds"
 	}
 
 
@@ -668,11 +706,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_GRB_melee_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRB/GRB_lee_enfield.dds"
+		texturefile = "gfx/interface/technologies/GRB/GRB_enfield_1917.dds"
 	}
 	SpriteType = {
 		name = "GFX_GRB_infantry_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRB/GRB_enfield_1917.dds"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lee_enfield.dds"
 	}
 	SpriteType = {
 		name = "GFX_GRB_infantry_weapons1_medium"
@@ -693,4 +731,166 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_GRB_advanced_infantry_weapons_e_medium"
 		texturefile = "gfx/interface/technologies/GRB/GRB_enfieldl85.dds"
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_GRB_magical_weapons_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_brenlewis.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_magical_weapons1_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_sten-sterling.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_magical_weapons2_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_em18.dds"
+	}  
+	SpriteType = {
+		name = "GFX_GRB_magical_weapons3_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_plasmagun.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GRB_gwtank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_gwtank_eqpm.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_basic_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lt_eqpm_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_improved_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lt_eqpm_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_light_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lt_eqpm_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_light_tank_a_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lt_eqpm_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_light_tank_b_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lt_eqpm_5.dds"
+	} 
+	SpriteType = {
+		name = "GFX_GRB_advanced_light_tank_c_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_lt_eqpm_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_basic_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mt_eqpm_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_improved_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mt_eqpm_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_medium_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mt_eqpm_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_main_battle_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mbt_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_main_battle_tank_a_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mbt_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_main_battle_tank_b_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mbt_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_main_battle_tank_c_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mbt_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_main_battle_tank_d_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mbt_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_main_battle_tank_e_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mbt_6.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_basic_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_ht_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_improved_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_ht_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_advanced_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_ht_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_super_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_sht_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_super_heavy_tank_a_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_sht_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_super_heavy_tank_b_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_sht_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_transport_1.dds"
+	}	
+	SpriteType = {
+		name = "GFX_GRB_motorised_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_transport_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_motorised_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_transport_3.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_GRB_mechanised_infantry_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mech_eq_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mech_eq_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mech_eq_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_mechanised_infantry_a_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mech_eq_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_mechanised_infantry_b_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_mech_eq_5.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_amphibious_mechanized_infantry_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_amph_eq_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_amphibious_mechanized_infantry_2_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_amph_eq_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_amphibious_mechanized_infantry_3_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_amph_eq_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_amphibious_mechanized_infantry_4_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_amph_eq_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_GRB_amphibious_mechanized_infantry_5_medium"
+		texturefile = "gfx/interface/technologies/GRB/GRB_amph_eq_5.dds"
 	}

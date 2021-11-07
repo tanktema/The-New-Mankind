@@ -1091,7 +1091,7 @@ industral_rebuild_category = {
 		target_array = ROOT.controlled_states
 		cost = 50
 		days_remove = 60
-		days_re_enable = 60
+		days_re_enable = 120
 		complete_effect = {
 			give_resource_rights = { state = FROM receiver = EQS }
 			set_variable = { var_resource_sell = 0 }

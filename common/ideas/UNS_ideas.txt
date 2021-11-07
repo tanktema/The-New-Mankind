@@ -1315,6 +1315,9 @@ ideas = {
 			}
 			traits = { magical_human_assistant }
 		}
+		
+	
+			
 	}
 	army_chief = {
 		general_shepherd = {
@@ -1508,8 +1511,114 @@ ideas = {
 			}
 			traits = { army_planning_master_chief }
 		}
-		
-
-	}
+		UNS_phelps = {
+			allowed = { original_tag = UNS }
+			
+			research_bonus = {
+				cat_mass_assault = 0.1
+			}
+			modifier = {
 				
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		
+		UNS_holland = {
+			allowed = { original_tag = UNS }
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.1
+			}
+			modifier = {
+				
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				planning_speed = 0.1
+				command_power_gain = 0.2
+			}
+		}
+		
+		
+		UNS_harrison = {
+			allowed = { original_tag = UNS }
+			available = { 
+				has_completed_focus = UNS_air_superiority
+			}
+			
+			research_bonus = {
+				cat_mass_assault = 0.07
+				cat_battlefield_support = 0.07
+			}
+			
+			modifier = {
+				experience_gain_air = 0.02
+				experience_gain_army = 0.02
+			}
+		}
+	}
+	
+	
+	navy_chief = {
+		UNS_billy_scott = {
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			available = {
+				has_completed_focus = UNS_our_fleet
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			modifier = {
+				
+				experience_gain_navy = 0.03
+			}
+		}
+	}
+	
+	high_command = {
+		UNS_zak_Harris = {
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			traits = { 
+				army_logistics_2
+			}
+		}
+		
+		UNS_hudson = {
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			traits = { 
+				air_chief_all_weather_2
+			}
+		}
+		
+		UNS_kline = {
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			traits = { 
+				army_chief_drill_2
+			}
+		}
+		
+		UNS_alice = {
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			traits = { 
+				army_chief_offensive_2
+			}
+		}
+	}
 }

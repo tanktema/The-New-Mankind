@@ -2507,4 +2507,1206 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/UNS_SNOVA_extinguish.dds"
 	}
 	
+	
+	SpriteType = {
+		name = "GFX_goal_GRB_evacuation"
+		texturefile = "gfx/interface/goals/GRB_portal.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_exploration"
+		texturefile = "gfx/interface/goals/GRB_scouting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_contact"
+		texturefile = "gfx/interface/goals/GRB_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_death_of_churchill"
+		texturefile = "gfx/interface/goals/GRB_death_of_churchill.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_citizenship"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_top_secret.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_workers_protest"
+		texturefile = "gfx/interface/goals/workers_unite.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_budget_resize"
+		texturefile = "gfx/interface/goals/trade_treaty.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_hum_rights"
+		texturefile = "gfx/interface/goals/human_rights.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_equal_rights"
+		texturefile = "gfx/interface/goals/SOU_pony_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_worker_salary"
+		texturefile = "gfx/interface/goals/SOU_comm_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_milpay"
+		texturefile = "gfx/interface/goals/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_milacc"
+		texturefile = "gfx/interface/goals/was_univers.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_science"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_researches.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_contact_neighb"
+		texturefile = "gfx/interface/goals/GEM_united_nations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_constitution"
+		texturefile = "gfx/interface/goals/constitution.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_science_quest"
+		texturefile = "gfx/interface/goals/share_the_science.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_contact_humans"
+		texturefile = "gfx/interface/goals/canterlot_summit.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_monarchy_quest"
+		texturefile = "gfx/interface/goals/SOU_za_carya.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_milrights"
+		texturefile = "gfx/interface/goals/GEM_iron_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_strict_mils"
+		texturefile = "gfx/interface/goals/GEM_radicals.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_who_rules"
+		texturefile = "gfx/interface/goals/commun_in_government.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_regional_politics"
+		texturefile = "gfx/interface/goals/SOU_find_allies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_what_next"
+		texturefile = "gfx/interface/goals/GEM_council.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_fixiki"
+		texturefile = "gfx/interface/goals/demo_reform.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_UNS_contact"
+		texturefile = "gfx/interface/goals/embass_britain.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_contact_EQS"
+		texturefile = "gfx/interface/goals/GRB_EQS_cont.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_RCT"
+		texturefile = "gfx/interface/goals/UNS_griffonia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_alliance"
+		texturefile = "gfx/interface/goals/UNS_rise_humanity.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_RCT_alliance"
+		texturefile = "gfx/interface/goals/UNS_RIV.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_CRY"
+		texturefile = "gfx/interface/goals/UNS_royal_family_CRY.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_FAT"
+		texturefile = "gfx/interface/goals/UNS_invade_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_peacedef"
+		texturefile = "gfx/interface/goals/peace_garantie.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_SOU_d"
+		texturefile = "gfx/interface/goals/GRB_SOU_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_GEM"
+		texturefile = "gfx/interface/goals/GRB_GEM_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_GRI"
+		texturefile = "gfx/interface/goals/GRB_GRI_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_HLR"
+		texturefile = "gfx/interface/goals/GRB_HLR_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_trainings"
+		texturefile = "gfx/interface/goals/SOU_planning.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_peace"
+		texturefile = "gfx/interface/goals/GEM_first_son_rule.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_royal_meeting"
+		texturefile = "gfx/interface/goals/GEM_phoenix.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_help_HLR"
+		texturefile = "gfx/interface/goals/SOU_sell_weapons.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_gala"
+		texturefile = "gfx/interface/goals/GRB_london_meeting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_guarantee_EQS"
+		texturefile = "gfx/interface/goals/uns_volunteers.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_infrastructure"
+		texturefile = "gfx/interface/goals/GEM_road_networks.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_reinforce_canterlot"
+		texturefile = "gfx/interface/goals/SOU_defence_demo.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_buggo"
+		texturefile = "gfx/interface/goals/SOU_kill_bugs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_guarantee_FAT"
+		texturefile = "gfx/interface/goals/GEM_attack_FAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_support_FAT"
+		texturefile = "gfx/interface/goals/SOU_end_of_destroy.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_reinforce_north"
+		texturefile = "gfx/interface/goals/UNS_reinforcements.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_northtread"
+		texturefile = "gfx/interface/goals/trade_treaty.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_british_heroes"
+		texturefile = "gfx/interface/goals/GRB_british_heroism.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_break_dictator"
+		texturefile = "gfx/interface/goals/GEM_equality.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_contact_sou"
+		texturefile = "gfx/interface/goals/GRB_com_SOU_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_GRIFFCOM"
+		texturefile = "gfx/interface/goals/GRB_griff_communists.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_EQS_comms"
+		texturefile = "gfx/interface/goals/support_SG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_ulbricht"
+		texturefile = "gfx/interface/goals/UNS_ulbricht.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_LSC"
+		texturefile = "gfx/interface/goals/big_change.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_support_them"
+		texturefile = "gfx/interface/goals/GEM_youth_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_press_dicts"
+		texturefile = "gfx/interface/goals/GEM_forget_the_past.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_riflesforrev"
+		texturefile = "gfx/interface/goals/GEM_eco_mobiliz.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_volunteers"
+		texturefile = "gfx/interface/goals/GEM_workers_power.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_pora_communizdit"
+		texturefile = "gfx/interface/goals/SOU_world_revolution.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_keep_supporting"
+		texturefile = "gfx/interface/goals/SOU_soc_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_finish_them"
+		texturefile = "gfx/interface/goals/SOU_purges.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_red_triumph"
+		texturefile = "gfx/interface/goals/SOU_comm_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_rule_britania"
+		texturefile = "gfx/interface/goals/GEM_war_never_changes.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_fight_crisis"
+		texturefile = "gfx/interface/goals/stop_depression.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_ordnung"
+		texturefile = "gfx/interface/goals/GEM_gimmlerugend.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_weapdev"
+		texturefile = "gfx/interface/goals/spec_tech.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_xenos"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_main_question.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_workplace"
+		texturefile = "gfx/interface/goals/UNS_machines_of_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_military"
+		texturefile = "gfx/interface/goals/UNS_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_conscript"
+		texturefile = "gfx/interface/goals/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_reinforcement"
+		texturefile = "gfx/interface/goals/SOU_defence_demo.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GEB_attack_JER"
+		texturefile = "gfx/interface/goals/GRB_invade_JER.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_invade_EQC"
+		texturefile = "gfx/interface/goals/GRB_invade_EQC.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_carthin_march"
+		texturefile = "gfx/interface/goals/GEM_attack_WNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_prepare_invasion"
+		texturefile = "gfx/interface/goals/SOU_attack_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_ban"
+		texturefile = "gfx/interface/goals/GEM_anti_xenos.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_harmony"
+		texturefile = "gfx/interface/goals/SOU_friendship_is_over.dds"
+	}
+	SpriteType = {
+		name = "GRB_raid_the_east"
+		texturefile = "gfx/interface/goals/GRB_invade_CYA.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_STG_destroy"
+		texturefile = "gfx/interface/goals/SOU_invade_stallion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_frontier"
+		texturefile = "gfx/interface/goals/GEM_ultimatum_HLQ.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_CHN"
+		texturefile = "gfx/interface/goals/SOU_experience_changing.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_claimland"
+		texturefile = "gfx/interface/goals/SOU_sea_lion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_new_face_of_britain"
+		texturefile = "gfx/interface/goals/exp_off_two_wars.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_hail_the_queen"
+		texturefile = "gfx/interface/goals/GRB_royal_meeting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_livgardet"
+		texturefile = "gfx/interface/goals/SOU_invade_equs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_eco_reform"
+		texturefile = "gfx/interface/goals/stop_depression.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_rule_the_seas"
+		texturefile = "gfx/interface/goals/fleet_rebirth.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_PNG"
+		texturefile = "gfx/interface/goals/GRB_invade_PNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_develop_penguins"
+		texturefile = "gfx/interface/goals/GRB_develop_PNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_garrisons"
+		texturefile = "gfx/interface/goals/GRB_expand_garrisons.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_famine_stop"
+		texturefile = "gfx/interface/goals/SOU_farming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_PNG_res"
+		texturefile = "gfx/interface/goals/search_resources.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_northind"
+		texturefile = "gfx/interface/goals/SOU_civil_ind.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_penguin_talents"
+		texturefile = "gfx/interface/goals/GEM_native_squads.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_reinforce_PNG"
+		texturefile = "gfx/interface/goals/GEM_eco_mobiliz.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_native_army"
+		texturefile = "gfx/interface/goals/GEM_last_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_north_saxxonia"
+		texturefile = "gfx/interface/goals/GRB_north_saxxonia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_invade_GRF"
+		texturefile = "gfx/interface/goals/SOU_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_bear"
+		texturefile = "gfx/interface/goals/GEM_attack_PLB.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_appease_lands"
+		texturefile = "gfx/interface/goals/GRB_lands_trans_PNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_FBK"
+		texturefile = "gfx/interface/goals/GRB_invade_FBK.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_FBK_forests"
+		texturefile = "gfx/interface/goals/SOU_scouting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_WAT_magicians"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_invite_magician.dds"
+	}
+	SpriteType = {
+		name = "UNS_SNOVA_invite_magician"
+		texturefile = "gfx/interface/goals/GRB_woods_eli.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_expand_food"
+		texturefile = "gfx/interface/goals/GEM_double_rations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_piligrims"
+		texturefile = "gfx/interface/goals/GEM_scouting.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_recreation"
+		texturefile = "gfx/interface/goals/UNS_schools.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_FIR_attack"
+		texturefile = "gfx/interface/goals/GRB_attack_FIR.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_HLR_appease"
+		texturefile = "gfx/interface/goals/GRB_HLR_contact.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_WAT_attack"
+		texturefile = "gfx/interface/goals/GRB_attack_WAT.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_modernize"
+		texturefile = "gfx/interface/goals/GEM_road_networks.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_east_canada"
+		texturefile = "gfx/interface/goals/GRB_east_canada.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_ZES"
+		texturefile = "gfx/interface/goals/GRB_attack_ZES.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_zebra_goods"
+		texturefile = "gfx/interface/goals/GRB_zebra_goods.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_olenian_facts"
+		texturefile = "gfx/interface/goals/SOU_keep_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_clean_barrad"
+		texturefile = "gfx/interface/goals/GEM_road_building.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_barrad_magicians"
+		texturefile = "gfx/interface/goals/GEM_magical_weapones.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_plantations"
+		texturefile = "gfx/interface/goals/UNS_we_will_proove.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_invade_OLV"
+		texturefile = "gfx/interface/goals/GRB_invade_OLV.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_barrad_invade"
+		texturefile = "gfx/interface/goals/GRB_invade_BAR.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_RCT_ultimatum"
+		texturefile = "gfx/interface/goals/GEM_claim_land.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_attack_GRY"
+		texturefile = "gfx/interface/goals/GRB_invade_GRY.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_east_india"
+		texturefile = "gfx/interface/goals/GRB_New_india.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_new_britannia"
+		texturefile = "gfx/interface/goals/GRB_british_heroism.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_no_doubts"
+		texturefile = "gfx/interface/goals/SOU_back_in_time.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_church"
+		texturefile = "gfx/interface/goals/GRB_power_of_church.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_kill_supports"
+		texturefile = "gfx/interface/goals/GEM_destroy_opposition.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_new_inquisition"
+		texturefile = "gfx/interface/goals/GEM_war_never_changes.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_knights"
+		texturefile = "gfx/interface/goals/SOU_nation_people.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_kikc_nonat"
+		texturefile = "gfx/interface/goals/GEM_anti_xenos.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_antixeno_prop"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_kidnapping.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_british_fleet"
+		texturefile = "gfx/interface/goals/fleet_rebirth.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_breakties"
+		texturefile = "gfx/interface/goals/diminish_depence.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_EQC_attack"
+		texturefile = "gfx/interface/goals/GRB_invade_EQC.dds"
+	}
+	SpriteType = {
+		name = "GRB_prepare_for_last_war"
+		texturefile = "gfx/interface/goals/UNS_war_is_coming.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_milprod"
+		texturefile = "gfx/interface/goals/UNS_works.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_armyprep"
+		texturefile = "gfx/interface/goals/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_spy"
+		texturefile = "gfx/interface/goals/GEM_agents.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_conscription"
+		texturefile = "gfx/interface/goals/GEM_limit_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_wh40k_reference"
+		texturefile = "gfx/interface/goals/GRB_great_crusade.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_new_dynasty"
+		texturefile = "gfx/interface/goals/GEM_antifasc_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_rewards"
+		texturefile = "gfx/interface/goals/GEM_unlimit_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_hydra"
+		texturefile = "gfx/interface/goals/GEM_shoot_unbeliefs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_conscription_2"
+		texturefile = "gfx/interface/goals/GEM_last_preparation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_prewar_d"
+		texturefile = "gfx/interface/goals/GEM_eco_mobiliz.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_EQC_invade"
+		texturefile = "gfx/interface/goals/GRB_invade_EQC.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_JER_invade"
+		texturefile = "gfx/interface/goals/GRB_invade_JER.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_across_ocean"
+		texturefile = "gfx/interface/goals/alicorn_fall.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_heartzland_conquest"
+		texturefile = "gfx/interface/goals/SOU_sea_lion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_northexp"
+		texturefile = "gfx/interface/goals/SOU_invade_stallion.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_eastwalk"
+		texturefile = "gfx/interface/goals/GEM_attack_WNG.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_feudals"
+		texturefile = "gfx/interface/goals/UNS_equus.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_restart_ind"
+		texturefile = "gfx/interface/goals/industry_effort.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_old_companies"
+		texturefile = "gfx/interface/goals/GRB_british_companies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_new_companies"
+		texturefile = "gfx/interface/goals/SOU_cooperate.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_equestrian_companies"
+		texturefile = "gfx/interface/goals/GRB_contact_EQS_companies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_grifcompanies"
+		texturefile = "gfx/interface/goals/GRB_contact_JER_companies.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_disperse"
+		texturefile = "gfx/interface/goals/dispers_ind.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_GRB_resources"
+		texturefile = "gfx/interface/goals/SOU_resources.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_"
+		texturefile = "gfx/interface/goals/.dds"
+	}
+	
 }

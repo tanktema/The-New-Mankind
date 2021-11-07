@@ -1472,6 +1472,16 @@ focus_tree = {
 		id = SOU_assist_nova_griffonia
 		x = -2
 		y = 1
+		available = {
+			GRF = {
+				NOT = {
+					has_country_leader = {
+						name = "Governor Teafeather"
+						ruling_only = yes 
+					}
+				}
+			}
+		}
 		relative_position_id = SOU_peacemakers
 		prerequisite = { focus = SOU_peacemakers }
 		cost = 5
@@ -1511,6 +1521,13 @@ focus_tree = {
 		id = SOU_appease_hellquill
 		x = 5
 		y = 1
+		bypass = {
+			HLQ = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
 		relative_position_id = SOU_peacemakers
 		prerequisite = { focus = SOU_peacemakers }
 		cost = 5
@@ -1706,6 +1723,14 @@ focus_tree = {
 			country_event = {
 				id = sou.42 days = 5
 			}
+			hidden_effect = {
+				every_unit_leader = {
+					limit = {
+						has_id = 1491
+					}
+					set_nationality = EQS 
+				}
+			}
 		}
 	}
 	
@@ -1790,11 +1815,45 @@ focus_tree = {
 		id = SOU_new_officers
 		x = 2
 		y = 1
+		available = {
+			NOT = {
+				has_idea = SOU_purges
+			}
+		}
 		relative_position_id = SOU_verify_your_clock
 		prerequisite = { focus = SOU_verify_your_clock }
 		cost = 5
 		completion_reward = {
-			
+			create_corps_commander = {
+				name = "Artemiy Travnikov"
+				portrait_path = "gfx/leaders/SOU/Travnikov.dds"
+				traits = { infantry_commander_hum }
+				skill = 3 
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Sergey Dubrovsky"
+				portrait_path = "gfx/leaders/SOU/Dubrovsky.dds"
+				traits = { winter_specialist }
+				skill = 4 
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+			}
+			create_field_marshal = {
+				name = "Valeriy Nevzorov"
+				portrait_path = "gfx/leaders/SOU/Nevzorov.dds"
+				traits = { logistics_wizard defensive_doctrine }
+				skill = 5 
+				attack_skill = 4
+				defense_skill = 6
+				planning_skill = 3
+				logistics_skill = 5
+			}
 		}
 	}
 	
@@ -2043,7 +2102,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 10000
+				amount = 1000
 			}
 		}
 	}
@@ -2059,7 +2118,36 @@ focus_tree = {
 		relative_position_id = SOU_extra_conscription
 		prerequisite = { focus = SOU_extra_conscription }
 		completion_reward = {
-			
+			create_corps_commander = {
+				name = "Maxim Yesipov"
+				portrait_path = "gfx/leaders/SOU/Yesipov.dds"
+				traits = { infantry_commander_hum }
+				skill = 3 
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Leontiy Kuptsov"
+				portrait_path = "gfx/leaders/SOU/Kuptsov.dds"
+				traits = { winter_specialist }
+				skill = 4 
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+			}
+			create_field_marshal = {
+				name = "Lev Zybkov"
+				portrait_path = "gfx/leaders/SOU/Zybkov.dds"
+				traits = { logistics_wizard defensive_doctrine }
+				skill = 5 
+				attack_skill = 4
+				defense_skill = 6
+				planning_skill = 3
+				logistics_skill = 5
+			}
 		}
 	}
 	
@@ -2284,7 +2372,37 @@ focus_tree = {
 		prerequisite = { focus = SOU_extermination }
 		cost = 5
 		completion_reward = {
-			
+			every_state = {
+				limit = {
+					OR = {
+						state = 312
+						state = 262
+						state = 252
+						state = 251
+						state = 309
+						state = 259
+					}
+				}
+				add_to_variable = { ROOT.adding_arms = THIS.building_level@arms_factory }
+				add_to_variable = { ROOT.adding_inds = THIS.building_level@industrial_complex }
+				remove_building = {
+					type = arms_factory
+					level = THIS.building_level@arms_factory
+				}
+				remove_building = {
+					type = industrial_complex
+					level = THIS.building_level@industrial_complex
+				}
+				set_state_category = rural
+			}
+			add_offsite_building = {
+				type = industrial_complex
+				level = adding_inds
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = adding_arms
+			}
 		}
 	}
 		

@@ -1692,3 +1692,85 @@ GRB_trading_category = {
 		}
 	} 
 }
+
+
+GRB_bigben_category = {
+	GRB_build_one_bigben = {
+		visible = {
+			check_variable = { grb_bigben_level < 4 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.08
+			consumer_goods_factor = 0.05
+			civilian_factory_use = 2
+		}
+		cost = 50
+		remove_effect = {
+			add_to_variable = { grb_bigben_level = 1 }
+		}
+	}
+	GRB_finish_bigben = {
+		visible = {
+			check_variable = { grb_bigben_level = 4 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.12
+			consumer_goods_factor = 0.1
+			civilian_factory_use = 4
+		}
+		fire_only_once = yes
+		cost = 50
+		remove_effect = {
+			add_ideas = GRB_bigben
+		}
+	}
+}
+
+GRB_tower_category = {
+	GRB_build_one_tower = {
+		visible = {
+			check_variable = { grb_tower_level < 4 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.08
+			consumer_goods_factor = 0.05
+			civilian_factory_use = 2
+		}
+		cost = 50
+		remove_effect = {
+			add_to_variable = { grb_tower_level = 1 }
+		}
+	}
+	GRB_finish_tower = {
+		visible = {
+			check_variable = { grb_tower_level = 4 }
+			
+		}
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 3 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.12
+			consumer_goods_factor = 0.1
+			civilian_factory_use = 4
+		}
+		cost = 50
+		remove_effect = {
+			add_ideas = GRB_london_tower
+		}
+	}
+}

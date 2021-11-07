@@ -682,19 +682,60 @@ ideas = {
 			}
 		}
 		
-		SOU_altidya = {
-			allowed = { original_tag = SOU }
-			available = { 
-				STG = {
-					NOT = {
-						has_country_leader = { name = "Altidiya" ruling_only = yes }
-					}
-				}
-				has_government = communism
-				
+		
+		SOU_victor_timoshenko = {
+			allowed = {
+				original_tag = SOU
 			}
-			traits = { altidiya_sssr }
+			
+			traits = {
+				minister_of_industry
+			}
 		}
+		SOU_sakharov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_tech = nuclear_reactor 
+			}
+			research_bonus = {
+				nuclear = 0.12
+			}
+
+			traits = { nuclear_scientist }
+		}
+		
+		SOU_chernov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = {
+				excavation_minister
+			}
+		}
+		
+		SOU_corolev = {
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_mistakes_of_past
+			}
+			
+			research_bonus = {
+				rocketry = 0.1
+			}
+			modifier = {
+				stability_factor = 0.05
+				experience_gain_air = 0.02
+			}
+			traits = {
+				rocketry_pioneer
+			}
+		}
+		
 	}
 	
 	theorist = {
@@ -706,6 +747,48 @@ ideas = {
 				has_completed_focus = SOU_art_of_war
 			}
 			traits = { army_planning_master_chief }
+		}
+		
+		SOU_andropov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			
+			traits = {
+				army_commando_2
+			}
+		}
+		
+		SOU_biryukov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			research_bonus = {
+				cat_mass_assault = 0.1
+			}
+			modifier = {
+				
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		
+		SOU_toporov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = {
+				air_airborne_2
+			}
 		}
 			
 	}
@@ -729,8 +812,9 @@ ideas = {
 				original_tag = SOU 
 			}
 			available = {
-				NOT = {
-					has_government = fascism
+				OR = { 
+					has_government = communism
+					has_completed_focus = SOU_appease_kryukov
 				}
 			}
 			traits = { army_chief_offensive_1 }
@@ -747,10 +831,83 @@ ideas = {
 		
 		dmitry_yazov = {
 			allowed = { original_tag = SOU }
-			available = { has_government = communism }
+			available = {
+				OR = {
+					has_completed_focus = SOU_officers_bund
+					has_government = communism
+				}
+			}
 			traits = { gen_yazov }
 		}
+		
+		sou_izotov = {
+			allowed = { original_tag = SOU }
+			available = {
+				has_government = democratic
+			}
+			
+			traits = {
+				army_infantry_2
+			}
+		}
 	}
+	
+	air_chief = {
+		SOU_belousov = {
+			allowed = { original_tag = SOU }
+			
+			available = {
+				has_completed_focus = SOU_airforce
+			}
+			
+			traits = {
+				air_air_superiority_3
+			}
+		}
+	}
+	
+	high_command = {
+		SOU_dernov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_logistics_2
+			}
+		}
+		
+		SOU_chepurin = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_chief_maneuver_2
+			}
+		}
+		
+		SOU_suvorov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_chief_drill_3
+			}
+		}
+		
+		SOY_bulgakov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_mixed_trait
+			}
+		}
+	}
+	
 	tank_manufacturer = {	
 		designer = yes 
 		

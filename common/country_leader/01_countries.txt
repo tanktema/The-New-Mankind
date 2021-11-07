@@ -24,7 +24,7 @@ leader_traits = {
 			random = no
 			political_power_gain = 0.5
 			stability_factor = 0.1
-			ai_focus_aggressivd_factor = 0.5
+			ai_focus_aggressive_factor = 0.5
 			mobilization_laws_cost_factor = -0.2
 			high_command_cost_factor = -0.2
 			
@@ -36,7 +36,7 @@ leader_traits = {
 			random = no
 			political_power_gain = 0.5
 			stability_factor = 0.1
-			ai_focus_aggressivd_factor = 0.5
+			ai_focus_aggressive_factor = 0.5
 			training_time_army_factor = -0.1
 			army_org_factor = 0.05
 			
@@ -77,7 +77,6 @@ leader_traits = {
 			max_command_power = 50
 			special_forces_cap = 0.05
 			mobilization_speed = 0.1
-			political_power_gain = -0.5
 			army_chief_cost_factor = 0.5
 			surrender_limit = -0.2
 		}
@@ -325,84 +324,211 @@ leader_traits = {
 			dig_in_speed = 2
 			army_speed_factor = 0.15
 		}
+	
+	
+	dies_soon_trait = {
+	
+		random = no 
+		custom_modifier_tooltip = dies_soon_tt 
+	}
+		
+	
+	lyra_human_lover = {
+		random = no 
+		custom_modifier_tooltip = acceptance_10_modifier
+		
+	}
 		
 		
-		dies_soon_trait = {
-		
-			random = no 
-			custom_modifier_tooltip = dies_soon_tt 
+	nuclear_pacifist = {
+		research_speed_factor = 0.05
+		research_bonus = {
+			nuclear = 0.1
 		}
+		stability_factor = 0.07
+		war_support_factor = -0.1
+	}
 		
 		
-		lyra_human_lover = {
-			random = no 
-			custom_modifier_tooltip = acceptance_10_modifier
-			
-		}
-		
-		
-		nuclear_pacifist = {
-			research_speed_factor = 0.05
-			research_bonus = {
-				nuclear = 0.1
-			}
-			stability_factor = -0.07
-			war_support_factor = -0.1
-		}
-		
-		
-		magical_human_assistant = {
-			random = no 
-			research_speed_factor = 0.05
-			research_bonus = {
-				magical_tech = 0.08
-				race_tech = 0.1
-			}
-		}
-		
-		gromyko_minist_trait = {
-			random = no 
-			custom_modifier_tooltip = acceptance_10_modifier
-			
-		}
-		gromyko_selhoz_trait = {
-			random = no 
-			MONTHLY_POPULATION = 0.25 
-			stability_factor = 0.02
-		}
-		
-		gen_yazov = {
-			random = no 
-			offence = 0.08
-			defence = 0.1 
-			army_org_factor = 0.15
-			political_power_gain = -0.1
-			stability_factor = -0.07
-			war_support_factor = 0.06
-		}
-		
-		
-		altidiya_sssr = {
-			random = no 
-			drift_defence_factor = 0.15
-			communism_drift = 0.02
-			stability_factor = 0.05
-		}
-		
-		trading_company_grb = {
-			random = no 
-			production_speed_industrial_complex_factor = 0.1
-			local_resources_factor = 0.15
-			stability_factor = 0.05
-		}
-		
-		first_nonhuman_leader = {
-			random = no 
-			stability_factor = 0.05
-			drift_defence_factor = 0.15
-			democratic_drift = 0.02
-			political_power_gain = 0.1
+	magical_human_assistant = {
+		random = no 
+		research_speed_factor = 0.05
+		research_bonus = {
+			magical_tech = 0.08
+			race_tech = 0.1
 		}
 	}
-	
 		
+	gromyko_minist_trait = {
+		random = no 
+		custom_modifier_tooltip = acceptance_10_modifier
+		
+	}
+	gromyko_selhoz_trait = {
+		random = no 
+		MONTHLY_POPULATION = 0.25 
+		stability_factor = 0.02
+	}
+		
+	gen_yazov = {
+		random = no 
+		offence = 0.08
+		defence = 0.1 
+		army_org_factor = 0.15
+		political_power_gain = -0.1
+		stability_factor = -0.07
+		war_support_factor = 0.06
+	}
+		
+		
+		
+		
+	trading_company_grb = {
+		random = no 
+		production_speed_industrial_complex_factor = 0.1
+		local_resources_factor = 0.15
+		stability_factor = 0.05
+	}
+		
+	first_nonhuman_leader = {
+		random = no 
+		stability_factor = 0.05
+		drift_defence_factor = 0.15
+		democratic_drift = 0.02
+		political_power_gain = 0.1
+	}
+	
+	
+	state_secretary = {
+		random = no 
+		stability_factor = 0.05
+		political_power_factor = 0.2
+		democratic_drift = 0.03
+	}
+	
+	peacekeeper_state = {
+		random = yes 
+		war_support_factor = -0.1
+		stability_factor = 0.08
+		political_power_gain = 0.1
+		democratic_drift = 0.02
+	}
+	
+	her_majesty_moneykeeper = {
+		random = no 
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.1
+		neutrality_drift = 0.02
+	}
+	
+	inner_politics_minister = {
+		random = no 
+		
+		agency_upgrade_time = -0.1
+		intel_network_gain_factor = 0.1
+		intelligence_agency_defense = 1
+		operative_slot = 2
+	}
+	
+	bloody_purger_human = {
+		random = no 
+		non_core_manpower = 0.1
+		starting_compliance = 0.05
+	}
+	
+	grb_fasc_trait = {
+		random = no
+		
+		fascism_drift = 0.03
+		drift_defence_factor = 0.2
+		stability_factor = 0.05
+		war_support_factor = 0.07
+	}
+	
+	labour_union_pred = {
+		random = no 
+		
+		communism_drift = 0.03
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.07
+	}
+	
+	
+	minister_of_industry = {
+		random = no 
+		
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.05
+		
+	}
+	
+	excavation_minister = {
+		random = no 
+		
+		local_resources_factor = 0.1
+		production_oil_factor = 0.1
+	}
+	
+	army_mixed_trait = {
+		random = no 
+		
+		army_attack_factor = 0.07
+		army_defence_factor = 0.07
+		army_org_factor = 0.05
+	}
+	
+	rocketry_pioneer = {
+		random = no 
+	}
+	
+	
+	reichminister_of_trade = {
+		random = no 
+		
+		trade_opinion_factor = 0.2
+		extra_trade_to_target_factor = 0.2
+		consumer_goods_factor = 0.05
+		
+	}
+	
+	
+	reformator_hum = {
+		random = yes 
+		
+		democratic_drift = 0.03
+		communism_drift = 0.03
+		stability_factor = 0.05
+		drift_defence_factor = -0.12
+	}
+	
+	
+	man_in_black = {
+		random = no 
+		
+		agency_upgrade_time = -0.1
+		intel_network_gain_factor = 0.12
+		intelligence_agency_defense = 2
+		operative_slot = 1
+	}
+	
+	
+	german_science_is_the_best = {
+		random = no 
+		
+		research_speed_factor = 0.07
+		stability_factor = -0.05
+		ai_focus_aggressive_factor = 0.3
+		fascism_drift = 0.03 
+		
+	}
+	
+	
+	rcbd_officer = {
+		random = no 
+		
+		winter_attrition_factor = -0.1
+		heat_attrition_factor = -0.1
+		army_org_regain = 0.20
+		no_supply_grace = 24
+		attrition = -0.1
+	}

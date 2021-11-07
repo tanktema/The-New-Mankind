@@ -6,6 +6,7 @@ set_research_slots = 2
 save_global_event_target_as = GEM
 
 set_technology = {
+	atomic_research = 1
 	human_race = 1
 	infantry_weapons1 = 1
    	melee_weapons = 1
@@ -201,7 +202,20 @@ create_field_marshal = {
 	logistics_skill = 4
 
 }
+create_field_marshal = {
+	name = "Henning fon Treskov"
+	portrait_path = "gfx/leaders/GEM/Treskov.dds"
+	traits = { 
+		old_guard
+		desert_storm
+	}
+	skill = 6
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 4
 
+}
 create_corps_commander = {
 	name = "Johannes Friesner"
 	portrait_path = "gfx/leaders/GEM/Friesner.dds"
@@ -226,3 +240,16 @@ create_corps_commander = {
 	planning_skill = 4
 	logistics_skill = 2
 }
+
+
+create_corps_commander = {
+	name = "Paskal Heinz"
+	portrait_path = "gfx/leaders/GEM/Heinz.dds"
+	traits = { adaptable infantry_commander_hum }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 2
+}
+

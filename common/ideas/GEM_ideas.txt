@@ -5,15 +5,15 @@ ideas = {
 			allowed = { original_tag = GEM }
 			
 			modifier = {
-				political_advisor_cost_factor = 2
-				trade_laws_cost_factor = 2
-				mobilization_laws_cost_factor = 2
-				economy_cost_factor = 2
-				high_command_cost_factor = 2
-				air_chief_cost_factor = 2
-				army_chief_cost_factor = 2
-				navy_chief_cost_factor = 2
-				political_power_gain = 2
+				political_advisor_cost_factor = 1
+				trade_laws_cost_factor = 1
+				mobilization_laws_cost_factor = 1
+				economy_cost_factor = 1
+				high_command_cost_factor = 1
+				air_chief_cost_factor = 1
+				army_chief_cost_factor = 1
+				navy_chief_cost_factor = 1
+				
 			}
 			
 		}
@@ -617,6 +617,70 @@ ideas = {
 				infantry_weapons = 0.1
 			}
 		}
+		
+		GEM_fittkau = {
+			allowed = {
+				original_tag = GEM
+			}
+			
+			available = {
+				NOT = {
+					has_idea = GEM_polit_crisis
+				}
+			}
+			
+			traits = { reichminister_of_trade }
+		}
+		
+		GEM_shmitz = {
+			allowed = {
+				original_tag = GEM 
+				
+			}
+			available = {
+				has_completed_focus = GEM_oppose_nazis
+			}
+			
+			traits = { reformator_hum }
+		}
+		
+		GEM_kleiner = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				man_in_black 
+			}
+		}
+		
+		GRB_wilhelm_strasse = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			available = {
+				has_completed_focus = GEM_war_never_changes
+			}
+			
+			traits = {
+				german_science_is_the_best
+			}
+		}
+		
+		GRB_heydrich = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			available = {
+				has_government = fascism
+			}
+			
+			traits = {
+				bloody_purger_human
+			}
+		}
 	}
 	army_chief = {
 		erwin_rommel_hmc = {
@@ -630,6 +694,14 @@ ideas = {
 				}
 			}
 			traits = { world_war_veteran }
+		}
+		
+		GEM_brestrich = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = { army_chief_offensive_2 }
 		}
 	}
 	tank_manufacturer = {
@@ -767,8 +839,52 @@ ideas = {
 					has_idea = erwin_rommel_hmc 
 				}
 			}
-			traits = { army_planning_master_chief }
+			traits = { blitzkrieg_theorist }
 		}
+		
+		GEM_heitmann = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			
+			available = {
+				has_completed_focus = GEM_wehrmacht
+			}
+			traits = {
+				army_chief_planning_2
+			}
+		}
+		
+		GEM_weber = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			available = {
+				AND = {
+					has_completed_focus = GEM_military_training
+					has_completed_focus = GEM_reactive_aircraft
+					has_completed_focus = GEM_fleet_tactics
+				}
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.1
+				air_doctrine = 0.1
+				land_doctrine = 0.1
+			}
+			
+			modifier = {
+				experience_gain_navy = 0.02
+				experience_gain_army = 0.02
+				experience_gain_air = 0.02
+				army_attack_factor = 0.07
+				army_core_defence_factor = 0.05
+			}
+		}
+				
+				
 	}
 	
 	air_chief = { 
@@ -782,3 +898,74 @@ ideas = {
 			}
 			traits = { airborne_creator }
 		}
+		
+	}
+	
+	navy_chief = {
+		
+		GEM_karl_doenitz = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = { navy_submarine_2 }
+		}
+	}
+	
+	
+	high_command = {
+		
+		GEM_radiant_croup = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_natives_police_squads
+			}
+			traits = {
+				rcbd_officer
+			}
+		}
+		
+		GEM_shternell = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_logistics_2
+			}
+		}
+		
+		GEM_engelberger = {	
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_chief_offensive_1
+			}
+			
+		}
+		
+		GEM_schoff = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_armored_1
+			}
+			
+		}
+		
+		GEM_hengstler = {
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_mixed_trait
+			}
+		}
+	}

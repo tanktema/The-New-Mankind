@@ -6,6 +6,7 @@ set_research_slots = 2
 save_global_event_target_as = SOU
 
 set_technology = {
+	atomic_research = 1
 	human_race = 1
 	infantry_weapons1 = 1
    	melee_weapons = 1
@@ -49,7 +50,7 @@ set_technology = {
 	interwar_antiair = 1
 	antiair1 = 1
 	interwar_antitank = 1
-	trench_warfare = 1
+	mass_assault = 1
 	antitank1 = 1
 }
 actually_fix_weapon_techs = yes
@@ -194,6 +195,21 @@ create_field_marshal = {
 	logistics_skill = 4
 	id = 1999
 }
+create_field_marshal = {
+   name = "Dmitry Yazov"
+   desc = "SOU_field_desc"
+   portrait_path = "gfx/leaders/SOU/Yazov.dds"
+   traits = { 
+		expert_delegator
+		unyielding_defender
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 4
+	id = 1998
+}
 
 
 create_corps_commander = {
@@ -210,6 +226,54 @@ create_corps_commander = {
 	planning_skill = 6
 	logistics_skill = 6
 	id = 1491
+}
+
+create_corps_commander = {
+	name = "Arseni Vinokurov"
+	desc = ""
+	portrait_path = "gfx/leaders/SOU/Vinokurov.dds"
+	traits = {
+		infantry_commander_hum
+		infantry_officer
+	}
+	skill = 4
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 5
+	
+}
+
+create_corps_commander = {
+	name = "Nikodim Kazankov"
+	desc = ""
+	portrait_path = "gfx/leaders/SOU/Kazankov.dds"
+	traits = {
+		scavenger
+		panzer_expert
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+	
+}
+
+create_corps_commander = {
+	name = "Vassili Pichushkin"
+	desc = ""
+	portrait_path = "gfx/leaders/SOU/Pichushkin.dds"
+	traits = {
+		trait_engineer
+		scavenger
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 3
+	
 }
 
 

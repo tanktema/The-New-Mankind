@@ -67,6 +67,14 @@ unlock_conditions_met_for_achievement_4 = {
 					is_owned_by = ROOT 
 				}
 			}
+			OR = {
+				GRB = {
+					is_subject_of = ROOT 
+				}
+				365 = {
+					is_owned_by = ROOT 
+				}
+			}
 		}
 		AND = {
 			original_tag = UNS 
@@ -86,6 +94,14 @@ unlock_conditions_met_for_achievement_4 = {
 					is_owned_by = ROOT 
 				}
 			}
+			OR = {
+				GRB = {
+					is_subject_of = ROOT 
+				}
+				365 = {
+					is_owned_by = ROOT 
+				}
+			}
 		}
 		AND = {
 			original_tag = GEM
@@ -102,6 +118,41 @@ unlock_conditions_met_for_achievement_4 = {
 					is_subject_of = ROOT 
 				}
 				96 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GRB = {
+					is_subject_of = ROOT 
+				}
+				365 = {
+					is_owned_by = ROOT 
+				}
+			}
+		}
+		AND = {
+			original_tag = GRB
+			OR = {
+				SOU = {
+					is_subject_of = ROOT 
+				}
+				332 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				UNS = {
+					is_subject_of = ROOT 
+				}
+				96 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GEM = {
+					is_subject_of = ROOT 
+				}
+				312 = {
 					is_owned_by = ROOT 
 				}
 			}
@@ -185,10 +236,7 @@ available_conditions_met_for_achievement_12 = {
 }
 unlock_conditions_met_for_achievement_12 = {
 	available_conditions_met_for_achievement_12 = yes
-	has_country_leader = {
-		name = "Nikita Yasnov"
-		ruling_only = yes 
-	}
+	has_completed_focus = SOU_execute_traitor
 } 
 available_conditions_met_for_achievement_13 = {
 	original_tag = SOU
@@ -263,9 +311,11 @@ available_conditions_met_for_achievement_17 = {
 	OR = {
 		original_tag = UNS 
 		original_tag = SOU 
+		original_tag = GRB
 	}
 }
 unlock_conditions_met_for_achievement_17 = {
+	available_conditions_met_for_achievement_17 = yes
 	has_tech = nukes
 	custom_trigger_tooltip = {
 		tooltip = new_berlin_nuked
@@ -278,6 +328,7 @@ available_conditions_met_for_achievement_18 = {
 	original_tag = GEM 
 }
 unlock_conditions_met_for_achievement_18 = {
+	available_conditions_met_for_achievement_18 = yes
 	all_country = {
 		limit = {
 			OR = {
@@ -314,6 +365,7 @@ available_conditions_met_for_achievement_19 = {
 	original_tag = GEM 
 }
 unlock_conditions_met_for_achievement_19 = {
+	available_conditions_met_for_achievement_19 = yes
 	has_tech = main_battle_tank
 	custom_trigger_tooltip = {
 		tooltip = num_modern_tank_bats_60
@@ -328,8 +380,23 @@ available_conditions_met_for_achievement_20 = {
 	}
 }
 unlock_conditions_met_for_achievement_20 = {
+	available_conditions_met_for_achievement_20 = yes 
 	custom_trigger_tooltip = {
 		tooltip = hum_rage_100_tt
 		check_variable = { human_rage > 99 }
+	}
+}
+
+available_conditions_met_for_achievement_21 = {
+	original_tag = GRB 
+}
+
+unlock_conditions_met_for_achievement_21 = {
+	available_conditions_met_for_achievement_21 = yes 
+	TRD = {
+		AND = {
+			is_subject_of = ROOT 
+			has_ideas = GRB_eco_integration
+		}
 	}
 }

@@ -275,7 +275,7 @@ country_event = {
 			create_country_leader = {
 				name = "Robert Anthony Eden"
 				desc = "GRB_EDEN_DESC"
-				picture = "Anthony_Eden.dds"
+				picture = "Eden.dds"
 				expire = 1999.9.9
 				ideology = conservatism
 			}
@@ -1438,4 +1438,6 @@ country_event = {
 				first_nonhuman_leader
 			}
 		}
+	}
+}
 		

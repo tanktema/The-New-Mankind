@@ -743,6 +743,10 @@ GEM_resources_trading = {
 	sell_resources_to_other_gem = {
 		visible = {
 			has_completed_focus = GEM_sell_resources
+			OR = {
+				arms_factory < 40
+				industrial_complex < 40
+			}
 		}
 		state_target = yes 
 		available = {

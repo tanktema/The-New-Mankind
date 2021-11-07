@@ -891,7 +891,7 @@ country_event = {
 		country_event = { id = sou.37 days = 60 }
 	}
 	option = {
-		name = sou.36.a
+		name = sou.36.b
 		trigger = {
 			democratic < 0.4
 		}
@@ -1013,6 +1013,15 @@ country_event = {
 			idea = SOU_purges
 			days = 365
 		}
+		every_unit_leader = {
+			limit = {
+				OR = {
+					has_id = 1999
+					has_id = 1998
+				}
+			}
+			remove_unit_leader = yes 
+		}
 	}
 	
 	option = {
@@ -1128,9 +1137,11 @@ country_event = {
 		add_war_support = 0.07
 		
 		every_unit_leader = {
-			OR = {
-				has_id = 1999
-				has_id = 1998
+			limit = {
+				OR = {
+					has_id = 1999
+					has_id = 1998
+				}
 			}
 			remove_unit_leader = yes 
 		}

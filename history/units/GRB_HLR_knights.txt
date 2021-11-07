@@ -31,46 +31,5 @@ units = {
 		start_equipment_factor = 0.25
 		start_experience_factor = 1
 	}
-	division = {
-		name = "Royal Guard"
-		location = 6157
-		division_template = "Her Majesty Knight Corps"
-		start_equipment_factor = 0.25
-		start_experience_factor = 1
-	}
-	division = {
-		name = "Royal Guard"
-		location = 6157
-		division_template = "Her Majesty Knight Corps"
-		start_equipment_factor = 0.25
-		start_experience_factor = 1
-	}
-	division = {
-		name = "Royal Guard"
-		location = 6157
-		division_template = "Her Majesty Knight Corps"
-		start_equipment_factor = 0.25
-		start_experience_factor = 1
-	}
-	division = {
-		name = "Royal Guard"
-		location = 6157
-		division_template = "Her Majesty Knight Corps"
-		start_equipment_factor = 0.25
-		start_experience_factor = 1
-	}
-	division = {
-		name = "Royal Guard"
-		location = 6157
-		division_template = "Her Majesty Knight Corps"
-		start_equipment_factor = 0.25
-		start_experience_factor = 1
-	}
-	division = {
-		name = "Royal Guard"
-		location = 6157
-		division_template = "Her Majesty Knight Corps"
-		start_equipment_factor = 0.25
-		start_experience_factor = 1
-	}
+	
 }

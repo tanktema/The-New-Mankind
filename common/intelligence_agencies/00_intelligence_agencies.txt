@@ -708,6 +708,26 @@ intelligence_agency = {
 	available = { original_tag = SOU } # И доступно будет для UNS 
 }
 
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_sou # Иконка нашего агентства
+	names = { "Abwehr" } # Уникальное имя агентства
+	
+	default = { tag = GEM } # Это агентство будет установлено по умолчанию для UNS 
+	available = { original_tag = GEM } # И доступно будет для UNS 
+}
+
+
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_sou # Иконка нашего агентства
+	names = { "MI-6" } # Уникальное имя агентства
+	
+	default = { tag = GRB } # Это агентство будет установлено по умолчанию для UNS 
+	available = { original_tag = GRB } # И доступно будет для UNS 
+}
+
+
 
 ########################
 ####	GENERICS    ####

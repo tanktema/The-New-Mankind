@@ -6,6 +6,7 @@ set_research_slots = 2
 save_global_event_target_as = GRB
 
 set_technology = {
+	atomic_research = 1
 	human_race = 1
 	infantry_weapons1 = 1
    	melee_weapons = 1
@@ -150,7 +151,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Hugh Todd Naylor Gaitskell"
 	desc = "GRB_comm_desc"
-	picture = "gfx/leaders/GEM/Ulbricht.dds"
+	picture = "gfx/leaders/GRB/Gaitskell.dds"
 	expire = "1989.1.1"
 	ideology = democratic_socialism
 	traits = { 
@@ -172,7 +173,7 @@ create_country_leader = {
 create_country_leader = {
    name = "Her Majesty Queen Elizabeth II"
    desc = "GRB_neutr_desc"
-   picture = "gfx/leaders/GEM/MilCouncil.dds"
+   picture = "gfx/leaders/GRB/QueenEliz.dds"
    expire = "1989.1.1"
    ideology = despotism 
    traits = { 
@@ -180,3 +181,67 @@ create_country_leader = {
 	}
 }
 
+
+create_field_marshal = {
+   name = "Bernard Montgomerey"
+   desc = "GRB_field_desc"
+   portrait_path = "gfx/leaders/GRB/Montgomerie.dds"
+   traits = { 
+		expert_delegator
+		unyielding_defender
+	}
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 6
+	logistics_skill = 4
+	#id = 1998
+}
+
+
+create_corps_commander = {
+	name = "Jake Grant"
+	desc = "GRB_gen_1"
+	portrait_path = "gfx/leaders/GRB/General_1.dds"
+	traits = {
+		infantry_commander_hum
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 3
+	
+}
+create_corps_commander = {
+	name = "Danny Barnest"
+	desc = "GRB_gen_2"
+	portrait_path = "gfx/leaders/GRB/General_2.dds"
+	traits = {
+		trait_engineer
+		scavenger
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 4
+	
+}
+
+create_corps_commander = {
+	name = "Rowan Lawrence"
+	desc = "GRB_gen_3"
+	portrait_path = "gfx/leaders/GRB/General_3.dds"
+	traits = {
+		panzer_expert
+		tankist_commander_hum
+	}
+	skill = 5
+	attack_skill = 3
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 4
+	
+}
