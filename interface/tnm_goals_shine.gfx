@@ -24702,7 +24702,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = GFX_goal_GRB_brittraders_shine"
+		name = "GFX_goal_GRB_brittraders_shine"
 		texturefile = "gfx/interface/goals/fund_the_research.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
