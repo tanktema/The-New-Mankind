@@ -214,6 +214,15 @@ leader_traits = {
 		}
 	}
 	
+	rhbz_trait = {
+		type = corps_commander
+		modifier = {
+			attrition = -0.1
+			army_morale_factor = 0.1
+			army_org = 5
+			army_speed_factor = 0.05
+		}
+	}
 	
 	operative_secret_service = { # Название трейта 
 		random = no

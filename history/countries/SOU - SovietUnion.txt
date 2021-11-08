@@ -261,12 +261,13 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Vassili Pichushkin"
+	name = "Sergey Demidov"
 	desc = ""
-	portrait_path = "gfx/leaders/SOU/Pichushkin.dds"
+	portrait_path = "gfx/leaders/SOU/Demidov.dds"
 	traits = {
 		trait_engineer
 		scavenger
+		rhbz_trait
 	}
 	skill = 3
 	attack_skill = 4

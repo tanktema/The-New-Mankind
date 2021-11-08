@@ -449,7 +449,7 @@ country_event = {
 		hidden_effect = {
 			create_corps_commander = {
 				name = "Dominic Harrison"
-				portrait_path = "gfx/leaders/GRB/gen_broady.dds"
+				portrait_path = "gfx/leaders/GRB/Harrison.dds"
 				traits = { trait_cautious }
 				skill = 3 
 				attack_skill = 2
@@ -459,7 +459,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Alistar Ward"
-				portrait_path = "gfx/leaders/GRB/gen_savage.dds"
+				portrait_path = "gfx/leaders/GRB/Ward.dds"
 				traits = { infantry_commander_hum }
 				skill = 3
 				attack_skill = 4
@@ -469,7 +469,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Louie Carter"
-				portrait_path = "gfx/leaders/GRB/gen_barton.dds"
+				portrait_path = "gfx/leaders/GRB/Carter.dds"
 				traits = { armor_officer }
 				skill = 4
 				attack_skill = 4
@@ -491,7 +491,7 @@ country_event = {
 		hidden_effect = {
 			create_corps_commander = {
 				name = "Dominic Harrison"
-				portrait_path = "gfx/leaders/GRB/gen_broady.dds"
+				portrait_path = "gfx/leaders/GRB/Harrison.dds"
 				traits = { trait_cautious }
 				skill = 3 
 				attack_skill = 2
@@ -501,7 +501,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Alistar Ward"
-				portrait_path = "gfx/leaders/GRB/gen_savage.dds"
+				portrait_path = "gfx/leaders/GRB/Ward.dds"
 				traits = { infantry_commander_hum }
 				skill = 3
 				attack_skill = 4
@@ -511,7 +511,7 @@ country_event = {
 			}
 			create_corps_commander = {
 				name = "Louie Carter"
-				portrait_path = "gfx/leaders/GRB/gen_barton.dds"
+				portrait_path = "gfx/leaders/GRB/Carter.dds"
 				traits = { armor_officer }
 				skill = 4
 				attack_skill = 4
@@ -522,7 +522,7 @@ country_event = {
 		
 			create_corps_commander = {
 				name = "Blast Guard"
-				portrait_path = "gfx/leaders/UNS/moonstriker.dds"
+				portrait_path = "gfx/leaders/GRB/BlastGuard.dds"
 				traits = { terrain_penalty_reduction = 0.25 } 
 				skill = 6
 				attack_skill = 7

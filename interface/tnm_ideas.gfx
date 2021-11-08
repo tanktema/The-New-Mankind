@@ -452,13 +452,10 @@ spriteTypes = {
 		name = "GFX_idea_GEM_limited_xepansion"
 		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
 	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
-	}
+	
 	SpriteType = {
 		name = "GFX_idea_GEM_unlimited_expansion"
-		texturefile = "gfx/interface/ideas/.dds"
+		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_GEM_military_mission"
@@ -700,6 +697,839 @@ spriteTypes = {
 		name = "GFX_idea_human_society"
 		texturefile = "gfx/interface/ideas/human_society.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_idea_UNS_no_suffer"
+		texturefile = "gfx/interface/ideas/UNS_STC_no_suffer.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_we_protect"
+		texturefile = "gfx/interface/ideas/UNS_we_protect.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_we_help"
+		texturefile = "gfx/interface/ideas/UNS_we_help.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_salvation"
+		texturefile = "gfx/interface/ideas/UNS_salvation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_minpeace_healthdep_idea"
+		texturefile = "gfx/interface/ideas/UNS_minpeace_healthdep_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_minpeace_edudep_idea"
+		texturefile = "gfx/interface/ideas/UNS_minpeace_edudep_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_minpeace_satdep_idea"
+		texturefile = "gfx/interface/ideas/UNS_minpeace_satdep_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_biobombings"
+		texturefile = "gfx/interface/ideas/UNS_biobombings.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_work_together"
+		texturefile = "gfx/interface/ideas/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_angels_of_death_idea"
+		texturefile = "gfx/interface/ideas/UNS_angels_of_death_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_victory_is_ours"
+		texturefile = "gfx/interface/ideas/UNS_victory_is_ours.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_officers_purge"
+		texturefile = "gfx/interface/ideas/GEM_hanged_nazi.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_wartime_measures_idea"
+		texturefile = "gfx/interface/ideas/SOU_destroyeed_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_propaganda_mil"
+		texturefile = "gfx/interface/ideas/SOU_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_native_army"
+		texturefile = "gfx/interface/ideas/GEM_native_police.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_war_preparation"
+		texturefile = "gfx/interface/ideas/GEM_fortification.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_equestrian_defplan"
+		texturefile = "gfx/interface/ideas/SOU_prep_inv.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_bestrong"
+		texturefile = "gfx/interface/ideas/SOU_peacekeepers.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_statesoc_broadcast"
+		texturefile = "gfx/interface/ideas/SOU_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_prepared_for_war"
+		texturefile = "gfx/interface/ideas/GEM_fortification.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_nukes_by_wmd"
+		texturefile = "gfx/interface/ideas/UNS_nukes_by_wmd.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_rarity"
+		texturefile = "gfx/interface/ideas/idea_rarity.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_pacific_equestrian_railroad"
+		texturefile = "gfx/interface/ideas/UNS_pacific_equestrian.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_soviet_trainings"
+		texturefile = "gfx/interface/ideas/mobilize_more_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_german_scientists"
+		texturefile = "gfx/interface/ideas/GEM_research.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_humanity_first_idea"
+		texturefile = "gfx/interface/ideas/SOU_no_xenopobia.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_frienship_perfections"
+		texturefile = "gfx/interface/ideas/peace_garranty.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_afterwar_support_idea"
+		texturefile = "gfx/interface/ideas/eqs_afterwar.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_afterwar_support_idea_uns"
+		texturefile = "gfx/interface/ideas/eqs_afterwar.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_harmony_defender_idea"
+		texturefile = "gfx/interface/ideas/eqs_volunterrs.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_red_march_idea"
+		texturefile = "gfx/interface/ideas/comm_influence_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_paratroopers_invasion"
+		texturefile = "gfx/interface/ideas/UNS_paratroopers.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_marines_invasion"
+		texturefile = "gfx/interface/ideas/UNS_marines.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_usmc_invasion"
+		texturefile = "gfx/interface/ideas/UNS_marines.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_fighters_for_war"
+		texturefile = "gfx/interface/ideas/aircraft_prod_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_heavy_aircraft"
+		texturefile = "gfx/interface/ideas/aircraft_prod_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_build_ships"
+		texturefile = "gfx/interface/ideas/SOU_cut_the_sa.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_build_dockyards"
+		texturefile = "gfx/interface/ideas/SOU_cut_the_sa.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_comm_superiority"
+		texturefile = "gfx/interface/ideas/SOU_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_support"
+		texturefile = "gfx/interface/ideas/people_military.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_vittenland_science"
+		texturefile = "gfx/interface/ideas/tech_park_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_dogs_geologists"
+		texturefile = "gfx/interface/ideas/UNS_geologists.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_ulbricht_exile"
+		texturefile = "gfx/interface/ideas/UNS_ulbricht.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_lyra_heartsrings"
+		texturefile = "gfx/interface/ideas/UNS_heartstrings.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_robert_oppenheimer"
+		texturefile = "gfx/interface/ideas/UNS_oppenheimer.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_sky_star"
+		texturefile = "gfx/interface/ideas/UNS_sky_star.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_general_bradley"
+		texturefile = "gfx/interface/ideas/UNS_bradley.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_phelps"
+		texturefile = "gfx/interface/ideas/UNS_phelps.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_holland"
+		texturefile = "gfx/interface/ideas/UNS_holland.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_harrison"
+		texturefile = "gfx/interface/ideas/UNS_harrison.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_billy_scott"
+		texturefile = "gfx/interface/ideas/UNS_billy_scott.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_zak_Harris"
+		texturefile = "gfx/interface/ideas/UNS_zak_Harris.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_hudson"
+		texturefile = "gfx/interface/ideas/UNS_hudson.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_kline"
+		texturefile = "gfx/interface/ideas/UNS_kline.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_alice"
+		texturefile = "gfx/interface/ideas/UNS_alice.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_GEM_fittkau"
+		texturefile = "gfx/interface/ideas/GEM_fittkau.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_shmitz"
+		texturefile = "gfx/interface/ideas/GEM_shmitz.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_kleiner"
+		texturefile = "gfx/interface/ideas/GEM_kleiner.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_wilhelm_strasse"
+		texturefile = "gfx/interface/ideas/GRB_wilhelm_strasse.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_heydrich"
+		texturefile = "gfx/interface/ideas/GRB_heydrich.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_brestrich"
+		texturefile = "gfx/interface/ideas/GEM_brestrich.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_heitmann"
+		texturefile = "gfx/interface/ideas/GEM_heitmann.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_weber"
+		texturefile = "gfx/interface/ideas/GEM_weber.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_karl_doenitz"
+		texturefile = "gfx/interface/ideas/GEM_karl_doenitz.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_radiant_croup"
+		texturefile = "gfx/interface/ideas/GEM_radiant_croup.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_shternell"
+		texturefile = "gfx/interface/ideas/GEM_shternell.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_engelberger"
+		texturefile = "gfx/interface/ideas/GEM_engelberger.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_schoff"
+		texturefile = "gfx/interface/ideas/GEM_schoff.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_hengstler"
+		texturefile = "gfx/interface/ideas/GEM_hengstler.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_industry_financies"
+		texturefile = "gfx/interface/ideas/GRB_industry_financies.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_military_financies"
+		texturefile = "gfx/interface/ideas/GRB_industry_financies.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_pony_science"
+		texturefile = "gfx/interface/ideas/GEM_research_eqs.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_human_science"
+		texturefile = "gfx/interface/ideas/tech_park_idea.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_GRB_volunteers_of_peace_idea"
+		texturefile = "gfx/interface/ideas/eqs_volunterrs.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_GEM_friendship"
+		texturefile = "gfx/interface/ideas/GEM_politcrisis.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_SOU_experience"
+		texturefile = "gfx/interface/ideas/UNS_salvation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_equestrian_debt"
+		texturefile = "gfx/interface/ideas/eqs_afterwar.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_communism_defenders"
+		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_communism_influence"
+		texturefile = "gfx/interface/ideas/comm_influence_idea.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_GRB_communism_army"
+		texturefile = "gfx/interface/ideas/UNS_salvation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_rifles_for_revolution"
+		texturefile = "gfx/interface/ideas/GRB_rifles_for_revolt.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_crisis_retaiment"
+		texturefile = "gfx/interface/ideas/GEM_debt_paying.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_native_people"
+		texturefile = "gfx/interface/ideas/GEM_native_police.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_place_to_work"
+		texturefile = "gfx/interface/ideas/extraworktime.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_extra_conscription"
+		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_royal_guard_idea"
+		texturefile = "gfx/interface/ideas/SOU_tsarizm.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_eco_reform"
+		texturefile = "gfx/interface/ideas/GEM_debt_paying.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_PNG_infl"
+		texturefile = "gfx/interface/ideas/SOU_propaganda.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_stop_famine"
+		texturefile = "gfx/interface/ideas/GEM_rat_dem.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_food_places"
+		texturefile = "gfx/interface/ideas/GRB_foodplaces.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_zebra_goods"
+		texturefile = "gfx/interface/ideas/UNS_minpeace_satdep_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_inquisition"
+		texturefile = "gfx/interface/ideas/UNS_victory_is_ours.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_knights"
+		texturefile = "gfx/interface/ideas/SOU_prep_inv.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_army_preparation_idea"
+		texturefile = "gfx/interface/ideas/UNS_we_protect.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_mi6_idea"
+		texturefile = "gfx/interface/ideas/GRB_mi6.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_cross_ocean"
+		texturefile = "gfx/interface/ideas/SOU_cut_the_sa.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_TRD_trading"
+		texturefile = "gfx/interface/ideas/GRB_capitalism.dds"
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_idea_GRB_crops"
+		texturefile = "gfx/interface/ideas/GRB_foodplaces.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_sterlings"
+		texturefile = "gfx/interface/ideas/GRB_sterlings.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_building_factories"
+		texturefile = "gfx/interface/ideas/factories_up.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_resources_idea"
+		texturefile = "gfx/interface/ideas/reusing_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_economics_peace"
+		texturefile = "gfx/interface/ideas/SOU_no_xenopobia.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_market_filling"
+		texturefile = "gfx/interface/ideas/depence_equestria.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_funds_sterling"
+		texturefile = "gfx/interface/ideas/GRB_sterlings.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_eco_integration"
+		texturefile = "gfx/interface/ideas/GEM_debt_paying.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_naval_power"
+		texturefile = "gfx/interface/ideas/SOU_heavy_fleet.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_naval_academy_idea"
+		texturefile = "gfx/interface/ideas/UNS_marines.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_radio_systems_idea"
+		texturefile = "gfx/interface/ideas/GEM_electricity.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_conscription_rising"
+		texturefile = "gfx/interface/ideas/SOU_peacekeepers.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_legion"
+		texturefile = "gfx/interface/ideas/twowar_exp_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_we_rule_the_war"
+		texturefile = "gfx/interface/ideas/people-militarize.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_bigben"
+		texturefile = "gfx/interface/ideas/GRB_bigben.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_london_tower"
+		texturefile = "gfx/interface/ideas/GRB_tower.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_vickers_armstrong"
+		texturefile = "gfx/interface/ideas/GRB_vickers_armstrong.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_royal_arsenal"
+		texturefile = "gfx/interface/ideas/GRB_royal_arsenal.dds"
+	}
+	
+	
+	SpriteType = {
+		name = "GFX_idea_GRB_porsche"
+		texturefile = "gfx/interface/ideas/GEM_porsche.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_esmee_hamilton"
+		texturefile = "gfx/interface/ideas/GRB_esmee_hamilton.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_darius_mason"
+		texturefile = "gfx/interface/ideas/GRB_darius_mason.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_richard_cole"
+		texturefile = "gfx/interface/ideas/GRB_richard_cole.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_tyler_grant"
+		texturefile = "gfx/interface/ideas/GRB_tyler_grant.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_jonas_owen"
+		texturefile = "gfx/interface/ideas/GRB_jonas_owen.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_taylor_mccarthny"
+		texturefile = "gfx/interface/ideas/GRB_taylor_mccarthny.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_albert_russell"
+		texturefile = "gfx/interface/ideas/GRB_albert_russell.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_holland_and_holland"
+		texturefile = "gfx/interface/ideas/GRB_holland_and_holland.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_accuracy_international"
+		texturefile = "gfx/interface/ideas/GRB_accuracy_international.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_westley_richards"
+		texturefile = "gfx/interface/ideas/GRB_westley_richards.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_kalashnikov"
+		texturefile = "gfx/interface/ideas/sou_kalashnikov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_baratt_development"
+		texturefile = "gfx/interface/ideas/GRB_baratt_development.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_vedanta_resources"
+		texturefile = "gfx/interface/ideas/GRB_vedanta_resources.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_cnh_industrial"
+		texturefile = "gfx/interface/ideas/GRB_cnh_industrial.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_royal_representation"
+		texturefile = "gfx/interface/ideas/GRB_royal_representation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_supermarine"
+		texturefile = "gfx/interface/ideas/GRB_supermarine.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_bristol"
+		texturefile = "gfx/interface/ideas/GRB_bristol.dds"
+	}
+	
+	
+	
+	SpriteType = {
+		name = "GFX_idea_GRB_boeing"
+		texturefile = "gfx/interface/ideas/boeing_concern.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_harland_and_wolves"
+		texturefile = "gfx/interface/ideas/GFX_idea_GRB_harland_and_wolves.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_mistral"
+		texturefile = "gfx/interface/ideas/mistral.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_patrick_turner"
+		texturefile = "gfx/interface/ideas/GRB_patrick_turner.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_elias_holland"
+		texturefile = "gfx/interface/ideas/GRB_elias_holland.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_mark_fletcher"
+		texturefile = "gfx/interface/ideas/GRB_mark_fletcher.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_emma_thomson"
+		texturefile = "gfx/interface/ideas/GRB_emma_thomson.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_montgomerie_ac"
+		texturefile = "gfx/interface/ideas/GRB_montgomerie.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_montgomerie_hmc"
+		texturefile = "gfx/interface/ideas/GRB_montgomerie.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_theodore_rees"
+		texturefile = "gfx/interface/ideas/GRB_theodore_rees.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_maximillian_berry"
+		texturefile = "gfx/interface/ideas/GRB_maximillian_berry.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_kingsley_grant"
+		texturefile = "gfx/interface/ideas/GRB_kingsley_grant.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_henry_williamson"
+		texturefile = "gfx/interface/ideas/GRB_henry_williamson.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_kasper_jones"
+		texturefile = "gfx/interface/ideas/GRB_kasper_jones.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_harris_brown"
+		texturefile = "gfx/interface/ideas/GRB_harris_brown.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_state_reforms"
+		texturefile = "gfx/interface/ideas/SOU_state_reforms.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_bund_blyat"
+		texturefile = "gfx/interface/ideas/comm_influence_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_global_support"
+		texturefile = "gfx/interface/ideas/eqs_afterwar.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_SOU_people_support"
+		texturefile = "gfx/interface/ideas/GEM_hanged_nazi.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_military_coup_f"
+		texturefile = "gfx/interface/ideas/UNS_we_protect.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_time_has_come"
+		texturefile = "gfx/interface/ideas/UNS_victory_is_ours.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_milit_reform"
+		texturefile = "gfx/interface/ideas/twowar_exp_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_roa"
+		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_STG_help"
+		texturefile = "gfx/interface/ideas/SOU_STG_help.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_childwork"
+		texturefile = "gfx/interface/ideas/extraworktime.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_yazov_camps"
+		texturefile = "gfx/interface/ideas/UNS_angels_of_death_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_enemies_here"
+		texturefile = "gfx/interface/ideas/UNS_we_help.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_mighty_union"
+		texturefile = "gfx/interface/ideas/GRB_rifles_for_revolt.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_purges"
+		texturefile = "gfx/interface/ideas/GEM_hanged_nazi.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_royal_guard"
+		texturefile = "gfx/interface/ideas/UNS_victory_is_ours.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_eco_reforms_idea"
+		texturefile = "gfx/interface/ideas/GRB_sterlings.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_rpz"
+		texturefile = "gfx/interface/ideas/SOU_rpz.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_gromyko_selhoz"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_gromyko_mininist"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_sakharov"
+		texturefile = "gfx/interface/ideas/SOU_sakharov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_corolev"
+		texturefile = "gfx/interface/ideas/SOU_corolev.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_victor_timoshenko"
+		texturefile = "gfx/interface/ideas/SOU_victor_timoshenko.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_chernov"
+		texturefile = "gfx/interface/ideas/SOU_chernov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_andropov"
+		texturefile = "gfx/interface/ideas/SOU_andropov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_biryukov"
+		texturefile = "gfx/interface/ideas/SOU_biryukov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_toporov"
+		texturefile = "gfx/interface/ideas/SOU_toporov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_dmitry_yazov"
+		texturefile = "gfx/interface/ideas/SOU_yazov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_sou_izotov"
+		texturefile = "gfx/interface/ideas/sou_izotov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_belousov"
+		texturefile = "gfx/interface/ideas/SOU_belousov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_dernov"
+		texturefile = "gfx/interface/ideas/SOU_dernov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_chepurin"
+		texturefile = "gfx/interface/ideas/SOU_chepurin.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOU_suvorov"
+		texturefile = "gfx/interface/ideas/SOU_suvorov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_SOY_bulgakov"
+		texturefile = "gfx/interface/ideas/SOY_bulgakov.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+
 
 #	SpriteType = {
 	#	name = "GFX_idea_SOU_kgb_defence"

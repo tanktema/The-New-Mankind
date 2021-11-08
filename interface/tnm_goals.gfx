@@ -3153,288 +3153,288 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOU_resources.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_shoreinf"
+		texturefile = "gfx/interface/goals/SOU_navy_ind.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_transports"
+		texturefile = "gfx/interface/goals/GEM_railroads.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_EQS_tradetreaty"
+		texturefile = "gfx/interface/goals/SOU_trade_treaty.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_trd_trade"
+		texturefile = "gfx/interface/goals/SOU_sell_res.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_strength_tradeways"
+		texturefile = "gfx/interface/goals/SOU_naval_treaty.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_brittraders"
+		texturefile = "gfx/interface/goals/fund_the_research.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_contact_soviet_arms"
+		texturefile = "gfx/interface/goals/GRB_contact_SOU_companies.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_america_aircraft"
+		texturefile = "gfx/interface/goals/GRB_contact_UNS_companies.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_germantanks"
+		texturefile = "gfx/interface/goals/GRB_contact_GEM_companies.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_concentrate"
+		texturefile = "gfx/interface/goals/concent_ind.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_resources_hum"
+		texturefile = "gfx/interface/goals/keep_searching.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_crops"
+		texturefile = "gfx/interface/goals/GEM_rations.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_quality"
+		texturefile = "gfx/interface/goals/producing_weapons.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_transnets"
+		texturefile = "gfx/interface/goals/SOU_infrastr.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_strehgth_funds"
+		texturefile = "gfx/interface/goals/gold_stack.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_tradeemp"
+		texturefile = "gfx/interface/goals/GEM_united_nations.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_factories"
+		texturefile = "gfx/interface/goals/UNS_works.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_expand_res"
+		texturefile = "gfx/interface/goals/SOU_geo_treaty.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_peaceeco"
+		texturefile = "gfx/interface/goals/SOU_finish_rebuild.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_todd_howard"
+		texturefile = "gfx/interface/goals/GRB_buy_it.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_no_mistakes"
+		texturefile = "gfx/interface/goals/big_change.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_factory_expansion"
+		texturefile = "gfx/interface/goals/rise_the_industry.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_magic"
+		texturefile = "gfx/interface/goals/UNS_SNOVA_invite_magician.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_techtrade"
+		texturefile = "gfx/interface/goals/SOU_tech_trade.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_armor"
+		texturefile = "gfx/interface/goals/UNS_machines_of_war.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_bigben"
+		texturefile = "gfx/interface/goals/GRB_rebuild_bigben.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_milind"
+		texturefile = "gfx/interface/goals/SOU_rebuild_start.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_oil"
+		texturefile = "gfx/interface/goals/oil_rework.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_metall"
+		texturefile = "gfx/interface/goals/metal_rework.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_aluminium"
+		texturefile = "gfx/interface/goals/GRB_aluminium.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_rocketry"
+		texturefile = "gfx/interface/goals/GRB_rockets.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_nukes"
+		texturefile = "gfx/interface/goals/uns_wmd.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_armor_new"
+		texturefile = "gfx/interface/goals/end_of_modern.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_tower"
+		texturefile = "gfx/interface/goals/GRB_tower_rebuild.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_army"
+		texturefile = "gfx/interface/goals/GRB_army_effort.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_quality_focus"
+		texturefile = "gfx/interface/goals/army_update.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_quantity_army"
+		texturefile = "gfx/interface/goals/GRB_expand_garrisons.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_support_fleet"
+		texturefile = "gfx/interface/goals/naval_superiority.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_superiority"
+		texturefile = "gfx/interface/goals/GEM_shark_teeth.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_dockyards"
+		texturefile = "gfx/interface/goals/build_dockyards.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_fleet_doctrine"
+		texturefile = "gfx/interface/goals/SOU_rebuild_the_fleet.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "SOU_rebuild_the_fleet"
+		texturefile = "gfx/interface/goals/SOU_mgu.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_tank_upg"
+		texturefile = "gfx/interface/goals/SOU_upgrade_tanks.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_eqpm_upd"
+		texturefile = "gfx/interface/goals/UNS_best_weap.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_modernization"
+		texturefile = "gfx/interface/goals/modernize_army.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_snipers"
+		texturefile = "gfx/interface/goals/sniper_bonus.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_doctrine"
+		texturefile = "gfx/interface/goals/doctrine_dev.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_fighters"
+		texturefile = "gfx/interface/goals/attack_avia.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_airfields"
+		texturefile = "gfx/interface/goals/SOU_new_airbases.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_SAS"
+		texturefile = "gfx/interface/goals/GRB_sas.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_radio"
+		texturefile = "gfx/interface/goals/GEM_ionosphere.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_air_doctrine"
+		texturefile = "gfx/interface/goals/SRS_aviation_dreams.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_ruler_of_the_war"
+		texturefile = "gfx/interface/goals/exp_off_two_wars.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_expand_air"
+		texturefile = "gfx/interface/goals/air_production.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_avia_prod"
+		texturefile = "gfx/interface/goals/air_doctrine.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_pilots"
+		texturefile = "gfx/interface/goals/aces_prep.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_conscription_3"
+		texturefile = "gfx/interface/goals/second_edition.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_cheapprod"
+		texturefile = "gfx/interface/goals/industry_effort.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_personal_armor"
+		texturefile = "gfx/interface/goals/UNS_armor.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_artillery"
+		texturefile = "gfx/interface/goals/SOU_artillery_effort.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_snipers_dev"
+		texturefile = "gfx/interface/goals/GRB_snipers.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_coastal_guard"
+		texturefile = "gfx/interface/goals/coastal_guard.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_carriers"
+		texturefile = "gfx/interface/goals/old_doctrine.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_navalbases"
+		texturefile = "gfx/interface/goals/build_naval_bases.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_buildingfleet"
+		texturefile = "gfx/interface/goals/GRB_navy.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_buildfleet"
+		texturefile = "gfx/interface/goals/new_way.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_GRB_we_are_legion"
+		texturefile = "gfx/interface/goals/GEM_last_preparation.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_SOU_natref"
+		texturefile = "gfx/interface/goals/GEM_council.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_SOU_crystal_mnt"
+		texturefile = "gfx/interface/goals/UNS_crystal_mnt.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_SOU_yazov_bund"
+		texturefile = "gfx/interface/goals/SOU_Yazov_bund.dds"
 	}
 	SpriteType = {
-		name = "GFX_goal_"
-		texturefile = "gfx/interface/goals/.dds"
+		name = "GFX_goal_SOU_kryukov"
+		texturefile = "gfx/interface/goals/SOU_kryukov.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_"

@@ -172,6 +172,7 @@ focus_tree = {
 		id = SOU_friend_stalliongrad
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_world
 		relative_position_id = SOU_communism_focus
 		prerequisite = { focus = SOU_communism_focus }
 		cost = 5
@@ -193,6 +194,7 @@ focus_tree = {
 		id = SOU_national_reform
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_natref
 		relative_position_id = SOU_friend_stalliongrad
 		prerequisite = { focus = SOU_friend_stalliongrad }
 		cost = 5
@@ -206,6 +208,7 @@ focus_tree = {
 		icon = GFX_goal_stalliongrad_pact
 		x = 1
 		y = 1
+		icon = GFX_goal_stalliongrad_pact
 		relative_position_id = SOU_support_workers
 		prerequisite = { focus = SOU_national_reform }
 		prerequisite = { focus = SOU_support_workers }
@@ -222,6 +225,7 @@ focus_tree = {
 		id = SOU_contact_eqs
 		x = -2
 		y = 1
+		icon = GFX_goal_SOU_equestria
 		relative_position_id = SOU_stalliongrad_alliance
 		prerequisite = { focus = SOU_stalliongrad_alliance }
 		cost = 5
@@ -248,6 +252,7 @@ focus_tree = {
 		id = SOU_contact_uns
 		x = 0
 		y = 1
+		icon = GFX_goal_embass_ussr
 		relative_position_id = SOU_stalliongrad_alliance
 		prerequisite = { focus = SOU_stalliongrad_alliance }
 		cost = 5
@@ -273,6 +278,7 @@ focus_tree = {
 		id = SOU_contact_gem
 		x = 2
 		y = 1
+		icon = GFX_goal_GEM_invite_SOU
 		relative_position_id = SOU_stalliongrad_alliance
 		prerequisite = { focus = SOU_stalliongrad_alliance }
 		cost = 5
@@ -343,6 +349,7 @@ focus_tree = {
 		id = SOU_support_eqs_socialists
 		x = 0
 		y = 1
+		icon = GFX_goal_help_starlight
 		relative_position_id = SOU_support_pantsushenko
 		prerequisite = { focus = SOU_support_pantsushenko }
 		cost = 5
@@ -364,6 +371,7 @@ focus_tree = {
 		id = SOU_weter_influence
 		x = -2
 		y = 1
+		icon = GFX_goal_SOU_griffons
 		relative_position_id = SOU_support_eqs_socialists
 		prerequisite = { focus = SOU_support_eqs_socialists }
 		cost = 5
@@ -384,6 +392,7 @@ focus_tree = {
 		id = SOU_crystal_influence
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_crystal_mnt
 		relative_position_id = SOU_support_eqs_socialists
 		prerequisite = { focus = SOU_support_eqs_socialists }
 		cost = 5
@@ -403,6 +412,7 @@ focus_tree = {
 		id = SOU_equestrian_so_revolution
 		x = 1
 		y = 1
+		icon = GFX_goal_world_soc
 		relative_position_id = SOU_weter_influence
 		prerequisite = { focus = SOU_weter_influence }
 		prerequisite = { focus = SOU_crystal_influence }
@@ -475,6 +485,7 @@ focus_tree = {
 		id = SOU_trainings_with_stg 
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_military_sovet
 		relative_position_id = SOU_support_serov
 		prerequisite = { focus = SOU_support_serov }
 		cost = 5
@@ -490,6 +501,7 @@ focus_tree = {
 		id = SOU_soc_prop_eqs
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_equus
 		relative_position_id = SOU_support_serov
 		prerequisite = { focus = SOU_support_serov }
 		cost = 5
@@ -504,6 +516,7 @@ focus_tree = {
 		id = SOU_equstrian_invasion
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_red_march
 		bypass = {
 			OR = {
 				has_war_with = EQS 
@@ -536,6 +549,7 @@ focus_tree = {
 				country_exists = EQS 
 			}
 		}
+		icon = GFX_goal_UNS_propaganda
 		relative_position_id = SOU_equstrian_invasion
 		prerequisite = { focus = SOU_equstrian_invasion }
 		cost = 5
@@ -550,6 +564,7 @@ focus_tree = {
 		id = SOU_invade_CHN 
 		x = -3
 		y = 1
+		icon = GFX_goal_SOU_crush_bugs
 		bypass = {
 			OR = {
 				has_war_with = CHN 
@@ -571,6 +586,7 @@ focus_tree = {
 		id = SOU_eqvus_soc
 		x = -3
 		y = 1
+		icon = GFX_goal_GEM_equality
 		relative_position_id = SOU_invade_CHN
 		prerequisite = { focus = SOU_invade_CHN }
 		cost = 5
@@ -600,6 +616,7 @@ focus_tree = {
 		id = SOU_olenian_ultimatum
 		x = -1
 		y = 1
+		icon = GFX_goal_GEM_deers
 		bypass = {
 			OLE = {
 				is_in_faction_with = ROOT 
@@ -632,6 +649,7 @@ focus_tree = {
 		id = SOU_pressure_yaks
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_invade_YAK
 		relative_position_id = SOU_eqvus_soc
 		prerequisite = { focus = SOU_eqvus_soc }
 		cost = 5
@@ -674,6 +692,7 @@ focus_tree = {
 		id = SOU_northern_friends
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_big_hunt
 		relative_position_id = SOU_olenian_ultimatum
 		prerequisite = { focus = SOU_olenian_ultimatum }
 		prerequisite = { focus = SOU_pressure_yaks }
@@ -718,6 +737,7 @@ focus_tree = {
 		id = SOU_griffon_soc
 		x = 3
 		y = 1
+		icon = GFX_goal_GRB_GRIFFCOM
 		relative_position_id = SOU_invade_CHN
 		prerequisite = { focus = SOU_invade_CHN }
 		cost = 5
@@ -749,6 +769,7 @@ focus_tree = {
 		id = SOU_go_through_north
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_invade_GRF
 		bypass = {
 			SRS = {
 				is_in_faction_with = ROOT 
@@ -779,6 +800,7 @@ focus_tree = {
 		id = SOU_go_through_south
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_EQC_attack
 		bypass = {
 			EQC = {
 				is_in_faction_with = ROOT 
@@ -809,6 +831,7 @@ focus_tree = {
 		id = SOU_northern_placdarm
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_attack_SRS
 		relative_position_id = SOU_go_through_north
 		prerequisite = { focus = SOU_go_through_north OR =  SOU_go_through_south }
 		cost = 5
@@ -864,6 +887,7 @@ focus_tree = {
 		id = SOU_red_sunrise
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_unity_focus
 		available = {
 			all_country = {
 				has_government = communism
@@ -939,6 +963,7 @@ focus_tree = {
 		id = SOU_new_reforms
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_enhance
 		relative_position_id = SOU_international_support
 		prerequisite = { focus = SOU_international_support }
 		cost = 5
@@ -971,6 +996,7 @@ focus_tree = {
 		id = SOU_public_speeches
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_GEM_ultimatum
 		relative_position_id = SOU_people_support
 		prerequisite = { focus = SOU_people_support }
 		cost = 5
@@ -1026,7 +1052,7 @@ focus_tree = {
 			hidden_effect = {
 				create_corps_commander = {
 					name = "Captain Alexey Smirnov"
-					portrait_path = "gfx/leaders/SOU/Smirnov_hum.dds"
+					portrait_path = "gfx/leaders/SOU/Smirnov_human.dds"
 					traits = { tankist_commander_hum }
 					skill = 5 
 					attack_skill = 4
@@ -1054,6 +1080,7 @@ focus_tree = {
 		id = SOU_contact_natives
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_heal_wounds
 		relative_position_id = SOU_democratic_reform
 		prerequisite = { focus = SOU_democratic_reform }
 		cost = 5
@@ -1084,6 +1111,7 @@ focus_tree = {
 		id = SOU_eqvus_friends
 		x = -3
 		y = 1
+		icon = GFX_goal_UNS_equus
 		relative_position_id = SOU_contact_natives
 		prerequisite = { focus = SOU_contact_natives }
 		mutually_exclusive = { focus = SOU_griphonia_Friends }
@@ -1098,6 +1126,7 @@ focus_tree = {
 		id = SOU_UNS_friendship
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_SOU
 		relative_position_id = SOU_eqvus_friends
 		prerequisite = { focus = SOU_eqvus_friends }
 		cost = 5
@@ -1122,13 +1151,14 @@ focus_tree = {
 		id = SOU_EQS_friendship
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_eques_friend
 		relative_position_id = SOU_eqvus_friends
 		prerequisite = { focus = SOU_eqvus_friends }
 		cost = 5
 		completion_reward = {
 			give_guarantee = EQS 
 			EQS = { 
-				country_event = { id = generic.2 }
+				country_event = { id = generic.2 days = 2 }
 				hidden_effect = {
 					add_ai_strategy = {
 						type = alliance
@@ -1146,6 +1176,7 @@ focus_tree = {
 		id = SOU_human_pony_alliance
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_comtacts
 		relative_position_id = SOU_UNS_friendship
 		prerequisite = { focus = SOU_UNS_friendship }
 		prerequisite = { focus = SOU_EQS_friendship }
@@ -1163,6 +1194,7 @@ focus_tree = {
 		id = SOU_griphonia_friends
 		x = 3
 		y = 1
+		icon = GFX_goal_UNS_griffonia
 		relative_position_id = SOU_contact_natives
 		prerequisite = { focus = SOU_contact_natives }
 		mutually_exclusive = { focus = SOU_eqvus_friends }
@@ -1177,6 +1209,7 @@ focus_tree = {
 		id = SOU_contact_grb
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_SOU_d
 		relative_position_id = SOU_griphonia_friends
 		prerequisite = { focus = SOU_griphonia_friends }
 		cost = 5
@@ -1201,6 +1234,7 @@ focus_tree = {
 		id = SOU_contact_rifved
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_river
 		relative_position_id = SOU_griphonia_friends
 		prerequisite = { focus = SOU_griphonia_friends }
 		cost = 5
@@ -1226,6 +1260,7 @@ focus_tree = {
 		id = SOU_help_pact_rivfed
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_alliance
 		relative_position_id = SOU_contact_grb
 		prerequisite = { focus = SOU_contact_grb }
 		prerequisite = { focus = SOU_contact_rifved }
@@ -1252,6 +1287,7 @@ focus_tree = {
 		id = SOU_end_the_cpss_heritage
 		x = 3
 		y = 1
+		icon = GFX_goal_GEM_night_of_broken_glass
 		relative_position_id = SOU_human_pony_alliance
 		prerequisite = { focus = SOU_human_pony_alliance OR = SOU_help_pact_rivfed }
 		cost = 5
@@ -1272,6 +1308,7 @@ focus_tree = {
 		id = SOU_protests_against_fakes
 		x = -4
 		y = 1
+		icon = GFX_goal_fake
 		relative_position_id = SOU_elections
 		available = { always = no }
 		prerequisite = { focus = SOU_elections }
@@ -1287,6 +1324,7 @@ focus_tree = {
 		id = SOU_international_support_rev
 		x = -1
 		y = 1
+		icon = GFX_goal_eninside
 		relative_position_id = SOU_protests_against_fakes 
 		prerequisite = { focus = SOU_protests_against_fakes }
 		cost = 5
@@ -1300,6 +1338,7 @@ focus_tree = {
 		id = SOU_people_inspire
 		x = 1
 		y = 1
+		icon = GFX_goal_help_eqs
 		relative_position_id = SOU_protests_against_fakes
 		prerequisite = { focus = SOU_protests_against_fakes }
 		cost = 5
@@ -1312,6 +1351,7 @@ focus_tree = {
 		id = SOU_revolution ###### Again, motherfuckers....
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_society
 		relative_position_id = SOU_international_support_rev
 		prerequisite = { focus = SOU_international_support_rev }
 		prerequisite = { focus = SOU_people_inspire }
@@ -1326,6 +1366,7 @@ focus_tree = {
 		id = SOU_new_beginning
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_royal_meeting
 		relative_position_id = SOU_revolution
 		prerequisite = { focus = SOU_revolution }
 		available = { always = no }
@@ -1339,6 +1380,7 @@ focus_tree = {
 		id = SOU_new_constitution
 		x = -2
 		y = 1
+		icon = GFX_goal_const
 		relative_position_id = SOU_new_beginning
 		prerequisite = { focus = SOU_new_beginning }
 		cost = 5
@@ -1356,6 +1398,7 @@ focus_tree = {
 		id = SOU_state_reforms_demo
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_natref
 		relative_position_id = SOU_new_beginning
 		prerequisite = { focus = SOU_new_beginning }
 		cost = 5
@@ -1368,6 +1411,7 @@ focus_tree = {
 		id = SOU_rebuild_cities
 		x = 2
 		y = 1
+		icon = GFX_goal_GEM_city_update
 		relative_position_id = SOU_new_beginning
 		prerequisite = { focus = SOU_new_beginning }
 		cost = 5
@@ -1395,6 +1439,7 @@ focus_tree = {
 		id = SOU_destroy_the_cult
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_opposition
 		relative_position_id = SOU_state_reforms_demo
 		prerequisite = { focus = SOU_state_reforms_demo }
 		cost = 5
@@ -1411,6 +1456,7 @@ focus_tree = {
 		id = SOU_peacemakers
 		x = 4
 		y = 1
+		icon = GFX_goal_GEM_peqceprop
 		relative_position_id = SOU_destroy_the_cult
 		prerequisite = { focus = SOU_end_the_cpss_heritage OR = SOU_destroy_the_cult }
 		cost = 5
@@ -1428,6 +1474,7 @@ focus_tree = {
 		id = SOU_olenian_conflict
 		x = -4
 		y = 1
+		icon = GFX_goal_chaolewar
 		relative_position_id = SOU_peacemakers
 		prerequisite = { focus = SOU_peacemakers }
 		cost = 5
@@ -1472,6 +1519,7 @@ focus_tree = {
 		id = SOU_assist_nova_griffonia
 		x = -2
 		y = 1
+		icon = GFX_goal_SOU_griffons
 		available = {
 			GRF = {
 				NOT = {
@@ -1494,6 +1542,7 @@ focus_tree = {
 		id = SOU_imperial_agression
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_griff_friend
 		relative_position_id = SOU_peacemakers
 		prerequisite = { focus = SOU_peacemakers }
 		cost = 5
@@ -1507,6 +1556,7 @@ focus_tree = {
 		id = SOU_carthinian_arbitrage
 		x = 3
 		y = 1
+		icon = GFX_goal_GEM_attack_WNG
 		relative_position_id = SOU_peacemakers
 		prerequisite = { focus = SOU_peacemakers }
 		cost = 5
@@ -1528,6 +1578,7 @@ focus_tree = {
 				}
 			}
 		}
+		icon = GFX_goal_HLQ
 		relative_position_id = SOU_peacemakers
 		prerequisite = { focus = SOU_peacemakers }
 		cost = 5
@@ -1543,6 +1594,7 @@ focus_tree = {
 		id = SOU_new_look_of_eqvus
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_contact_humans
 		relative_position_id = SOU_olenian_conflict
 		prerequisite = { focus = SOU_olenian_conflict }
 		prerequisite = { focus = SOU_assist_nova_griffonia }
@@ -1557,6 +1609,7 @@ focus_tree = {
 		id = SOU_last_stand
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_claimland
 		relative_position_id = SOU_carthinian_arbitrage
 		prerequisite = { focus = SOU_imperial_agression }
 		prerequisite = { focus = SOU_carthinian_arbitrage }
@@ -1575,6 +1628,7 @@ focus_tree = {
 		id = SOU_triumph_of_harmony
 		x = 3
 		y = 1
+		icon = GFX_goal_GEM_UN
 		relative_position_id = SOU_new_look_of_eqvus
 		prerequisite = { focus = SOU_new_look_of_eqvus }
 		prerequisite = { focus = SOU_last_stand }
@@ -1613,6 +1667,7 @@ focus_tree = {
 		id = SOU_military_assistance
 		x = -1
 		y = 1
+		icon = GFX_goal_axis
 		relative_position_id = SOU_radicalism
 		prerequisite = { focus = SOU_radicalism }
 		cost = 5
@@ -1632,6 +1687,7 @@ focus_tree = {
 				}
 			}
 		}
+		icon = GFX_goal_GEM_schutzstaffen
 		relative_position_id = SOU_radicalism
 		prerequisite = { focus = SOU_radicalism }
 		cost = 5
@@ -1646,6 +1702,7 @@ focus_tree = {
 		id = SOU_join_state
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_spy
 		relative_position_id = SOU_military_assistance
 		prerequisite = { focus = SOU_military_assistance }
 		cost = 5
@@ -1664,6 +1721,7 @@ focus_tree = {
 		id = SOU_prepare_the_future
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_robwares
 		relative_position_id = SOU_german_assistance
 		prerequisite = { focus = SOU_german_assistance }
 		cost = 5
@@ -1677,6 +1735,7 @@ focus_tree = {
 		id = SOU_gkchp_suka
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_bundblyat
 		bypass = {
 			has_government = fascism 
 		}
@@ -1700,6 +1759,7 @@ focus_tree = {
 		id = SOU_supress_bund
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_goeb_radicalism
 		relative_position_id = SOU_gkchp_suka
 		prerequisite = { focus = SOU_gkchp_suka }
 		cost = 5
@@ -1716,6 +1776,7 @@ focus_tree = {
 		id = SOU_great_purge
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_attack_sou
 		relative_position_id = SOU_supress_bund
 		prerequisite = { focus = SOU_supress_bund }
 		cost = 5
@@ -1738,6 +1799,7 @@ focus_tree = {
 		id = SOU_arrest_others
 		x = 1
 		y = 1
+		icon = GFX_goal_crush_diss
 		relative_position_id = SOU_supress_bund
 		prerequisite = { focus = SOU_supress_bund }
 		cost = 5
@@ -1757,6 +1819,7 @@ focus_tree = {
 		id = SOU_verify_your_clock
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_axis
 		available = {
 			AND = {
 				has_civil_war = no 
@@ -1782,6 +1845,7 @@ focus_tree = {
 		id = SOU_regain_trust
 		x = -2
 		y = 1
+		icon = GFX_goal_GEM_propaganda
 		relative_position_id = SOU_verify_your_clock
 		prerequisite = { focus = SOU_verify_your_clock }
 		cost = 5
@@ -1794,6 +1858,7 @@ focus_tree = {
 		id = SOU_contact_germany
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_dialog_himmler
 		relative_position_id = SOU_verify_your_clock
 		prerequisite = { focus = SOU_verify_your_clock }
 		cost = 5
@@ -1815,6 +1880,7 @@ focus_tree = {
 		id = SOU_new_officers
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_officer_purges
 		available = {
 			NOT = {
 				has_idea = SOU_purges
@@ -1861,6 +1927,7 @@ focus_tree = {
 		id = SOU_military_reforms
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_peace
 		relative_position_id = SOU_regain_trust
 		prerequisite = { focus = SOU_regain_trust }
 		prerequisite = { focus = SOU_contact_germany }
@@ -1875,6 +1942,7 @@ focus_tree = {
 		id = SOU_supress_comm_harm
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_kill_supports
 		relative_position_id = SOU_contact_germany
 		prerequisite = { focus = SOU_new_officers }
 		prerequisite = { focus = SOU_contact_germany }
@@ -1893,6 +1961,7 @@ focus_tree = {
 		id = SOU_all_hail_the_empire
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_no_coups
 		relative_position_id = SOU_military_reforms
 		prerequisite = { focus = SOU_military_reforms }
 		prerequisite = { focus = SOU_supress_comm_harm }
@@ -1906,6 +1975,7 @@ focus_tree = {
 		id = SOU_alliance_with_germany
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_old_enemy
 		relative_position_id = SOU_all_hail_the_empire
 		prerequisite = { focus = SOU_all_hail_the_empire }
 		cost = 5
@@ -1948,6 +2018,7 @@ focus_tree = {
 		id = SOU_roa_focus
 		x = -2
 		y = 1
+		icon = GFX_goal_limit
 		relative_position_id = SOU_alliance_with_germany
 		prerequisite = { focus = SOU_alliance_with_germany }
 		cost = 5
@@ -1960,6 +2031,7 @@ focus_tree = {
 		id = SOU_expand_conscription
 		x = 2
 		y = 1
+		icon = GFX_goal_GEM_expansion
 		relative_position_id = SOU_alliance_with_germany
 		prerequisite = { focus = SOU_alliance_with_germany }
 		cost = 5
@@ -1972,6 +2044,7 @@ focus_tree = {
 		id = SOU_invade_STG
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_invade_stg
 		relative_position_id = SOU_alliance_with_germany
 		prerequisite = { focus = SOU_alliance_with_germany }
 		cost = 5
@@ -1987,6 +2060,7 @@ focus_tree = {
 		id = SOU_piece_of_cake
 		x = -1
 		y = 1
+		icon = GFX_goal_SOU_piece_of_cake
 		relative_position_id = SOU_invade_STG
 		prerequisite = { focus = SOU_invade_STG }
 		cost = 5
@@ -2004,6 +2078,7 @@ focus_tree = {
 		id = SOU_trainings_with_gem
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_EQS_training
 		relative_position_id = SOU_invade_STG
 		prerequisite = { focus = SOU_invade_STG }
 		cost = 5
@@ -2025,6 +2100,7 @@ focus_tree = {
 		id = SOU_crush_the_harmony
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_invade_EQS
 		relative_position_id = SOU_piece_of_cake
 		prerequisite = { focus = SOU_piece_of_cake }
 		prerequisite = { focus = SOU_trainings_with_gem }
@@ -2045,6 +2121,7 @@ focus_tree = {
 		id = SOU_officers_bund
 		x = -4
 		y = 1
+		icon = GFX_goal_SOU_yazov_bund
 		relative_position_id = SOU_great_purge
 		prerequisite = { focus = SOU_great_purge } 
 		available = { always = no }
@@ -2062,6 +2139,7 @@ focus_tree = {
 		id = SOU_extra_conscription
 		x = -1
 		y = 1
+		icon = GFX_goal_human_rights
 		relative_position_id = SOU_officers_bund
 		bypass = {
 			has_civil_war = no 
@@ -2092,6 +2170,7 @@ focus_tree = {
 		id = SOU_buy_rifles
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_Sell_weap
 		relative_position_id = SOU_officers_bund
 		bypass = {
 			has_civil_war = no 
@@ -2111,6 +2190,7 @@ focus_tree = {
 		id = SOU_old_officers
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_RW
 		bypass = {
 			has_civil_war = no 
 		}
@@ -2155,6 +2235,7 @@ focus_tree = {
 		id = SOU_appease_kryukov
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_kryukov
 		relative_position_id = SOU_buy_rifles
 		prerequisite = { focus = SOU_buy_rifles }
 		bypass = {
@@ -2170,6 +2251,7 @@ focus_tree = {
 		id = SOU_execute_traitor
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_taboritskiy
 		relative_position_id = SOU_old_officers
 		prerequisite = { focus = SOU_old_officers }
 		prerequisite = { focus = SOU_appease_kryukov }
@@ -2185,6 +2267,7 @@ focus_tree = {
 		id = SOU_clean_garbage
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_kill_eagle
 		relative_position_id = SOU_execute_traitor
 		prerequisite = { focus = SOU_execute_traitor }
 		cost = 5
@@ -2198,6 +2281,7 @@ focus_tree = {
 		id = SOU_country_rebuild
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_transports
 		relative_position_id = SOU_clean_garbage 
 		prerequisite = { focus = SOU_clean_garbage }
 		cost = 5
@@ -2243,6 +2327,7 @@ focus_tree = {
 		id = SOU_conscript_all
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_we_are_legion
 		relative_position_id = SOU_clean_garbage 
 		prerequisite = { focus = SOU_clean_garbage }
 		cost = 5
@@ -2255,6 +2340,7 @@ focus_tree = {
 		id = SOU_childwork
 		x = -1 
 		y = 1
+		icon = GFX_goal_GEM_eco_mobiliz
 		relative_position_id = SOU_country_rebuild
 		prerequisite = { focus = SOU_country_rebuild }
 		cost = 5
@@ -2267,6 +2353,7 @@ focus_tree = {
 		id = SOU_workcamps
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_a_little_freedom
 		relative_position_id = SOU_country_rebuild
 		prerequisite = { focus = SOU_country_rebuild }
 		prerequisite = { focus = SOU_conscript_all }
@@ -2280,6 +2367,7 @@ focus_tree = {
 		id = SOU_enemies_across
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_comendant_hour
 		relative_position_id = SOU_conscript_all
 		prerequisite = { focus = SOU_conscript_all }
 		cost = 5
@@ -2296,6 +2384,7 @@ focus_tree = {
 		id = SOU_the_power_of_soviets
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_world
 		relative_position_id = SOU_workcamps
 		prerequisite = { focus = SOU_workcamps }
 		prerequisite = { focus = SOU_enemies_across }
@@ -2312,6 +2401,7 @@ focus_tree = {
 		id = SOU_old_enemies
 		x = -1
 		y = 1
+		icon = GFX_goal_GEM_world_arena
 		relative_position_id = SOU_the_power_of_soviets
 		prerequisite = { focus = SOU_the_power_of_soviets }
 		cost = 5
@@ -2332,6 +2422,7 @@ focus_tree = {
 		id = SOU_ex_friends
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_EQS_attack
 		relative_position_id = SOU_the_power_of_soviets
 		prerequisite = { focus = SOU_the_power_of_soviets }
 		cost = 5
@@ -2352,6 +2443,7 @@ focus_tree = {
 		id = SOU_extermination
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_crush_bugs
 		relative_position_id = SOU_old_enemies
 		prerequisite = { focus = SOU_ex_friends }
 		prerequisite = { focus = SOU_old_enemies }
@@ -2368,6 +2460,7 @@ focus_tree = {
 		id = SOU_the_great_trial ########### HERE IT COMES!!!!!!!!!!
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_asking
 		relative_position_id = SOU_extermination
 		prerequisite = { focus = SOU_extermination }
 		cost = 5
@@ -2427,6 +2520,7 @@ focus_tree = {
 		id = SOU_bloody_sunday
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_hydra
 		relative_position_id = SOU_tsarizm
 		prerequisite = { focus = SOU_tsarizm }
 		cost = 5
@@ -2439,6 +2533,7 @@ focus_tree = {
 		id = SOU_government_support
 		x = -3
 		y = 1
+		icon = GFX_goal_SOU_natref
 		relative_position_id = SOU_bloody_sunday
 		prerequisite = { focus = SOU_bloody_sunday }
 		cost = 5
@@ -2454,6 +2549,7 @@ focus_tree = {
 		id = SOU_appease_serpov
 		x = -1
 		y = 1
+		icon = GFX_goal_SOU_army_support_tsar
 		relative_position_id = SOU_bloody_sunday
 		prerequisite = { focus = SOU_bloody_sunday }
 		cost = 5
@@ -2466,6 +2562,7 @@ focus_tree = {
 		id = SOU_anticomm_agitation
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_antic
 		relative_position_id = SOU_bloody_sunday
 		prerequisite = { focus = SOU_bloody_sunday }
 		cost = 5
@@ -2481,6 +2578,7 @@ focus_tree = {
 		id = SOU_visit_equestria
 		x = 3
 		y = 1
+		icon = GFX_goal_GEM_comtacts
 		relative_position_id = SOU_bloody_sunday
 		prerequisite = { focus = SOU_bloody_sunday }
 		cost = 5
@@ -2493,6 +2591,7 @@ focus_tree = {
 		id = SOU_end_revolution
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_long_invade
 		relative_position_id = SOU_appease_serpov
 		prerequisite = { focus = SOU_appease_serpov }
 		prerequisite = { focus = SOU_visit_equestria }
@@ -2516,6 +2615,7 @@ focus_tree = {
 		id = SOU_new_royal_guard
 		x = -2
 		y = 1
+		icon = GFX_goal_GRB_livgardet
 		relative_position_id = SOU_end_revolution
 		prerequisite = { focus = SOU_end_revolution }
 		cost = 5
@@ -2528,6 +2628,7 @@ focus_tree = {
 		id = SOU_kill_traitors
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_yazov_bund
 		relative_position_id = SOU_end_revolution
 		prerequisite = { focus = SOU_end_revolution }
 		cost = 5
@@ -2544,6 +2645,7 @@ focus_tree = {
 		id = SOU_speak_to_people
 		x = 2
 		y = 1
+		icon = GFX_goal_SOU_pechat_soyuz
 		relative_position_id = SOU_end_revolution
 		prerequisite = { focus = SOU_end_revolution }
 		cost = 5
@@ -2559,6 +2661,7 @@ focus_tree = {
 		id = SOU_coronation
 		x = 0
 		y = 1
+		icon = GFX_goal_reinstall_tsar
 		relative_position_id = SOU_kill_traitors
 		prerequisite = { focus = SOU_kill_traitors }
 		prerequisite = { focus = SOU_speak_to_people }
@@ -2574,6 +2677,7 @@ focus_tree = {
 		id = SOU_restruct_government
 		x = -3
 		y = 1
+		icon = GFX_goal_SOU_nation_and_people
 		relative_position_id = SOU_coronation 
 		prerequisite = { focus = SOU_coronation }
 		cost = 5
@@ -2586,6 +2690,7 @@ focus_tree = {
 		id = SOU_eco_reforms
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_fight_crisis
 		relative_position_id = SOU_coronation 
 		prerequisite = { focus = SOU_coronation }
 		cost = 5
@@ -2599,6 +2704,7 @@ focus_tree = {
 		id = SOU_pravoslavniye_vperde
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_church
 		relative_position_id = SOU_coronation 
 		prerequisite = { focus = SOU_coronation }
 		cost = 5
@@ -2611,6 +2717,7 @@ focus_tree = {
 		id = SOU_reward_the_worthy
 		x = 3
 		y = 1
+		icon = GFX_goal_GRB_armyprep
 		relative_position_id = SOU_coronation 
 		prerequisite = { focus = SOU_coronation }
 		cost = 5
@@ -2628,6 +2735,7 @@ focus_tree = {
 		id = SOU_attack_stg
 		x = 0
 		y = 2
+		icon = GFX_goal_GRB_northexp
 		relative_position_id = SOU_coronation
 		prerequisite = { focus = SOU_coronation }
 		cost = 5
@@ -2643,6 +2751,7 @@ focus_tree = {
 		id = SOU_conquer_nova_griffonia
 		x = -1
 		y = 1
+		icon = GFX_goal_SOU_griffons
 		relative_position_id = SOU_attack_stg 
 		prerequisite = { focus = SOU_attack_stg }
 		cost = 5
@@ -2657,6 +2766,7 @@ focus_tree = {
 		id = SOU_new_gubernies
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_expansion
 		relative_position_id = SOU_attack_stg
 		prerequisite = { focus = SOU_attack_stg }
 		cost = 5
@@ -2669,6 +2779,7 @@ focus_tree = {
 		id = SOU_friend_eqs 
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_crush_xenophob
 		relative_position_id = SOU_conquer_nova_griffonia
 		prerequisite = { focus = SOU_conquer_nova_griffonia }
 		prerequisite = { focus = SOU_new_gubernies }
@@ -2698,6 +2809,7 @@ focus_tree = {
 		id = SOU_marriage
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_marriage
 		relative_position_id = SOU_friend_eqs
 		prerequisite = { focus = SOU_friend_eqs }
 		cost = 5
@@ -2712,6 +2824,7 @@ focus_tree = {
 		id = SOU_eqs_training
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_EQS_training
 		relative_position_id = SOU_marriage
 		prerequisite = { focus = SOU_marriage }
 		cost = 5
@@ -2729,6 +2842,7 @@ focus_tree = {
 		id = SOU_strength_borders
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_reinforce_west
 		bypass = {
 			EQS = {
 				has_war_with = CHN 
@@ -2761,6 +2875,7 @@ focus_tree = {
 		id = SOU_changeling_threat
 		x = 1
 		y = 1
+		icon = GFX_goal_chaolewar
 		relative_position_id = SOU_eqs_training
 		prerequisite = { focus = SOU_eqs_training }
 		prerequisite = { focus = SOU_strength_borders }

@@ -744,6 +744,7 @@ focus_tree = {
 		id = UNS_air_corridor
 		x = -1
 		y = 1
+		icon = GFX_goal_GEM_sky_soldiers
 		relative_position_id = UNS_embass_britain
 		prerequisite = { focus = UNS_embass_britain }
 		cost = 5
@@ -776,6 +777,7 @@ focus_tree = {
 		id = UNS_allies_meeting
 		x = 1
 		y = 1
+		icon = GFX_goal_demo_defence
 		relative_position_id = UNS_embass_britain
 		prerequisite = { focus = UNS_embass_britain }
 		cost = 5
@@ -792,6 +794,7 @@ focus_tree = {
 		id = UNS_reclaim_allies
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_EQS_military_corps
 		relative_position_id = UNS_air_corridor
 		prerequisite = { focus = UNS_air_corridor }
 		prerequisite = { focus = UNS_allies_meeting }
@@ -855,6 +858,7 @@ focus_tree = {
 		id = UNS_guarantee_grb
 		x = -1
 		y = 1
+		icon = GFX_goal_GEM_antifasc
 		relative_position_id = UNS_reclaim_allies
 		prerequisite = { focus = UNS_reclaim_allies }
 		cost = 5
@@ -868,6 +872,7 @@ focus_tree = {
 		id = UNS_fleet_and_air
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_america_aircraft
 		relative_position_id = UNS_reclaim_allies
 		prerequisite = { focus = UNS_reclaim_allies }
 		cost = 5
@@ -909,6 +914,7 @@ focus_tree = {
 		id = UNS_we_are_united
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_tradeemp
 		relative_position_id = UNS_guarantee_grb
 		prerequisite = { focus = UNS_guarantee_grb }
 		prerequisite = { focus = UNS_fleet_and_air }

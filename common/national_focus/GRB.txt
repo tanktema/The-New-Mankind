@@ -2570,7 +2570,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			create_corps_commander = {
-				name = "Ian \"Ricko\" Merritt"
+				name = "Gimley \"Ricko\" Merritt"
 				portrait_path = "gfx/leaders/GRB/Merritt.dds"
 				traits = { other_race_general winter_expert demolisher_hum }
 				skill = 3 
@@ -2580,7 +2580,7 @@ focus_tree = {
 				logistics_skill = 4
 			}
 			create_corps_commander = {
-				name = "Markus Gulseth"
+				name = "Vzhik Gulseth"
 				portrait_path = "gfx/leaders/GRB/Gulseth.dds"
 				traits = { tankist_commander_hum winter_expert }
 				skill = 3 
@@ -3997,9 +3997,9 @@ focus_tree = {
 				ruling_party = fascism
 			}
 			create_country_leader = {
-				name = "Lord Michael John Brougham"
+				name = "Lord Parsefal the Honest"
 				desc = "GRB_SANTODES"
-				picture = "gfx/leaders/GRB/montypiton.dds"
+				picture = "gfx/leaders/GRB/Parsefal.dds"
 				expire = 1999.9.9
 				ideology = neofeudalism
 				traits = {
@@ -4433,6 +4433,7 @@ focus_tree = {
 		id = GRB_shores_infrastr 
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_shoreinf
 		relative_position_id = GRB_resource_searching
 		prerequisite = { focus = GRB_resource_searching }
 		cost = 5
@@ -4467,6 +4468,7 @@ focus_tree = {
 		id = GRB_transport_connection
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_transports
 		relative_position_id = GRB_resource_searching
 		prerequisite = { focus = GRB_resource_searching }
 		cost = 5
@@ -4492,6 +4494,7 @@ focus_tree = {
 		id = GRB_equestrian_trade_treaty 
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_EQS_tradetreaty
 		relative_position_id = GRB_shores_infrastr
 		prerequisite = { focus = GRB_shores_infrastr }
 		cost = 5 
@@ -4514,6 +4517,7 @@ focus_tree = {
 		id = GRB_skyfall_trading
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_trd_trade
 		relative_position_id = GRB_transport_connection
 		prerequisite = { focus = GRB_transport_connection }
 		cost = 5 
@@ -4527,6 +4531,7 @@ focus_tree = {
 		id = GRB_strength_tradeways 
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_strength_tradeways
 		relative_position_id = GRB_equestrian_trade_treaty
 		prerequisite = { focus = GRB_equestrian_trade_treaty OR = GRB_skyfall_trading }
 		cost = 5
@@ -4559,6 +4564,7 @@ focus_tree = {
 		id = GRB_british_traders
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_brittraders
 		relative_position_id = GRB_contact_olds
 		prerequisite = { focus = GRB_contact_olds }
 		cost = 5
@@ -4592,6 +4598,7 @@ focus_tree = {
 		id = GRB_contact_soviet_arms_dealers
 		x = -2
 		y = 1
+		icon = GFX_goal_GRB_contact_soviet_arms
 		relative_position_id = GRB_british_traders
 		prerequisite = { focus = GRB_british_traders }
 		mutually_exclusive = { focus = GRB_american_aircraft }
@@ -4606,6 +4613,7 @@ focus_tree = {
 		id = GRB_american_aircraft
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_america_aircraft
 		relative_position_id = GRB_british_traders
 		prerequisite = { focus = GRB_british_traders }
 		mutually_exclusive = { focus = GRB_german_tanks }
@@ -4620,6 +4628,7 @@ focus_tree = {
 		id = GRB_german_tanks
 		x = 2
 		y = 1
+		icon = GFX_goal_GRB_germantanks
 		relative_position_id = GRB_british_traders
 		prerequisite = { focus = GRB_british_traders }
 		mutually_exclusive = { focus = GRB_contact_soviet_arms_dealers }
@@ -4635,6 +4644,7 @@ focus_tree = {
 		id = GRB_concentrated_industry
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_concentrate
 		relative_position_id = GRB_american_aircraft
 		prerequisite = { focus = GRB_american_aircraft OR = GRB_contact_soviet_arms_dealers OR = GRB_german_tanks }
 		cost = 5
@@ -4657,6 +4667,7 @@ focus_tree = {
 		id = GRB_resource_searching_hum
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_resources_hum
 		relative_position_id = GRB_concentrated_industry
 		prerequisite = { focus = GRB_concentrated_industry }
 		cost = 5
@@ -4670,6 +4681,7 @@ focus_tree = {
 		id = GRB_crop_lands
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_crops
 		relative_position_id = GRB_resource_searching_hum 
 		prerequisite = { focus = GRB_resource_searching_hum }
 		cost = 5
@@ -4683,6 +4695,7 @@ focus_tree = {
 		id = GRB_quality_standarts
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_quality
 		relative_position_id = GRB_resource_searching_hum 
 		prerequisite = { focus = GRB_resource_searching_hum }
 		cost = 5
@@ -4695,6 +4708,7 @@ focus_tree = {
 		id = GRB_transport_networks
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_transnets
 		relative_position_id = GRB_crop_lands
 		prerequisite = { focus = GRB_crop_lands }
 		prerequisite = { focus = GRB_quality_standarts }
@@ -4715,6 +4729,10 @@ focus_tree = {
 		id = GRB_strength_funds
 		x = -3
 		y = 1
+		available = {
+			has_completed_focus = GRB_what_is_next
+		}
+		icon = GFX_goal_GRB_strehgth_funds
 		relative_position_id = GRB_transport_networks
 		prerequisite = { focus = GRB_transport_networks OR = GRB_strength_tradeways }
 		cost = 5
@@ -4727,6 +4745,7 @@ focus_tree = {
 		id = GRB_empire_sun
 		x = -5
 		y = 1
+		icon = GFX_goal_GRB_tradeemp
 		available = {
 			OR = {
 				has_government = neutrality
@@ -4768,6 +4787,7 @@ focus_tree = {
 		id = GRB_build_more_factories 
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_factories
 		relative_position_id = GRB_empire_sun
 		prerequisite = { focus = GRB_empire_sun }
 		cost = 5
@@ -4780,6 +4800,7 @@ focus_tree = {
 		id = GRB_resource_prospecting
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_expand_res
 		relative_position_id = GRB_empire_sun
 		prerequisite = { focus = GRB_empire_sun }
 		cost = 5
@@ -4792,6 +4813,7 @@ focus_tree = {
 		id = GRB_cannot_defeat
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_peaceeco
 		relative_position_id = GRB_build_more_factories
 		prerequisite = { focus = GRB_build_more_factories }
 		prerequisite = { focus = GRB_resource_prospecting }
@@ -4805,6 +4827,7 @@ focus_tree = {
 		id = GRB_todd_howard
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_todd_howard
 		relative_position_id = GRB_cannot_defeat
 		prerequisite = { focus = GRB_cannot_defeat }
 		cost = 5
@@ -4821,6 +4844,7 @@ focus_tree = {
 		id = GRB_no_mistakes
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_no_mistakes
 		available = {
 			has_government = communism
 		}
@@ -4842,6 +4866,7 @@ focus_tree = {
 		id = GRB_expand_factories
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_factory_expansion
 		relative_position_id = GRB_no_mistakes
 		prerequisite = { focus = GRB_no_mistakes }
 		cost = 5
@@ -4870,6 +4895,7 @@ focus_tree = {
 		id = GRB_magical_research
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_magic
 		relative_position_id = GRB_expand_factories
 		prerequisite = { focus = GRB_expand_factories }
 		cost = 5
@@ -4887,6 +4913,7 @@ focus_tree = {
 		id = GRB_tech_trading
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_techtrade
 		relative_position_id = GRB_magical_research
 		prerequisite = { focus = GRB_magical_research }
 		cost = 5
@@ -4898,6 +4925,7 @@ focus_tree = {
 		id = GRB_armor_development
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_armor
 		relative_position_id = GRB_magical_research
 		prerequisite = { focus = GRB_magical_research }
 		cost = 5
@@ -4913,6 +4941,7 @@ focus_tree = {
 		id = GRB_rebuild_bigben
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_bigben
 		relative_position_id = GRB_tech_trading
 		prerequisite = { focus = GRB_tech_trading }
 		prerequisite = { focus = GRB_armor_development }
@@ -4931,6 +4960,7 @@ focus_tree = {
 		id = GRB_military_industry_expansion
 		x = 5
 		y = 1
+		icon = GFX_goal_GRB_milind
 		available = {
 			has_government = fascism
 		}
@@ -4962,6 +4992,7 @@ focus_tree = {
 		id = GRB_black_gold 
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_oil
 		relative_position_id = GRB_military_industry_expansion
 		prerequisite = { focus = GRB_military_industry_expansion }
 		cost = 5
@@ -4979,6 +5010,7 @@ focus_tree = {
 		id = GRB_metalurgy
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_metall
 		relative_position_id = GRB_military_industry_expansion
 		prerequisite = { focus = GRB_military_industry_expansion }
 		cost = 5
@@ -4997,6 +5029,7 @@ focus_tree = {
 		id = GRB_aluminium
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_aluminium
 		relative_position_id = GRB_black_gold
 		prerequisite = { focus = GRB_black_gold }
 		prerequisite = { focus = GRB_metalurgy }
@@ -5015,6 +5048,7 @@ focus_tree = {
 		id = GRB_rocketry_develop
 		x = -2
 		y = 1
+		icon = GFX_goal_GRB_rocketry
 		relative_position_id = GRB_aluminium
 		prerequisite = { focus = GRB_aluminium }
 		cost = 5
@@ -5032,6 +5066,7 @@ focus_tree = {
 		id = GRB_nuclears
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_nukes
 		relative_position_id = GRB_aluminium
 		prerequisite = { focus = GRB_aluminium }
 		cost = 5
@@ -5049,6 +5084,7 @@ focus_tree = {
 		id = GRB_tanks
 		x = 2
 		y = 1
+		icon = GFX_goal_GRB_armor_new
 		relative_position_id = GRB_aluminium
 		prerequisite = { focus = GRB_aluminium }
 		cost = 5
@@ -5065,6 +5101,7 @@ focus_tree = {
 		id = GRB_rebuild_tower
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_tower
 		relative_position_id = GRB_nuclears
 		prerequisite = { focus = GRB_nuclears }
 		prerequisite = { focus = GRB_tanks }
@@ -5085,6 +5122,7 @@ focus_tree = {
 		id = GRB_army_rebirth
 		x = 14
 		y = 1
+		icon = GFX_goal_GRB_army
 		relative_position_id = GRB_contact
 		prerequisite = { focus = GRB_contact }
 		cost = 5
@@ -5100,6 +5138,7 @@ focus_tree = {
 		id = GRB_quality_army
 		x = -4
 		y = 1
+		icon = GFX_goal_GRB_quality_focus
 		relative_position_id = GRB_army_rebirth
 		prerequisite = { focus = GRB_army_rebirth }
 		mutually_exclusive = { focus = GRB_quantity_army }
@@ -5130,6 +5169,7 @@ focus_tree = {
 		id = GRB_quantity_army
 		x = 4
 		y = 1
+		icon = GFX_goal_GRB_quantity_army
 		relative_position_id = GRB_army_rebirth
 		prerequisite = { focus = GRB_army_rebirth }
 		mutually_exclusive = { focus = GRB_quality_army }
@@ -5161,6 +5201,7 @@ focus_tree = {
 		id = GRB_support_fleet
 		x = -3
 		y = 1
+		icon = GFX_goal_GRB_support_fleet
 		relative_position_id = GRB_quality_army
 		prerequisite = { focus = GRB_quality_army }
 		cost = 5
@@ -5179,6 +5220,7 @@ focus_tree = {
 		id = GRB_naval_superiority
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_superiority
 		relative_position_id = GRB_support_fleet
 		prerequisite = { focus = GRB_support_fleet }
 		cost = 5
@@ -5191,6 +5233,7 @@ focus_tree = {
 		id = GRB_dokyard_expansion
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_dockyards
 		relative_position_id = GRB_naval_superiority
 		prerequisite = { focus = GRB_naval_superiority }
 		cost = 5
@@ -5225,6 +5268,7 @@ focus_tree = {
 		id = GRB_fleet_maneuvers
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_fleet_doctrine
 		relative_position_id = GRB_dokyard_expansion
 		prerequisite = { focus = GRB_dokyard_expansion }
 		cost = 5
@@ -5243,6 +5287,7 @@ focus_tree = {
 		id = GRB_naval_academy
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_navalacc
 		relative_position_id = GRB_fleet_maneuvers
 		prerequisite = { focus = GRB_fleet_maneuvers }
 		cost = 5
@@ -5256,6 +5301,7 @@ focus_tree = {
 		id = GRB_armor_upgrade
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_tank_upg
 		relative_position_id = GRB_quality_army
 		prerequisite = { focus = GRB_quality_army }
 		cost = 5
@@ -5272,6 +5318,7 @@ focus_tree = {
 		id = GRB_upgrade_eqpm
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_eqpm_upd
 		relative_position_id = GRB_armor_upgrade
 		prerequisite = { focus = GRB_armor_upgrade }
 		cost = 5
@@ -5289,6 +5336,7 @@ focus_tree = {
 		id = GRB_motor_army_upgrade
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_modernization
 		relative_position_id = GRB_upgrade_eqpm
 		prerequisite = { focus = GRB_upgrade_eqpm }
 		cost = 5
@@ -5305,6 +5353,7 @@ focus_tree = {
 		id = GRB_sniper_training
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_snipers
 		relative_position_id = GRB_motor_army_upgrade
 		prerequisite = { focus = GRB_motor_army_upgrade }
 		cost = 5 
@@ -5322,6 +5371,7 @@ focus_tree = {
 		id = GRB_doctrine_development 
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_doctrine
 		available = {
 			custom_trigger_tooltip = {
 				OR = {
@@ -5353,6 +5403,7 @@ focus_tree = {
 		id = GRB_fighters_focus
 		x = 3
 		y = 1
+		icon = GFX_goal_GRB_fighters
 		relative_position_id = GRB_quality_army
 		prerequisite = { focus = GRB_quality_army }
 		cost = 5
@@ -5375,6 +5426,7 @@ focus_tree = {
 		id = GRB_airfields_expansion
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_airfields
 		relative_position_id = GRB_fighters_focus
 		prerequisite = { focus = GRB_fighters_focus }
 		cost = 5
@@ -5400,6 +5452,7 @@ focus_tree = {
 		id = GRB_sas_divs
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_SAS
 		relative_position_id = GRB_airfields_expansion
 		prerequisite = { focus = GRB_airfields_expansion OR = GRB_avia_prod_expand }
 		cost = 5
@@ -5436,6 +5489,7 @@ focus_tree = {
 		id = GRB_radio_systems
 		x = 0
 		y = 2
+		icon = GFX_goal_GRB_radio
 		relative_position_id = GRB_airfields_expansion
 		prerequisite = { focus = GRB_airfields_expansion }
 		cost = 5
@@ -5448,6 +5502,7 @@ focus_tree = {
 		id = GRB_air_doctrine
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_air_doctrine
 		relative_position_id = GRB_radio_systems
 		prerequisite = { focus = GRB_radio_systems OR = GRB_pilots }
 		cost = 5
@@ -5464,6 +5519,7 @@ focus_tree = {
 		id = GRB_ruler_of_the_war
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_ruler_of_the_war
 		relative_position_id = GRB_doctrine_development
 		prerequisite = { focus = GRB_naval_academy }
 		prerequisite = { focus = GRB_doctrine_development }
@@ -5478,6 +5534,7 @@ focus_tree = {
 		id = GRB_avia_expansion
 		x = -3
 		y = 1
+		icon = GFX_goal_GRB_avia_prod
 		relative_position_id = GRB_quantity_army
 		prerequisite = { focus = GRB_quantity_army }
 		cost = 5
@@ -5495,6 +5552,7 @@ focus_tree = {
 		id = GRB_avia_prod_expand
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_expand_air
 		relative_position_id = GRB_avia_expansion
 		prerequisite = { focus = GRB_avia_expansion }
 		cost = 5
@@ -5507,6 +5565,7 @@ focus_tree = {
 		id = GRB_pilots
 		x = 0
 		y = 2
+		icon = GFX_goal_GRB_pilots
 		relative_position_id = GRB_avia_prod_expand
 		prerequisite = { focus = GRB_avia_prod_expand }
 		cost = 5
@@ -5519,6 +5578,7 @@ focus_tree = {
 		id = GRB_conscription_expansion
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_conscription_3
 		relative_position_id = GRB_quantity_army
 		prerequisite = { focus = GRB_quantity_army }
 		cost = 5
@@ -5531,6 +5591,7 @@ focus_tree = {
 		id = GRB_cheap_production
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_cheapprod
 		relative_position_id = GRB_conscription_expansion
 		prerequisite = { focus = GRB_conscription_expansion }
 		cost = 5
@@ -5543,6 +5604,7 @@ focus_tree = {
 		id = GRB_personal_armor
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_personal_armor
 		available = {
 			custom_trigger_tooltip = {
 				OR = {
@@ -5573,6 +5635,7 @@ focus_tree = {
 		id = GRB_artillery_upgrade
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_artillery
 		relative_position_id = GRB_personal_armor
 		prerequisite = { focus = GRB_personal_armor }
 		cost = 5
@@ -5591,6 +5654,7 @@ focus_tree = {
 		id = GRB_snipers_development
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_snipers_dev
 		relative_position_id = GRB_artillery_upgrade
 		prerequisite = { focus = GRB_artillery_upgrade }
 		cost = 5 
@@ -5609,6 +5673,7 @@ focus_tree = {
 		id = GRB_shores_reinforcement
 		x = 3
 		y = 1
+		icon = GFX_goal_GRB_coastal_guard
 		relative_position_id = GRB_quantity_army
 		prerequisite = { focus = GRB_quantity_army }
 		cost = 5
@@ -5638,6 +5703,7 @@ focus_tree = {
 		id = GRB_carriers_focus
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_carriers
 		relative_position_id = GRB_shores_reinforcement
 		prerequisite = { focus = GRB_shores_reinforcement }
 		cost = 5
@@ -5655,6 +5721,7 @@ focus_tree = {
 		id = GRB_naval_bases 
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_navalbases
 		relative_position_id = GRB_carriers_focus
 		prerequisite = { focus = GRB_carriers_focus }
 		cost = 5
@@ -5684,6 +5751,7 @@ focus_tree = {
 		id = GRB_build_fleet
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_buildingfleet
 		relative_position_id = GRB_naval_bases
 		prerequisite = { focus = GRB_naval_bases }
 		cost = 5
@@ -5717,6 +5785,7 @@ focus_tree = {
 		id = GRB_fleet_building
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_buildfleet
 		relative_position_id = GRB_build_fleet
 		prerequisite = { focus = GRB_build_fleet }
 		cost = 5
@@ -5729,6 +5798,7 @@ focus_tree = {
 		id = GRB_we_are_legion
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_we_are_legion
 		relative_position_id = GRB_snipers_development
 		prerequisite = { focus = GRB_snipers_development }
 		prerequisite = { focus = GRB_air_doctrine }
