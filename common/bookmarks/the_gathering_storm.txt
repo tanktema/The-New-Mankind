@@ -52,7 +52,17 @@ bookmarks = {
 		"GRB"={
 			history = "GRB_GATHERING_STORM_DESC_TNM"
 			ideology = democratic
-
+			ideas = {
+				UNS_radiation_poisoning
+				GRB_mi6_idea
+				GRB_sterlings
+				
+			}
+			focuses = {
+				GRB_evac_focus
+				GRB_what_is_next
+				GRB_all_hail_the_queen
+			}
 		}
 		
 

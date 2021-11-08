@@ -15048,7 +15048,7 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_UNS_attack_EQS_shine"
-		texturefile = "gfx/interface/goals/.dds"			
+		texturefile = "gfx/interface/goals/SOU_attack_plan.dds"			
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
 			animationmaskfile = "gfx/interface/goals/SOU_attack_plan.dds"			
