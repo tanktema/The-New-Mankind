@@ -385,10 +385,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SOU_spkb.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_SOU_UNS_colonel_karnel"
+		name = "GFX_idea_UNS_colonel_karnel"
 		texturefile = "gfx/interface/ideas/uns_high_command.dds"
 	}
-	SpriteType = {
+	SpriteType = { 
 		name = "GFX_idea_UNS_captain_pettaine"
 		texturefile = "gfx/interface/ideas/uns_air_general.dds"
 	}
@@ -1371,11 +1371,11 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_idea_SOU_gromyko_selhoz"
-		texturefile = "gfx/interface/ideas/.dds"
+		texturefile = "gfx/interface/ideas/SOU_gromyko.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_SOU_gromyko_mininist"
-		texturefile = "gfx/interface/ideas/.dds"
+		texturefile = "gfx/interface/ideas/SOU_gromyko.dds"
 	}
 	SpriteType = {
 		name = "GFX_idea_SOU_sakharov"
