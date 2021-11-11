@@ -2144,7 +2144,7 @@ focus_tree = {
 		bypass = {
 			has_civil_war = no 
 		}
-		cost = 1
+		cost = 0.2
 		prerequisite = { focus = SOU_officers_bund }
 		cost = 1
 		completion_reward = {
@@ -2175,7 +2175,7 @@ focus_tree = {
 		bypass = {
 			has_civil_war = no 
 		}
-		cost = 1
+		cost = 0.2
 		prerequisite = { focus = SOU_officers_bund }
 		#cost = 1
 		completion_reward = {
@@ -2194,7 +2194,7 @@ focus_tree = {
 		bypass = {
 			has_civil_war = no 
 		}
-		cost = 1
+		cost = 0.2
 		relative_position_id = SOU_extra_conscription
 		prerequisite = { focus = SOU_extra_conscription }
 		completion_reward = {
@@ -2234,7 +2234,7 @@ focus_tree = {
 	focus = {
 		id = SOU_appease_kryukov
 		x = 0
-		y = 1
+		y = 0.2
 		icon = GFX_goal_SOU_kryukov
 		relative_position_id = SOU_buy_rifles
 		prerequisite = { focus = SOU_buy_rifles }
@@ -2243,7 +2243,8 @@ focus_tree = {
 		}
 		cost = 1
 		completion_reward = {
-		
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = general_kryukov
 		}
 	}
 	

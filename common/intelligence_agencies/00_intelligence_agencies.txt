@@ -710,7 +710,7 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_sou # Иконка нашего агентства
+	picture = GFX_intelligence_agency_logo_gem # Иконка нашего агентства
 	names = { "Abwehr" } # Уникальное имя агентства
 	
 	default = { tag = GEM } # Это агентство будет установлено по умолчанию для UNS 
@@ -720,7 +720,7 @@ intelligence_agency = {
 
 intelligence_agency = {
 	
-	picture = GFX_intelligence_agency_logo_sou # Иконка нашего агентства
+	picture = GFX_intelligence_agency_logo_grb # Иконка нашего агентства
 	names = { "MI-6" } # Уникальное имя агентства
 	
 	default = { tag = GRB } # Это агентство будет установлено по умолчанию для UNS 
