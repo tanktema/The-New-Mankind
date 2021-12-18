@@ -19,6 +19,7 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/UNS/Hall.dds"
+				small = "GFX_idea_UNS_comm_adv"
 			}
 		}
 		country_leader={
@@ -52,6 +53,7 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/UNS/Rockwell.dds"
+				small = "GFX_idea_UNS_fasc_adv"
 			}
 		}
 		country_leader={
