@@ -90,7 +90,8 @@ characters={
 				large="gfx/leaders/UNS/Shep.dds"
 			}
 			civilian = {
-				large = "gfx/leaders/UNS/"
+				large = "gfx/leaders/UNS/Shep.dds"
+			}
 		}
 		field_marshal={
 			traits={ gen_shepherd desert_storm }
