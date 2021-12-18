@@ -899,3 +899,23 @@ spriteTypes = {
 		name = "GFX_GRB_amphibious_mechanized_infantry_5_medium"
 		texturefile = "gfx/interface/technologies/GRB/GRB_amph_eq_5.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_UNS_soldiers_of_future_tech_medium"
+		textureFile = "gfx/interface/technologies/UNS/UNS_stc_rifle.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_sou_tesla_v2_tech_medium"
+		textureFile = "gfx/interface/technologies/SOU/sou_tesla_mk_2.dds"
+	}  
+	
+	SpriteType = {
+		name = "GFX_GEM_gem_mg15_tech_medium"
+		textureFile = "gfx/interface/technologies/GEM/GEM_mg13.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GRB_grb_plasma_ar_tech_medium"
+		textureFile = "gfx/interface/technologies/GRB/GRB_new_plasma.dds"
+	}
