@@ -50,7 +50,7 @@ bookmarks = {
 			}
 		}
 		"GRB"={
-			history = "GRB_GATHERING_STORM_DESC_TNM"
+			history = "GRB_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
 				UNS_radiation_poisoning

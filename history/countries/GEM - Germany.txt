@@ -26,8 +26,7 @@ set_technology = {
 	tech_mountaineers = 1
 	marines = 1
 	paratroopers = 1
-	gwtank = 1
-	basic_light_tank = 1
+	
 	electronic_mechanical_engineering  = 1
 	radio = 1
 	mechanical_computing = 1
@@ -42,9 +41,11 @@ set_technology = {
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	basic_medium_tank = 1
+	artillery1 = 1
+	antiair2 = 1
+	antiair1 = 1
+	antitank1 = 1
+	antitank2 = 1
 	gw_artillery = 1
 	interwar_artillery = 1
 	interwar_antiair = 1
@@ -53,6 +54,43 @@ set_technology = {
 	antitank1 = 1
 	mobile_warfare = 1
 }
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		amphibious_tank_chassis = 1
+		amphibious_drive = 1
+		advanced_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		improved_heavy_tank_chassis = 1
+		super_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		basic_train = 1
+	}
+}
+
+if = {
+	limit = {
+		NOT = { 
+			has_dlc = "No Step Back"
+		}
+	}
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	basic_medium_tank = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+	
 actually_fix_weapon_techs = yes
 if = {
 	limit = {
@@ -118,6 +156,40 @@ set_stability = 0.65
 set_war_support = 0.35
 add_manpower = 60000
 
+
+recruit_character = GEM_willy_brandt
+recruit_character = GEM_walter_ulbricht
+recruit_character = GEM_military_council
+recruit_character = GEM_paul_hausser
+recruit_character = GEM_henning_fon_treskov
+recruit_character = GEM_johannes_friesner
+recruit_character = GEM_lothar_rendulic
+recruit_character = GEM_paskal_heinz
+recruit_character = GEM_heinrich_himmler
+recruit_character = GEM_goebbels_min
+recruit_character = GEM_shpeer
+recruit_character = GEM_adler_band
+recruit_character = GEM_conrad_zuse
+recruit_character = GEM_higo_shmeisser
+recruit_character = GEM_fittkau
+recruit_character = GEM_shmitz
+recruit_character = GEM_kleiner
+recruit_character = GRB_wilhelm_strasse
+recruit_character = GRB_heydrich
+recruit_character = erwin_rommel_hmc
+recruit_character = GEM_brestrich
+recruit_character = GEM_heitmann
+recruit_character = GEM_weber
+recruit_character = GEM_kurt_shtudent
+recruit_character = GEM_karl_doenitz
+recruit_character = GEM_radiant_croup
+recruit_character = GEM_shternell
+recruit_character = GEM_engelberger
+recruit_character = GEM_schoff
+recruit_character = GEM_hengstler
+
+
+
 if = {
 	limit = { has_dlc = "La Resistance" }
 	create_intelligence_agency = yes
@@ -135,38 +207,84 @@ set_popularities = {
    neutrality = 10
 }
 
-create_country_leader = {
-   name = "Willy Brandt"
-   desc = "GEM_demo_desc"
-   picture = "gfx/leaders/GEM/Brandt.dds"
-   expire = "1999.9.9"
-   ideology = socialism
-   traits = { 
-		human_leader
-		demo_leader
-	}
-}
-create_country_leader = {
-	name = "Walter Ulbricht"
-	desc = "GEM_comm_desc"
-	picture = "gfx/leaders/GEM/Ulbricht.dds"
-	expire = "1989.1.1"
-	ideology = democratic_socialism
-	traits = { 
-		human_leader
-		comm_leader
-	}
-}
-create_country_leader = {
-   name = "Military Council"
-   desc = "GEM_fasc_desc"
-   picture = "gfx/leaders/GEM/MilCouncil.dds"
-   expire = "1989.1.1"
-   ideology = ultranationalism 
-   traits = { 
 
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	
+	create_equipment_variant = {
+		name = "Pz. II \"Luchs\""
+		parent = 0
+		
+		type = light_tank_chassis_2
+		
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/GEM/GEM_lt3.dds"
+	}
+	
+	
+	create_equipment_variant = {
+		name = "Panzerkampfwagen IV"
+		parent = 0
+		
+		type = medium_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_medium_cannon
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/GEM/GEM_mt2.dds"
+	}
+	
+	
+	create_equipment_variant = {
+		name = "Panzerkampfwagen VI \"Tiger\""
+		parent = 0
+		
+		type = heavy_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_heavy_cannon_2
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 4
+		}
+		icon = "gfx/interface/technologies/GEM/GEM_ht2.dds"
 	}
 }
+
 
 create_equipment_variant = {
 	name = "Schlachtkreuzer"
@@ -186,70 +304,5 @@ create_equipment_variant = {
 		mid_2_custom_slot = empty
 		rear_1_custom_slot = empty
 	}
-}
-
-create_field_marshal = {
-	name = "Paul Hausser"
-	portrait_path = "gfx/leaders/GEM/Hausser.dds"
-	traits = { 
-		old_guard
-		offensive_doctrine
-	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-
-}
-create_field_marshal = {
-	name = "Henning fon Treskov"
-	portrait_path = "gfx/leaders/GEM/Treskov.dds"
-	traits = { 
-		old_guard
-		desert_storm
-	}
-	skill = 6
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-
-}
-create_corps_commander = {
-	name = "Johannes Friesner"
-	portrait_path = "gfx/leaders/GEM/Friesner.dds"
-	traits = { 
-		media_personality
-		infantry_officer
-	}	
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Lothar Rendulic"
-	portrait_path = "gfx/leaders/GEM/Rendulic.dds"
-	traits = { adaptable panzer_expert }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
-
-
-create_corps_commander = {
-	name = "Paskal Heinz"
-	portrait_path = "gfx/leaders/GEM/Heinz.dds"
-	traits = { adaptable infantry_commander_hum }
-	skill = 3
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
 }
 

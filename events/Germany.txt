@@ -303,13 +303,7 @@ country_event = {
 		}
 		complete_national_focus = GEM_iron_guard
 		hidden_effect = {
-			create_country_leader = {
-				name = "Heinrich Himmler"
-				desc = "GEM_HIMMLER_DESC"
-				picture = "gfx/leaders/GEM/Himmler.dds"
-				ideology = nazism
-				traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
-			}
+			promote_character = GEM_heinrich_himmler
 		}
 	}
 	option = {
@@ -322,13 +316,7 @@ country_event = {
 		}
 		complete_national_focus = GEM_a_little_freedom
 		hidden_effect = {
-			create_country_leader = {
-				name = "Joseph Goebbels"
-				desc = "GEM_GOEBBELS_DESC"
-				picture = "gfx/leaders/GEM/Goebbels.dds"
-				ideology = nazism
-				traits = { propaganda_master_hum human_leader }
-			}
+			promote_character = GEM_goebbels_min
 		}
 	}
 	option = {
@@ -475,13 +463,15 @@ country_event = {
 		name = gem.19.a 
 		custom_effect_tooltip = himmler_remembers
 		set_country_flag = himmler_civil_war 
-		hidden_effect = {
-			create_country_leader = {
-				name = "Heinrich Himmler"
-				desc = "GEM_HIMMLER_DESC"
-				picture = "gfx/leaders/GEM/Himmler.dds"
-				ideology = despotism
-				traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
+		hidden_effect = {	
+			GEM_heinrich_himmler = {
+				add_country_leader_role = {
+					promote_leader = yes 
+					country_leader = {
+						ideology = despotism
+						traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
+					}
+				}
 			}
 		}
 	}

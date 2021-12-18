@@ -400,3 +400,39 @@ unlock_conditions_met_for_achievement_21 = {
 		}
 	}
 }
+available_conditions_met_for_achievement_22 = {
+	original_tag = UNS 
+}
+
+unlock_conditions_met_for_achievement_22 = {
+	available_conditions_met_for_achievement_22 = yes 
+	GRB = {
+		is_subject_of = UNS
+	}
+}
+available_conditions_met_for_achievement_23 = {
+	original_tag = GRB 
+}
+
+unlock_conditions_met_for_achievement_23 = {
+	available_conditions_met_for_achievement_23 = yes 
+	UNS = {
+		is_subject_of = GRB
+	}
+}
+available_conditions_met_for_achievement_24 = {
+	original_tag = SOU 
+}
+
+unlock_conditions_met_for_achievement_24 = {
+	available_conditions_met_for_achievement_24 = yes 
+	has_completed_focus = SOU_execute_traitor
+}
+available_conditions_met_for_achievement_25 = {
+	original_tag = GRB 
+}
+
+unlock_conditions_met_for_achievement_25 = {
+	available_conditions_met_for_achievement_25 = yes 
+	has_completed_focus = GRB_the_great_crusade
+}

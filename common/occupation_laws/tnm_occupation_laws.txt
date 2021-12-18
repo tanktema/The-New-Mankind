@@ -35,10 +35,10 @@ TNM_testlaw = {
 TNM_GRB_inquisition = {
 	icon = 16
 	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM" 
-	#visible = {
-	##	original_tag = GRB 
-	#	has_completed_focus = GRB_new_inquisition
-	#}
+	visible = {
+		original_tag = GRB 
+		has_completed_focus = GRB_new_inquisition
+	}
 	available = {
 		FROM = {
 			custom_effect_tooltip = {

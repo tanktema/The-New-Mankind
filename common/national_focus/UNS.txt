@@ -2190,8 +2190,27 @@ focus_tree = {
 		prerequisite = { focus = UNS_antifasc_propaganda }
 		cost = 7.2
 		completion_reward = {
+			hidden_effect = {
+				GEM_walter_ulbricht = {
+					set_nationality = ROOT 
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = UNS_ulbricht_exile
+							allowed = {
+								original_tag = UNS 
+							}
+							available = {
+								has_completed_focus = UNS_invite_ulbricht
+							}
+							traits = { exiled_german_communist }
+						}
+					}
+				}
+			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = UNS_ulbricht_exile
+			
 		}
 	}
 	
@@ -2644,14 +2663,7 @@ focus_tree = {
 		cost = 1
 		completion_reward = {
 			retire_country_leader = yes 
-			create_country_leader = {
-				name = "STATESOC Counsil"
-				picture = "GFX_statesoc_animated"
-				desc = "UNS_STATESOC_DESC"
-				expire = "1300.1.1"
-				ideology = equalism
-				traits = { statesoc_trait }
-			}
+			promote_character = UNS_statesoc_council
 		}
 	}
 	
@@ -3863,9 +3875,8 @@ focus_tree = {
 				type = tac_bomber_equipment
 				amount = 150
 			}
-			create_corps_commander = {
-				name = "Maximillian Carter"
-				portrait_path = "gfx/leaders/UNS/Carter.dds"
+			add_corps_commander_role = {
+				character = UNS_maximilian_carter
 				traits = { griffon_infiltrator infantry_commander_hum }
 				skill = 5
 				attack_skill = 4
@@ -3934,9 +3945,8 @@ focus_tree = {
 		prerequisite = { focus = UNS_recruitment_expansion }
 		cost = 7.2
 		completion_reward = {
-			create_corps_commander = {
-				name = "Sivill Ironshield"
-				portrait_path = "gfx/leaders/UNS/Sivill.dds"
+			add_corps_commander_role = {
+				character = UNS_sivill_ironshield
 				traits = { infantry_officer }
 				skill = 3
 				attack_skill = 4
@@ -3944,9 +3954,8 @@ focus_tree = {
 				logistics_skill = 5
 				planning_skill = 2
 			}
-			create_corps_commander = {
-				name = "Carlax"
-				portrait_path = "gfx/leaders/UNS/Carlax.dds"
+			add_corps_commander_role = {
+				character = UNS_carlax
 				traits = { armor_officer }
 				skill = 4
 				attack_skill = 4
@@ -3954,9 +3963,8 @@ focus_tree = {
 				logistics_skill = 5
 				planning_skill = 2
 			}
-			create_corps_commander = {
-				name = "Lina Cypher"
-				portrait_path = "gfx/leaders/UNS/Cypher.dds"
+			add_corps_commander_role = {
+				character = UNS_lina_cypher
 				traits = { other_race_general reactive_pony }
 				skill = 2
 				attack_skill = 3
@@ -4482,15 +4490,17 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.13
 			}
-			create_country_leader = {
-				name = "General Gershell fon Shepherd"
-				desc = "Shepherd_leader_desc"
-				picture = "Shep.dds"
-				expire = 1965.1.1
-				ideology = harmonic_libertarianism
-				traits = {
-					military_leader
-					human_leader
+			add_country_leader_role = {
+				character = UNS_general_gershell_fon_shepherd
+				promote_leader = yes
+				country_leader = {
+				
+					expire = 1965.1.1
+					ideology = harmonic_libertarianism
+					traits = {
+						military_leader
+						human_leader
+					}
 				}
 			}
 			EQS = {
@@ -6445,12 +6455,36 @@ focus_tree = {
 		icon = GFX_goal_marines_uns
 		completion_reward = {
 			hidden_effect = {
-				load_oob = "UNS_marines"
+				set_technology = { uns_marines_tech = 1 }
+				division_template = {
+					name = "U.S. Marines Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_marines_corps_unit = { x = 0 y = 0 }
+						UNS_marines_corps_unit = { x = 0 y = 1 }
+						UNS_marines_corps_unit = { x = 0 y = 2 }
+						UNS_marines_corps_unit = { x = 1 y = 0 }
+						UNS_marines_corps_unit = { x = 1 y = 1 }
+						UNS_marines_corps_unit = { x = 1 y = 2 }
+						UNS_marines_corps_unit = { x = 2 y = 0 }
+						UNS_marines_corps_unit = { x = 2 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 2
+				}
+				create_unit = {
+					division = "name = \"U.S. Marines Corps\" division_template = \"U.S. Marines Corps\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = ROOT 
+				}
 			}
 			custom_effect_tooltip = uns_marines_recruit
-			create_corps_commander = {
-				name = "Sergeant Hartmann"
-				portrait_path = "gfx/leaders/UNS/Hartmann.dds"
+			add_corps_commander_role = {
+				character = UNS_hartmann
 				skill = 7
 				attack_skill = 6
 				defense_skill = 7

@@ -26,8 +26,7 @@ set_technology = {
 	tech_mountaineers = 1
 	marines = 1
 	paratroopers = 1
-	gwtank = 1
-	basic_light_tank = 1
+	
 	electronic_mechanical_engineering  = 1
 	radio = 1
 	mechanical_computing = 1
@@ -42,17 +41,57 @@ set_technology = {
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	basic_medium_tank = 1
+	artillery1 = 1
+	antiair2 = 1
+	antiair1 = 1
+	antitank1 = 1
+	antitank2 = 1
 	gw_artillery = 1
 	interwar_artillery = 1
 	interwar_antiair = 1
 	antiair1 = 1
 	interwar_antitank = 1
-	mass_assault = 1
-	antitank1 = 1
+	
+	trench_warfare = 1
 }
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		amphibious_tank_chassis = 1
+		amphibious_drive = 1
+		advanced_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		improved_heavy_tank_chassis = 1
+		super_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		basic_train = 1
+	}
+}
+
+
+if = {
+	limit = {
+		NOT = { 
+			has_dlc = "No Step Back"
+		}
+	}
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	basic_medium_tank = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+
 actually_fix_weapon_techs = yes
 if = {
 	limit = {
@@ -135,148 +174,127 @@ set_popularities = {
    neutrality = 10
 }
 
-create_country_leader = {
-   name = "Mikhail Gorbachev"
-   desc = "SOU_demo_desc"
-   picture = "gfx/leaders/SOU/Gorbachev.dds"
-   expire = "1999.9.9"
-   ideology = socialism
-   traits = { 
-		human_leader
-		demo_leader
-	}
-}
-create_country_leader = {
-	name = "Nikita Khruschev"
-	desc = "SOU_comm_desc"
-	picture = "gfx/leaders/SOU/Khruschev.dds"
-	expire = "1989.1.1"
-	ideology = marxism
-	traits = { 
-		human_leader
-		comm_leader
-	}
-}
-create_country_leader = {
-   name = "Sergey Taboritskiy"
-   desc = "SOU_fasc_desc"
-   picture = "gfx/leaders/SOU/Taboritskiy.dds"
-   expire = "1989.1.1"
-   ideology = ultranationalism 
-   traits = { 
-		human_leader
-		fasc_leader
-	}
-}
-create_country_leader = {
-   name = "Andrey Smolyaniy"
-   desc = "SOU_tsar_desc"
-   picture = "gfx/leaders/SOU/Seledka.dds"
-   expire = "1989.1.1"
-   ideology = despotism
-   traits = { 
-		human_leader
-		fasc_leader
-	}
-}
-
-create_field_marshal = {
-   name = "General Kryukov"
-   desc = "SOU_field_desc"
-   portrait_path = "gfx/leaders/SOU/Kryukov.dds"
-   traits = { 
-		old_guard
-		offensive_doctrine
-	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-	id = 1999
-}
-create_field_marshal = {
-   name = "Dmitry Yazov"
-   desc = "SOU_field_desc"
-   portrait_path = "gfx/leaders/SOU/Yazov.dds"
-   traits = { 
-		expert_delegator
-		unyielding_defender
-	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-	id = 1998
-}
+recruit_character = SOU_mikhail_gorbachev
+recruit_character = SOU_nikita_khruschev
+recruit_character = SOU_sergey_taboritskiy
+recruit_character = SOU_andrey_smolyaniy
+recruit_character = SOU_general_kryukov
+recruit_character = SOU_dmitry_yazov
+recruit_character = SOU_captain_serpov
+recruit_character = SOU_arseni_vinokurov
+recruit_character = SOU_nikodim_kazankov
+recruit_character = SOU_sergey_demidov
+recruit_character = SOU_people_democrats
+recruit_character = nikita_yasnov
+recruit_character = comrade_comissar
+recruit_character = SOU_andrey_gromyko
+recruit_character = SOU_victor_timoshenko
+recruit_character = SOU_sakharov
+recruit_character = SOU_chernov
+recruit_character = SOU_corolev
+recruit_character = sou_shtabnaya_krisa
+recruit_character = SOU_andropov
+recruit_character = SOU_biryukov
+recruit_character = SOU_toporov
+recruit_character = sou_ciolkovskiy
+recruit_character = sou_izotov
+recruit_character = SOU_belousov
+recruit_character = SOU_dernov
+recruit_character = SOU_chepurin
+recruit_character = SOU_suvorov
+recruit_character = SOY_bulgakov
+recruit_character = SOU_alexey_smirnov
+recruit_character = SOU_artemiy_travnikov
+recruit_character = SOU_sergey_dubrovsky
+recruit_character = SOU_valeriy_nevzorov
+recruit_character = SOU_maxim_yesipov
+recruit_character = SOU_leontiy_kuptsov
+recruit_character = SOU_lev_zubkov
+recruit_character = SOU_tanker_pony
+recruit_character = SOU_tokarev
+recruit_character = SOU_semenov
+recruit_character = SOU_mustafov
+recruit_character = SOU_vitaliy_orlov
+recruit_character = SOU_emerald_dusk
 
 
-create_corps_commander = {
-	name = "Captain Serpov"
-	desc = "UNS_serp_desc"
-	portrait_path = "gfx/leaders/UNS/Serpov.dds"
-	traits = {
-		gen_serpov
-		omega
-	}
-	skill = 6
-	attack_skill = 6
-	defense_skill = 6
-	planning_skill = 6
-	logistics_skill = 6
-	id = 1491
-}
 
-create_corps_commander = {
-	name = "Arseni Vinokurov"
-	desc = ""
-	portrait_path = "gfx/leaders/SOU/Vinokurov.dds"
-	traits = {
-		infantry_commander_hum
-		infantry_officer
+if = {
+	limit = {
+		has_dlc = "No Step Back"
 	}
-	skill = 4
-	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 5
 	
-}
-
-create_corps_commander = {
-	name = "Nikodim Kazankov"
-	desc = ""
-	portrait_path = "gfx/leaders/SOU/Kazankov.dds"
-	traits = {
-		scavenger
-		panzer_expert
+	create_equipment_variant = {
+		name = "T-60"
+		parent = 0
+		
+		type = light_tank_chassis_2
+		
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/SOU/SOU_light_tank_3.dds"
 	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
 	
-}
-
-create_corps_commander = {
-	name = "Sergey Demidov"
-	desc = ""
-	portrait_path = "gfx/leaders/SOU/Demidov.dds"
-	traits = {
-		trait_engineer
-		scavenger
-		rhbz_trait
+	
+	create_equipment_variant = {
+		name = "T-34/85"
+		parent = 0
+		
+		type = medium_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_medium_cannon
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/SOU/SOU_medium_tank_2.dds"
 	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 3
-	logistics_skill = 3
 	
+	
+	create_equipment_variant = {
+		name = "IS-2"
+		parent = 0
+		
+		type = heavy_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_heavy_cannon_2
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 4
+		}
+		icon = "gfx/interface/technologies/SOU/SOU_heavy_tank_2.dds"
+	}
 }
-
 
 create_equipment_variant = {
 	name = "Leningrad Class"

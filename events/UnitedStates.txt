@@ -346,17 +346,7 @@ country_event = {
 				ideology = fascism
 				size = 0.3
 			}
-			create_country_leader = {
-				name = "Harry Trueman"
-				desc = "UNS_demo_trueman_desc"
-				picture = "Kennedy.dds"
-				expire = 1965.1.1
-				ideology = liberalism
-				traits = {
-					human_leader
-					demo_leader
-				}
-			}
+			promote_character = UNS_harry_trueman
 		}
 	}
 	option = {
@@ -400,17 +390,7 @@ country_event = {
 	option = {
 		name = uns.mil.1.a
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "General Gershell fon Shepherd"
-			desc = "Shepherd_leader_desc"
-			picture = "Shep.dds"
-			expire = 1965.1.1
-			ideology = nazism
-			traits = {
-				military_leader
-				human_leader
-			}
-		}
+		promote_character = UNS_general_gershell_fon_shepherd
 		set_party_name = {
 				ideology = fascism
 				long_name = UNS_militarizm_party_long
@@ -1049,35 +1029,35 @@ country_event = {
 	option = {
 		name = uns.34.a 
 		hidden_effect = {
-			create_corps_commander = {
-				name = "Jason Broady"
-				portrait_path = "gfx/leaders/UNS/gen_broady.dds"
-				traits = { trait_cautious }
-				skill = 3 
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 3
+			UNS_jason_broady = {
+				add_corps_commander_role = {
+					traits = { trait_cautious }
+					skill = 3 
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 3
+				}
 			}
-			create_corps_commander = {
-				name = "Adam Savage"
-				portrait_path = "gfx/leaders/UNS/gen_savage.dds"
-				traits = { infantry_officer }
-				skill = 3
-				attack_skill = 4
-				defense_skill = 2
-				logistics_skill = 5
-				planning_skill = 3
+			UNS_adam_savage = {
+				add_corps_commander_role = {
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 4
+					defense_skill = 2
+					logistics_skill = 5
+					planning_skill = 3
+				}
 			}
-			create_corps_commander = {
-				name = "Colonel Barton"
-				portrait_path = "gfx/leaders/UNS/gen_barton.dds"
-				traits = { armor_officer }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				logistics_skill = 6
-				planning_skill = 7
+			UNS_colonel_barton = {
+				add_corps_commander_role = {
+					traits = { armor_officer }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 4
+					logistics_skill = 6
+					planning_skill = 7
+				}
 			}
 		}
 		custom_effect_tooltip = new_officers_uns_tt
@@ -1092,45 +1072,45 @@ country_event = {
 	option = {
 		name = uns.35.a 
 		hidden_effect = {
-			create_corps_commander = {
-				name = "Jason Broady"
-				portrait_path = "gfx/leaders/UNS/gen_broady.dds"
-				traits = { trait_cautious }
-				skill = 3 
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 3
+			UNS_jason_broady = {
+				add_corps_commander_role = {
+					traits = { trait_cautious }
+					skill = 3 
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 3
+				}
 			}
-			create_corps_commander = {
-				name = "Adam Savage"
-				portrait_path = "gfx/leaders/UNS/gen_savage.dds"
-				traits = { infantry_officer }
-				skill = 3
-				attack_skill = 4
-				defense_skill = 2
-				logistics_skill = 5
-				planning_skill = 3
+			UNS_adam_savage = {
+				add_corps_commander_role = {
+					traits = { infantry_officer }
+					skill = 3
+					attack_skill = 4
+					defense_skill = 2
+					logistics_skill = 5
+					planning_skill = 3
+				}
 			}
-			create_corps_commander = {
-				name = "Colonel Barton"
-				portrait_path = "gfx/leaders/UNS/gen_barton.dds"
-				traits = { armor_officer }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 4
-				logistics_skill = 6
-				planning_skill = 7
+			UNS_colonel_barton = {
+				add_corps_commander_role = {
+					traits = { armor_officer }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 4
+					logistics_skill = 6
+					planning_skill = 7
+				}
 			}
-			create_corps_commander = {
-				name = "Moonstriker"
-				portrait_path = "gfx/leaders/UNS/moonstriker.dds"
-				traits = { moonstriker_service paladin_of_moon } 
-				skill = 6
-				attack_skill = 7
-				defense_skill = 8
-				logistics_skill = 5
-				planning_skill = 7
+			UNS_moonstriker = {
+				add_corps_commander_role = {
+					traits = { moonstriker_service paladin_of_moon } 
+					skill = 6
+					attack_skill = 7
+					defense_skill = 8
+					logistics_skill = 5
+					planning_skill = 7
+				}
 			}
 		}
 		custom_effect_tooltip = new_officers_uns_tt
@@ -1733,29 +1713,31 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = uns.58.a 
-		create_corps_commander = {
-			name = "Maximillian Carter"
-			portrait_path = "gfx/leaders/UNS/Carter.dds"
-			traits = { griffon_infiltrator tankist_commander_hum }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 4
-			logistics_skill = 5
-			planning_skill = 3
+		UNS_maximilian_carter = {
+			add_corps_commander_role = {
+				traits = { griffon_infiltrator tankist_commander_hum }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 3
+			}
 		}
 			
 	}
 	option = {
 		name = uns.58.b 
-		create_corps_commander = {
-			name = "Maximillian Carter"
-			portrait_path = "gfx/leaders/UNS/Carter.dds"
-			traits = { griffon_infiltrator infantry_commander_hum }
-			skill = 5
-			attack_skill = 4
-			defense_skill = 4
-			logistics_skill = 5
-			planning_skill = 3
+		UNS_maximilian_carter = {
+			add_corps_commander_role = {
+				name = "Maximillian Carter"
+				portrait_path = "gfx/leaders/UNS/Carter.dds"
+				traits = { griffon_infiltrator infantry_commander_hum }
+				skill = 5
+				attack_skill = 4
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 3
+			}
 		}
 	}
 }
@@ -2264,16 +2246,29 @@ country_event = {
 					tree = equestria_focus
 					keep_completed = yes
 				}
-				create_country_leader = {
-					name = "Princess Celestia"
-					expire = "1965.1.1"
-					picture = GFX_CelestiaPortrait
-					desc = "POLITICS_CELESTIA_DESC"
-					ideology = alicornrule
-					female = yes
-					traits = {
-						princess_of_ponies
-						stout_defender
+				EQS_princess_celestia = {
+					clr_character_flag = EQS_celestia_is_db
+					remove_country_leader_role = {
+						character = EQS_princess_celestia
+						ideology = nazism
+					}
+					set_character_name = EQS_princess_celestia
+					set_portraits = {
+						civilian = {
+							large = "GFX_CelestiaPortrait"
+						}
+					}
+					add_country_leader_role = {
+						promote_leader = yes 
+						country_leader = {
+							expire = "1965.1.1"
+							desc = "POLITICS_CELESTIA_DESC"
+							ideology = alicornrule
+							traits = {
+								princess_of_ponies
+								stout_defender
+							}
+						}
 					}
 				}
 			}

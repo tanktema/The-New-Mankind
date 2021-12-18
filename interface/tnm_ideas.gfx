@@ -1434,6 +1434,103 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/SOY_bulgakov.dds"
 	}
 	SpriteType = {
+		name = "GFX_idea_GRB_jake_grant"
+		texturefile = "gfx/interface/ideas/GRB_jake_grant.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_danny_barnest"
+		texturefile = "gfx/interface/ideas/GRB_danny_barnest.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_rowan_lawrence"
+		texturefile = "gfx/interface/ideas/GRB_rowan_lawrence.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_ricko_meritt"
+		texturefile = "gfx/interface/ideas/GRB_ricko_meritt.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_vzhick_gulseth"
+		texturefile = "gfx/interface/ideas/GRB_vzhick_gulseth.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_dominik_harrison"
+		texturefile = "gfx/interface/ideas/GRB_dominik_harrison.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_alistar_wild"
+		texturefile = "gfx/interface/ideas/GRB_alistar_wild.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_louie_carter"
+		texturefile = "gfx/interface/ideas/GRB_louie_carter.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GRB_blast_guard"
+		texturefile = "gfx/interface/ideas/GRB_blast_guard.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+
+	SpriteType = {
 		name = "GFX_idea_"
 		texturefile = "gfx/interface/ideas/.dds"
 	}
@@ -1530,6 +1627,102 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/.dds"
 	}
 
+SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_"
+		texturefile = "gfx/interface/ideas/.dds"
+	}
 
 #	SpriteType = {
 	#	name = "GFX_idea_SOU_kgb_defence"

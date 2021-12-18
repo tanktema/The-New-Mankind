@@ -40,24 +40,13 @@ GEM_political_crisis_category = {
 				random_list = {
 					25 = {
 						complete_national_focus = GEM_iron_guard
-						create_country_leader = {
-							name = "Heinrich Himmler"
-							desc = "GEM_HIMMLER_DESC"
-							picture = "gfx/leaders/GEM/Himmler.dds"
-							ideology = nazism
-							traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
-						}
+						promote_character = GEM_heinrich_himmler
 					}
 					25 = {
 						complete_national_focus = GEM_a_little_freedom
-						create_country_leader = {
-							name = "Joseph Goebbels"
-							desc = "GEM_GOEBBELS_DESC"
-							picture = "gfx/leaders/GEM/Goebbels.dds"
-							ideology = nazism
-							traits = { propaganda_master_hum human_leader }
-						}
-					}
+						promote_character = GEM_goebbels_min
+					}	
+		
 					25 = {
 						complete_national_focus = GEM_red_variant
 					}
@@ -485,13 +474,7 @@ GEM_political_crisis_category = {
 				popularity = 0.1
 			}
 			hidden_effect = {
-				create_country_leader = {
-					name = "Heinrich Himmler"
-					desc = "GEM_HIMMLER_DESC"
-					picture = "gfx/leaders/GEM/Himmler.dds"
-					ideology = nazism
-					traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
-				}
+				promote_character = GEM_heinrich_himmler
 			}
 			complete_national_focus = GEM_iron_guard
 			set_country_flag = himmler_won
@@ -511,13 +494,7 @@ GEM_political_crisis_category = {
 				popularity = 0.1
 			}
 			hidden_effect = {
-				create_country_leader = {
-					name = "Joseph Goebbels"
-					desc = "GEM_GOEBBELS_DESC"
-					picture = "gfx/leaders/GEM/Goebbels.dds"
-					ideology = nazism
-					traits = { propaganda_master_hum human_leader }
-				}
+				promote_character = GEM_goebbels_min
 			}
 			complete_national_focus = GEM_a_little_freedom
 			set_country_flag = goebbels_won

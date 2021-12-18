@@ -38,9 +38,12 @@ technologies = {
 			breakthrough = 0.1
 			attack = 0.1
 		}
-
-			
 	}
+	
+	####### COUNTRY-SPECIFIC TECH HERE
+	
+	
+	#### USA Tech
 	
 	chemical_weapons = {
 		research_cost = 999 # Given by effect 
@@ -72,19 +75,884 @@ technologies = {
 			name = human_folder
 			position = { x = 14 y = 0 }
 		}
-		infantry = {
-			defense = 0.1
-			breakthrough = 0.1
-			speed = 0.1
-		}
+		
 		start_year = 1025
 		custom_modifier_tooltip = special_weapons_tech
 	}
+	
+	ac_130_tech = {
+		research_cost = 10
+		allow_branch = {
+			original_tag = UNS 
+		}
+		enable_equipments = {
+			uns_ac130
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 2 }
+		}
+		
+		start_year = 1015
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	uns_flashbangs = {
+		research_cost = 1
+		category_all_infantry = {
+			soft_attack = 0.1
+			breakthrough = 0.1
+			
+		}
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1010
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 2 }
+		}
+	}
+	
+	uns_laser_defense_system = {
+		research_cost = 2
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_tank_laser_defence_system
+		}
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 4 }
+		}
+	}
+	
+	uns_lascannon_tech = {
+		research_cost = 2
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_tank_las_cannon
+		}
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1016
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 4 }
+		}
+	}
+	
+	uns_assault_team_tech = {
+		enable_subunits = {
+			UNS_stormsquads_unit
+		}
+		allow_branch = {
+			original_tag = UNS 
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 6 }
+		}
+	}
+	
+	uns_marines_tech = {
+		research_cost = 9999
+		enable_subunits = {
+			UNS_marines_corps_unit
+		}
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 6 }
+		}
+		custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	
+	uns_grenadiers_tech_1 = {
+		enable_subunits = {
+			UNS_grenadiers_unit
+		}
+		path = {
+			leads_to_tech = uns_grenadiers_tech_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 8 }
+		}
+	}
+	
+	uns_grenadiers_tech_2 = {
+		UNS_grenadiers_unit = {
+			soft_attack = 0.05
+			defense = 0.05
+			breakthrough = 0.1
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = uns_grenadiers_tech_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 8 }
+		}
+	}
+	
+	uns_grenadiers_tech_3 = {
+		UNS_grenadiers_unit = {
+			soft_attack = 0.07
+			defense = 0.07
+			breakthrough = 0.12
+			default_morale = 0.12
+		}
+		path = {
+			leads_to_tech = uns_grenadiers_tech_4
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 16 y = 8 }
+		}
+	}
+	
+	uns_grenadiers_tech_4 = {
+		UNS_grenadiers_unit = {
+			soft_attack = 0.1
+			defense = 0.1
+			breakthrough = 0.15
+			default_morale = 0.15
+		}
+		
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = UNS 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 18 y = 8 }
+		}
+	}
+	##### Soviet Union Tech
+	
+	sou_crystal_bullets = {
+		research_cost = 10 # Given by effect 
+		category_all_infantry = {
+			attack = 0.1
+			breakthrough = 0.1
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 0 }
+		}
+		army_attack_factor = 0.1
+		allow_branch = {
+			original_tag = SOU 
+		}
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	sou_tesla_v2_tech = {
+		dependencies = {
+			magical_weapons3 = 1
+		}
+		research_cost = 5 # Given by effect
+		allow_branch = {
+			original_tag = SOU 
+		}
+		enable_equipments = {
+			sou_tesla_mark_2_eqpm
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 0 }
+		}
+		
+		start_year = 1025
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	sou_kirov_tech = {
+		research_cost = 10
+		allow_branch = {
+			original_tag = SOU 
+		}
+		enable_equipments = {
+			sou_kirov_derjijabl
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 2 }
+		}
+		
+		start_year = 1015
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	sou_molotovs_tech = {
+		research_cost = 3
+		dependencies = {
+			sou_stormsquads_tech = 1
+		}
+		SOU_attack_group = {
+			hard_attack = 0.1
+			breakthrough = 0.15
+			soft_attack = 0.1
+			
+		}
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1010
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 2 }
+		}
+	}
+	
+	sou_hammer_weapon_tech = {
+		research_cost = 2
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_hammer_cannon
+		}
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 4 }
+		}
+	}
+	
+	sou_tesla_cannon_tech = {
+		research_cost = 2
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_hammer_cannon
+		}
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 4 }
+		}
+	}
+	
+	sou_stormsquads_tech = {
+		enable_subunits = {
+			SOU_attack_group
+		}
+		allow_branch = {
+			original_tag = SOU 
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 6 }
+		}
+	}
+	
+	sou_vdv_tech = {
+		research_cost = 9999
+		enable_subunits = {
+			SOU_desantura_ebat
+		}
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 6 }
+		}
+		custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	
+	sou_infiltrators_tech_1 = {
+		enable_subunits = {
+			SOU_infiltrators_group_unit
+		}
+		path = {
+			leads_to_tech = sou_infiltrators_tech_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 8 }
+		}
+	}
+	
+	sou_infiltrators_tech_2 = {
+		SOU_infiltrators_group_unit = {
+			breakthrough = 0.1
+			initiative = 0.05
+			movement = 0.1
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = sou_infiltrators_tech_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 8 }
+		}
+	}
+	
+	sou_infiltrators_tech_3 = {
+		SOU_infiltrators_group_unit = {
+			breakthrough = 0.1
+			initiative = 0.08
+			movement = 0.12
+			default_morale = 0.15
+		}
+		path = {
+			leads_to_tech = sou_infiltrators_tech_4
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 16 y = 8 }
+		}
+	}
+	
+	sou_infiltrators_tech_4 = {
+		SOU_infiltrators_group_unit = {
+			soft_attack = 0.05
+			defense = 0.05
+			breakthrough = 0.1
+			initiative = 0.1
+			movement = 0.1
+			default_morale = 0.1
+		}
+		
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = SOU 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 18 y = 8 }
+		}
+	}
+	
+	############ German Tech
+	
+	gem_thermal_cannons = {
+		research_cost = 3# Given by effect 
+		dependencies = {
+			gem_flamethrower_corps_tech = 1
+		}
+		GEM_flamethrowing_units = {
+			attack = 0.1
+			breakthrough = 0.1
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 0 }
+		}
+		#army_attack_factor = 0.1
+		allow_branch = {
+			original_tag = GEM 
+		}
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	gem_mg15_tech = {
+		
+		research_cost = 5 # Given by effect
+		allow_branch = {
+			original_tag = GEM 
+		}
+		enable_equipments = {
+			gem_machinegewehr_15_eqpm
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 0 }
+		}
+		
+		start_year = 1025
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	gem_laser_ai_gun = {
+		research_cost = 3
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		allow_branch = {
+			original_tag = GEM 
+		}
+		enable_equipment_modules = {
+			tnm_laser_ai_system
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 2 }
+		}
+		
+		start_year = 1012
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	gem_gas_grenades = {
+		research_cost = 3
+		category_all_infantry = {
+			breakthrough = 0.15
+			soft_attack = 0.15
+		}
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1010
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 2 }
+		}
+	}
+	
+	gem_rockets_module_tech = {
+		research_cost = 3
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_rockets_module
+		}
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 4 }
+		}
+	}
+	
+	gem_gauss_tank_tech = {
+		research_cost = 8
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_gauss_tank_cannon
+		}
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1018
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 4 }
+		}
+	}
+	
+	gem_flamethrower_corps_tech = {
+		enable_subunits = {
+			GEM_flamethrowing_units
+		}
+		allow_branch = {
+			original_tag = GEM 
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 6 }
+		}
+	}
+	
+	gem_jaegers_unit_tech = {
+		research_cost = 9999
+		enable_subunits = {
+			GEM_jagers_human_unit
+		}
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 6 }
+		}
+		custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	
+	gem_executors_tech_1 = {
+		enable_subunits = {
+			GEM_executors_support_unit
+		}
+		path = {
+			leads_to_tech = gem_executors_tech_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 8 }
+		}
+	}
+	
+	gem_executors_tech_2 = {
+		GEM_executors_support_unit = {
+			suppression_factor = 0.05
+			recon = 1
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = gem_executors_tech_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 8 }
+		}
+	}
+	
+	gem_executors_tech_3 = {
+		GEM_executors_support_unit = {
+			suppression_factor = 0.08
+			recon = 1
+			default_morale = 0.12
+		}
+		path = {
+			leads_to_tech = gem_executors_tech_4
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 16 y = 8 }
+		}
+	}
+	
+	gem_executors_tech_4 = {
+		GEM_executors_support_unit = {
+			suppression_factor = 0.1
+			recon = 2
+			default_morale = 0.15
+			supply_consumption = -0.05
+		}
+		
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GEM 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 18 y = 8 }
+		}
+	}
+	
+	
+	################ Great Britain Tech 
+		
+		
+	grb_heartbeat_sensors = {
+		research_cost = 3# Given by effect 
+		
+		infantry = {
+			attack = 0.07
+			initiative = 0.02
+			breakthrough = 0.1
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 0 }
+		}
+		#army_attack_factor = 0.1
+		allow_branch = {
+			original_tag = GRB 
+		}
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	grb_plasma_ar_tech = {
+		
+		research_cost = 5 # Given by effect
+		dependencies = {
+			magical_weapons3 = 1
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		enable_equipments = {
+			grb_plasma_ar_eqpm
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 0 }
+		}
+		
+		start_year = 1015
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	grb_microwave_gun_tech = {
+		research_cost = 3
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		enable_equipment_modules = {
+			tnm_microwave_module
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 2 }
+		}
+		
+		start_year = 1012
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	grb_plasma_grenades = {
+		research_cost = 3
+		category_all_infantry = {
+			breakthrough = 0.15
+			soft_attack = 0.15
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1010
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 2 }
+		}
+	}
+	
+	grb_fire_tank_tech = {
+		research_cost = 3
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_flamethrower_grb
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 4 }
+		}
+	}
+	
+	grb_plasma_tank_tech = {
+		research_cost = 5
+		dependencies = {
+			magical_weapons1 = 1
+		}
+		enable_equipment_modules = {
+			tnm_plasma_cannon
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1018
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 4 }
+		}
+	}
+	
+	grb_heavy_infantry_tech = {
+		enable_subunits = {
+			GRB_heavy_infantry_unit
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 6 }
+		}
+	}
+	
+	grb_sas_tech = {
+		research_cost = 9999
+		enable_subunits = {
+			GRB_sas_unit
+		}
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 6 }
+		}
+		custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	
+	grb_colonial_police_tech_1 = {
+		enable_subunits = {
+			GRB_colonial_police_unit
+		}
+		path = {
+			leads_to_tech = grb_colonial_police_tech_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1007
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 8 }
+		}
+	}
+	
+	grb_colonial_police_tech_2 = {
+		GRB_colonial_police_unit = {
+			suppression_factor = 0.05
+			recon = 1
+			default_morale = 0.1
+		}
+		path = {
+			leads_to_tech = grb_colonial_police_tech_3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1012
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 8 }
+		}
+	}
+	
+	grb_colonial_police_tech_3 = {
+		GRB_colonial_police_unit = {
+			suppression_factor = 0.07
+			recon = 1
+			default_morale = 0.12
+		}
+		path = {
+			leads_to_tech = grb_colonial_police_tech_4
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 16 y = 8 }
+		}
+	}
+	
+	grb_colonial_police_tech_4 = {
+		GRB_colonial_police_unit = {
+			suppression_factor = 0.1
+			recon = 2
+			default_morale = 0.15
+			supply_consumption = -0.05
+		}
+		
+		research_cost = 1.5
+		allow_branch = {
+			original_tag = GRB 
+		}
+		start_year = 1015
+		folder = {
+			name = human_folder
+			position = { x = 18 y = 8 }
+		}
+	}	
+		
+		
 		
 	#Снайперы
 	
 	human_snipers_corps = {
-		depencies = {
+		dependencies = {
 			human_race = 1
 			tech_support = 1
 		}
@@ -94,9 +962,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = snipers_double
+			leads_to_tech = silent_assasins
 			research_cost_coeff = 1
 		}
+		
 		on_research_complete = {
 			hidden_effect = {
 				fix_weapon_techs = yes
@@ -106,7 +975,7 @@ technologies = {
 		start_year = 1007
 		folder = {
 			name = human_folder
-			position = { x = 2 y = 0 }
+			position = { x = 4 y = 0 }
 		}
 		categories = {
 			human_tech
@@ -117,18 +986,25 @@ technologies = {
 			factor = 10
 		}
 	}
+	
+	
+	##### "Recon" path - recon, initiative, terrain bonuses 
 	snipers_optics = {
 		
 		xor = {
-			snipers_double
+			silent_assasins
 		}
 		path = {
-			leads_to_tech = snipers_camo_cover
+			leads_to_tech = sniper_laser_designators
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = snipers_double
 			research_cost_coeff = 1
 		}
 		sniper_corps = {
-			entrenchment = 2
-			default_morale = 0.3
+			initiative = 0.05
+			default_morale = 0.1
 			need = {
 				support_equipment = 15
 				infantry_equipment = 10
@@ -137,7 +1013,7 @@ technologies = {
 		research_cost = 1
 		folder = {
 			name = human_folder
-			position = { x = 0 y = 2 }
+			position = { x = 2 y = 2 }
 		}
 		ai_will_do = {
 			factor = 10
@@ -148,9 +1024,265 @@ technologies = {
 			race_tech
 		} 
 	}
+	
+	sniper_laser_designators = {
+		path = {
+			leads_to_tech = night_vision_scopes_tnm
+			research_cost_coeff = 1
+		}
+		category_line_artillery = {
+			attack = 0.07
+			breakthrough = 0.1
+		}
+		category_cas = {
+			air_bombing  = 0.1
+			
+		}
+		research_cost = 1.2
+		folder = {
+			name = human_folder
+			position = { x = 1 y = 4 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 10
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	}
+	
+	
+	
+
+	
+	snipers_double = {
+		
+		path = {
+			leads_to_tech = sniper_targeting_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		sniper_corps = {
+			#manpower = 200
+			max_strength = 0.1
+			default_morale = 0.2
+			urban = {
+				defence = 0.05
+			}
+			
+		}
+		folder = {
+			name = human_folder
+			position = { x = 3 y = 4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			race_tech
+			snipers_tech
+		}
+	}
+	
+	night_vision_scopes_tnm = {
+		path = {
+			leads_to_tech = mountain_eqpm_tnm
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			night = {
+				attack = 0.07
+				defence = 0.07
+				movement = 0.12
+			}
+			recon = 1
+			initiative = 0.04
+		}
+		research_cost = 1.2
+		folder = {
+			name = human_folder
+			position = { x = 1 y = 6 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			race_tech
+			snipers_tech
+		}
+	}
+		
+		
+		
+	sniper_targeting_systems = {
+		path = {
+			leads_to_tech = rangefinders_tnm
+			research_cost_coeff = 1
+		}
+		air_interception_attack_factor = 0.08
+		air_air_superiority_attack_factor = 0.08
+		research_cost = 1.2
+		folder = {
+			name = human_folder
+			position = { x = 3 y = 6 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	}
+	
+	mountain_eqpm_tnm = {
+		path = {
+			leads_to_tech = shortrange_radio
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			mountain = {
+				attack = 0.05
+				movement = 0.1
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				movement = 0.1
+				defence = 0.05
+			}
+			default_morale = 0.1
+		}
+		research_cost = 1.5
+		folder = {
+			name = human_folder
+			position = { x = 1 y = 8 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	}
+	
+	rangefinders_tnm = {
+		path = {
+			leads_to_tech = shortrange_radio
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			recon = 2
+			initiative = 0.1
+			plains = {
+				attack = 0.15
+				defence = 0.1
+			}
+		}
+		
+		research_cost = 1.5
+		folder = {
+			name = human_folder
+			position = { x = 3 y = 8 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	}
+	
+	
+	shortrange_radio = {
+		category_all_infantry = {
+			initiative = 0.01
+			attack = 0.05
+		}
+		sniper_corps = {
+			recon = 1
+			initiative = 0.1
+			urban = {
+				movement = 0.1
+			}
+		}
+		research_cost = 2
+		
+		folder = {
+			name = human_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	}
+	
+	################ "Assault" path - attack, defence, breakthrough
+	
+	silent_assasins = {
+		xor = {
+			snipers_optics
+		}
+		path = {
+			leads_to_tech = snipers_camo_cover
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = sniper_special_ammo
+			research_cost_coeff = 1
+		}
+		
+		sniper_corps = {
+			attack = 0.06
+			urban = {
+				attack = 0.03
+				movement = 0.1
+			}
+		}
+		
+		research_cost = 1
+		folder = {
+			name = human_folder
+			position = { x = 6 y = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	
+	}
+	
 	snipers_camo_cover = {
 		path = {
-			leads_to_tech = snipers_uav
+			leads_to_tech = snipers_silencers 
 			research_cost_coeff = 1
 		}
 		sniper_corps = {
@@ -172,13 +1304,13 @@ technologies = {
 				defence = 0.1
 			}
 		}
-		research_cost = 1
+		research_cost = 1.2
 		folder = {
 			name = human_folder
-			position = { x = 0 y = 4 }
+			position = { x = 5 y = 4 }
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		categories = {
 			human_tech
@@ -186,124 +1318,71 @@ technologies = {
 			race_tech
 		} 
 	}
-	snipers_uav = {
+	
+	sniper_special_ammo = {
 		path = {
 			leads_to_tech = snipers_high_caliber
 			research_cost_coeff = 1
 		}
 		sniper_corps = {
-			maximum_speed = 0.4
-			forest = {
-				attack = 0.05
-				defence = 0.1
-				movement = 0.1
-			}
-			jungle = {
-				attack = 0.05
-				defence = 0.05
-				movement = 0.1
-			}
-			mountain = {
-				attack = 0.05
-				movement = 0.1
-				defence = 0.05
+			attack = 0.05
+			breakthrough = 0.07
+			fort = {
+				attack = 0.07
 			}
 			urban = {
-				attack = 0.05
-				defence = 0.05
-				movement = 0.1
+				attack = 0.07
 			}
-			soft_attack = 0.1
-		}
-		research_cost = 1
-		folder = {
-			name = human_folder
-			position = { x = 0 y = 6 }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		categories = {
-			human_tech
-			race_tech
-			snipers_tech
-		} 
-	}
-	snipers_double = {
-		xor = {
-			snipers_optics
 		}
 		
+		research_cost = 1.2
+		
+		folder = {
+			name = human_folder
+			position = { x = 7 y = 4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+	}
+	
+	snipers_silencers = {
 		path = {
-			leads_to_tech = snipers_targeting_systems
+			leads_to_tech = new_orienting_methods
 			research_cost_coeff = 1
 		}
-		research_cost = 1
 		sniper_corps = {
-			manpower = 200
-			max_strength = 0.25
-			default_morale = 0.4
-			soft_attack = 0.1
-			breakthrough = 0.1
-			reliability = 2
+			recon = 1
+			initiative = 0.1
+			attack = 0.03
+			defence = 0.1
+			night = {
+				attack = 0.1
+				defence = 0.15
+			}
 		}
+		
+		research_cost = 1.2
+		
 		folder = {
 			name = human_folder
-			position = { x = 4 y = 2 }
+			position = { x = 5 y = 6 }
 		}
 		ai_will_do = {
-			factor = 10
-		}
-		categories = {
-			human_tech
-			race_tech
-			snipers_tech
-		}
-	}
-	snipers_targeting_systems = {
-		path = {
-			leads_to_tech = snipers_locking_system
-			research_cost_coeff = 1
-		}
-		category_line_artillery = {
-			soft_attack = 0.1
-			breakthrough = 0.05
-		}
-		research_cost = 1
-		folder = {
-			name = human_folder
-			position = { x = 4 y = 4 }
-		}
-		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 		categories = {
 			human_tech
 			snipers_tech
 			race_tech
-		}
-	}
-	snipers_locking_system = {
-		path = {
-			leads_to_tech = snipers_high_caliber
-			research_cost_coeff = 1
-		}
-		air_interception_attack_factor = 0.1
-		air_air_superiority_attack_factor = 0.1
-		research_cost = 1
-		folder = {
-			name = human_folder
-			position = { x = 4 y = 6 }
-		}
-		ai_will_do = {
-			factor = 10
-		}
-		categories = {
-			human_tech
-			race_tech
-			snipers_tech
-		}
-	}
+		} 
+	}	
+		
 	snipers_high_caliber = {
 		path = {
 			leads_to_tech = snipers_at_rifles
@@ -311,28 +1390,76 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 2 y = 8 }
+			position = { x = 7 y = 6 }
 		}
 		sniper_corps = {
 			hard_attack = 0.05
 			soft_attack = 0.1
 			breakthrough = 0.05
 		}
-		research_cost = 1
+		research_cost = 1.2
 		categories = {
 			human_tech
 			snipers_tech
 			race_tech 
 		}
 	}
+	
+	new_orienting_methods = {
+		path = {
+			leads_to_tech = sniper_special_weapons
+			research_cost_coeff = 1
+		}
+		sniper_corps = {
+			hills = {
+				movement = 0.15
+				attack = 0.1
+			}
+			plains = {
+				movement = 0.2
+				attack = 0.1
+			}
+			urban = {
+				movement = 0.15
+				attack = 0.07
+			}
+			forest = {
+				movement = 0.15
+			}
+			marsh = {
+				movement = 0.15
+			}
+			initiative = 0.1
+			recon = 1
+			movement = 0.15
+		}
+		
+		research_cost = 1.5
+		folder = {
+			name = human_folder
+			position = { x = 5 y = 8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+		
+	
 	snipers_at_rifles = {
 		path = {
-			leads_to_tech = sniper_nigt_vision
+			leads_to_tech = sniper_special_weapons
 			research_cost_coeff = 1
 		}
 		folder = {
 			name = human_folder
-			position = { x = 2 y = 10 }
+			position = { x = 7 y = 8 }
 		}
 		research_cost = 1
 		categories = {
@@ -345,72 +1472,273 @@ technologies = {
 			breakthrough = 0.05
 		}
 	}
-	sniper_nigt_vision = {
+	
+	
+	sniper_special_weapons = {
+		sniper_corps = {
+			attack = 0.15
+			breakthrough = 0.1
+			defence = 0.15
+			hard_attack = 0.15
+			entrenchment = 2
+		}
+		research_cost = 1.5
 		folder = {
 			name = human_folder
-			position = { x = 2 y = 12 }
+			position = { x = 6 y = 10 }
 		}
-		depencies = {
-			night_vision = 1
+		ai_will_do = {
+			factor = 1
 		}
-		research_cost = 1
 		categories = {
 			human_tech
-			race_tech 
 			snipers_tech
-		}
-		land_night_attack = 0.2
+			race_tech
+		} 
+		
 	}
-	conveyor_prod_human = {
-		depencies = {
-			improved_machine_tools = 1
-		}
+		
+	########## Industrial bonuses here
+	
+	
+	production_requalification = {
+		conversion_cost_civ_to_mil_factor = -0.1
+		production_speed_arms_factory_factor = 0.1
 		path = {
-			leads_to_tech = prod_autom_human
+			leads_to_tech = tnm_metallurgy
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = cyphers_restart
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
 		folder = {
 			name = human_folder
-			position = { x = 6 y = 0 }
+			position = { x = 10 y = 0 }
 		}
-		research_cost = 1
+		ai_will_do = {
+			factor = 1
+		}
 		categories = {
 			human_tech
-			race_tech 
-			human_industrial_tech
-		}
-		production_factory_max_efficiency_factor = 0.1
-		industrial_capacity_factory = 0.1
-		conversion_cost_civ_to_mil_factor = -0.15
+			snipers_tech
+			race_tech
+		} 
+		
 	}
-	prod_autom_human = {
+	
+	tnm_metallurgy = {
+		on_research_complete = {
+			modify_building_resources = {
+				building = industrial_complex
+				resource = steel
+				amount = 1
+			}
+		}
+		path = {
+			leads_to_tech = oil_production_refinery
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		
+		folder = {
+			name = human_folder
+			position = { x = 9 y = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
+	cyphers_restart = {
+		crypto_strength = 10
+		decryption_power_factor = 0.1
+		
+		path = {
+			leads_to_tech = binary_code
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = human_folder
+			position = { x = 11 y = 2 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
+	oil_production_refinery = {
+		base_fuel_gain_factor = 0.15
+		production_speed_synthetic_refinery_factor = 0.1
+		
+		
+		path = {
+			leads_to_tech = alloys_new_tnm
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = human_folder
+			position = { x = 9 y = 4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
+	binary_code = {
+		research_speed_factor = 0.07
+		crypto_strength = 10
+		
+		path = {
+			leads_to_tech = electric_upd
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		
+		folder = {
+			name = human_folder
+			position = { x = 11 y = 4 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
+	alloys_new_tnm = {
+		production_lack_of_resource_penalty_factor = -0.15
+		production_factory_max_efficiency_factor = 0.1
+		
+		path = {
+			leads_to_tech = factory_regaining
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		
+		folder = {
+			name = human_folder
+			position = { x = 9 y = 6 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
+	electric_upd = {
+		production_speed_buildings_factor = 0.1
+		research_speed_factor = 0.05
+		
+		path = {
+			leads_to_tech = summators_registers
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = human_folder
+			position = { x = 11 y = 6 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
+	factory_regaining = {
+		production_factory_max_efficiency_factor = 0.1
+		line_change_production_efficiency_factor = 0.07
+		industry_repair_factor = 0.1
+		
 		path = {
 			leads_to_tech = prod_time_work
 			research_cost_coeff = 1
 		}
+		
+		research_cost = 2
 		folder = {
 			name = human_folder
-			position = { x = 6 y = 2 }
+			position = { x = 9 y = 8 }
 		}
-		research_cost = 1
+		ai_will_do = {
+			factor = 1
+		}
 		categories = {
-			race_tech
-			human_industrial_tech
 			human_tech
-		}
-		line_change_production_efficiency_factor = 0.15
-		production_factory_efficiency_gain_factor = 0.1
+			snipers_tech
+			race_tech
+		} 
+		
 	}
-	prod_time_work = {
+	
+	
+	summators_registers = {
+		research_speed_factor = 0.03
+		decryption_power_factor = 0.25
+		
 		path = {
-			leads_to_tech = prod_security_system
+			leads_to_tech = first_microprocessors
 			research_cost_coeff = 1
 		}
+		research_cost = 2
 		folder = {
 			name = human_folder
-			position = { x = 6 y = 4 }
+			position = { x = 11 y = 8 }
 		}
-		research_cost = 1
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+
+	prod_time_work = {
+		
+		folder = {
+			name = human_folder
+			position = { x = 9 y = 10 }
+		}
+		research_cost = 2
 		categories = {
 			race_tech
 			human_industrial_tech
@@ -428,10 +1756,32 @@ technologies = {
 		}
 	}
 	
+	first_microprocessors = {
+		research_speed_factor = 0.07
+		decryption_power = 15
+		crypto_strength = 15
+		agency_upgrade_time = -0.1
+		
+		research_cost = 2
+		folder = {
+			name = human_folder
+			position = { x = 11 y = 10 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			snipers_tech
+			race_tech
+		} 
+		
+	}
+	
 	###### Armor and army upgrades 
 	
-	upgrade_armor_vests = {
-		depencies = {
+	total_equipment_upgrade = {
+		dependencies = {
 			human_race = 1
 			magical_weapons = 1
 		}
@@ -440,12 +1790,16 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {	
-			leads_to_tech = magical_technical_upgrades
+			leads_to_tech = magical_sights
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = crystal_batteries
 			research_cost_coeff = 1
 		}
 		folder = {
 			name = human_folder
-			position = { x = 9 y = 0 }
+			position = { x = 15 y = 0 }
 		}
 		research_cost = 1
 		start_year = 1008
@@ -454,10 +1808,12 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
+		category_all_infantry = {
 			defense = 0.05
 			max_strength = 0.1
 			armor_value = 0.01
+			attack = 0.05
+			reliability = 0.06
 		}
 	}
 	upgraded_vests = {
@@ -467,7 +1823,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 8 y = 2 }
+			position = { x = 13 y = 2 }
 		}
 		research_cost = 2
 		start_year = 1010
@@ -476,7 +1832,7 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
+		category_all_infantry = {
 			defense = 0.05
 			speed = -0.01
 			max_strength = 0.25
@@ -489,7 +1845,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 8 y = 4 }
+			position = { x = 13 y = 4 }
 		}
 		research_cost = 3
 		start_year = 1012
@@ -498,7 +1854,7 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
+		category_all_infantry = {
 			defense = 0.1
 			speed = -0.05
 			max_strength = 0.5
@@ -516,7 +1872,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 8 y = 6 }
+			position = { x = 13 y = 6 }
 		}
 		research_cost = 4
 		start_year = 1014
@@ -525,7 +1881,7 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
+		category_all_infantry = {
 			defense = 0.15
 			speed = 0.05
 			max_strength = 0.7
@@ -533,9 +1889,13 @@ technologies = {
 		}
 	}
 	advanced_polymer_armor = {
+		path = {
+			leads_to_tech = exo_outfit_prototype
+			research_cost_coeff = 1
+		}
 		folder = {
 			name = human_folder
-			position = { x = 8 y = 8 }
+			position = { x = 13 y = 8 }
 		}
 		research_cost = 5
 		start_year = 1016
@@ -549,30 +1909,102 @@ technologies = {
 			speed = 0.05
 			max_strength = 1
 			armor_value = 0.04
-			initiative = 0.1
+			#initiative = 0.1
 		}
 	}
-	magical_technical_upgrades = {
-		path = {
-			leads_to_tech = magical_sights
-			research_cost_coeff = 1
+	
+	exo_outfit_prototype = {
+		dependencies = {
+			first_microprocessors = 1
+		}
+		category_all_infantry = {
+			entrenchment = 1
+			movement = 0.15
+			defense = 0.2
+			soft_attack = 0.2
+			breakthrough = 0.2
+			reliability = 0.15
+			default_morale = 0.25
+			initiative = 0.02
 		}
 		folder = {
 			name = human_folder
-			position = { x = 10 y = 2 }
+			position = { x = 13 y = 10 }
 		}
-		research_cost = 1.5
+		start_year = 1020
+		research_cost = 5
 		categories = {
 			race_tech
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
-			attack  = 0.05
-			soft_attack = 0.05
-			breakthrough = 0.05
+	}
+	
+	
+	crystal_batteries = {
+		research_speed_factor = 0.04
+		no_supply_grace = 24
+		dig_in_speed = 0.1
+		planning_speed = 0.1
+		path = {
+			leads_to_tech = microradio_headset
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 15 y = 2 }
+		}
+		research_cost = 2
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
 		}
 	}
+	
+	microradio_headset = {
+		category_all_infantry = {
+			recon = 1
+			initiative = 0.02
+			
+		}
+		land_reinforce_rate = 0.1
+		army_infantry_attack_factor = 0.1
+		experience_gain_army_factor = 0.1
+		path = {
+			leads_to_tech = antimagical_grenades
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = human_folder
+			position = { x = 15 y = 4 }
+		}
+		research_cost = 2
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+	}
+	
+	antimagical_grenades = {
+		
+		category_all_infantry = {
+			soft_attack = 0.25
+			defense = 0.25
+		}
+		folder = {
+			name = human_folder
+			position = { x = 15 y = 6 }
+		}
+		research_cost = 6
+		categories = {
+			race_tech
+			human_tech
+			human_army_upgrades
+		}
+	}
+	
 	magical_sights = {
 		path = {
 			leads_to_tech = magical_scanning_system
@@ -580,7 +2012,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 10 y = 4 }
+			position = { x = 17 y = 4 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -588,11 +2020,11 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
-			attack  = 0.05
-			soft_attack = 0.05
+		category_all_infantry = {
+			
+			soft_attack = 0.1
 			breakthrough = 0.05
-			recon = 0.12
+			#recon = 0.12
 		}
 	}
 	magical_scanning_system = {
@@ -602,7 +2034,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 10 y = 6 }
+			position = { x = 17y = 6 }
 		}
 		research_cost = 1.5
 		categories = {
@@ -610,18 +2042,25 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
-			attack  = 0.1
+		category_all_infantry = {
+			#attack  = 0.1
 			soft_attack = 0.1
-			breakthrough = 0.05
-			initiative = 0.2
+			breakthrough = 0.03
 		}
+		sniper_corps = {
+			initiative = 0.07
+		}
+		
 	}
 	
 	magical_permeter_barrier = {
+		path = {
+			leads_to_tech = magical_field_scanners 
+			research_cost_coeff = 1
+		}
 		folder = {
 			name = human_folder
-			position = { x = 10 y = 8 }
+			position = { x = 17 y = 8 }
 		}
 		research_cost = 2
 		categories = {
@@ -629,15 +2068,44 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
-		infantry = {
+		category_all_infantry = {
 			attack  = 0.1
 			soft_attack = 0.1
 			hard_attack = 0.05
-			defense = 0.05
+			defense = 0.1
 			breakthrough = 0.05
-			initiative = 0.25
-			recon = 1
+			#initiative = 0.25
+			#recon = 1
 		}
+		
+		
+	}
+	
+	magical_field_scanners = {
+		category_all_infantry = {
+			recon = 1
+			initiative = 0.03
+			defence = 0.1
+			breakthrough = 0.1
+			
+			urban = {
+				attack = 0.07
+				defence = 0.07
+			}
+		}
+		folder = {
+			name = human_folder
+			position = { x = 17 y = 10 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+		
 	}
 }
 

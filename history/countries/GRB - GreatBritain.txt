@@ -26,8 +26,7 @@ set_technology = {
 	tech_mountaineers = 1
 	marines = 1
 	paratroopers = 1
-	gwtank = 1
-	basic_light_tank = 1
+	
 	electronic_mechanical_engineering  = 1
 	radio = 1
 	mechanical_computing = 1
@@ -42,17 +41,57 @@ set_technology = {
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	basic_medium_tank = 1
+	artillery1 = 1
+	antiair2 = 1
+	antiair1 = 1
+	antitank1 = 1
+	antitank2 = 1
 	gw_artillery = 1
 	interwar_artillery = 1
 	interwar_antiair = 1
 	antiair1 = 1
 	interwar_antitank = 1
-	antitank1 = 1
-	mobile_warfare = 1
+	
+	trench_warfare = 1
 }
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		amphibious_tank_chassis = 1
+		amphibious_drive = 1
+		advanced_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		improved_heavy_tank_chassis = 1
+		super_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		basic_train = 1
+	}
+}
+
+
+if = {
+	limit = {
+		NOT = { 
+			has_dlc = "No Step Back"
+		}
+	}
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	basic_medium_tank = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+	
 actually_fix_weapon_techs = yes
 if = {
 	limit = {
@@ -136,112 +175,117 @@ set_popularities = {
    neutrality = 8
 }
 
-create_country_leader = {
-   name = "Sir Winston Leonard Spenser Churchill"
-   desc = "GRB_demo_desc"
-   picture = "gfx/leaders/GRB/Churchill.dds"
-   expire = "1999.9.9"
-   ideology = conservatism
-   traits = { 
-		human_leader
-		demo_leader
-		dies_soon_trait
+recruit_character = GRB_sir_winston_leonard_spenser_churchill
+recruit_character = GRB_hugh_todd_naylor_gaitskell
+recruit_character = GRB_sir_oswald_ernald_mosley
+recruit_character = GRB_her_majesty_queen_elizabeth_ii
+recruit_character = GRB_bernard_montgomerey
+recruit_character = GRB_jake_grant
+recruit_character = GRB_danny_barnest
+recruit_character = GRB_rowan_lawrence
+recruit_character = GRB_santodes
+recruit_character = GRB_parsefal
+recruit_character = GRB_anthony_eden
+recruit_character = GRB_dominik_harrison
+recruit_character = GRB_alistar_wild
+recruit_character = GRB_louie_carter
+recruit_character = GRB_blast_guard
+recruit_character = GRB_margaret_thatcher
+recruit_character = GRB_herman_buecher
+recruit_character = GRB_esmee_hamilton
+recruit_character = GRB_darius_mason
+recruit_character = GRB_richard_cole
+recruit_character = GRB_tyler_grant
+recruit_character = GRB_jonas_owen
+recruit_character = GRB_taylor_mccarthny
+recruit_character = GRB_albert_russell
+recruit_character = GRB_patrick_turner
+recruit_character = GRB_elias_holland
+recruit_character = GRB_mark_fletcher
+recruit_character = GRB_emma_thomson
+recruit_character = GRB_theodore_rees
+recruit_character = GRB_maximillian_berry
+recruit_character = GRB_kingsley_grant
+recruit_character = GRB_henry_williamson
+recruit_character = GRB_kasper_jones
+recruit_character = GRB_harris_brown
+recruit_character = GRB_ricko_meritt
+recruit_character = GRB_vzhick_gulseth
+
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
 	}
-}
-create_country_leader = {
-	name = "Hugh Todd Naylor Gaitskell"
-	desc = "GRB_comm_desc"
-	picture = "gfx/leaders/GRB/Gaitskell.dds"
-	expire = "1989.1.1"
-	ideology = democratic_socialism
-	traits = { 
-		human_leader
-		comm_leader
-	}
-}
-create_country_leader = {
-   name = "Sir Oswald Ernald Mosley"
-   desc = "GRB_fasc_desc"
-   picture = "gfx/leaders/GRB/Mosley.dds"
-   expire = "1989.1.1"
-   ideology = fascism_ideology 
-   traits = { 
-
-	}
-}
-
-create_country_leader = {
-   name = "Her Majesty Queen Elizabeth II"
-   desc = "GRB_neutr_desc"
-   picture = "gfx/leaders/GRB/QueenEliz.dds"
-   expire = "1989.1.1"
-   ideology = despotism 
-   traits = { 
-
-	}
-}
-
-
-create_field_marshal = {
-   name = "Bernard Montgomerey"
-   desc = "GRB_field_desc"
-   portrait_path = "gfx/leaders/GRB/Montgomerie.dds"
-   traits = { 
-		expert_delegator
-		unyielding_defender
-	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-	#id = 1998
-}
-
-
-create_corps_commander = {
-	name = "Jake Grant"
-	desc = "GRB_gen_1"
-	portrait_path = "gfx/leaders/GRB/General_1.dds"
-	traits = {
-		infantry_commander_hum
-		infantry_officer
-	}
-	skill = 3
-	attack_skill = 4
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 3
 	
-}
-create_corps_commander = {
-	name = "Danny Barnest"
-	desc = "GRB_gen_2"
-	portrait_path = "gfx/leaders/GRB/General_2.dds"
-	traits = {
-		trait_engineer
-		scavenger
+	create_equipment_variant = {
+		name = "GSR3301 Setter"
+		parent = 0
+		
+		type = light_tank_chassis_2
+		
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/GRB/GRB_lt_eqpm_3.dds"
 	}
-	skill = 4
-	attack_skill = 2
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 4
 	
-}
-
-create_corps_commander = {
-	name = "Rowan Lawrence"
-	desc = "GRB_gen_3"
-	portrait_path = "gfx/leaders/GRB/General_3.dds"
-	traits = {
-		panzer_expert
-		tankist_commander_hum
+	
+	create_equipment_variant = {
+		name = "Cromwell"
+		parent = 0
+		
+		type = medium_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_medium_cannon
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/GRB/GRB_mt_eqpm_2.dds"
 	}
-	skill = 5
-	attack_skill = 3
-	defense_skill = 5
-	planning_skill = 5
-	logistics_skill = 4
 	
+	
+	create_equipment_variant = {
+		name = "Black Prince"
+		parent = 0
+		
+		type = heavy_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_heavy_cannon_2
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 4
+		}
+		icon = "gfx/interface/technologies/GRB/GRB_ht_2.dds"
+	}
 }

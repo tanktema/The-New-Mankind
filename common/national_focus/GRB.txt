@@ -76,7 +76,7 @@ focus_tree = {
 		icon = GFX_goal_GRB_contact
 		relative_position_id = GRB_exploration
 		prerequisite = { focus = GRB_exploration }
-		cost = 1
+		cost = 1.4
 		completion_reward = {
 			acceptance_expand_extra = yes
 			country_event = { id = grb.7 }
@@ -94,7 +94,7 @@ focus_tree = {
 					set_state_name = "STATE_903"
 				}
 				set_province_name = {
-					id = 12305
+					id = 5005
 					name = "STATE_903"
 				}
 			}
@@ -109,13 +109,10 @@ focus_tree = {
 		relative_position_id = GRB_contact
 		prerequisite = { focus = GRB_contact }
 		available = {
-			OR = {
-				always = no
-				hidden_trigger = {
-					is_debug = yes 
-				}
+			always = no
+				
 			
-			}
+			
 		}
 				
 		
@@ -505,10 +502,9 @@ focus_tree = {
 								check_variable = { 364.reg_fasc_support_gb < 50 }
 								check_variable = { 365.reg_fasc_support_gb < 50 }
 							}
-							OR = {
-								has_country_flag = player_fascism_choose
-								has_country_flag = player_communists_choose
-							}
+							
+							has_country_flag = player_fascism_choose
+							
 						}
 					}
 					country_event = { id = grb.32 days = 5 }
@@ -1116,7 +1112,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure 
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -1134,7 +1130,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure 
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -1152,7 +1148,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure 
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -1170,7 +1166,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure 
-						level = 3
+						level = 1
 						instant_build = yes
 					}
 					
@@ -1184,7 +1180,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure 
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 				}
@@ -1498,21 +1494,16 @@ focus_tree = {
 				}
 				create_faction = GRB_COMMPACT
 			}
-			every_other_country = {
-
-				limit = {
-					AND = {
-						
-						has_government = communism
-						OR = {
-							is_western_griffonia_country = yes
-							is_southern_griffonia_country = yes
-							is_eastern_griffonia_country = yes
-							is_central_griffonia_country = yes
-							is_northern_griffonia_country = yes
-						}
-					}
+			PRW = {
+				
+				add_ai_strategy = {
+					type = alliance
+					id = GRB 
+					value = 500
 				}
+				country_event = { id = generic.5 days = 2}
+			}
+			SRS = {
 				
 				add_ai_strategy = {
 					type = alliance
@@ -1757,6 +1748,7 @@ focus_tree = {
 			AND = {
 				has_completed_focus = GRB_what_is_next
 				has_government = fascism
+				NOT = { has_country_flag = queen_has_lost }
 			}
 		}
 		x = 0
@@ -2412,7 +2404,7 @@ focus_tree = {
 					add_building_construction = {
 						type = infrastructure
 						instant_build = yes 
-						level = 3
+						level = 1
 					}
 				}
 				random_owned_state = {
@@ -2569,25 +2561,9 @@ focus_tree = {
 		prerequisite = { focus = GRB_northern_industrialization }
 		cost = 5
 		completion_reward = {
-			create_corps_commander = {
-				name = "Gimley \"Ricko\" Merritt"
-				portrait_path = "gfx/leaders/GRB/Merritt.dds"
-				traits = { other_race_general winter_expert demolisher_hum }
-				skill = 3 
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 4
-				logistics_skill = 4
-			}
-			create_corps_commander = {
-				name = "Vzhik Gulseth"
-				portrait_path = "gfx/leaders/GRB/Gulseth.dds"
-				traits = { tankist_commander_hum winter_expert }
-				skill = 3 
-				attack_skill = 1
-				defense_skill = 1
-				planning_skill = 3
-				logistics_skill = 5
+			effect_tooltip = {
+				recruit_character = GRB_ricko_meritt
+				recruit_character = GRB_vzhick_gulseth
 			}
 		}
 	}
@@ -3536,6 +3512,7 @@ focus_tree = {
 			has_country_flag = queen_has_lost
 			has_completed_focus = GRB_what_is_next
 			
+			
 		}
 		relative_position_id = GRB_what_is_next
 		prerequisite = { focus = GRB_what_is_next }
@@ -3571,16 +3548,9 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 			}
-			create_country_leader = {
-				name = "Brother Santodes"
-				desc = "GRB_SANTODES"
-				picture = "gfx/leaders/GRB/montypiton.dds"
-				expire = 1999.9.9
-				ideology = holy_order_f
-				traits = {
+			
+			promote_character = GRB_santodes
 				
-				}
-			}
 		}
 	}
 	
@@ -3790,7 +3760,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -3809,7 +3779,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -3828,7 +3798,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -3847,7 +3817,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -3996,16 +3966,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = fascism
 			}
-			create_country_leader = {
-				name = "Lord Parsefal the Honest"
-				desc = "GRB_SANTODES"
-				picture = "gfx/leaders/GRB/Parsefal.dds"
-				expire = 1999.9.9
-				ideology = neofeudalism
-				traits = {
-				
-				}
-			}
+			promote_character = GRB_parsefal
 		}
 	}
 	
@@ -4446,7 +4407,7 @@ focus_tree = {
 				
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes 
 				}
 			}
@@ -4482,7 +4443,7 @@ focus_tree = {
 				
 				add_building_construction = {
 					type = infrastructure
-					level = 4
+					level = 2
 					instant_build = yes 
 				}
 			}
@@ -5129,7 +5090,56 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = grb_army_tt
 			hidden_effect = {
-			
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Royal Armor Brigade\" division_template = \"Royal Armor Brigade\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					create_unit = {
+						division = "name = \"Royal Armor Brigade\" division_template = \"Royal Armor Brigade\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+						owner = GRB
+					}
+				}
 			}
 		}
 	}
@@ -5459,16 +5469,17 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = recruit_sas_divs
 			hidden_effect = {
+				set_technology = { grb_sas_tech = 1 }
 				division_template = {
 					name = "S.A.S Division"
 					priority = 3
 					regiments = {
-						paratroopers = { x = 0 y = 0 }
-						paratroopers = { x = 0 y = 1 }
-						paratroopers = { x = 1 y = 0 }
-						paratroopers = { x = 1 y = 1 }
-						paratroopers = { x = 2 y = 0 }
-						paratroopers = { x = 2 y = 1 }
+						GRB_sas_unit = { x = 0 y = 0 }
+						GRB_sas_unit = { x = 0 y = 1 }
+						GRB_sas_unit = { x = 1 y = 0 }
+						GRB_sas_unit = { x = 1 y = 1 }
+						GRB_sas_unit = { x = 2 y = 0 }
+						GRB_sas_unit = { x = 2 y = 1 }
 					}
 					support = {
 						field_hospital = { x = 0 y = 0 }

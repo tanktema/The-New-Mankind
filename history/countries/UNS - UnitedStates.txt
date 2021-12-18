@@ -5,6 +5,7 @@ set_research_slots = 2
 
 save_global_event_target_as = UNS
 
+
 set_technology = {
 	atomic_research = 1
 	human_race = 1
@@ -26,12 +27,10 @@ set_technology = {
 	tech_mountaineers = 1
 	marines = 1
 	paratroopers = 1
-	gwtank = 1
-	basic_light_tank = 1
+	
 	electronic_mechanical_engineering  = 1
 	radio = 1
 	mechanical_computing = 1
-	formation_flying = 1
 	mechanised_infantry = 1
 	amphibious_mechanized_infantry = 1
 	infantry_weapons2 = 1
@@ -43,15 +42,54 @@ set_technology = {
 	fighter1 = 1
 	early_bomber = 1
 	tactical_bomber1 = 1
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	basic_medium_tank = 1
+	artillery1 = 1
+	antiair2 = 1
+	antiair1 = 1
+	antitank1 = 1
+	antitank2 = 1
 	gw_artillery = 1
 	interwar_artillery = 1
 	interwar_antiair = 1
 	antiair1 = 1
 	interwar_antitank = 1
-	antitank1 = 1
+
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		amphibious_tank_chassis = 1
+		amphibious_drive = 1
+		advanced_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		improved_heavy_tank_chassis = 1
+		super_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		basic_train = 1
+	}
+}
+
+
+if = {
+	limit = {
+		NOT = { 
+			has_dlc = "No Step Back"
+		}
+	}
+	improved_light_tank = 1
+	basic_heavy_tank = 1
+	basic_medium_tank = 1
+	gwtank = 1
+	basic_light_tank = 1
 }
 actually_fix_weapon_techs = yes
 if = {
@@ -135,105 +173,41 @@ set_popularities = {
    communism = 15
 }
 
-create_country_leader = {
-   name = "John Kennedy"
-   desc = "UNS_demo_desc"
-   picture = "gfx/leaders/UNS/Kennedy.dds"
-   expire = "1999.9.9"
-   ideology = liberalism
-   traits = { 
-		human_leader
-		demo_leader
-	}
-}
-create_country_leader = {
-	name = "Gus Hall"
-	desc = "UNS_comm_desc"
-	picture = "gfx/leaders/UNS/Hall.dds"
-	expire = "1989.1.1"
-	ideology = marxism
-	traits = { 
-		human_leader
-		comm_leader
-	}
-}
-create_country_leader = {
-   name = "George Rockwell"
-   desc = "UNS_fasc_desc"
-   picture = "gfx/leaders/UNS/Rockwell.dds"
-   expire = "1989.1.1"
-   ideology = nazism
-   traits = { 
-		human_leader
-		fasc_leader
-	}
-}
-
-
-create_field_marshal = {
-   name = "General Gershell fon Shepherd"
-   desc = "UNS_field_desc"
-   portrait_path = "gfx/leaders/UNS/Shep.dds"
-   traits = { 
-		gen_shepherd
-		desert_storm
-	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 5
-	planning_skill = 6
-	logistics_skill = 4
-	id = 14999
-}
-
-create_corps_commander = {
-	name = "Connor Kent"
-	desc = ""
-	portrait_path = "gfx/leaders/UNS/Kent.dds"
-	traits = {
-		infantry_commander_hum
-		infantry_officer
-		ambusher
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 4
-	logistics_skill = 5
-	
-}
-
-create_corps_commander = {
-	name = "Arthur West"
-	desc = ""
-	portrait_path = "gfx/leaders/UNS/West.dds"
-	traits = {
-		fortress_buster
-		panzer_expert
-	}
-	skill = 5
-	attack_skill = 5
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 4
-	
-}
-
-create_corps_commander = {
-	name = "Elian Chaney"
-	desc = ""
-	portrait_path = "gfx/leaders/UNS/Chaney.dds"
-	traits = {
-		trait_engineer
-		combined_arms_expert
-	}
-	skill = 4
-	attack_skill = 4
-	defense_skill = 4
-	planning_skill = 5
-	logistics_skill = 3
-	
-}
+recruit_character = UNS_john_kennedy
+recruit_character = UNS_gus_hall
+recruit_character = UNS_george_rockwell
+recruit_character = UNS_general_gershell_fon_shepherd
+recruit_character = UNS_connor_kent
+recruit_character = UNS_arthur_west
+recruit_character = UNS_elian_chaney
+recruit_character = UNS_rachel_ramirs
+recruit_character = UNS_harry_trueman
+recruit_character = UNS_rarity
+recruit_character = UNS_lyra_heartsrings
+recruit_character = UNS_twilight_sparkle_visitor
+recruit_character = UNS_robert_oppenheimer
+recruit_character = UNS_sky_star
+recruit_character = general_bradley
+recruit_character = UNS_captain_pettaine
+recruit_character = UNS_colonel_karnel
+recruit_character = UNS_phelps
+recruit_character = UNS_holland
+recruit_character = UNS_harrison
+recruit_character = UNS_billy_scott
+recruit_character = UNS_zak_Harris
+recruit_character = UNS_hudson
+recruit_character = UNS_kline
+recruit_character = UNS_alice
+recruit_character = UNS_jason_broady
+recruit_character = UNS_adam_savage
+recruit_character = UNS_colonel_barton
+recruit_character = UNS_moonstriker
+recruit_character = UNS_maximilian_carter
+recruit_character = UNS_sivill_ironshield
+recruit_character = UNS_carlax
+recruit_character = UNS_lina_cypher
+recruit_character = UNS_hartmann
+recruit_character = UNS_statesoc_council
 
 create_operative_leader = {
 	name = "Edvard Snowden" 

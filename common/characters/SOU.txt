@@ -1,0 +1,834 @@
+characters={
+	SOU_mikhail_gorbachev={
+		name=SOU_mikhail_gorbachev
+		portraits={
+			civilian={
+				large="gfx/leaders/SOU/Gorbachev.dds"
+			}
+		}
+		country_leader={
+			desc="SOU_demo_desc"
+			ideology=socialism
+			traits={ human_leader demo_leader }
+			expire="1999.9.9.1"
+			id=-1
+		}
+	}
+	SOU_nikita_khruschev={
+		name=SOU_nikita_khruschev
+		portraits={
+			civilian={
+				large="gfx/leaders/SOU/Khruschev.dds"
+			}
+		}
+		country_leader={
+			desc="SOU_comm_desc"
+			ideology=marxism
+			traits={ human_leader comm_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	SOU_sergey_taboritskiy={
+		name=SOU_sergey_taboritskiy
+		portraits={
+			civilian={
+				large="gfx/leaders/SOU/Taboritskiy.dds"
+			}
+		}
+		country_leader={
+			desc="SOU_fasc_desc"
+			ideology=ultranationalism
+			traits={ human_leader fasc_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	SOU_andrey_smolyaniy={
+		name=SOU_andrey_smolyaniy
+		portraits={
+			civilian={
+				large="gfx/leaders/SOU/Seledka.dds"
+			}
+		}
+		country_leader={
+			desc="SOU_tsar_desc"
+			ideology=despotism
+			traits={ human_leader fasc_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	SOU_general_kryukov={
+		name=general_kryukov
+		portraits={
+			army={
+				small="GFX_idea_general_kryukov"
+			}
+			army={
+				large="gfx/leaders/SOU/Kryukov.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard offensive_doctrine }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=1999
+		}
+		
+		advisor = {
+			slot = army_chief 
+			idea_token = general_kryukov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				OR = { 
+					has_government = communism
+					has_completed_focus = SOU_appease_kryukov
+				}
+			}
+			traits = { army_chief_offensive_1 }
+		}
+	}
+	SOU_dmitry_yazov={
+		name = dmitry_yazov
+		portraits={
+			civilian={
+				large="gfx/leaders/SOU/Yazov.dds"
+			}
+			army={
+				large="gfx/leaders/SOU/Yazov.dds"
+				small="GFX_idea_dmitry_yazov"
+			}
+		}
+		field_marshal={
+			traits={ unyielding_defender expert_delegator }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=1998
+		}
+		
+		country_leader = {
+			desc = "TNM_YAZOV_DESC"
+			expire = "1999.9.9"
+			ideology = neo_bolshevism
+			traits = { human_leader }
+		}
+		
+		advisor = {
+			slot = army_chief    
+			idea_token = dmitry_yazov
+			
+			allowed = { original_tag = SOU }
+			available = {
+				OR = {
+					has_completed_focus = SOU_officers_bund
+					has_government = communism
+				}
+			}
+			traits = { gen_yazov }
+		}
+	}
+	SOU_captain_serpov={
+		name = SOU_captain_serpov
+		portraits={
+			army={
+				small="GFX_idea_general_serpov"
+			}
+			army={
+				large="gfx/leaders/UNS/Serpov.dds"
+			}
+		}
+		corps_commander={
+			traits={ gen_serpov omega }
+			skill=6
+			attack_skill=6
+			defense_skill=6
+			planning_skill=6
+			logistics_skill=6
+			legacy_id=1491
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = general_serpov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_country_flag = sou_army_support_tsar_flag
+			}
+			visible = {
+				has_government = neutrality
+			}
+			traits = { serp_high_command }
+		}
+	}
+	SOU_arseni_vinokurov={
+		name=SOU_arseni_vinokurov
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/SOU/Vinokurov.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer infantry_commander_hum }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	SOU_nikodim_kazankov={
+		name=SOU_nikodim_kazankov
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/SOU/Kazankov.dds"
+			}
+		}
+		corps_commander={
+			traits={ panzer_expert scavenger }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	SOU_sergey_demidov={
+		name=SOU_sergey_demidov
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/SOU/Demidov.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer rhbz_trait scavenger }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	
+	SOU_people_democrats = {	
+		name = SOU_people_democrats
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_people_democrats"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = SOU_people_democrats
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {	
+				has_completed_focus = SOU_people_voice
+			}
+			traits = { peoples_voice }
+			
+		}
+	}
+	
+	nikita_yasnov = {
+		name = nikita_yasnov
+		portraits = {
+			civilian = {
+				small = "GFX_idea_nikita_yasnov"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = nikita_yasnov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {	
+				has_completed_focus = SOU_radicalism
+			}
+			traits = { fascist_politician_yasnov }
+		}
+	}
+	
+	comrade_comissar = {
+		name = comrade_comissar
+		portraits = {
+			civilian = {
+				small = "GFX_idea_comrade_comissar"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = comrade_comissar
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_expand_kgb
+				has_intelligence_agency = yes
+			}
+			traits = { comissar_of_kgb }
+		}
+	}
+	
+	SOU_andrey_gromyko = {
+		name = SOU_gromyko_selhoz
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_gromyko_mininist"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = SOU_gromyko_selhoz
+			
+			allowed = { original_tag = SOU }
+			available = { 
+				NOT = { has_government = fascism }
+			}
+			traits = { gromyko_selhoz_trait }
+		}
+	}
+	
+	SOU_victor_timoshenko = {
+		name = SOU_victor_timoshenko
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_victor_timoshenko"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = SOU_victor_timoshenko
+			
+			allowed = {
+				original_tag = SOU
+			}
+			
+			traits = {
+				minister_of_industry
+			}
+		}
+	}
+	
+	SOU_sakharov = {
+		name = SOU_sakharov
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_sakharov"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = SOU_sakharov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_tech = nuclear_reactor 
+			}
+			research_bonus = {
+				nuclear = 0.12
+			}
+
+			traits = { nuclear_scientist }
+		}
+	}
+	
+	SOU_chernov = {
+		name = SOU_chernov
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_chernov"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = SOU_chernov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = {
+				excavation_minister
+			}
+		}
+	}
+	
+	SOU_corolev = {
+		name = SOU_corolev
+		portraits = {
+			army = {	
+				small = "GFX_idea_SOU_corolev"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = SOU_corolev
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_mistakes_of_past
+			}
+			
+			research_bonus = {
+				rocketry = 0.1
+			}
+			modifier = {
+				stability_factor = 0.05
+				experience_gain_air = 0.02
+			}
+			traits = {
+				rocketry_pioneer
+			}
+		}
+		
+	}
+	
+	sou_shtabnaya_krisa = {
+		name = sou_shtabnaya_krisa
+		portraits = {
+			army = {
+				small = "GFX_idea_sou_shtabnaya_krisa"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = sou_shtabnaya_krisa
+			
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_art_of_war
+			}
+			traits = { army_planning_master_chief }
+		}
+	}
+	
+	SOU_andropov = {
+		name = SOU_andropov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_andropov"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = SOU_andropov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			
+			traits = {
+				army_commando_2
+			}
+		}
+	}
+	
+	SOU_biryukov = {
+		name = SOU_biryukov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_biryukov"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = SOU_biryukov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			research_bonus = {
+				cat_mass_assault = 0.1
+			}
+			modifier = {
+				
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+	}
+	
+	SOU_toporov = {
+		name = SOU_toporov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_toporov"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = SOU_toporov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = {
+				air_airborne_2
+			}
+		}
+			
+	}
+	
+	sou_ciolkovskiy = {
+		name = sou_ciolkovskiy
+		portraits = {
+			army = {
+				small = "GFX_idea_sou_ciolkovskiy"
+			}
+		}
+		
+		advisor = {
+			slot = navy_chief
+			idea_token = sou_ciolkovskiy
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_fleet_effort 
+			}
+			traits = { navy_leader_human }
+		}
+	}
+	
+	sou_izotov = {
+		name = sou_izotov
+		portraits = {
+			army = {
+				small = "GFX_idea_sou_izotov"
+				large = "gfx/leaders/SOU/Izotov.dds"
+			}
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = sou_izotov
+			
+			allowed = { original_tag = SOU }
+			available = {
+				has_government = democratic
+			}
+			
+			traits = {
+				army_infantry_2
+			}
+		}
+	}
+	
+	SOU_belousov = {
+		name = SOU_belousov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_belousov"
+			}
+		}
+		
+		advisor = {
+			slot = air_chief
+			idea_token = SOU_belousov
+			
+			allowed = { original_tag = SOU }
+			
+			available = {
+				has_completed_focus = SOU_airforce
+			}
+			
+			traits = {
+				air_air_superiority_3
+			}
+		}
+	}
+	
+	SOU_dernov = {
+		name = SOU_dernov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_dernov"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = SOU_dernov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_logistics_2
+			}
+		}
+	}
+	
+	SOU_chepurin = {
+		name = SOU_chepurin
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_chepurin"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = SOU_chepurin
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_chief_maneuver_2
+			}
+		}
+	}
+	
+	SOU_suvorov = {
+		name = SOU_suvorov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOU_suvorov"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = SOU_suvorov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_chief_drill_3
+			}
+		}
+	}
+	
+	SOY_bulgakov = {
+		name = SOY_bulgakov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOY_bulgakov"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = SOY_bulgakov
+			
+			allowed = {
+				original_tag = SOU 
+			}
+			
+			traits = { 
+				army_mixed_trait
+			}
+		}
+	}
+	
+	SOU_alexey_smirnov = {
+		name = SOU_alexey_smirnov
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Smirnov_human.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_alexey_smirnov.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { tankist_commander_hum }
+			skill = 5 
+			attack_skill = 4
+			defense_skill = 6
+			planning_skill = 3
+			logistics_skill = 5
+			visible = {
+				has_government = democratic
+			}
+		}
+	}
+	
+	SOU_artemiy_travnikov = {
+		name = SOU_artemiy_travnikov
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/SOU/SOU_artemiy_travnikov.dds"
+				large = "gfx/leaders/SOU/Travnikov.dds"
+			}
+		}
+		
+	}
+	
+	SOU_sergey_dubrovsky = {
+		name = SOU_sergey_dubrovsky
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/SOU/SOU_sergey_dubrovsky.dds"
+				large = "gfx/leaders/SOU/Dubrovsky.dds"
+			}
+		}
+	}
+	
+	SOU_valeriy_nevzorov = {
+		name = SOU_valeriy_nevzorov
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/SOU/SOU_valeriy_nevzorov.dds"
+				large = "gfx/leaders/SOU/Nevzorov.dds"
+			}
+		}
+	}
+	
+	SOU_maxim_yesipov = {
+		name = SOU_maxim_yesipov
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/SOU/SOU_maxim_yesipov.dds"
+				large = "gfx/leaders/SOU/Yesipov.dds"
+			}
+		}
+	}
+	
+	SOU_leontiy_kuptsov = {
+		name = SOU_leontiy_kuptsov
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/SOU/SOU_leontiy_kuptsov.dds"
+				large = "gfx/leaders/SOU/Kuptsov.dds"
+			}
+		}
+	}
+	
+	
+	SOU_lev_zubkov = {
+		name = SOU_lev_zubkov
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/SOU/SOU_lev_zubkov.dds"
+				large = "gfx/leaders/SOU/Zybkov.dds"
+			}
+		}
+	}
+	
+	SOU_tanker_pony = {
+		name = SOU_tanker_pony
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Tanker.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_tanker_pony.dds"
+			}
+		}
+		
+	}
+	
+	SOU_tokarev = {
+		name = SOU_tokarev
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Tokarev.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_tokarev.dds"
+			}
+		}
+		
+	}
+	
+	SOU_semenov = {
+		name = SOU_semenov
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Semenov.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_semenov.dds"
+			}
+		}
+		
+	}
+	
+	SOU_mustafov = {
+		name = SOU_mustafov
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Mustafov.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_mustafov.dds"
+			}
+		}
+	}
+	
+	SOU_vitaliy_orlov = {
+		name = SOU_vitaliy_orlov
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Orlov.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_vitaliy_orlov.dds"
+			}
+		}
+	}
+	
+	SOU_emerald_dusk = {
+		name = SOU_emerald_dusk
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Orlov.dds"
+				small = "gfx/interface/ideas/advisors/SOU/SOU_emerald_dusk.dds"
+			}
+		}
+	}
+
+}	

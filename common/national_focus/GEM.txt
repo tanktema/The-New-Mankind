@@ -213,13 +213,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = focus_on_decision_complete
 			effect_tooltip = {
-				create_country_leader = {
-					name = "Heinrich Himmler"
-					desc = "GEM_HIMMLER_DESC"
-					picture = "gfx/leaders/GEM/Himmler.dds"
-					ideology = nazism
-					traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
-				}
+				promote_character = GEM_heinrich_himmler
 			}
 		}
 	}
@@ -236,13 +230,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = focus_on_decision_complete
 			effect_tooltip = {
-				create_country_leader = {
-					name = "Joseph Goebbels"
-					desc = "GEM_GOEBBELS_DESC"
-					picture = "gfx/leaders/GEM/Goebbels.dds"
-					ideology = nazism
-					traits = { propaganda_master_hum human_leader }
-				}
+				promote_character = GEM_goebbels_min
 			}
 		}
 	}
@@ -1023,9 +1011,8 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			country_event = { id = gem.22 }
-			create_corps_commander = {
-				name = "Aryanna"
-				portrait_path = "gfx/leaders/GEM/Aryanna.dds"
+			add_corps_commander_role = {
+				character = GEM_arianna
 				traits = {
 					other_race_general 
 					infantry_officer
@@ -1034,6 +1021,30 @@ focus_tree = {
 				skill = 4
 				attack_skill = 3
 				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+			}
+			add_corps_commander_role = {
+				character = GEM_radiant_croup
+				traits = {
+					other_race_general 
+					rhbz_trait
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				character = GEM_aliz_neumann
+				traits = {
+					other_race_general 
+					infantry_officer
+				}
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
 				planning_skill = 4
 				logistics_skill = 2
 			}
@@ -2800,15 +2811,36 @@ focus_tree = {
 		icon = GFX_goal_GEM_schutzstaffen
 		x = 1
 		y = 1
-		relative_position_id =GEM_sivispacem
+		relative_position_id = GEM_sivispacem
 		prerequisite = { focus = GEM_sivispacem OR = GEM_parabellum }
 		cost = 10
 		completion_reward = {
 			custom_effect_tooltip = load_ss_oob_tt	
 			hidden_effect = {
-				load_oob = "GEM_ss"
+				set_technology = { gem_jaegers_unit_tech = 1 }
+				division_template = {
+					name = "SS Hermelin-Truppen"
+					division_names_group = GEM_SPEC_01
+					regiments = {
+						GEM_jagers_human_unit = { x = 0 y = 0 }
+						GEM_jagers_human_unit = { x = 0 y = 1 }
+						GEM_jagers_human_unit = { x = 0 y = 2 }
+						GEM_jagers_human_unit = { x = 1 y = 0 }
+						GEM_jagers_human_unit = { x = 1 y = 1 }
+						GEM_jagers_human_unit = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+					priority = 2
+				}
+				create_unit = {
+					division = "name = \"SS Hermelin-Truppen\" division_template = \"SS Hermelin-Truppen\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = ROOT
+				}	
 			}
 		}
+
 	}
 	focus = {
 		id = GEM_blitzkrieg

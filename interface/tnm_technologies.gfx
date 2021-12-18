@@ -1,6 +1,11 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_human_folder_UNS_bg"
+		textureFile = "gfx/interface/techtree/UNS_techtree_bg.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_technology_human_folder_small_researched_item_bg"
 		textureFile = "gfx//interface//techtree//tech_doctrine_researched_item_bg.dds"
 	}

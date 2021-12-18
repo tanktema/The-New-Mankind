@@ -1,0 +1,165 @@
+GRB = {
+	light_tank_chassis_0 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_gwtank_eqpm.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_1.dds"
+			}
+		}
+	}
+	
+	
+	light_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_gwtank_eqpm.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_2.dds"
+			}
+		}
+	}
+	
+	
+	light_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_gwtank_eqpm.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_3.dds"
+			}
+		}
+	}
+	
+	light_tank_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_gwtank_eqpm.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_4.dds"
+			}
+		}
+	}
+	
+	light_tank_chassis_4 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_gwtank_eqpm.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_5.dds"
+			}
+		}
+	}
+	
+	light_tank_chassis_5 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_gwtank_eqpm.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_4.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_5.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_lt_eqpm_6.dds"
+			}
+		}
+	}
+	
+	
+	medium_tank_chassis_0 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_1.dds"
+			}
+		}
+	}
+	
+	medium_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_2.dds"
+			}
+		}
+	}
+	
+	
+	medium_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_3.dds"
+				
+			}
+		}
+	}
+		
+		
+	medium_tank_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mt_eqpm_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mbt_1.dds"
+			}
+		}
+	}
+	
+	
+	heavy_tank_chassis_0 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_1.dds"
+			}
+		}
+	}
+		
+	heavy_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_2.dds"
+			}
+		}
+	}
+	
+	heavy_tank_chassis_2 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_3.dds"
+			}
+		}
+	}
+	
+	
+	heavy_tank_chassis_3 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_1.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_2.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_ht_3.dds"
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mbt_2.dds"
+			}
+		}
+	}
+	
+	
+	modern_tank_chassis_1 = {
+		pool = {
+			icons = {
+				"gfx/interface/equipmentdesigner/tanks/designer/GRB/GRB_mbt_3.dds"
+			}
+		}
+	}
+	
+	
+	

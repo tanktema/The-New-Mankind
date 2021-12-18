@@ -156,13 +156,57 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
-			if = {
-				limit = {
-					has_idea = SOU_gromyko_selhoz
-				}
-				swap_ideas = {
-					remove_idea = SOU_gromyko_selhoz
-					add_idea = SOU_gromyko_mininist
+			SOU_andrey_gromyko = {
+				remove_advisor_role = { slot = political_advisor }
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						idea_token = SOU_gromyko_mininist
+						
+						allowed = { original_tag = SOU }
+						available = { 
+							has_completed_focus = SOU_support_workers
+						}
+						visible = {
+							has_completed_focus = SOU_support_workers
+							
+						}
+						traits = { gromyko_minist_trait }
+						on_add = {
+							hidden_effect = {
+								acceptance_expand_extra = yes
+							}
+						}
+						on_remove = {
+							hidden_effect	= {
+								add_to_variable = { acceptance_value = -10 }
+								if = {
+									limit = {
+										OR = {
+											has_government = democratic
+											has_government = neutrality
+										}
+									}
+									add_to_variable = { acceptance_stability = -0.05 }
+									add_to_variable = { acceptance_militarism_penalty = 0.05 }
+								}
+								if = {
+									limit = {
+										OR = {
+											has_government = communism
+											has_government = fascism
+										}
+									}
+									add_to_variable = { acceptance_stability = -0.02 }
+								}
+								clamp_variable = {
+									var = acceptance_value
+									min = 0
+									max = 100
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -216,7 +260,12 @@ focus_tree = {
 		completion_reward = {
 			create_faction = SOU_STG_PACT
 			STG = {
-				country_event = { id = generic.3 }
+				add_ai_strategy = {
+					type = alliance
+					id = SOU 
+					value = 500
+				}
+				country_event = { id = generic.5 }
 			}
 		}
 	}
@@ -306,7 +355,7 @@ focus_tree = {
 		available = {
 			STG = {
 				has_country_leader = {
-					name = "Vasiliy Pantsushenko"
+					character = STG_vasiliy_pantsushenko
 					ruling_only = yes 
 				}
 			}
@@ -314,7 +363,7 @@ focus_tree = {
 		bypass = {
 			STG = {
 				has_country_leader = {
-					name = "Dark Wing"
+					character = STG_dark_wing
 					ruling_only = yes 
 				}
 			}
@@ -442,7 +491,7 @@ focus_tree = {
 		available = {
 			STG = {
 				has_country_leader = {
-					name = "Sinister Serov"
+					character = STG_sinister_serov
 					ruling_only = yes 
 				}
 			}
@@ -450,7 +499,7 @@ focus_tree = {
 		bypass = {
 			STG = {
 				has_country_leader = {
-					name = "Dark Wing"
+					character = STG_dark_wing
 					ruling_only = yes 
 				}
 			}
@@ -1050,20 +1099,9 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				create_corps_commander = {
-					name = "Captain Alexey Smirnov"
-					portrait_path = "gfx/leaders/SOU/Smirnov_human.dds"
-					traits = { tankist_commander_hum }
-					skill = 5 
-					attack_skill = 4
-					defense_skill = 6
-					planning_skill = 3
-					logistics_skill = 5
-				}
 				
-				create_field_marshal = {
-					name = "General Sergey Izotov"
-					portrait_path = "gfx/leaders/SOU/Izotov.dds"
+				add_field_marshal_role = {
+					character = sou_izotov
 					traits = { logistics_wizard defensive_doctrine }
 					skill = 5 
 					attack_skill = 4
@@ -1524,7 +1562,7 @@ focus_tree = {
 			GRF = {
 				NOT = {
 					has_country_leader = {
-						name = "Governor Teafeather"
+						character = GRF_governor_teafeather
 						ruling_only = yes 
 					}
 				}
@@ -1825,7 +1863,7 @@ focus_tree = {
 				has_civil_war = no 
 				NOT = {
 					has_country_leader = {
-						name = "Dmitry Yazov"
+						character = SOU_dmitry_yazov
 						ruling_only = yes 
 					}
 				}
@@ -1890,35 +1928,35 @@ focus_tree = {
 		prerequisite = { focus = SOU_verify_your_clock }
 		cost = 5
 		completion_reward = {
-			create_corps_commander = {
-				name = "Artemiy Travnikov"
-				portrait_path = "gfx/leaders/SOU/Travnikov.dds"
-				traits = { infantry_commander_hum }
-				skill = 3 
-				attack_skill = 4
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 4
+			SOU_artemiy_travnikov = {
+				add_corps_commander_role = {
+					traits = { infantry_commander_hum }
+					skill = 3 
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 4
+				}
 			}
-			create_corps_commander = {
-				name = "Sergey Dubrovsky"
-				portrait_path = "gfx/leaders/SOU/Dubrovsky.dds"
-				traits = { winter_specialist }
-				skill = 4 
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 4
-				logistics_skill = 4
+			SOU_sergey_dubrovsky = {
+				add_corps_commander_role = {
+					traits = { winter_specialist }
+					skill = 4 
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 4
+					logistics_skill = 4
+				}
 			}
-			create_field_marshal = {
-				name = "Valeriy Nevzorov"
-				portrait_path = "gfx/leaders/SOU/Nevzorov.dds"
-				traits = { logistics_wizard defensive_doctrine }
-				skill = 5 
-				attack_skill = 4
-				defense_skill = 6
-				planning_skill = 3
-				logistics_skill = 5
+			SOU_valeriy_nevzorov = {
+				add_field_marshal_role = {
+					traits = { logistics_wizard defensive_doctrine }
+					skill = 5 
+					attack_skill = 4
+					defense_skill = 6
+					planning_skill = 3
+					logistics_skill = 5
+				}
 			}
 		}
 	}
@@ -2198,35 +2236,35 @@ focus_tree = {
 		relative_position_id = SOU_extra_conscription
 		prerequisite = { focus = SOU_extra_conscription }
 		completion_reward = {
-			create_corps_commander = {
-				name = "Maxim Yesipov"
-				portrait_path = "gfx/leaders/SOU/Yesipov.dds"
-				traits = { infantry_commander_hum }
-				skill = 3 
-				attack_skill = 4
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 4
+			SOU_maxim_yesipov = {
+				add_corps_commander_role = {
+					traits = { infantry_commander_hum }
+					skill = 3 
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 4
+				}
 			}
-			create_corps_commander = {
-				name = "Leontiy Kuptsov"
-				portrait_path = "gfx/leaders/SOU/Kuptsov.dds"
-				traits = { winter_specialist }
-				skill = 4 
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 4
-				logistics_skill = 4
+			SOU_leontiy_kuptsov = {
+				add_corps_commander_role = {
+					traits = { winter_specialist }
+					skill = 4 
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 4
+					logistics_skill = 4
+				}
 			}
-			create_field_marshal = {
-				name = "Lev Zybkov"
-				portrait_path = "gfx/leaders/SOU/Zybkov.dds"
-				traits = { logistics_wizard defensive_doctrine }
-				skill = 5 
-				attack_skill = 4
-				defense_skill = 6
-				planning_skill = 3
-				logistics_skill = 5
+			SOU_lev_zubkov = {
+				add_field_marshal_role = {
+					traits = { logistics_wizard defensive_doctrine }
+					skill = 5 
+					attack_skill = 4
+					defense_skill = 6
+					planning_skill = 3
+					logistics_skill = 5
+				}
 			}
 		}
 	}
@@ -2234,14 +2272,14 @@ focus_tree = {
 	focus = {
 		id = SOU_appease_kryukov
 		x = 0
-		y = 0.2
+		y = 1
 		icon = GFX_goal_SOU_kryukov
 		relative_position_id = SOU_buy_rifles
 		prerequisite = { focus = SOU_buy_rifles }
 		bypass = {
 			has_civil_war = no 
 		}
-		cost = 1
+		cost = 0.2
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = general_kryukov
@@ -2461,6 +2499,11 @@ focus_tree = {
 		id = SOU_the_great_trial ########### HERE IT COMES!!!!!!!!!!
 		x = 0
 		y = 1
+		available = {
+			251 = {
+				is_owned_and_controlled_by = ROOT 
+			}
+		}
 		icon = GFX_goal_GEM_asking
 		relative_position_id = SOU_extermination
 		prerequisite = { focus = SOU_extermination }
@@ -3694,13 +3737,31 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = sou_spetssnaz_tt_1
 			hidden_effect = {
-				load_oob = "SOU_spetsnaz_oob"
-				every_unit_leader = {
-					limit = {
-						has_trait = gen_serpov
+				set_technology = { sou_vdv_tech = 1 }
+				division_template = {
+					name = "Vozdushno-Desantnye Voiska"
+					division_names_group = SOU_SPEC_01
+					regiments = {
+						SOU_desantura_ebat = { x = 0 y = 0 }
+						SOU_desantura_ebat = { x = 0 y = 1 }
+						SOU_desantura_ebat = { x = 0 y = 2 }
+						SOU_desantura_ebat = { x = 1 y = 0 }
+						SOU_desantura_ebat = { x = 1 y = 1 }
+						SOU_desantura_ebat = { x = 1 y = 2 }
+						SOU_desantura_ebat = { x = 2 y = 0 }
+						SOU_desantura_ebat = { x = 2 y = 1 }
 					}
-					add_unit_leader_trait = spetsnaz_officer
+					support = {
+						sniper_corps = { x = 0 y = 0 }
+					}
+					priority = 2
 				}
+				
+				create_unit = {
+					division = "name = \"Vozdushno-Desantnye Voiska\" division_template = \"Vozdushno-Desantnye Voiska\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				
 			}
 		}
 	}

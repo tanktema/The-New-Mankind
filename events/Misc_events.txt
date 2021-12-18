@@ -1,4 +1,5 @@
 add_namespace = spec
+add_namespace = tnmlore
 
 country_event = {
 	id = spec.1

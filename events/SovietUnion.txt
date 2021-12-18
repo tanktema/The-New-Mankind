@@ -422,30 +422,23 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			every_unit_leader = {
-				limit = {
-					has_unit_leader_flag = serpov_supported_tsar
+			SOU_captain_serpov = {
+				remove_unit_leader_role = yes 
+				add_field_marshal_role = {
+					desc = "UNS_serp_cc_desc"
+					traits = {
+						gen_serpov_fm
+						omega_fm
+						reinstalled_royal_guard_master
+					}
+					skill = 6
+					attack_skill = 6
+					defense_skill = 6
+					planning_skill = 6
+					logistics_skill = 6
+					legacy = 20001
 				}
-				retire = yes
-			}
-			create_field_marshal = {
-				name = "Captain-Commander Dmitry Serpov"
-				desc = "UNS_serp_cc_desc"
-				portrait_path = "gfx/leaders/UNS/Serpov.dds"
-				traits = {
-					gen_serpov_fm
-					omega_fm
-					reinstalled_royal_guard_master
-				}
-				skill = 6
-				attack_skill = 6
-				defense_skill = 6
-				planning_skill = 6
-				logistics_skill = 6
-				id = 20001
-			}
-			capital_scope = {
-				add_dynamic_modifier = { modifier = SOU_33_belarus_div }
+				set_character_name = SOU_general_serpov
 			}
 		}
 	}
@@ -703,10 +696,9 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = sou.tanker.a 
-		create_corps_commander = {
-			name = "Tanker Pony"
+		add_corps_commander_role = {
+			character = SOU_tanker_pony
 			desc = "SOU_TANKER_DESC"
-			portrait_path = "gfx/leaders/SOU/Tanker.dds"
 			traits = {
 				reactive_pony
 			}
@@ -766,35 +758,35 @@ country_event = {
 	option = {
 		name = sou.33.a 
 		hidden_effect = {
-			create_corps_commander = {
-				name = "Polkovnik Tokarev"
-				portrait_path = "gfx/leaders/SOU/Tokarev.dds"
-				traits = { trait_cautious infantry_officer }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 3
-				planning_skill = 5
-				logistics_skill = 4
+			SOU_tokarev = {
+				add_corps_commander_role = {
+					traits = { trait_cautious infantry_officer }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 5
+					logistics_skill = 4
+				}
 			}
-			create_corps_commander = {
-				name = "Leytenant Semenov"
-				portrait_path = "gfx/leaders/SOU/Semenov.dds"
-				skill = 5
-				attack_skill = 5
-				defense_skill = 4
-				logistics_skill = 5
-				planning_skill = 2
-				traits = { trickster winter_expert }
+			SOU_semenov = {
+				add_corps_commander_role = {
+					skill = 5
+					attack_skill = 5
+					defense_skill = 4
+					logistics_skill = 5
+					planning_skill = 2
+					traits = { trickster winter_expert }
+				}
 			}
-			create_corps_commander = {
-				name = "Captain Mustafov"
-				portrait_path = "gfx/leaders/SOU/Mustafov.dds"
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				logistics_skill = 5
-				planning_skill = 2
-				traits = { panzer_leader }
+			SOU_mustafov = {
+				add_corps_commander_role = {
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					logistics_skill = 5
+					planning_skill = 2
+					traits = { panzer_leader }
+				}
 			}
 		}
 		custom_effect_tooltip = new_officers_uns_tt
@@ -809,45 +801,45 @@ country_event = {
 	option = {
 		name = sou.34.a 
 		hidden_effect = {
-			create_corps_commander = {
-				name = "Polkovnik Tokarev"
-				portrait_path = "gfx/leaders/SOU/Tokarev.dds"
-				traits = { trait_cautious infantry_officer }
-				skill = 4
-				attack_skill = 4
-				defense_skill = 3
-				planning_skill = 5
-				logistics_skill = 4
+			SOU_tokarev = {
+				add_corps_commander_role = {
+					traits = { trait_cautious infantry_officer }
+					skill = 4
+					attack_skill = 4
+					defense_skill = 3
+					planning_skill = 5
+					logistics_skill = 4
+				}
 			}
-			create_corps_commander = {
-				name = "Leytenant Semenov"
-				portrait_path = "gfx/leaders/SOU/Semenov.dds"
-				skill = 5
-				attack_skill = 5
-				defense_skill = 4
-				logistics_skill = 5
-				planning_skill = 2
-				traits = { trickster winter_expert }
+			SOU_semenov = {
+				add_corps_commander_role = {
+					skill = 4
+					attack_skill = 3
+					defense_skill = 4
+					logistics_skill = 5
+					planning_skill = 2
+					traits = { trickster winter_expert }
+				}
 			}
-			create_corps_commander = {
-				name = "Captain Mustafov"
-				portrait_path = "gfx/leaders/SOU/Mustafov.dds"
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				logistics_skill = 5
-				planning_skill = 2
-				traits = { panzer_leader }
+			SOU_mustafov = {
+				add_corps_commander_role = {
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					logistics_skill = 5
+					planning_skill = 2
+					traits = { panzer_leader }
+				}
 			}
-			create_corps_commander = {
-				name = "Vitaliy Orlov"
-				portrait_path = "gfx/leaders/SOU/Orlov.dds"
-				skill = 4
-				attack_skill = 6
-				defense_skill = 2
-				planning_skill = 7
-				logistics_skill = 3
-				traits = { orlov_pony }
+			SOU_vitaliy_orlov = {
+				add_corps_commander_role = {
+					skill = 2
+					attack_skill = 3
+					defense_skill = 2
+					planning_skill = 3
+					logistics_skill = 3
+					traits = { orlov_pony }
+				}
 			}
 		}
 		custom_effect_tooltip = new_officers_uns_tt
@@ -1013,15 +1005,8 @@ country_event = {
 			idea = SOU_purges
 			days = 365
 		}
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_id = 1999
-					has_id = 1998
-				}
-			}
-			remove_unit_leader = yes 
-		}
+		retire_character = SOU_dmitry_yazov
+		retire_character = SOU_general_kryukov
 	}
 	
 	option = {
@@ -1044,15 +1029,17 @@ country_event = {
 	option = {
 		name = sou.43.a 
 		hidden_effect = {
-			create_country_leader = {
-			   name = "Sergey Taboritskiy"
-			   desc = "SOU_fasc_desc"
-			   picture = "gfx/leaders/SOU/Taboritskiy.dds"
-			   expire = "1989.1.1"
-			   ideology = despotism 
-			   traits = { 
-					human_leader
-					#fasc_leader
+			SOU_sergey_taboritskiy = {
+				add_country_leader_role = {
+					promote_leader = yes 
+					country_leder = {
+					   expire = "1989.1.1"
+					   ideology = despotism 
+					   traits = { 
+							human_leader
+							#fasc_leader
+						}
+					}
 				}
 			}
 			
@@ -1067,14 +1054,11 @@ country_event = {
 		set_country_flag = officers_bund
 		mark_focus_tree_layout_dirty = yes
 		complete_national_focus = SOU_officers_bund
-		create_country_leader = {
-			name = "Dmitry Yazov"
-			desc = "TNM_YAZOV_DESC"
-			picture = "gfx/leaders/SOU/Yazov.dds"
-			expire = "1999.9.9"
+		promote_character = {
+			character = SOU_dmitry_yazov
 			ideology = neo_bolshevism
-			traits = { human_leader }
 		}
+		
 	}
 }
 
@@ -1088,6 +1072,7 @@ country_event = {
 	
 	option = {
 		name = sou.44.a 
+		set_cosmetic_tag = SOU_TNO
 		complete_national_focus = SOU_execute_traitor
 	}
 }
@@ -1103,18 +1088,18 @@ country_event = {
 	
 	option = {
 		name = sou.45.a 
-		create_corps_commander = {
-			name = "Emerald Dusk"
-			desc = "EMERALD_DUSK_NAME"
-			portrait_path = "gfx/leaders/SOU/EmeraldDusk.dds"
-			skill = 3
-			attack_skill = 1
-			defense_skill = 2
-			planning_skill = 2
-			planning_skill = 3
-			traits = {
-				equestrian_supporter
-				other_race_general
+		SOU_emerald_dusk = {
+			add_corps_commander_role = {
+				desc = "EMERALD_DUSK_NAME"
+				skill = 3
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 2
+				planning_skill = 3
+				traits = {
+					equestrian_supporter
+					other_race_general
+				}
 			}
 		}
 	}
@@ -1136,15 +1121,8 @@ country_event = {
 		add_stability = 0.07
 		add_war_support = 0.07
 		
-		every_unit_leader = {
-			limit = {
-				OR = {
-					has_id = 1999
-					has_id = 1998
-				}
-			}
-			remove_unit_leader = yes 
-		}
+		retire_character = SOU_dmitry_yazov
+		retire_character = SOU_general_kryukov
 	}
 }
 
