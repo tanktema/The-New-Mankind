@@ -4195,6 +4195,16 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+			
+			
+			
+			gridboxtype = {
+				name = "tnm_tst_tech_1_tree"
+				position = { x = 520 y = 200 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 
 		}
 

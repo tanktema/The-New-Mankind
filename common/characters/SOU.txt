@@ -177,7 +177,7 @@ characters={
 		name=SOU_arseni_vinokurov
 		portraits={
 			army={
-				small=""
+				small="gfx/interface/ideas/Advisors/SOU/SOU_arseni_vinokurov.dds"
 			}
 			army={
 				large="gfx/leaders/SOU/Vinokurov.dds"
@@ -197,7 +197,7 @@ characters={
 		name=SOU_nikodim_kazankov
 		portraits={
 			army={
-				small=""
+				small="gfx/interface/ideas/Advisors/SOU/SOU_nikodim_kazankov.dds"
 			}
 			army={
 				large="gfx/leaders/SOU/Kazankov.dds"
@@ -217,7 +217,7 @@ characters={
 		name=SOU_sergey_demidov
 		portraits={
 			army={
-				small=""
+				small="gfx/interface/ideas/Advisors/SOU/SOU_sergey_demidov.dds"
 			}
 			army={
 				large="gfx/leaders/SOU/Demidov.dds"

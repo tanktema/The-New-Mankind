@@ -82,6 +82,9 @@ technologies = {
 	
 	ac_130_tech = {
 		research_cost = 10
+		dependencies = {
+			strategic_bomber3 = 1
+		}
 		allow_branch = {
 			original_tag = UNS 
 		}
@@ -2106,6 +2109,79 @@ technologies = {
 			race_tech
 		} 
 		
+	}
+	
+	
+	tnm_tst_tech_1 = {
+		path = {
+			leads_to_tech = tnm_tst_tech_2
+			research_cost_coeff = 1
+		}
+		army_infantry_attack_factor = 0.02
+		folder = {
+			name = human_folder
+			position = { x = 0 y = 14 }
+		}
+		cost = 1
+		categories = {
+			human_tech
+		}
+	}
+	tnm_tst_tech_2 = {
+		path = {
+			leads_to_tech = tnm_tst_tech_3
+			research_cost_coeff = 1
+		}
+		army_infantry_attack_factor = 0.02
+		folder = {
+			name = human_folder
+			position = { x = 4 y = 14 }
+		}
+		cost = 10
+		categories = {
+			human_tech
+		}
+	}
+	tnm_tst_tech_3 = {	
+		path = {
+			leads_to_tech = tnm_tst_tech_4
+			research_cost_coeff = 1
+		}
+		army_infantry_attack_factor = 0.02
+		folder = {
+			name = human_folder
+			position = { x = 8 y = 14 }
+		}
+		cost = 10
+		categories = {
+			human_tech
+		}
+	}
+	tnm_tst_tech_4 = {	
+		path = {
+			leads_to_tech = tnm_tst_tech_5
+			research_cost_coeff = 1
+		}
+		army_infantry_attack_factor = 0.02
+		folder = {
+			name = human_folder
+			position = { x = 12 y = 14 }
+		}
+		cost = 10
+		categories = {
+			human_tech
+		}
+	}
+	tnm_tst_tech_5 = {
+		army_infantry_attack_factor = 0.02
+		folder = {
+			name = human_folder
+			position = { x = 16 y = 14 }
+		}
+		cost = 10
+		categories = {
+			human_tech
+		}
 	}
 }
 

@@ -392,3 +392,47 @@
    # GRB_magical_equipment_4_desc:0 "Самая современная версия плазменной винтовки, ЕМС-23 позволяет вести достаточно продолжительный огонь с высокой кучностью. Кроме того, обновленный прицел позволяет стрелять на длительные расстояния. Так же режим нелетальной стрельбы был окончательно стабилизирован, минимизировав шансы сбоев и летального исхода." 
     
    
+    
+    
+    ################ Special Equipment Here
+    
+    tnm_tank_laser_defence_system:0 "Laser Defence System"
+    tnm_tank_las_cannon:0 "Lascannon"
+    tnm_tesla_cannon:0 "Tesla Cannon"
+    tnm_hammer_cannon:0 "\"Hammer\" Cannon"
+    tnm_laser_ai_system:0 "Laser AP System"
+    tnm_rockets_module:0 "Rocket Launcher"
+    tnm_gauss_tank_cannon:0 "Gauss Cannon"
+    tnm_plasma_cannon:0 "Plasma Cannon"
+    tnm_flamethrower_grb:0 "Flamethrower"
+    tnm_microwave_module:0 "Microwave AP-system"
+    tnm_tank_laser_defence_system_desc:0 "Laser defense system destroys approaching missiles and projectiles"
+    tnm_tank_las_cannon_desc:0 "Powerful laser gun, penetrates almost any armor"
+    tnm_tesla_cannon_desc:0 "Cannon that strikes the target with an electric discharge"
+    tnm_hammer_cannon_desc:0 "Medium caliber automatic gun designed to destroy lightly armored vehicles"
+    tnm_laser_ai_system_desc:0 "Low power laser gun destroying infantry"
+    tnm_rockets_module_desc:0 "Rocket launcher equipped with Earth-to-Earth missiles"
+    tnm_gauss_tank_cannon_desc:0 "A powerful cannon capable of hitting almost any target"
+    tnm_plasma_cannon_desc:0 "Long-range cannon effective against enemy concentrations"
+    tnm_flamethrower_grb_desc:0 "Flamethrower tanks look archaic, but they also have a moral effect on the enemy"
+    tnm_microwave_module_desc:0 "The special gun literally "boils" water and other liquids inside the targeted soldiers.
+    
+    
+    infantry_equipment_secret:0 "Standart Template Construction AR-25 mk.1"
+    infantry_equipment_secret_short:0 "STC AR-25 mk.1"
+    infantry_equipment_secret_desc:0 "Based on the STC technology, this rifle is reliable and easy to produce"
+    sou_tesla_mark_2_eqpm:0 "Tesla Rifle Model 2"
+    sou_tesla_mark_2_eqpm_short:0 "TPM-2"
+    sou_tesla_mark_2_eqpm_desc:0 "Updated version of the TPM-1, TPM-2 has almost all of the previous model's problems fixed"
+    gem_machinegewehr_15_eqpm:0 "Hekler&Koch MG-15"
+    gem_machinegewehr_15_eqpm_short:0 "HK MG-15"
+    gem_machinegewehr_15_eqpm_desc:0 "The newest version of the Hekler&Koch machineguns, MG-15 has high rate of fire and accuracy"
+    grb_plasma_ar_eqpm:0 "Plasma Long-Range Rifle mod. 1025/1978"
+    grb_plasma_ar_eqpm_short:0 "PLR-025/78"
+    grb_plasma_ar_eqpm_desc:0 "The updated version of EMC-23, this rifle is long-range"
+    uns_ac130:0 "Lockheed AC-130 Spectre"
+    uns_ac130_short:0 "AC-130"
+    uns_ac130_desc:0 "Flying battery in direct support of ground troops on the battlefield. Based on C-130 transport aircraft"
+    sou_kirov_derjijabl:0 "\"Kirov\" zeppeline"
+    sou_kirov_derjijabl_short:0 "\"Kirov\""
+    sou_kirov_derjijabl_desc:0 "This airship was built specifically for military operations. Its rigid, strong frame and shell, capable of withstanding the harshest conditions and massive fire, make the ship virtually indestructible by ground-based air defenses."
