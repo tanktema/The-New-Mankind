@@ -15,7 +15,7 @@ characters={
 		}
 	}
 	UNS_gus_hall={
-		name=UNS_gus_hall
+		name=UNS_comm_adv
 		portraits={
 			civilian={
 				large="gfx/leaders/UNS/Hall.dds"
@@ -49,7 +49,7 @@ characters={
 		}
 	}
 	UNS_george_rockwell={
-		name=UNS_george_rockwell
+		name=UNS_fasc_adv
 		portraits={
 			civilian={
 				large="gfx/leaders/UNS/Rockwell.dds"

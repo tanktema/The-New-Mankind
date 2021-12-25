@@ -480,6 +480,7 @@ focus_tree = {
 		id = UNS_new_way
 		x = 19
 		y = 5
+		cost = 5
 		icon = GFX_goal_new_ways_pol
 		prerequisite = {
 			focus = UNS_fasc_1
@@ -670,6 +671,12 @@ focus_tree = {
 			AND = {
 				has_completed_focus = UNS_world_situation
 				has_government = democratic
+				NOT = {
+					has_country_leader = {
+						character = UNS_general_gershell_fon_shepherd
+						ruling_only = yes 
+					}
+				}
 			}
 		}
 		cost = 5
@@ -4392,11 +4399,11 @@ focus_tree = {
 		completion_reward = {
 			EQS = {
 				add_opinion_modifier = {
-					modifier = embassy_opened
+					modifier = accept_politics
 					target = ROOT 
 				}
 				reverse_add_opinion_modifier = {
-					modifier = embassy_opened
+					modifier = accept_politics
 					target = ROOT 
 				}
 			}
@@ -4896,15 +4903,12 @@ focus_tree = {
 		allow_branch = {
 			AND = {
 				has_country_leader = {
-					name = "General Gershell fon Shepherd"
+					character = UNS_general_gershell_fon_shepherd
 					ruling_only = yes 
 				}
 				EQS = {
 					OR = {
-						has_country_leader = {
-							name = "Daybreaker"
-							ruling_only = yes 
-						}
+						has_DB_ruler = yes
 						AND = {
 							is_subject_of = ROOT 
 							ROOT = { has_completed_focus = UNS_supernova }
@@ -6171,7 +6175,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.33
 				uses = 3
-				category = naval_doctrine
+				category = land_doctrine
 			}
 		}
 	}

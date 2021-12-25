@@ -1,0 +1,97 @@
+
+animation = {
+	name = "GER_motorized_011_idle_animation"
+	file = "GER_motorized_011_idle.anim"
+}
+
+animation = {
+	name = "GER_motorized_011_move_animation"
+	file = "GER_motorized_011_moving.anim"
+}
+
+animation = {
+	name = "US_mechanized_01_idle_animation"
+	file = "US_mechanized_01_idle.anim"
+}
+
+animation = {
+	name = "US_mechanized_01_move_animation"
+	file = "US_mechanized_01_moving.anim"
+}
+
+animation = {
+	name = "US_mechanized_01_attack_animation"
+	file = "US_mechanized_01_attack.anim"
+}
+
+animation = {
+	name = "CAN_motorized_austin_k5_move_animation"
+	file = "CAN_motorized_austin_k5_moving.anim"
+}
+
+animation = {
+	name = "CAN_motorized_austin_k5_idle_animation"
+	file = "CAN_motorized_austin_k5_idle.anim"
+}
+
+animation = {
+	name = "gaz51_move_animation"
+	file = "gaz_51_walk.anim"
+}
+
+
+animation = {
+	name = "gaz51_idle_animation"
+	file = "gaz_51_idle.anim"
+}
+
+animation = {
+	name = "gaz51_attack_animation"
+	file = "gaz_51_walk.anim"
+}
+
+animation = {
+	name = "btr80_idle_animation"
+	file = "btr80_idle.anim"
+}
+
+animation = {
+	name = "btr80_move_animation"
+	file = "btr80_moving.anim"
+}
+
+animation = {
+	name = "btr80_attack_animation"
+	file = "btr80_attack.anim"
+}
+
+animation = {
+	name = "gmc_cckw_move_animation"
+	file = "gmc_cckw_walk.anim"
+}
+
+
+animation = {
+	name = "gmc_cckw_idle_animation"
+	file = "gmc_cckw_idle.anim"
+}
+
+animation = {
+	name = "gmc_cckw_attack_animation"
+	file = "gmc_cckw_walk.anim"
+}
+
+animation = {
+	name = "m113_idle_animation"
+	file = "m113_idle.anim"
+}
+
+animation = {
+	name = "m113_move_animation"
+	file = "m113_moving.anim"
+}
+
+animation = {
+	name = "m113_attack_animation"
+	file = "m113_attack.anim"
+}
