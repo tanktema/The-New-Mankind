@@ -1326,20 +1326,20 @@ country_event = {
 
 
 country_event = {
-	id = grb.32 
-	desc = grb.32.desc 
-	title = grb.32.t 
+	id = grb.33 
+	desc = grb.33.desc 
+	title = grb.33.t 
 	
 	is_triggered_only = yes 
 	
 	option = {
-		name = grb.32.a 
+		name = grb.33.a 
 		
 		promote_character = GRB_margaret_thatcher
 	}
 	
 	option = {
-		name = grb.32.b 
+		name = grb.33.b 
 		trigger = {
 			check_variable = { acceptance_value > 0.39 }
 		}

@@ -2139,6 +2139,14 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = uns_supernova.7.a 
+		hidden_effect = {
+			every_other_country = {
+				limit = {
+					has_character = EQS_twilight_sparkle
+				}
+				EQS_twilight_sparkle = { set_nationality = UNS }
+			}
+		}
 		set_country_flag = UNS_twilight_captured_supernova
 	}
 }
@@ -2169,6 +2177,17 @@ country_event = {
 	option = {
 		name = uns_supernova.9.a 
 		complete_national_focus = UNS_supernova_success
+		hidden_effect = {
+			EQS_twilight_sparkle = {
+				set_portraits = {
+					civilian = {
+						small = "GFX_idea_twilight_sparkle"
+					}
+					set_character_name = EQS_twilight_sparkle
+					clr_character_flag = twilight_char_ascended_flag
+				}
+			}
+		}
 	}
 }
 
@@ -2210,6 +2229,17 @@ country_event = {
 	option = {
 		name = uns_supernova.13.a 
 		complete_national_focus = UNS_supernova_success
+		hidden_effect = {
+			EQS_twilight_sparkle = {
+				set_portraits = {
+					civilian = {
+						small = "GFX_idea_twilight_sparkle"
+					}
+					set_character_name = EQS_twilight_sparkle
+					clr_character_flag = twilight_char_ascended_flag
+				}
+			}
+		}
 	}
 }
 country_event = {

@@ -549,6 +549,9 @@ focus_tree = {
 			add_stability = 0.1
 			add_political_power = 50
 			acceptance_expand_extra = yes 
+			hidden_effect = {
+				country_event = { id = grb.33 days = 365 }
+			}
 		}
 	}
 	

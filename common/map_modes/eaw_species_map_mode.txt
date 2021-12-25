@@ -52,6 +52,17 @@ scripted_map_modes = {
 					set_temp_variable = { blue = 0.1 }
 					set_temp_variable = { alpha = alpha_temp }
 				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = human_science
+						}
+					}
+					set_temp_variable = { red = 0.2 }
+					set_temp_variable = { green = 0.9 }
+					set_temp_variable = { blue = 0.9 }
+					set_temp_variable = { alpha = alpha_temp }
+				}
 				else = {
 					set_temp_variable = { red = 0.000 }
 					set_temp_variable = { green = 0.000 }
@@ -181,7 +192,17 @@ scripted_map_modes = {
 					set_temp_variable = { blue = 0.4 }
 					set_temp_variable = { alpha = alpha_temp }
 				}
-
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = human_society
+						}
+					}
+					set_temp_variable = { red = 0.15 }
+					set_temp_variable = { green = 0.65 }
+					set_temp_variable = { blue = 0.8 }
+					set_temp_variable = { alpha = alpha_temp }
+				}
 
 				else = {
 					set_temp_variable = { red = 1 }
@@ -268,9 +289,9 @@ scripted_map_modes = {
 							has_idea = FLO_illiteracy_virtue
 						}
 					}
-					set_temp_variable = { red = 0.4 }
-					set_temp_variable = { green = 0.1 }
-					set_temp_variable = { blue = 0.4 }
+					set_temp_variable = { red = 0.5 }
+					set_temp_variable = { green = 0.3 }
+					set_temp_variable = { blue = 0.5 }
 					set_temp_variable = { alpha = alpha_temp }
 				}
 
