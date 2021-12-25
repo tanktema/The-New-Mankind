@@ -368,7 +368,7 @@ technologies = {
 			magical_weapons1 = 1
 		}
 		enable_equipment_modules = {
-			tnm_hammer_cannon
+			tnm_tesla_cannon
 		}
 		allow_branch = {
 			original_tag = SOU 
@@ -2112,77 +2112,6 @@ technologies = {
 	}
 	
 	
-	tnm_tst_tech_1 = {
-		path = {
-			leads_to_tech = tnm_tst_tech_2
-			research_cost_coeff = 1
-		}
-		army_infantry_attack_factor = 0.02
-		folder = {
-			name = human_folder
-			position = { x = 0 y = 14 }
-		}
-		cost = 1
-		categories = {
-			human_tech
-		}
-	}
-	tnm_tst_tech_2 = {
-		path = {
-			leads_to_tech = tnm_tst_tech_3
-			research_cost_coeff = 1
-		}
-		army_infantry_attack_factor = 0.02
-		folder = {
-			name = human_folder
-			position = { x = 4 y = 14 }
-		}
-		cost = 10
-		categories = {
-			human_tech
-		}
-	}
-	tnm_tst_tech_3 = {	
-		path = {
-			leads_to_tech = tnm_tst_tech_4
-			research_cost_coeff = 1
-		}
-		army_infantry_attack_factor = 0.02
-		folder = {
-			name = human_folder
-			position = { x = 8 y = 14 }
-		}
-		cost = 10
-		categories = {
-			human_tech
-		}
-	}
-	tnm_tst_tech_4 = {	
-		path = {
-			leads_to_tech = tnm_tst_tech_5
-			research_cost_coeff = 1
-		}
-		army_infantry_attack_factor = 0.02
-		folder = {
-			name = human_folder
-			position = { x = 12 y = 14 }
-		}
-		cost = 10
-		categories = {
-			human_tech
-		}
-	}
-	tnm_tst_tech_5 = {
-		army_infantry_attack_factor = 0.02
-		folder = {
-			name = human_folder
-			position = { x = 16 y = 14 }
-		}
-		cost = 10
-		categories = {
-			human_tech
-		}
-	}
 }
 
 		

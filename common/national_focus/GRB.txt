@@ -5284,10 +5284,10 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			navy_experience = 50
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
 				category = naval_doctrine
-				uses = 1
-				bonus = 1
 			}
 		}
 	}
@@ -5397,10 +5397,10 @@ focus_tree = {
 		prerequisite = { focus = GRB_sniper_training }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = land_doctrine
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 2
-				bonus = 1
+				category = land_doctrine
 			}
 			hidden_effect = {
 				country_event = { id = grb.31 days = 10 }
@@ -5518,10 +5518,10 @@ focus_tree = {
 		prerequisite = { focus = GRB_radio_systems OR = GRB_pilots }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
 				uses = 2
-				bonus = 1
+				category = air_doctrine
 			}
 		}
 	}

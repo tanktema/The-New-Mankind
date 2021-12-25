@@ -7507,7 +7507,29 @@ country_event = { #post-war mane six event
 }
 country_event = { #Christmas truce flavour event
 	id = equestria.181
-	immediate = {log = "[GetDateText]: [Root.GetName]: event equestria.181"}
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.181"
+		if = {
+			limit = {
+				AND = {
+					GRB = {
+						is_in_faction_with = ROOT 
+					}
+					has_war_with = CHN
+					GEM = {
+						is_in_faction_with = ROOT 
+					}
+				}
+			}
+			GEM = { 
+				country_event = { id = tnmlore.1 hours = 1}
+			}
+			GRB = {
+				country_event = { id = tnmlore.1 hours = 1}
+			}
+		}
+
+	}
 	title = equestria.181.t
 	desc = equestria.181.d
 	picture = GFX_event_blurry_christmas_truce

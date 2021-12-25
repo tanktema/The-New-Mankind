@@ -5988,11 +5988,16 @@ focus_tree = {
 		icon = GFX_goal_modern_army_uns
 		completion_reward = {
 			add_tech_bonus = {
-				category = land_doctrine
+				#category = land_doctrine
 				category = armor
 				category = infantry_weapons
 				uses = 3
 				bonus = 0.75
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
 			}
 		}
 	}
@@ -6163,10 +6168,10 @@ focus_tree = {
 		cost = 5
 		icon = GFX_goal_UNS_doctrine_expand
 		completion_reward = {
-			add_tech_bonus = {
-				category = land_doctrine
-				uses = 2
-				bonus = 0.75
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.33
+				uses = 3
+				category = naval_doctrine
 			}
 		}
 	}
@@ -6229,10 +6234,10 @@ focus_tree = {
 		relative_position_id = UNS_our_sky
 		prerequisite = { focus = UNS_our_sky }
 		completion_reward = { 
-			add_tech_bonus = {
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.33
 				uses = 2
-				bonus = 0.75
+				category = air_doctrine
 			}
 		}
 	}
@@ -6301,10 +6306,10 @@ focus_tree = {
 		icon = GFX_goal_UNS_doctrine_more 
 		prerequisite = { focus = UNS_aces }
 		completion_reward = {
-			add_tech_bonus = {
-				category = air_doctrine
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.33
 				uses = 2
-				bonus = 0.75
+				category = air_doctrine
 			}
 		}
 	}

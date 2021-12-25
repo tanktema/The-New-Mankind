@@ -264,5 +264,41 @@ news_event = {
 		name = spec.5.a 
 	}
 }
-			
-				
+
+
+
+
+country_event = {
+	id = tnmlore.1
+	desc = {
+		text = tnmlore.1.grb
+		trigger = {
+			original_tag = GRB 
+		}
+	}
+	desc = {
+		text = tnmlore.1.gem
+		trigger = {
+			original_tag = GEM
+		}
+	}
+	title = tnmlore.1.t 
+	
+	is_triggered_only = yes
+	option = {
+		name = tnmlore.1.a 
+		trigger = {
+			original_tag = GRB 
+		}
+		add_war_support = -0.01
+		add_stability = 0.01
+	}
+	option = {
+		name = tnmlore.1.b 
+		trigger = {
+			original_tag = GEM 
+		}
+		add_war_support = -0.01
+		add_stability = 0.01
+	}
+}
