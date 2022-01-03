@@ -1,4 +1,4 @@
-objectTypes = {	 ######## Models by Cold War: The Iron Curtain
+objectTypes = {	
 	
 	pdxmesh = {
 		name = "ENG_Saracen_mesh"

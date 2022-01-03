@@ -46,6 +46,16 @@ characters={
 			traits = {
 				comm_bring
 			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 100
+					OR = {
+						has_country_flag = AI_UNS_COMMUNISM_STATESOC
+						has_country_flag = AI_UNS_COMMUNISM_STANDART
+					}
+				}
+			}
 		}
 	}
 	UNS_george_rockwell={
@@ -80,6 +90,18 @@ characters={
 			traits = {
 				fasc_bring
 			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 100
+					OR = {
+						has_country_flag = AI_UNS_FASC_ROCKWELL
+						has_country_flag = AI_UNS_MILITARY_FASC
+						has_country_flag = AI_UNS_MILITARY_DEMO
+					}
+				}
+			}
+				
 		}
 	}
 	UNS_general_gershell_fon_shepherd={
@@ -118,6 +140,13 @@ characters={
 				}
 			}
 			traits = { army_chief_offensive_1 }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 10
+					has_war = yes 
+				}
+			}
 		}
 		
 		country_leader = {	
@@ -229,6 +258,13 @@ characters={
 			traits = {
 				demo_bring
 			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 20
+					has_country_flag = AI_UNS_HISTORICAL
+				}
+			}
 		}
 	}
 	
@@ -251,6 +287,9 @@ characters={
 					country_exists = NLR
 				}
 			}
+			ai_will_do = {
+				factor = 100
+			}
 			traits = { rarity_the_designer }
 		}
 	}
@@ -271,6 +310,17 @@ characters={
 			available = {
 				NOT = {
 					has_government = fascism
+				}
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 10
+					check_variable = { acceptance_value < 50 }
+				}
+				modifier = {
+					factor = 0
+					check_variable = { acceptance_value = 100 }
 				}
 			}
 			traits = { lyra_human_lover }
@@ -344,6 +394,13 @@ characters={
 			modifier = {
 				research_speed_factor = 0.05
 			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 10 
+					has_completed_focus = UNS_knowledge_to_masses
+				}
+			}
 		}
 	}
 	
@@ -366,6 +423,18 @@ characters={
 				}
 			}
 			traits = { nuclear_pacifist }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 50
+					date > 1010.1.1
+				
+				}
+				modifier = {
+					factor = 100
+					date > 1014.1.1
+				}
+			}
 		}
 	}
 	
@@ -389,6 +458,9 @@ characters={
 				}
 			}
 			traits = { magical_human_assistant }
+			ai_will_do = {
+				factor = 5
+			}
 		}
 	}
 	
@@ -409,6 +481,9 @@ characters={
 			}
 			available = {
 				has_completed_focus = UNS_doctrine_development 
+			}
+			ai_will_do = {
+				factor = 10
 			}
 			traits = { army_chief_defensive_2 }
 		}
@@ -433,6 +508,9 @@ characters={
 				has_completed_focus = UNS_our_sky
 			}
 			traits = { human_air_leader }
+			ai_will_do = {
+				factor = 10
+			}
 		}
 	}
 	
@@ -455,6 +533,9 @@ characters={
 				has_completed_focus = UNS_army
 			}
 			traits = { army_planning_master_chief }
+			ai_will_do = {
+				factor = 10
+			}
 		}
 	}
 	
@@ -478,6 +559,9 @@ characters={
 				army_infantry_defence_factor = 0.05
 				conscription_factor = 0.2
 			}
+			ai_will_do = {
+				factor = 10
+			}
 		}
 	}
 	
@@ -495,7 +579,9 @@ characters={
 			
 			allowed = { original_tag = UNS }
 			
-			
+			ai_will_do = {
+				factor = 10
+			}
 			modifier = {
 				land_doctrine_cost_factor = -0.1
 				army_infantry_attack_factor = 0.08
@@ -524,7 +610,9 @@ characters={
 			}
 			
 			
-			
+			ai_will_do = {
+				factor = 10
+			}
 			modifier = {
 				land_doctrine_cost_factor = -0.14
 				air_doctrine_cost_factor = -0.05
@@ -553,7 +641,9 @@ characters={
 			available = {
 				has_completed_focus = UNS_our_fleet
 			}
-			
+			ai_will_do = {
+				factor = 10
+			}
 			research_bonus = {
 				naval_doctrine = 0.07
 			}
@@ -579,7 +669,9 @@ characters={
 			allowed = {
 				original_tag = UNS 
 			}
-			
+			ai_will_do = {
+				factor = 10
+			}
 			traits = { 
 				army_logistics_2
 			}
@@ -597,7 +689,9 @@ characters={
 		advisor = {
 			slot = high_command
 			idea_token = UNS_hudson
-			
+			ai_will_do = {
+				factor = 10
+			}
 			allowed = {
 				original_tag = UNS 
 			}
@@ -619,7 +713,9 @@ characters={
 		advisor = {
 			slot = high_command
 			idea_token = UNS_kline
-			
+			ai_will_do = {
+				factor = 10
+			}
 			allowed = {
 				original_tag = UNS 
 			}
@@ -645,7 +741,9 @@ characters={
 			allowed = {
 				original_tag = UNS 
 			}
-			
+			ai_will_do = {
+				factor = 10
+			}
 			traits = { 
 				army_chief_offensive_2
 			}

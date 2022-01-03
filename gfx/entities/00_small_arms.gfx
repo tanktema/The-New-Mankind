@@ -1,4 +1,5 @@
-objectTypes = { ######## Models by Cold War: The Iron Curtain
+objectTypes = {
+####Models by Cold War Iron Curtain and Economic Criris
 	# AK74
 	pdxmesh = {
 		name = "SOV_infantry_weapon_AK74_mesh"

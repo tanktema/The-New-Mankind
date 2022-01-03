@@ -1,0 +1,207 @@
+
+entity = {
+	name = "GRB_fighter_equipment_0_entity"		
+	pdxmesh = "ENG_AV8A_mesh"
+	state = { name = "fire" animation = "idle" 
+		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "mk12gun_fire" } }
+		event = { time = 0.3 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		event = { sound = { soundeffect = "distance_mk12gun_fire" } }
+	}
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+	}
+	state = { name = "explode" animation = "idle" 
+		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+	}
+	scale = 0.18
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_fighter_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_fighter_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_fighter_equipment_3_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_jet_fighter_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_jet_fighter_equipment_1_entity"
+	name = "GRB_jet_fighter_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_jet_fighter_equipment_1_entity"
+	name = "GRB_jet_fighter_equipment_x_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_heavy_fighter_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_heavy_fighter_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_heavy_fighter_equipment_3_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_jet_heavy_fighter_equipment_x_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_CAS_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_CAS_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_CAS_equipment_3_entity"
+}
+
+entity = {
+	name = "GRB_nav_bomber_equipment_1_entity" 
+	pdxmesh = "ENG_Canberra_mesh"
+	state = { name = "bomb" animation = "idle" 
+		
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+	}
+	scale = 0.21
+}
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_nav_bomber_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_nav_bomber_equipment_3_entity"
+}
+
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_tac_bomber_equipment_0_entity"
+}
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_tac_bomber_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_tac_bomber_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_tac_bomber_equipment_3_entity"
+}
+
+entity = { 
+	clone = "GRB_nav_bomber_equipment_1_entity"
+	name = "GRB_jet_tac_bomber_equipment_x_entity"
+}
+
+entity = { 
+	clone = "GRB_jet_tac_bomber_equipment_x_entity"
+	name = "GRB_jet_tac_bomber_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_jet_tac_bomber_equipment_x_entity"
+	name = "GRB_jet_tac_bomber_equipment_2_entity"
+}
+
+entity = { 
+	name = "GRB_strat_bomber_equipment_1_entity"
+	pdxmesh = "Vulcanb1_mesh"
+	state = { name = "bomb" animation = "idle" 
+		
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
+	}
+	scale = 0.25
+}
+
+entity = { 
+	clone = "GRB_strat_bomber_equipment_1_entity"
+	name = "GRB_strat_bomber_equipment_2_entity"
+}
+
+entity = { 
+	clone = "GRB_strat_bomber_equipment_1_entity"
+	name = "GRB_strat_bomber_equipment_3_entity"
+}
+
+entity = { 
+	clone = "GRB_strat_bomber_equipment_3_entity"
+	name = "GRB_jet_strat_bomber_equipment_x_entity"
+}
+
+entity = { 
+	clone = "GRB_strat_bomber_equipment_3_entity"
+	name = "GRB_jet_strat_bomber_equipment_1_entity"
+}
+
+entity = { 
+	clone = "GRB_fighter_equipment_0_entity"
+	name = "GRB_jet_strike_craft_equipment_x_entity"
+}
+
+entity = { 
+	clone = "GRB_jet_strike_craft_equipment_x_entity"
+	name = "GRB_jet_strike_craft_equipment_x_2_entity"
+}
+
+entity = { 
+	clone = "GRB_jet_strike_craft_equipment_x_entity"
+	name = "GRB_jet_strike_craft_equipment_x_3_entity"
+}
+
+

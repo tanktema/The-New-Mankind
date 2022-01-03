@@ -825,7 +825,7 @@ characters={
 		name = SOU_emerald_dusk
 		portraits = {
 			army = {
-				large = "gfx/leaders/SOU/Orlov.dds"
+				large = "gfx/leaders/SOU/EmeraldDusk.dds"
 				small = "gfx/interface/ideas/advisors/SOU/SOU_emerald_dusk.dds"
 			}
 		}

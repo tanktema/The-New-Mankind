@@ -85,11 +85,13 @@ if = {
 			has_dlc = "No Step Back"
 		}
 	}
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	basic_medium_tank = 1
-	gwtank = 1
-	basic_light_tank = 1
+	set_technology = {
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+		basic_medium_tank = 1
+		gwtank = 1
+		basic_light_tank = 1
+	}
 }
 actually_fix_weapon_techs = yes
 if = {
@@ -208,6 +210,80 @@ recruit_character = UNS_carlax
 recruit_character = UNS_lina_cypher
 recruit_character = UNS_hartmann
 recruit_character = UNS_statesoc_council
+
+
+
+create_equipment_variant = {
+		name = "M41 Bulldog"
+		parent = 0
+		
+		type = light_tank_chassis_2
+		
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/UNS/UNS_light_tank3.dds"
+	}
+	
+	
+	create_equipment_variant = {
+		name = "M4A3E8"
+		parent = 0
+		
+		type = medium_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_medium_cannon
+			turret_type_slot = tank_medium_two_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 2
+			tank_nsb_armor_upgrade = 3
+		}
+		icon = "gfx/interface/technologies/UNS/UNS_medium_tank2.dds"
+	}
+	
+	
+	create_equipment_variant = {
+		name = "Т29"
+		parent = 0
+		
+		type = heavy_tank_chassis_1
+		
+		modules = {
+			main_armament_slot = tank_heavy_cannon_2
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = stabilizer
+			special_type_slot_3 = extra_ammo_storage
+			special_type_slot_4 = sloped_armor
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 4
+		}
+		icon = "gfx/interface/technologies/UNS/UNS_heavy_tank2.dds"
+	}
+
 
 create_operative_leader = {
 	name = "Edvard Snowden" 

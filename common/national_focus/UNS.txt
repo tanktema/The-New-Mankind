@@ -164,7 +164,11 @@ focus_tree = {
 			add_war_support = 0.05
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_UNS_HISTORICAL
+			}
 		}
 	}
 	focus = { ### Восстановление золотого запаса
@@ -312,7 +316,14 @@ focus_tree = {
 			focus = UNS_enemy_inside
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_UNS_COMMUNISM_STANDART
+					has_country_flag = AI_UNS_COMMUNISM_STATESOC
+				}
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
@@ -467,7 +478,15 @@ focus_tree = {
 			focus = UNS_enemy_inside
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_UNS_FASC_ROCKWELL
+					has_country_flag = AI_UNS_MILITARY_FASC
+					has_country_flag = AI_UNS_MILITARY_DEMO
+				}
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
@@ -1444,7 +1463,7 @@ focus_tree = {
 		available = {
 			CRY = {
 				has_country_leader = {
-					name = "Princess Mi Amore Cadenza"
+					character = CRY_princess_mi_amore_cadenza
 					ruling_only = yes 
 				}
 				has_civil_war = no 

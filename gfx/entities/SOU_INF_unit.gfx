@@ -1,4 +1,4 @@
-objectTypes = {	######## Models by Cold War: The Iron Curtain
+objectTypes = {	
 	pdxmesh = {
 		name = "SOV_infantry_2_mesh"
 		file = "gfx/models/units/SOV_infantry_2.mesh"

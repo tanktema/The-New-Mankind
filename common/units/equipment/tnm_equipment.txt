@@ -132,15 +132,7 @@ equipments = {
 	}
 	
 	uns_ac130 = {
-		year = 1025
-
-		archetype = CAS_equipment
-		parent = CAS_equipment_2
-		priority = 40
-
-		can_convert_from = {
-			CAS_equipment_2
-		}
+		#year = 1025
 
 		archetype = CAS_equipment
 		parent = jet_strike_craft_equipment_x_2
@@ -172,9 +164,9 @@ equipments = {
 	}
 	
 	sou_kirov_derjijabl = {
-		year = 1015
+		#year = 1015
 		
-		archetype = jet_tac_bomber_equipment
+		archetype = tac_bomber_equipment
 		#year = 1026
 
 		#archetype = jet_tac_bomber_equipment
