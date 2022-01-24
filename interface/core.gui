@@ -458,7 +458,25 @@ guiTypes = {
 				position = { x=0 y =120}	
 			}
 	}
+	
+	containerWindowType = {
+		name = "slow_interface_win"
+		position = { x=-150 y=500}
+		Orientation = upper_right
 
+
+		instantTextboxType = {
+			name = "slow_text"
+			position = { x= 0 y = 0 }
+			font = "hoi_20b"
+			borderSize = {x = 0 y = 0}
+			text = "SLOW INTERFACE"
+			maxWidth = 200
+			maxHeight = 32
+			fixedsize = yes
+			format = left
+		}
+	}
 
 	containerWindowType = {
 		name = "error_log_win"

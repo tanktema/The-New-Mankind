@@ -286,8 +286,9 @@ sou_industrial_effort = {
 		visible = {
 			is_ai = yes 
 		}
-		days_remove = 90
+		days_remove = 180
 		complete_effect = {
+			add_to_variable = { industrial_broken_sou = -33 }
 			if = {
 				limit = {
 					NOT = {
@@ -319,6 +320,19 @@ sou_industrial_effort = {
 					add_idea = SOU_industry_broken_lvl4
 				}
 				set_country_flag = diminish_3
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes 
+				}
 			}
 		}
 		
@@ -669,6 +683,13 @@ SOU_resource_effort_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { steel < 0 }
+			}
+		}
 		remove_effect = {
 			234 = {
 				add_resource = {
@@ -698,6 +719,13 @@ SOU_resource_effort_category = {
 		days_remove = 50
 		modifier = {
 			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { aluminium < 0 }
+			}
 		}
 		remove_effect = {
 			234 = {
@@ -729,6 +757,13 @@ SOU_resource_effort_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { tungsten < 0 }
+			}
+		}
 		remove_effect = {
 			234 = {
 				add_resource = {
@@ -758,6 +793,13 @@ SOU_resource_effort_category = {
 		days_remove = 50
 		modifier = {
 			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
 		}
 		remove_effect = {
 			332 = {
@@ -789,6 +831,13 @@ SOU_resource_effort_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { crystals < 0 }
+			}
+		}
 		remove_effect = {
 			332 = {
 				add_resource = {
@@ -817,6 +866,13 @@ SOU_resource_effort_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { oil < 0 }
+			}
+		}
 		remove_effect = {
 			233 = {
 				add_resource = {
@@ -844,6 +900,13 @@ SOU_resource_effort_category = {
 		days_remove = 50
 		modifier = {
 			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { rubber < 0 }
+			}
 		}
 		remove_effect = {
 			233 = {

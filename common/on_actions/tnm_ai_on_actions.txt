@@ -1,6 +1,17 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			every_country = {
+				limit = {
+					is_human_race = yes 
+				}
+				add_ai_strategy = {
+					type = pp_spend_amount
+					id = decision
+					value = 1000
+				}
+				
+			}
 			SOU = {
 				if = {
 					limit = {
@@ -112,8 +123,9 @@ on_actions = {
 							rule = UNS_ai_behavior 
 							option = UNS_COMMUNISM_STANDART
 						}
-						set_country_flag = AI_UNS_COMMUNISM_STANDART
+						
 					}
+					set_country_flag = AI_UNS_COMMUNISM_STANDART
 				}
 				if = {
 					limit = {
@@ -121,8 +133,9 @@ on_actions = {
 							rule = UNS_ai_behavior 
 							option = UNS_COMMUNISM_STATESOC
 						}
-						set_country_flag = AI_UNS_COMMUNISM_STATESOC
+						
 					}
+					set_country_flag = AI_UNS_COMMUNISM_STATESOC
 				}
 				if = {
 					limit = {
@@ -130,8 +143,9 @@ on_actions = {
 							rule = UNS_ai_behavior 
 							option = UNS_FASC_ROCKWELL
 						}
-						set_country_flag = AI_UNS_FASC_ROCKWELL
+						
 					}
+					set_country_flag = AI_UNS_FASC_ROCKWELL
 				}
 				if = {
 					limit = {
@@ -139,8 +153,9 @@ on_actions = {
 							rule = UNS_ai_behavior 
 							option = UNS_MILITARY_FASC
 						}
-						set_country_flag = AI_UNS_MILITARY_FASC
+					
 					}
+					set_country_flag = AI_UNS_MILITARY_FASC
 				}
 				if = {
 					limit = {
@@ -148,8 +163,9 @@ on_actions = {
 							rule = UNS_ai_behavior 
 							option = UNS_MILITARY_DEMO
 						}
-						set_country_flag = AI_UNS_MILITARY_DEMO
+						
 					}
+					set_country_flag = AI_UNS_MILITARY_DEMO
 				}
 				if = {
 					limit = {
@@ -190,8 +206,9 @@ on_actions = {
 							rule = GEM_ai_behavior 
 							option = GEM_ALT_FASC_PATH
 						}
-						set_country_flag = AI_GEM_ALT_FASC_PATH
+						
 					}
+					set_country_flag = AI_GEM_ALT_FASC_PATH
 				}
 				if = {
 					limit = {
@@ -199,8 +216,9 @@ on_actions = {
 							rule = GEM_ai_behavior 
 							option = UNS_GEM_COMM_PATH
 						}
-						set_country_flag = AI_GEM_COMM_PATH
+						
 					}
+					set_country_flag = AI_GEM_COMM_PATH
 				}
 				if = {
 					limit = {
@@ -208,8 +226,9 @@ on_actions = {
 							rule = GEM_ai_behavior 
 							option = GEM_DEMO_PATH
 						}
-						set_country_flag = AI_GEM_DEMO_PATH
+						
 					}
+					set_country_flag = AI_GEM_DEMO_PATH
 				}
 				if = {
 					limit = {
@@ -248,8 +267,9 @@ on_actions = {
 							rule = GRB_ai_behavior 
 							option = GRB_COMMUNISM_PATH
 						}
-						set_country_flag = AI_GRB_COMMUNISM_PATH
+						
 					}
+					set_country_flag = AI_GRB_COMMUNISM_PATH
 				}
 				if = {
 					limit = {
@@ -257,8 +277,9 @@ on_actions = {
 							rule = GRB_ai_behavior 
 							option = GRB_FASC_BASE_PATH
 						}
-						set_country_flag = AI_GRB_FASC_BASE_PATH
+						
 					}
+					set_country_flag = AI_GRB_FASC_BASE_PATH
 				}
 				if = {
 					limit = {
@@ -266,8 +287,9 @@ on_actions = {
 							rule = GRB_ai_behavior 
 							option = GRB_NEUTRALITY_PATH
 						}
-						set_country_flag = AI_GRB_NEUTRALITY_PATH
+						
 					}
+					set_country_flag = AI_GRB_NEUTRALITY_PATH
 				}
 				if = {
 					limit = {
@@ -275,8 +297,9 @@ on_actions = {
 							rule = GRB_ai_behavior 
 							option = GRB_FASCISM_CHURCH
 						}
-						set_country_flag = AI_GRB_FASCISM_CHURCH
+						
 					}
+					set_country_flag = AI_GRB_FASCISM_CHURCH
 				}
 				if = {
 					limit = {
@@ -284,8 +307,9 @@ on_actions = {
 							rule = GRB_ai_behavior 
 							option = GRB_FASCISM_FEUDAL
 						}
-						set_country_flag = AI_GRB_FASCISM_FEUDAL
+						
 					}
+					set_country_flag = AI_GRB_FASCISM_FEUDAL
 				}
 				if = {
 					limit = {

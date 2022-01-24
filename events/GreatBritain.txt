@@ -289,6 +289,16 @@ country_event = {
 		custom_effect_tooltip = demo_choose_grb
 		set_country_flag = player_democrats_choose
 		complete_national_focus = GRB_death_of_churchill
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+					has_country_flag = AI_GRB_NEUTRALITY_PATH
+				}
+			}
+		}
 	}
 	
 	option = { 
@@ -296,6 +306,13 @@ country_event = {
 		custom_effect_tooltip = comm_choose_grb
 		set_country_flag = player_communists_choose
 		complete_national_focus = GRB_death_of_churchill
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
 	}
 
 	option = {
@@ -303,6 +320,17 @@ country_event = {
 		custom_effect_tooltip = fasc_choose_grb
 		set_country_flag = player_fascism_choose
 		complete_national_focus = GRB_death_of_churchill
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+					has_country_flag = GRB_FASC_BASE_PATH
+				}
+			}
+		}
 	}
 }
 
@@ -325,6 +353,13 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
 		
 	}
 
@@ -342,8 +377,16 @@ country_event = {
 				ideology = fascism
 				popularity = 0.05
 			}
+			
 		}
 		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
 	}
 }
 
@@ -363,6 +406,13 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
 		
 	}
 	
@@ -374,6 +424,13 @@ country_event = {
 			add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
 		}
 		
 	}
@@ -402,6 +459,13 @@ country_event = {
 			idea = GRB_industry_financies
 			days = 720 
 		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
 	}
 	
 	
@@ -419,6 +483,13 @@ country_event = {
 		add_timed_idea = {
 			idea = GRB_military_financies
 			days = 720 
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
 		}
 	}
 	
@@ -480,7 +551,13 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
-		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
 		add_ideas = GRB_pony_science
 	}
 	option = {
@@ -492,7 +569,13 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
-		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
 		add_ideas = GRB_human_science
 	}
 	
@@ -517,7 +600,13 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
-		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
 		add_stability = 0.05
 		add_war_support = -0.1
 		
@@ -533,7 +622,16 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
-		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				OR = {
+					has_country_flag = AI_GRB_FASC_BASE_PATH
+					has_country_flag = AI_GRB_COMMUNISM_PATH
+				}
+			}
+		}
 		add_stability = -0.1
 		add_war_support = 0.1
 		
@@ -561,7 +659,13 @@ country_event = {
 			check_british_regs_values = yes 
 			calculate_british_map_frames = yes
 		}
-		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
 	}
 	
 	option = {
@@ -578,7 +682,13 @@ country_event = {
 			ideology = neutrality
 			popularity = -0.1
 		}
-		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
 	}
 }
 
@@ -604,7 +714,7 @@ country_event = {
 			add_to_temp_variable = { demo_victory_chance = 365.reg_demo_support_gb }
 			add_to_temp_variable = { demo_victory_chance = 363.reg_demo_support_gb }
 			add_to_temp_variable = { demo_victory_chance = 364.reg_demo_support_gb }
-			check_variable = { demo_victory_chance > 269 }
+			check_variable = { demo_victory_chance > 150 }
 		}
 		
 	}
@@ -627,7 +737,7 @@ country_event = {
 			add_to_temp_variable = { fasc_victory_chance = 365.reg_fasc_support_gb }
 			add_to_temp_variable = { fasc_victory_chance = 363.reg_fasc_support_gb }
 			add_to_temp_variable = { fasc_victory_chance = 364.reg_fasc_support_gb }
-			check_variable = { fasc_victory_chance > 269 }
+			check_variable = { fasc_victory_chance > 150 }
 		}
 		
 	}
@@ -649,7 +759,7 @@ country_event = {
 			add_to_temp_variable = { comm_victory_chance = 365.reg_comm_support_gb }
 			add_to_temp_variable = { comm_victory_chance = 363.reg_comm_support_gb }
 			add_to_temp_variable = { comm_victory_chance = 364.reg_comm_support_gb }
-			check_variable = { comm_victory_chance > 269 }
+			check_variable = { comm_victory_chance > 150 }
 		}
 		
 	}

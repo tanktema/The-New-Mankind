@@ -104,6 +104,13 @@ focus_tree = {
 		relative_position_id = SOU_first_contact
 		prerequisite = { focus = SOU_first_contact }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				date > 1008.1.1
+			}
+		}
 		completion_reward = {
 			add_political_power = 100
 		}
@@ -119,6 +126,13 @@ focus_tree = {
 		mutually_exclusive = { focus = SOU_radicalism }
 		mutually_exclusive = { focus = SOU_people_voice }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_SOU_COMMUNISM_OPTION
+			}
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -139,6 +153,9 @@ focus_tree = {
 		relative_position_id = SOU_communism_focus
 		prerequisite = { focus = SOU_communism_focus }
 		cost = 5
+		ai_will_do = {
+			factor = 25
+		}
 		completion_reward = {
 			add_ideas = SOU_kgb_defence
 		}
@@ -153,6 +170,9 @@ focus_tree = {
 		prerequisite = { focus = SOU_expand_kgb }
 		#prerequisite = { focus = SOU_com_propaganda }
 		cost = 5
+		ai_will_do = {
+			factor = 25
+		}
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -220,6 +240,10 @@ focus_tree = {
 		relative_position_id = SOU_communism_focus
 		prerequisite = { focus = SOU_communism_focus }
 		cost = 5
+		
+		ai_will_do = {
+			factor = 25
+		}
 		completion_reward = {
 			add_opinion_modifier = {
 				modifier = friendship_between
@@ -242,6 +266,9 @@ focus_tree = {
 		relative_position_id = SOU_friend_stalliongrad
 		prerequisite = { focus = SOU_friend_stalliongrad }
 		cost = 5
+		ai_will_do = {
+			factor = 25
+		}
 		completion_reward = {
 			add_ideas = SOU_state_reforms
 		}
@@ -257,6 +284,9 @@ focus_tree = {
 		prerequisite = { focus = SOU_national_reform }
 		prerequisite = { focus = SOU_support_workers }
 		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			create_faction = SOU_STG_PACT
 			STG = {
@@ -265,7 +295,7 @@ focus_tree = {
 					id = SOU 
 					value = 500
 				}
-				country_event = { id = generic.5 }
+				ROOT = { add_to_faction = PREV }
 			}
 		}
 	}
@@ -965,6 +995,17 @@ focus_tree = {
 		mutually_exclusive = { focus = SOU_radicalism }
 		mutually_exclusive = { focus = SOU_communism_focus }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_SOU_HISTORICAL
+					has_country_flag = AI_SOU_DEMOCRATIC_COUNTERREV_EASY
+					has_country_flag = AI_SOU_DEMOCRATIC_COUNTERREV_HARD
+				}
+			}
+		}
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor 
 			show_ideas_tooltip = SOU_people_democrats
@@ -1366,6 +1407,9 @@ focus_tree = {
 		relative_position_id = SOU_protests_against_fakes 
 		prerequisite = { focus = SOU_protests_against_fakes }
 		cost = 5
+		ai_will_do = {
+			factor = 50 
+		}
 		completion_reward = {
 			add_ideas = SOU_global_support
 			acceptance_expand_extra = yes
@@ -1376,6 +1420,9 @@ focus_tree = {
 		id = SOU_people_inspire
 		x = 1
 		y = 1
+		ai_will_do = {
+			factor = 50 
+		}
 		icon = GFX_goal_help_eqs
 		relative_position_id = SOU_protests_against_fakes
 		prerequisite = { focus = SOU_protests_against_fakes }
@@ -1394,6 +1441,23 @@ focus_tree = {
 		prerequisite = { focus = SOU_international_support_rev }
 		prerequisite = { focus = SOU_people_inspire }
 		cost = 5
+		ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 0
+				AND = {
+					has_country_flag = AI_SOU_DEMOCRATIC_COUNTERREV_EASY
+					democratic < 0.4 
+				}
+			}
+			modifier = {
+				factor = 2
+				AND = {
+					has_country_flag = AI_SOU_DEMOCRATIC_COUNTERREV_HARD
+					democratic < 0.4 
+				}
+			}
+		}
 		completion_reward = {
 			country_event = { id = sou.36 days = 5 }
 			custom_effect_tooltip = check_demo_support
@@ -1691,6 +1755,16 @@ focus_tree = {
 		mutually_exclusive = { focus = SOU_tsarizm }
 		prerequisite = { focus = SOU_political_crisis }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_SOU_FASCISM_OPTION_TAB
+					has_country_flag = AI_SOU_FASCISM_OPTION_YAZOV
+				}
+			}
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
@@ -1823,10 +1897,7 @@ focus_tree = {
 				id = sou.42 days = 5
 			}
 			hidden_effect = {
-				every_unit_leader = {
-					limit = {
-						has_id = 1491
-					}
+				SOU_captain_serpov = {
 					set_nationality = EQS 
 				}
 			}
@@ -2017,6 +2088,13 @@ focus_tree = {
 		relative_position_id = SOU_all_hail_the_empire
 		prerequisite = { focus = SOU_all_hail_the_empire }
 		cost = 5
+		bypass = {
+			GEM = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -2185,6 +2263,9 @@ focus_tree = {
 		cost = 0.2
 		prerequisite = { focus = SOU_officers_bund }
 		cost = 1
+		ai_will_do = {
+			factor = 100
+		}
 		completion_reward = {
 			custom_effect_tooltip = deploy_divisions_sou
 			hidden_effect = {
@@ -2213,6 +2294,9 @@ focus_tree = {
 		bypass = {
 			has_civil_war = no 
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		cost = 0.2
 		prerequisite = { focus = SOU_officers_bund }
 		#cost = 1
@@ -2229,8 +2313,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		icon = GFX_goal_GEM_RW
-		bypass = {
-			has_civil_war = no 
+		ai_will_do = {
+			factor = 100
 		}
 		cost = 0.2
 		relative_position_id = SOU_extra_conscription
@@ -2278,6 +2362,9 @@ focus_tree = {
 		prerequisite = { focus = SOU_buy_rifles }
 		bypass = {
 			has_civil_war = no 
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		cost = 0.2
 		completion_reward = {
@@ -2501,7 +2588,10 @@ focus_tree = {
 		y = 1
 		available = {
 			251 = {
-				is_owned_and_controlled_by = ROOT 
+				OR = {
+					is_owned_and_controlled_by = ROOT 
+					owner = { is_subject_of = ROOT }
+				}
 			}
 		}
 		icon = GFX_goal_GEM_asking
@@ -2555,6 +2645,13 @@ focus_tree = {
 		mutually_exclusive = { focus = SOU_people_voice }
 		mutually_exclusive = { focus = SOU_radicalism }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_SOU_TSARISM_OPTION
+			}
+		}
 		completion_reward = {
 			add_ideas = SOU_tsarizm
 		}
@@ -2828,6 +2925,9 @@ focus_tree = {
 		prerequisite = { focus = SOU_conquer_nova_griffonia }
 		prerequisite = { focus = SOU_new_gubernies }
 		cost = 5
+		ai_will_do = {
+			factor = 50
+		}
 		completion_reward = {
 			EQS = {
 				add_opinion_modifier = {
@@ -3054,7 +3154,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes 
 				}
 			}
@@ -3688,6 +3788,11 @@ focus_tree = {
 		icon = GFX_goal_SOU_recruitment
 		x = 30
 		y = 1
+		available = {
+			NOT = {
+				has_idea = UNS_radiation_poisoning
+			}
+		}
 		relative_position_id = SOU_first_contact
 		prerequisite = { focus = SOU_first_contact }
 		cost = 10

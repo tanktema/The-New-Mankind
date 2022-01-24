@@ -200,7 +200,7 @@ characters={
 		}
 	}
 	UNS_elian_chaney={
-		name="Elian Chaney"
+		name=UNS_elian_chaney
 		portraits={
 			army={
 				small="gfx/interface/ideas/advisors/UNS/UNS_elian_chaney.dds"

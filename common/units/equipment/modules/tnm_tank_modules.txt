@@ -1,16 +1,16 @@
 equipment_modules = {
 
-	tnm_tank_laser_defence_system = {
+	tnm_tank_laser_defence_system = { #### Уникальный айди
 		abbreviation = "tnm_lasd"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
+		category = tank_special_module ### Категория
+		sfx = sfx_ui_sd_module_turret ### Звук добавления
 		
-		xp_cost = 2
-		add_stats = {
+		xp_cost = 2 ### Сколько очков опыта добавится к стоимости проекта
+		add_stats = { ### Добавить +N ЕДИНИЦ к атрибуту. 
 			defense = 20
 			reliability = -0.15
 		}
-		multiply_stats = {
+		multiply_stats = { #### Добавить +N ПРОЦЕНТОВ к атрибуту
 			armor_value = 0.15
 		}
 		
@@ -156,7 +156,7 @@ equipment_modules = {
 	
 	tnm_flamethrower_grb = {
 		abbreviation = "tnm_flame"
-		category = tank_medium_main_armament
+		category = tank_heavy_main_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = flame
 		add_stats = {
@@ -190,4 +190,4 @@ equipment_modules = {
 			tungsten = 2
 		}
 	}
-	
+}

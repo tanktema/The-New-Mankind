@@ -249,7 +249,13 @@ UNS_ministry_of_peace_cat = {
 		original_tag = UNS 
 	}
 	visible = {
-		check_variable = { minpeace_opened = 1 }
+		OR = {
+			check_variable = { minpeace_opened = 1 }
+			AND = {
+				is_ai = yes 
+				has_completed_focus = UNS_minpeace_focus
+			}
+		}
 	}
 	priority = 1000
 }
@@ -258,7 +264,13 @@ UNS_ministry_of_war_cat = {
 		original_tag = UNS 
 	}
 	visible = {
-		check_variable = { minwar_opened = 1  }
+		OR = {
+			check_variable = { minwar_opened = 1  }
+			AND = {
+				is_ai = yes 
+				has_completed_focus = UNS_minwar_focus
+			}
+		}
 	}
 	priority = 999
 }
@@ -267,7 +279,13 @@ UNS_ministry_of_morale_cat = {
 		original_tag = UNS 
 	}
 	visible = {
-		check_variable = { minmorale_opened = 1  }
+		OR = {
+			check_variable = { minmorale_opened = 1  }
+			AND = {
+				is_ai = yes 
+				has_completed_focus = UNS_minmorale_focus
+			}
+		}
 	}
 	priority = 998
 }

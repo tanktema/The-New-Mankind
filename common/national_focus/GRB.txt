@@ -110,12 +110,8 @@ focus_tree = {
 		prerequisite = { focus = GRB_contact }
 		available = {
 			always = no
-				
-			
-			
-		}
-				
-		
+
+		}		
 		completion_reward = {
 			custom_effect_tooltip = focus_on_decision_complete
 			hidden_effect = {
@@ -176,6 +172,19 @@ focus_tree = {
 		prerequisite = { focus = GRB_citizenship_question }
 		mutually_exclusive = { focus = GRB_equal_rights }
 		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GRB_FASC_BASE_PATH
+				}
+			}
+		}
 		completion_reward = {
 			add_stability = 0.1
 			add_popularity = {
@@ -200,6 +209,19 @@ focus_tree = {
 		prerequisite = { focus = GRB_citizenship_question }
 		mutually_exclusive = { focus = GRB_human_rights }
 		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+				}
+			}
+		}
 		completion_reward = {
 			acceptance_expand_extra = yes 
 			every_owned_state = {
@@ -228,6 +250,13 @@ focus_tree = {
 		prerequisite = { focus = GRB_workers_protests }
 		mutually_exclusive = { focus = GRB_miltary_payment }
 		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
 		completion_reward = {
 			every_owned_state = {
 				add_to_variable = { var = reg_comm_support_gb value = 5 tooltip = comm_var_change_grb }
@@ -251,6 +280,17 @@ focus_tree = {
 		prerequisite = { focus = GRB_workers_protests }
 		mutually_exclusive = { focus = GRB_workers_salary }
 		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = AI_GRB_FASC_BASE_PATH }
+			}
+		}
 		completion_reward = {
 			every_owned_state = {
 				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
@@ -398,6 +438,17 @@ focus_tree = {
 		prerequisite = { focus = GRB_constitution }
 		mutually_exclusive = { focus = GRB_military_limits }
 		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = AI_GRB_FASC_BASE_PATH }
+			}
+		}
 		completion_reward = {
 			every_owned_state = {
 				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
@@ -422,6 +473,13 @@ focus_tree = {
 		prerequisite = { focus = GRB_science_question }
 		mutually_exclusive = { focus = GRB_expand_military_rights }
 		cost = 2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				NOT = { has_country_flag = AI_GRB_FASC_BASE_PATH }
+			}
+		}
 		completion_reward = {
 			every_owned_state = {
 				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
@@ -3539,6 +3597,13 @@ focus_tree = {
 		id = GRB_power_of_church
 		x = -3
 		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASCISM_CHURCH
+			}
+		}
 		icon = GFX_goal_GRB_church
 		relative_position_id = GRB_destroy_the_doubts
 		prerequisite = { focus = GRB_destroy_the_doubts }
@@ -3961,6 +4026,13 @@ focus_tree = {
 		prerequisite = { focus = GRB_destroy_the_doubts }
 		mutually_exclusive = { focus = GRB_power_of_church }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASCISM_FEUDAL
+			}
+		}
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
@@ -3983,7 +4055,7 @@ focus_tree = {
 		prerequisite = { focus = GRB_new_dynasty }
 		cost = 5
 		completion_reward = {
-			
+			army_experience = 50
 		}
 	}
 	

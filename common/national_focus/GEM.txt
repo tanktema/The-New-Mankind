@@ -167,6 +167,16 @@ focus_tree = {
 		icon = GFX_goal_GEM_night_of_broken_glass
 		x = -1
 		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = { 
+					has_country_flag = AI_GEM_HISTORICAL_PATH
+					has_country_flag = AI_GEM_ALT_FASC_PATH
+				}
+			}
+		}
 		relative_position_id = GEM_opposition_question
 		prerequisite = { focus = GEM_opposition_question }
 		mutually_exclusive = { focus = GEM_oppose_nazis }
@@ -180,6 +190,16 @@ focus_tree = {
 		icon = GFX_goal_GEM_oppose_nazis
 		x = 1
 		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = { 
+					has_country_flag = AI_GEM_COMM_PATH
+					has_country_flag = AI_GEM_DEMO_PATH
+				}
+			}
+		}
 		relative_position_id = GEM_opposition_question
 		prerequisite = { focus = GEM_opposition_question }
 		mutually_exclusive = { focus = GEM_night_of_broken_glass }
@@ -296,7 +316,7 @@ focus_tree = {
 		relative_position_id = GEM_xeno_question
 		prerequisite = { focus = GEM_xeno_question }
 		prerequisite = { focus = GEM_comendant_hour }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			set_major = yes 
 			remove_ideas = GEM_polit_crisis
@@ -323,7 +343,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_military_squads
 		prerequisite = { focus = GEM_military_squads }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			set_major = yes 
 			remove_ideas = GEM_polit_crisis
@@ -382,7 +402,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_rise_the_people
 		prerequisite = { focus = GEM_rise_the_people }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			set_major = yes 
 			remove_ideas = GEM_polit_crisis
@@ -454,7 +474,7 @@ focus_tree = {
 		relative_position_id = GEM_ask_for_UNS
 		prerequisite = { focus = GEM_ask_for_UNS }
 		prerequisite = { focus = GEM_natives_help }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			set_major = yes 
 			remove_ideas = GEM_polit_crisis
@@ -544,7 +564,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_dialog_himmler
 		prerequisite = { focus = GEM_dialog_himmler OR = GEM_arrest_himmler }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			acceptance_expand_extra = yes 
 		}
@@ -556,7 +576,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_access_xenophilia
 		prerequisite = { focus = GEM_access_xenophilia }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = depence_of_himmlers_fate 
 			hidden_effect = {
@@ -713,7 +733,7 @@ focus_tree = {
 		relative_position_id = GEM_question_of_etnos
 		prerequisite = { focus = GEM_question_of_etnos }
 		prerequisite = { focus = GEM_xeno_fighting }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_race_power
 		}
@@ -752,7 +772,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_adaptation
 		prerequisite = { focus = GEM_adaptation OR = GEM_military_police }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			CHN = {
 				country_event = { id = generic.2 }
@@ -772,7 +792,7 @@ focus_tree = {
 		relative_position_id = GEM_chn_allance
 		prerequisite = { focus = GEM_chn_allance }
 		mutually_exclusive = { focus = GEM_expansion_goebbels }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_limited_xepansion
 			add_stability = 0.05
@@ -787,7 +807,7 @@ focus_tree = {
 		relative_position_id = GEM_chn_allance
 		prerequisite = { focus = GEM_chn_allance }
 		mutually_exclusive = { focus = GEM_limited_contingent }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_unlimited_expansion
 			add_stability = -0.15
@@ -801,7 +821,7 @@ focus_tree = {
 		y = 1 
 		relative_position_id = GEM_limited_contingent
 		prerequisite = { focus = GEM_limited_contingent OR = GEM_expansion_goebbels }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			CHN = {
 				country_event = { id = gem.20 }
@@ -815,7 +835,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ask_for_territory
 		prerequisite = { focus = GEM_ask_for_territory }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = EQS 
@@ -837,7 +857,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ask_for_territory 
 		prerequisite = { focus = GEM_ask_for_territory }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = STG 
@@ -853,7 +873,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ask_for_territory
 		prerequisite = { focus = GEM_ask_for_territory }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			if = {
 				limit = {
@@ -882,7 +902,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_attack_equestria
 		prerequisite = { focus = GEM_attack_equestria OR = GEM_steel_gambit }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = UNS 
@@ -901,7 +921,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_steel_gambit 
 		prerequisite = { focus = GEM_steel_gambit OR = GEM_yak_attack }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = PLB
@@ -930,7 +950,7 @@ focus_tree = {
 		relative_position_id = GEM_unification_war
 		prerequisite = { focus = GEM_unification_war }
 		prerequisite = { focus = GEM_north_crusade }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = CHN 
@@ -1059,7 +1079,7 @@ focus_tree = {
 		relative_position_id = GEM_party_purges
 		prerequisite = { focus = GEM_party_purges }
 		prerequisite = { focus = GEM_natives_police_squads }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_milcondit
 		}
@@ -1071,7 +1091,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_military_conditions
 		prerequisite = { focus = GEM_military_conditions }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_prewarprep
 		}
@@ -1122,7 +1142,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_first_son_rule_focus
 		prerequisite = { focus = GEM_first_son_rule_focus OR = GEM_rations_doubling_rule }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = partial_economic_mobilisation
 		}
@@ -1159,7 +1179,7 @@ focus_tree = {
 		relative_position_id = GEM_himmler_yunge
 		prerequisite = { focus = GEM_himmler_yunge }
 		prerequisite = { focus = GEM_youth_training }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			news_event = { id = gem.23 }
 		}
@@ -1241,7 +1261,7 @@ focus_tree = {
 		relative_position_id = GEM_speak_to_taboritskiy
 		prerequisite = { focus = GEM_speak_to_taboritskiy }
 		prerequisite = { focus = GEM_speak_to_rockwell }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_state_claim = 96
 			add_state_claim = 332
@@ -1254,7 +1274,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_claim_the_humans
 		prerequisite = { focus = GEM_claim_the_humans }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_know_enemy
 		}
@@ -1269,7 +1289,7 @@ focus_tree = {
 		prerequisite = { focus = GEM_military_parade }
 		prerequisite = { focus = GEM_know_your_enemy}
 		prerequisite = { focus = GEM_prewar_preparation }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = CHN 
 		completion_reward = {
 			create_wargoal = {
@@ -1289,7 +1309,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_the_time_has_come
 		prerequisite = { focus = GEM_the_time_has_come }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = EQS 
 		will_lead_to_war_with = CRY
 		completion_reward = {
@@ -1310,7 +1330,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_move_forward
 		prerequisite = { focus = GEM_move_forward }
-		cost = 10 
+		cost = 5 
 		will_lead_to_war_with = PNG
 		will_lead_to_war_with = PLB 
 		completion_reward = {
@@ -1331,7 +1351,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_move_forward 
 		prerequisite = { focus = GEM_move_forward }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = YAK 
 		will_lead_to_war_with = JAK 
 		completion_reward = {
@@ -1352,7 +1372,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_way_north
 		prerequisite = { focus = GEM_way_north }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = GRF 
 		will_lead_to_war_with = GFF 
 		completion_reward = {
@@ -1373,7 +1393,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_way_east
 		prerequisite = { focus = GEM_way_east }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = STG 
 		completion_reward = {
 			create_wargoal = {
@@ -1390,7 +1410,7 @@ focus_tree = {
 		relative_position_id = GEM_attack_nova_griff
 		prerequisite = { focus = GEM_attack_nova_griff }
 		prerequisite = { focus = GEM_invade_stg }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = UNS 
 		will_lead_to_war_with = SOU 
 		completion_reward = {
@@ -1412,7 +1432,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_end_the_started
 		prerequisite = { focus = GEM_end_the_started }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = GRI 
 		completion_reward = {
 			create_wargoal = {
@@ -1429,7 +1449,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_attack_the_empire 
 		prerequisite = { focus = GEM_attack_the_empire }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = WNG 
 		completion_reward = {
 			create_wargoal = {
@@ -1446,7 +1466,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_attack_the_empire
 		prerequisite = { focus = GEM_attack_the_empire } 
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = SRS
@@ -1465,7 +1485,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_attack_the_empire
 		prerequisite = { focus = GEM_attack_the_empire }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			HLQ = {
 				country_event = { id = gem.24 }
@@ -1479,7 +1499,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_hellquill_question
 		prerequisite = { focus = GEM_hellquill_question }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				target = RIV 
@@ -1500,7 +1520,7 @@ focus_tree = {
 		y = 1 
 		relative_position_id = GEM_equality_brothehood
 		prerequisite = { focus = GEM_equality_brothehood }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			country_event = { id = gem.27 }
 		}
@@ -1513,7 +1533,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_end_of_tyranny
 		prerequisite = { focus =GEM_end_of_tyranny }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -1528,7 +1548,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_end_of_tyranny
 		prerequisite = { focus = GEM_end_of_tyranny }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -1617,7 +1637,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_brotherhood_unity
 		prerequisite = { focus = GEM_brotherhood_unity }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			STG = {
 				country_event = { id = generic.3 }
@@ -1631,7 +1651,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_brotherhood_unity
 		prerequisite = { focus = GEM_brotherhood_unity }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			SOU = {
 				country_event = { id = generic.3 }
@@ -1645,7 +1665,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_invite_STG
 		prerequisite = { focus = GEM_invite_SOU OR = GEM_invite_STG }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = CHN 
 		completion_reward = {
 			create_wargoal = {
@@ -1661,7 +1681,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_invite_SOU
 		prerequisite = { focus = GEM_invite_SOU OR = GEM_invite_STG }
-		cost = 10
+		cost = 5
 		will_lead_to_war_with = CHN 
 		completion_reward = {
 			create_wargoal = {
@@ -1677,7 +1697,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_second_chance
 		prerequisite = { focus = GEM_second_chance OR = GEM_crush_them }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_ves_tr
 		}
@@ -1690,7 +1710,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_vesalipolis_triumph
 		prerequisite = { focus = GEM_vesalipolis_triumph }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -1706,7 +1726,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_vesalipolis_triumph
 		prerequisite = { focus = GEM_vesalipolis_triumph }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -1726,7 +1746,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_vesalipolis_triumph
 		prerequisite = { focus = GEM_vesalipolis_triumph }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -1741,7 +1761,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_yaks
 		prerequisite = { focus = GEM_yaks OR = GEM_bears OR = GEM_deers }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -1760,7 +1780,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_equestrian_workers
 		prerequisite = { focus = GEM_equestrian_workers }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_red_world_idea
 		}
@@ -1778,7 +1798,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_elections
 		prerequisite = { focus = GEM_elections }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
@@ -1807,7 +1827,7 @@ focus_tree = {
 		relative_position_id = GEM_court_on_them
 		prerequisite = { focus = GEM_court_on_them }
 		mutually_exclusive = { focus = GEM_peacekeepers }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = -0.1
@@ -1822,7 +1842,7 @@ focus_tree = {
 		relative_position_id = GEM_court_on_them
 		prerequisite = { focus = GEM_court_on_them }
 		mutually_exclusive = { focus = GEM_peace_politics }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_peacekeepers 
 		}
@@ -1861,7 +1881,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_peaceful_propaganda
 		prerequisite = { focus = GEM_peaceful_propaganda OR = GEM_peacekeeping_divisions }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			set_rule = {
 				can_create_factions = yes 
@@ -2055,7 +2075,7 @@ focus_tree = {
 		relative_position_id = GEM_buy_american_eqpm
 		prerequisite = { focus = GEM_buy_american_eqpm }
 		prerequisite = { focus = GEM_soviet_vehicles }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			UNS = {
 				add_opinion_modifier = {
@@ -2088,7 +2108,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_end_the_past
 		prerequisite = { focus = GEM_end_the_past }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -2113,7 +2133,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_end_the_past
 		prerequisite = { focus = GEM_end_the_past }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_other_country = {
 				limit = {
@@ -2138,7 +2158,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_end_the_past
 		prerequisite = { focus = GEM_end_the_past }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			acceptance_expand_extra = yes 
 		}
@@ -2153,7 +2173,7 @@ focus_tree = {
 		prerequisite = { focus = GEM_contacts }
 		prerequisite = { focus = GEM_stop_xenophobia }
 		prerequisite = { focus = GEM_antifasc }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -2179,9 +2199,12 @@ focus_tree = {
 				tooltip = polit_cris_over
 			}
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = 5
 		y = 0
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_owned_state = {
 				add_building_construction = {
@@ -2233,9 +2256,12 @@ focus_tree = {
 		icon = GFX_goal_GEM_new_factories
 		x = -2
 		y = 1
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = GEM_stop_offworking
 		prerequisite = { focus = GEM_stop_offworking }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 2
@@ -2260,9 +2286,12 @@ focus_tree = {
 		icon = GFX_goal_GEM_road_networks
 		x = 2
 		y = 1
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = GEM_stop_offworking
 		prerequisite = { focus = GEM_stop_offworking }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_owned_state = {
 				add_building_construction = {
@@ -2278,9 +2307,12 @@ focus_tree = {
 		icon = GFX_goal_GEM_New_dockyard
 		x = 0
 		y = 1
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = GEM_new_factories
 		prerequisite = { focus = GEM_new_factories }
-		cost = 10 
+		cost = 5 
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -2300,9 +2332,12 @@ focus_tree = {
 		icon = GFX_goal_GEM_autoban
 		x = 0
 		y = 1
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = GEM_roads_networks
 		prerequisite = { focus = GEM_roads_networks }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -2328,9 +2363,12 @@ focus_tree = {
 		icon = GFX_goal_GEM_resources
 		x = 0
 		y = 1
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = GEM_new_dockyards
 		prerequisite = { focus = GEM_new_dockyards }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			unlock_decision_category_tooltip = GEM_resources_category
 		}
@@ -2342,7 +2380,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_autobans
 		prerequisite = { focus = GEM_autobans }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			country_event = { id = gem.30 days = 1 }
 		}
@@ -2355,7 +2393,7 @@ focus_tree = {
 		relative_position_id = GEM_resource_searching_focus
 		prerequisite = { focus = GEM_resource_searching_focus }
 		prerequisite = { focus = GEM_technology_trade }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor 
 			show_ideas_tooltip = GEM_shpeer
@@ -2368,7 +2406,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ask_the_old_ones 
 		prerequisite = { focus = GEM_ask_the_old_ones }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = synth_resources
@@ -2384,7 +2422,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ask_the_old_ones
 		prerequisite = { focus = GEM_ask_the_old_ones }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			unlock_decision_category_tooltip = GEM_resources_trading
 		}
@@ -2398,7 +2436,7 @@ focus_tree = {
 		relative_position_id = GEM_syntetic_oil
 		prerequisite = { focus = GEM_syntetic_oil }
 		prerequisite = { focus = GEM_sell_resources }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_fund_research
 			add_research_slot = 1
@@ -2411,7 +2449,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_research_fin
 		prerequisite = { focus = GEM_research_fin }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = magical_tech
@@ -2427,7 +2465,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_research_fin
 		prerequisite = { focus = GEM_research_fin }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = radar_tech
@@ -2444,7 +2482,7 @@ focus_tree = {
 		relative_position_id = GEM_energo_magical_weapons 
 		prerequisite = { focus = GEM_energo_magical_weapons }
 		prerequisite = { focus = GEM_hidden_war_tactic }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GEM_conrad_zuse
@@ -2458,7 +2496,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_computer_science
 		prerequisite = { focus = GEM_computer_science }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			capital_scope = {
 				add_extra_state_shared_building_slots = 3
@@ -2477,7 +2515,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_military_update
 		prerequisite = { focus = GEM_military_update }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			capital_scope = {
 				add_extra_state_shared_building_slots = 3
@@ -2496,7 +2534,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_military_update
 		prerequisite = { focus = GEM_military_update }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_expanded_shifts 
 		}
@@ -2509,7 +2547,7 @@ focus_tree = {
 		relative_position_id = GEM_factories_update
 		prerequisite = { focus = GEM_factories_update }
 		prerequisite = { focus = GEM_expand_workshifts }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_rifle_production
 		}
@@ -2521,7 +2559,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_more_rifles
 		prerequisite = { focus = GEM_more_rifles }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = cat_light_armor
@@ -2539,7 +2577,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_computer_science
 		prerequisite = { focus = GEM_computer_science }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			311 = {
 				set_state_category = city
@@ -2562,7 +2600,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_city_infrastructure
 		prerequisite = { focus = GEM_city_infrastructure }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = UNS_recycle_idea
 		}
@@ -2574,7 +2612,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_reusing
 		prerequisite = { focus = GEM_reusing }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_owned_state = {
 				limit = {
@@ -2595,7 +2633,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_reusing
 		prerequisite = { focus = GEM_reusing }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_electro_idea
 		}
@@ -2608,7 +2646,7 @@ focus_tree = {
 		relative_position_id = GEM_electrification
 		prerequisite = { focus = GEM_electrification }
 		prerequisite = { focus = GEM_railroad }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 2
@@ -2635,7 +2673,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_computer_science
 		prerequisite = { focus = GEM_computer_science }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = industry
@@ -2652,7 +2690,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_industry_development
 		prerequisite = { focus = GEM_industry_development }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = radar_tech
@@ -2668,7 +2706,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_industry_development
 		prerequisite = { focus = GEM_industry_development }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = construction_tech
@@ -2684,7 +2722,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ionosphere_exploration
 		prerequisite = { focus = GEM_ionosphere_exploration OR = GEM_building_optimization }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_medical_research_idea
 			add_tech_bonus = {
@@ -2701,7 +2739,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_medical_research
 		prerequisite = { focus = GEM_medical_research }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = rocketry
@@ -2756,11 +2794,16 @@ focus_tree = {
 				}
 				tooltip = polit_cris_over
 			}
+			
+			NOT = {
+				has_idea = UNS_radiation_poisoning
+			}
+		
 		}
 		icon = GFX_goal_GEM_mobilization
 		x = 36
 		y = 0
-		cost = 10 
+		cost = 5 
 		completion_reward = {
 			custom_effect_tooltip = gem_recruit_tt
 			hidden_effect = {
@@ -2813,7 +2856,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_sivispacem
 		prerequisite = { focus = GEM_sivispacem OR = GEM_parabellum }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = load_ss_oob_tt	
 			hidden_effect = {
@@ -2891,7 +2934,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_fire_from_sky
 		prerequisite = { focus = GEM_fire_from_sky OR = GEM_planning }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GEM_higo_shmeisser
@@ -2958,7 +3001,7 @@ focus_tree = {
 		prerequisite = { focus = GEM_military_training }
 		prerequisite = { focus = GEM_new_vests }
 		prerequisite = { focus = GEM_strength_the_border }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = magical_tech
@@ -2986,7 +3029,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_mobilization
 		prerequisite = { focus = GEM_mobilization }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			air_experience = 50
 		}
@@ -2999,7 +3042,7 @@ focus_tree = {
 		relative_position_id = GEM_luftwaffe
 		prerequisite = { focus = GEM_luftwaffe }
 		mutually_exclusive = { focus = GEM_heavy_air_focus }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = tactical_bomber
@@ -3023,7 +3066,7 @@ focus_tree = {
 		relative_position_id = GEM_luftwaffe
 		prerequisite = { focus = GEM_luftwaffe }
 		mutually_exclusive = { focus = GEM_light_air_focus }
-		cost = 10
+		cost = 5
 		completion_reward = {	
 			add_tech_bonus = {
 				category = cas_bomber
@@ -3047,7 +3090,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_light_air_focus
 		prerequisite = { focus = GEM_light_air_focus OR = GEM_heavy_air_focus }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = radar_tech
@@ -3067,7 +3110,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_exploring_air
 		prerequisite = { focus = GEM_exploring_air }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_building_construction = {
 				type = radar_station
@@ -3084,7 +3127,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_early_detection_system
 		prerequisite = { focus = GEM_early_detection_system }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ace = {
 				name = "Eric"
@@ -3108,7 +3151,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_meet_the_heroes
 		prerequisite = { focus = GEM_meet_the_heroes }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_countermeasures
 		}
@@ -3120,7 +3163,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_meet_the_heroes
 		prerequisite = { focus = GEM_meet_the_heroes }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			every_owned_state = {
 				add_building_construction = {
@@ -3139,7 +3182,7 @@ focus_tree = {
 		relative_position_id = GEM_air_superiority
 		prerequisite = { focus = GEM_air_superiority }
 		prerequisite = { focus = GEM_new_airports }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = jet_technology
@@ -3155,7 +3198,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_reactive_aircraft 
 		prerequisite = { focus = GEM_reactive_aircraft }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_sky_sold_idea
 		}
@@ -3168,7 +3211,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_mobilization
 		prerequisite = { focus = GEM_mobilization }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			navy_experience = 25
 			unlock_decision_category_tooltip = GEM_fleet_remake_category
@@ -3182,7 +3225,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_fleet_rebuild 
 		prerequisite = { focus = GEM_fleet_rebuild }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			random_owned_state = {
 				add_extra_state_shared_building_slots = 3
@@ -3205,7 +3248,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_expand_dockyards
 		prerequisite = { focus = GEM_expand_dockyards }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = bb_tech
@@ -3226,7 +3269,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_buy_blueprints
 		prerequisite = { focus = GEM_buy_blueprints }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = ss_tech
@@ -3243,7 +3286,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_underwater_fleet
 		prerequisite = { focus = GEM_underwater_fleet }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -3259,7 +3302,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_fleet_tactics
 		prerequisite = { focus = GEM_fleet_tactics }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			capital_scope = {
 				add_building_construction = {
@@ -3282,7 +3325,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_naval_bases 
 		prerequisite = { focus = GEM_naval_bases }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
 				category = trade_interdiction_tree
@@ -3298,7 +3341,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_convoy_hunting
 		prerequisite = { focus = GEM_convoy_hunting }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_shark_idea
 		}
@@ -3311,7 +3354,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_naval_bases
 		prerequisite = { focus = GEM_naval_bases }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			country_event = { id = gem.31 days = 5 }
 		}
@@ -3324,7 +3367,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = GEM_ship_researching
 		prerequisite = { focus = GEM_ship_researching }
-		cost = 10
+		cost = 5
 		completion_reward = {
 			add_ideas = GEM_fleet_power 
 		}

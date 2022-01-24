@@ -41,8 +41,8 @@ ideas = {
 		UNS_radiation_poisoning = {
 			removal_cost = -1
 			allowed = {
-				original_tag = UNS
-				}
+				#original_tag = UNS
+			}
 			
 			modifier = {
 				stability_factor = -0.1

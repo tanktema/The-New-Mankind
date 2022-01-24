@@ -33,31 +33,9 @@ GEM_political_crisis_category = {
 		is_good = yes 
 		days_mission_timeout = 365
 		timeout_effect = {
-			if = {
-				limit = {
-					is_ai = yes 
-				}
-				random_list = {
-					25 = {
-						complete_national_focus = GEM_iron_guard
-						promote_character = GEM_heinrich_himmler
-					}
-					25 = {
-						complete_national_focus = GEM_a_little_freedom
-						promote_character = GEM_goebbels_min
-					}	
-		
-					25 = {
-						complete_national_focus = GEM_red_variant
-					}
-					25 = {
-						complete_national_focus = GEM_people_spirit
-					}
-				}
-			}
-			else = {
-				country_event = { id = gem.11 }
-			}
+			
+			country_event = { id = gem.11 }
+			
 		}
 		complete_effect  = {
 			custom_effect_tooltip = gem_meeting_tt_1
@@ -71,7 +49,17 @@ GEM_political_crisis_category = {
 		visible = {
 			has_completed_focus = GEM_party_meeting
 		}
-		cost = 30
+		#cost = 30
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GEM_HISTORICAL_PATH
+					has_country_flag = AI_GEM_ALT_FASC_PATH
+				}
+			}
+		}
 		complete_effect = {
 			set_country_flag = choise_of_fascism
 			custom_effect_tooltip = unlock_himmler_hoebbels_way
@@ -86,7 +74,17 @@ GEM_political_crisis_category = {
 		visible = {
 			has_completed_focus = GEM_party_meeting
 		}
-		cost = 30
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GEM_COMM_PATH
+					has_country_flag = AI_GEM_DEMO_PATH
+				}
+			}
+		}
+		#cost = 30
 		complete_effect = {
 			set_country_flag = oppose_fascism_gem
 			custom_effect_tooltip = unlock_demo_comm_way
@@ -102,6 +100,19 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 50
 		cost = 25
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GEM_ALT_FASC_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GEM_ALT_FASC_PATH
+				}
+			}
+		}
 		remove_effect = {
 			set_country_flag = himmler_way
 			custom_effect_tooltip = himmler_support
@@ -122,6 +133,19 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 50
 		cost = 25
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GEM_HISTORICAL_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GEM_HISTORICAL_PATH
+				}
+			}
+		}
 		remove_effect = {
 			set_country_flag = goebbels_way 
 			custom_effect_tooltip = goebbels_support
@@ -139,6 +163,19 @@ GEM_political_crisis_category = {
 		}
 		visible = {
 			has_country_flag = oppose_fascism_gem
+		}
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GEM_COMM_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GEM_COMM_PATH
+				}
+			}
 		}
 		days_remove = 50
 		cost = 25
@@ -162,6 +199,19 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 50
 		cost = 25
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GEM_DEMO_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GEM_DEMO_PATH
+				}
+			}
+		}
 		remove_effect = {
 			set_country_flag = democratic_way
 			custom_effect_tooltip = demo_support_gem
@@ -182,7 +232,20 @@ GEM_political_crisis_category = {
 			has_country_flag = himmler_way
 		}
 		days_remove = 50
-		cost = 25 
+		cost = 25
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GEM_ALT_FASC_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GEM_ALT_FASC_PATH
+				}
+			}
+		}
 		remove_effect = {
 			set_country_flag = searches_of_ss
 			add_stability = -0.05
@@ -191,6 +254,7 @@ GEM_political_crisis_category = {
 				ideology = fascism
 				popularity = 0.1
 			}
+			
 			custom_effect_tooltip = find_the_opposition
 			add_to_variable = { demo_support = -10 }
 			add_to_variable = { comm_support = -10 }
@@ -210,6 +274,19 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 50
 		cost = 25
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GEM_HISTORICAL_PATH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					has_country_flag = AI_GEM_HISTORICAL_PATH
+				}
+			}
+		}
 		remove_effect = {
 			set_country_flag = meet_the_people_goebbels
 			custom_effect_tooltip = meeting_with_people
@@ -240,6 +317,25 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 50
 		cost = 25
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GEM_COMM_PATH
+					has_country_flag = AI_GEM_DEMO_PATH
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_country_flag = AI_GEM_COMM_PATH
+						has_country_flag = AI_GEM_DEMO_PATH
+					}
+				}
+			}
+		}
 		remove_effect = {
 			set_country_flag = cake_is_a_lie
 			custom_effect_tooltip = demos_commies_will_fight
@@ -269,6 +365,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 25
 		cost = 25
+		ai_will_do = { 
+			factor = 25
+		}
 		remove_effect = {
 			add_ideas = GEM_military_ration_system
 		}
@@ -283,6 +382,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 25
 		cost = 25
+		ai_will_do = { 
+			factor = 25
+		}
 		remove_effect = { 
 			add_ideas = GEM_more_food_for_workers
 		}
@@ -297,6 +399,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 25
 		cost = 25
+		ai_will_do = { 
+			factor = 25
+		}
 		remove_effect = { 
 			add_ideas = GEM_equal_rations
 		}
@@ -311,6 +416,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 10
 		cost = 10
+		ai_will_do = {
+			factor = 1000
+		}
 		remove_effect = {
 			add_manpower = -15
 			set_country_flag = no_turning_back
@@ -331,6 +439,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 15 
 		cost = 10
+		ai_will_do = {
+			factor = 1000
+		}
 		remove_effect = {
 			add_stability = -0.05
 			set_country_flag = no_turning_back 
@@ -351,6 +462,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 25
 		cost = 25
+		ai_will_do = {
+			factor = 1000
+		}
 		remove_effect = {
 			if = {
 				limit = {
@@ -390,6 +504,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 10
 		cost = 25
+		ai_will_do = {
+			factor = 1000
+		}
 		remove_effect = {
 			add_to_variable = { himmler_support = goebbels_support }
 			set_variable = { goebbels_support = 0 }
@@ -412,6 +529,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 10
 		cost = 25
+		ai_will_do = {
+			factor = 1000
+		}
 		remove_effect = {
 			add_to_variable = { goebbels_support = himmler_support }
 			set_variable = { himmler_support = 0 }
@@ -433,6 +553,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 10
 		cost = 25 
+		ai_will_do = {
+			factor = 100
+		}
 		remove_effect = {
 			add_to_variable = { comm_support = fasc_support }
 			set_variable = { fasc_support = 0 }
@@ -451,6 +574,9 @@ GEM_political_crisis_category = {
 		}
 		days_remove = 10
 		cost = 25 
+		ai_will_do = {
+			factor = 1000
+		}
 		remove_effect = {
 			add_to_variable = { demo_support = fasc_support }
 			set_variable = { fasc_support = 0 }
@@ -467,6 +593,9 @@ GEM_political_crisis_category = {
 		}
 		visible = {
 			has_completed_focus = GEM_destroy_the_opposition
+		}
+		ai_will_do = {
+			factor = 1000
 		}
 		complete_effect = {
 			add_popularity = {
@@ -488,6 +617,9 @@ GEM_political_crisis_category = {
 		visible = {
 			has_completed_focus = GEM_destroy_the_opposition
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		complete_effect = {
 			add_popularity = {
 				ideology = fascism
@@ -505,6 +637,9 @@ GEM_political_crisis_category = {
 			has_completed_focus = GEM_oppose_nazis
 			has_country_flag = communists_in_the_council_head
 		}
+		ai_will_do = {
+			factor = 1000
+		}
 		visible = {
 			has_completed_focus = GEM_oppose_nazis
 		}
@@ -521,6 +656,9 @@ GEM_political_crisis_category = {
 		available = {
 			has_completed_focus = GEM_oppose_nazis
 			has_country_flag = democrats_in_the_council_head
+		}
+		ai_will_do = {
+			factor = 1000
 		}
 		visible = {
 			has_completed_focus = GEM_oppose_nazis
@@ -553,6 +691,13 @@ GEM_resources_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { steel < 0 }
+			}
+		}
 		remove_effect = {
 			312 = {
 				add_resource = {
@@ -578,6 +723,13 @@ GEM_resources_category = {
 		days_remove = 50
 		modifier = {
 			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { aluminium < 0 }
+			}
 		}
 		remove_effect = {
 			312 = {
@@ -605,6 +757,13 @@ GEM_resources_category = {
 		modifier = {
 			civilian_factory_use = 2
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { tungsten < 0 }
+			}
+		}
 		remove_effect = {
 			312 = {
 				add_resource = {
@@ -624,6 +783,13 @@ GEM_resources_category = {
 			num_of_civilian_factories_available_for_projects > 1
 			owns_state = 311
 			controls_state = 311
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
 		}
 		cost = 25
 		fire_only_once = yes 
@@ -654,6 +820,13 @@ GEM_resources_category = {
 		cost = 25
 		fire_only_once = yes 
 		days_remove = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { crystals < 0 }
+			}
+		}
 		modifier = {
 			civilian_factory_use = 2
 		}
@@ -678,6 +851,13 @@ GEM_resources_category = {
 		cost = 25
 		fire_only_once = yes 
 		days_remove = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { oil < 0 }
+			}
+		}
 		modifier = {
 			civilian_factory_use = 2
 		}
@@ -700,6 +880,13 @@ GEM_resources_category = {
 			controls_state = 314
 		}
 		cost = 25
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { rubber < 0 }
+			}
+		}
 		fire_only_once = yes 
 		days_remove = 50
 		modifier = {
@@ -1095,6 +1282,9 @@ GEM_native_police_squads = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 		target_array = ROOT.controlled_states
 		fire_only_once = yes 
 		cost = 25
@@ -1129,6 +1319,9 @@ GEM_himmler_coring_decisions = {
 				resistance < 10
 				compliance > 40
 			}
+		}
+		ai_will_do = {
+			factor = 10
 		}
 		cost = 50
 		days_remove = 25

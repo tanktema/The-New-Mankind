@@ -219,6 +219,13 @@ country_event = {
 		trigger = {
 			democratic > 0.4
 		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_country_flag = AI_SOU_HISTORICAL
+			}
+		}
 		set_politics = {
 			ruling_party = democratic
 			elections_allowed = yes 
@@ -235,6 +242,16 @@ country_event = {
 		add_popularity = {
 			ideology = communism 
 			popularity = 0.3
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				OR = {
+					has_country_flag = AI_SOU_DEMOCRATIC_COUNTERREV_EASY
+					has_country_flag = AI_SOU_DEMOCRATIC_COUNTERREV_HARD
+				}
+			}
 		}
 		add_ideas = SOU_bund_blyat
 		add_stability = -0.2
@@ -1005,12 +1022,26 @@ country_event = {
 			idea = SOU_purges
 			days = 365
 		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_country_flag = AI_SOU_FASCISM_OPTION_TAB
+			}
+		}
 		retire_character = SOU_dmitry_yazov
 		retire_character = SOU_general_kryukov
 	}
 	
 	option = {
 		name = sou.42.b 
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2
+				has_country_flag = AI_SOU_FASCISM_OPTION_YAZOV
+			}
+		}
 		hidden_effect = {
 			country_event = { id = sou.43 days = 45 }
 		}

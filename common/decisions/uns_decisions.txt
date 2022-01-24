@@ -17,7 +17,11 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { steel < 0 }
+			}
 		}
 		remove_effect = {
 			18 = {
@@ -48,7 +52,11 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { aluminium < 0 }
+			}
 		}
 		remove_effect = {
 			18 = {
@@ -78,7 +86,11 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { rubber < 0 }
+			}
 		}
 		remove_effect = {
 			48 = {
@@ -91,7 +103,7 @@ resource_exploring_human_category = {
 		}
 	}
 	UNS_search_oil = {
-	icon = 111
+		icon = 111
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
 			has_completed_focus = UNS_resource_effort
@@ -108,7 +120,7 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		remove_effect = {
 			96 = {
@@ -138,7 +150,11 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { crystals < 0 }
+			}
 		}
 		remove_effect = {
 			96 = {
@@ -168,7 +184,11 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
 		}
 		remove_effect = {
 			18 = {
@@ -198,7 +218,11 @@ resource_exploring_human_category = {
 			civilian_factory_use = 2
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
 		}
 		remove_effect = {
 			18 = {
@@ -225,6 +249,17 @@ christmas_celebrating_category = {
 			date > 1007.12.15
 			date < 1007.12.25
 			is_human_race = yes
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_UNS_HISTORICAL
+					has_country_flag = AI_UNS_COMMUNISM_STANDART
+					has_country_flag = AI_UNS_MILITARY_DEMO
+				}
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -253,6 +288,17 @@ christmas_celebrating_category = {
 		complete_effect = {
 			set_country_flag = celebrate_heart_warming
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_UNS_FASC_ROCKWELL
+					has_country_flag = AI_UNS_COMMUNISM_STATESOC
+					has_country_flag = AI_UNS_MILITARY_FASC
+				}
+			}
+		}
 		remove_effect = {
 			every_other_country = {
 				limit = {
@@ -271,7 +317,7 @@ christmas_celebrating_category = {
 
 	UNS_celebrating = {
 		icon = 1111
-		allowed = { tag = UNS }
+		allowed = { is_human_race = yes }
 		available = {
 			OR = {
 				has_country_flag = celebrate_christmas 
@@ -326,7 +372,24 @@ equestria_communist_support_category = {
 				has_country_flag = american_comm_target
 			}
 		}
-		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				set_temp_variable = { num_of_targets_uns = 0 }
+				every_country = {
+					limit = {
+						AND = {
+							has_country_flag = american_comm_target
+							NOT = { is_in_faction_with = ROOT is_subject_of = ROOT }
+						}
+					}
+					add_to_temp_variable = { UNS.num_of_targets_uns = 1 }
+				}
+				check_variable = { num_of_targets_uns < 2 }
+			}
+		}
+					
 		cost = 25
 		complete_effect = {
 			FROM = {
@@ -368,7 +431,27 @@ equestria_communist_support_category = {
 				check_variable = { var_uns_comm_support > 0 }
 			}
 		}
-		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				set_temp_variable = { num_of_targets_uns = 0 }
+				every_country = {
+					limit = {
+						AND = {
+							has_country_flag = american_comm_target
+							NOT = { is_in_faction_with = ROOT is_subject_of = ROOT }
+						}
+					}
+					add_to_temp_variable = { UNS.num_of_targets_uns = 1 }
+				}
+				check_variable = { num_of_targets_uns < 2 }
+			}
+			modifier = {
+				factor = 50
+				FROM = { check_variable = { var_uns_comm_support < 0.49 } }
+			}
+		}
 		fire_only_once = no 
 		days_re_enable = 30
 		cost = 50
@@ -399,7 +482,13 @@ equestria_communist_support_category = {
 				check_variable = { var_uns_comm_support > 0 }
 			}
 		}
-		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				FROM = { check_variable = { var_uns_comm_support > 0.49 } }
+			}
+		}
 		cost = 10
 		
 		complete_effect = {
@@ -433,7 +522,11 @@ resource_keep_exploring_human_category = {
 		days_remove = 50
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { steel < 0 }
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -466,7 +559,11 @@ resource_keep_exploring_human_category = {
 		days_remove = 50
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { aluminium < 0 }
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -499,7 +596,11 @@ resource_keep_exploring_human_category = {
 		days_remove = 50
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { rubber < 0 }
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -532,7 +633,7 @@ resource_keep_exploring_human_category = {
 		days_remove = 50
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 0
+			factor = 100
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -565,7 +666,11 @@ resource_keep_exploring_human_category = {
 		days_remove = 50
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { crystals < 0 }
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -598,7 +703,11 @@ resource_keep_exploring_human_category = {
 		fire_only_once = yes
 		days_remove = 50
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -631,7 +740,11 @@ resource_keep_exploring_human_category = {
 		cost = 50
 		days_remove = 50
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { tungsten < 0 }
+			}
 		}
 		modifier = {
 			civilian_factory_use = 3
@@ -666,6 +779,17 @@ extra_worktime_human_category = {
 			}
 
 		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50 
+				has_war = yes 
+			}
+			modifier = {
+				factor = 0
+				check_variable = { human_rage > 25 }
+			}
+		}
 		complete_effect = {
 			set_country_flag = turned_on_extra_worktime
 			custom_effect_tooltip = turn_on_worktime
@@ -683,6 +807,17 @@ extra_worktime_human_category = {
 		}
 		available = {
 		
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = { human_rage < 90 }
+			}
+			modifier = {
+				factor = 100
+				check_variable = { human_rage > 99 }
+			}
 		}
 		visible = {
 			has_tech = prod_time_work
@@ -881,6 +1016,13 @@ scientifical_expand_human_category = {
 		modifier = {
 			political_power_gain = -0.4
 			research_speed_factor = -0.15
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				date > 1012.1.1
+			}
 		}
 		remove_effect = {
 			clr_country_flag = UNS_fundings_in_progress
@@ -1241,6 +1383,9 @@ fleet_reconstruction_category = {
 		modifier = {
 			industrial_capacity_dockyard = -0.4
 		}
+		ai_will_do = {
+			factor = 10
+		}
 		fire_only_once = yes
 		days_remove = 25
 		remove_effect = {
@@ -1262,6 +1407,9 @@ fleet_reconstruction_category = {
 		modifier = {
 			industrial_capacity_dockyard = -0.4
 		}
+		ai_will_do = {
+			factor = 10
+		}
 		fire_only_once = yes
 		days_remove = 50
 		remove_effect = {
@@ -1279,6 +1427,9 @@ fleet_reconstruction_category = {
 			has_completed_focus = UNS_our_fleet
 			has_country_flag = UNS_founded_bb
 		}
+		ai_will_do = {
+			factor = 10
+		}
 		cost = 25
 		modifier = {
 			industrial_capacity_dockyard = -0.4
@@ -1295,6 +1446,9 @@ fleet_reconstruction_category = {
 			num_of_available_naval_factories > 0
 			has_completed_focus = UNS_our_fleet
 			has_country_flag = UNS_founded_bb
+		}
+		ai_will_do = {
+			factor = 10
 		}
 		visible = {
 			has_completed_focus = UNS_our_fleet
@@ -1316,6 +1470,9 @@ fleet_reconstruction_category = {
 			num_of_available_naval_factories > 0
 			has_completed_focus = UNS_our_fleet
 			has_country_flag = UNS_founded_bb
+		}
+		ai_will_do = {
+			factor = 10
 		}
 		visible = {
 			has_completed_focus = UNS_our_fleet
@@ -1357,6 +1514,9 @@ fleet_reconstruction_category = {
 			}
 			custom_effect_tooltip = uns_bb_built_ship_tt
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 }
 UNS_liberty_statue_category = {
@@ -1369,6 +1529,9 @@ UNS_liberty_statue_category = {
 		}
 		visible = {
 			check_variable = { num_buiild_libstat < 3 }
+		}
+		ai_will_do = {
+			factor = 50
 		}
 		cost = 50
 		days_remove = 30
@@ -1394,6 +1557,9 @@ UNS_liberty_statue_category = {
 		modifier = {
 			production_speed_buildings_factor = -0.1
 			political_power_gain = -0.1
+		}
+		ai_will_do = {
+			factor = 50
 		}
 		remove_effect = {
 			add_ideas = UNS_liberty_statue_idea
@@ -1498,6 +1664,9 @@ UNS_ministry_of_peace_cat = {
 			}
 				
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	UNS_upgrade_minpeace_l2 = {
 		
@@ -1523,6 +1692,9 @@ UNS_ministry_of_peace_cat = {
 			custom_effect_tooltip = upgrade_ministry_to_lvl2
 			set_country_flag = minpeace_v_2
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	UNS_upgrade_minpeace_l3 = {
 		available = {
@@ -1546,6 +1718,9 @@ UNS_ministry_of_peace_cat = {
 			custom_effect_tooltip = upgrade_ministry_to_lvl3
 			set_country_flag = minpeace_v_3
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	
 	UNS_found_healthdep = {
@@ -1566,6 +1741,9 @@ UNS_ministry_of_peace_cat = {
 			add_to_variable = { var = uns_unity_statesoc value = 0.01 tooltip = change_unity_level }
 			custom_effect_tooltip = new_dept_minist
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1588,6 +1766,9 @@ UNS_ministry_of_peace_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	UNS_found_edudep = {
 		available = {
@@ -1608,6 +1789,9 @@ UNS_ministry_of_peace_cat = {
 			custom_effect_tooltip = new_dept_minist
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_open_new_schools = {
@@ -1627,6 +1811,9 @@ UNS_ministry_of_peace_cat = {
 			}
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1649,6 +1836,9 @@ UNS_ministry_of_peace_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_charity = {
@@ -1665,6 +1855,9 @@ UNS_ministry_of_peace_cat = {
 			}
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1688,6 +1881,9 @@ UNS_ministry_of_peace_cat = {
 			set_country_flag = minpeace_milhealdep
 			add_to_variable = { var  = uns_unity_statesoc value = 0.04 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1716,6 +1912,9 @@ UNS_ministry_of_peace_cat = {
 			check_statesoc_level = yes
 			custom_effect_tooltip = revive_10_losses
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_found_expmedical_dep = {
@@ -1739,6 +1938,9 @@ UNS_ministry_of_peace_cat = {
 			set_country_flag = minpeace_expmeddep
 			add_to_variable = { var = uns_unity_statesoc value = 0.04 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1779,6 +1981,9 @@ UNS_ministry_of_peace_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.07 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 35
+		}
 	}
 	
 	UNS_arcane_medical_dept = {
@@ -1802,6 +2007,9 @@ UNS_ministry_of_peace_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = -0.03 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_create_chemical_weapon = {
@@ -1821,6 +2029,9 @@ UNS_ministry_of_peace_cat = {
 			set_technology = { chemical_weapons = 1 }
 			add_to_variable = { var  = uns_unity_statesoc value = -0.1 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1842,6 +2053,9 @@ UNS_ministry_of_peace_cat = {
 			set_country_flag = biobombs_developed
 			add_to_variable = { var  = uns_unity_statesoc value = -0.1 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1873,6 +2087,9 @@ UNS_ministry_of_peace_cat = {
 				add_manpower = -1000 
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 }
 
@@ -1895,6 +2112,10 @@ UNS_ministry_of_war_cat = {
 					modifier = UNS_minwar_mod
 				}
 			}
+		}
+		
+		ai_will_do = {
+			factor = 100
 		}
 	}
 	UNS_upgrade_minwar_l2 = {
@@ -1921,6 +2142,9 @@ UNS_ministry_of_war_cat = {
 			custom_effect_tooltip = upgrade_ministry_to_lvl2
 			set_country_flag = minwar_v_2
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	UNS_upgrade_minwar_l3 = {
 		available = {
@@ -1944,6 +2168,9 @@ UNS_ministry_of_war_cat = {
 			custom_effect_tooltip = upgrade_ministry_to_lvl3
 			set_country_flag = minwar_v_3
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	
 	UNS_found_armordep = {
@@ -1962,6 +2189,9 @@ UNS_ministry_of_war_cat = {
 		remove_effect = {
 			set_country_flag = minwar_armordep
 			custom_effect_tooltip = new_dept_minist
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -1986,6 +2216,9 @@ UNS_ministry_of_war_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	UNS_found_armsdep = {
 		available = {
@@ -2005,6 +2238,9 @@ UNS_ministry_of_war_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			custom_effect_tooltip = new_dept_minist
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2029,6 +2265,9 @@ UNS_ministry_of_war_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_found_antiterror_dept = {
@@ -2047,6 +2286,9 @@ UNS_ministry_of_war_cat = {
 		remove_effect = {
 			custom_effect_tooltip = new_dept_minist
 			set_country_flag = minwar_nsdep
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2067,6 +2309,9 @@ UNS_ministry_of_war_cat = {
 			add_manpower = -50
 			add_to_variable = { var  = uns_unity_statesoc value = 0.04 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 			
 	}
@@ -2089,6 +2334,9 @@ UNS_ministry_of_war_cat = {
 		remove_effect = {
 			custom_effect_tooltip = new_dept_minist
 			set_country_flag = minwar_wmddep
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2116,6 +2364,9 @@ UNS_ministry_of_war_cat = {
 			add_ideas = UNS_nukes_by_wmd
 			add_to_variable = { var  = uns_unity_statesoc value = -0.1 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2158,6 +2409,10 @@ UNS_ministry_of_war_cat = {
 					}
 				}
 			}
+		}
+		
+		ai_will_do = {
+			factor = 5
 		}
 	}
 	
@@ -2215,6 +2470,9 @@ UNS_ministry_of_war_cat = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 10
+		}
 	}
 	
 	UNS_experim_weap_dept = {
@@ -2236,6 +2494,9 @@ UNS_ministry_of_war_cat = {
 			set_country_flag = minwar_expweapdep
 			custom_effect_tooltip = new_dept_minist
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_soldier_of_future = {
@@ -2253,6 +2514,9 @@ UNS_ministry_of_war_cat = {
 		
 		remove_effect = {
 			set_technology = { soldiers_of_future_tech = 1 }
+		}
+		ai_will_do = {
+			factor = 100
 		}
 	}
 	
@@ -2276,6 +2540,9 @@ UNS_ministry_of_morale_cat = {
 					modifier = UNS_minmor_mod
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 	}
 	UNS_upgrade_minmor_l2 = {
@@ -2302,6 +2569,9 @@ UNS_ministry_of_morale_cat = {
 			custom_effect_tooltip = upgrade_ministry_to_lvl2
 			set_country_flag = minmor_v_2
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	UNS_upgrade_minmor_l3 = {
 		available = {
@@ -2325,6 +2595,9 @@ UNS_ministry_of_morale_cat = {
 			custom_effect_tooltip = upgrade_ministry_to_lvl3
 			set_country_flag = minmor_v_3
 		}
+		ai_will_do = {
+			factor = 100
+		}
 	}
 	
 	UNS_found_happines_dept = {
@@ -2343,6 +2616,9 @@ UNS_ministry_of_morale_cat = {
 		remove_effect = {
 			set_country_flag = minmor_happydep
 			custom_effect_tooltip = new_dept_minist
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2363,6 +2639,9 @@ UNS_ministry_of_morale_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_found_printdep = {
@@ -2381,6 +2660,9 @@ UNS_ministry_of_morale_cat = {
 		remove_effect = {
 			set_country_flag = minmor_printdep
 			custom_effect_tooltip = new_dept_minist
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2401,6 +2683,9 @@ UNS_ministry_of_morale_cat = {
 			add_to_variable = { var  = uns_unity_statesoc value = 0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_arts_depart = {
@@ -2420,6 +2705,9 @@ UNS_ministry_of_morale_cat = {
 			set_country_flag = minmor_artsdep
 			custom_effect_tooltip = new_dept_minist
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 			
 	UNS_censorship = {
@@ -2437,6 +2725,9 @@ UNS_ministry_of_morale_cat = {
 			}
 			add_to_variable = { var  = uns_unity_statesoc value = -0.02 tooltip = change_unity_level }
 			check_statesoc_level = yes
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2460,6 +2751,9 @@ UNS_ministry_of_morale_cat = {
 		remove_effect = {
 			custom_effect_tooltip = new_dept_minist
 			set_country_flag = minmor_broaddep
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2491,6 +2785,9 @@ UNS_ministry_of_morale_cat = {
 				}
 			}
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_found_trading_dept = {
@@ -2513,6 +2810,9 @@ UNS_ministry_of_morale_cat = {
 			custom_effect_tooltip = new_dept_minist
 			set_country_flag = minmor_tradedep
 		}
+		ai_will_do = {
+			factor = 25
+		}
 	}
 	
 	UNS_trading_search = {
@@ -2527,6 +2827,9 @@ UNS_ministry_of_morale_cat = {
 			army_intel_factor = 0.15
 			navy_intel_factor = 0.15
 			airforce_intel_factor = 0.1
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 	
@@ -2561,6 +2864,9 @@ UNS_ministry_of_morale_cat = {
 					}
 				}
 			}
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}
 		
@@ -2629,5 +2935,8 @@ UNS_ministry_of_morale_cat = {
 				}
 			}
 			custom_effect_tooltip = 10_divs_desert_tt
+		}
+		ai_will_do = {
+			factor = 25
 		}
 	}

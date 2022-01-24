@@ -134,6 +134,13 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				date > 1008.1.1
+			}
+		}
 	}
 	
 	############# Democracy
@@ -513,7 +520,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = { ### Посольство к Оборотням
+	focus = { ### Посольство 
 		id = UNS_embass_changeling
 		x = 19
 		y = 6
@@ -554,7 +561,7 @@ focus_tree = {
 			focus = UNS_new_way
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 40
 		}
 		completion_reward = {
 			add_ideas = UNS_militarized_people
@@ -677,6 +684,16 @@ focus_tree = {
 				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
 				set_temp_variable = { vartoadd_accept = temp_hundred }
 				add_to_variable = { acceptance_value = vartoadd_accept }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 100
+				OR = {
+					date > 1010.1.1
+					threat > 0.5
+				}
 			}
 		}
 	} 
@@ -825,6 +842,48 @@ focus_tree = {
 		prerequisite = { focus = UNS_air_corridor }
 		prerequisite = { focus = UNS_allies_meeting }
 		cost = 4
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				GRB = {
+					OR = {
+						NOT = {
+							has_government = democratic
+							has_government = neutrality
+						}
+						has_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				
+				AND = {
+					GRB = {
+						OR = {
+							has_government = democratic
+							has_government = neutrality
+						}
+						has_war = yes 
+					}
+					OR = {
+						is_in_faction = yes 
+						is_faction_leader = yes 
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				GRB = {
+					OR = {
+						has_government = democratic
+						has_government = neutrality
+					}
+				}
+			}
+		}
+						
 		completion_reward = {
 			GRB = {
 				add_ai_strategy = {
@@ -1063,6 +1122,44 @@ focus_tree = {
 		prerequisite = { 
 			focus  = UNS_train_together
 		}
+		
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				SOU = {
+					OR = {
+						has_government = fascism
+						has_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				
+				AND = {
+					SOU = {
+						has_government = democratic
+						has_war = yes 
+					}
+					OR = {
+						is_in_faction = yes 
+						is_faction_leader = yes 
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				SOU = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = neutrality
+					}
+				}
+			}
+				
+		}
 		completion_reward = {
 			SOU = {
 				add_ai_strategy = {
@@ -1289,6 +1386,43 @@ focus_tree = {
 		prerequisite = { focus = UNS_hum_assistance_germ }
 		prerequisite = { focus = UNS_research_with_gem }
 		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				GEM = {
+					OR = {
+						has_government = fascism
+						has_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				
+				AND = {
+					GEM = {
+						has_government = democratic
+						has_war = yes 
+					}
+					OR = {
+						is_in_faction = yes 
+						is_faction_leader = yes 
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				GEM = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = neutrality
+					}
+				}
+			}
+				
+		}
 		completion_reward = {
 			GEM = {
 				add_ai_strategy = {
@@ -1349,6 +1483,19 @@ focus_tree = {
 		icon = GFX_goal_UNS_hum_first
 		x = 0
 		y = 1
+		available = {
+			AND = {
+				GEM = {
+					is_in_faction_with = ROOT 
+				}
+				GRB = {
+					is_in_faction_with = ROOT 
+				}
+				SOU = {
+					is_in_faction_with = ROOT 
+				}
+			}
+		}
 		relative_position_id = UNS_human_exhibition
 		prerequisite = { focus = UNS_human_exhibition }
 		prerequisite = { focus = UNS_we_are_united }
@@ -1520,7 +1667,11 @@ focus_tree = {
 		}
 		prerequisite = { focus = UNS_twilight }
 		ai_will_do = {
-			factor = 4
+			factor = 10
+			modifier = {
+				factor = 100
+				threat > 0.5
+			}
 		}
 		completion_reward = {
 			give_guarantee = EQS
@@ -1604,6 +1755,9 @@ focus_tree = {
 		prerequisite = { focus = UNS_technology_barter }
 		prerequisite = { focus = UNS_EQS_trainings }
 		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
 		completion_reward = {
 			EQS = {
 				country_event = { id = generic.2 }
@@ -1810,6 +1964,43 @@ focus_tree = {
 		relative_position_id = UNS_northern_look
 		prerequisite = { focus = UNS_northern_look }
 		cost = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				FAT = {
+					OR = {
+						has_government = fascism
+						has_war = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 100
+				
+				AND = {
+					FAT = {
+						has_government = democratic
+						has_war = yes 
+					}
+					OR = {
+						is_in_faction = yes 
+						is_faction_leader = yes 
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				FAT = {
+					OR = {
+						has_government = democratic
+						has_government = communism
+						has_government = neutrality
+					}
+				}
+			}
+				
+		}
 		completion_reward = {
 			FAT = {
 				add_ai_strategy = {
@@ -1855,7 +2046,7 @@ focus_tree = {
 				every_country = {
 					limit = {
 						AND = {
-							is_in_faction_with = GEM 
+							is_in_faction_with = FAT 
 							is_faction_leader = yes 
 						}
 					}
@@ -2079,6 +2270,13 @@ focus_tree = {
 		relative_position_id = UNS_proletariat
 		prerequisite = { focus = UNS_proletariat }
 		cost = 7.2
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 10
+				has_country_flag = AI_UNS_COMMUNISM_STANDART
+			}
+		}
 		completion_reward = {
 			add_political_power = 25
 			set_rule = { can_create_factions = yes }
@@ -2623,6 +2821,13 @@ focus_tree = {
 		prerequisite = { focus = UNS_proletariat }
 		mutually_exclusive = { focus = UNS_friendship_of_people }
 		cost = 5
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 10
+				has_country_flag = AI_UNS_COMMUNISM_STATESOC
+			}
+		}
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
@@ -3830,6 +4035,17 @@ focus_tree = {
 		relative_position_id = UNS_officers_purging
 		prerequisite = { focus = UNS_officers_purging }
 		cost = 7.2
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_war = no 
+			}
+			modifier = {
+				factor = 100
+				surrender_progress > 0.2
+			}
+		}
 		completion_reward = {
 			add_ideas = UNS_wartime_measures_idea
 		}
@@ -3844,6 +4060,13 @@ focus_tree = {
 		prerequisite = { focus = UNS_officers_purging }
 		mutually_exclusive = { focus = UNS_diplomacy_with_equestria }
 		cost = 7.2
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 100
+				has_country_flag = AI_UNS_MILITARY_FASC
+			}
+		}
 		completion_reward = {
 			army_experience = 25
 			add_war_support = 0.1
@@ -4415,6 +4638,13 @@ focus_tree = {
 		prerequisite = { focus = UNS_officers_purging }
 		mutually_exclusive = { focus = UNS_army_checking }
 		cost = 5
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 100
+				has_country_flag = AI_UNS_MILITARY_DEMO
+			}
+		}
 		completion_reward = {
 			EQS = {
 				add_opinion_modifier = {
@@ -5198,6 +5428,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 10
+				has_government = democratic
+			}
 		}
 		completion_reward = {
 			EQS = {
@@ -5248,6 +5482,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 10
+				has_government = fascism
+			}
 		}
 		completion_reward = {
 			NLR = {
@@ -5458,6 +5696,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 100
+				num_of_civilian_factories < 10 
+			}
 		}
 		completion_reward = {
 			country_event = {
@@ -5470,6 +5712,17 @@ focus_tree = {
 		x = 0
 		y = 1
 		icon = GFX_goal_UNS_industry
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				date < 1009.1.1
+			}
+			modifier = {
+				factor = 100
+				date > 1009.1.1
+			}
+		}
 		relative_position_id = UNS_depression
 		prerequisite = { focus = UNS_depression }
 		cost = 5
@@ -5525,6 +5778,9 @@ focus_tree = {
 		id = UNS_resource_effort
 		x = -8
 		y = 0
+		ai_will_do = {
+			factor = 25
+		}
 		relative_position_id = UNS_industrial_effort 
 		icon = GFX_goal_uns_resources
 		prerequisite = { focus = UNS_depression }
@@ -5537,6 +5793,9 @@ focus_tree = {
 		id = UNS_research_effort
 		x = 8
 		y = 0
+		ai_will_do = {
+			factor = 5
+		}
 		relative_position_id = UNS_industrial_effort
 		icon = GFX_goal_uns_research
 		prerequisite = { focus = UNS_depression }
@@ -5558,6 +5817,9 @@ focus_tree = {
 		id = UNS_quality
 		x = 0
 		y = 1
+		ai_will_do = {
+			factor = 15
+		}
 		relative_position_id = UNS_resource_effort
 		prerequisite = { focus = UNS_resource_effort }
 		icon = GFX_goal_quality_uns
@@ -5570,6 +5832,13 @@ focus_tree = {
 		id = UNS_gm_side
 		x = -1
 		y = 1
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				check_variable = { acceptance_value < 25 }
+			}
+		}
 		relative_position_id = UNS_quality
 		prerequisite = { focus = UNS_quality }
 		mutually_exclusive = { focus = UNS_ford_side }
@@ -5593,6 +5862,13 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				check_variable = { acceptance_value > 24 }
+			}
+		}
 		relative_position_id = UNS_quality
 		prerequisite = { focus = UNS_quality }
 		icon = GFX_goal_fordmotors
@@ -5610,6 +5886,9 @@ focus_tree = {
 		id = UNS_resource_effort_more
 		x = 1
 		y = 1
+		ai_will_do = {
+			factor = 15
+		}
 		relative_position_id = UNS_gm_side
 		icon = GFX_goal_uns_resources_2
 		prerequisite = { focus = UNS_gm_side OR = UNS_ford_side }
@@ -5747,25 +6026,7 @@ focus_tree = {
 				remove_idea = UNS_equestria_depence
 			}
 			custom_effect_tooltip = expand_acceptance_tt_exta
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 90 }
-				}
-				add_to_variable = {
-					acceptance_value = 10
-				}
-				
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 90 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
+			acceptance_expand_extra = yes
 		}
 	}
 	focus = {
@@ -5810,26 +6071,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = UNS_equestria_depence_less_1
 			custom_effect_tooltip = expand_acceptance_tt_exta
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 90 }
-				}
-				add_to_variable = {
-					acceptance_value = 10
-				}
-				
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 90 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
-			
+			acceptance_expand_extra = yes 			
 		}
 	}
 	focus = {
@@ -6094,6 +6336,11 @@ focus_tree = {
 	########### Military
 	focus = { ### Восстановление Армии
 		id = UNS_military
+		available = {
+			NOT = {
+				has_idea = UNS_radiation_poisoning
+			}
+		}
 		x = 58
 		y = 3
 		cost = 5
@@ -6122,7 +6369,7 @@ focus_tree = {
 			focus = UNS_military
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 50
 		}
 		select_effect = {
 		
@@ -6138,6 +6385,13 @@ focus_tree = {
 		relative_position_id = UNS_army
 		prerequisite = { focus = UNS_army }
 		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				date > 1009.1.1
+			}
+		}
 		icon = GFX_goal_academy
 		completion_reward = {
 			country_event = {
@@ -6176,6 +6430,9 @@ focus_tree = {
 		relative_position_id = UNS_second_doctrine
 		prerequisite = { focus = UNS_second_doctrine }
 		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
 		icon = GFX_goal_UNS_second_mobilization_wave
 		completion_reward = {
 			add_ideas = UNS_mobilization_expand
@@ -6235,7 +6492,7 @@ focus_tree = {
 			focus = UNS_military
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 25
 		}
 		select_effect = {
 		
@@ -6395,7 +6652,7 @@ focus_tree = {
 			focus = UNS_military
 		}
 		ai_will_do = {
-			factor = 4
+			factor = 25
 		}
 		select_effect = {
 		
@@ -6413,6 +6670,9 @@ focus_tree = {
 		icon = GFX_goal_new_dockyards
 		prerequisite = { focus = UNS_our_fleet }
 		cost = 5
+		ai_will_do = {
+			factor = 25
+		}
 		completion_reward = {
 			random_owned_state = {
 				limit = {

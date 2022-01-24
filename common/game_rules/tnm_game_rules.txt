@@ -125,7 +125,7 @@ GEM_ai_behavior = {
 	option = {
 		name = GEM_ALT_FASC_PATH
 		text = "RULE_GEM_ALT_FASC_PATH"
-		text = "RULE_GEM_ALT_FASC_PATH_DESC"
+		desc = "RULE_GEM_ALT_FASC_PATH_DESC"
 		allow_achievements = yes 
 	}
 	option = {

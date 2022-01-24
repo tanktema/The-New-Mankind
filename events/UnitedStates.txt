@@ -289,6 +289,13 @@ country_event = {
 			ideology = fascism
 			popularity = 0.1
 		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 50
+				has_country_flag = AI_UNS_FASC_ROCKWELL
+			}
+		}
 		set_country_flag = UNS_fasc_accepted
 	}
 	option = {
@@ -296,6 +303,16 @@ country_event = {
 		add_popularity = {
 			ideology = fascism
 			popularity = -0.25
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 50
+				OR = {
+					has_country_flag = AI_UNS_MILITARY_FASC
+					has_country_flag = AI_UNS_MILITARY_DEMO
+				}
+			}
 		}
 		set_country_flag = UNS_fasc_declined
 		custom_effect_tooltip = uns_fasc_tt_1
@@ -371,6 +388,16 @@ country_event = {
 			set_country_flag = kennedy_killed
 			set_politics = {
 				ruling_party = fascism
+			}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				factor = 50
+				OR = {
+					has_country_flag = AI_UNS_MILITARY_FASC
+					has_country_flag = AI_UNS_MILITARY_DEMO
+				}
 			}
 		}
 		hidden_effect = {
@@ -1008,6 +1035,9 @@ country_event = {
 		hidden_effect = {
 			country_event = { id = uns.34 days = 60 }
 		}
+		ai_chance = {
+			base = 50
+		}
 	}
 	option = {
 		name = uns.33.b
@@ -1018,6 +1048,10 @@ country_event = {
 		custom_effect_tooltip = uns_acc_offic_tt_2
 		hidden_effect = {
 			country_event = { id = uns.35 days = 60 }
+		}
+		ai_chance = {
+			base = 100
+			
 		}
 	}
 }
@@ -1787,19 +1821,19 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = uns.61.a 
-		add_tech_bonus = {
-			category = cat_mobile_warfare
+		add_doctrine_cost_reduction = {
+			category = land_doctrine
 			uses = 3
-			bonus = 0.75
+			cost_reduction = 0.33
 		}
 		country_event = { id = uns.62 days = 20 }
 	}
 	option = {
 		name = uns.61.b 
-		add_tech_bonus = {
-			category = cat_mass_assault
+		add_doctrine_cost_reduction = {
+			category = land_doctrine
 			uses = 3
-			bonus = 0.75
+			cost_reduction = 0.33
 		}
 		country_event = { id = uns.62 days = 20 }
 	}
@@ -1864,10 +1898,10 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = uns.65.a 
-		add_tech_bonus = {
-			category = cat_strategic_destruction
+		add_doctrine_cost_reduction = {
+			category = air_doctrine
 			uses = 3
-			bonus = 0.75
+			cost_reduction = 0.33
 		}
 		country_event = {
 			id = uns.66 days = 20 
@@ -1875,10 +1909,10 @@ country_event = {
 	}
 	option = {
 		name = uns.65.b 
-		add_tech_bonus = {
-			category = cat_battlefield_support
+		add_doctrine_cost_reduction = {
+			category = air_doctrine
 			uses = 3
-			bonus = 0.75
+			cost_reduction = 0.33
 		}
 		country_event = {
 			id = uns.66 days = 20 

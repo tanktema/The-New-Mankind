@@ -52,7 +52,7 @@ set_technology = {
 	antiair1 = 1
 	interwar_antitank = 1
 	antitank1 = 1
-	mobile_warfare = 1
+	basic_train = 1
 }
 if = {
 	limit = {

@@ -166,11 +166,25 @@ country_event = {
 		name = gem.7.a 
 		set_country_flag = speech_himmler
 		custom_effect_tooltip = himmler_heard_speech
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 10
+				has_country_flag = AI_GEM_ALT_FASC_PATH
+			}
+		}
 	}
 	option = {
 		name = gem.7.b 
 		set_country_flag = speech_goebbels
 		custom_effect_tooltip = goebbels_speed_good
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 10
+				has_country_flag = AI_GEM_HISTORICAL_PATH
+			}
+		}
 	}
 	option = {
 		name = gem.7.c 
@@ -182,6 +196,16 @@ country_event = {
 		add_popularity = {
 			ideology = democratic
 			popularity = 0.05
+		}
+		ai_chance = {
+			base = 33
+			modifier = {
+				factor = 10
+				OR = {
+					has_country_flag = AI_GEM_COMM_PATH
+					has_country_flag = AI_GEM_DEMO_PATH
+				}
+			}
 		}
 		custom_effect_tooltip = oppose_fasc_speed
 	}

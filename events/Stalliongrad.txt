@@ -904,7 +904,7 @@ country_event = { ## Поля уходит
 		add_political_power = -100
 		hidden_effect = {
 			STG_altidiya = { 
-				set_nationality = SOU
+				
 				add_advisor_role = {
 					advisor = {
 						slot = political_advisor
@@ -921,6 +921,7 @@ country_event = { ## Поля уходит
 						traits = { altidiya_sssr }
 					}
 				}
+				set_nationality = SOU
 			}
 			country_event = { id = stalliongrad.34 days = 1 random = 672 } #days to hours applied
 			if = {
