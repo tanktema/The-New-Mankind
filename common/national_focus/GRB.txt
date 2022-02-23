@@ -5978,7 +5978,11 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.05
 			army_experience = 15
+			country_event = {
+				id = af_grb.3 days = 2
+			}
 		}
+		
 	}
 	
 	focus = {
@@ -5991,6 +5995,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -25
 			add_stability = -0.05
+			country_event = {
+				id = af_grb.4 days = 2
+			}
 		}
 	}
 	
@@ -6005,6 +6012,9 @@ focus_tree = {
 			add_popularity = {
 				ideology = communism
 				popularity = 0.15
+			}
+			country_event = {
+				id = af_grb.2 days = 2
 			}
 		}
 	}
@@ -6927,5 +6937,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = start_counter_crusade
+			hidden_effect = {
+				country_event = { id = af_grb.10 days = 30 }
+			}
 		}
 	}

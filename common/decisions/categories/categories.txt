@@ -433,6 +433,7 @@ GRB_anarchy_development_category = {
 GRB_anarchy_military_category = {
 	allowed = {
 		OR = {
+			original_tag = EQC
 			original_tag = GRB 
 			original_tag = UNS
 			original_tag = GEM

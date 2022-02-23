@@ -257,6 +257,9 @@ news_event = {
 	option = {
 		name = grb.7.a 
 		country_event = { id = grb.8 days = 70 }
+		hidden_effect = {
+			id = af_grb.1 days = 65
+		}
 	}
 }
 			

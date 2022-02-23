@@ -93,7 +93,116 @@ country_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = af_grb.5.a
+		name = af_grb.6.a
+		add_ideas = GRB_prepare_for_enemy
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT 
+			}
+			add_ideas = GRB_prepare_for_enemy
+		}
+		country_event = {
+			id = af_grb.7 days = 15 
+		}
+	}
+}
+
+country_event = {
+	id = af_grb.7 
+	title = af_grb.7.t 
+	desc = af_grb.7.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.7.a
+		add_political_power = 150
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT 
+			}
+			add_political_power = 150
+		}
+		country_event = {
+			id = af_grb.8 days = 15 
+		}
+	}
+}
+
+country_event = {
+	id = af_grb.8 
+	title = af_grb.8.t 
+	desc = af_grb.8.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.8.a
+		add_political_power = 150
+		country_event = { id = af_grb.9 days = 15 }
+		if = {
+			limit = {
+				EQS = {
+					NOT = {
+						has_country_leader = {
+							character = EQC_big_sister
+							ruling_only = yes 
+						}
+					}
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = EQC 
+			}
+		}
+		if = {
+			limit = {
+				EQS = {
+					has_country_leader = {
+						character = EQC_big_sister
+						ruling_only = yes 
+					
+					}
+				}
+			}
+			EQC = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = af_grb.9 
+	title = af_grb.9.t 
+	desc = af_grb.9.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.9.a
+		army_experience = 50
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT 
+			}
+			army_experience = 50
+		}
+	}
+}
+
+
+country_event = {
+	id = af_grb.10 
+	title = af_grb.10.t 
+	desc = af_grb.10.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.10.a
+		army_experience = 50
+		create_wargoal = {
+			type = annex_everything
+			target = DED 
+		}
 	}
 }
 
