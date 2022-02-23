@@ -1,0 +1,147 @@
+
+SOU_SSR = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+GRB_EMP = {
+	color = rgb { 146 80 49 }
+	color_ui = rgb { 75 25 0 }
+}
+
+
+GRB_SUBJ_FBK = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+GRB_SUBJ_PNG = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+GRB_SUBJ_ZES = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+
+
+GRB_SUBJ_FBK_NEW = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+GRB_SUBJ_PNG_NEW = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+GRB_SUBJ_ZES_NEW = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+GRB_JER_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+
+GRB_GRI_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+
+GRB_WNG_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+
+GRB_GRF_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+} 
+
+GRB_STG_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+
+GRB_EQS_knight = {
+	color = rgb { 41 102 53 }
+	color_ui = rgb { 60 120 56 }
+}
+
+SOU_TNO = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+GRB_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+SOU_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+EQS_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+STG_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+GRF_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+YAK_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+JAK_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+GFF_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+OLE_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+CHN_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+CRY_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+PNG_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+PLB_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+GEM_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}
+
+UNS_ANCOM = {
+	color = rgb { 93 25 0 }
+	color_ui = rgb { 75 25 0 }
+}

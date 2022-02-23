@@ -22,6 +22,11 @@ GRB_political_affairs_category = {
 				factor = 100
 				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
 			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_GRB_NEUTRALITY_PATH
+			}
+	
 		}
 		remove_effect = {
 			363 = {
@@ -62,6 +67,10 @@ GRB_political_affairs_category = {
 				factor = 100
 				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
 			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_GRB_NEUTRALITY_PATH
+			}
 		}
 		cost = 25
 		remove_effect = {
@@ -99,6 +108,10 @@ GRB_political_affairs_category = {
 			modifier = {
 				factor = 100
 				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_GRB_NEUTRALITY_PATH
 			}
 		}
 		days_remove = 15
@@ -257,6 +270,13 @@ GRB_political_affairs_category = {
 				factor = 100
 				has_country_flag = AI_GRB_FASC_BASE_PATH
 			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+				}
+			}
 		}
 		days_remove = 15
 		days_re_enable = 15
@@ -296,6 +316,13 @@ GRB_political_affairs_category = {
 			modifier = {
 				factor = 100
 				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+				}
 			}
 		}
 		days_re_enable = 15
@@ -337,6 +364,13 @@ GRB_political_affairs_category = {
 			modifier = {
 				factor = 100
 				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+				}
 			}
 		}
 		days_re_enable = 15
@@ -1854,7 +1888,6 @@ GRB_tower_category = {
 	GRB_finish_tower = {
 		visible = {
 			check_variable = { grb_tower_level = 4 }
-			
 		}
 		fire_only_once = yes
 		available = {
@@ -1869,6 +1902,693 @@ GRB_tower_category = {
 		cost = 50
 		remove_effect = {
 			add_ideas = GRB_london_tower
+		}
+	}
+}
+
+
+GRB_anarchy_development_category = {
+	GRB_ANCOM_strength_narhoz = {
+		days_remove = 30
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				has_manpower < 100000
+			}
+		}
+		days_re_enable = 30
+		cost = 25
+		modifier = {
+			weekly_manpower = 500
+			stability_factor = 0.05
+		}
+	}
+	
+	GRB_ANCOM_plan_civilian_industry = {
+		days_remove = 50
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	
+	GRB_ANCOM_plan_military_industry = {
+		days_remove = 50
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_naval_industry = {
+		days_remove = 50
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_state = {
+						is_coastal = yes 
+					}
+				}
+			}
+		}
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_fuel_storage = {
+		days_remove = 50
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo 
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = fuel_silo 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_fuel_industry = {
+		days_remove = 50
+		days_re_enable = 25
+		cost = 60
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery 
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = fuel_silo 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_rockets = {
+		days_remove = 75
+		days_re_enable = 25
+		cost = 70
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rocket_site 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_reactors = {
+		days_remove = 120
+		days_re_enable = 150
+		cost = 120
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_propaganda_campaign = {
+		days_remove = 45
+		ai_will_do = {
+			factor = 15
+		}
+		days_re_enable = 15
+		cost = 15
+		modifier = {
+			political_power_gain = 1
+			stability_factor = -0.07
+			communism_drift = 0.02
+		}
+	}
+	
+	GRB_ANCOM_war_propaganda = {
+		days_remove = 30
+		ai_will_do = {
+			factor = 15
+		}
+		days_re_enable = 60
+		cost = 30
+		modifier = {
+			war_support_factor = 0.15
+			army_attack_factor = 0.1
+			weekly_manpower = 150
+		}
+	}
+	
+	GRB_infrastructure_development = {
+		days_remove = 25
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 25
+		cost = 50
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_production_bonuses = {
+		days_remove = 45
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 15
+		cost = 25
+		modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.15
+			industrial_capacity_factory = 0.1
+		}
+	}
+	
+	GRB_ANCOM_state_development = {
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_state_category = metropolis
+					has_state_category = city
+					has_state_category = large_city
+					has_state_category = megalopolis
+				}
+				NOT = {
+					is_core_of = ROOT 
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		cost = 75
+		days_remove = 90
+		state_target = yes 
+		modifier = {
+			monthly_population = -0.1
+			production_speed_buildings_factor = -0.1
+			production_factory_max_efficiency_factor = -0.1
+			political_power_gain = -0.25
+		}
+		remove_effect = {
+			ROOT = {
+				add_core_of = FROM 
+			}
+		}
+	}
+	
+}
+
+GRB_anarchy_military_category = {
+	GRB_ANCOM_develop_new_army = {
+		cost = 25
+		ai_will_do = {
+			factor = 250
+		}
+		available = {
+			has_completed_focus = GRB_open_academy
+		}
+		
+		days_remove = 30
+		fire_only_once = yes 
+		
+		remove_effect = {
+			custom_effect_tooltip = load_anarchic_oob
+			hidden_effect = {
+				load_oob = "GRB_ANCOM"
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_infantry = {
+		cost = 15
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_manpower > 10199
+			has_equipment = {
+				magical_equipment > 909
+			}
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_equipment = {
+				support_equipment > 254
+			}
+			has_equipment = {
+				motorized_equipment > 19
+			}
+			has_equipment = {
+				anti_tank_equipment > 23
+			}
+		}
+		days_remove = 30
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_2_infantry = {
+		cost = 30
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			has_manpower > 20399
+			has_equipment = {
+				magical_equipment > 1819
+			}
+			has_equipment = {
+				artillery_equipment > 23
+			}
+			has_equipment = {
+				support_equipment > 509
+			}
+			has_equipment = {
+				motorized_equipment > 39
+			}
+			has_equipment = {
+				anti_tank_equipment > 47
+			}
+		}
+		days_remove = 45
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_4_infantry = {
+		cost = 60
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			has_manpower > 40799
+			has_equipment = {
+				magical_equipment > 3639
+			}
+			has_equipment = {
+				artillery_equipment > 47
+			}
+			has_equipment = {
+				support_equipment > 1019
+			}
+			has_equipment = {
+				motorized_equipment > 79
+			}
+			has_equipment = {
+				anti_tank_equipment > 95
+			}
+		}
+		days_remove = 60
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_armor = {
+		cost = 30
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_manpower > 7199
+			has_equipment = {
+				medium_tank_chassis > 299
+			}
+			has_equipment = {
+				infantry_equipment > 249
+			}
+			has_equipment = {
+				support_equipment > 84
+			}
+			has_equipment = {
+				motorized_equipment > 69
+			}
+		}
+		days_remove = 50
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_2_armor = {
+		cost = 60
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			has_manpower > 14399
+			has_equipment = {
+				medium_tank_chassis > 599
+			}
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_equipment = {
+				support_equipment > 169
+			}
+			has_equipment = {
+				motorized_equipment > 139
+			}
+		}
+		days_remove = 70
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_4_armor = {
+		cost = 120
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			has_manpower > 28799
+			has_equipment = {
+				medium_tank_chassis > 1199
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				support_equipment > 339
+			}
+			has_equipment = {
+				motorized_equipment > 279
+			}
+		}
+		days_remove = 90
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_mechanized = {
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_tech = mechanised_infantry
+		}
+		available = {
+			#has_tech = mechanised_infantry
+			has_manpower > 7499
+			has_equipment = {
+				mechanized_equipment > 159
+			}
+			has_equipment = {
+				infantry_equipment > 549
+			}
+			has_equipment = {
+				support_equipment > 39
+			}
+			has_equipment = {
+				motorized_equipment > 34
+			}
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_equipment = {
+				anti_tank_equipment > 23
+			}
+		}
+		days_remove = 40
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_2_mechanized = {
+		cost = 50
+		ai_will_do = {
+			factor = 15
+		}
+		visible = {
+			has_tech = mechanised_infantry
+		}
+		available = {
+			#has_tech = mechanised_infantry
+			has_manpower > 14999
+			has_equipment = {
+				mechanized_equipment > 319
+			}
+			has_equipment = {
+				infantry_equipment > 1099
+			}
+			has_equipment = {
+				support_equipment > 79
+			}
+			has_equipment = {
+				motorized_equipment > 69
+			}
+			has_equipment = {
+				artillery_equipment > 23
+			}
+			has_equipment = {
+				anti_tank_equipment > 47
+			}
+		}
+		days_remove = 60
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_4_mechanized = {
+		cost = 100
+		ai_will_do = {
+			factor = 25
+		}
+		visible = {
+			has_tech = mechanised_infantry
+		}
+		available = {
+			#has_tech = mechanised_infantry
+			has_manpower > 29999
+			has_equipment = {
+				mechanized_equipment > 639
+			}
+			has_equipment = {
+				infantry_equipment > 2199
+			}
+			has_equipment = {
+				support_equipment > 159
+			}
+			has_equipment = {
+				motorized_equipment > 139
+			}
+			has_equipment = {
+				artillery_equipment > 47
+			}
+			has_equipment = {
+				anti_tank_equipment > 96
+			}
+		}
+		days_remove = 80
+		remove_effect = {
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+				owner = ROOT
+			}
 		}
 	}
 }

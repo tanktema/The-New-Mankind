@@ -617,7 +617,7 @@ ideas = {
 				original_tag = UNS
 			}
 			modifier = {
-				air_ace_generation_chance_factor = 0.15
+				air_ace_generation_chance_factor = 0.1
 			}
 		}
 		UNS_rab = {

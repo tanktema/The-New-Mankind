@@ -605,6 +605,13 @@ focus_tree = {
 		mutually_exclusive = { focus = UNS_germany_way }
 		ai_will_do = {
 			factor = 4
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_UNS_MILITARY_FASC
+					has_country_flag = AI_UNS_MILITARY_DEMO
+				}
+			}
 		}
 		completion_reward = {
 			add_popularity = {
@@ -6893,3 +6900,12 @@ focus_tree = {
 			add_ideas = UNS_power_of_fleet_idea
 		}
 	}
+	
+	
+	
+	
+	########### FIRST APRIL BRANCH 
+	
+	focus = {
+		id = UNS_emperor_here
+		x = 

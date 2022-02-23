@@ -50,7 +50,7 @@ ideas = {
 		}
 		
 		
-		GRB_human_science = {
+		GRB_human_science_grb = {
 			removal_cost = -1
 			allowed = {
 				original_tag = GRB 
@@ -538,8 +538,182 @@ ideas = {
 			
 			}
 		}
+		
+		GRB_bad_politics_an = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = -0.25
+				political_power_factor = -0.15
+				political_advisor_cost_factor = 2
+				trade_laws_cost_factor = 2
+				economy_cost_factor = 2
+			}
+		}
+		
+		GRB_army_boiling_an = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				war_support_factor = -0.25
+				experience_gain_factor = -0.25
+				max_command_power = -50
+				army_chief_cost_factor = 2
+				navy_chief_cost_factor = 2
+				air_chief_cost_factor = 2
+				high_command_cost_factor = 2
+				theorist_cost_factor = 2
+				mobilization_laws_cost_factor = 2
+				custom_modifier_tooltip = unavailable_army
+			}
+			on_add = {
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+			}
+		}
+		
+		GRB_industrial_destruction_an = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = -0.4
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.25
+				research_speed_factor = -0.25
+				consumer_goods_factor = 0.15
+				industrial_concern_cost_factor = 2
+				tank_manufacturer_cost_factor = 2
+				aircraft_manufacturer_cost_factor = 2
+				naval_manufacturer_cost_factor = 2
+				materiel_manufacturer_cost_factor = 2
+			}
+		}
+		
+		GRB_narhoz_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				monthly_population = 0.15
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				#global_building_slots = 0.1
+			}
+		}
+		
+		GRB_toolgiving = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		GRB_what_people_need = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.01
+				stability_factor = 0.02
+				political_power_gain = 0.2
+				research_speed_factor = 0.05
+				#production_speed_buildings_factor = -0.99
+				global_building_slots = -25
+			}
+		}
+		
+		GRB_infrastructure_build = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				industrial_concern_cost_factor = -0.15
+			}
+		}
+		
+		GRB_bastion = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_bunker_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+				army_core_defence_factor = 0.08
+			}
+		}
+		
+		GRB_selfdefence_commitee = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.02
+				conscription_factor = 0.1
+				training_time_factor = -0.1
+				custom_modifier_tooltip = unavailable_army
+			}
+		}
+		
+		GRB_anarchy_army = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				experience_gain_army = 0.05
+				army_core_defence_factor = 0.08
+				army_core_attack_factor = 0.08
+			}
+		}
+		
+		GRB_british_legion = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				war_support_factor = 0.1
+				army_morale_factor = 0.15
+				weekly_manpower = 1000
+				army_core_attack_factor = 0.07
+				army_core_defence_factor = 0.07
+			}
+		}
+		
+		GRB_anarchy_institutes = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				communism_drift = 0.03
+				drift_defence_factor = 0.25
+				political_power_gain = 0.25
+			}
+		}
 	}
-	
+	trade_laws = {
+		GRB_closed_economy = {
+			allowed = {
+				original_tag = GRB 
+			}
+			allowed_to_remove = { always = no }
+			visible = {
+				original_tag = GRB
+				has_completed_focus = GRB_closing_economy
+			}
+			modifier = {
+				min_export = 0
+				trade_opinion_factor = -0.75
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				political_power_gain = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}
+		}
+	}
 	
 	tank_manufacturer = {
 

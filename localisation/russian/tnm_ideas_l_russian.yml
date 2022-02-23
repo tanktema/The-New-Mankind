@@ -324,7 +324,7 @@
     GRB_industry_financies:0 "Финансирование гражданской промышленности"
     GRB_military_financies:0 "Финансирование военной промышленности"
     GRB_pony_science:0 "Местные ученые"
-    GRB_human_science:0 "Только люди в науке!"
+    GRB_human_science_grb:0 "Только люди в науке!"
     GRB_volunteers_of_peace_idea:0 "Стражи Порядка"
     GRB_GEM_friendship:0 "Дружба с Германией"
     GRB_SOU_experience:0 "Обмен опытом с СССР"

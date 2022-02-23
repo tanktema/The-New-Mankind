@@ -498,3 +498,58 @@ check_british_regs_values = {
 	}
 	
 }
+
+
+GRB_ancom_revolution_start = {
+	hidden_effect = {
+		set_country_flag = GRB_ancom_revolt
+		start_civil_war = {
+			ruling_party = communism
+			ideology = ROOT
+			size = 0.5
+			only_own_territory = no
+			keep_political_leader = no		
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.25
+		}
+		generate_character = {
+			token_base = GRB_ancom_council
+			name = GRB_ancom_council
+			country_leader = {
+				ideology = anarchist_communism
+				traits = { grb_ancom_trait }
+				expire="1999.9.9.1"
+				id=-1
+			}
+		}
+		promote_character = GRB_ancom_council
+		meta_effect = {
+			text = {
+				set_cosmetic_tag = [TAG]_ANCOM
+			}
+			TAG = "[ROOT.GetTag]"
+		}
+	}
+	custom_effect_tooltip = start_ancom_revolution
+	add_ai_strategy = {
+		type = alliance
+		id = GRB 
+		value = 500
+	}
+	GRB = {
+		add_to_faction = ROOT 
+		
+	}
+	every_enemy_country = {
+		GRB = {
+			add_to_war = {
+				targeted_alliance = ROOT
+				enemy = PREV
+				hostility_reason = ancom_revolution
+			}
+		}
+	}
+	load_focus_tree = generic_focus
+}

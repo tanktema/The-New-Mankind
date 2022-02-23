@@ -1,0 +1,109 @@
+add_namespace = af_uns
+add_namespace = af_grb
+add_namespace = af_sou
+add_namespace = af_gem 
+add_namespace = tnm_esc_collab
+
+country_event = {
+	id = af_grb.1 
+	title = af_grb.1.t 
+	desc = af_grb.1.desc  
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.1.a 
+		set_country_flag = GRB_AF_FLAG
+		custom_effect_tooltip = af_grb_tooltip_desc
+		mark_focus_tree_layout_dirty = yes 
+		complete_national_focus = GRB_people_boiling
+	}
+	
+	option = {
+		name = af_grb.1.b 
+	}
+}
+
+country_event = {
+	id = af_grb.2 
+	title = af_grb.2.t 
+	desc = af_grb.2.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.2.a 
+		add_ideas = GRB_army_boiling_an
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "Infantry Division"
+				disband = yes 
+			}
+			delete_unit_template_and_units = {
+				division_template = "Colonial regiments"
+				disband = yes 
+			}
+			delete_unit_template_and_units = {
+				division_template = "Royal Armor Brigade"
+				disband = yes 
+			}
+		}
+	}
+}
+
+country_event = {
+	id = af_grb.3 
+	title = af_grb.3.t 
+	desc = af_grb.3.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.3.a 
+		add_ideas = GRB_bad_politics_an
+	}
+}
+
+
+country_event = {
+	id = af_grb.4 
+	title = af_grb.4.t 
+	desc = af_grb.4.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.4.a 
+		add_ideas = GRB_industrial_destruction_an
+	}
+}
+
+country_event = {
+	id = af_grb.5 
+	title = af_grb.5.t 
+	desc = af_grb.5.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.5.a
+		GRB_ancom_revolution_start = yes 
+	}
+}
+
+country_event = {
+	id = af_grb.6 
+	title = af_grb.6.t 
+	desc = af_grb.6.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_grb.5.a
+	}
+}
+
+country_event = { ############## WIP
+	id = tnm_esc_collab.1 
+	title = tnm_esc_collab.1.desc 
+	desc = tnm_esc_collab.1.t 
+	is_triggered_only = yes 
+	
+	option = {
+		name = tnm_esc_collab.1.a 
+	}
+}

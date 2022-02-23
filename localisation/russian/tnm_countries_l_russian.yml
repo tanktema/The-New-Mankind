@@ -91,3 +91,64 @@
     SOU_TNO_fascism_ADJ:0 "Советск."
     SOU_TNO_fascism_DEF:0 "СССР"
     
+    GRB_ANCOM_communism:0 "Британская Народная Коммуна"
+    GRB_ANCOM_communism_ADJ:0 "Британск."
+    GRB_ANCOM_communism_DEF:0 "Британская Коммуна"
+    
+    SOU_ANCOM_communism:0 "Советский Народый Фронт"
+    SOU_ANCOM_communism_ADJ:0 "Советск."
+    SOU_ANCOM_communism_DEF:0 "СНФ"
+    
+    EQS_ANCOM_communism:0 "Содружество Триединства Пони"
+    EQS_ANCOM_communism_ADJ:0 "Триединск."
+    EQS_ANCOM_communism_DEF:0 "Содружество Пони"
+    
+    STG_ANCOM_communism:0 "Северянская Коммуна"
+    STG_ANCOM_communism_ADJ:0 "Северянск."
+    STG_ANCOM_communism_DEF:0 "Северянская Коммуна"
+    
+    GRF_ANCOM_communism:0 "Грифоний Народный Фронт"
+    GRF_ANCOM_communism_ADJ:0 "Грифон."
+    GRF_ANCOM_communism_DEF:0 "ГНФ"
+    
+    YAK_ANCOM_communism:0 "Кланы Яков"
+    YAK_ANCOM_communism_ADJ:0 "Якск."
+    YAK_ANCOM_communism_DEF:0 "Кланы Яков"
+    
+    JAK_ANCOM_communism:0 "Кланы Йаков"
+    JAK_ANCOM_communism_ADJ:0 "Йакск."
+    JAK_ANCOM_communism_DEF:0 "Кланы Йаков"
+    
+    GFF_ANCOM_communism:0 "Грифоний Народный Фронт"
+    GFF_ANCOM_communism_ADJ:0 "Грифон."
+    GFF_ANCOM_communism_DEF:0 "ГНФ"
+    
+    OLE_ANCOM_communism:0 "Оленье Лесное Братство"
+    OLE_ANCOM_communism_ADJ:0 "Оленийск."
+    OLE_ANCOM_communism_DEF:0 "Оленье Братство"
+    
+    CHN_ANCOM_communism:0 "Единые Ульи Чейнджлингов"
+    CHN_ANCOM_communism_ADJ:0 "Чейнджлингск."
+    CHN_ANCOM_communism_DEF:0 "Ульи Чейнджлингов"
+    
+    CRY_ANCOM_communism:0 "Коммуна Кристальной Горы"
+    CRY_ANCOM_communism_ADJ:0 "Кристальн."
+    CRY_ANCOM_communism_DEF:0 "Кристальная Коммуна"
+    
+    PNG_ANCOM_communism:0 "Североокеанская Народная Дружина"
+    PNG_ANCOM_communism_ADJ:0 "Североокеанск."
+    PNG_ANCOM_communism_DEF:0 "СНД"
+    
+    PLB_ANCOM_communism:0 "Медвежье Единство"
+    PLB_ANCOM_communism_ADJ:0 "Медвеж."
+    PLB_ANCOM_communism_DEF:0 "Медвежье Единство"
+    
+    GEM_ANCOM_communism:0 "Берлинская Коммуна"
+    GEM_ANCOM_communism_ADJ:0 "Берлинск."
+    GEM_ANCOM_communism_DEF:0 "Берлинская Коммуна"
+    
+    UNS_ANCOM_communism:0 "Братство Новой Америки"
+    UNS_ANCOM_communism_ADJ:0 "Американск."
+    UNS_ANCOM_communism_DEF:0 "Братство Новой Америки"
+    
+    

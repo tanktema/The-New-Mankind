@@ -305,6 +305,9 @@ GRB_political_affairs_category = {
 			}
 			is_debug = yes 
 		}
+		NOT = {
+			has_country_flag = GRB_AF_FLAG
+		}
 		
 	}
 	visible_when_empty = yes 
@@ -354,6 +357,7 @@ GRB_resources = {
 		OR = {
 			has_completed_focus = GRB_resource_searching
 			has_completed_focus = GRB_resource_searching_hum
+			has_completed_focus = GRB_resource_search_anarch
 		}
 	}
 }
@@ -388,4 +392,75 @@ GRB_trading_category = {
 		}
 	}
 	visible_when_empty = yes
+}
+
+GRB_anarchy_development_category = {
+	allowed = {
+		OR = {
+			original_tag = GRB 
+			original_tag = UNS
+			original_tag = GEM
+			original_tag = SOU 
+			original_tag = EQS 
+			original_tag = CHN 
+			original_tag = CCN 
+			original_tag = CRY 
+			original_tag = STG 
+			original_tag = GRF 
+			original_tag = OLE 
+			original_tag = YAK
+			original_tag = JAK 
+		}
+	}
+	visible = {
+		if = {
+			limit = {
+				original_tag = GRB 
+			}
+			has_completed_focus = GRB_freedom_and_order
+			else = {
+				has_government = communism
+				has_country_leader = {
+					character = GRB_ancom_council
+					ruling_only = yes 
+				}
+			}
+		}
+	}
+	
+}
+
+GRB_anarchy_military_category = {
+	allowed = {
+		OR = {
+			original_tag = GRB 
+			original_tag = UNS
+			original_tag = GEM
+			original_tag = SOU 
+			original_tag = EQS 
+			original_tag = CHN 
+			original_tag = CCN 
+			original_tag = CRY 
+			original_tag = STG 
+			original_tag = GRF 
+			original_tag = OLE 
+			original_tag = YAK
+			original_tag = JAK 
+		}
+	}
+	visible = {
+		if = {
+			limit = {
+				original_tag = GRB 
+			}
+			has_completed_focus = GRB_freedom_and_order
+			else = {
+				has_government = communism
+				has_country_leader = {
+					character = GRB_ancom_council
+					ruling_only = yes 
+				}
+			}
+		}
+	}
 }

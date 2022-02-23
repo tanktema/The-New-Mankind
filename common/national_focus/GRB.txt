@@ -14,7 +14,7 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_evac_focus
-		x = 20
+		x = 28
 		y = 0
 		cost = 0.2
 		icon = GFX_goal_GRB_evacuation
@@ -123,6 +123,13 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_citizenship_question
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GRB_AF_FLAG
+				}
+			}
+		}
 		x = -4
 		y = 1
 		icon = GFX_goal_GRB_citizenship
@@ -137,6 +144,13 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_workers_protests
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GRB_AF_FLAG
+				}
+			}
+		}
 		x = 0
 		y = 1
 		icon = GFX_goal_GRB_workers_protest
@@ -151,6 +165,13 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_budget_resizing
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GRB_AF_FLAG
+				}
+			}
+		}
 		x = 4
 		y = 1
 		icon = GFX_goal_GRB_budget_resize
@@ -4314,6 +4335,13 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_restart_industry
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GRB_AF_FLAG
+				}
+			}
+		}
 		x = 0
 		y = 1
 		relative_position_id = GRB_contact
@@ -5156,6 +5184,13 @@ focus_tree = {
 	
 	focus = {
 		id = GRB_army_rebirth
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GRB_AF_FLAG
+				}
+			}
+		}
 		x = 14
 		y = 1
 		icon = GFX_goal_GRB_army
@@ -5894,4 +5929,1003 @@ focus_tree = {
 			add_ideas = GRB_legion
 		}
 	}
-					
+
+
+
+	focus = {
+		id = GRB_people_boiling 
+		x = -11
+		y = 1
+		relative_position_id = GRB_death_of_churchill
+		prerequisite = { focus = GRB_death_of_churchill }
+		allow_branch = {
+			has_country_flag = GRB_AF_FLAG
+		}
+		cost = 5
+		
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_stability = -0.05
+		}
+	}
+	
+	focus = {
+		id = GRB_fear_the_future
+		x = -1
+		y = 1
+		relative_position_id = GRB_people_boiling
+		prerequisite = { focus = GRB_people_boiling }
+		cost = 5
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_strange_witnesses
+		x = 1
+		y = 1
+		relative_position_id = GRB_people_boiling
+		prerequisite = { focus = GRB_people_boiling }
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.05
+			army_experience = 15
+		}
+	}
+	
+	focus = {
+		id = GRB_government_weakness
+		x = 0
+		y = 1
+		relative_position_id = GRB_fear_the_future
+		prerequisite = { focus = GRB_fear_the_future }
+		cost = 5
+		completion_reward = {
+			add_political_power = -25
+			add_stability = -0.05
+		}
+	}
+	
+	focus = {
+		id = GRB_first_seeds
+		x = 0
+		y = 1
+		relative_position_id = GRB_strange_witnesses
+		prerequisite = { focus = GRB_strange_witnesses }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_people_bund
+		x = 1
+		y = 1
+		relative_position_id = GRB_government_weakness
+		prerequisite = { focus = GRB_government_weakness }
+		prerequisite = { focus = GRB_first_seeds }
+		cost = 5
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no 
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			hidden_effect = {
+				### TODO: Штраф на военку, штраф на политику, штраф на экономику
+			}
+		}
+	
+	}
+	
+	focus = {
+		id = GRB_glory_to_the_captain
+		x = 0
+		y = 1
+		relative_position_id = GRB_people_bund
+		prerequisite = { focus = GRB_people_bund }
+		cost = 5
+		completion_reward = {
+			##### Здесь будет косметик и правитель
+			set_party_name = {
+				ideology = communism
+				long_name = GRB_anarcy_paty_long
+				name = GRB_anarcy_paty
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_factories_to_people
+		x = -6
+		y = 1
+		relative_position_id = GRB_glory_to_the_captain
+		prerequisite = { focus = GRB_glory_to_the_captain }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_create_industrial_base
+		x = -2
+		y = 1
+		relative_position_id = GRB_factories_to_people
+		prerequisite = { focus = GRB_factories_to_people }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_narhoz_development
+		x = 0
+		y = 1
+		relative_position_id = GRB_factories_to_people
+		prerequisite = { focus = GRB_factories_to_people }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_narhoz_idea
+		}
+	}
+	
+	focus = {
+		id = GRB_big_london_railway
+		x = 2
+		y = 1
+		relative_position_id = GRB_factories_to_people
+		prerequisite = { focus = GRB_factories_to_people }
+		cost = 10
+		completion_reward = {
+			build_railway = {
+				level = 2
+				start_province = 5005
+				target_province = 10106
+				path = { 5005 2089 12726 7977 4968 12749 10850 10106 }
+			}
+			364 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 12726
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_gun_assembly
+		x = 0
+		y = 1
+		relative_position_id = GRB_create_industrial_base
+		prerequisite = { focus = GRB_create_industrial_base }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_tools_giving
+		x = 0
+		y = 1
+		relative_position_id = GRB_narhoz_development
+		prerequisite = { focus = GRB_narhoz_development }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_toolgiving
+		}
+	}
+	
+	focus = {
+		id = GRB_road_networks
+		x = 0
+		y = 1
+		relative_position_id = GRB_big_london_railway
+		prerequisite = { focus = GRB_big_london_railway }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_what_do_they_need
+		x = 0
+		y = 1
+		available = {
+			has_completed_focus = GRB_reshaem_rynochek 
+		}
+		relative_position_id = GRB_tools_giving 
+		prerequisite = { focus = GRB_tools_giving }
+		prerequisite = { focus = GRB_gun_assembly }
+		prerequisite = { focus = GRB_road_networks }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = GRB_what_people_need
+		}
+	}
+	
+	focus = {
+		id = GRB_resource_search_anarch
+		x = -1
+		y = 1
+		relative_position_id = GRB_what_do_they_need
+		prerequisite = { focus = GRB_what_do_they_need }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GRB_resources
+		}
+	}
+	
+	focus = {
+		id = GRB_civilian_infra
+		x = 1
+		y = 1
+		relative_position_id = GRB_what_do_they_need
+		prerequisite = { focus = GRB_what_do_they_need }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_infrastructure_build
+		}
+	}
+	
+	focus = {
+		id = GRB_new_lands_development
+		x = 0
+		y = 1
+		relative_position_id = GRB_resource_search_anarch
+		prerequisite = { focus = GRB_resource_search_anarch }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = GRB_rich_people
+		x = 0
+		y = 1
+		relative_position_id = GRB_civilian_infra
+		prerequisite = { focus = GRB_civilian_infra }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.1
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = GRB_no_more_money
+		x = 1
+		y = 1
+		relative_position_id = GRB_new_lands_development 
+		prerequisite = { focus = GRB_new_lands_development }
+		prerequisite = { focus = GRB_rich_people }
+		cost = 5
+		completion_reward = {
+			remove_ideas = GRB_industrial_destruction_an
+		}
+	}
+	
+	focus = {
+		id = GRB_stand_idle
+		x = 0
+		y = 1
+		relative_position_id = GRB_no_more_money
+		prerequisite = { focus = GRB_no_more_money }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_bastion
+		}
+	}
+	
+	focus = {
+		id = GRB_self_defence
+		x = 6
+		y = 1
+		available = {
+			has_completed_focus = GRB_volunteer_divisions
+		}
+		relative_position_id = GRB_glory_to_the_captain
+		prerequisite = { focus = GRB_glory_to_the_captain }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_selfdefence_commitee
+		}
+	}
+	
+	focus = {
+		id = GRB_preparation_courses
+		x = -2
+		y = 1
+		relative_position_id = GRB_self_defence
+		prerequisite = { focus = GRB_self_defence }
+		cost = 5
+		completion_reward = {
+			army_experience = 25
+			add_ideas = GRB_anarchy_army
+		}
+	}
+	
+	focus = {
+		id = GRB_capture_fleet
+		x = 0
+		y = 1
+		relative_position_id = GRB_self_defence
+		prerequisite = { focus = GRB_self_defence }
+		cost = 5
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 250
+			}
+			navy_experience = 25
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = GRB_retrain_civpilots
+		x = 2
+		y = 1
+		relative_position_id = GRB_self_defence
+		prerequisite = { focus = GRB_self_defence }
+		cost = 5
+		completion_reward = {
+			air_experience = 25
+			add_ideas = UNS_aces_prep
+		}
+	}
+	
+	focus = {
+		id = GRB_give_weapons_to_people
+		x = 0
+		y = 1
+		relative_position_id = GRB_preparation_courses
+		prerequisite = { focus = GRB_preparation_courses }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_extra_conscription
+		}
+	}
+	
+	focus = {
+		id = GRB_naval_study
+		x = 0
+		y = 1
+		relative_position_id = GRB_capture_fleet
+		prerequisite = { focus = GRB_capture_fleet }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_naval_academy_idea
+		}
+	}
+	
+	focus = {
+		id = GRB_anarchy_fighters
+		x = 0
+		y = 1
+		relative_position_id = GRB_retrain_civpilots
+		prerequisite = { focus = GRB_retrain_civpilots }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = light_fighter
+				uses = 2
+				bonus = 0.75
+			}
+			add_doctrine_cost_reduction = {
+				category = air_doctrine
+				uses = 1
+				cost_reduction = 0.25
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_no_surrender_no_retreat
+		x = 0
+		y = 1
+		relative_position_id = GRB_naval_study
+		prerequisite = { focus = GRB_naval_study }
+		prerequisite = { focus = GRB_anarchy_fighters }
+		prerequisite = { focus = GRB_give_weapons_to_people }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_legion
+		}
+	}
+	
+	focus = {
+		id = GRB_open_academy
+		available = {
+			has_tech = grb_heavy_infantry_tech 
+			has_tech = human_snipers_corps
+		}
+		x = -2
+		y = 1
+		relative_position_id = GRB_no_surrender_no_retreat 
+		prerequisite = { focus = GRB_no_surrender_no_retreat }
+		cost = 5 
+		completion_reward = {
+			swap_ideas = {
+				add_idea = GRB_selfdefence_commitee
+				remove_idea = GRB_army_boiling_an
+			}
+			hidden_effect = {
+				country_lock_all_division_template = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_control_naval_threads
+		x = 0
+		y = 1
+		relative_position_id = GRB_no_surrender_no_retreat 
+		prerequisite = { focus = GRB_no_surrender_no_retreat }
+		cost = 5 
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				type = naval_doctrine
+				uses = 2
+				cost_reduction = 0.33
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_airfields_anarchy
+		x = 2
+		y = 1
+		relative_position_id = GRB_no_surrender_no_retreat 
+		prerequisite = { focus = GRB_no_surrender_no_retreat }
+		cost = 5 
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_military_doctrine
+		x = 0
+		y = 1
+		relative_position_id = GRB_open_academy
+		prerequisite = { focus = GRB_open_academy }
+		cost = 5
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				category = land_doctrine
+				uses = 2
+				cost_reduction = 0.33
+			} 
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+		id = GRB_fleet_development
+		x = 0
+		y = 1
+		relative_position_id = GRB_control_naval_threads 
+		prerequisite = { focus = GRB_control_naval_threads }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_naval_power
+		}
+	}
+	
+	focus = {
+		id = GRB_develop_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = GRB_airfields_anarchy
+		prerequisite = { focus = GRB_airfields_anarchy }
+		cost = 5
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				category = air_doctrine
+				uses = 2
+				cost_reduction = 0.33
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_british_people_army
+		x = 0 
+		y = 1
+		relative_position_id = GRB_fleet_development 
+		prerequisite = { focus = GRB_fleet_development }
+		prerequisite = { focus = GRB_develop_air_doctrine }
+		prerequisite = { focus = GRB_military_doctrine }
+		cost = 10
+		completion_reward = {
+			add_ideas = GRB_british_legion
+		}
+	}
+	
+	focus = {
+		id = GRB_freedom_and_order
+		x = 0
+		y = 1
+		relative_position_id = GRB_glory_to_the_captain
+		prerequisite = { focus = GRB_glory_to_the_captain }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GRB_anarchy_development_category
+			unlock_decision_category_tooltip = GRB_anarchy_military_category
+		}
+	}
+	
+	focus = {
+		id = GRB_british_council
+		x = -2
+		y = 1
+		relative_position_id = GRB_freedom_and_order
+		prerequisite = { focus = GRB_freedom_and_order }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = swap_non_anarchy_advisors_designers
+		}
+	}
+	
+	focus = {
+		id = GRB_unite_the_people
+		x = 0
+		y = 1
+		relative_position_id = GRB_freedom_and_order
+		prerequisite = { focus = GRB_freedom_and_order }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = GRB_stop_institutes
+		x = 2
+		y = 1
+		relative_position_id = GRB_freedom_and_order
+		prerequisite = { focus = GRB_freedom_and_order }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_anarchy_institutes
+		}
+	}
+	
+	focus = {
+		id = GRB_reshaem_rynochek
+		x = 0
+		y = 1
+		relative_position_id = GRB_british_council
+		prerequisite = { focus = GRB_british_council }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = unlock_new_focuses_in_tree
+		}
+	}
+	
+	focus = {
+		id = GRB_solve_native_problem
+		x = 0
+		y = 1
+		relative_position_id = GRB_unite_the_people
+		prerequisite = { focus = GRB_unite_the_people }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = GRB_volunteer_divisions
+		x = 0
+		y = 1
+		relative_position_id = GRB_stop_institutes
+		prerequisite = { focus = GRB_stop_institutes }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = unlock_new_focuses_in_tree
+		}
+	}
+	
+	focus = {
+		id = GRB_freedom_for_everyone
+		x = 0
+		y = 1
+		relative_position_id = GRB_solve_native_problem
+		prerequisite = { focus = GRB_solve_native_problem }
+		prerequisite = { focus = GRB_reshaem_rynochek }
+		prerequisite = { focus = GRB_volunteer_divisions }
+		cost = 5
+		completion_reward = {
+			remove_ideas = GRB_bad_politics_an
+		}
+	} 	
+	
+	focus = {
+		id = GRB_closing_economy
+		x = 0
+		y = 1
+		relative_position_id = GRB_freedom_for_everyone
+		prerequisite = { focus = GRB_freedom_for_everyone }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_closed_economy
+		}
+	}
+	
+	focus = {
+		id = GRB_prewar_preparation_anarch
+		x = -2
+		y = 1
+		relative_position_id = GRB_closing_economy
+		prerequisite = { focus = GRB_closing_economy }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_enemies_here
+		}
+	}
+	
+	focus = {
+		id = GRB_ideological_preparation
+		x = 0
+		y = 1
+		relative_position_id = GRB_closing_economy
+		prerequisite = { focus = GRB_closing_economy }
+		cost = 5
+		completion_reward = {
+			### TODO 
+		}
+	}
+	
+	focus = {
+		id = GRB_look_for_supporters
+		x = 2
+		y = 1
+		relative_position_id = GRB_closing_economy
+		prerequisite = { focus = GRB_closing_economy }
+		cost = 5
+		completion_reward = {
+			### TODO 
+		}
+	}
+	
+	
+	focus = {
+		id = GRB_free_the_brothers
+		x = 0
+		y = 1
+		relative_position_id = GRB_ideological_preparation
+		prerequisite = { focus = GRB_ideological_preparation }
+		prerequisite = { focus = GRB_prewar_preparation_anarch }
+		prerequisite = { focus = GRB_look_for_supporters }
+		cost = 5
+		completion_reward = {
+			create_faction = GRB_ancom_faction
+		}
+	}
+	
+	focus = {
+		id = GRB_free_america
+		x = -4
+		y = 1
+		relative_position_id = GRB_free_the_brothers 
+		prerequisite = { focus = GRB_free_the_brothers }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_free_russia
+		x = 0
+		y = 1
+		relative_position_id = GRB_free_the_brothers 
+		prerequisite = { focus = GRB_free_the_brothers }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_free_germany
+		x = 4
+		y = 1
+		relative_position_id = GRB_free_the_brothers 
+		prerequisite = { focus = GRB_free_the_brothers }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_finish_millenial_slavery
+		x = 0
+		y = 1
+		relative_position_id = GRB_free_america
+		prerequisite = { focus = GRB_free_america }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+			if = {
+				limit = {
+					country_exists = NLR 
+				}
+				NLR = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = GRB_free_crystal_ponies
+		x = 2
+		y = 1
+		relative_position_id = GRB_free_america
+		prerequisite = { focus = GRB_free_america }
+		cost = 5
+		completion_reward = {
+			CRY = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_second_stg_revolution
+		x = 0
+		y = 1
+		relative_position_id = GRB_free_russia
+		prerequisite = { focus = GRB_free_russia }
+		cost = 5
+		completion_reward = {
+			STG = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_free_the_north
+		x = -2
+		y = 1
+		relative_position_id = GRB_free_germany
+		prerequisite = { focus = GRB_free_germany }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = GRF 
+				}
+				GRF = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = GFF 
+				}
+				GRF = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_free_changelings
+		x = 0
+		y = 1
+		relative_position_id = GRB_free_germany 
+		prerequisite = { focus = GRB_free_germany }
+		cost = 5
+		completion_reward = {
+			CHN = {
+				country_event = { id = af_grb.5 days = 1 }
+			}
+			if = {
+				limit = {
+					country_exists = CCN 
+				}
+				CCN = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_northern_friends 
+		x = -1
+		y = 1
+		relative_position_id = GRB_second_stg_revolution
+		prerequisite = { focus = GRB_second_stg_revolution }
+		prerequisite = { focus = GRB_free_crystal_ponies }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = JAK 
+				}
+				JAK = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = YAK 
+				}
+				YAK = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PNG 
+				}
+				PNG = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PLB 
+				}
+				PNG = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_southern_friends
+		x = 1
+		y = 1
+		relative_position_id = GRB_second_stg_revolution
+		prerequisite = { focus = GRB_second_stg_revolution }
+		prerequisite = { focus = GRB_free_the_north }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = OLE 
+				}
+				OLE = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SCS 
+				}
+				SCS = {
+					country_event = { id = af_grb.5 days = 1 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GRB_beginning_of_the_end
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = dread_league_crusade
+				DED = {
+					AND = {
+						has_war = yes 
+						NOT = {
+							has_war_with = HLR 
+						}
+					}
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = GRB_northern_friends
+		prerequisite = { focus = GRB_northern_friends }
+		prerequisite = { focus = GRB_southern_friends }
+		cost = 20
+		select_effect = {
+			country_event = {
+				id = af_grb.6 days = 25
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = start_counter_crusade
+		}
+	}
