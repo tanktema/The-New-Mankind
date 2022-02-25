@@ -869,5 +869,20 @@ characters={
 		}
 	}
 	
+	GRB_captain_wolf = {
+		name = GRB_captain_wolf
+		portraits = {
+		
+		}
+		
+		country_leader = {
+
+			ideology = anarchist_communism
+			traits = { grb_ancom_trait }
+			expire="1999.9.9.1"
+			id=-1
+		}
+	}
+	
 	
 }
