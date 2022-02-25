@@ -140,13 +140,8 @@ country_event = {
 		country_event = { id = af_grb.9 days = 15 }
 		if = {
 			limit = {
-				EQS = {
-					NOT = {
-						has_country_leader = {
-							character = EQC_big_sister
-							ruling_only = yes 
-						}
-					}
+				EQC = {
+					has_government = communism
 				}
 			}
 			create_wargoal = {
@@ -156,12 +151,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				EQS = {
-					has_country_leader = {
-						character = EQC_big_sister
-						ruling_only = yes 
-					
-					}
+				EQC = {
+					NOT = { has_government = communism }
 				}
 			}
 			EQC = {

@@ -1,6 +1,9 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			SOL = {
+				set_global_flag = first_april_flag
+			}
 			every_country = {
 				if = {
 					limit = {
@@ -466,6 +469,12 @@ on_actions = {
 				ROOT = {
 					add_ideas = GRB_selfdefence_commitee
 					country_lock_all_division_template = yes 
+					set_technology = {
+						grb_heavy_infantry_tech = 1
+					}
+					set_technology = {
+						human_snipers_corps = 1
+					}
 				}
 			}
 		}

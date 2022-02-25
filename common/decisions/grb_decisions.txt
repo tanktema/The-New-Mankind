@@ -1923,6 +1923,14 @@ GRB_anarchy_development_category = {
 			weekly_manpower = 500
 			stability_factor = 0.05
 		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
 	}
 	
 	GRB_ANCOM_plan_civilian_industry = {
@@ -2102,6 +2110,7 @@ GRB_anarchy_development_category = {
 		available = {
 			num_of_civilian_factories_available_for_projects > 5
 			has_completed_focus = GRB_what_do_they_need
+			has_tech = nuclear_reactor
 		}
 		modifier = {
 			civilian_factory_use = 6
@@ -2138,6 +2147,9 @@ GRB_anarchy_development_category = {
 		ai_will_do = {
 			factor = 15
 		}
+		available = {
+			has_completed_focus = GRB_ideological_preparation
+		}
 		days_re_enable = 60
 		cost = 30
 		modifier = {
@@ -2147,7 +2159,7 @@ GRB_anarchy_development_category = {
 		}
 	}
 	
-	GRB_infrastructure_development = {
+	GRB_ANCOM_infrastructure_development = {
 		days_remove = 25
 		ai_will_do = {
 			factor = 25
@@ -2204,6 +2216,9 @@ GRB_anarchy_development_category = {
 		}
 		ai_will_do = {
 			factor = 25
+		}
+		visible = {
+			has_completed_focus = GRB_new_lands_development
 		}
 		cost = 75
 		days_remove = 90

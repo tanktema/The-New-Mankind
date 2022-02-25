@@ -213,7 +213,7 @@ recruit_character = GRB_kasper_jones
 recruit_character = GRB_harris_brown
 recruit_character = GRB_ricko_meritt
 recruit_character = GRB_vzhick_gulseth
-
+recruit_character = GRB_captain_wolf
 
 if = {
 	limit = {

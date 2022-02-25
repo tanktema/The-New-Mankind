@@ -689,6 +689,22 @@ ideas = {
 				political_power_gain = 0.25
 			}
 		}
+		
+		GRB_prepare_for_enemy = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				army_core_attack_factor = 0.07
+				army_core_defence_factor = 0.07
+				war_support_factor = 0.05
+				offensive_war_war_support_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = DED 
+				attack_bonus_against = 0.15
+				defence_bonus_against = 0.15
+			}
+		}
 	}
 	trade_laws = {
 		GRB_closed_economy = {
@@ -725,6 +741,26 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_contact_olds
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
+			}
+			research_bonus = {
+				armor = 0.15
+			}
+			traits = { onwheel_master }
+		}
+		GRB_british_anarch_armor = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_british_council
+			}
+			visible = {
+				has_completed_focus = GRB_british_council
 			}
 			research_bonus = {
 				armor = 0.15
@@ -737,6 +773,11 @@ ideas = {
 			}
 			available = {
 				has_government = neutrality
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			research_bonus = {
 				armor = 0.1
@@ -750,6 +791,11 @@ ideas = {
 				original_tag = GRB 
 			}
 			available = {
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 				has_completed_focus = GRB_german_tanks
 			}
 			traits = { medium_tank_producer }
@@ -771,6 +817,11 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_equestrian_companies
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			research_bonus = {
 				infantry = 0.1
@@ -784,6 +835,11 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_contact_olds
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			research_bonus = {
 				infantry = 0.1
@@ -795,7 +851,13 @@ ideas = {
 			allowed = {
 				original_tag = GRB
 			}
-
+			available = {
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
+			}
 			research_bonus = {
 				infantry = 0.1
 				sniper_tech = 0.1
@@ -808,6 +870,27 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_contact_soviet_arms_dealers
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
+			}
+			research_bonus = {
+				sniper_tech = 0.15
+				infantry = 0.1
+			}
+			traits = { arms_dealer_m }
+		}
+		GRB_british_anarch_equip = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_british_council
+			}
+			visible = {
+				has_completed_focus = GRB_british_council
 			}
 			research_bonus = {
 				sniper_tech = 0.15
@@ -820,7 +903,18 @@ ideas = {
 		
 		designer = yes 
 		
-		
+		GRB_british_anarch_industr = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_british_council
+			}
+			visible = {
+				has_completed_focus = GRB_british_council
+			}
+			traits = traits = { railroad_builder }
+		}
 		
 		GRB_baratt_development = { ### EQS
 			allowed = {
@@ -831,6 +925,11 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_equestrian_companies
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			traits = { railroad_builder }
 		}
@@ -844,6 +943,11 @@ ideas = {
 			}
 			available = {	
 				has_completed_focus = GRB_griffonian_companies
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			traits = { trading_company_grb }
 		}
@@ -910,7 +1014,13 @@ ideas = {
 			allowed = {
 				original_tag = GRB 
 			}
-			#available = {
+			available = {
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
+			}
 	
 			research_bonus = {
 				air_equipment = 0.10
@@ -925,6 +1035,11 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_contact_olds
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -938,6 +1053,27 @@ ideas = {
 			}
 			available = {
 				has_completed_focus = GRB_american_aircraft
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { heavy_aircraft_manufacturer medium_aircraft_manufacturer }
+		}
+		
+		GRB_anarch_cocern_air = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_british_council
+			}
+			visible = {
+				has_completed_focus = GRB_british_council
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -953,16 +1089,38 @@ ideas = {
 			allowed = {
 				original_tag = GRB
 			}
-		
+			available = {
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
+			}
 			traits = { old_world_shipyard }
 		}
-		
+		GRB_anarch_cocern_naval = {
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_british_council
+			}
+			visible = {
+				has_completed_focus = GRB_british_council
+			}
+			traits = { old_world_shipyard }
+		}
 		GRB_mistral = { #### JER
 			allowed = {
 				original_tag = GRB
 			}
 			available = {
 				has_completed_focus = GRB_griffonian_companies
+				hidden_trigger = {
+					NOT = {
+						has_completed_focus = GRB_british_council
+					}
+				}
 			}
 			traits = { old_world_shipyard }
 			equipment_bonus = {

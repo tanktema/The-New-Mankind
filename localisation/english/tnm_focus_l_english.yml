@@ -2104,3 +2104,191 @@
    
    GRB_COMMPACT:0 "Helping Hand Pact"
    EQS_hum_pony_alliance:0 "United Human and Ponies alliance"
+
+   GRB_people_boiling:0 ""
+   GRB_people_boiling_desc:0 ""
+   GRB_anarcy_paty_long:0 ""
+   GRB_anarcy_paty:0 ""
+   allow_new_designers:0 ""
+   swap_non_anarchy_advisors_designers:0 ""
+   unlock_new_focuses_in_tree:0 ""
+   GRB_ancom_faction:0 ""
+   start_counter_crusade:0 ""
+   GRB_fear_the_future:0 ""
+   GRB_fear_the_future_desc:0 ""
+   
+   GRB_strange_witnesses:0 ""
+   GRB_strange_witnesses_desc:0 ""
+   
+   GRB_government_weakness:0 ""
+   GRB_government_weakness_desc:0 ""
+   
+   GRB_first_seeds:0 ""
+   GRB_first_seeds_desc:0 ""
+   
+   GRB_people_bund:0 ""
+   GRB_people_bund_desc:0 ""
+   
+   GRB_glory_to_the_captain:0 ""
+   GRB_glory_to_the_captain_desc:0 ""
+   
+   GRB_factories_to_people:0 ""
+   GRB_factories_to_people_desc:0 ""
+   
+   GRB_create_industrial_base:0 ""
+   GRB_create_industrial_base_desc:0 ""
+   
+   GRB_narhoz_development:0 ""
+   GRB_narhoz_development_desc:0 ""
+   
+   GRB_big_london_railway:0 ""
+   GRB_big_london_railway_desc:0 ""
+   
+   GRB_gun_assembly:0 ""
+   GRB_gun_assembly_desc:0 ""
+   
+   GRB_tools_giving:0 ""
+   GRB_tools_giving_desc:0 ""
+   
+   GRB_road_networks:0 ""
+   GRB_road_networks_desc:0 ""
+   
+   GRB_what_do_they_need:0 ""
+   GRB_what_do_they_need_desc:0 ""
+   
+   GRB_resource_search_anarch:0 ""
+   GRB_resource_search_anarch_desc:0 ""
+   
+   GRB_civilian_infra:0 ""
+   GRB_civilian_infra_desc:0 ""
+   
+   GRB_new_lands_development:0 ""
+   GRB_new_lands_development_desc:0 ""
+   
+   GRB_rich_people:0 ""
+   GRB_rich_people_desc:0 ""
+   
+   GRB_no_more_money:0 ""
+   GRB_no_more_money_desc:0 ""
+   
+   GRB_stand_idle:0 ""
+   GRB_stand_idle_desc:0 ""
+   
+   GRB_self_defence:0 ""
+   GRB_self_defence_desc:0 ""
+   
+   GRB_preparation_courses:0 ""
+   GRB_preparation_courses_desc:0 ""
+   
+   GRB_capture_fleet:0 ""
+   GRB_capture_fleet_desc:0 ""
+   
+   GRB_retrain_civpilots:0 ""
+   GRB_retrain_civpilots_desc:0 ""
+   
+   GRB_give_weapons_to_people:0 ""
+   GRB_give_weapons_to_people_desc:0 ""
+   
+   GRB_naval_study:0 ""
+   GRB_naval_study_desc:0 ""
+   
+   GRB_anarchy_fighters:0 ""
+   GRB_anarchy_fighters_desc:0 ""
+   
+   GRB_no_surrender_no_retreat:0 ""
+   GRB_no_surrender_no_retreat_desc:0 ""
+   
+   GRB_open_academy:0 ""
+   GRB_open_academy_desc:0 ""
+   
+   GRB_control_naval_threads:0 ""
+   GRB_control_naval_threads_desc:0 ""
+   
+   GRB_airfields_anarchy:0 ""
+   GRB_airfields_anarchy_desc:0 ""
+   
+   GRB_military_doctrine:0 ""
+   GRB_military_doctrine_desc:0 ""
+   
+   GRB_fleet_development:0 ""
+   GRB_fleet_development_desc:0 ""
+   
+   GRB_develop_air_doctrine:0 ""
+   GRB_develop_air_doctrine_desc:0 ""
+   
+   GRB_british_people_army:0 ""
+   GRB_british_people_army_desc:0 ""
+   
+   GRB_freedom_and_order:0 ""
+   GRB_freedom_and_order_desc:0 ""
+   
+   GRB_british_council:0 ""
+   GRB_british_council_desc:0 ""
+   
+   GRB_unite_the_people:0 ""
+   GRB_unite_the_people_desc:0 ""
+   
+   GRB_stop_institutes:0 ""
+   GRB_stop_institutes_desc:0 ""
+   
+   GRB_reshaem_rynochek:0 ""
+   GRB_reshaem_rynochek_desc:0 ""
+   
+   GRB_solve_native_problem:0 ""
+   GRB_solve_native_problem_desc:0 ""
+   
+   GRB_volunteer_divisions:0 ""
+   GRB_volunteer_divisions_desc:0 ""
+   
+   GRB_freedom_for_everyone:0 ""
+   GRB_freedom_for_everyone_desc:0 ""
+   
+   GRB_closing_economy:0 ""
+   GRB_closing_economy_desc:0 ""
+   
+   GRB_prewar_preparation_anarch:0 ""
+   GRB_prewar_preparation_anarch_desc:0 ""
+   
+   GRB_ideological_preparation:0 ""
+   GRB_ideological_preparation_desc:0 ""
+   
+   GRB_look_for_supporters:0 ""
+   GRB_look_for_supporters_desc:0 ""
+   
+   GRB_free_the_brothers:0 ""
+   GRB_free_the_brothers_desc:0 ""
+   
+   GRB_free_america:0 ""
+   GRB_free_america_desc:0 ""
+   
+   GRB_free_russia:0 ""
+   GRB_free_russia_desc:0 ""
+   
+   GRB_free_germany:0 ""
+   GRB_free_germany_desc:0 ""
+   
+   GRB_finish_millenial_slavery:0 ""
+   GRB_finish_millenial_slavery_desc:0 ""
+   
+   GRB_free_crystal_ponies:0 ""
+   GRB_free_crystal_ponies_desc:0 ""
+   
+   GRB_second_stg_revolution:0 ""
+   GRB_second_stg_revolution_desc:0 ""
+   
+   GRB_free_the_north:0 ""
+   GRB_free_the_north_desc:0 ""
+   
+   GRB_free_changelings:0 ""
+   GRB_free_changelings_desc:0 ""
+   
+   GRB_northern_friends:0 ""
+   GRB_northern_friends_desc:0 ""
+   
+   GRB_southern_friends:0 ""
+   GRB_southern_friends_desc:0 ""
+   
+   GRB_beginning_of_the_end:0 ""
+   GRB_beginning_of_the_end_desc:0 ""
+   
+   

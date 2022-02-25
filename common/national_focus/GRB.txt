@@ -97,6 +97,15 @@ focus_tree = {
 					id = 5005
 					name = "STATE_903"
 				}
+				hidden_effect = {
+					if = {
+						limit = {
+							has_global_flag = first_april_flag
+						}
+						country_event = { id = af_grb.1 }
+					}
+				}
+					
 			}
 		}
 	}
@@ -6036,9 +6045,7 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.15
 			}
-			hidden_effect = {
-				### TODO: Штраф на военку, штраф на политику, штраф на экономику
-			}
+			
 		}
 	
 	}
@@ -6051,7 +6058,8 @@ focus_tree = {
 		prerequisite = { focus = GRB_people_bund }
 		cost = 5
 		completion_reward = {
-			##### Здесь будет косметик и правитель
+			set_cosmetic_tag = GRB_ANCOM 
+			promote_character = GRB_captain_wolf
 			set_party_name = {
 				ideology = communism
 				long_name = GRB_anarcy_paty_long
@@ -6245,7 +6253,7 @@ focus_tree = {
 		prerequisite = { focus = GRB_resource_search_anarch }
 		cost = 5
 		completion_reward = {
-		
+			unlock_decision_tooltip = GRB_ANCOM_state_development
 		}
 	}
 	
@@ -6549,7 +6557,7 @@ focus_tree = {
 		prerequisite = { focus = GRB_freedom_and_order }
 		cost = 5
 		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
+			custom_effect_tooltip = allow_new_designers
 			custom_effect_tooltip = swap_non_anarchy_advisors_designers
 		}
 	}
@@ -6664,7 +6672,7 @@ focus_tree = {
 		prerequisite = { focus = GRB_closing_economy }
 		cost = 5
 		completion_reward = {
-			### TODO 
+			unlock_decision_tooltip = GRB_ANCOM_war_propaganda
 		}
 	}
 	
@@ -6676,7 +6684,17 @@ focus_tree = {
 		prerequisite = { focus = GRB_closing_economy }
 		cost = 5
 		completion_reward = {
-			### TODO 
+			every_other_country = {
+				limit = {
+					is_human_race = yes 
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+				add_stability = -0.05
+				add_war_support = 0/05
+			}
 		}
 	}
 	
