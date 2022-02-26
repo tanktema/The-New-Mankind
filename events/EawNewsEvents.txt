@@ -20,7 +20,10 @@ news_event = { #friendship games
 	option = {
 		name = news.1.a
 		trigger = { 
-			NOT = { tag = CHN }
+			NOT = { 
+				tag = CHN
+				tag = LNS
+			}
 			OR = {
 				TAG = EQS
 				is_in_faction_with = EQS
@@ -31,7 +34,12 @@ news_event = { #friendship games
 	
 	option = {
 		name = news.1.b
-		trigger = { TAG = CHN }
+		trigger = { 
+			OR = {
+				TAG = CHN 
+				tag = LNS
+			}
+		}
 	}
 
 	option = {
@@ -40,6 +48,7 @@ news_event = { #friendship games
 			NOT = { 
 				TAG = CHN 
 				TAG = EQS
+				tag = LNS
 				is_in_faction_with = EQS
 				is_subject_of = EQS 
 			} 
@@ -600,6 +609,12 @@ news_event = {
 		trigger = {
 			NOT = { tag = CHN }
 		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_war_support = 0.1
+		}
 	}
 	option = {
 		name = news.17.b
@@ -944,7 +959,6 @@ news_event = { # Celestia abdicates
 				original_tag = EQS
 				original_tag = CRY
 				tag = BAL
-				tag = ROC
 			}
 			has_government = communism
 		}
@@ -969,7 +983,6 @@ news_event = { # Celestia abdicates
 				tag = CHN
 				tag = STG
 				original_tag = EQS
-				tag = ROC
 				tag = BAL
 				original_tag = CRY
 			}
@@ -1746,12 +1759,6 @@ news_event = {
 				original_tag = EQS
 			}
 		}
-		if = {
-			limit = {
-				original_tag = UNS 
-			}
-			mark_focus_tree_layout_dirty = yes
-		}
 	}
 }
 
@@ -1838,10 +1845,7 @@ news_event = {
 	option = {
 		name = news.2021.a
 		trigger = {
-			NOT = {
-				TAG = NLR
-				original_tag = EQS
-			}
+			original_tag = LSP
 		}
 	}
 	option = {
@@ -1854,6 +1858,16 @@ news_event = {
 		name = news.2021.c
 		trigger = {
 			tag = NLR
+		}
+	}
+	option = {
+		name = news.2021.e
+		trigger = {
+			NOT = {
+				TAG = NLR
+				original_tag = EQS
+				original_tag = LSP
+			}
 		}
 	}
 }
@@ -1918,16 +1932,16 @@ country_event = {
 	id = news.2041
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.2041"}
 	hidden = yes
-	#is_triggered_only = yes
+	is_triggered_only = yes
 
-	trigger = {
-		has_global_flag = equestrian_civil_war
-		tag = NLR
-		has_war = no
-		NOT = {
-			country_exists = EQS
-		}
-	}
+	#trigger = {
+	#	has_global_flag = equestrian_civil_war
+	#	tag = NLR
+	#	has_war = no
+	#	NOT = {
+	#		country_exists = EQS
+	#	}
+	#}
 
 	fire_only_once = yes
 	immediate = {
@@ -2010,7 +2024,7 @@ country_event = {
 	hidden = yes
 	trigger = {
 		tag = CHN
-		has_country_leader = { ruling_only = yes name = "Queen Chrysalis" }
+		has_country_leader = { ruling_only = yes character = CHN_queen_chrysalis }
 	}
 	is_triggered_only = yes #moved to on_peaceconference_ended
 	fire_only_once = yes
@@ -2076,7 +2090,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = CHN
-		has_country_leader = { ruling_only = yes name = "Queen Chrysalis" }
+		has_country_leader = { ruling_only = yes character = CHN_queen_chrysalis }
 	}
 	immediate = {
 		set_global_flag = the_war_ended
@@ -2277,8 +2291,7 @@ country_event = {
 					has_government = democratic
 					has_war = no
 					OR = {
-						has_country_leader = { ruling_only = yes name = "Princess Celestia" }
-						has_country_leader = { ruling_only = yes name = "Princesses Celestia and Luna" }
+						has_country_leader = { ruling_only = yes character = EQS_princess_celestia }
 					}
 				}
 			}
@@ -2340,15 +2353,8 @@ news_event = { # Summer sun celebration
 		trigger = { original_tag = CHN }
 	}
 	option = {
-		name = news.301.hum
-		trigger = {
-			is_human_race = yes 
-		}
-	}
-	option = {
 		name = news.301.c
 		trigger = {  
-			is_human_race = no
 			NOT = {
 				original_tag = EQS
 				original_tag = STG
@@ -2358,7 +2364,7 @@ news_event = { # Summer sun celebration
 				original_tag = CHN
 				AND = {
 					original_tag = PYT
-					has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
+					has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
 				}
 			}
 		}
@@ -2367,8 +2373,8 @@ news_event = { # Summer sun celebration
 		name = news.301.e
 		trigger = {
 			original_tag = PYT
-			has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
-			}
+			has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
+		}
 	}
 }
 
@@ -2403,7 +2409,7 @@ news_event = { # Forever sun celebration
 				original_tag = CHN
 				AND = {
 					original_tag = PYT
-					has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
+					has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
 				}
 			}
 		}
@@ -2412,8 +2418,8 @@ news_event = { # Forever sun celebration
 		name = news.302.e
 		trigger = {
 			original_tag = PYT
-			has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
-			}
+			has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
+		}
 	}
 }
 
@@ -2434,9 +2440,8 @@ country_event = {
 					has_government = democratic
 					has_war = no
 					OR = {
-						has_country_leader = { ruling_only = yes name = "Princess Celestia" }
-						has_country_leader = { ruling_only = yes name = "Princesses Celestia and Luna" }
-						has_country_leader = { ruling_only = yes name = "Princess Luna" }
+						has_country_leader = { ruling_only = yes character = EQS_princess_celestia }
+						has_country_leader = { ruling_only = yes character = EQS_princess_luna }
 					}
 				}
 			}
@@ -2452,7 +2457,7 @@ country_event = {
 				NLR = {
 					exists = yes
 					has_government = fascism
-					has_country_leader = { ruling_only = yes name = "Nightmare Moon" }
+					has_country_leader = { ruling_only = yes character = NLR_nightmare_moon }
 				}
 			}
 			news_event = news.305
@@ -2510,7 +2515,7 @@ news_event = { # Winter Moon celebration
 				original_tag = CHN
 				AND = {
 					original_tag = PYT
-					has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
+					has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
 				}
 			}
 		}
@@ -2519,7 +2524,7 @@ news_event = { # Winter Moon celebration
 		name = news.304.e
 		trigger = {
 			original_tag = PYT
-			has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
+			has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
 			}
 	}
 }
@@ -2547,11 +2552,21 @@ news_event = { # Endless moon celebration
 		trigger = { original_tag = CHN }
 	}
 	option = {
-		name = news.305.c
+		name = news.301.hum
+		trigger = {
+			is_human_race = yes 
+		}
+	}
+	option = {
+		name = news.301.c
 		trigger = {  
+			is_human_race = no
 			NOT = {
-				original_tag = NLR
-				is_subject_of = NLR
+				original_tag = EQS
+				original_tag = STG
+				original_tag = STL
+				is_in_faction_with = EQS
+				is_subject_of = EQS
 				original_tag = CHN
 				AND = {
 					original_tag = PYT
@@ -2564,7 +2579,7 @@ news_event = { # Endless moon celebration
 		name = news.305.e
 		trigger = {
 			original_tag = PYT
-			has_country_leader = { ruling_only = yes name = "Archibald Dawnfeather" }
-			}
+			has_country_leader = { ruling_only = yes character = PYT_archibald_dawnfeather }
+		}
 	}
 }
