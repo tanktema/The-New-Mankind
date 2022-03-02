@@ -246,7 +246,7 @@ characters={
 	}
 	
 	
-	GEM_conradrad_zuse = {
+	GEM_conrad_zuse = {
 		name = GEM_conrad_zuse
 		portraits = {
 			civilian = {
@@ -741,6 +741,122 @@ characters={
 			}
 		}
 		
+	}
+	
+	GEM_shtrohaim = {
+		name = GEM_shtrohaim
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_shtrohaim.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_shtrohaim.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ trait_cyborg infantry_commander_hum }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	
+	GEM_cristoff_waltz = {
+		name = GEM_cristoff_waltz
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/Gem_waltz.dds"
+				small = "gfx/interface/ideas/advisors/GEM/Gem_waltz.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ infantry_commander_hum }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_heinrich_schantz = {
+		name = GEM_heinrich_schantz
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_general_1.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_gen_2.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ tankist_commander_hum }
+			skill=3
+			attack_skill=2
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_hermann_bachmann = {
+		name = GEM_hermann_bachmann
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_general_2.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_gen_2.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ rhbz_trait }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_william_blazskowich = {
+		name = GEM_william_blazskowich
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_billy.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_billy.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ demolisher_hum }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	
+	GEM_adolf_hitler = {
+		name = GEM_adolf_hitler
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GEM/Adya.dds"
+			}
+		}
+		
+		country_leader={
+			desc=""
+			ideology=ultranationalism
+			expire="1989.1.1.1"
+			id=-1
+		}
 	}
 	
 }

@@ -2112,6 +2112,103 @@ technologies = {
 	}
 	
 	
+	############### GERMAN SCIENCE IS THE BEST IN THE WORLD
+	
+	gem_cybrnetics_t1 = {
+		category_all_infantry = {
+			attack  = 0.1
+			soft_attack = 0.1
+			hard_attack = 0.05
+			defense = 0.1
+			breakthrough = 0.05
+			#initiative = 0.25
+			#recon = 1
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	gem_cybrnetics_t2 = {
+		category_all_infantry = {
+			attack  = 0.15
+			soft_attack = 0.15
+			hard_attack = 0.1
+			defense = 0.15
+			breakthrough = 0.1
+			#initiative = 0.25
+			#recon = 1
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	gem_cybrnetics_t2 = {
+		category_all_infantry = {
+			attack  = 0.2
+			soft_attack = 0.2
+			hard_attack = 0.15
+			defense = 0.2
+			breakthrough = 0.15
+			#initiative = 0.3
+			#recon = 1
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	gem_ubermagic = {
+		enable_equipments = {
+			gem_ubercannon
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	gem_ubertank_cannon = {
+		enable_equipment_modules = {
+			tnm_gem_ubercanone
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	gem_crystal_engine = {
+		enable_equipment_modules = {
+			tnm_gem_magicengine
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	gem_supertankarmor = {
+		enable_equipment_modules = {
+			tnm_gem_superarmor
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
 }
 
 		

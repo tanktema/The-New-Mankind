@@ -499,3 +499,6 @@
     GRB_anarch_cocern_air:0 "Годвин"
     GRB_anarch_cocern_naval:0 "Донисторп"
     GRB_prepare_for_enemy:0 "Общий враг"
+    
+    GEM_biomodification_idea:0 "Биомодификация"
+    GEM_supply_bonus_idea:0 "Развитие снабжения"

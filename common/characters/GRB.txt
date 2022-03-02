@@ -872,7 +872,8 @@ characters={
 	GRB_captain_wolf = {
 		name = GRB_captain_wolf
 		portraits = {
-		
+			civilian = {
+				large = "gfx/leaders/GRB/GRB_capitan"
 		}
 		
 		country_leader = {

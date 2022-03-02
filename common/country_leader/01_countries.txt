@@ -530,7 +530,14 @@ leader_traits = {
 		fascism_drift = 0.03 
 		
 	}
-	
+	german_science_is_the_best_harm = {
+		random = no 
+		
+		research_speed_factor = 0.1
+		stability_factor = 0.03
+		democratic_drift = 0.03 
+		
+	}
 	
 	rcbd_officer = {
 		random = no 

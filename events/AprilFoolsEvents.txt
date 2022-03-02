@@ -16,10 +16,12 @@ country_event = {
 		custom_effect_tooltip = af_grb_tooltip_desc
 		mark_focus_tree_layout_dirty = yes 
 		complete_national_focus = GRB_people_boiling
+		ai_chance = { base = 0 }
 	}
 	
 	option = {
 		name = af_grb.1.b 
+		ai_chance = { base = 1000 }
 	}
 }
 
@@ -197,6 +199,99 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = af_gem.1
+	title = af_gem.1.t 
+	desc = af_gem.1.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_gem.1.a 
+		set_country_flag = GEM_AF_FLAG
+		custom_effect_tooltip = af_gem_tooltip_desc
+		mark_focus_tree_layout_dirty = yes 
+		complete_national_focus = GEM_experiments_strasse
+		ai_chance = { base = 0 }
+	}
+	
+	option = {
+		name = af_gem.1.b
+		ai_chance = { base = 1000 }
+	}
+}
+
+country_event = {
+	id = af_gem.2
+	title = af_gem.2.t 
+	desc = af_gem.2.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_gem.2.a
+		country_event = {
+			id = af_gem.3
+			days = 60 
+		}
+	}
+}
+
+country_event = {
+	id = af_gem.3 
+	title = af_gem.3.t 
+	desc = af_gem.3.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_gem.3.a
+		complete_national_focus = GEM_last_experiment
+		promote_character = GEM_adolf_hitler
+		recruit_character = GEM_william_blazskowich
+	}
+}
+
+news_event = {
+	id = af_gem.4 
+	title = af_gem.4.t 
+	desc = af_gem.4.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_gem.4.a 
+		hidden_effect = {
+			CHN = { 
+				add_to_faction = ROOT
+				add_ai_strategy = {
+					type = alliance
+					id = GEM 
+					value = 500
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = af_uns.1
+	title = af_uns.1.t 
+	desc = af_uns.1.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_uns.1.a 
+		set_country_flag = UNS_AF_FLAG
+		custom_effect_tooltip = af_uns_tooltip_desc
+		mark_focus_tree_layout_dirty = yes 
+		complete_national_focus = UNS_strange_signal
+		ai_chance = { base = 0 }
+	}
+	
+	option = {
+		name = af_gem.1.b
+		ai_chance = { base = 1000 }
+	}
+}
+
+	
 country_event = { ############## WIP
 	id = tnm_esc_collab.1 
 	title = tnm_esc_collab.1.desc 

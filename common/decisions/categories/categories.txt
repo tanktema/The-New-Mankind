@@ -183,6 +183,9 @@ GEM_political_crisis_category = {
 				}
 			}
 		}
+		NOT = {
+			has_country_flag = GEM_AF_FLAG
+		}
 	}
 	allowed = {
 	#	has_dlc = "Waking the Tiger"

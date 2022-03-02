@@ -120,7 +120,13 @@ focus_tree = {
 	############## Leading party
 	focus = { ### Борьба со внутренним арвгом
 		id = UNS_enemy_inside 
-		
+		available = {	
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_AF_FLAG
+				}
+			}
+		}
 		x = 13
 		y = 3
 		icon = GFX_goal_eninside
@@ -6907,5 +6913,16 @@ focus_tree = {
 	########### FIRST APRIL BRANCH 
 	
 	focus = {
-		id = UNS_emperor_here
-		x = 
+		id = UNS_strange_signal
+		x = 0
+		y = 1
+		relative_position_id = UNS_world_situation
+		
+		allow_branch = {
+			has_country_flag = UNS_AF_FLAG
+		}
+		cost = 5
+		completion_reward = {
+		
+		}
+	}

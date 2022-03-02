@@ -549,12 +549,31 @@ ideas = {
 				production_oil_factor = 0.1
 			}
 		}
+		
+		GEM_biomodification_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				army_org_regain = 0.10
+				experience_loss_factor = -0.1
+				army_speed_factor = 0.1
+			}
+		}
+		
+		GEM_supply_bonus_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				no_supply_grace = 48
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+	
 
 	}
-				
 	
-			
-	}
+	
 	tank_manufacturer = {
 		designer = yes 
 		

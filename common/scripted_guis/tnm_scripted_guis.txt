@@ -33,3 +33,107 @@ scripted_gui = {
 			has_tech = prod_time_work
 		}
 	}
+	statesoc_unity_icon = {
+		window_name = "statesoc_unity_icon_container"
+		context_type = player_context
+		visible = {
+			OR = {
+				is_debug = yes 
+				has_completed_focus = UNS_we_will_proove_that
+			}
+		}
+		effects = {
+		}
+		triggers = { 
+		}
+
+	}
+			
+
+	frac_buttons_window = {
+		context_type = player_context
+		window_name = "frac_buttons_window"
+		parent_window_name = "countrydecisionview"
+		visible = {
+			OR = {
+				is_debug = yes 
+				has_completed_focus = UNS_we_will_proove_that
+			}
+		}
+		effects = {
+		}
+		triggers = { 
+		}
+
+	}
+	frac_button_side_bar = { 
+		window_name = "frac_button_side_bar"
+		parent_window_name = "countrydecisionview"
+		context_type = player_context
+		visible = {
+			OR = {
+				is_debug = yes 
+				has_completed_focus = UNS_we_will_proove_that
+			}
+		}
+		effects = {
+			
+		}
+		triggers = {
+			
+		}
+	}
+	
+	fac_button_side_bar_initial = {
+		window_name = "fac_button_side_bar_initial"
+		parent_window_name = "frac_button_side_bar_instance"
+		context_type = player_context
+		visible = {
+			OR = {
+				is_debug = yes 
+				has_completed_focus = UNS_we_will_proove_that
+			}
+		}
+		effects = {
+			ministry_of_peace_open_click = {
+				set_variable = { minpeace_opened = 1 }
+			}
+			ministry_of_peace_open_active_click = {
+				set_variable = { minpeace_opened = 0 }
+			}
+			ministry_of_war_open_click = {
+				set_variable = { minwar_opened = 1 }
+			}
+			ministry_of_war_open_active_click = {
+				set_variable = { minwar_opened = 0 }
+			}
+			ministry_of_morale_open_click = {
+				set_variable = { minmorale_opened = 1 }
+			}
+			ministry_of_morale_open_active_click = {
+				set_variable = { minmorale_opened = 0 }
+			}
+			
+		}
+		triggers = {
+			ministry_of_peace_open_visible = {
+				check_variable = { minpeace_opened = 0 } 
+			}
+			ministry_of_peace_open_active_visible = { 
+				check_variable = { minpeace_opened = 1 } 
+			}
+			ministry_of_war_open_visible = {
+				check_variable = { minwar_opened = 0 } 
+			}
+			ministry_of_war_open_active_visible = { 
+				check_variable = { minwar_opened = 1 } 
+			}
+			ministry_of_morale_open_visible = {
+				check_variable = { minmorale_opened = 0 } 
+			}
+			ministry_of_morale_open_active_visible = { 
+				check_variable = { minmorale_opened = 1 } 
+			}
+			
+		}
+	}

@@ -517,6 +517,11 @@ GRB_ancom_revolution_start = {
 		generate_character = {
 			token_base = GRB_ancom_council
 			name = GRB_ancom_council
+			portraits = {
+				civilian = {
+					large = "gfx/leaders/GRB/ANCOM_lord.dds"
+				}
+			}
 			country_leader = {
 				ideology = anarchist_communism
 				traits = { grb_ancom_trait }

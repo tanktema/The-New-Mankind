@@ -53,3 +53,5 @@
     first_nonhuman_leader:0 "Первый местный правитель"
     
     rhbz_trait:0 "Офицер РХБЗ"
+    trait_cyborg:0 "Киборг"
+    trait_cyborg_desc:0 "Немецкая наука - лучшая в мире!"

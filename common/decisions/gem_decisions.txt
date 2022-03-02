@@ -678,7 +678,10 @@ GEM_political_crisis_category = {
 GEM_resources_category = { 
 	steel_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -711,7 +714,10 @@ GEM_resources_category = {
 	}
 	alum_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -744,7 +750,10 @@ GEM_resources_category = {
 	}
 	tung_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -777,7 +786,10 @@ GEM_resources_category = {
 	}
 	chrom_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -810,7 +822,10 @@ GEM_resources_category = {
 	}
 	cryst_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -841,7 +856,10 @@ GEM_resources_category = {
 	}
 	oil_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -872,7 +890,10 @@ GEM_resources_category = {
 	}
 	rubber_search_gem = {
 		visible = {
-			has_completed_focus = GEM_resource_searching_focus
+			OR = {
+				has_completed_focus = GEM_resource_searching_focus
+				has_completed_focus = GEM_resources_of_strasse
+			}
 		}
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
@@ -1129,10 +1150,16 @@ GEM_fleet_remake_category = {
 	GEM_start_production_of_battlsehip = {
 		available = {
 			num_of_available_naval_factories > 0
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 		}
 		visible = {
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 		}
 		cost = 25
 		modifier = {
@@ -1149,11 +1176,17 @@ GEM_fleet_remake_category = {
 	GEM_build_the_guns = {
 		available = {
 			num_of_available_naval_factories > 0
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		visible = {
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		cost = 25
@@ -1170,11 +1203,17 @@ GEM_fleet_remake_category = {
 	GEM_build_the_engine = {
 		available = {
 			num_of_available_naval_factories > 0
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		visible = {
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		cost = 35
@@ -1191,11 +1230,17 @@ GEM_fleet_remake_category = {
 	GEM_build_the_controls = {
 		available = {
 			num_of_available_naval_factories > 0
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		visible = {
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		cost = 35
@@ -1212,11 +1257,17 @@ GEM_fleet_remake_category = {
 	GEM_build_the_paluba = {
 		available = {
 			num_of_available_naval_factories > 0
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		visible = {
-			has_completed_focus = GEM_fleet_rebuild
+			OR = {
+				has_completed_focus = GEM_fleet_rebuild
+				has_completed_focus = GEM_deathshead_battleship
+			}
 			has_country_flag = UNS_founded_bb
 		}
 		cost = 25
@@ -1251,7 +1302,20 @@ GEM_fleet_remake_category = {
 		days_remove = 80
 		remove_effect = {
 			hidden_effect = {
-				load_oob = "GEM_built_the_bb"
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = GEM_AF_FLAG
+						}
+					}
+					load_oob = "GEM_built_the_bb"
+				}
+				if = {
+					limit = {
+						has_country_flag = GEM_AF_FLAG
+					}
+					load_oob = "GEM_built_the_bb_af"
+				}
 			}
 			custom_effect_tooltip = gem_bb_built_ship_tt
 		}

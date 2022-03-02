@@ -234,4 +234,16 @@ leader_traits = {
 			boost_resistance_factor = 0.9
 		}
 	}
+	
+	trait_cyborg = {
+		type = land
+		trait_type = personality_trait
+
+		modifier = {
+			
+			wounded_chance_factor = -1
+		}
+
+
 		
+	}
