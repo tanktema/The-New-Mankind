@@ -1137,6 +1137,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 365
 			controls_state = 365
@@ -1174,6 +1175,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 365
 			controls_state = 365
@@ -1210,6 +1212,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 363
 			controls_state = 363
@@ -1246,6 +1249,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 364
 			controls_state = 364
@@ -1282,6 +1286,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 364
 			controls_state = 364
@@ -1318,6 +1323,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 365
 			controls_state = 365
@@ -1354,6 +1360,7 @@ GRB_resources = {
 			OR = {
 				has_completed_focus = GRB_resource_searching
 				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
 			}
 			owns_state = 365
 			controls_state = 365
@@ -2284,9 +2291,11 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 30
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2316,13 +2325,15 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 45
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2352,21 +2363,23 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 60
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2393,9 +2406,11 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 50
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2422,13 +2437,15 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 70
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2455,21 +2472,23 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 90
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2506,9 +2525,11 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 40
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2545,13 +2566,15 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 60
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}
@@ -2588,21 +2611,23 @@ GRB_anarchy_military_category = {
 		}
 		days_remove = 80
 		remove_effect = {
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
-			}
-			create_unit = {
-				division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
-				owner = ROOT
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
 			}
 		}
 	}

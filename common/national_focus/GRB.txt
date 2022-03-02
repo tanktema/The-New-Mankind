@@ -6452,7 +6452,7 @@ focus_tree = {
 		cost = 5 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				type = naval_doctrine
+				category = naval_doctrine
 				uses = 2
 				cost_reduction = 0.33
 			}
