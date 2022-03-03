@@ -6921,8 +6921,194 @@ focus_tree = {
 		allow_branch = {
 			has_country_flag = UNS_AF_FLAG
 		}
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	
+	focus = {
+		id = UNS_ships_arrival
+		x = 0
+		y = 1
+		relative_position_id = UNS_strange_signal
+		prerequisite = { focus = UNS_strange_signal	}
 		cost = 5
 		completion_reward = {
 		
 		}
 	}
+	
+	focus = {	
+		id = UNS_hail_the_emperor
+		x = 0
+		y = 1
+		relative_position_id = UNS_ships_arrival
+		prerequisite = { focus = UNS_ships_arrival }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_cultmech_techs
+		x = -2
+		y = 1
+		relative_position_id = UNS_hail_the_emperor
+		prerequisite = { focus = UNS_hail_the_emperor }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_cultmech
+			add_ideas = UNS_stc_blueprints
+		}
+	}
+	
+	focus = {
+		id = UNS_xenobiology
+		x = 0
+		y = 1
+		relative_position_id = UNS_cultmech_techs
+		prerequisite = { focus = UNS_cultmech_techs }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_resource_imp
+		x = 0
+		y = 1
+		relative_position_id = UNS_xenobiology
+		prerequisite = { focus = UNS_xenobiology }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_hive_cities
+		x = -4 
+		y = 1
+		relative_position_id = UNS_resource_imp
+		prerequisite = { focus = UNS_resource_imp }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_fast_civilians
+		x = -2 
+		y = 1
+		relative_position_id = UNS_resource_imp
+		prerequisite = { focus = UNS_resource_imp }
+		cost = 10
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_ultimatum_eqs
+		x = 0 
+		y = 1
+		relative_position_id = UNS_resource_imp
+		prerequisite = { focus = UNS_resource_imp }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_auxillia
+		x = 2
+		y = 1
+		relative_position_id = UNS_hail_the_emperor
+		prerequisite = { focus = UNS_hail_the_emperor }
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_conquer_xenos
+		x = -1
+		y = 1
+		relative_position_id = UNS_auxillia
+		prerequisite = { focus = UNS_auxillia }
+		mutually_exclusive = { focus = UNS_destroy_xenos }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_destroy_xenos
+		x = 1
+		y = 1
+		relative_position_id = UNS_auxillia
+		prerequisite = { focus = UNS_auxillia }
+		mutually_exclusive = { focus = UNS_conquer_xenos }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_produce_weapons
+		x = 1
+		y = 1
+		relative_position_id = UNS_conquer_xenos
+		prerequisite = { focus = UNS_conquer_xenos OR = UNS_destroy_xenos }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_guard_tanks
+		x = 0
+		y = 1
+		relative_position_id = UNS_produce_weapons
+		prerequisite = { focus = UNS_produce_weapons }
+		cost = 5
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_free_the_humanity
+		x = 2
+		y = 1
+		relative_position_id = UNS_ultimatum_eqs
+		prerequisite = { focus = UNS_ultimatum_eqs }
+		prerequisite = { focus = UNS_guard_tanks }
+		cost = 10
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = UNS_collaborate_ponies
+		x = -4
+		y = 1
+		relative_position_id = UNS_free_the_humanity
+		prerequisite = { focus = UNS_free_the_humanity }
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+	
+	

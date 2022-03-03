@@ -191,7 +191,11 @@ characters={
 			slot = political_advisor
 			idea_token = GRB_esmee_hamilton
 			allowed = { original_tag = GRB }
-			
+			available = {
+				NOT = {
+					has_completed_focus = GRB_british_council
+				}
+			}
 			traits = {
 				state_secretary
 			}
@@ -213,7 +217,11 @@ characters={
 			idea_token = GRB_darius_mason
 			
 			allowed = { original_tag = GRB }
-			
+			available = {
+				NOT = {
+					has_completed_focus = GRB_british_council
+				}
+			}
 			traits = { 
 				peacekeeper_state 
 			}

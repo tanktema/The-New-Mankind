@@ -6559,6 +6559,59 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = allow_new_designers
 			custom_effect_tooltip = swap_non_anarchy_advisors_designers
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRB_vickers_armstrong
+							has_idea = GRB_royal_arsenal
+							has_idea = GRB_porsche
+						}
+					}
+					add_ideas = GRB_british_anarch_armor
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRB_accuracy_international
+							has_idea = GRB_holland_and_holland
+							has_idea = GRB_westley_richards
+							has_idea = GRB_kalashnikov
+						}
+					}
+					add_ideas = GRB_british_anarch_equip
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRB_baratt_development
+							has_idea = GRB_vedanta_resources
+							has_idea = GRB_cnh_industrial
+						}
+					}
+					add_ideas = GRB_british_anarch_industr
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRB_supermarine
+							has_idea = GRB_bristol
+							has_idea = GRB_boeing
+						}
+					}
+					add_ideas = GRB_anarch_cocern_air
+				}
+				if = {
+					limit = {
+						OR = {
+							has_idea = GRB_mistral
+							has_idea = GRB_harland_and_wolves
+						}
+					}
+					add_ideas = GRB_anarch_cocern_naval
+				}
+			}
+				
 		}
 	}
 	
