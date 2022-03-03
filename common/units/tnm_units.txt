@@ -642,7 +642,7 @@ sub_units = {
 		max_organisation = 85
 		default_morale = 0.7
 		manpower = 1000
-
+		max_organisation = 70
 		#Misc Abilities
 		training_time = 150
 		suppression = 2
@@ -692,7 +692,7 @@ sub_units = {
 		suppression = 4
 		supply_consumption = 0.4
 		maximum_speed = 0.2
-		
+		max_organisation = 70
 		reliability_factor  = -0.2
 		urban = {
 			attack = 0.25
@@ -741,7 +741,7 @@ sub_units = {
 		default_morale = 0.4
 		manpower = 300
 		training_time = 180
-
+		
 		#Misc Abilities
 		weight = 0.15
 		supply_consumption = 0.03
