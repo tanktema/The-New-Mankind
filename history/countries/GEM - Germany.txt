@@ -189,7 +189,7 @@ recruit_character = GEM_shternell
 recruit_character = GEM_engelberger
 recruit_character = GEM_schoff
 recruit_character = GEM_hengstler
-
+recruit_character = GEM_adolf_hitler
 
 
 if = {
