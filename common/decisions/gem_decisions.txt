@@ -20,6 +20,7 @@ GEM_political_crisis_category = {
 					has_completed_focus = GEM_red_variant
 					has_completed_focus = GEM_people_spirit
 				}
+				has_country_flag = GEM_AF_FLAG
 			}
 		}
 		available = {
