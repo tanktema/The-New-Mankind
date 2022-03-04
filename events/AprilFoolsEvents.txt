@@ -245,6 +245,7 @@ country_event = {
 		name = af_gem.3.a
 		complete_national_focus = GEM_last_experiment
 		promote_character = GEM_adolf_hitler
+		set_cosmetic_tag = GEM_ADOLF
 		recruit_character = GEM_william_blazskowich
 	}
 }
@@ -290,6 +291,135 @@ country_event = {
 		ai_chance = { base = 1000 }
 	}
 }
+
+country_event = {
+	id = af_uns.2 
+	title = af_uns.2.t 
+	desc = af_uns.2.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_uns.2.a 
+		promote_character = UNS_the_emperor
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no 
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.25
+		}
+		set_cosmetic_tag = UNS_IMPERIUM
+		set_party_name = {
+			ideology = fascism
+			long_name = UNS_imperium_party_long
+			name = UNS_imperium_party	
+		}
+		hidden_effect = {
+			set_technology = { UNS_imperium_tech = 1 }
+			create_equipment_variant = {
+				name = "Baneblade"
+				parent = 0
+				
+				type = super_heavy_tank_chassis_3
+				
+				modules = {
+					main_armament_slot = tnm_benya_cannon
+					turret_type_slot = tank_super_heavy_four_man_tank_turret
+					suspension_type_slot = tank_hydropneumatic_suspension
+					armor_type_slot = tnm_adamant_armor
+					engine_type_slot = tank_gas_turbine_engine
+					special_type_slot_1 = tank_radio_5
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = anti_tank_guided_missiles
+					special_type_slot_4 = gun_computer
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 4
+				}
+				icon = "gfx/interface/technologies/UNS/UNS_benya_tank.dds"
+			}
+			
+			create_equipment_variant = {
+				name = "Leman Russ Annihilator"
+				parent = 0
+				
+				type = heavy_tank_chassis_3
+				
+				modules = {
+					main_armament_slot = tnm_tank_las_cannon
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_hydropneumatic_suspension
+					armor_type_slot = tnm_adamant_armor
+					engine_type_slot = tank_gas_turbine_engine
+					special_type_slot_1 = tank_radio_5
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = anti_tank_guided_missiles
+					special_type_slot_4 = gun_computer
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 4
+				}
+				icon = "gfx/interface/technologies/UNS/UNS_leman_russ_tank.dds"
+			}
+				
+			load_oob = "UNS_imperials" 
+		}
+	}
+}
+
+country_event = {
+	id = af_uns.3 
+	title = af_uns.3.t 
+	desc = af_uns.3.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_uns.3.a 
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+			set_autonomy = {
+				target = EQS 
+				autonomy_state = imperial_protectorate_land
+				end_wars = yes 
+				end_civil_wars = yes 
+			}
+			EQS = {
+				set_politics = {
+					ruling_party = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.7
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOT  = { has_dlc = "Together for Victory" }
+			}
+			puppet = EQS 
+			EQS = {
+				set_politics = {
+					ruling_party = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.7
+				}
+			}
+		}
+			
+	}
+}
+
+
 
 	
 country_event = { ############## WIP

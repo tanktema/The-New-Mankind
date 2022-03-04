@@ -2148,7 +2148,7 @@ technologies = {
 		} 
 	}
 	
-	gem_cybrnetics_t2 = {
+	gem_cybrnetics_t3 = {
 		category_all_infantry = {
 			attack  = 0.2
 			soft_attack = 0.2
@@ -2201,6 +2201,40 @@ technologies = {
 	gem_supertankarmor = {
 		enable_equipment_modules = {
 			tnm_gem_superarmor
+		}
+		categories = {
+			human_tech
+			human_army_upgrades
+			race_tech
+		} 
+	}
+	
+	UNS_imperium_tech = {
+		enable_equipments = {
+			super_heavy_tank_chassis_3
+			heavy_tank_chassis_3
+			magical_equipment_4
+			astartes_equipment_0
+			custodes_equipment_0
+			infantry_equipment_secret
+		}
+		enable_subunits = {
+			UNS_imperium_legio_custodes
+			UNS_imperium_legio_astartes
+			UNS_imperium_excertus_imperialis
+		}
+		enable_equipment_modules = {
+			tank_gas_turbine_engine
+			tnm_adamant_armor
+			tnm_benya_cannon
+			tnm_tank_las_cannon
+			tank_hydropneumatic_suspension
+			tank_heavy_three_man_tank_turret
+			tank_super_heavy_four_man_tank_turret
+			tank_radio_5
+			secondary_turret_small_cannon
+			anti_tank_guided_missiles
+			gun_computer
 		}
 		categories = {
 			human_tech

@@ -3614,7 +3614,7 @@ focus_tree = {
 		cost = 5
 		completion_reward = {
 			add_tech_bonus = {
-				category = infantry_equipment
+				category = infantry_weapons
 				uses = 2
 				bonus = 1
 			}

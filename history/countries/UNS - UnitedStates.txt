@@ -149,6 +149,8 @@ add_timed_idea = {
 
 add_ideas = {
 	UNS_army_force
+	no_poverty
+	no_lack_of_scientists
 	UNS_people_producting
 }
 
@@ -210,6 +212,7 @@ recruit_character = UNS_carlax
 recruit_character = UNS_lina_cypher
 recruit_character = UNS_hartmann
 recruit_character = UNS_statesoc_council
+recruit_character = UNS_the_emperor
 
 
 

@@ -33,3 +33,15 @@ spriteTypes = {
 		name = "GFX_statesoc_unity"
 		textureFile = "gfx/interface/mech/unity_level.dds"
 	}
+	spriteType = {
+		name = "GFX_ideology_neo_bolshevism"
+		texturefile = "gfx/interface/ideologies/neo_bolshevism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_tnm_militarism"
+		texturefile = "gfx/interface/ideologies/tnm_militarism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_tnm_human_supeiority"
+		texturefile = "gfx/interface/ideologies/tnm_human_supeiority.dds"
+	}

@@ -152,6 +152,8 @@ add_timed_idea = {
 add_ideas = {
 	UNS_people_producting
 	SOU_industry_broken_lvl1
+	no_poverty
+	no_lack_of_scientists
 }
 
 set_convoys = 0
