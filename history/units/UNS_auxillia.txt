@@ -1,0 +1,99 @@
+division_template = {
+	name = "Solar Auxillia"
+	is_locked = yes 
+	division_names_group = UNS_MAR_01
+	regiments = {
+		UNS_solar_auxillia = { x = 0 y = 0 }
+		UNS_solar_auxillia = { x = 0 y = 1 }
+		UNS_solar_auxillia = { x = 0 y = 2 }
+		UNS_solar_auxillia = { x = 0 y = 3 }
+		UNS_solar_auxillia = { x = 1 y = 0 }
+		UNS_solar_auxillia = { x = 1 y = 1 }
+		UNS_solar_auxillia = { x = 1 y = 2 }
+		UNS_solar_auxillia = { x = 2 y = 0 }
+		UNS_solar_auxillia = { x = 2 y = 1 }
+		UNS_solar_auxillia = { x = 2 y = 2 }
+		
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+
+
+units = {
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Solar Auxillia"
+		location = 3045
+		division_template = "Solar Auxillia"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+}

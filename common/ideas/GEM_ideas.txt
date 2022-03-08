@@ -2,7 +2,7 @@ ideas = {
 	country = {	
 		GEM_polit_crisis = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				political_advisor_cost_factor = 1
@@ -19,7 +19,7 @@ ideas = {
 		}
 		GEM_military_ration_system = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				conscription_factor = 0.2
@@ -30,7 +30,7 @@ ideas = {
 		}
 		GEM_more_food_for_workers = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
@@ -41,7 +41,7 @@ ideas = {
 		}
 		GEM_equal_rations = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				MONTHLY_POPULATION = 0.1
@@ -50,7 +50,7 @@ ideas = {
 		}
 		GEM_no_xenophobia = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				non_core_manpower = 0.2
@@ -60,7 +60,7 @@ ideas = {
 		}
 		GEM_no_xenos = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				non_core_manpower = -0.5
@@ -71,7 +71,7 @@ ideas = {
 		}
 		GEM_ss_stormtroopers = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				drift_defence_factor = 0.4
@@ -82,7 +82,7 @@ ideas = {
 		}
 		GEM_coups_idea = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				production_oil_factor = -0.1
@@ -93,7 +93,7 @@ ideas = {
 		}
 		GEM_ss_disbanding_idea = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				drift_defence_factor = -0.4
@@ -103,7 +103,7 @@ ideas = {
 		}
 		GEM_ethnos_cleanups = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				MONTHLY_POPULATION = -0.2
@@ -113,7 +113,7 @@ ideas = {
 		}
 		GEM_race_power = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				war_support_factor = 0.2
@@ -122,7 +122,7 @@ ideas = {
 		}
 		GEM_military_police = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				drift_defence_factor = 0.4
@@ -132,7 +132,7 @@ ideas = {
 		}
 		GEM_people_militarization = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				conscription_factor = 0.3
@@ -141,7 +141,7 @@ ideas = {
 		}
 		GEM_limited_xepansion = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				conscription = 0.01
@@ -151,7 +151,7 @@ ideas = {
 		}
 		GEM_unlimited_expansion = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				conscription = 0.015
@@ -175,7 +175,7 @@ ideas = {
 		}
 		GEM_brand_800 = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				intelligence_agency_defense = 1
@@ -186,7 +186,7 @@ ideas = {
 		}
 		GEM_natives_police = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				non_core_manpower = 0.2
@@ -195,7 +195,7 @@ ideas = {
 		}
 		GEM_milcondit = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				conscription = 0.01
@@ -211,7 +211,7 @@ ideas = {
 		}
 		GEM_prewarprep = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
@@ -223,7 +223,7 @@ ideas = {
 		}
 		GEM_first_son_rule = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				weekly_manpower = 500
@@ -231,7 +231,7 @@ ideas = {
 		}
 		GEM_double_rations_rule = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				MONTHLY_POPULATION = 0.5
@@ -239,7 +239,7 @@ ideas = {
 		}
 		GEM_gimmlerunge = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				conscription_factor = 0.2
@@ -247,7 +247,7 @@ ideas = {
 		}
 		GEM_youthtrain = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				training_time_army_factor = -0.2
@@ -271,7 +271,7 @@ ideas = {
 		}
 		GEM_know_enemy = {
 			removal_cost = -1
-			allowed = { original_tag = GEM }
+			allowed = { always = yes }
 			
 			modifier = {
 				army_attack_factor = 0.1

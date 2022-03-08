@@ -94,6 +94,11 @@ focus_tree = {
 			news_event = {
 				id = uns.8
 			}
+			hidden_effect = {
+				country_event = {
+					id = af_uns.1 days = 1
+				}
+			}
 			add_ideas = UNS_equestria_depence
 			acceptance_expand = yes 
 			custom_effect_tooltip = expand_acceptance_tt
@@ -6935,7 +6940,10 @@ focus_tree = {
 		prerequisite = { focus = UNS_strange_signal	}
 		cost = 5
 		completion_reward = {
-		
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.15
+			}
 		}
 	}
 	
@@ -6947,7 +6955,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_ships_arrival }
 		cost = 5
 		completion_reward = {
-		
+			country_event = { id = af_uns.2 days = 1 }
 		}
 	}
 	
@@ -6972,7 +6980,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_cultmech_techs }
 		cost = 5
 		completion_reward = {
-		
+			add_ideas = UNS_xenobiology_idea
 		}
 	}
 	
@@ -6984,7 +6992,40 @@ focus_tree = {
 		prerequisite = { focus = UNS_xenobiology }
 		cost = 5
 		completion_reward = {
-		
+			capital_scope = {
+				add_resource = {
+					type = steel
+					amount = 500
+				}
+				add_resource = {
+					type = tungsten
+					amount = 500
+				}
+				add_resource = {
+					type = oil
+					amount = 500
+				}
+			}
+			48 = {
+				add_resource = {
+					type = rubber
+					amount = 500
+				}
+				add_resource = {
+					type = chromium
+					amount = 500
+				}
+			}
+			18 = {
+				add_resource = {
+					type = aluminium
+					amount = 500
+				}
+				add_resource = {
+					type = crystals
+					amount = 500
+				}
+			}
 		}
 	}
 	
@@ -6996,7 +7037,10 @@ focus_tree = {
 		prerequisite = { focus = UNS_resource_imp }
 		cost = 5
 		completion_reward = {
-		
+			every_owned_state = {
+				set_state_category = megalopolis
+				add_manpower = 150000
+			}
 		}
 	}
 	
@@ -7008,7 +7052,14 @@ focus_tree = {
 		prerequisite = { focus = UNS_resource_imp }
 		cost = 10
 		completion_reward = {
-		
+			add_offsite_building = {
+				type = industrial_complex
+				level = 20
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 20
+			}
 		}
 	}
 	
@@ -7020,7 +7071,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_resource_imp }
 		cost = 5
 		completion_reward = {
-		
+			country_event = { id = af_uns.3 days = 5 }
 		}
 	}
 	
@@ -7032,7 +7083,10 @@ focus_tree = {
 		prerequisite = { focus = UNS_hail_the_emperor }
 		cost = 5
 		completion_reward = {
-			
+			custom_effect_tooltip = recruit_UNS_auxillia
+			hidden_effect = {
+				load_oob = "UNS_auxillia"
+			}
 		}
 	}
 	
@@ -7045,7 +7099,7 @@ focus_tree = {
 		mutually_exclusive = { focus = UNS_destroy_xenos }
 		cost = 5
 		completion_reward = {
-		
+			add_ideas = GEM_natives_police
 		}
 	}
 	
@@ -7058,7 +7112,7 @@ focus_tree = {
 		mutually_exclusive = { focus = UNS_conquer_xenos }
 		cost = 5
 		completion_reward = {
-		
+			add_ideas = GEM_no_xenos
 		}
 	}
 	
@@ -7070,7 +7124,14 @@ focus_tree = {
 		prerequisite = { focus = UNS_conquer_xenos OR = UNS_destroy_xenos }
 		cost = 5
 		completion_reward = {
-		
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 10
+				add_building_construction = {
+					type = arms_factory
+					level = 10
+					instant_build = yes 
+				}
+			}
 		}
 	}
 	
@@ -7082,7 +7143,16 @@ focus_tree = {
 		prerequisite = { focus = UNS_produce_weapons }
 		cost = 5
 		completion_reward = {
-		
+			add_equipment_to_stockpile = {
+				type = super_heavy_tank_chassis
+				amount = 500
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = heavy_tank_chassis
+				amount = 500
+				producer = ROOT 
+			}
 		}
 	}
 	
@@ -7095,7 +7165,21 @@ focus_tree = {
 		prerequisite = { focus = UNS_guard_tanks }
 		cost = 10
 		completion_reward = {
-		
+			every_other_country = {
+				limit = {
+					is_human_race = yes 
+				}
+				ROOT = {
+					declare_war_on = { 
+						type = annex_everything
+						target = PREV 
+					}
+				}
+				every_core_state = {
+					add_core_of = ROOT 
+				}
+				country_event = { id = af_uns.4 days = 5 }
+			}	
 		}
 	}
 	
@@ -7105,10 +7189,254 @@ focus_tree = {
 		y = 1
 		relative_position_id = UNS_free_the_humanity
 		prerequisite = { focus = UNS_free_the_humanity }
+		mutually_exclusive = { focus = UNS_decrease_pony_contacts }
 		cost = 5
 		completion_reward = {
-			
+			give_guarantee = EQS 
+			give_guarantee = CRY 
+			give_guarantee = EQC
 		}
 	}
+	
+	focus = {
+		id = UNS_pony_armor
+		x = -2
+		y = 1
+		relative_position_id = UNS_collaborate_ponies 
+		prerequisite = { focus = UNS_collaborate_ponies }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = human_army_upgrades
+				uses = 5
+				bonus = 2
+			}
+
+		}
+	}
+	
+	focus = {
+		id = UNS_pony_auxillia
+		x = 0
+		y = 1
+		relative_position_id = UNS_collaborate_ponies 
+		prerequisite = { focus = UNS_collaborate_ponies }
+		cost = 5
+		completion_reward = {
+			add_manpower = 250000
+			hidden_effect = {
+				delete_unit_template_and_units = {
+					division_template = "U.S. Infantry Division"
+					disband = yes 
+				}
+			}
+			division_template = {
+				name = "Planet Defence Forces"
+				priority = 0
+				regiments = {
+					UNS_imperium_excertus_imperialis = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = { 
+					military_police = { x = 0 y = 0 }
+				} 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_pony_borders
+		x = 2
+		y = 1
+		relative_position_id = UNS_collaborate_ponies 
+		prerequisite = { focus = UNS_collaborate_ponies }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							NOT = {
+								OR = {
+									is_owned_by = UNS
+									is_owned_by = CRY 
+									is_owned_by = EQS 
+									is_owned_by = BUF
+									is_owned_by = DRG
+									is_owned_by = EQC
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						instant_build = yes
+						province = {
+							all_provinces = yes 
+							limit_to_border = yes 
+						}
+					}
+				}
+			}
+			CRY = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							NOT = {
+								OR = {
+									is_owned_by = UNS
+									is_owned_by = CRY 
+									is_owned_by = EQS 
+									is_owned_by = BUF
+									is_owned_by = DRG
+									is_owned_by = EQC
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						instant_build = yes
+						province = {
+							all_provinces = yes 
+							limit_to_border = yes 
+						}
+					}
+				}
+			}
+								
+		}
+	}
+	
+	focus = {
+		id = UNS_spo_focus
+		x = 0
+		y = 1
+		relative_position_id = UNS_pony_auxillia
+		prerequisite = { focus = UNS_pony_armor }
+		prerequisite = { focus = UNS_pony_auxillia }
+		prerequisite = { focus = UNS_pony_borders }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_native_army
+		}
+	}
+	
+	focus = {
+		id = UNS_prepare_to_attack
+		x = 0
+		y = 1
+		relative_position_id = UNS_spo_focus
+		prerequisite = { focus = UNS_spo_focus }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_angels_of_death_idea
+			add_ideas = UNS_war_preparation
+		}
+	}
+	
+	focus = {
+		id = UNS_decrease_pony_contacts
+		x = 2
+		y = 1
+		relative_position_id = UNS_free_the_humanity
+		prerequisite = { focus = UNS_free_the_humanity }
+		mutually_exclusive = { focus = UNS_collaborate_ponies }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_prepared_for_war
+		}
+	}
+	
+	focus = {
+		id = UNS_orbital_bombs
+		x = 0
+		y = 1
+		relative_position_id = UNS_decrease_pony_contacts
+		prerequisite = { focus = UNS_decrease_pony_contacts }
+		cost = 5
+		completion_reward = {
+			set_variable = { orbital_strikes_amount = 5 }
+			custom_effect_tooltip = available_orbital_bombings
+		}
+	}
+	
+	focus = {
+		id = UNS_expand_guard
+		x = -1
+		y = 1
+		relative_position_id = UNS_orbital_bombs
+		prerequisite = { focus = UNS_orbital_bombs }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_mobilization_expand
+			add_ideas = UNS_Production_military
+		}
+	}
+	
+	focus = {
+		id = UNS_land_integration
+		x = 1
+		y = 1
+		relative_position_id = UNS_orbital_bombs
+		prerequisite = { focus = UNS_orbital_bombs }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_native_army
+		}
+	}
+	
+	focus = {
+		id = UNS_prepare_for_great_crusade
+		x = 1
+		y = 1
+		relative_position_id = UNS_expand_guard
+		prerequisite = { focus = UNS_expand_guard }
+		prerequisite = { focus = UNS_land_integration }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_imperial_truth
+		}
+	}
+	
+	focus = {
+		id = UNS_start_the_crusade
+		x = 3
+		y = 1
+		relative_position_id = UNS_prepare_to_attack
+		prerequisite = { focus = UNS_prepare_to_attack OR = UNS_prepare_for_great_crusade }
+		cost = 5
+		completion_reward = {
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						OR = {
+							is_neighbor_of = ROOT 
+							is_neighbor_of = EQS 
+							is_neighbor_of = CRY 
+							is_neighbor_of = EQC 
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = annex_everything
+							target = PREV
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = start_the_great_crusade_imp
+		}
+	}
+	
 	
 	

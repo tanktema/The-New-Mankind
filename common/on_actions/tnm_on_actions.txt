@@ -300,6 +300,54 @@ on_actions = {
 		}
 	}
 	
+	on_monthly_UNS = {
+		effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = UNS_the_emperor
+						ruling_only = yes 
+					}
+				}
+				add_offsite_building = {
+					type = arms_factory
+					level = 5
+				}
+				every_owned_state = {
+					limit = {
+						NOT = {
+							is_core_of = ROOT 
+						}
+					}
+					random_list = {
+						5 = {
+							add_core_of = ROOT 
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = UNS_orbital_bombs
+					}
+					set_variable = { available_orbital_bombings = 5 }
+				}
+				if = {
+					limit = {
+						has_completed_focus = UNS_start_the_crusade
+					}
+					every_neighbor_country = {
+						ROOT = {
+							create_wargoal = {
+								type = annex_everything
+								target = PREV 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	on_monthly_GRB = {
 		effect = {
 			if = {

@@ -1,0 +1,108 @@
+division_template = {
+	name = "Excertus Imperialis"
+	division_names_group = UNS_MAR_01
+	regiments = {
+		UNS_imperium_excertus_imperialis = { x = 0 y = 0 }
+		UNS_imperium_excertus_imperialis = { x = 0 y = 1 }
+		UNS_imperium_excertus_imperialis = { x = 0 y = 2 }
+		UNS_imperium_excertus_imperialis = { x = 1 y = 0 }
+		UNS_imperium_excertus_imperialis = { x = 1 y = 1 }
+		UNS_imperium_excertus_imperialis = { x = 1 y = 2 }
+		UNS_imperium_excertus_imperialis = { x = 2 y = 0 }
+		UNS_imperium_excertus_imperialis = { x = 2 y = 1 }
+		UNS_imperium_excertus_imperialis = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Legio Astartes"
+	division_names_group = UNS_MAR_01
+	regiments = {
+		UNS_imperium_legio_astartes = { x = 0 y = 0 }
+		UNS_imperium_legio_astartes = { x = 0 y = 1 }
+		UNS_imperium_legio_astartes = { x = 0 y = 2 }
+		UNS_imperium_legio_astartes = { x = 1 y = 0 }
+		UNS_imperium_legio_astartes = { x = 1 y = 1 }
+		UNS_imperium_legio_astartes = { x = 1 y = 2 }
+		UNS_imperium_legio_astartes = { x = 2 y = 0 }
+		UNS_imperium_legio_astartes = { x = 2 y = 1 }
+		UNS_imperium_legio_astartes = { x = 2 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		field_hospital = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		maintenance_company = { x = 0 y = 3 }
+	}
+	priority = 2
+}
+
+division_template = {
+	name = "Legio Custodes"
+	is_locked = yes
+	division_names_group = UNS_MAR_01
+	regiments = {
+		UNS_imperium_legio_custodes = { x = 0 y = 0 }
+		UNS_imperium_legio_custodes = { x = 0 y = 1 }
+		UNS_imperium_legio_custodes = { x = 0 y = 2 }
+		UNS_imperium_legio_custodes = { x = 0 y = 3 }
+		UNS_imperium_legio_custodes = { x = 0 y = 4 }	
+		UNS_imperium_legio_custodes = { x = 1 y = 0 }
+		UNS_imperium_legio_custodes = { x = 1 y = 1 }
+		UNS_imperium_legio_custodes = { x = 1 y = 2 }
+		UNS_imperium_legio_custodes = { x = 1 y = 3 }
+		UNS_imperium_legio_custodes = { x = 1 y = 4 }
+
+	}
+	support = {
+		
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Leman Russ Regiment"
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 0 y = 2 }
+		heavy_armor = { x = 1 y = 0 }
+		heavy_armor = { x = 1 y = 1 }
+		heavy_armor = { x = 1 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		maintenance_company = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+
+division_template = {
+	name = "Baneblade Regiment"
+	regiments = {
+		super_heavy_armor = { x = 0 y = 0 }
+		super_heavy_armor = { x = 0 y = 1 }
+		super_heavy_armor = { x = 0 y = 2 }
+		super_heavy_armor = { x = 1 y = 0 }
+		super_heavy_armor = { x = 1 y = 1 }
+		super_heavy_armor = { x = 1 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		maintenance_company = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}

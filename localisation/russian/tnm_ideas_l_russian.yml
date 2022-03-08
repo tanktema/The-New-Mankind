@@ -502,3 +502,8 @@
     
     GEM_biomodification_idea:0 "Биомодификация"
     GEM_supply_bonus_idea:0 "Развитие снабжения"
+    
+    UNS_cultmech:0 "Культ Механикус"
+    UNS_stc_blueprints:0 "Использование СШК"
+    UNS_xenobiology_idea:0 "Ксенобиология"
+    UNS_imperial_truth:0 "Имперская Истина"

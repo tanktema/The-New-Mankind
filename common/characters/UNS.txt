@@ -151,7 +151,7 @@ characters={
 		
 		country_leader = {	
 			expire = 1965.1.1
-			ideology = nazism
+			ideology = tnm_militarism
 			traits = {
 				military_leader
 				human_leader
@@ -855,5 +855,76 @@ characters={
 		}
 	}
 	
+	UNS_the_emperor = {
+		name = UNS_the_emperor
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UNS/UNS_the_emperor.dds"
+			}
+		}
+		
+		country_leader={
+			desc="UNS_comm_desc"
+			ideology=tnm_human_supeiority
+			traits={ emperor_of_mankind }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	
+	UNS_carstodes = {
+		name = UNS_carstodes
+		portraits = {
+			army = {
+				large = "gfx/leaders/UNS/Carstodes.dds"
+				small = "gfx/interface/ideas/advisors/UNS/UNS_carstodes.dds"
+			}
+		}
+		
+		field_marshal = {
+			skill=8
+			attack_skill=10
+			defense_skill=10
+			planning_skill=1
+			logistics_skill=5
+			traits = { custodes_trait }
+		}
+	}
+	UNS_custodisi = {
+		name = UNS_custodisi
+		portraits = {
+			army = {
+				large = "gfx/leaders/UNS/Custodisi.dds"
+				small = "gfx/interface/ideas/advisors/UNS/UNS_custodisi.dds"
+			}
+		}
+		
+		field_marshal = {
+			skill=8
+			attack_skill=10
+			defense_skill=5
+			planning_skill=1
+			logistics_skill=10
+			traits = { custodes_trait }
+		}
+	}
+	UNS_wammudes = {
+		name = UNS_wammudes
+		portraits = {
+			army = {
+				large = "gfx/leaders/UNS/Wammudes.dds"
+				small = "gfx/interface/ideas/advisors/UNS/UNS_wammudes.dds"
+			}
+		}
+		
+		field_marshal = {
+			skill=8
+			attack_skill=10
+			defense_skill=10
+			planning_skill=1
+			logistics_skill=5
+			traits = { custodes_trait }
+		}
+	}
 	
 }

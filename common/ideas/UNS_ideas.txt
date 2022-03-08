@@ -971,9 +971,51 @@ ideas = {
 			}
 		}
 		
+		UNS_cultmech = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				research_speed_factor = 0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.15
+					soft_attack = 0.15
+					defense = 0.15
+				}
+			}
+		}
 		
-	
-				
+		UNS_stc_blueprints = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.25
+			}
+		}
+		
+		UNS_xenobiology_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				army_defence_factor = 0.15
+				army_attack_factor = 0.15
+			}
+		}
+		
+		UNS_imperial_truth = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				mobilization_speed = 0.5
+				conscription = 0.1
+				conscription_factor = 0.25
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.5
+			}
+		}
+
 	}
 	hidden_ideas = {
 		tech_park_idea_hidden_total = {

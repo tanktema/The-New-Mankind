@@ -275,7 +275,7 @@ country_event = {
 	id = af_uns.1
 	title = af_uns.1.t 
 	desc = af_uns.1.desc 
-	is_triggered_only = yes 
+	is_triggered_only = yes  
 	
 	option = {
 		name = af_uns.1.a 
@@ -300,8 +300,23 @@ country_event = {
 	is_triggered_only = yes 
 	
 	option = {
+		country_event = { id = af_uns.22 }
 		name = af_uns.2.a 
+	}
+}
+country_event = {
+	id = af_uns.22
+	title = af_uns.2.t 
+	desc = af_uns.22.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_uns.22.a 
 		promote_character = UNS_the_emperor
+		recruit_character = UNS_carstodes
+		recruit_character = UNS_wammudes
+		recruit_character = UNS_custodisi
 		set_politics = {
 			ruling_party = fascism
 			elections_allowed = no 
@@ -316,6 +331,7 @@ country_event = {
 			long_name = UNS_imperium_party_long
 			name = UNS_imperium_party	
 		}
+		set_major = yes
 		hidden_effect = {
 			set_technology = { UNS_imperium_tech = 1 }
 			create_equipment_variant = {
@@ -367,6 +383,12 @@ country_event = {
 			}
 				
 			load_oob = "UNS_imperials" 
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Legio Custodes\" division_template = \"Legio Custodes\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = UNS 
+				}
+			}
 		}
 	}
 }
@@ -386,10 +408,51 @@ country_event = {
 			}
 			set_autonomy = {
 				target = EQS 
-				autonomy_state = imperial_protectorate_land
-				end_wars = yes 
-				end_civil_wars = yes 
+				autonomy_state = impeiral_protectorate_land
 			}
+			EQS = {
+				set_politics = {
+					ruling_party = democratic
+				}
+				add_popularity = {
+					ideology = democratic 
+					popularity = 0.7
+				}
+			}
+			set_autonomy = {
+				target = CRY 
+				autonomy_state = impeiral_protectorate_land
+			}
+			CRY = { 
+				set_politics = {
+					ruling_party = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.7
+				}
+			}
+			set_autonomy = {
+				target = EQC 
+				autonomy_state = impeiral_protectorate_land
+			}
+			EQC = {
+				set_politics = {
+					ruling_party = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.7
+				}
+			}
+			
+		}
+		if = {
+			limit = {
+				NOT  = { has_dlc = "Together for Victory" }
+			}
+			puppet = EQS
+			puppet = CRY
 			EQS = {
 				set_politics = {
 					ruling_party = democratic
@@ -399,13 +462,7 @@ country_event = {
 					popularity = 0.7
 				}
 			}
-		}
-		if = {
-			limit = {
-				NOT  = { has_dlc = "Together for Victory" }
-			}
-			puppet = EQS 
-			EQS = {
+			CRY = {
 				set_politics = {
 					ruling_party = democratic
 				}
@@ -419,7 +476,49 @@ country_event = {
 	}
 }
 
-
+country_event = {
+	id = af_uns.4 
+	title = af_uns.4.t 
+	desc = af_uns.4.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_uns.4.a 
+		random_owned_state = {
+			transfer_state_to = FROM 
+			FROM = {
+				PREV = {
+					create_unit = {
+						division = "name = \"Space Wolves Company\" division_template = \"Legio Astartes\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = UNS 
+					}
+					create_unit = {
+						division = "name = \"Excertus Imperialis\" division_template = \"Excertus Imperialis\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = UNS 
+					}
+					create_unit = {
+						division = "name = \"Excertus Imperialis\" division_template = \"Excertus Imperialis\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = UNS 
+					}
+					create_unit = {
+						division = "name = \"Excertus Imperialis\" division_template = \"Excertus Imperialis\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = UNS 
+					}
+					create_unit = {
+						division = "name = \"Excertus Imperialis\" division_template = \"Excertus Imperialis\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = UNS 
+					}
+					create_unit = {
+						division = "name = \"Excertus Imperialis\" division_template = \"Excertus Imperialis\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = UNS 
+					}
+					
+				}
+			}
+		}	
+	}
+}
 
 	
 country_event = { ############## WIP

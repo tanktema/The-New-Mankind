@@ -137,3 +137,21 @@ scripted_gui = {
 			
 		}
 	}
+	
+	imperium_orbital_bombardment = { 
+		window_name = "imperium_orbital_bombardment_window"
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		
+		visible = {
+			ROOT = { original_tag = UNS }
+			OR = {
+				has_completed_focus = UNS_orbital_bombs
+				is_debug = yes 
+			} 
+		}
+		
+		effects = {
+		
+		}
+	}

@@ -52,3 +52,8 @@
     SOU_democratic_party_long:0 "Реформистская Партия Советского Союза"
     SOU_neutrality_party:0 "ДС"
     SOU_neutrality_party_long:0 "Династия Смоляных"
+    
+    GRB_anarcy_paty_long:0 "Народная Партия Британии"
+    GRB_anarcy_paty:0 "Народная Партия"
+    UNS_imperium_party_long:0 "Свет Имперской Истины"
+    UNS_imperium_party:0 "Власть Императора"

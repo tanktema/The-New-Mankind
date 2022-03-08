@@ -151,4 +151,7 @@
     UNS_ANCOM_communism_ADJ:0 "Американск."
     UNS_ANCOM_communism_DEF:0 "Братство Новой Америки"
     
-    
+    impeiral_protectorate_land:0 "Имперский Протекторат"
+    UNS_IMPERIUM_fascism:0 "Империум Человечества"
+    UNS_IMPERIUM_fascism_ADJ:0 "Имперск." 
+    UNS_IMPERIUM_fascism_DEF:0 "Империум Человечества"
