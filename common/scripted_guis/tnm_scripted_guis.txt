@@ -160,6 +160,16 @@ scripted_gui = {
 					state = FROM 
 					use_nuke = no
 				}
+				random_list = {
+					10 = {
+						FROM.Owner = {
+							delete_unit = {
+								state = FROM 
+								disband = no 
+							}
+						}
+					}
+				}
 			}
 		}
 		
