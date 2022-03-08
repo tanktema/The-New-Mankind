@@ -152,6 +152,20 @@ scripted_gui = {
 		}
 		
 		effects = {
+			big_red_button_state_click = {
+				add_to_variable = {
+					ROOT.available_orbital_bombings = -1
+				}
+				launch_nuke = {
+					state = FROM 
+					use_nuke = no
+				}
+			}
+		}
 		
+		triggers = {
+			big_red_button_state_click_enabled = {
+				check_variable = { ROOT.available_orbital_bombings > 0 }
+			}
 		}
 	}
