@@ -535,7 +535,7 @@ leader_traits = {
 		
 		research_speed_factor = 0.1
 		stability_factor = 0.03
-		democratic_drift = 0.03 
+		fascism_drift = 0.03 
 		
 	}
 	
