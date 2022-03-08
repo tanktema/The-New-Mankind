@@ -146,7 +146,7 @@ scripted_gui = {
 		visible = {
 			ROOT = { original_tag = UNS }
 			OR = {
-				has_completed_focus = UNS_orbital_bombs
+				ROOT = { has_completed_focus = UNS_orbital_bombs }
 				is_debug = yes 
 			} 
 		}
