@@ -864,7 +864,7 @@ characters={
 		}
 		
 		country_leader={
-			desc="UNS_comm_desc"
+			desc="UNS_emperor_desc"
 			ideology=tnm_human_supeiority
 			traits={ emperor_of_mankind }
 			expire="1989.1.1.1"
