@@ -156,18 +156,23 @@ scripted_gui = {
 				add_to_variable = {
 					ROOT.available_orbital_bombings = -1
 				}
-				launch_nuke = {
-					state = FROM 
-					use_nuke = no
+				ROOT = {
+					launch_nuke = {
+						state = PREV 
+						use_nuke = no
+					}
 				}
 				random_list = {
 					10 = {
 						FROM.Owner = {
 							delete_unit = {
-								state = FROM 
+								state = PREV 
 								disband = no 
 							}
 						}
+					}
+					90 = {
+					
 					}
 				}
 			}
@@ -176,6 +181,11 @@ scripted_gui = {
 		triggers = {
 			big_red_button_state_click_enabled = {
 				check_variable = { ROOT.available_orbital_bombings > 0 }
+				FROM = {
+					owner = {
+						has_war_with = ROOT 
+					}
+				}
 			}
 		}
 	}
