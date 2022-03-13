@@ -1,0 +1,364 @@
+HUM_country_management = {
+	HUM_raise_labour_unit = {
+		cost = 10
+
+		modifier = {
+			stability_weekly = -0.003
+			consumer_goods_factor = -0.01
+			production_speed_buildings_factor = 0.02
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 30
+          remove_effect = {
+			add_political_power = 25
+		}
+	}
+
+	HUM_improve_rationning = {
+		cost = 25
+
+		modifier = {
+			stability_weekly = 0.005
+			consumer_goods_factor = 0.01
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 30
+          remove_effect = {
+			add_stability = 0.05
+		}
+	}
+
+	HUM_improve_life = {
+		cost = 75
+
+		modifier = {
+			stability_weekly = 0.007
+			consumer_goods_factor = 0.02
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 30
+          remove_effect = {
+			add_stability = 0.10
+			add_political_power = 10
+		}
+	}
+
+	HUM_production_effort = {
+		cost = 50
+
+		modifier = {
+			stability_weekly = -0.004
+			production_factory_max_efficiency_factor = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_speed_buildings_factor = 0.05
+			consumer_goods_factor = -0.01
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+          remove_effect = {
+		}
+	}
+
+	HUM_ressource_economy = {
+		cost = 50
+
+		modifier = {
+			stability_weekly = -0.003
+			local_resources_factor = 0.10
+			production_lack_of_resource_penalty_factor = -0.20
+			consumer_goods_factor = 0.05
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+          remove_effect = {
+		}
+	}
+
+	HUM_buy_ressource_neighbour = {
+		cost = 65
+
+		available = {
+			num_of_civilian_factories > 3
+			num_of_military_factories > 1
+		}
+
+		modifier = {
+			production_lack_of_resource_penalty_factor = -0.50
+			consumer_goods_factor = 0.05
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+          remove_effect = {
+		}
+	}
+
+	HUM_buy_food_neighbour = {
+		cost = 65
+
+		available = {
+			num_of_civilian_factories > 1
+		}
+
+		modifier = {
+			stability_weekly = 0.001
+			consumer_goods_factor = -0.25
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+          remove_effect = {
+			add_stability = 0.05
+			add_political_power = 5
+		}
+	}
+}
+
+
+
+HUM_economic_action = {
+	HUM_civilian_economy_investement = {
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 30
+		  days_re_enable = 150
+          remove_effect = {
+		add_offsite_building = { type = industrial_complex level = 1 }
+		hidden_effect = { random_list = {
+  		   85 = { add_political_power = 10 }
+  		   10 = { country_event = { id = HUM.100  days = 7 } }
+  		   5 = { country_event = { id = HUM.101  days = 7 } }
+			}
+		}
+	}
+}
+
+	HUM_military_industry_investement = {
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 30
+		  days_re_enable = 200  
+          remove_effect = {
+		add_offsite_building = { type = arms_factory level = 1 }
+		hidden_effect = { random_list = {
+  		   85 = { add_political_power = 10 }
+  		   10 = { country_event = { id = HUM.102  days = 7 } }
+  		   5 = { country_event = { id = HUM.101  days = 7 } }
+			}
+		}
+	}
+}
+	HUM_attract_foreign_investement = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 14
+		  days_re_enable = 200  
+          remove_effect = {
+		add_timed_idea = { idea = HUM_foreign_investment  days = 50}
+		}
+	}
+}
+
+HUM_nuclear_power = {
+	HUM_build_power_plant = {
+			cost = 100
+			ai_will_do = {
+			factor = 50
+		}
+		modifier = {
+				consumer_goods_factor = 0.15
+		}
+
+          days_remove = 180
+          remove_effect = {
+		add_offsite_building = { type = nuclear_reactor level = 1 }
+		}
+	}
+
+	HUM_increase_output = {
+			cost = 40
+			ai_will_do = {
+			factor = 50
+		}
+		modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = -0.10
+		}
+
+          days_remove = 120
+          remove_effect = {
+			add_political_power = 5
+		}
+	}
+}
+
+
+HUM_UNO = {
+	form_UNO_UAS = {
+		icon = generic_form_nation
+
+		visible = {
+			ROOT = { is_guaranteed_by = UAS }
+			has_political_power > 500
+		}
+
+		available = {
+			has_completed_focus = RUS_UN_federation
+			OR = { has_completed_focus = UEN_UN_federation }	
+		}
+
+			cost = 200
+		allowed = {
+		}
+
+
+        days_remove = 14
+          remove_effect = {
+			add_timed_idea = { idea = HUM_recent_unification  days = 260 }
+
+		}
+		complete_effect = {
+        add_timed_idea = { idea = HUM_recent_unification days = 250 }
+			set_cosmetic_tag = UNO
+			set_global_flag = form_POL_HUN_UNION_flag
+				LIMIT = { tag = ROOT }
+				annex_country = { target = UAS transfer_troops = yes }
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = UAS
+						}
+					}
+					add_core_of = ROOT
+				}
+				UAS = {
+					every_unit_leader = {
+						set_nationality = ROOT
+					}
+				}
+			}			
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	form_UNO_RUS = {
+		icon = generic_form_nation
+
+		visible = {
+			ROOT = { is_guaranteed_by = RUS }
+			has_political_power > 500
+		}
+
+		available = {
+			has_completed_focus = UEN_UN_federation
+			OR = { has_completed_focus = UAS_UN_federation }	
+		}
+
+			cost = 200
+		allowed = {
+		}
+
+        days_remove = 14
+          remove_effect = {
+			country_event = {
+			}
+		}
+		complete_effect = {
+        add_timed_idea = { idea = HUM_recent_unification days = 250 }
+			set_cosmetic_tag = UNO
+			set_global_flag = form_POL_HUN_UNION_flag
+				LIMIT = { tag = ROOT }
+				annex_country = { target = RUS transfer_troops = yes }
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = RUS
+						}
+					}
+					add_core_of = ROOT
+				}
+				RUS = {
+					every_unit_leader = {
+						set_nationality = ROOT
+					}
+				}
+			}			
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	form_UNO_UEN = {
+		icon = generic_form_nation
+
+		visible = {
+			ROOT = { is_guaranteed_by = UEN }
+			has_political_power > 500
+		}
+
+		available = {
+			has_completed_focus = RUS_UN_federation
+			OR = { has_completed_focus = UAS_UN_federation }	
+		}
+
+			cost = 200
+		allowed = {
+		}
+
+        days_remove = 14
+          remove_effect = {
+			country_event = {
+			}
+		}
+		complete_effect = {
+        add_timed_idea = { idea = HUM_recent_unification days = 250 }
+			set_cosmetic_tag = UNO
+			set_global_flag = form_POL_HUN_UNION_flag
+				LIMIT = { tag = ROOT }
+				annex_country = { target = UEN transfer_troops = yes }
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = UEN
+						}
+					}
+					add_core_of = ROOT
+				}
+				UEN = {
+					every_unit_leader = {
+						set_nationality = ROOT
+					}
+				}
+			}			
+		ai_will_do = {
+			factor = 0
+		}
+	}
+

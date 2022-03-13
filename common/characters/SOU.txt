@@ -830,5 +830,131 @@ characters={
 			}
 		}
 	}
-
+	
+	SOU_cherdenko = {
+		name = SOU_cherdenko
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOU/Cherdenko.dds"
+			}
+		}
+		
+		country_leader = {
+			desc="SOU_cherdenko_desc"
+			ideology=stalinism
+			traits={ human_leader comm_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	
+	SOU_oleg_vodnik = {
+		name = SOU_oleg_vodnik
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Oleg.dds"
+				small = "gfx/interface/ideas/Advisors/SOU/Oleg.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { infantry_commander_hum }
+			skill = 3 
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+		}
+	}
+	
+	SOU_zhanna_agonskaya = {
+		name = SOU_zhanna_agonskaya
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Zhanna.dds"
+				small = "gfx/interface/ideas/Advisors/SOU/Zhanna.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { winter_specialist }
+			skill = 3 
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+	
+	SOU_nikolay_moskvin = {
+		name = SOU_nikolay_moskvin
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Nikolay.dds"
+				small = "gfx/interface/ideas/Advisors/SOU/Nikolay.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { tankist_commander_hum }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+	
+	SOU_nataila_volkova = {
+		name = SOU_nikolay_moskvin
+		portraits = {
+			army = {
+				large = "gfx/leaders/SOU/Natasha.dds"
+				small = "gfx/interface/ideas/Advisors/SOU/Natasha.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits = { infantry_commander_hum }
+			skill = 6
+			attack_skill = 6
+			defense_skill = 6
+			planning_skill = 5
+			logistics_skill = 4
+		}
+	}
+	
+	SOU_zelinsky = {
+		name = SOU_zelinsky
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/Advisors/SOU/Zelinsky.dds"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = SOU_zelinsky
+			
+			allowed = { original_tag = SOU }
+			traits = { nuclear_pacifist }
+		}
+	}
+	
+	SOU_dasha_fedorovich = {
+		name = SOU_dasha_fedorovich
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/Advisors/SOU/Dasha.dds"
+			}
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = SOU_dasha_fedorovich
+			
+			allowed = { original_tag = SOU }
+			traits = { army_mixed_trait }
+		}
+	}
 }	

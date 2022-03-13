@@ -1,0 +1,19 @@
+﻿### UAS Navy
+units = {
+	fleet = {
+		name = "U.S Navy"
+		naval_base = 10106
+		task_force = {
+			name = "Celestial Sea Command"
+			location = 10106
+			ship = { name = "Constellation" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "Coral Sea" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "America" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "Providence" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "Mahan" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "Little Rock" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "Griffonia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UAS } } }
+			ship = { name = "Farragut" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UAS } } }
+		}
+	}
+}

@@ -1,0 +1,146 @@
+﻿capital = 67
+
+oob = "ANZ_1984"
+
+set_research_slots = 1
+
+set_technology = {
+	atomic_research = 1
+	human_race = 1
+	infantry_weapons1 = 1
+   	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	tech_support = 1
+	transport = 1
+	infantry_weapons = 1
+	motorised_infantry = 1
+    tech_engineers = 1
+    tech_recon = 1
+    tech_military_police = 1
+    tech_maintenance_company = 1
+    tech_field_hospital = 1
+    tech_logistics_company = 1
+    tech_signal_company = 1
+	tech_mountaineers = 1
+	marines = 1
+	paratroopers = 1
+	
+	electronic_mechanical_engineering  = 1
+	radio = 1
+	mechanical_computing = 1
+	mechanised_infantry = 1
+	amphibious_mechanized_infantry = 1
+	infantry_weapons2 = 1
+	improved_infantry_weapons = 1
+	support_weapons = 1
+	support_weapons2 = 1
+	early_fighter = 1
+	CAS1 = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	artillery1 = 1
+	antiair2 = 1
+	antiair1 = 1
+	antitank1 = 1
+	antitank2 = 1
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	antiair1 = 1
+	interwar_antitank = 1
+	antitank1 = 1
+	basic_train = 1
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		amphibious_tank_chassis = 1
+		amphibious_drive = 1
+		advanced_light_tank_chassis = 1
+		basic_medium_tank_chassis = 1
+		improved_medium_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		improved_heavy_tank_chassis = 1
+		super_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		armor_tech_2 = 1
+		engine_tech_1 = 1
+		engine_tech_2 = 1
+		basic_train = 1
+	}
+}
+
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_0
+	amount = 100
+	producer = ANZ
+}
+add_equipment_to_stockpile = {
+	type = melee_equipment_0
+	amount = 2500
+	producer = ANZ
+}
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 2500
+	producer = ANS
+}
+add_tech_bonus = {
+	name = fighter_bonus
+	bonus = 1
+	uses = 1
+	technology = early_fighter
+}
+add_tech_bonus = {
+	name = bomber_bonus
+	bonus = 1
+	uses = 1
+	category = tactical_bomber
+}
+
+
+add_ideas = {
+	disarmed_nation
+	pre_industrial_society
+	closed_economy
+	human_armies
+	human_air_force
+	precarious_condition
+	radiation_poisoning
+	stranger
+	risk_of_famine
+	HUM_magic_ignorance
+	lack_of_scientists3
+	poverty1
+}
+
+set_war_support = 0.15
+set_stability = 0.75
+
+set_popularities = {
+	democratic = 75
+	fascism = 5
+	communism = 5
+	neutrality = 15
+}
+
+set_politics = {
+
+	ruling_party = democratic
+	last_election = "1000.10.10"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+recruit_character = ANZ_bob_hawke
+recruit_character = ANZ_joshua_benjamin_jeyaretnam
+recruit_character = ANZ_kriangsak_chamanan
+recruit_character = ANZ_bhumibol_adulyadej

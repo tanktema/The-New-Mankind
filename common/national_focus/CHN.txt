@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 2700 y = 1350 }
-	
+	shared_focus = CHN_strange_events
 	focus = {
 		id = destroy_thoraxian_opposition
 		icon = GFX_goal_chn_swords

@@ -1,0 +1,13 @@
+category = {
+	name = "DEFCON"
+	soundeffects = {
+		DEFCON
+	}
+	compressor = music_compressor
+
+	name = "Detente"
+	soundeffects = {
+		Detente
+	}
+	compressor = music_compressor
+}

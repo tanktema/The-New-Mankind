@@ -823,3 +823,31 @@ intelligence_agency = {
 	
 	default = { always = yes } 
 }
+
+######## Escalation '84 #######
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_uen
+	names = { "EIA" }
+	
+	default = { tag = UEN }
+	available = { original_tag = UEN }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_uas
+	names = { "CIA" }
+	
+	default = { tag = UAS }
+	available = { original_tag = UAS }
+}
+
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_rus
+	names = { "KGB" }
+	
+	default = { tag = RUS }
+	available = { original_tag = RUS }
+}

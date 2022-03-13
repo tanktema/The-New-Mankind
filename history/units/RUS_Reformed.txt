@@ -1,0 +1,140 @@
+﻿division_template = {
+	name = "Conscript Infantry Division"
+	division_names_group = UEN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Gvds. Mekhanizirovanaya Diviziya"
+
+	regiments = {
+	mechanized = { x = 0 y = 0 }
+	mechanized = { x = 0 y = 1 }
+    mechanized = { x = 0 y = 2 }
+    mechanized = { x = 1 y = 0 }
+	mechanized = { x = 1 y = 1 }
+    mot_artillery_brigade = { x = 1 y = 2 }
+	}
+	support = {
+		light_tank_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+
+division_template = {
+	name = "Tankovaya Diviziya"
+	division_names_group = RUS_ARM_01
+
+	regiments = {
+	light_armor = { x = 0 y = 0 }
+	light_armor = { x = 0 y = 1 }
+        motorized = { x = 1 y = 0 }
+	motorized = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }		
+	}
+}
+
+division_template = {
+	name = "Brigada Morskoi Pekhoty"
+
+	regiments = {
+	marine = { x = 0 y = 0 }
+	marine = { x = 0 y = 1 }
+    marine = { x = 1 y = 0 }
+    marine = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Gornostrelkovaya Diviziya"
+
+	regiments = {
+	mountaineers = { x = 0 y = 0 }
+	mountaineers = { x = 0 y = 1 }
+	mountaineers = { x = 1 y = 0 }
+	mountaineers = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+
+
+units = {
+	division = {
+		name = "Veteran Infantry Division"
+		location = 6771
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Volunteer Infantry Division"
+		location = 6771
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Light Infantry Division"
+		location = 6771
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Conscript Infantry Division"
+		location = 6771
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }		
+	division = {
+		name = "Yehidat Ha'Alpinistim (Isr.)"
+		location = 6771
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "810ya Morskaya Brigada"
+		location = 6771
+		division_template = "Brigada Morskoi Pekhoty"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "221ya Motorizovannyy Diviza"
+		location = 6771
+		division_template = "Gvds. Mekhanizirovanaya Diviziya"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "4ya Gvardeiskaya Tankovaya 'Kantemirovskaya' Divisiya"
+		location = 6771
+		division_template = "Tankovaya Diviziya"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0 }
+}

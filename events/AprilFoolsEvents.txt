@@ -2,7 +2,7 @@ add_namespace = af_uns
 add_namespace = af_grb
 add_namespace = af_sou
 add_namespace = af_gem 
-add_namespace = tnm_esc_collab
+
 
 country_event = {
 	id = af_grb.1 
@@ -333,6 +333,7 @@ country_event = {
 		}
 		set_major = yes
 		hidden_effect = {
+			remove_ideas = UNS_equestria_depence
 			set_technology = { UNS_imperium_tech = 1 }
 			create_equipment_variant = {
 				name = "Baneblade"
@@ -521,13 +522,130 @@ country_event = {
 }
 
 	
-country_event = { ############## WIP
-	id = tnm_esc_collab.1 
-	title = tnm_esc_collab.1.desc 
-	desc = tnm_esc_collab.1.t 
+country_event = { 
+	id = af_sou.1 
+	title = af_sou.1.t 
+	desc = af_sou.1.desc 
 	is_triggered_only = yes 
 	
 	option = {
-		name = tnm_esc_collab.1.a 
+		name = af_sou.1.a 
+		108 = {
+			transfer_state_to = UEN
+		}
+		216 = {
+			transfer_state_to = RUS
+		}
+		217 = {
+			transfer_state_to = RUS 
+		}
+		363 = {
+			transfer_state_to = UAS 
+			remove_core_of = GRB 
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_owned_by = STG 
+				}
+				add_core_of = SOU 
+				transfer_state_to = SOU 
+			}
+		}
+		set_country_flag = AF_SOU_FLAG
+		custom_effect_tooltip = af_sou_tooltip_desc
+		set_cosmetic_tag = SOU_REDALERT
+		promote_character = SOU_cherdenko
+		recruit_character = SOU_oleg_vodnik
+		recruit_character = SOU_zhanna_agonskaya
+		recruit_character = SOU_dasha_fedorovich
+		recruit_character = SOU_nikolay_moskvin
+		recruit_character = SOU_nataila_volkova
+		recruit_character = SOU_zelinsky
+		complete_national_focus = SOU_what_have_we_done
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = af_sou.11
+	title = af_sou.11.t 
+	desc = af_sou.11.desc 
+	is_triggered_only = yes 
+	option = {
+		name = af_sou.11.a 
+		country_event = { id = af_sou.12 }
+	}
+	option = {
+		name = af_sou.11.b 
+		country_event = { id = af_sou.1 }
+	}
+}
+
+country_event = {
+	id = af_sou.12
+	title = af_sou.12.t 
+	immediate = {
+		hidden_effect = {
+			SOU = {
+				108 = {
+					transfer_state_to = UEN
+				}
+				216 = {
+					transfer_state_to = RUS
+				}
+				217 = {
+					transfer_state_to = RUS 
+				}
+				363 = {
+					transfer_state_to = UAS 
+					remove_core_of = GRB 
+				}
+				hidden_effect = {
+					every_state = {
+						limit = {
+							is_owned_by = STG 
+						}
+						add_core_of = SOU 
+						transfer_state_to = SOU
+					} 
+				}
+				set_country_flag = AF_SOU_FLAG
+				custom_effect_tooltip = af_sou_tooltip_desc
+				set_cosmetic_tag = SOU_REDALERT
+				promote_character = SOU_cherdenko
+				recruit_character = SOU_oleg_vodnik
+				recruit_character = SOU_zhanna_agonskaya
+				recruit_character = SOU_dasha_fedorovich
+				recruit_character = SOU_nikolay_moskvin
+				recruit_character = SOU_nataila_volkova
+				recruit_character = SOU_zelinsky
+				complete_national_focus = SOU_what_have_we_done
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+	}
+	desc = af_sou.12.desc 
+	is_triggered_only = yes 
+	option = {
+		name = af_sou.12.a 
+		RUS = {
+			change_tag_from = ROOT 
+			set_variable = { eaw_welcome_screen = 1 }
+		}
+	}
+	option = {
+		name = af_sou.12.b 
+		UEN = {
+			change_tag_from = ROOT 
+			set_variable = { eaw_welcome_screen = 1 }
+		}
+	}
+	option = {
+		name = af_sou.12.c 
+		UAS = {
+			change_tag_from = ROOT 
+			set_variable = { eaw_welcome_screen = 1 }
+		}
 	}
 }

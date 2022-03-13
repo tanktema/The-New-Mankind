@@ -1,0 +1,24 @@
+﻿TAN_INF_01 = 
+{
+	name = "Tuvan Divisions"
+
+	for_countries = { TAN }
+
+	can_use = { always = yes }
+
+	division_types = { "infantry" }
+
+
+	fallback_name = "%dya Tuvanska Diviziya"
+
+	ordered =
+	{
+		1 = { "%dya Tuvanska Diviziya" }
+		2 = { "%dya Tuvanska Diviziya" }
+		3 = { "%dya Tuvanska Diviziya" }
+		4 = { "%dya Tuvanska Diviziya" }
+		5 = { "%dya Tuvanska Diviziya" }
+		6 = { "%dya Tuvanska Diviziya" }
+		8 = { "%dya Tuvanska Diviziya" }
+	}
+}

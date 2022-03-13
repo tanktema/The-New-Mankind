@@ -1,0 +1,81 @@
+characters={
+	SUO_kekkonen_dem ={
+		name=SUO_kekkonen_dem
+		portraits={
+			civilian={
+				large="gfx/leaders/SUO/kekkonen.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_UEN_COUNCIL_DESC"
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	SUO_kekkonen_neu ={
+		name=SUO_kekkonen_neu
+		portraits={
+			civilian={
+				large="gfx/leaders/SUO/kekkonen2.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_UEN_COUNCIL_DESC"
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	SUO_com={
+		name=SUO_com
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/UENcom.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	SUO_pekka_veikko_vennamo={
+		name=SUO_pekka_veikko_vennamo
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/highcouncileu.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=ultranationalism
+			traits={ warmonger }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	UEN_sabatier={
+		name=UEN_sabatier
+		portraits={
+			army={
+				large="gfx/leaders/UEN/christian.tga"
+				small="GFX_idea_EQS_soarin"
+			}
+		}
+		
+		field_marshal={
+			traits={ human_race_trait }
+			skill = 5
+			attack_skill = 2
+    		defense_skill = 3
+   			planning_skill = 2
+    		logistics_skill = 2
+		}
+	}
+}

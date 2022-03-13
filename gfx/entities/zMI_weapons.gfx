@@ -1,0 +1,88 @@
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_BEL_infantry_weapon_rifle_FNFAL_mesh"
+		file = "gfx/models/units/small_arms/weapon_BEL_rifle_FNFAL.mesh"
+	}
+}
+
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_FIN_infantry_weapon_rifle_M39_mesh"
+		file = "gfx/models/units/small_arms/weapon_FIN_rifle_M39.mesh"
+	}
+}
+
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_FRA_infantry_weapon_rifle_MAS-49-56_mesh"
+		file = "gfx/models/units/small_arms/weapon_FRA_rifle_MAS-49-56.mesh"
+	}
+}
+
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_SOV_infantry_weapon_rifle_SKS-45_mesh"
+		file = "gfx/models/units/small_arms/weapon_SOV_rifle SKS45.mesh"
+	}
+}
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_SOV_infantry_weapon_rifle_AK-47_mesh"
+		file = "gfx/models/units/small_arms/weapon_SOV_rifle_AK47.mesh"
+	}
+}
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_USA_infantry_weapon_rifle_M14_mesh"
+		file = "gfx/models/units/small_arms/M14_weapon.mesh"
+	}
+}
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_SWE_infantry_weapon_rifle_M96_mesh"
+		file = "gfx/models/units/small_arms/weapon_SWE_rifle_M96.mesh"
+	}
+}
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_SOV_infantry_weapon_mg_PPs-43_mesh"
+		file = "gfx/models/units/small_arms/weapon_SOV_mg_PPs43.mesh"
+	}
+}
+
+
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_FRA_infantry_weapon_mg_MAT49_mesh"
+		file = "gfx/models/units/small_arms/weapon_FRA_mg_MAT49.mesh"
+	}
+}
+
+#TN model
+objectTypes = {	
+	pdxmesh = {
+		name = "MI_UEN_infantry_weapon_rifle_FAL_mesh"
+		file = "gfx/models/units/small_arms/FAL_weapon.mesh"
+	}
+}
+
+objectTypes = {
+	pdxmesh = {	
+		name = "G3_weapon_mesh"
+		file = "gfx/models/units/small_arms/G3_weapon.mesh"
+	}
+}
+
+objectTypes = {	
+	pdxmesh = {
+		name = "infantry_weapon_mg_M16_mesh"
+		file = "gfx/models/units/small_arms/M16_weapon.mesh"
+	}
+}

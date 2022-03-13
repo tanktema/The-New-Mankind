@@ -1,0 +1,1079 @@
+characters={
+	UAS_army_council={
+		name=UAS_army_council
+		portraits={
+			civilian={
+				large="gfx/leaders/UAS/USjunta.tga"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_ARMY_COUNCIL_DESC"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits={ generallissimo }
+		}
+	}
+
+	UAS_congress={
+		name=UAS_congress
+		portraits={
+			civilian={
+				large="gfx/leaders/UAS/UScongress.tga"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_FEDERAL_COUNCIL_DESC"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits={ }
+		}
+	}
+
+	UAS_junta={
+		name=UAS_junta
+		portraits={
+			civilian={
+				large="gfx/leaders/UAS/USjunta.tga"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_ARMY_COUNCIL_DESC"
+			expire = "1965.1.1"
+			ideology = nazism
+			traits={ generallissimo }
+		}
+	}
+
+	UAS_worker_congress={
+		name=UAS_worker_congress
+		portraits={
+			civilian={
+				large="gfx/leaders/UAS/UScom.tga"
+			}
+		}
+		country_leader={
+			desc = "POLITICS_FEDERAL_COUNCIL_DESC"
+			expire = "1965.1.1"
+			ideology = leninism
+			traits={ }
+		}
+	}
+
+#Political advisors
+	UAS_philip_klutznick={
+		name=UAS_philip_klutznick
+		portraits={
+			army={
+				small=GFX_idea_UAS_philip_klutznick
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_philip_klutznick
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+
+	UAS_nahuel_moreno={
+		name=UAS_nahuel_moreno
+		portraits={
+			army={
+				small=GFX_idea_UAS_nahuel_moreno
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_nahuel_moreno
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				HUM_SA_trotskyist
+			}
+		}
+	}
+
+	UAS_jose_sarney={
+		name=UAS_jose_sarney
+		portraits={
+			army={
+				small=GFX_idea_UAS_jose_sarney
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_jose_sarney
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+				NOT = { has_government = fascism }
+				if = {
+						OR = {
+							has_completed_focus = UAS_Embassy_sunset
+					}
+				}
+			}
+			traits = {
+				HUM_democratic_oligarch
+			}
+		}
+	}
+
+	UAS_malcom_baldrige={
+		name=UAS_malcom_baldrige
+		portraits={
+			army={
+				small=GFX_idea_UAS_malcom_baldrige
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_malcom_baldrige
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+		}
+	}
+
+	UAS_william_webster={
+		name=UAS_william_webster
+		portraits={
+			army={
+				small=GFX_idea_UAS_william_webster
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_william_webster
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				prince_of_terror
+				head_of_intelligence
+			}
+		}
+	}
+
+	UAS_augusto_pinochet={
+		name=UAS_augusto_pinochet
+		portraits={
+			army={
+				small=GFX_idea_UAS_augusto_pinochet
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_augusto_pinochet
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+				NOT = { has_government = democratic }
+				if = {
+				}
+			}
+			traits = {
+				HUM_pinochet
+			}
+		}
+	}
+
+	UAS_nixon={
+		name=UAS_nixon
+		portraits={
+			army={
+				small=GFX_idea_UAS_nixon
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_nixon
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				HUM_nixon
+			}
+		}
+	}
+
+	UAS_ford={
+		name=UAS_ford
+		portraits={
+			army={
+				small=GFX_idea_UAS_ford
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_ford
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				HUM_ford
+			}
+		}
+	}
+
+	UAS_carter={
+		name=UAS_carter
+		portraits={
+			civilian={
+				large="gfx/leaders/UAS/jimmyc.tga"  
+			}
+			army={
+				small=GFX_idea_UAS_carter
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_carter
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			NOT = { has_government = communism }
+				if = {
+						OR = {
+							has_completed_focus = UAS_Contact_equestria
+					}
+						OR = {
+							NOT = { has_government = fascism }
+					}
+						OR = {
+							NOT = { has_country_leader = {
+				    		name = "Jimmy Carter"
+    						ruling_only = yes
+							} }
+					}
+				}
+			}
+			traits = {
+				HUM_carter
+			}
+		}
+	}
+
+	UAS_reagan={
+		name=UAS_reagan
+		portraits={
+			civilian={
+				large="gfx/leaders/UAS/ronaldr.tga"
+			}
+			army={
+				small=GFX_idea_UAS_reagan
+			}
+		}
+
+		advisor={
+			slot = political_advisor
+			idea_token = UAS_reagan
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+				NOT = { has_government = communism }
+				if = {
+						OR = {
+							has_completed_focus = UAS_Contact_equestria
+					}
+						OR = {
+							NOT = { has_country_leader = {
+				    		name = "Ronald Reagan"
+    						ruling_only = yes
+								}
+				 			}
+						}
+					}
+			}
+			traits = {
+				HUM_reagan
+			}
+		}
+	}
+
+#High command
+	UAS_william_depuy={
+		name=UAS_william_depuy
+		portraits={
+			army={
+				small=GFX_idea_UAS_william_depuy
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UAS_william_depuy
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				superior_firepower_expert
+			}
+		}
+	}
+
+	UAS_bennie_davis={
+		name=UAS_bennie_davis
+		portraits={
+			army={
+				small=GFX_idea_UAS_bennie_davis
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UAS_bennie_davis
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	UAS_jorge_anaya={
+		name=UAS_jorge_anaya
+		portraits={
+			army={
+				small=GFX_idea_UAS_jorge_anaya
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UAS_jorge_anaya
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+	UAS_meyer_edward={
+		name=UAS_meyer_edward
+		portraits={
+			army={
+				small=GFX_idea_UAS_meyer_edward
+			}
+		}
+		advisor={
+			slot = army_chief 
+			idea_token = UAS_meyer_edward
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_3
+			}
+		}
+	}
+
+	UAS_john_wickham={
+		name=UAS_john_wickham
+		portraits={
+			army={
+				small=GFX_idea_UAS_john_wickham
+			}
+		}
+		advisor={
+			slot = army_chief 
+			idea_token = UAS_john_wickham
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				army_chief_planning_2
+			}
+		}
+	}
+
+	UAS_charles_gabriel={
+		name=UAS_charles_gabriel
+		portraits={
+			army={
+				small=GFX_idea_UAS_charles_gabriel
+			}
+		}
+		advisor={
+			slot = air_chief 
+			idea_token = UAS_charles_gabriel
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				air_strategic_bombing_2
+			}
+		}
+	}
+
+	UAS_larry_welch={
+		name=UAS_larry_welch
+		portraits={
+			army={
+				small=GFX_idea_UAS_larry_welch
+			}
+		}
+		advisor={
+			slot = air_chief 
+			idea_token = UAS_larry_welch
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				air_air_superiority_2
+			}
+		}
+	}
+
+	UAS_hayward_thomas={
+		name=UAS_hayward_thomas
+		portraits={
+			army={
+				small=GFX_idea_UAS_hayward_thomas
+			}
+		}
+		advisor={
+			slot = navy_chief 
+			idea_token = UAS_hayward_thomas
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+		}
+	}
+
+	UAS_james_watkins={
+		name=UAS_james_watkins
+		portraits={
+			army={
+				small=GFX_idea_UAS_james_watkins
+			}
+		}
+		advisor={
+			slot = navy_chief 
+			idea_token = UAS_james_watkins
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				navy_carrier_2
+			}
+		}
+	}
+
+	UAS_saint_crosbie={
+		name=UAS_saint_crosbie
+		portraits={
+			army={
+				small=GFX_idea_UAS_saint_crosbie
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_saint_crosbie
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+				if = {
+						OR = {
+							has_completed_focus = UAS_armored_way
+					}
+				}
+			}
+			traits = {
+				army_armored_3
+			}
+		}
+	}
+
+	UAS_colin_powell={
+		name=UAS_colin_powell
+		portraits={
+			army={
+				small=GFX_idea_UAS_colin_powell
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_colin_powell
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				air_airborne_2
+			}
+		}
+	}
+
+	UAS_robert_barrow={
+		name=UAS_robert_barrow
+		portraits={
+			army={
+				small=GFX_idea_UAS_robert_barrow
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_robert_barrow
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				navy_amphibious_assault_2
+			}
+		}
+	}
+
+	UAS_paul_van_riper={
+		name=UAS_paul_van_riper
+		portraits={
+			army={
+				small=GFX_idea_UAS_paul_van_riper
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_paul_van_riper
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				army_commando_2
+				navy_amphibious_assault_1
+			}
+		}
+	}
+
+	UAS_norman_schwartzkopf={
+		name=UAS_norman_schwartzkopf
+		portraits={
+			army={
+				small=GFX_idea_UAS_norman_schwartzkopf
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_norman_schwartzkopf
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+				if = {
+						OR = {
+							has_completed_focus = UAS_train_NG
+					}
+				}
+			}
+			traits = {
+				army_infantry_2
+			}
+		}
+	}
+
+	UAS_lew_allen={
+		name=UAS_lew_allen
+		portraits={
+			army={
+				small=GFX_idea_UAS_lew_allen
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_lew_allen
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				air_bomber_interception_2
+			}
+		}
+	}
+
+	UAS_joseph_metcalf={
+		name=UAS_joseph_metcalf
+		portraits={
+			army={
+				small=GFX_idea_UAS_joseph_metcalf
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_joseph_metcalf
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+		}
+	}
+
+	UAS_basilio_lami={
+		name=UAS_basilio_lami
+		portraits={
+			army={
+				small=GFX_idea_UAS_basilio_lami
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UAS_basilio_lami
+			removal_cost = -1
+			allowed = {
+				original_tag = UAS
+			}
+			available = {
+			}
+			traits = {
+				air_naval_strike_2
+			}
+		}
+	}
+
+
+
+#OFFICERS
+
+	UAS_morgan={
+		name=UAS_morgan
+		portraits={
+			army={
+				large="gfx/leaders/UAS/USAHQ.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		field_marshal={
+			traits = { human_race_trait }
+			skill = 5
+			attack_skill = 2
+    		defense_skill = 3
+    		planning_skill = 2
+    		logistics_skill = 2
+		}
+	}
+
+	UAS_mark_bannon={
+		name=UAS_mark_bannon
+		portraits={
+			army={
+				large="gfx/leaders/UAS/cavalryscout.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait trait_reckless armor_officer trickster War_Hero }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	UAS_parker={
+		name=UAS_parker
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Riflemen.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait cavalry_officer }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UAS_jeremiah_sawyer={
+		name=UAS_jeremiah_sawyer
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Lightriflemen.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait ranger hill_fighter infantry_officer old_guard }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+
+	UAS_anton_carino={
+		name=UAS_anton_carino
+		portraits={
+			army={
+				large="gfx/leaders/UAS/assaultengineer.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait urban_assault_specialist fortress_buster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UAS_james_webb={
+		name=UAS_james_webb
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Smaw.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait urban_assault_specialist }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+
+	UAS_vance={
+		name=UAS_vance
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Rangers.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait ranger trickster }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	UAS_michael_thompson={
+		name=UAS_michael_thompson
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Mountaineer.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait trait_mountaineer hill_fighter }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	UAS_earl_davis={
+		name=UAS_earl_davis
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Marines.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait naval_invader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UAS_hanson={
+		name=UAS_hanson
+		portraits={
+			army={
+				large="gfx/leaders/UAS/Delta.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait commando trickster }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
+		}
+	}
+
+	UAS_doe={
+		name=UAS_doe
+		portraits={
+			army={
+				large="gfx/leaders/UAS/SEAL.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait naval_invader commando  }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UAS_uris={
+		name=UAS_uris
+		portraits={
+			army={
+				large="gfx/leaders/UAS/laadredeye.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait camouflage_expert }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+
+	UAS_paul_O_Neal_Monger={
+		name=UAS_paul_O_Neal_Monger
+		portraits={
+			army={
+				large="gfx/leaders/UAS/CV_captain.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { human_race_trait air_controller }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	UAS_george_thomas_coker={
+		name=UAS_george_thomas_coker
+		portraits={
+			army={
+				large="gfx/leaders/UAS/USA_captain.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { human_race_trait blue_water_expert }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 4
+			coordination_skill = 1
+		}
+	}
+
+	UAS_weston_tindall={
+		name=UAS_weston_tindall
+		portraits={
+			army={
+				large="gfx/leaders/UAS/NEW_captain.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { human_race_trait }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
+		}
+	}
+
+#EVENT CHARACTERS
+	UAS_reinhald_freefeather={
+		name=UAS_reinhald_freefeather
+		portraits={
+			army={
+				large="gfx/leaders/UAS/USA_grif_officer_land.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+				traits = { griffon_race_trait  }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+		}
+	}
+	UAS_velvet_solar={
+		name=UAS_velvet_solar
+		portraits={
+			army={
+				large="gfx/leaders/UAS/USA_pony_officer_land.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+				traits = { pony_race_trait trickster }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+		}
+	}
+	UAS_emile_dechaineux={
+		name=UAS_emile_dechaineux
+		portraits={
+			army={
+				large="gfx/leaders/UAS/USA_grif_officer_navy.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { griffon_race_trait green_water_expert  }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+	}
+
+	UAS_duke={
+		name=UAS_duke
+		portraits={
+			army={
+				large="gfx/leaders/UAS/david_duke.tga"
+				small="GFX_idea_UAS_generic_advisor"
+			}
+		}
+		
+		country_leader={
+			desc = ""
+			expire = "1965.1.1"
+			ideology = nazism
+			traits={ }
+		}
+	}
+
+
+}

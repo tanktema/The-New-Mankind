@@ -296,6 +296,7 @@ technologies = {
 		}
 		enable_equipments = {
 			sou_tesla_mark_2_eqpm
+
 		}
 		folder = {
 			name = human_folder

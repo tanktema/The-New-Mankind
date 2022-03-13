@@ -1,0 +1,35 @@
+﻿GENERIC_UEN_OPERATIVE_CODENAME_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_OPERATIVES
+
+	for_countries = { UEN }
+
+	type = codename
+
+	fallback_name = "Agent %d"
+
+	unique = {
+"Athína"
+"Warszawa"
+"København"
+"Brussel"
+"Beograd"
+"Wien"
+"Sofia"
+"Lëtzebuerg"
+"Asterdam"
+"Bern"
+"Oslo"
+"Tirana"
+"Stockholm"
+"Madrid"
+"Praha"
+"Berlin"
+"Lisboa"
+"Lefkosa"
+"Oslo"
+"Paris"
+"Budapest"
+"Bucuresti"
+"Roma"
+	}
+}

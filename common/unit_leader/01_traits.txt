@@ -255,8 +255,11 @@ leader_traits = {
 			sickness_chance = -2
 			skill_bonus_factor = 0.2
 			army_morale_factor = 0.1
+			no_supply_grace = 240
+			supply_consumption_factor = -0.25
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
+	

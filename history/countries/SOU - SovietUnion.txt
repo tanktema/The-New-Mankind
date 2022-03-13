@@ -220,7 +220,7 @@ recruit_character = SOU_semenov
 recruit_character = SOU_mustafov
 recruit_character = SOU_vitaliy_orlov
 recruit_character = SOU_emerald_dusk
-
+recruit_character = SOU_cherdenko
 
 
 if = {

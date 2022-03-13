@@ -20,6 +20,12 @@ on_actions = {
 						modifier = human_acceptance_politlevel
 					}
 				}
+				if = {
+					limit = {
+						is_ai = no 
+					}
+					set_variable = { eaw_welcome_screen = 1 }
+				}
 			}
 			#UNS = {
 			#	country_event = { id = uns.37 days = 210 }

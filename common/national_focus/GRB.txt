@@ -5951,7 +5951,7 @@ focus_tree = {
 			has_country_flag = GRB_AF_FLAG
 		}
 		cost = 5
-		
+		icon = GFX_goal_UNS_commdef
 		completion_reward = {
 			add_popularity = {
 				ideology = communism
@@ -5968,6 +5968,7 @@ focus_tree = {
 		relative_position_id = GRB_people_boiling
 		prerequisite = { focus = GRB_people_boiling }
 		cost = 5
+		icon = GFX_goal_UNS_commsuper
 		completion_reward = {
 			add_stability = -0.05
 			add_popularity = {
@@ -5981,6 +5982,7 @@ focus_tree = {
 		id = GRB_strange_witnesses
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_church
 		relative_position_id = GRB_people_boiling
 		prerequisite = { focus = GRB_people_boiling }
 		cost = 5
@@ -5998,6 +6000,7 @@ focus_tree = {
 		id = GRB_government_weakness
 		x = 0
 		y = 1
+		icon = GFX_goal_comm_government
 		relative_position_id = GRB_fear_the_future
 		prerequisite = { focus = GRB_fear_the_future }
 		cost = 5
@@ -6014,6 +6017,7 @@ focus_tree = {
 		id = GRB_first_seeds
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_comm
 		relative_position_id = GRB_strange_witnesses
 		prerequisite = { focus = GRB_strange_witnesses }
 		cost = 5
@@ -6032,6 +6036,7 @@ focus_tree = {
 		id = GRB_people_bund
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_attack_sou
 		relative_position_id = GRB_government_weakness
 		prerequisite = { focus = GRB_government_weakness }
 		prerequisite = { focus = GRB_first_seeds }
@@ -6054,6 +6059,7 @@ focus_tree = {
 		id = GRB_glory_to_the_captain
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_EQS_milmission
 		relative_position_id = GRB_people_bund
 		prerequisite = { focus = GRB_people_bund }
 		cost = 5
@@ -6072,6 +6078,7 @@ focus_tree = {
 		id = GRB_factories_to_people
 		x = -6
 		y = 1
+		icon = GFX_goal_GRB_olenian_facts
 		relative_position_id = GRB_glory_to_the_captain
 		prerequisite = { focus = GRB_glory_to_the_captain }
 		cost = 5
@@ -6102,6 +6109,7 @@ focus_tree = {
 		id = GRB_create_industrial_base
 		x = -2
 		y = 1
+		icon = GFX_goal_GRB_milind
 		relative_position_id = GRB_factories_to_people
 		prerequisite = { focus = GRB_factories_to_people }
 		cost = 5
@@ -6121,6 +6129,7 @@ focus_tree = {
 		id = GRB_narhoz_development
 		x = 0
 		y = 1
+		icon = GFX_goal_workers_power
 		relative_position_id = GRB_factories_to_people
 		prerequisite = { focus = GRB_factories_to_people }
 		cost = 5
@@ -6133,6 +6142,7 @@ focus_tree = {
 		id = GRB_big_london_railway
 		x = 2
 		y = 1
+		icon = GFX_goal_GEM_railroad
 		relative_position_id = GRB_factories_to_people
 		prerequisite = { focus = GRB_factories_to_people }
 		cost = 10
@@ -6158,6 +6168,7 @@ focus_tree = {
 		id = GRB_gun_assembly
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_quality
 		relative_position_id = GRB_create_industrial_base
 		prerequisite = { focus = GRB_create_industrial_base }
 		cost = 5
@@ -6177,6 +6188,7 @@ focus_tree = {
 		id = GRB_tools_giving
 		x = 0
 		y = 1
+		icon = GFX_goal_secondary_use
 		relative_position_id = GRB_narhoz_development
 		prerequisite = { focus = GRB_narhoz_development }
 		cost = 5
@@ -6189,6 +6201,7 @@ focus_tree = {
 		id = GRB_road_networks
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_road_networks
 		relative_position_id = GRB_big_london_railway
 		prerequisite = { focus = GRB_big_london_railway }
 		cost = 5
@@ -6207,6 +6220,7 @@ focus_tree = {
 		id = GRB_what_do_they_need
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_crops
 		available = {
 			has_completed_focus = GRB_reshaem_rynochek 
 		}
@@ -6225,6 +6239,7 @@ focus_tree = {
 		id = GRB_resource_search_anarch
 		x = -1
 		y = 1
+		icon = GFX_goal_SOU_resources
 		relative_position_id = GRB_what_do_they_need
 		prerequisite = { focus = GRB_what_do_they_need }
 		cost = 5
@@ -6237,6 +6252,7 @@ focus_tree = {
 		id = GRB_civilian_infra
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_infrastructure
 		relative_position_id = GRB_what_do_they_need
 		prerequisite = { focus = GRB_what_do_they_need }
 		cost = 5
@@ -6249,6 +6265,7 @@ focus_tree = {
 		id = GRB_new_lands_development
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_farming
 		relative_position_id = GRB_resource_search_anarch
 		prerequisite = { focus = GRB_resource_search_anarch }
 		cost = 5
@@ -6261,6 +6278,7 @@ focus_tree = {
 		id = GRB_rich_people
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_equality
 		relative_position_id = GRB_civilian_infra
 		prerequisite = { focus = GRB_civilian_infra }
 		cost = 5
@@ -6275,6 +6293,7 @@ focus_tree = {
 		id = GRB_no_more_money
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_equality
 		relative_position_id = GRB_new_lands_development 
 		prerequisite = { focus = GRB_new_lands_development }
 		prerequisite = { focus = GRB_rich_people }
@@ -6288,6 +6307,7 @@ focus_tree = {
 		id = GRB_stand_idle
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_sivispacem
 		relative_position_id = GRB_no_more_money
 		prerequisite = { focus = GRB_no_more_money }
 		cost = 5
@@ -6300,6 +6320,7 @@ focus_tree = {
 		id = GRB_self_defence
 		x = 6
 		y = 1
+		icon = GFX_goal_GRB_workers_protest
 		available = {
 			has_completed_focus = GRB_volunteer_divisions
 		}
@@ -6315,6 +6336,7 @@ focus_tree = {
 		id = GRB_preparation_courses
 		x = -2
 		y = 1
+		icon = GFX_goal_academy
 		relative_position_id = GRB_self_defence
 		prerequisite = { focus = GRB_self_defence }
 		cost = 5
@@ -6328,6 +6350,7 @@ focus_tree = {
 		id = GRB_capture_fleet
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_navy
 		relative_position_id = GRB_self_defence
 		prerequisite = { focus = GRB_self_defence }
 		cost = 5
@@ -6353,6 +6376,7 @@ focus_tree = {
 		id = GRB_retrain_civpilots
 		x = 2
 		y = 1
+		icon = GFX_goal_SOU_choise
 		relative_position_id = GRB_self_defence
 		prerequisite = { focus = GRB_self_defence }
 		cost = 5
@@ -6366,6 +6390,7 @@ focus_tree = {
 		id = GRB_give_weapons_to_people
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_rise_people
 		relative_position_id = GRB_preparation_courses
 		prerequisite = { focus = GRB_preparation_courses }
 		cost = 5
@@ -6378,6 +6403,7 @@ focus_tree = {
 		id = GRB_naval_study
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_New_dockyard
 		relative_position_id = GRB_capture_fleet
 		prerequisite = { focus = GRB_capture_fleet }
 		cost = 5
@@ -6390,6 +6416,7 @@ focus_tree = {
 		id = GRB_anarchy_fighters
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_fighters
 		relative_position_id = GRB_retrain_civpilots
 		prerequisite = { focus = GRB_retrain_civpilots }
 		cost = 5
@@ -6411,6 +6438,7 @@ focus_tree = {
 		id = GRB_no_surrender_no_retreat
 		x = 0
 		y = 1
+		icon = GFX_goal_mil_support
 		relative_position_id = GRB_naval_study
 		prerequisite = { focus = GRB_naval_study }
 		prerequisite = { focus = GRB_anarchy_fighters }
@@ -6429,6 +6457,7 @@ focus_tree = {
 		}
 		x = -2
 		y = 1
+		icon = GFX_goal_uns_vuz
 		relative_position_id = GRB_no_surrender_no_retreat 
 		prerequisite = { focus = GRB_no_surrender_no_retreat }
 		cost = 5 
@@ -6447,6 +6476,7 @@ focus_tree = {
 		id = GRB_control_naval_threads
 		x = 0
 		y = 1
+		icon = GFX_goal_uns_new_nav_doct
 		relative_position_id = GRB_no_surrender_no_retreat 
 		prerequisite = { focus = GRB_no_surrender_no_retreat }
 		cost = 5 
@@ -6463,6 +6493,7 @@ focus_tree = {
 		id = GRB_airfields_anarchy
 		x = 2
 		y = 1
+		icon = GFX_goal_SOU_airfields
 		relative_position_id = GRB_no_surrender_no_retreat 
 		prerequisite = { focus = GRB_no_surrender_no_retreat }
 		cost = 5 
@@ -6481,6 +6512,7 @@ focus_tree = {
 		id = GRB_military_doctrine
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_recruitment
 		relative_position_id = GRB_open_academy
 		prerequisite = { focus = GRB_open_academy }
 		cost = 5
@@ -6498,6 +6530,7 @@ focus_tree = {
 		id = GRB_fleet_development
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_breaking_sea
 		relative_position_id = GRB_control_naval_threads 
 		prerequisite = { focus = GRB_control_naval_threads }
 		cost = 5
@@ -6510,6 +6543,7 @@ focus_tree = {
 		id = GRB_develop_air_doctrine
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_sky_doctrine
 		relative_position_id = GRB_airfields_anarchy
 		prerequisite = { focus = GRB_airfields_anarchy }
 		cost = 5
@@ -6526,6 +6560,7 @@ focus_tree = {
 		id = GRB_british_people_army
 		x = 0 
 		y = 1
+		icon = GFX_goal_GEM_prewar_preparation
 		relative_position_id = GRB_fleet_development 
 		prerequisite = { focus = GRB_fleet_development }
 		prerequisite = { focus = GRB_develop_air_doctrine }
@@ -6540,6 +6575,7 @@ focus_tree = {
 		id = GRB_freedom_and_order
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_contacts_people
 		relative_position_id = GRB_glory_to_the_captain
 		prerequisite = { focus = GRB_glory_to_the_captain }
 		cost = 5
@@ -6553,6 +6589,7 @@ focus_tree = {
 		id = GRB_british_council
 		x = -2
 		y = 1
+		icon = GFX_goal_UNS_enhance
 		relative_position_id = GRB_freedom_and_order
 		prerequisite = { focus = GRB_freedom_and_order }
 		cost = 5
@@ -6619,6 +6656,7 @@ focus_tree = {
 		id = GRB_unite_the_people
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_oppose_nazis
 		relative_position_id = GRB_freedom_and_order
 		prerequisite = { focus = GRB_freedom_and_order }
 		cost = 5
@@ -6635,6 +6673,7 @@ focus_tree = {
 		id = GRB_stop_institutes
 		x = 2
 		y = 1
+		icon = GFX_goal_GRB_who_rules
 		relative_position_id = GRB_freedom_and_order
 		prerequisite = { focus = GRB_freedom_and_order }
 		cost = 5
@@ -6647,6 +6686,7 @@ focus_tree = {
 		id = GRB_reshaem_rynochek
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_unity_focus
 		relative_position_id = GRB_british_council
 		prerequisite = { focus = GRB_british_council }
 		cost = 5
@@ -6659,6 +6699,7 @@ focus_tree = {
 		id = GRB_solve_native_problem
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_native_officers
 		relative_position_id = GRB_unite_the_people
 		prerequisite = { focus = GRB_unite_the_people }
 		cost = 5
@@ -6671,6 +6712,7 @@ focus_tree = {
 		id = GRB_volunteer_divisions
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_milpolice
 		relative_position_id = GRB_stop_institutes
 		prerequisite = { focus = GRB_stop_institutes }
 		cost = 5
@@ -6683,6 +6725,7 @@ focus_tree = {
 		id = GRB_freedom_for_everyone
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_opposition
 		relative_position_id = GRB_solve_native_problem
 		prerequisite = { focus = GRB_solve_native_problem }
 		prerequisite = { focus = GRB_reshaem_rynochek }
@@ -6697,6 +6740,7 @@ focus_tree = {
 		id = GRB_closing_economy
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_british_heroes
 		relative_position_id = GRB_freedom_for_everyone
 		prerequisite = { focus = GRB_freedom_for_everyone }
 		cost = 5
@@ -6709,6 +6753,7 @@ focus_tree = {
 		id = GRB_prewar_preparation_anarch
 		x = -2
 		y = 1
+		icon = GFX_goal_UNS_society
 		relative_position_id = GRB_closing_economy
 		prerequisite = { focus = GRB_closing_economy }
 		cost = 5
@@ -6721,6 +6766,7 @@ focus_tree = {
 		id = GRB_ideological_preparation
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_fate_kennedy
 		relative_position_id = GRB_closing_economy
 		prerequisite = { focus = GRB_closing_economy }
 		cost = 5
@@ -6733,6 +6779,7 @@ focus_tree = {
 		id = GRB_look_for_supporters
 		x = 2
 		y = 1
+		icon = GFX_goal_GRB_LSC
 		relative_position_id = GRB_closing_economy
 		prerequisite = { focus = GRB_closing_economy }
 		cost = 5
@@ -6756,6 +6803,7 @@ focus_tree = {
 		id = GRB_free_the_brothers
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_press_dicts
 		relative_position_id = GRB_ideological_preparation
 		prerequisite = { focus = GRB_ideological_preparation }
 		prerequisite = { focus = GRB_prewar_preparation_anarch }
@@ -6770,6 +6818,7 @@ focus_tree = {
 		id = GRB_free_america
 		x = -4
 		y = 1
+		icon = GFX_goal_GRB_pora_communizdit
 		relative_position_id = GRB_free_the_brothers 
 		prerequisite = { focus = GRB_free_the_brothers }
 		cost = 5
@@ -6784,6 +6833,7 @@ focus_tree = {
 		id = GRB_free_russia
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_people_support
 		relative_position_id = GRB_free_the_brothers 
 		prerequisite = { focus = GRB_free_the_brothers }
 		cost = 5
@@ -6798,6 +6848,7 @@ focus_tree = {
 		id = GRB_free_germany
 		x = 4
 		y = 1
+		icon = GFX_goal_GEM_end_tyranny
 		relative_position_id = GRB_free_the_brothers 
 		prerequisite = { focus = GRB_free_the_brothers }
 		cost = 5
@@ -6812,6 +6863,7 @@ focus_tree = {
 		id = GRB_finish_millenial_slavery
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_EQS_attack
 		relative_position_id = GRB_free_america
 		prerequisite = { focus = GRB_free_america }
 		cost = 5
@@ -6835,6 +6887,7 @@ focus_tree = {
 		id = GRB_free_crystal_ponies
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_invade_CRY
 		relative_position_id = GRB_free_america
 		prerequisite = { focus = GRB_free_america }
 		cost = 5
@@ -6849,6 +6902,7 @@ focus_tree = {
 		id = GRB_second_stg_revolution
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_invade_STG
 		relative_position_id = GRB_free_russia
 		prerequisite = { focus = GRB_free_russia }
 		cost = 5
@@ -6863,6 +6917,7 @@ focus_tree = {
 		id = GRB_free_the_north
 		x = -2
 		y = 1
+		icon = GFX_goal_SOU_northern_crusade
 		relative_position_id = GRB_free_germany
 		prerequisite = { focus = GRB_free_germany }
 		cost = 5
@@ -6890,6 +6945,7 @@ focus_tree = {
 		id = GRB_free_changelings
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_crush_bugs
 		relative_position_id = GRB_free_germany 
 		prerequisite = { focus = GRB_free_germany }
 		cost = 5
@@ -6912,6 +6968,7 @@ focus_tree = {
 		id = GRB_northern_friends 
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_big_hunt
 		relative_position_id = GRB_second_stg_revolution
 		prerequisite = { focus = GRB_second_stg_revolution }
 		prerequisite = { focus = GRB_free_crystal_ponies }
@@ -6956,6 +7013,7 @@ focus_tree = {
 		id = GRB_southern_friends
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_deers
 		relative_position_id = GRB_second_stg_revolution
 		prerequisite = { focus = GRB_second_stg_revolution }
 		prerequisite = { focus = GRB_free_the_north }
@@ -6995,6 +7053,7 @@ focus_tree = {
 				}
 			}
 		}
+		icon = GFX_goal_GRB_wh40k_reference
 		x = 1
 		y = 1
 		relative_position_id = GRB_northern_friends

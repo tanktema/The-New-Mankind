@@ -1,0 +1,194 @@
+﻿add_namespace = cityfall
+
+# The Fall UNITY
+news_event = {
+	id = cityfall.190
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.190"}
+	title = cityfall.190.t
+	desc = cityfall.190.d
+	picture = GFX_news_event_vanhoover_surrenders
+
+	major = yes
+
+	immediate = {
+		set_global_flag = fall_of_unity
+		108 = { set_state_flag = state_has_fallen }
+		FROM.FROM = { save_event_target_as = old_controller }
+		ROOT = { save_event_target_as = new_controller }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cityfall.190.a
+		trigger = { TAG = event_target:old_controller }
+	}
+	option = {
+		name = cityfall.190.b
+		trigger = { TAG = event_target:new_controller }
+	}
+	option = {
+		name = cityfall.190.c
+		trigger = {
+			NOT = {
+				TAG = event_target:old_controller
+				TAG = event_target:new_controller
+			}
+		}
+	}
+}
+
+#SOVIET
+# The Fall #NEW MOSCOW
+news_event = {
+	id = cityfall.191
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.190"}
+	title = cityfall.191.t
+	desc = cityfall.191.d
+	picture = GFX_news_event_moscow_fall
+
+	major = yes
+
+	immediate = {
+		set_global_flag = fall_of_new_moscow
+		216 = { set_state_flag = state_has_fallen }
+		FROM.FROM = { save_event_target_as = old_controller }
+		ROOT = { save_event_target_as = new_controller }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cityfall.191.a
+		trigger = { TAG = event_target:old_controller }
+	}
+	option = {
+		name = cityfall.191.b
+		trigger = { TAG = event_target:new_controller }
+	}
+	option = {
+		name = cityfall.191.c
+		trigger = {
+			NOT = {
+				TAG = event_target:old_controller
+				TAG = event_target:new_controller
+			}
+		}
+	}
+}
+
+# The Fall #Nadezhda 
+news_event = {
+	id = cityfall.192
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.190"}
+	title = cityfall.192.t
+	desc = cityfall.192.d
+	picture = GFX_news_event_vanhoover_surrenders
+
+	major = yes
+
+	immediate = {
+		set_global_flag = fall_of_nadezhda 
+		217 = { set_state_flag = state_has_fallen }
+		FROM.FROM = { save_event_target_as = old_controller }
+		ROOT = { save_event_target_as = new_controller }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cityfall.192.a
+		trigger = { TAG = event_target:old_controller }
+	}
+	option = {
+		name = cityfall.192.b
+		trigger = { TAG = event_target:new_controller }
+	}
+	option = {
+		name = cityfall.192.c
+		trigger = {
+			NOT = {
+				TAG = event_target:old_controller
+				TAG = event_target:new_controller
+			}
+		}
+	}
+}
+
+
+#AMERICANS
+# The Fall of new washington
+news_event = {
+	id = cityfall.193
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.190"}
+	title = cityfall.193.t
+	desc = cityfall.193.d
+	picture = GFX_news_event_vanhoover_surrenders
+
+	major = yes
+
+	immediate = {
+		set_global_flag = fall_of_new_washington
+		363 = { set_state_flag = state_has_fallen }
+		FROM.FROM = { save_event_target_as = old_controller }
+		ROOT = { save_event_target_as = new_controller }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cityfall.193.a
+		trigger = { TAG = event_target:old_controller }
+	}
+	option = {
+		name = cityfall.193.b
+		trigger = { TAG = event_target:new_controller }
+	}
+	option = {
+		name = cityfall.193.c
+		trigger = {
+			NOT = {
+				TAG = event_target:old_controller
+				TAG = event_target:new_controller
+			}
+		}
+	}
+}
+
+# The Fall of columbus
+news_event = {
+	id = cityfall.194
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cityfall.190"}
+	title = cityfall.194.t
+	desc = cityfall.194.d
+	picture = GFX_news_event_vanhoover_surrenders
+
+	major = yes
+
+	immediate = {
+		set_global_flag = fall_of_columbus
+		364 = { set_state_flag = state_has_fallen }
+		FROM.FROM = { save_event_target_as = old_controller }
+		ROOT = { save_event_target_as = new_controller }
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = cityfall.194.a
+		trigger = { TAG = event_target:old_controller }
+	}
+	option = {
+		name = cityfall.194.b
+		trigger = { TAG = event_target:new_controller }
+	}
+	option = {
+		name = cityfall.194.c
+		trigger = {
+			NOT = {
+				TAG = event_target:old_controller
+				TAG = event_target:new_controller
+			}
+		}
+	}
+}

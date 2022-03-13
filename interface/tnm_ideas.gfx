@@ -1470,261 +1470,100 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GRB_blast_guard.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_UNS_cultmech"
+		texturefile = "gfx/interface/ideas/tech_park_idea.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_UNS_stc_blueprints"
+		texturefile = "gfx/interface/ideas/extraworktime.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_UNS_xenobiology_idea"
+		texturefile = "gfx/interface/ideas/chn_spy_net.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_UNS_imperial_truth"
+		texturefile = "gfx/interface/ideas/UNS_victory_is_ours.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GEM_biomodification_idea"
+		texturefile = "gfx/interface/ideas/UNS_we_help.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GEM_supply_bonus_idea"
+		texturefile = "gfx/interface/ideas/people-militarize.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_bad_politics_an"
+		texturefile = "gfx/interface/ideas/hum_rage_idea.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_industrial_destruction_an"
+		texturefile = "gfx/interface/ideas/SOU_destroyeed_industry.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_army_boiling_an"
+		texturefile = "gfx/interface/ideas/SOU_peacekeepers.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_narhoz_idea"
+		texturefile = "gfx/interface/ideas/GRB_foodplaces.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_toolgiving"
+		texturefile = "gfx/interface/ideas/aircraft_prod_idea.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_what_people_need"
+		texturefile = "gfx/interface/ideas/GEM_rat_dem.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_infrastructure_build"
+		texturefile = "gfx/interface/ideas/SOU_fiveyear_plan.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_bastion"
+		texturefile = "gfx/interface/ideas/GEM_fortification.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_selfdefence_commitee"
+		texturefile = "gfx/interface/ideas/SOU_propaganda.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_anarchy_army"
+		texturefile = "gfx/interface/ideas/GEM_expansion.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_british_legion"
+		texturefile = "gfx/interface/ideas/comm_influence_idea.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_anarchy_institutes"
+		texturefile = "gfx/interface/ideas/SOU_no_xenopobia.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_prepare_for_enemy"
+		texturefile = "gfx/interface/ideas/twowar_exp_idea.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_british_anarch_armor"
+		texturefile = "gfx/interface/ideas/GRB_anarch_tanks.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_british_anarch_equip"
+		texturefile = "gfx/interface/ideas/GRB_anarch_weap.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_british_anarch_industr"
+		texturefile = "gfx/interface/ideas/GRB_anarch_ind.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_anarch_cocern_air"
+		texturefile = "gfx/interface/ideas/GRB_anarch_planes.dds"
 	}
 	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
+		name = "GFX_idea_GRB_anarch_cocern_naval"
+		texturefile = "gfx/interface/ideas/GRB_anarch_fleet.dds"
 	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-
-SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-	SpriteType = {
-		name = "GFX_idea_"
-		texturefile = "gfx/interface/ideas/.dds"
-	}
-
-#	SpriteType = {
-	#	name = "GFX_idea_SOU_kgb_defence"
-	#	texturefile = "gfx/interface/ideas/SOU_kgb.dds"
-#	}
+	

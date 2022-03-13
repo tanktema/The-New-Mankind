@@ -1,0 +1,19 @@
+﻿### UEN Navy
+units = {
+	fleet = {
+		name = "UENN Command"
+		naval_base = 4080
+		task_force = {
+			name = "European Coast Fleet"
+			location = 4080
+			ship = { name = "ES. Unity" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. Etna" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. Berlin" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. Poninsula" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. Varna" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. Valencia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. St-Malo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UEN } } }
+			ship = { name = "ES. Bodø" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = UEN } } }
+		}
+	}
+}

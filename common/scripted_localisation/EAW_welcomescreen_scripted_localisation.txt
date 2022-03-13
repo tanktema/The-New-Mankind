@@ -15,6 +15,18 @@ defined_text = { # Country
 		localization_key = EAW_WS_VED
 	}
 	text = {
+		trigger = { original_tag = UEN }
+		localization_key = EAW_WS_UEN
+	}
+	text = {
+		trigger = { original_tag = UAS }
+		localization_key = EAW_WS_UAS
+	}
+	text = {
+		trigger = { original_tag = RUS }
+		localization_key = EAW_WS_RUS
+	}
+	text = {
 		trigger = { original_tag = UNS }
 		localization_key = EAW_WS_UNS
 	}
@@ -333,6 +345,18 @@ defined_text = {
 	text = {
 		trigger = { original_tag = VED }
 		localization_key = EAW_WS_VED_desc
+	}
+	text = {
+		trigger = { original_tag = UEN }
+		localization_key = EAW_WS_UEN_desc
+	}
+	text = {
+		trigger = { original_tag = UAS }
+		localization_key = EAW_WS_UAS_desc
+	}
+	text = {
+		trigger = { original_tag = RUS }
+		localization_key = EAW_WS_RUS_desc
 	}
 	text = {
 		trigger = { original_tag = UNS }

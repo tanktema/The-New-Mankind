@@ -1,0 +1,66 @@
+﻿division_template = {
+	name = "Militia"			#Infantry Division
+	priority = 0
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+
+
+units = {
+	division = {
+		name = "Manehatten Police Departement"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75 }
+	division = {
+		name = "Manehatten Volunteer"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75 }
+	division = {
+		name = "Bronclyn Volunteer"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7 }
+	division = {
+		name = "Hayston Volunteer"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7 }
+
+	division = {
+		name = "Hayston Militia"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6 }
+	division = {
+		name = "Bronclyn Militia"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "Manehatten Militia"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45 }
+	division = {
+		name = "1st Manehattan Regiment"
+		location = 758
+		division_template = "Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+}

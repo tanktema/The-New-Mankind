@@ -3394,6 +3394,7 @@ focus_tree = {
 		id = GEM_experiments_strasse
 		x = 0
 		y = 8
+		icon = GFX_goal_GRB_milacc
 		relative_position_id = GEM_party_meeting
 		available = {
 			always = no 
@@ -3416,6 +3417,7 @@ focus_tree = {
 		id = GEM_travel_to_magehold
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_evac
 		relative_position_id = GEM_experiments_strasse
 		prerequisite = { focus = GEM_experiments_strasse }
 		cost = 5
@@ -3428,6 +3430,7 @@ focus_tree = {
 		id = GEM_last_experiment
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_weapdev
 		available = {
 			always = no 
 		}
@@ -3447,6 +3450,7 @@ focus_tree = {
 		id = GEM_financies_of_strasse
 		x = -8
 		y = 1
+		icon = GFX_goal_GRB_todd_howard
 		relative_position_id = GEM_last_experiment
 		prerequisite = { focus = GEM_last_experiment }
 		cost = 5
@@ -3484,6 +3488,7 @@ focus_tree = {
 		id = GEM_cybernetics
 		x = -6
 		y = 1
+		icon = GFX_goal_UNS_medicine
 		relative_position_id = GEM_financies_of_strasse
 		prerequisite = { focus = GEM_financies_of_strasse }
 		cost = 5
@@ -3496,11 +3501,13 @@ focus_tree = {
 		id = GEM_firstgen_cyborg
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_SNOVA_magicians
 		relative_position_id = GEM_cybernetics
 		prerequisite = { focus = GEM_cybernetics }
 		cost = 5
 		completion_reward = {
 			custom_effect_tooltip = available_general
+			recruit_character = GEM_shtrohaim
 		}
 	}
 	
@@ -3508,6 +3515,7 @@ focus_tree = {
 		id = GEM_heavy_soldiers
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_mobilization
 		relative_position_id = GEM_cybernetics
 		prerequisite = { focus = GEM_cybernetics }
 		cost = 5
@@ -3522,6 +3530,7 @@ focus_tree = {
 		id = GEM_biomodification
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_schutzstaffen
 		relative_position_id = GEM_firstgen_cyborg
 		prerequisite = { focus = GEM_firstgen_cyborg }
 		prerequisite = { focus = GEM_heavy_soldiers }
@@ -3535,6 +3544,7 @@ focus_tree = {
 		id = GEM_secondgen_cyborg
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_milsquads
 		relative_position_id = GEM_biomodification
 		prerequisite = { focus = GEM_biomodification }
 		cost = 5
@@ -3547,6 +3557,7 @@ focus_tree = {
 		id = GEM_small_reactors
 		x = -2
 		y = 1
+		icon = GFX_goal_UNS_magical_teach
 		relative_position_id = GEM_secondgen_cyborg 
 		prerequisite = { focus = GEM_secondgen_cyborg }
 		cost = 5
@@ -3563,6 +3574,7 @@ focus_tree = {
 		id = GEM_wunderwaffe_strasse
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_nukes
 		relative_position_id = GEM_secondgen_cyborg 
 		prerequisite = { focus = GEM_secondgen_cyborg }
 		cost = 5
@@ -3579,6 +3591,7 @@ focus_tree = {
 		id = GEM_heavy_armor_for_infantry
 		x = 2
 		y = 1
+		icon = GFX_goal_GRB_personal_armor
 		relative_position_id = GEM_secondgen_cyborg 
 		prerequisite = { focus = GEM_secondgen_cyborg }
 		cost = 5
@@ -3595,6 +3608,7 @@ focus_tree = {
 		id = GEM_thirdgen_cyberslodier
 		x = 0 
 		y = 1
+		icon = GFX_goal_humantech
 		relative_position_id = GEM_wunderwaffe_strasse
 		prerequisite = { focus = GEM_wunderwaffe_strasse }
 		prerequisite = { focus = GEM_heavy_armor_for_infantry }
@@ -3609,6 +3623,7 @@ focus_tree = {
 		id = GEM_new_polymers
 		x = 4
 		y = 1
+		icon = GFX_goal_UNS_army_production
 		relative_position_id = GEM_financies_of_strasse
 		prerequisite = { focus = GEM_financies_of_strasse }
 		cost = 5
@@ -3625,6 +3640,7 @@ focus_tree = {
 		id = GEM_new_gen_assault_rifle
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_Best_weap
 		relative_position_id = GEM_new_polymers
 		prerequisite = { focus = GEM_new_polymers }
 		cost = 5
@@ -3639,6 +3655,7 @@ focus_tree = {
 		id = GEM_new_gen_magical_rifle
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_barrad_magicians
 		relative_position_id = GEM_new_polymers
 		prerequisite = { focus = GEM_new_polymers }
 		cost = 5
@@ -3653,6 +3670,7 @@ focus_tree = {
 		id = GEM_new_tank_cannon
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_blietzkrieg
 		relative_position_id = GEM_new_gen_assault_rifle 
 		prerequisite = { focus = GEM_new_gen_assault_rifle }
 		prerequisite = { focus = GEM_new_gen_magical_rifle }
@@ -3670,6 +3688,7 @@ focus_tree = {
 		id = GEM_reactive_engine
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_air_superiority
 		relative_position_id = GEM_new_tank_cannon
 		prerequisite = { focus = GEM_new_tank_cannon }
 		cost = 15
@@ -3684,6 +3703,7 @@ focus_tree = {
 		id = GEM_new_tank_development
 		x = -5
 		y = 1
+		icon = GFX_goal_SOU_milprod
 		relative_position_id = GEM_reactive_engine
 		prerequisite = { focus = GEM_reactive_engine }
 		cost = 5
@@ -3702,6 +3722,7 @@ focus_tree = {
 		id = GEM_crystal_engine_focus
 		x = -2
 		y = 1
+		icon = GFX_goal_trade_tech
 		relative_position_id = GEM_new_tank_development
 		prerequisite = { focus = GEM_new_tank_development }
 		cost = 5
@@ -3716,6 +3737,7 @@ focus_tree = {
 		id = GEM_superheavy_cannon
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_artillery
 		relative_position_id = GEM_new_tank_development
 		prerequisite = { focus = GEM_new_tank_development }
 		cost = 5
@@ -3728,6 +3750,7 @@ focus_tree = {
 		id = GEM_special_alloys
 		x = 2
 		y = 1
+		icon = GFX_goal_GEM_magical_experiments
 		relative_position_id = GEM_new_tank_development
 		prerequisite = { focus = GEM_new_tank_development }
 		cost = 5
@@ -3740,6 +3763,7 @@ focus_tree = {
 		id = GEM_fuhrer_mark_1
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_machines_of_death
 		available = {
 			has_tech = advanced_heavy_tank_chassis
 		}
@@ -3779,6 +3803,7 @@ focus_tree = {
 		id = GEM_avia_development
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_expand_air
 		relative_position_id = GEM_reactive_engine
 		prerequisite = { focus = GEM_reactive_engine }
 		cost = 5
@@ -3791,6 +3816,7 @@ focus_tree = {
 		id = GEM_vertibird_eqpm
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_doctrine_more
 		relative_position_id = GEM_avia_development 
 		prerequisite = { focus = GEM_avia_development }
 		cost = 5
@@ -3807,6 +3833,7 @@ focus_tree = {
 		id = GEM_superheaavy_bombers
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_bombers
 		relative_position_id = GEM_avia_development 
 		prerequisite = { focus = GEM_avia_development }
 		cost = 5
@@ -3823,6 +3850,7 @@ focus_tree = {
 		id = GEM_jet_fighter_dev
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_airforce
 		relative_position_id = GEM_vertibird_eqpm
 		prerequisite = { focus = GEM_vertibird_eqpm }
 		prerequisite = { focus = GEM_superheaavy_bombers }
@@ -3840,6 +3868,7 @@ focus_tree = {
 		id = GEM_fleet_evelopment
 		x = 4
 		y = 1
+		icon = GFX_goal_SOU_fleet
 		relative_position_id = GEM_reactive_engine 
 		prerequisite = { focus = GEM_reactive_engine }
 		cost = 5 
@@ -3856,6 +3885,7 @@ focus_tree = {
 		id = GEM_nuclear_torpedos
 		x = -1
 		y = 1
+		icon = GFX_goal_SOU_scout_navy
 		relative_position_id = GEM_fleet_evelopment	
 		prerequisite = { focus = GEM_fleet_evelopment }
 		cost = 5
@@ -3872,6 +3902,7 @@ focus_tree = {
 		id = GEM_atomic_navy_engines
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_fleet_tactics
 		relative_position_id = GEM_fleet_evelopment	
 		prerequisite = { focus = GEM_fleet_evelopment }
 		cost = 5
@@ -3889,6 +3920,7 @@ focus_tree = {
 		id = GEM_new_submarines
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_shark
 		relative_position_id = GEM_nuclear_torpedos 
 		prerequisite = { focus = GEM_nuclear_torpedos }
 		prerequisite = { focus = GEM_atomic_navy_engines }
@@ -3906,6 +3938,7 @@ focus_tree = {
 		id = GEM_deathshead_battleship
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_fleet_power
 		relative_position_id = GEM_new_submarines
 		prerequisite = { focus = GEM_new_submarines }
 		cost = 5
@@ -3918,6 +3951,7 @@ focus_tree = {
 		id = GEM_building_of_germany
 		x = 6
 		y = 1
+		icon = GFX_goal_GRB_support_FAT
 		relative_position_id = GEM_last_experiment
 		prerequisite = { focus = GEM_last_experiment }
 		cost = 5
@@ -3942,6 +3976,7 @@ focus_tree = {
 		id = GEM_building_milprom
 		x = -2
 		y = 1
+		icon = GFX_goal_GRB_factory_expansion
 		relative_position_id = GEM_building_of_germany
 		prerequisite = { focus = GEM_building_of_germany }
 		cost = 5
@@ -3961,6 +3996,7 @@ focus_tree = {
 		id = GEM_military_build
 		x = 0
 		y = 1
+		icon = GFX_goal_second_doctrine
 		relative_position_id = GEM_building_milprom
 		prerequisite = { focus = GEM_building_milprom }
 		cost = 5
@@ -3977,6 +4013,7 @@ focus_tree = {
 		id = GEM_resources_of_strasse
 		x = -1
 		y = 1
+		icon = GFX_goal_uns_resources_2
 		relative_position_id = GEM_military_build
 		prerequisite = { focus = GEM_military_build }
 		cost = 5
@@ -3989,6 +4026,7 @@ focus_tree = {
 		id = GEM_supply_bonus
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_robwares
 		relative_position_id = GEM_military_build
 		prerequisite = { focus = GEM_military_build }
 		cost = 5
@@ -4001,6 +4039,7 @@ focus_tree = {
 		id = GEM_radar_network
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_explore_ionosphere
 		relative_position_id = GEM_resources_of_strasse
 		prerequisite = { focus = GEM_resources_of_strasse }
 		prerequisite = { focus = GEM_supply_bonus }
@@ -4020,6 +4059,7 @@ focus_tree = {
 		id = GEM_officers_schools
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_officer_purges
 		relative_position_id = GEM_radar_network
 		prerequisite = { focus = GEM_radar_network }
 		cost = 5
@@ -4032,6 +4072,7 @@ focus_tree = {
 		id = GEM_prepare_pilots
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_jet
 		relative_position_id = GEM_radar_network
 		prerequisite = { focus = GEM_radar_network }
 		cost = 5
@@ -4044,6 +4085,7 @@ focus_tree = {
 		id = GEM_factories_expand
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_road_networks
 		relative_position_id = GEM_officers_schools
 		prerequisite = { focus = GEM_officers_schools }
 		prerequisite = { focus = GEM_prepare_pilots }
@@ -4069,6 +4111,7 @@ focus_tree = {
 		id = GEM_civil_industry 
 		x = 3
 		y = 1
+		icon = GFX_goal_GEM_indstry_development
 		relative_position_id = GEM_building_of_germany
 		prerequisite = { focus = GEM_building_of_germany }
 		cost = 5
@@ -4087,6 +4130,7 @@ focus_tree = {
 		id = GEM_trains
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_electrotrains
 		relative_position_id = GEM_civil_industry
 		prerequisite = { focus = GEM_civil_industry }
 		cost = 5
@@ -4105,6 +4149,7 @@ focus_tree = {
 		id = GEM_ports_expansion
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_dockyards
 		relative_position_id = GEM_civil_industry
 		prerequisite = { focus = GEM_civil_industry }
 		cost = 5
@@ -4124,6 +4169,7 @@ focus_tree = {
 		id = GEM_military_economic
 		x = 1
 		y = 1
+		icon = GFX_goal_GEM_eco_mobiliz
 		relative_position_id = GEM_trains
 		prerequisite = { focus = GEM_trains }
 		prerequisite = { focus = GEM_ports_expansion }
@@ -4137,6 +4183,7 @@ focus_tree = {
 		id = GEM_aa_network
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_aa
 		relative_position_id = GEM_military_economic
 		prerequisite = { focus = GEM_military_economic }
 		cost = 5
@@ -4155,6 +4202,7 @@ focus_tree = {
 		id = GEM_new_schools
 		x = -2
 		y = 1
+		icon = GFX_goal_UNS_Schools
 		relative_position_id = GEM_aa_network
 		prerequisite = { focus = GEM_aa_network }
 		cost = 5
@@ -4167,6 +4215,7 @@ focus_tree = {
 		id = GEM_university
 		x = 0
 		y = 1
+		icon = SOU_rebuild_the_fleet
 		relative_position_id = GEM_new_schools
 		prerequisite = { focus = GEM_new_schools }
 		cost = 5
@@ -4179,6 +4228,7 @@ focus_tree = {
 		id = GEM_offworking
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_airfields
 		relative_position_id = GEM_aa_network
 		prerequisite = { focus = GEM_aa_network }
 		cost = 5
@@ -4197,6 +4247,7 @@ focus_tree = {
 		id = GEM_industrial_kaboom
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_SNOVA_repair_mistakes
 		relative_position_id = GEM_offworking
 		prerequisite = { focus = GEM_offworking }
 		cost = 5
@@ -4217,6 +4268,7 @@ focus_tree = {
 		id = GEM_autoroads
 		x = 2
 		y = 1
+		icon = GFX_goal_GRB_clean_barrad
 		relative_position_id = GEM_aa_network
 		prerequisite = { focus = GEM_aa_network }
 		cost = 5
@@ -4235,6 +4287,7 @@ focus_tree = {
 		id = GEM_vesalipolis_berlin_rail
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_transports
 		relative_position_id = GEM_autoroads
 		prerequisite = { focus = GEM_autoroads }
 		cost = 10
@@ -4253,6 +4306,7 @@ focus_tree = {
 		id = GEM_nsdap_purges
 		x = 14
 		y = 1
+		icon = GFX_goal_GEM_purge
 		relative_position_id = GEM_last_experiment
 		prerequisite = { focus = GEM_last_experiment }
 		cost = 5
@@ -4267,6 +4321,7 @@ focus_tree = {
 		id = GEM_show_to_people
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_arrests_unbelief
 		relative_position_id = GEM_nsdap_purges
 		prerequisite = { focus = GEM_nsdap_purges }
 		cost = 5
@@ -4283,6 +4338,7 @@ focus_tree = {
 		id = GEM_solve_opposition
 		x = -2
 		y = 1
+		icon = GFX_goal_GRB_kill_supports
 		relative_position_id = GEM_show_to_people
 		prerequisite = { focus = GEM_show_to_people }
 		cost = 5
@@ -4298,6 +4354,7 @@ focus_tree = {
 		id = GEM_political_reforms
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_natref
 		relative_position_id = GEM_solve_opposition
 		prerequisite = { focus = GEM_solve_opposition }
 		cost = 5
@@ -4310,6 +4367,7 @@ focus_tree = {
 		id = GEM_appease_civilians
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_military_parade
 		relative_position_id = GEM_show_to_people
 		prerequisite = { focus = GEM_show_to_people }
 		cost = 5
@@ -4323,6 +4381,7 @@ focus_tree = {
 		id = GEM_eco_reform
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_strehgth_funds
 		relative_position_id = GEM_appease_civilians
 		prerequisite = { focus = GEM_appease_civilians }
 		cost = 5
@@ -4335,6 +4394,7 @@ focus_tree = {
 		id = GEM_appease_officers
 		x = 2
 		y = 1
+		icon = GFX_goal_limit
 		relative_position_id = GEM_show_to_people
 		prerequisite = { focus = GEM_show_to_people }
 		cost = 5
@@ -4349,6 +4409,7 @@ focus_tree = {
 		id = GEM_military_reform
 		x = 0
 		y = 1
+		icon = GFX_goal_axis
 		relative_position_id = GEM_appease_officers
 		prerequisite = { focus = GEM_appease_officers }
 		cost = 5
@@ -4361,6 +4422,7 @@ focus_tree = {
 		id = GEM_changelings_svadba
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_experience_visit
 		relative_position_id = GEM_eco_reform
 		prerequisite = { focus = GEM_eco_reform }
 		prerequisite = { focus = GEM_military_reform }
@@ -4377,6 +4439,7 @@ focus_tree = {
 		id = GEM_north_and_south
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_claims
 		relative_position_id = GEM_changelings_svadba
 		prerequisite = { focus = GEM_changelings_svadba }
 		cost = 5
@@ -4392,6 +4455,7 @@ focus_tree = {
 		id = GEM_plb_attack
 		x = -1
 		y = 1
+		icon = GFX_goal_GRB_attack_bear
 		bypass = {
 			PLB = {
 				OR = {
@@ -4417,6 +4481,7 @@ focus_tree = {
 		id = GEM_yak_attack_fa 
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_approach_yaki
 		bypass = {
 			AND = {
 				YAK = {
@@ -4461,6 +4526,7 @@ focus_tree = {
 		id = GEM_grf_attack
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_invade_GRF
 		bypass = {
 			AND = {
 				GRF = {
@@ -4504,6 +4570,7 @@ focus_tree = {
 		id = GEM_stg_attack
 		x = 0
 		y = 1
+		icon = GFX_goal_SOU_backstab
 		bypass = {
 			STG = {
 				OR = {
@@ -4529,6 +4596,7 @@ focus_tree = {
 		id = GEM_sou_attack
 		x = -2
 		y = 1
+		icon = GFX_goal_UNS_attack_sou
 		bypass = {
 			SOU = {
 				OR = {
@@ -4554,6 +4622,7 @@ focus_tree = {
 		id = GEM_uns_attack
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_no_weakness
 		bypass = {
 			UNS = {
 				OR = {
@@ -4579,6 +4648,7 @@ focus_tree = {
 		id = GEM_ved_attack
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_VED
 		bypass = {
 			VED = {
 				OR = {
@@ -4606,6 +4676,7 @@ focus_tree = {
 		id = GEM_srs_attack
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_BOI_attack
 		bypass = {
 			SRS = {
 				OR = {
@@ -4631,6 +4702,7 @@ focus_tree = {
 		id = GEM_fat_attack
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_guarantee_FAT
 		bypass = {
 			FAT = {
 				OR = {
@@ -4656,6 +4728,7 @@ focus_tree = {
 		id = GEM_gri_attack
 		x = 1
 		y = 1
+		icon = GFX_goal_destroy_empire
 		bypass = {
 			GRI = {
 				OR = {

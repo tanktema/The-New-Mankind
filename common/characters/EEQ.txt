@@ -1,0 +1,255 @@
+characters={
+	EEQ_star_powder={
+		name=EEQ_star_powder
+		portraits={
+			civilian={
+				large="gfx/leaders/EEQ/UEN_pony_officer_land1.tga"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {	democratic_sympathies }
+		}
+		gender = female
+	}
+
+	EEQ_star_powder={
+		name=EEQ_star_powder
+		portraits={
+			civilian={
+				large="gfx/leaders/EEQ/UEN_pony_officer_land1.tga"
+			}
+		}
+		country_leader={
+			desc=""
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+			traits = {	democratic_sympathies }
+		}
+		gender = female
+	}
+
+	EEQ_sugar_cod ={
+		name=EEQ_sugar_cod
+		portraits={
+			civilian={
+				large="gfx/leaders/EEQ/UEN_pony_captain.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	EEQ_military_governor={
+		name=EEQ_military_governor
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/norrlandsjagare.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=nazism
+			traits = { warmonger generallissimo }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+#OFFICERS
+
+	EEQ_soft_light={
+		name=EEQ_soft_light
+		portraits={
+			army={
+				large="gfx/leaders/UEN/UEN_pony_officer_land2.tga"
+				small="GFX_idea_EQS_soarin"
+			}
+		}
+		
+		field_marshal={
+				traits = { pony_race_trait trickster }
+				skill = 4
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+		}
+	}
+
+	EEQ_alex_batovsky={
+		name=EEQ_alex_batovsky
+		portraits={
+			army={
+				large="gfx/leaders/EEQ/alexbatovsky.tga"
+				small="GFX_idea_EQS_soarin"
+			}
+		}
+		
+		corps_commander={
+				traits = { thestral_race_trait medical_expert bleeding_heart }
+				skill = 2
+				desc = "POLITICS_ALEX_BATOVSKY_DESC"
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+		}
+	}
+
+
+	EEQ_thunder_burst={
+		name=EEQ_thunder_burst
+		portraits={
+			army={
+				large="gfx/leaders/EEQ/thunder_burst.tga"
+				small="GFX_idea_EQS_soarin"
+			}
+		}
+		
+		corps_commander={
+				traits = { pony_race_trait air_force_commander }
+				skill = 2
+				desc = "POLITICS_THUNDER_BURST_DESC"
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+		}
+	}
+
+	EEQ_silver_breeze={
+		name=EEQ_silver_breeze
+		portraits={
+			army={
+				large="gfx/leaders/EEQ/UEN_pony_captain.tga"
+				small="GFX_idea_EQS_soarin"
+			}
+		}
+		
+		navy_leader={
+			traits = { pony_race_trait }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+	}
+
+#advisors
+	EEQ_ryoku_memori={
+		name=EEQ_ryoku_memori
+		portraits={
+			army={
+				small=GFX_idea_EEQ_ryoku_memori
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EEQ_ryoku_memori
+			removal_cost = -1
+			allowed = {
+				original_tag = EEQ
+			}
+			available = {
+			}
+			traits = {
+				EEQ_ryoku
+			}
+		}
+	}
+	EEQ_aine={
+		name=EEQ_aine
+		portraits={
+			army={
+				small=GFX_idea_EEQ_aine
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EEQ_aine
+			removal_cost = -1
+			allowed = {
+				original_tag = EEQ
+			}
+			available = {
+			}
+			traits = {
+				EEQ_aine_aisling
+			}
+		}
+	}
+	EEQ_sweet_bear={
+		name=EEQ_sweet_bear
+		portraits={
+			army={
+				small=GFX_idea_EEQ_sweet_bear
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EEQ_sweet_bear
+			removal_cost = -1
+			allowed = {
+				original_tag = EEQ
+			}
+			available = {
+			}
+			traits = {
+				EEQ_sweet
+			}
+		}
+	}
+	EEQ_nova_star={
+		name=EEQ_nova_star
+		portraits={
+			army={
+				small=GFX_idea_EEQ_nova_star
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EEQ_nova_star
+			removal_cost = -1
+			allowed = {
+				original_tag = EEQ
+			}
+			available = {
+			}
+			traits = {
+				EEQ_nova
+			}
+		}
+	}
+	EEQ_lyra_heartstring={
+		name=EEQ_lyra_heartstring
+		portraits={
+			army={
+				small=GFX_idea_EEQ_lyra_heartstring
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EEQ_lyra_heartstring
+			removal_cost = -1
+			allowed = {
+				original_tag = EEQ
+			}
+			available = {
+			}
+			traits = {
+				EEQ_lyra
+			}
+		}
+	}
+
+}

@@ -1,0 +1,217 @@
+
+
+shared_focus = {
+  id = JER_other_shore
+  icon = GFX_goal_generic_improve_relations
+    available = { UAS = { has_completed_focus = UAS_settle } }
+  x = 9
+  y = 12
+  cost = 2
+  completion_reward = {
+    add_political_power = 50
+    add_popularity = { ideology = democratic popularity = 0.05 }
+    add_popularity = { ideology = neutrality popularity = 0.05 }
+
+  }
+}
+
+shared_focus = {
+  id = JER_gain_trust
+  icon = GFX_goal_constitutional_guarantees
+  mutually_exclusive = { focus = JER_ignore }
+  prerequisite = { focus = JER_other_shore }
+  x = 8
+  y = 13
+  cost = 2
+  completion_reward = {
+    add_offsite_building = { type = industrial_complex level = 1 }
+    UAS = { add_offsite_building = { type = industrial_complex level = 1 } }
+    UAS = { add_opinion_modifier = { target = JER modifier = small_increase } }
+  }
+}
+
+shared_focus = {
+  id = JER_ignore
+  icon = GFX_goal_government_icon
+  mutually_exclusive = { focus = JER_gain_trust }
+  prerequisite = { focus = JER_other_shore }
+  x = 10
+  y = 13
+  cost = 2
+  completion_reward = {
+   add_political_power = 50
+   add_stability = 0.05
+    add_offsite_building = { type = industrial_complex level = 1 }
+    add_offsite_building = { type = arms_factory level = 1 }
+  }
+}
+
+shared_focus = {
+  id = JER_economic_aid
+  icon = GFX_goal_gold_reserve
+  prerequisite = { focus = JER_gain_trust }
+  available = { has_completed_focus = JER_election }
+
+  x = 7
+  y = 14
+  cost = 2
+  completion_reward = {
+    UAS = { add_offsite_building = { type = industrial_complex level = 2 } }
+    UAS = { add_opinion_modifier = { target = JER modifier = medium_increase } }
+  }
+}
+
+shared_focus = {
+  id = JER_meeting_uas
+  icon = GFX_goal_usa_jer_relation
+  prerequisite = { 
+  focus = JER_gain_trust
+  focus = JER_ignore
+   }
+  x = 9
+  y = 14
+  cost = 2
+  completion_reward = {
+    country_event = { id = HUM.1080 }
+    UAS = { country_event = { id = HUM.1080 } }
+  }
+}
+
+shared_focus = {
+  id = JER_naval_blockade
+  icon = GFX_goal_jer_navy
+  prerequisite = { focus = JER_ignore }
+  available = { has_completed_focus = JER_state_of_aquileia }
+  available = {
+    is_puppet = no
+  }
+
+  x = 11
+  y = 14
+  cost = 2
+  completion_reward = {
+    UAS = { add_ideas = JER_blocus }
+    hidden_effect = { UAS = { country_event = { days = 120 id = HUM.1081 } } }
+    UAS = { add_opinion_modifier = { target = JER modifier = medium_decrease } }
+    add_opinion_modifier = { target = UAS modifier = medium_decrease }
+  }
+}
+
+shared_focus = {
+  id = JER_investement_uas
+  icon = GFX_goal_foreign_diplomacy
+  prerequisite = { 
+  focus = JER_economic_aid
+  focus = JER_meeting_uas
+  }
+
+  x = 8
+  y = 15
+
+  cost = 2
+  completion_reward = {
+    UAS = { add_offsite_building = { type = industrial_complex level = 1 } }
+    add_offsite_building = { type = industrial_complex level = 1 }
+    UAS = { add_opinion_modifier = { target = JER modifier = medium_increase } }
+    add_opinion_modifier = { target = UAS modifier = medium_increase }
+    UAS = { add_ideas = JER_economical_deal }
+    add_ideas = JER_economical_deal
+  }
+}
+
+shared_focus = {
+  id = JER_spy_deployement
+  icon = GFX_goal_goal_machine
+  prerequisite = { 
+  focus = JER_meeting_uas
+  focus = JER_naval_blockade
+  }
+  x = 10
+  y = 15
+  cost = 2
+  completion_reward = {
+   add_ideas = JER_intelligence_deployement
+  }
+}
+
+shared_focus = {
+  id = JER_democratic_alliance
+  icon = GFX_jer_republican_guns
+  prerequisite = { focus = JER_investement_uas }
+  available = {
+    is_puppet = no
+  }
+    available = {
+      is_subject = no
+      has_government = democratic
+    is_faction_leader = yes
+    UAS { has_completed_focus = UAS_calm_after_tempest }
+    NOT = { is_in_faction_with = UAS }
+    has_completed_focus = JER_aquileia_reclaimed
+    bypass = {
+         UAS = {
+           OR = {
+           exists = no
+           is_subject_of = ROOT
+           has_war_with = ROOT
+          }
+        }
+      }
+    }
+  x = 7
+  y = 16
+  cost = 2
+  completion_reward = {
+        set_rule = { can_create_factions = yes }
+        UAS = { country_event = { id = HUM.107 } }
+      }
+  }
+
+shared_focus = {
+  id = JER_help_griffon_community
+  icon = GFX_goal_ITA_urban
+  prerequisite = { 
+  focus = JER_investement_uas
+  focus = JER_spy_deployement
+   }
+  x = 9
+  y = 16
+  cost = 2
+  completion_reward = {
+    add_offsite_building = { type = industrial_complex level = 1 }
+    406 = {
+      add_manpower = 9500
+    }
+    473 = {
+      add_manpower = 5400
+    }
+    add_stability = 0.05
+  }
+}
+
+shared_focus = {
+  id = JER_free_brothers
+  icon = GFX_goal_conscription
+  available = { has_government = neutrality
+  threat < 0.2
+  OR = {
+  has_completed_focus = JER_patriotic_fervour
+  has_completed_focus = JER_the_dream_aint_dead
+  }
+      bypass = {
+         UAS = {
+           OR = {
+           exists = no
+           is_subject_of = ROOT
+           has_war_with = ROOT
+          }
+        }
+      } }
+  prerequisite = { focus = JER_spy_deployement }
+  x = 11
+  y = 16
+  cost = 10
+  completion_reward = {
+    create_wargoal = { type = annex_everything target = UAS }
+  }
+}

@@ -103,6 +103,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOU_first_contact
 		prerequisite = { focus = SOU_first_contact }
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = AF_SOU_FLAG
+				}
+			}
+		}
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -4359,4 +4366,1347 @@ focus_tree = {
 			add_ideas = SOU_fleet_superiority
 		}
 	}
+	
+	
+	########### April Fools
+	
+	focus = { 
+		id = SOU_what_have_we_done
+		x = -6
+		y = 13
+		available = { 
+			always = no 
+		}
+		icon = GFX_goal_SOU_Prop
+		allow_branch = {
+			has_country_flag = AF_SOU_FLAG
+		}
+	
+		relative_position_id = SOU_political_crisis
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	
+	focus = {
+		id = SOU_new_situation
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_RW
+		relative_position_id = SOU_what_have_we_done
+		prerequisite = { focus = SOU_what_have_we_done }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+		}
+		
+	}
+	
+	focus = {
+		id = SOU_old_problems
+		x = -6
+		y = 1
+		icon = GFX_goal_GRB_contact_humans
+		relative_position_id = SOU_new_situation
+		prerequisite = { focus = SOU_new_situation }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = UNS 
+						original_tag = GEM 
+						original_tag = GRB 
+					}
+				}
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+			}
+			add_political_power = 150
+		}
+	}
+	
+	focus = {
+		id = SOU_contact_germans
+		x = -4
+		y = 1
+		icon = GFX_goal_GEM_invite_SOU
+		relative_position_id = SOU_old_problems
+		prerequisite = { focus = SOU_old_problems }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.07
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = SOU_contact_old_usa
+		x = 0
+		y = 1
+		icon = GFX_goal_soviet_friends
+		relative_position_id = SOU_old_problems
+		prerequisite = { focus = SOU_old_problems }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.07
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = SOU_contact_british
+		x = 4
+		y = 1
+		icon = GFX_goal_GRB_contact_sou
+		relative_position_id = SOU_old_problems
+		prerequisite = { focus = SOU_old_problems }
+		cost = 5
+		completion_reward = {
+			GRB = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.07
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_insult_germans
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_propaganda
+		relative_position_id = SOU_contact_germans
+		prerequisite = { focus = SOU_contact_germans }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+				add_political_power = 25
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+	
+	focus = {
+		id = SOU_faction_germans
+		x = -1
+		y = 1
+		icon = GFX_goal_GEM_opposition
+		relative_position_id = SOU_insult_germans
+		prerequisite = { focus = SOU_insult_germans }
+		mutually_exclusive = { focus = SOU_invite_runaways }
+		available = {
+			GEM = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_idea = GEM_polit_crisis
+					}
+					tooltip = polit_cris_over
+				}
+				has_government = communism
+			}
+		}
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = SOU_red_alert_comintern
+				add_to_faction = GEM 
+			}
+			if = {
+				limit = {
+					is_in_faction = yes 
+				}
+				add_to_faction = GEM 
+			}
+		}
+	}
+
+	focus = {
+		id = SOU_invite_runaways
+		x = 1
+		y = 1
+		icon = GFX_goal_UNS_ulbricht
+		relative_position_id = SOU_insult_germans
+		prerequisite = { focus = SOU_insult_germans }
+		mutually_exclusive = { focus = SOU_faction_germans }
+		available = {
+			GEM = {
+				custom_trigger_tooltip = {
+					NOT = {
+						has_idea = GEM_polit_crisis
+					}
+					tooltip = polit_cris_over
+				}
+				NOT = { has_government = communism }
+			}
+		}
+		cost = 5
+		completion_reward = {
+			hidden_effect = {
+				GEM = {
+					GEM_walter_ulbricht = {
+						set_nationality = ROOT 
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								idea_token = UNS_ulbricht_exile
+								allowed = {
+									original_tag = SOU 
+								}
+								available = {
+									has_completed_focus = SOU_invite_runaways
+								}
+								traits = { exiled_german_communist }
+							}
+						}
+					}
+				}
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = UNS_ulbricht_exile
+		}
+	}
+	
+	focus = {
+		id = SOU_forgive_germans
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_ss_disbanding
+		relative_position_id = SOU_faction_germans
+		prerequisite = { focus = SOU_faction_germans }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.25
+				}
+				add_stability = 0.1
+				remove_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+				ROOT = {
+					remove_opinion_modifier = {
+						modifier = antifascist_politics
+						target = PREV 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_never_again
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_ganging
+		relative_position_id = SOU_invite_runaways
+		prerequisite = { focus = SOU_invite_runaways }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_hanged_nazis
+		}
+	}
+	
+	focus = {
+		id = SOU_claim_germany
+		x = 1
+		y = 1
+		icon = GFX_goal_GRB_peace
+		bypass = {
+			is_in_faction_with = GEM 
+		}
+		relative_position_id = SOU_forgive_germans
+		prerequisite = { focus = SOU_forgive_germans OR = SOU_never_again }
+		cost = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = GEM 
+				}
+				add_claim_by = ROOT 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_dislike_them
+		x = 0
+		y = 1
+		icon = GFX_goal_true_patriotism
+		relative_position_id = SOU_contact_old_usa
+		prerequisite = { focus = SOU_contact_old_usa }
+		cost = 5
+		completion_reward = {
+			GEM = {
+				add_opinion_modifier = {
+					modifier = decline_politics
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = decline_politics
+					target = ROOT 
+				}
+				add_political_power = 25
+			}
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+		
+	focus = {
+		id = SOU_commie_propaganda
+		x = -1
+		y = 1
+		icon = GFX_goal_SOU_world
+		mutually_exclusive = { focus = SOU_steal_usa_blueprints }
+		relative_position_id = SOU_dislike_them
+		prerequisite = { focus = SOU_dislike_them }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				if = {
+					limit = {
+						communism > 0.4
+					}
+					start_civil_war = {
+						ruling_party = communism
+						ideology = ROOT
+						size = 0.3
+					}
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = SOU_steal_usa_blueprints
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_magical_experiments
+		mutually_exclusive = { focus = SOU_commie_propaganda }
+		relative_position_id = SOU_dislike_them
+		prerequisite = { focus = SOU_dislike_them }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = electronics
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = nuclear
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+		
+	focus = {
+		id = SOU_faction_old_americans
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_contact
+		relative_position_id = SOU_commie_propaganda
+		prerequisite = { focus = SOU_commie_propaganda }
+		available = {
+			UNS = {
+				has_government = communism
+			}
+		}
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = SOU_red_alert_comintern
+				add_to_faction = UNS 
+			}
+			if = {
+				limit = {
+					is_in_faction = yes 
+				}
+				add_to_faction = UNS 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_counter_imperialism
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_purge
+		relative_position_id = SOU_steal_usa_blueprints
+		prerequisite = { focus = SOU_steal_usa_blueprints }
+		available = {
+			UNS = {
+				NOT = { has_government = communism }
+			}
+		}
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_people_support
+		}
+	}
+	
+	focus = {
+		id = SOU_claim_america
+		x = 1
+		y = 1
+		icon = GFX_goal_world_situation
+		bypass = {
+			is_in_faction_with = UNS 
+		}
+		relative_position_id = SOU_faction_old_americans
+		prerequisite = { focus = SOU_counter_imperialism OR = SOU_faction_old_americans }
+		cost = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = UNS 
+				}
+				add_claim_by = ROOT 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_strangth_contacts
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_old_companies
+		relative_position_id = SOU_contact_british
+		prerequisite = { focus = SOU_contact_british }
+		cost = 5
+		completion_reward = {
+			GRB = {
+				add_timed_idea = {
+					idea = UNS_communist_influence
+					days = 365
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_strength_european_commies
+		x = 2
+		y = 1
+		icon = GFX_goal_GRB_GRIFFCOM
+		relative_position_id = SOU_strangth_contacts
+		prerequisite = { focus = SOU_strangth_contacts }
+		prerequisite = { focus = SOU_old_friends }
+		cost = 5
+		completion_reward = {
+			GRB = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				if = {
+					limit = {
+						communism > 0.4
+					}
+					start_civil_war = {
+						ruling_party = communism
+						ideology = ROOT
+						size = 0.3
+					}
+				}
+			}
+			UEN = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+				if = {
+					limit = {
+						communism > 0.4
+					}
+					start_civil_war = {
+						ruling_party = communism
+						ideology = ROOT
+						size = 0.3
+					}
+				}
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = SOU_destabilize_government
+		x = -3
+		y = 1
+		icon = GFX_goal_GRB_death_of_churchill
+		available = {
+			GRB = {
+				has_completed_focus = GRB_what_is_next 
+				NOT = { has_government = communism }
+			}
+		}
+		relative_position_id = SOU_strength_european_commies
+		prerequisite = { focus = SOU_strength_european_commies }
+		mutually_exclusive = { focus = SOU_faction_britain }
+		cost = 5
+		completion_reward = {
+			GRB = {
+				add_timed_idea = {
+					idea = GRB_bad_politics_an
+					days = 90
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_faction_britain
+		x = -1
+		y = 1
+		icon = GFX_goal_GRB_british_heroes
+		available = {
+			GRB = {
+				has_completed_focus = GRB_what_is_next 
+				has_government = communism 
+			}
+		}
+		relative_position_id = SOU_strength_european_commies
+		prerequisite = { focus = SOU_strength_european_commies }
+		mutually_exclusive = { focus = SOU_destabilize_government }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = SOU_red_alert_comintern
+				add_to_faction = GRB 
+			}
+			if = {
+				limit = {
+					is_in_faction = yes 
+				}
+				add_to_faction = GRB 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_european_claims
+		x = 1
+		y = 1
+		icon = GFX_goal_GRB_break_dictator
+		relative_position_id = SOU_faction_britain
+		prerequisite = { focus = SOU_faction_britain OR = SOU_destabilize_government }
+		prerequisite = { focus = SOU_destroy_uen OR = SOU_faction_uen }
+		bypass = { 
+			GRB = {
+				is_in_faction_with = ROOT 
+			}
+			UEN = {
+				is_in_faction_with = ROOT 
+			}
+		}
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { is_in_faction_with = GRB }
+				}
+				every_state = {
+					limit = {
+						is_core_of = GRB 
+					}
+					add_claim_by = ROOT 
+				}
 				
+			}
+			if = {
+				limit = {
+					NOT = { is_in_faction_with = UEN }
+				}
+				every_state = {
+					limit = {
+						is_core_of = UEN 
+					}
+					add_claim_by = ROOT 
+				}
+				
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_guest_from_the_future
+		x = 6
+		y = 1
+		icon = GFX_goal_HUM_b_canterlot
+		relative_position_id = SOU_new_situation
+		prerequisite = { focus = SOU_new_situation }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = RUS 
+						original_tag = UAS 
+						original_tag = UEN 
+					}
+				}
+				add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = embassy_opened
+					target = ROOT 
+				}
+			}
+			add_political_power = 150
+		}
+	}
+	
+	
+	focus = {
+		id = SOU_contact_european_union
+		x = -4
+		y = 1
+		icon = GFX_goal_flag_uen
+		relative_position_id = SOU_guest_from_the_future
+		prerequisite = { focus = SOU_guest_from_the_future }
+		cost = 5
+		completion_reward = {
+			UEN = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.07
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = SOU_contact_new_usa
+		x = 0
+		y = 1
+		icon = GFX_goal_flag_uas
+		relative_position_id = SOU_guest_from_the_future
+		prerequisite = { focus = SOU_guest_from_the_future }
+		cost = 5
+		completion_reward = {
+			UAS = {
+				add_popularity = {
+					ideology = communism
+					popularity = 0.1
+				}
+			}
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.07
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = SOU_contact_our_mirror
+		x = 4
+		y = 1
+		icon = GFX_goal_flag_rus
+		relative_position_id = SOU_guest_from_the_future
+		prerequisite = { focus = SOU_guest_from_the_future }
+		cost = 5
+		completion_reward = {
+			RUS = {
+				add_ideas = SOU_people_support
+			}
+			add_stability = 0.1
+		}
+	}
+	
+	focus = {
+		id = SOU_old_friends
+		x = 0
+		y = 1
+		icon = GFX_goal_rus_kremlin_reconstruction
+		relative_position_id = SOU_contact_european_union
+		prerequisite = { focus = SOU_contact_european_union }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+	}
+	
+
+	
+	focus = {
+		id = SOU_destroy_uen
+		x = 3
+		y = 1
+		icon = GFX_goal_uen_home_guard
+		available = {
+			UEN = {
+				NOT = { has_government = communism }
+			}
+		}
+		relative_position_id = SOU_strength_european_commies
+		prerequisite = { focus = SOU_strength_european_commies }
+		mutually_exclusive = { focus = SOU_faction_uen }
+		cost = 5
+		completion_reward = {
+			UEN = {
+				add_timed_idea = {
+					idea = SOU_bund_blyat
+					days = 150
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_faction_uen
+		x = 1
+		y = 1
+		icon = GFX_goal_flag_uen_communist
+		available = {
+			UEN = { 
+				has_government = communism 
+			}
+		}
+		relative_position_id = SOU_strength_european_commies
+		prerequisite = { focus = SOU_strength_european_commies }
+		mutually_exclusive = { focus = SOU_destroy_uen }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = SOU_red_alert_comintern
+				add_to_faction = UEN 
+			}
+			if = {
+				limit = {
+					is_in_faction = yes 
+				}
+				add_to_faction = UEN
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_examine_new_enemy
+		x = 0
+		y = 1
+		icon = GFX_goal_usa_militarized_society
+		relative_position_id = SOU_contact_new_usa
+		prerequisite = { focus = SOU_contact_new_usa }
+		cost = 5
+		completion_reward = {
+			UAS = {
+				add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = ROOT 
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = SOU_states_diversions
+		x = -1
+		y = 1
+		icon = GFX_goal_generic_coup
+		relative_position_id = SOU_examine_new_enemy
+		prerequisite = { focus = SOU_examine_new_enemy }
+		cost = 5
+		completion_reward = {
+			UAS = {
+				add_stability = -0.15
+				add_war_support = 0.1
+				add_timed_idea = {
+					idea = SOU_bund_blyat
+					days = 150
+				}
+			}
+		}	
+	}
+	
+	focus = {
+		id = SOU_training_arborne
+		x = 1
+		y = 1
+		icon = GFX_goal_rus_sov_army
+		relative_position_id = SOU_examine_new_enemy
+		prerequisite = { focus = SOU_examine_new_enemy }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_paratroopers_invasion
+		}
+	}
+	
+	focus = {
+		id = SOU_nato_discreditation
+		x = 1
+		y = 1
+		icon = GFX_goal_euro_equestrian_federation
+		relative_position_id = SOU_states_diversions
+		prerequisite = { focus = SOU_states_diversions }
+		prerequisite = { focus = SOU_training_arborne }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				add_opinion_modifier = {
+					modifier = decline_politics
+					target = UAS 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_national_threat
+		x = 0
+		y = 1
+		icon = GFX_goal_rus_baltic_fleet
+		relative_position_id = SOU_nato_discreditation
+		prerequisite = { focus = SOU_nato_discreditation }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_enemies_here
+		}
+	}
+	
+	focus = {
+		id = SOU_weapons_tech_buy
+		x = 0
+		y = 1
+		icon = GFX_goal_PVO
+		relative_position_id = SOU_contact_our_mirror
+		prerequisite = { focus = SOU_contact_our_mirror }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 0.75
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = armor
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_continue_support
+		x = -1
+		y = 1
+		icon = GFX_goal_deal_rus
+		relative_position_id = SOU_weapons_tech_buy
+		prerequisite = { focus = SOU_weapons_tech_buy }
+		cost = 5
+		completion_reward = {
+			RUS = {
+				add_timed_idea = {
+					idea = SOU_fiveyear_plan
+					days = 1500
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_military_trainings_soviet
+		x = 1
+		y = 1
+		icon = GFX_goal_generic_meeting
+		relative_position_id = SOU_weapons_tech_buy
+		prerequisite = { focus = SOU_weapons_tech_buy }
+		cost = 5
+		completion_reward = {
+			army_experience = 75
+			RUS = { army_experience = 75 }
+		}
+	}
+	
+	focus = {
+		id = SOU_collective_propaganda
+		x = 0
+		y = 1
+		icon = GFX_goal_uen_communist_army
+		relative_position_id = SOU_continue_support 
+		prerequisite = { focus = SOU_continue_support }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+				add_stability = 0.1
+				add_opinion_modifier = {
+					modifier = accept_politics
+					target = ROOT 
+				}
+				add_opinion_modifier = {
+					modifier = accept_politics
+					target = RUS 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = accept_politics
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = accept_politics
+					target = RUS 
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = SOU_share_tech
+		x = 0
+		y = 1
+		icon = GFX_goal_sovheli
+		relative_position_id = SOU_military_trainings_soviet 
+		prerequisite = { focus = SOU_military_trainings_soviet }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_fund_research
+		}
+	}
+	
+	focus = {
+		id = SOU_command_and_conquer
+		x = 1
+		y = 1
+		icon = GFX_goal_RUS_b_communist
+		relative_position_id = SOU_collective_propaganda
+		prerequisite = { focus = SOU_collective_propaganda }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no 
+				}
+				create_faction = SOU_red_alert_comintern
+				add_to_faction = RUS 
+			}
+			if = {
+				limit = {
+					is_in_faction = yes 
+				}
+				add_to_faction = RUS 
+			}
+			add_ideas = SOU_time_has_come
+			RUS = { add_ideas = SOU_time_has_come }
+		}
+	}
+	
+	focus = {
+		id = SOU_antitank_guns
+		x = -2
+		y = 1
+		icon = GFX_goal_strategicmissileforce
+		relative_position_id = SOU_command_and_conquer
+		prerequisite = { focus = SOU_command_and_conquer }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_anti_tank
+				uses = 3
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_antiair_guns 
+		x = 0
+		y = 1
+		icon = GFX_goal_Guidedmissiles
+		relative_position_id = SOU_command_and_conquer
+		prerequisite = { focus = SOU_command_and_conquer }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_anti_air
+				uses = 3
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_historical_documents
+		x = 2
+		y = 1
+		icon = GFX_goal_COMECON
+		relative_position_id = SOU_command_and_conquer
+		prerequisite = { focus = SOU_command_and_conquer }
+		cost = 5
+		completion_reward = {
+			add_ideas = soviet_attack_bonus
+		}
+	}
+	
+	focus = {
+		id = SOU_superheavy_tanks
+		x = 0
+		y = 1
+		icon = GFX_goal_generic_tank_research
+		relative_position_id = SOU_antitank_guns
+		prerequisite = { focus = SOU_antitank_guns }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_heavy_armor
+				uses = 5
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_superheavy_air
+		x = 0
+		y = 1
+		icon = GFX_goal_generic_jet_fighters
+		relative_position_id = SOU_antiair_guns
+		prerequisite = { focus = SOU_antiair_guns }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = cas_bomber
+				uses = 5
+				bonus = 1
+			}
+			set_technology = {
+				sou_kirov_tech = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_two_kalashnikovs
+		x = 0
+		y = 1
+		icon = GFX_goal_rus_akm
+		relative_position_id = SOU_historical_documents
+		prerequisite = { focus = SOU_historical_documents }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = RUS_IZMACH
+		}
+	}
+	
+	focus = {
+		id = SOU_greater_socialistic_union
+		x = 0
+		y = 1
+		icon = GFX_goal_sov_stg_relation
+		relative_position_id = SOU_superheavy_air
+		prerequisite = { focus = SOU_superheavy_air }
+		prerequisite = { focus = SOU_superheavy_tanks }
+		prerequisite = { focus = SOU_two_kalashnikovs }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_para_bellum
+		}
+	}
+	
+	focus = {
+		id = SOU_unite_the_humanity
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_hum_first
+		relative_position_id = SOU_european_claims
+		prerequisite = { focus = SOU_european_claims }
+		prerequisite = { focus = SOU_claim_germany }
+		prerequisite = { focus = SOU_european_claims }
+		prerequisite = { focus = SOU_national_threat }
+		available = {
+			has_completed_focus = SOU_command_and_conquer 
+		}
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_humanity_first_idea
+		}
+	}
+	
+	focus = {
+		id = SOU_new_london
+		x = -5
+		y = 1
+		icon = GFX_goal_end_neutrality
+		relative_position_id = SOU_unite_the_humanity 
+		prerequisite = { focus = SOU_unite_the_humanity }
+		bypass = {
+			is_in_faction_with = GRB 
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRB 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_unity
+		x = -3
+		y = 1
+		icon = GFX_goal_UNS_society
+		relative_position_id = SOU_unite_the_humanity 
+		prerequisite = { focus = SOU_unite_the_humanity }
+		bypass = {
+			is_in_faction_with = UEN 
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UEN 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_fall_of_washington
+		x = -1
+		y = 1
+		icon = GFX_goal_usa_socialism
+		relative_position_id = SOU_unite_the_humanity 
+		prerequisite = { focus = SOU_unite_the_humanity }
+		bypass = {
+			is_in_faction_with = UAS 
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UAS 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_new_washington
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_polit_cris
+		relative_position_id = SOU_unite_the_humanity 
+		prerequisite = { focus = SOU_unite_the_humanity }
+		bypass = {
+			is_in_faction_with = UNS 
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UNS 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_march_berlin
+		x = 3
+		y = 1
+		icon = GFX_goal_GEM_purge
+		relative_position_id = SOU_unite_the_humanity 
+		prerequisite = { focus = SOU_unite_the_humanity }
+		bypass = {
+			is_in_faction_with = GEM 
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GEM 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_way_east
+		x = -1
+		y = 1
+		icon = GFX_goal_GEB_attack_JER
+		relative_position_id = SOU_new_london 
+		prerequisite = { focus = SOU_new_london }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JER 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_new_mareland_invasion
+		x = -1
+		y = 1
+		icon = GFX_goal_GRB_invade_EQC
+		relative_position_id = SOU_unity 
+		prerequisite = { focus = SOU_new_london OR = SOU_unity }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = EQC 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_invade_harmony_land
+		x = -1
+		y = 1
+		icon = GFX_goal_SOU_destroy_equestria
+		relative_position_id = SOU_fall_of_washington 
+		prerequisite = { focus = SOU_fall_of_washington OR = SOU_unity }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = EQS 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_strength_naval_ways
+		x = -1
+		y = 1
+		icon = GFX_goal_SOU_breaking_sea
+		relative_position_id = SOU_new_washington 
+		prerequisite = { focus = SOU_fall_of_washington OR = SOU_new_washington }
+		cost = 5
+		completion_reward = {
+			add_ideas = GRB_naval_power
+		}
+	}
+	
+	focus = {
+		id = SOU_conquer_deers
+		x = -1
+		y = 1
+		icon = GFX_goal_GEM_deers
+		relative_position_id = SOU_march_berlin 
+		prerequisite = { focus = SOU_march_berlin OR = SOU_new_washington }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = OLE 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_changelings_attack
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_crush_bugs
+		relative_position_id = SOU_march_berlin 
+		prerequisite = { focus = SOU_march_berlin }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHN 
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_end_of_imperialism
+		x = 0
+		y = 2
+		icon = GFX_goal_GEM_human_spirit
+		relative_position_id = SOU_fall_of_washington
+		prerequisite = { focus = SOU_way_east }
+		prerequisite = { focus = SOU_new_mareland_invasion }
+		prerequisite = { focus = SOU_invade_harmony_land }
+		prerequisite = { focus = SOU_strength_naval_ways }
+		prerequisite = { focus = SOU_conquer_deers }
+		prerequisite = { focus = SOU_changelings_attack }
+		cost = 10
+		completion_reward = {
+			add_ideas = SOU_mighty_union
+		}
+	}

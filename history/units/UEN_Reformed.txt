@@ -1,0 +1,138 @@
+﻿division_template = {
+	name = "Conscript Infantry Division"
+	division_names_group = UEN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Mechanized Infantry Division"
+
+	regiments = {
+	mechanized = { x = 0 y = 0 }
+	mechanized = { x = 0 y = 1 }
+    mechanized = { x = 1 y = 0 }
+	mechanized = { x = 1 y = 1 }
+    mot_artillery_brigade = { x = 1 y = 2 }
+	}
+	support = {
+		light_tank_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		field_hospital = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Armored Brigade"
+	division_names_group = UEN_ARM_01
+
+	regiments = {
+	light_armor = { x = 0 y = 0 }
+	light_armor = { x = 0 y = 1 }
+    motorized = { x = 1 y = 0 }
+	motorized = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		light_tank_recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Paratrooper Brigade"
+
+	regiments = {
+	paratrooper = { x = 0 y = 0 }
+	paratrooper = { x = 0 y = 1 }
+    paratrooper = { x = 0 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		mot_recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Marines Brigade"
+
+	regiments = {
+	marine = { x = 0 y = 0 }
+	marine = { x = 0 y = 1 }
+    marine = { x = 1 y = 0 }
+    marine = { x = 1 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		engineer = { x = 0 y = 2 }
+	}
+}
+
+
+
+units = {
+	division = {
+		name = "Veteran Infantry Division"
+		location = 4080
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.8
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Volunteer Infantry Division"
+		location = 4080
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Light Infantry Division"
+		location = 4080
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Conscript Infantry Division"
+		location = 4080
+		division_template = "Conscript Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }		
+	division = {
+		name = "Brigada de Infantería de Marina (Spa.)"
+		location = 4080
+		division_template = "Marines Brigade"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Luftsturmregiment 40 'Willi Sänger' (eGer.)"
+		location = 4080
+		division_template = "Paratrooper Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "1. Pesadija Divizja (Yug.)"
+		location = 4080
+		division_template = "Mechanized Infantry Division"
+		start_experience_factor = 0.6
+		start_equipment_factor = 1.0 }
+	division = {
+		name = "Panserbataljonen (Nor.)"
+		location = 4080
+		division_template = "Armored Brigade"
+		start_experience_factor = 0.7
+		start_equipment_factor = 1.0 }
+}

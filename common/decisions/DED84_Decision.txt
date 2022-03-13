@@ -1,0 +1,159 @@
+DED_sacrifice_ritual = {
+	DED_machine_ritual = {
+			cost = 50
+		available = {
+			NOT = { has_idea =  DED_sea_sacrifice
+			has_idea = DED_small_sacrifice
+			has_idea = DED_medium_sacrifice
+			has_idea = DED_big_sacrifice
+			has_idea = DED_final_sacrifice }
+			has_completed_focus = DED_infernal_machine
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+
+
+		complete_effect = {
+		add_ideas = DED_machine_sacrifice
+		}
+ 
+          remove_effect = {
+		remove_ideas = DED_machine_sacrifice
+	}
+}
+
+	DED_sea_ritual = {
+			cost = 50
+		available = {
+			NOT = { has_idea =  DED_machine_sacrifice
+			has_idea = DED_small_sacrifice
+			has_idea = DED_medium_sacrifice
+			has_idea = DED_big_sacrifice
+			has_idea = DED_final_sacrifice }
+			has_completed_focus = DED_sacrifice
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+
+
+		complete_effect = {
+		add_ideas = DED_sea_sacrifice
+		}
+ 
+          remove_effect = {
+		remove_ideas = DED_sea_sacrifice
+	}
+}
+
+	DED_small_ritual = {
+			cost = 50
+		available = {
+			NOT = { has_idea =  DED_machine_sacrifice
+			has_idea = DED_sea_sacrifice
+			has_idea = DED_medium_sacrifice
+			has_idea = DED_big_sacrifice
+			has_idea = DED_final_sacrifice }
+			has_completed_focus = DED_sacrifice
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+
+
+		complete_effect = {
+		add_ideas = DED_small_sacrifice
+		}
+ 
+          remove_effect = {
+		remove_ideas = DED_small_sacrifice
+	}
+}
+
+	DED_medium_ritual = {
+			cost = 50
+		available = {
+			NOT = { has_idea =  DED_machine_sacrifice
+			has_idea = DED_sea_sacrifice
+			has_idea = DED_small_sacrifice
+			has_idea = DED_big_sacrifice
+			has_idea = DED_final_sacrifice }
+			has_completed_focus = DED_infernal_machine
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+
+
+		complete_effect = {
+		add_ideas = DED_medium_sacrifice
+		}
+ 
+          remove_effect = {
+		remove_ideas = DED_medium_sacrifice
+	}
+}
+
+	DED_big_ritual = {
+			cost = 50
+		available = {
+			NOT = { has_idea =  DED_machine_sacrifice
+			has_idea = DED_sea_sacrifice
+			has_idea = DED_small_sacrifice
+			has_idea = DED_medium_sacrifice
+			has_idea = DED_final_sacrifice }
+			has_completed_focus = DED_infernal_machine
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 60
+
+
+		complete_effect = {
+		add_ideas = DED_big_sacrifice
+		}
+ 
+          remove_effect = {
+		remove_ideas = DED_big_sacrifice
+	}
+}
+
+	DED_final_ritual = {
+			cost = 150
+		available = {
+			NOT = { has_idea =  DED_machine_sacrifice
+			has_idea = DED_sea_sacrifice
+			has_idea = DED_small_sacrifice
+			has_idea = DED_medium_sacrifice
+			has_idea = DED_final_sacrifice }
+			has_completed_focus = DED_sacrifice
+		}
+
+			ai_will_do = {
+			factor = 50
+		}
+          days_remove = 150
+
+
+		complete_effect = {
+		add_ideas = DED_big_sacrifice
+		}
+ 
+          remove_effect = {
+		remove_ideas = DED_big_sacrifice
+		add_ideas = DED_final_sacrifice
+	}
+}
+
+}

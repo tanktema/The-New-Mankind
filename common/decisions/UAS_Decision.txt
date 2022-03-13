@@ -1,0 +1,870 @@
+UAS_change_flag = {
+
+	UAS_star_and_stripe = {
+			ai_will_do = {
+			factor = 0
+	        }
+			fire_only_once = yes
+	        complete_effect = {
+			set_cosmetic_tag = UAS_democratic
+				        }
+			}
+}
+
+
+UAS_change_name = {
+	UAS_change_manehattan = {
+		icon = modern_city
+			ai_will_do = {
+			factor = 0
+	        }
+			fire_only_once = yes
+			available = {
+				controls_state = 362
+			}
+
+	        complete_effect = {
+			set_province_name = {
+				id = 829
+				name = "Manhattan"
+			}
+		}
+	}
+}
+
+
+UAS_Mobilization = {
+	UAS_Mobilize_Line = {
+		icon = rifles
+			cost = 25
+			ai_will_do = {
+			factor = 80
+			modifier = {
+				factor = 50
+				363 = { is_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 70
+          remove_effect = {
+			country_event = {
+				id = UAS.20 
+			}
+		}
+	}
+
+	UAS_Mobilize_reserve = {
+		icon = rifles
+			cost = 50
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				363 = { is_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 35
+          remove_effect = {
+			country_event = {
+				id = UAS.21 
+			}
+		}
+	}
+
+	UAS_Mobilize_militia = {
+		icon = rifles
+			cost = 75
+			ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 50
+				363 = { is_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+			country_event = {
+				id = UAS.22 
+			}
+		}
+	}
+
+	UAS_unmothball_tank = {
+		icon = rifles
+		available = {
+			has_tech = basic_light_tank  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 120
+			}
+
+				add_equipment_to_stockpile = {
+				type = gw_tank_equipment
+				amount = 48
+			}
+		}
+	}
+
+	UAS_unmothball_mechanized = {
+		icon = rifles
+		available = {
+			has_tech = mechanised_infantry  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = mechanized_equipment_1
+				amount = 500
+			}
+		}
+	}
+
+	UAS_unmothball_artillery = {
+		icon = rifles
+		available = {
+			has_tech = interwar_artillery  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = artillery_equipment_0
+				amount = 250
+			}
+
+				add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 190
+			}
+
+				add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 96
+			}
+		}
+	}
+
+	UAS_unmothball_fighter = {
+		icon = rifles
+		available = {
+			has_tech = early_fighter  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = fighter_equipment_0 
+				amount = 110
+			}
+		}
+	}
+
+	UAS_unmothball_helicopter = {
+		icon = rifles
+		available = {
+			has_tech = CAS1  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = CAS_equipment_1 
+				amount = 200
+			}
+		}
+	}
+
+	UAS_unmothball_bomber = {
+		icon = rifles
+		available = {
+			has_tech = early_bomber  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0 
+				amount = 50
+			}
+
+				add_equipment_to_stockpile = {
+				type = transport_plane_equipment_1 
+				amount = 30
+			}
+		}
+	}
+
+	UAS_unmothball_navy = {
+		icon = rifles
+		available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_tech = early_ship_hull_light 
+					has_tech = early_ship_hull_cruiser
+					else = {
+						OR = {
+							has_tech = early_destroyer
+							has_tech = early_light_cruiser
+							has_tech = early_heavy_cruiser
+						}
+					}
+				}
+				has_completed_focus = UAS_create_naval_base	
+			}
+
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				navy_experience = 50
+                custom_effect_tooltip = HUM_fleet_build
+                hidden_effect = {
+                    load_oob = "UAS_Navy"
+                }
+			}
+		}
+}
+
+UAS_real_estate = {
+	UAS_buy_boltaire = {
+		icon = ger_mefo_bills
+          visible = {
+               NOT = { 675 = { is_fully_controlled_by = UAS } }
+          }
+
+		available = {
+			NOT = { has_war_with = EQC }
+		}
+
+			cost = 100
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				675 = { is_controlled_by = EQC }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 675
+                }
+                country_event = UAS.4160
+            }
+        }
+	}
+
+	UAS_upgrade_boltaire = {
+		icon = generic_industry
+          visible = {
+               675 = { is_fully_controlled_by = UAS }
+          }
+
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+			country_event = UAS.4166
+		}
+	}
+
+	UAS_buy_eldoran = {
+		icon = ger_mefo_bills
+          visible = {
+               NOT = { 676 = { is_fully_controlled_by = UAS } }
+          }
+
+		available = {
+			NOT = { has_war_with = EQC }
+		}
+
+
+			cost = 100
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				676 = { is_controlled_by = EQC }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 676
+                }
+                country_event = UAS.4162
+            }
+        }
+	}
+
+	UAS_upgrade_eldoran = {
+		icon = generic_industry
+          visible = {
+               676 = { is_fully_controlled_by = UAS }
+          }
+
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+			country_event = {
+				id = UAS.4167
+			}
+		}
+	}
+
+	UAS_buy_new_hooflem = {
+		icon = ger_mefo_bills
+          visible = {
+               NOT = { 365 = { is_fully_controlled_by = UAS } }
+          }
+
+		available = {
+			NOT = { has_war_with = EQC }
+		}
+
+			cost = 200
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				365 = { is_controlled_by = EQC }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 365
+                }
+                country_event = UAS.4164
+            }
+        }
+	}
+
+	UAS_upgrade_new_hooflem = {
+		icon = generic_industry
+          visible = {
+               365 = { is_fully_controlled_by = UAS }
+          }
+
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+			country_event = {
+				id = UAS.4168
+			}
+		}
+	}
+}
+
+#DEFCON SYSTEM
+UAS_defcon = {
+	UAS_Defcon_5 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			has_idea = HUM_defcon_4
+		}
+
+          remove_effect = {
+			##sound_effect = "Detente"
+				swap_ideas = { 
+	 		remove_idea = HUM_defcon_4 
+  			add_idea = HUM_defcon_5
+			}
+		}
+	}
+
+	UAS_Defcon_4 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			threat > 0.1
+			OR = {
+			has_idea = HUM_defcon_5			
+			has_idea = HUM_defcon_3
+			}
+		}
+
+          remove_effect = {
+				IF = {
+			limit = { has_idea = HUM_defcon_5}
+			#sound_effect = "DEFCON"
+			swap_ideas = {
+			remove_idea = HUM_defcon_5
+			add_idea = HUM_defcon_4
+				}
+			}
+
+				IF = {
+			limit = { has_idea = HUM_defcon_3}
+			#sound_effect = "Detente"
+			swap_ideas = {
+			remove_idea = HUM_defcon_3
+			add_idea = HUM_defcon_4
+				}
+			}
+		}
+	}
+
+	UAS_extra_preparation = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_4
+		}
+
+		available = {
+		has_idea = HUM_defcon_4
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+			add_political_power = 150
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+
+	UAS_Defcon_3 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			threat > 0.25
+			OR = {
+			has_idea = HUM_defcon_4		
+			has_idea = HUM_defcon_2
+			}
+		}
+
+          remove_effect = {
+			#sound_effect = "DEFCON"
+				IF = {
+			limit = { has_idea = HUM_defcon_4}
+			swap_ideas = {
+			remove_idea = HUM_defcon_4
+			add_idea = HUM_defcon_3
+				}
+			}
+
+				IF = {
+			limit = { has_idea = HUM_defcon_2}
+			swap_ideas = {
+			remove_idea = HUM_defcon_2
+			add_idea = HUM_defcon_3
+				}
+			}
+		}
+	}
+
+	UAS_defcon_mobilisation = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_3
+
+		}
+		
+		available = {
+		has_idea = HUM_defcon_3
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+			add_war_support = -0.05
+			add_manpower = 25000
+			add_command_power = 50
+		}
+	}
+
+	UAS_Defcon_2 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			threat > 0.45
+			OR = {
+			has_idea = HUM_defcon_3
+			has_idea = HUM_defcon_1
+			}
+		}
+
+          remove_effect = {
+			#sound_effect = "DEFCON"
+				IF = {
+			limit = { has_idea = HUM_defcon_3}
+			swap_ideas = {
+			remove_idea = HUM_defcon_3
+			add_idea = HUM_defcon_2
+				}
+			}
+
+				IF = {
+			limit = { has_idea = HUM_defcon_1}
+			swap_ideas = {
+			remove_idea = HUM_defcon_1
+			add_idea = HUM_defcon_2
+				}
+			}
+		}
+	}
+
+	UAS_strategic_forces = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_2
+		has_tech = strategic_bomber1 
+		}
+		
+		available = {
+		has_idea = HUM_defcon_2
+		has_tech = strategic_bomber1  
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = strat_bomber_equipment_1
+				amount = 50
+			}
+		}
+	}
+
+	UAS_Defcon_1 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			has_war
+			threat > 0.6		
+			has_idea = HUM_defcon_2
+			has_tech = nuclear_reactor
+		}
+
+          remove_effect = {
+				IF = {
+			#sound_effect = "DEFCON"
+			limit = { has_idea = HUM_defcon_2}
+			swap_ideas = {
+			remove_idea = HUM_defcon_2
+			add_idea = HUM_defcon_1
+				}
+			}
+		}
+	}
+
+
+UAS_nuke_crate = {
+	ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				}
+	}
+		visible = {
+		has_idea = HUM_defcon_1
+
+		}
+		
+		available = {
+		has_idea = HUM_defcon_1
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+				set_technology = { nukes = 1 }
+		}
+	}
+}
+
+UAS_occupation = {
+
+	UAS_occupation_aquileia = {
+
+		icon = griffon
+
+		available = {
+			has_completed_focus = UAS_Tame
+			JER = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+		controls_state = 377
+		controls_state = 376
+		controls_state = 517
+		controls_state = 448
+		controls_state = 435
+		}
+
+		cost = 125
+		ai_will_do = {
+			factor = 0
+			modifier = {
+			}
+		}
+
+		visible = {
+			has_completed_focus = UAS_Tame
+		}
+
+		complete_effect = {
+        376 = { add_core_of = JER }
+        421 = { add_core_of = JER }
+        517 = { add_core_of = JER }
+        519 = { add_core_of = JER }
+        448 = { add_core_of = JER }
+        523 = { add_core_of = JER }
+        472 = { add_core_of = JER }
+        524 = { add_core_of = JER }
+        502 = { add_core_of = JER }
+        435 = { add_core_of = JER }
+
+		every_state = { 
+    		limit = { is_core_of = JER }
+    		JER = { transfer_state = PREV }
+		}
+				JER = {
+
+					load_focus_tree = generic_griffon_focus
+					set_cosmetic_tag = UAS_JER_puppet 
+					create_country_leader = {
+						name = "Military Governor"
+						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+						generallissimo 
+						}
+					}
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+				}
+				set_autonomy = { target = JER autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+
+	UAS_occupation_mareland = {
+
+		icon = decision_generic_nationalism
+
+		available = {
+			has_completed_focus = UAS_Tame
+			EQC = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+			controls_state = 356
+		}
+
+		cost = 75
+		ai_will_do = {
+			factor = 0
+			modifier = {
+			}
+		}
+
+		visible = {
+			has_completed_focus = UAS_Tame
+		}
+
+		complete_effect = {
+	every_state = { 
+    	limit = { is_core_of = EQC }
+    	EQC = { transfer_state = PREV }
+	}
+    	transfer_state = 362
+		transfer_state = 365
+    	transfer_state = 675
+		transfer_state = 676
+
+		362 = {
+			add_manpower = -1000000
+		}
+		365 = {
+			add_manpower = -1000000
+		}
+		356 = {
+			add_manpower = 2000000
+		}
+
+
+		363 = {
+			add_manpower = -1250000
+		}
+		362 = {
+			add_core_of = ROOT
+			add_manpower = 1250000
+		}
+
+		364 = {
+			add_manpower = -1250000
+		}
+		365 = {
+			add_core_of = ROOT
+			add_manpower = 1250000
+		}
+
+		675 = { add_core_of = ROOT }
+		676 = { add_core_of = ROOT }
+
+
+				EQC = {
+
+					load_focus_tree = generic_focus
+					set_cosmetic_tag = UAS_EQC_puppet 
+					create_country_leader = {
+						name = "Military Governor"
+						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+						generallissimo 
+						}
+					}
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+				}
+				set_autonomy = { target = EQC autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+
+	UAS_occupation_wingbardy = {
+
+		icon = griffon
+
+		available = {
+			has_completed_focus = UAS_Tame
+			WNG = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT
+					has_war_with = ROOT
+				}
+			}
+			controls_state = 371
+		}
+
+		cost = 125
+		ai_will_do = {
+			factor = 0
+			modifier = {
+			}
+		}
+
+		visible = {
+			has_completed_focus = UAS_Tame
+		}
+
+		complete_effect = {
+	every_state = { 
+    	limit = { is_core_of = WNG }
+    	WNG = { transfer_state = PREV }
+	}
+
+				WNG = {
+
+					load_focus_tree = generic_focus
+					set_cosmetic_tag = UAS_WNG_puppet 
+					create_country_leader = {
+						name = "Military Governor"
+						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
+						picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {
+						generallissimo 
+						}
+					}
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+				}
+				set_autonomy = { target = WNG autonomy_state = autonomy_integrated_puppet }
+			}
+		}
+}

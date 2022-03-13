@@ -5705,6 +5705,13 @@ focus_tree = {
 	############## Industry
 	focus = { ### Борьба с Новой Депрессией
 		id = UNS_depression
+		available = {	
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_AF_FLAG
+				}
+			}
+		}
 		x = 36
 		y = 3
 		icon = GFX_goal_UNS_depression
@@ -6358,6 +6365,13 @@ focus_tree = {
 			NOT = {
 				has_idea = UNS_radiation_poisoning
 			}
+
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_AF_FLAG
+				}
+			}
+		
 		}
 		x = 58
 		y = 3
@@ -6921,6 +6935,7 @@ focus_tree = {
 		id = UNS_strange_signal
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_radio
 		relative_position_id = UNS_world_situation
 		
 		allow_branch = {
@@ -6936,6 +6951,7 @@ focus_tree = {
 		id = UNS_ships_arrival
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_rocketry
 		relative_position_id = UNS_strange_signal
 		prerequisite = { focus = UNS_strange_signal	}
 		cost = 5
@@ -6951,6 +6967,7 @@ focus_tree = {
 		id = UNS_hail_the_emperor
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_war_never_changes
 		relative_position_id = UNS_ships_arrival
 		prerequisite = { focus = UNS_ships_arrival }
 		cost = 5
@@ -6963,6 +6980,7 @@ focus_tree = {
 		id = UNS_cultmech_techs
 		x = -2
 		y = 1
+		icon = GFX_goal_generalmotors
 		relative_position_id = UNS_hail_the_emperor
 		prerequisite = { focus = UNS_hail_the_emperor }
 		cost = 5
@@ -6976,6 +6994,7 @@ focus_tree = {
 		id = UNS_xenobiology
 		x = 0
 		y = 1
+		icon = GFX_goal_adaptation
 		relative_position_id = UNS_cultmech_techs
 		prerequisite = { focus = UNS_cultmech_techs }
 		cost = 5
@@ -6988,6 +7007,7 @@ focus_tree = {
 		id = UNS_resource_imp
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_resources_hum
 		relative_position_id = UNS_xenobiology
 		prerequisite = { focus = UNS_xenobiology }
 		cost = 5
@@ -7033,6 +7053,7 @@ focus_tree = {
 		id = UNS_hive_cities
 		x = -4 
 		y = 1
+		icon = GFX_goal_GEM_city_update
 		relative_position_id = UNS_resource_imp
 		prerequisite = { focus = UNS_resource_imp }
 		cost = 5
@@ -7048,6 +7069,7 @@ focus_tree = {
 		id = UNS_fast_civilians
 		x = -2 
 		y = 1
+		icon = GFX_goal_UNS_workplaces
 		relative_position_id = UNS_resource_imp
 		prerequisite = { focus = UNS_resource_imp }
 		cost = 10
@@ -7067,6 +7089,7 @@ focus_tree = {
 		id = UNS_ultimatum_eqs
 		x = 0 
 		y = 1
+		icon = GFX_goal_UNS_locals
 		relative_position_id = UNS_resource_imp
 		prerequisite = { focus = UNS_resource_imp }
 		cost = 5
@@ -7079,6 +7102,7 @@ focus_tree = {
 		id = UNS_auxillia
 		x = 2
 		y = 1
+		icon = GFX_goal_GEM_ask_lasts
 		relative_position_id = UNS_hail_the_emperor
 		prerequisite = { focus = UNS_hail_the_emperor }
 		cost = 5
@@ -7094,6 +7118,7 @@ focus_tree = {
 		id = UNS_conquer_xenos
 		x = -1
 		y = 1
+		icon = GFX_goal_SOU_destroy_equestria
 		relative_position_id = UNS_auxillia
 		prerequisite = { focus = UNS_auxillia }
 		mutually_exclusive = { focus = UNS_destroy_xenos }
@@ -7107,6 +7132,7 @@ focus_tree = {
 		id = UNS_destroy_xenos
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_BOI_attack
 		relative_position_id = UNS_auxillia
 		prerequisite = { focus = UNS_auxillia }
 		mutually_exclusive = { focus = UNS_conquer_xenos }
@@ -7120,6 +7146,7 @@ focus_tree = {
 		id = UNS_produce_weapons
 		x = 1
 		y = 1
+		icon = GFX_goal_SOU_the_best_weap
 		relative_position_id = UNS_conquer_xenos
 		prerequisite = { focus = UNS_conquer_xenos OR = UNS_destroy_xenos }
 		cost = 5
@@ -7139,6 +7166,7 @@ focus_tree = {
 		id = UNS_guard_tanks
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_blietzkrieg
 		relative_position_id = UNS_produce_weapons
 		prerequisite = { focus = UNS_produce_weapons }
 		cost = 5
@@ -7160,6 +7188,7 @@ focus_tree = {
 		id = UNS_free_the_humanity
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_hum_first
 		relative_position_id = UNS_ultimatum_eqs
 		prerequisite = { focus = UNS_ultimatum_eqs }
 		prerequisite = { focus = UNS_guard_tanks }
@@ -7187,6 +7216,7 @@ focus_tree = {
 		id = UNS_collaborate_ponies
 		x = -4
 		y = 1
+		icon = GFX_goal_twilight_visit
 		relative_position_id = UNS_free_the_humanity
 		prerequisite = { focus = UNS_free_the_humanity }
 		mutually_exclusive = { focus = UNS_decrease_pony_contacts }
@@ -7202,6 +7232,7 @@ focus_tree = {
 		id = UNS_pony_armor
 		x = -2
 		y = 1
+		icon = GFX_goal_UNS_armor
 		relative_position_id = UNS_collaborate_ponies 
 		prerequisite = { focus = UNS_collaborate_ponies }
 		cost = 5
@@ -7219,6 +7250,7 @@ focus_tree = {
 		id = UNS_pony_auxillia
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_SNOVA_failure
 		relative_position_id = UNS_collaborate_ponies 
 		prerequisite = { focus = UNS_collaborate_ponies }
 		cost = 5
@@ -7255,6 +7287,7 @@ focus_tree = {
 		id = UNS_pony_borders
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_SNOVA_repair_mistakes
 		relative_position_id = UNS_collaborate_ponies 
 		prerequisite = { focus = UNS_collaborate_ponies }
 		cost = 5
@@ -7313,6 +7346,33 @@ focus_tree = {
 					}
 				}
 			}
+			EQC = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							NOT = {
+								OR = {
+									is_owned_by = UNS
+									is_owned_by = CRY 
+									is_owned_by = EQS 
+									is_owned_by = BUF
+									is_owned_by = DRG
+									is_owned_by = EQC
+								}
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 10
+						instant_build = yes
+						province = {
+							all_provinces = yes 
+							limit_to_border = yes 
+						}
+					}
+				}
+			}
 								
 		}
 	}
@@ -7321,6 +7381,7 @@ focus_tree = {
 		id = UNS_spo_focus
 		x = 0
 		y = 1
+		icon = GFX_goal_GRB_doctrine
 		relative_position_id = UNS_pony_auxillia
 		prerequisite = { focus = UNS_pony_armor }
 		prerequisite = { focus = UNS_pony_auxillia }
@@ -7335,6 +7396,7 @@ focus_tree = {
 		id = UNS_prepare_to_attack
 		x = 0
 		y = 1
+		icon = GFX_goal_volunteering
 		relative_position_id = UNS_spo_focus
 		prerequisite = { focus = UNS_spo_focus }
 		cost = 5
@@ -7348,6 +7410,7 @@ focus_tree = {
 		id = UNS_decrease_pony_contacts
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_SNOVA_hostaging
 		relative_position_id = UNS_free_the_humanity
 		prerequisite = { focus = UNS_free_the_humanity }
 		mutually_exclusive = { focus = UNS_collaborate_ponies }
@@ -7361,6 +7424,7 @@ focus_tree = {
 		id = UNS_orbital_bombs
 		x = 0
 		y = 1
+		icon = GFX_goal_GEM_rocketry
 		relative_position_id = UNS_decrease_pony_contacts
 		prerequisite = { focus = UNS_decrease_pony_contacts }
 		cost = 5
@@ -7374,6 +7438,7 @@ focus_tree = {
 		id = UNS_expand_guard
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_recruitment
 		relative_position_id = UNS_orbital_bombs
 		prerequisite = { focus = UNS_orbital_bombs }
 		cost = 5
@@ -7387,6 +7452,7 @@ focus_tree = {
 		id = UNS_land_integration
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_RCT_ultimatum
 		relative_position_id = UNS_orbital_bombs
 		prerequisite = { focus = UNS_orbital_bombs }
 		cost = 5
@@ -7399,6 +7465,7 @@ focus_tree = {
 		id = UNS_prepare_for_great_crusade
 		x = 1
 		y = 1
+		icon = GFX_goal_GRB_prewar_d
 		relative_position_id = UNS_expand_guard
 		prerequisite = { focus = UNS_expand_guard }
 		prerequisite = { focus = UNS_land_integration }
@@ -7412,6 +7479,7 @@ focus_tree = {
 		id = UNS_start_the_crusade
 		x = 3
 		y = 1
+		icon = GFX_goal_GRB_wh40k_reference
 		relative_position_id = UNS_prepare_to_attack
 		prerequisite = { focus = UNS_prepare_to_attack OR = UNS_prepare_for_great_crusade }
 		cost = 5

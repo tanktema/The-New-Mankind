@@ -1,0 +1,542 @@
+﻿# Names are based on equipment types (picking equipment with highest amount from the pool)
+# Generic are used for countries that are not scripted in.
+RUS = {
+	submarine = {
+		prefix = ""
+		generic = { "K-" }
+		unique = {
+"Tareq"
+"Delfin"
+"Akula"
+"Nahang"
+"Simbirsk"
+"Arkhangelsk"
+"Ghadir"
+"Ak Bars"
+"Dmitriy Donskoy"
+"Al-Sabehat"
+"Kuzbass"
+"Daniil Moskovskiy"
+"Nerpa"
+"Volk"
+"Vepr"
+"Noor"
+"Yunes"
+"Leopard"
+"Besat"
+"Magadan"
+"Bratsk"
+"Tambov"
+"Kashalot"
+"Obninsk"
+"Tigr"
+"Iribis"
+"Pantera"
+"Fateh"
+"Severstal"
+		}
+	}
+
+	destroyer = {
+		prefix = ""
+		generic = { "Storozhevoi korabl SKR-" }
+		unique = {
+"Skoryy "
+"Spokoinyy"
+"Sukhbaatar III"
+"Blestyashchyy"
+"Smelyy "
+"el-Nasir"
+"Udaloy"
+"Neyzeh "
+"Skromnyy"
+"İzmir "
+"Rastoropnyy "
+"Otvazhnyy "
+"Al Basra"
+"Zafer "
+"Bayandor"
+"Letuchiy"
+"Marshal Vasilyevsky"
+"Sahand"
+"Savaştepe "
+"Neustrashimy"
+"Taşoz"
+"Smetlivyy "
+"Samsun"
+"Kotlin"
+"Kılıç Ali Paşa"
+"Tabarzin "
+"Joshan "
+"Shmookh "
+"Tiraspol "
+"Kashin"
+"Admiral Spiridonov"
+"Krasnyy Kavkaz"
+"Veskiy"
+"Admiral Levchenko"
+"Hamzeh"
+"Stroynyy "
+"Khadang "
+"Fatah"
+"Vyderzhannyy"
+"Al Tadjier"
+"Krasnyy Krym"
+"Shamshir "
+"Bravyy"
+"Likhoy"
+"Alçıtepe "
+"Zoubin "
+"Provornyy "
+"Smyshlennyy "
+"Kaman "
+"Admiral Chabanenko"
+"İzmit "
+"Vdumchivyy "
+"Soobrazitelnyy "
+"Admiral Panteleyev"
+"Peyk "
+"Vazhnyy "
+"Berk "
+"Basra"
+"Komsomolets Ukrainy"
+"Naghdi"
+"Marshal Shaposhnikov"
+"Severomorsk"
+"Admiral Vinogradov"
+"Muavenet "
+"Majid "
+"Yücetepe "
+"Strogiy "
+		}
+	}
+
+	light_cruiser = {
+		prefix = ""
+		generic = { "Cruiser" }
+		unique = {
+"Nikolayev"
+"Boevoy"
+"Bespokoynyy"
+"Yavuz "
+"Ankara "
+"Groznyy "
+"Sovremenny"
+"Dushanbe"
+"Burnyy"
+"Kynda"
+"Kābol"
+"Moskovskiy Komsomolets"
+"Minsk"
+"Baġdād"
+"Frunze "
+"Tallinn"
+"Azov"
+"Chapayev"
+"İstanbul "
+"Poltoratsk "
+"Dimašq "
+"Chkalov "
+"Otchayannyy"
+"Rastoropnyy"
+"Fatih "
+"Kyiv"
+"Admiral Fokin "
+"Tbilisi "
+"Tashkent"
+"Kishinjóv "
+"Vilnius "
+"Yerevan"
+"Alma-Ata"
+"Kuybyshev "
+"Gelibolu "
+"Gemlik "
+"Bezuprechnyy"
+"Frunze"
+"Kara"
+"Rīga "
+"Tehrân "
+"Genghis Khan"
+"Baku"
+"Admiral Golovko"
+"Tashkent"
+		}
+	}
+
+	heavy_cruiser = {
+		prefix = ""
+		generic = { "Missile Cruiser" }
+		unique = {
+"Komsomolets"
+"Sevastopol"
+"Chervona Ukrayina"
+"Mikhail Kutuzov"
+"Kronstadt"
+"Admiral Zozulya"
+"Admiral Flota Lobov"
+"Admiral Lazarev"
+"Kresta II"
+"Aleksandr Suvorov"
+"Khabarovsk"
+"Slava"
+"Sverdlov"
+"Kresta I"
+"Tallinn"
+"Vasily Chapaev"
+"Varyag"
+"Ulaanbaatar"
+"Vitse-Admiral Drozd"
+"Admiral Ushakov"
+"Vladivostok"
+"Oktyabrskaya Revolyutsia"
+"Marshal Timoshenko"
+"Zhdanov"
+		}
+	}
+
+	battle_cruiser = {
+		prefix = ""
+		generic = { "Heavy Missile Cruiser" }
+		unique = {
+"Kirov"
+"Kalinin"
+"Yuriy Andropov"
+"Frunze"
+"Dzerzhinsky"
+		}
+	}
+
+	battleship = {
+		prefix = ""
+		generic = { "Battleship" }
+		unique = {
+"Novorossiysk"
+"Arkhangelsk"
+"Sovetsky Soyuz"
+"Sovetskaya Ukraina"
+"Sovetskaya Rossiya"
+"Sovetskaya Belorussiya"
+		}
+	}
+
+	carrier = {
+		prefix = ""
+		generic = { "Heavy aircraft cruiser" }
+		unique = {
+"Kiev"
+"Baku"
+"Kuznetsov"
+"Moskva"
+"Admiral Gorshkov"
+"Minsk"
+"Novorossiysk"
+"Leningrad"
+"Ulyanovsk"
+		}
+	}
+
+	air_wing_names_template = AIR_WING_NAME_RUS_FALLBACK
+
+	#Air wings can only be named through archetype
+	fighter_equipment = {
+		prefix = ""
+		generic = { "IAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"86-ya  IAD"
+"13-ya Gv. IAD"
+"38-ya  IAD"
+"296-ya  IAD"
+"3-ya Gv. IAD"
+"229-ya  IAD"
+"26-ya  IAD"
+"190-ya  IAD"
+"234-ya  IAD"
+"282-ya  IAD"
+"283-ya  IAD"
+"257-ya  IAD"
+"95-ya  IAD"
+"265-ya  IAD"
+"9-ya Gv. IAD"
+"28-ya  IAD"
+"4-ya Gv. IAD"
+"41-ya  IAD"
+"322-ya  IAD"
+"193-ya  IAD"
+"278-ya  IAD"
+"94-ya  IAD"
+"240-ya  IAD"
+"265-ya  IAD"
+"286-ya  IAD"
+"50-ya  IAD"
+"138-ya  IAD"
+"283-ya  IAD"
+"1-ya Gv. IAD"
+"6-ya Gv. IAD"
+"119-ya  IAD"
+		}
+	}
+
+	jet_fighter_equipment = {
+		prefix = ""
+		generic = { "IAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"86-ya  IAD"
+"13-ya Gv. IAD"
+"38-ya  IAD"
+"296-ya  IAD"
+"3-ya Gv. IAD"
+"229-ya  IAD"
+"26-ya  IAD"
+"190-ya  IAD"
+"234-ya  IAD"
+"282-ya  IAD"
+"283-ya  IAD"
+"257-ya  IAD"
+"95-ya  IAD"
+"265-ya  IAD"
+"9-ya Gv. IAD"
+"28-ya  IAD"
+"4-ya Gv. IAD"
+"41-ya  IAD"
+"322-ya  IAD"
+"193-ya  IAD"
+"278-ya  IAD"
+"94-ya  IAD"
+"240-ya  IAD"
+"265-ya  IAD"
+"286-ya  IAD"
+"50-ya  IAD"
+"138-ya  IAD"
+"283-ya  IAD"
+"1-ya Gv. IAD"
+"6-ya Gv. IAD"
+"119-ya  IAD"
+		}	
+	}
+
+	heavy_fighter_equipment = {
+		prefix = ""
+		generic = { "Korpus PVO ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"14-ya korpus PVO"
+"41-ya korpus PVO"
+"39-ya korpus PVO"
+"37-ya korpus PVO"
+"24-ya korpus PVO"
+"49-ya korpus PVO"
+"54-ya korpus PVO"
+"5-ya korpus PVO"
+"56-ya korpus PVO"
+"60-ya korpus PVO"
+"19-ya korpus PVO"
+"23-ya korpus PVO"
+"20-ya korpus PVO"
+"50-ya korpus PVO"
+"38-ya korpus PVO"
+"8-ya korpus PVO"
+"51-ya korpus PVO"
+"27-ya korpus PVO"
+		}	
+	}
+
+	CAS_equipment = {
+		prefix = ""
+		generic = { "OVP ya-"}
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"269-ya OVP"
+"396-ya Gv. OVP 'Stalingradskiy'"
+"398-ya OVP"
+"325-ya OVP"
+"340-ya OVP 'Breslavskiy'"
+"307-ya OVP"
+"51-ya Gv. OVP"
+"239-ya Gv. OVP 'Belgorodskiy'"
+"157-ya OVP"
+"373-ya OVP"
+"287-ya OVP"
+"65-ya OVP"
+"332-ya Gv. OVP"
+"396-ya Gv. OVP 'Stalingradskiy'"
+"331-ya OVP"
+"113-ya OVP"
+"513-ya OVP"
+"225-ya OVP"
+"696-ya OVP"
+"825-ya OVP"
+"178-ya OVP"
+		}	
+	}
+
+	cv_fighter_equipment = {
+		prefix = ""
+		generic = { "IAD VVS VMF ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"1-ya Gv. IAD VVS VMF"
+"14-ya IAD VVS VMF"
+"15-ya IAD VVS VMF"
+"16-ya IAD VVS VMF"
+"100-ya IAD VVS VMF"
+		}	
+	}
+
+	cv_CAS_equipment = {
+		prefix = ""
+		generic = { "IBAD VVS VMF ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"710-ya OAPV"
+"830-ya OAPV"
+"38-ya OAPV"
+"872-ya OAPV"
+"78-ya OAPV"
+		}	
+	}
+
+	cv_nav_bomber_equipment = {
+		prefix = ""
+		generic = { "IBAD VVS VMF ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"3-ya IBAD VVS VMF"
+"4-ya IBAD VVS VMF"
+"6-ya IBAD VVS VMF"
+"7-ya IBAD VVS VMF"
+"9-ya IBAD VVS VMF"
+"10-ya IBAD VVS VMF"
+"11-ya IBAD VVS VMF"
+"12-ya IBAD VVS VMF"
+"13-ya IBAD VVS VMF"
+"311-ya IBAD VVS VMF"
+"279-ya IBAD VVS VMF"
+		}	
+	}
+
+	tac_bomber_equipment = {
+		prefix = ""
+		generic = { "IBAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"36-ya IBAD"
+"56-ya IBAD"
+"33-ya IBAD 'Hinganskaya'"
+"83-ya IBAD"
+"11-ya Gv. IBAD"
+"1-ya Gv. IBAD"
+"326-ya IBAD"
+"241-ya IBAD"
+"149-ya IBAD"
+"303-ya IBAD 'Smolenskaya"
+"183-ya IBAD"
+"2-ya Gv. IBAD"
+"334-ya IBAD"
+"301-ya IBAD"
+"197-ya IBAD"
+"113-ya IBAD"
+"3-ya Gv. IBAD"
+"198-ya IBAD"
+"300-ya IBAD"
+"32-ya IBAD"
+		}	
+	}
+
+	jet_tac_bomber_equipment = {
+		prefix = ""
+		generic = { "IBAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"36-ya IBAD"
+"56-ya IBAD"
+"33-ya IBAD 'Hinganskaya'"
+"83-ya IBAD"
+"11-ya Gv. IBAD"
+"1-ya Gv. IBAD"
+"326-ya IBAD"
+"241-ya IBAD"
+"149-ya IBAD"
+"303-ya IBAD 'Smolenskaya"
+"183-ya IBAD"
+"2-ya Gv. IBAD"
+"334-ya IBAD"
+"301-ya IBAD"
+"197-ya IBAD"
+"113-ya IBAD"
+"3-ya Gv. IBAD"
+"198-ya IBAD"
+"300-ya IBAD"
+"32-ya IBAD"
+		}	
+	}
+
+	nav_bomber_equipment = {
+		prefix = ""
+		generic = { "MTAD VVS VMF ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"55-ya MTAD VVS VMF"
+"8-ya MTAD VVS VMF"
+"2-ya MTAD VVS VMF"
+"301-ya MTAD VVS VMF"
+"5-ya MTAD VVS VMF"
+"49-ya MTAD VVS VMF"
+"51-ya MTAD VVS VMF"
+		}	
+	}
+
+	strat_bomber_equipment = {
+		prefix = ""
+		generic = { "TBAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"326-ya TBAD 'Ternopol'"
+"31-ya TBAD"
+"55-ya TBAD"
+"13-ya Gv. TBAD"
+"15-ya Gv. TBAD 'Gomel'"
+"22-ya TBAD 'Donbas'"
+"73-ya TBAD"
+"79-ya TBAD"
+"201-ya TBAD"
+"183-ya TBAD"
+"106-ya TBAD"
+		}	
+	}
+
+	jet_strat_bomber_equipment = {
+		prefix = ""
+		generic = { "TBAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"326-ya TBAD 'Ternopol'"
+"31-ya TBAD"
+"55-ya TBAD"
+"13-ya Gv. TBAD"
+"15-ya Gv. TBAD 'Gomel'"
+"22-ya TBAD 'Donbas'"
+"73-ya TBAD"
+"79-ya TBAD"
+"201-ya TBAD"
+"183-ya TBAD"
+"106-ya TBAD"
+		}	
+	}
+
+	transport_plane_equipment = {
+		prefix = ""
+		generic = { "TAD ya-" }
+		generic_pattern = AIR_WING_NAME_RUS_GENERIC
+		unique = {
+"12-ya TAD"
+"21-ya Gv. TAD"
+"23-ya TAD"
+"10-ya Gv. TAD"
+"40-ya TAD"
+"14-ya TAD"
+"7-ya TAD"
+		}	
+	}	
+}

@@ -1,0 +1,1139 @@
+RUS_Mobilization = {
+
+	RUS_Mobilize_Line = {
+		icon = rifles
+			cost = 25
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				216 = { is_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 70
+          remove_effect = {
+			country_event = {
+				id = RUS.20 
+			}
+		}
+	}
+
+	RUS_Mobilize_reserve = {
+		icon = rifles
+			cost = 50
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				216 = { is_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 35
+          remove_effect = {
+			country_event = {
+				id = RUS.21 
+			}
+		}
+	}
+
+	RUS_Mobilize_militia = {
+		icon = rifles
+			cost = 75
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				216 = { is_controlled_by = ROOT }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+			country_event = {
+				id = RUS.22 
+			}
+		}
+	}
+
+	RUS_unmothball_tank = {
+		icon = rifles
+		available = {
+			has_tech = basic_light_tank  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = light_tank_equipment_1
+				amount = 120
+			}
+
+				add_equipment_to_stockpile = {
+				type = gw_tank_equipment
+				amount = 48
+			}
+		}
+	}
+
+	RUS_unmothball_mechanized = {
+		icon = rifles
+		available = {
+			has_tech = mechanised_infantry  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = mechanized_equipment_1
+				amount = 500
+			}
+		}
+	}
+
+	RUS_unmothball_artillery = {
+		icon = rifles
+		available = {
+			has_tech = interwar_artillery  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = artillery_equipment_0
+				amount = 250
+			}
+
+				add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 190
+			}
+
+				add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 96
+			}
+		}
+	}
+
+	RUS_unmothball_fighter = {
+		icon = rifles
+		available = {
+			has_tech = early_fighter  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = fighter_equipment_0 
+				amount = 110
+			}
+		}
+	}
+
+	RUS_unmothball_helicopter = {
+		icon = rifles
+		available = {
+			has_tech = CAS1  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = CAS_equipment_1 
+				amount = 200
+			}
+		}
+	}
+
+	RUS_unmothball_bomber = {
+		icon = rifles
+		available = {
+			has_tech = early_bomber  
+		}
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0 
+				amount = 50
+			}
+
+				add_equipment_to_stockpile = {
+				type = transport_plane_equipment_1 
+				amount = 30
+			}
+		}
+	}
+
+	RUS_unmothball_navy = {
+		icon = rifles
+		available = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					has_tech = early_ship_hull_light 
+					has_tech = early_ship_hull_cruiser
+					else = {
+						OR = {
+							has_tech = early_destroyer
+							has_tech = early_light_cruiser
+							has_tech = early_heavy_cruiser
+						}
+					}
+				}
+				has_completed_focus = RUS_create_naval_base	
+			}
+
+			cost = 15
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+				navy_experience = 50
+                custom_effect_tooltip = HUM_fleet_build
+                hidden_effect = {
+                    load_oob = "RUS_Navy"
+                }
+			}
+		}
+}
+
+
+RUS_real_estate = {
+	RUS_buy_fluffy_chest = {
+		icon = ger_mefo_bills
+          visible = {
+               NOT = { 190 = { is_fully_controlled_by = RUS } }
+          }
+
+		available = {
+			NOT = { has_war_with = OLE }
+		}
+
+			cost = 100
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				190 = { is_controlled_by = OLE }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 190
+                }
+                country_event = RUS.4160
+            }
+        }
+	}
+
+	RUS_upgrade_fluffy_chest = {
+		icon = generic_industry
+          visible = {
+               190 = { is_fully_controlled_by = RUS }
+          }
+
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+			country_event = {
+				id = RUS.4166
+			}
+		}
+	}
+
+	RUS_buy_yukka_island = {
+		icon = ger_mefo_bills
+          visible = {
+               NOT = { 221 = { is_fully_controlled_by = UAS } }
+          }
+
+		available = {
+			NOT = { has_war_with = EQS }
+		}
+
+			cost = 100
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				221 = { is_controlled_by = EQS }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 221
+                }
+                country_event = RUS.4162
+            }
+        }
+	}
+
+    RUS_take_back_yukka = {
+          visible = {
+                221 = { is_core_of = RUS }
+                221 = { NOT = { is_controlled_by = RUS } }
+          }
+
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                221 = { is_controlled_by = EQS }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                every_other_country = {
+                    limit = {
+                    controls_state = 221
+                }
+                random_list = {
+                    45 = { add_timed_idea = { idea = HUM_debt_payment_1 days = 200 } }
+                    45 = { add_offsite_building = { type = industrial_complex level = 2 } }
+                    5 = { RUS = { add_manpower = -500 } }
+                    5 = { RUS = { add_manpower = -1000 } }
+                }
+            }
+            transfer_state = 221
+        }
+    }
+
+	RUS_upgrade_yukka_island = {
+		icon = generic_industry
+          visible = {
+               221 = { is_fully_controlled_by = RUS }
+          }
+
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+			country_event = {
+				id = RUS.4167
+			}
+		}
+	}
+
+	RUS_buy_wyvern_lands = {
+		icon = ger_mefo_bills
+          visible = {
+               NOT = { 219 = { is_fully_controlled_by = UAS } }
+          }
+
+		available = {
+			NOT = { has_war_with = OLE }
+		}
+
+			cost = 200
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+				219 = { is_controlled_by = OLE }
+			}
+		}
+		fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 219
+                }
+                country_event = RUS.4164
+            }
+        }
+	}
+
+	RUS_upgrade_wyvern_lands = {
+		icon = generic_industry
+          visible = {
+               219 = { is_fully_controlled_by = RUS }
+          }
+
+			cost = 50
+			ai_will_do = {
+			factor = 50
+		}
+		fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+			country_event = {
+				id = RUS.4168
+			}
+		}
+	}
+}
+
+#SOVIET ARMY NAVY RIVALITY
+RUS_navy_army_supremacy = {
+
+	RUS_increase_army_funding = {
+			cost = 75
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			has_idea = RUS_balanced_funding
+		}
+
+          days_remove = 30
+          remove_effect = {
+				swap_ideas = { 
+	 		remove_idea = RUS_balanced_funding 
+  			add_idea = RUS_army_supremacy
+			}
+		}
+	}
+
+	RUS_balance_budget = {
+			cost = 75
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			OR = {
+			has_idea = RUS_navy_supremacy		
+			has_idea = RUS_army_supremacy
+			}
+		}
+		
+          days_remove = 30
+          remove_effect = {
+				IF = {
+			limit = { has_idea = RUS_army_supremacy}
+			swap_ideas = {
+			remove_idea = RUS_army_supremacy
+			add_idea = RUS_balanced_funding
+				}
+			}
+
+				IF = {
+			limit = { has_idea = RUS_navy_supremacy}
+			swap_ideas = {
+			remove_idea = RUS_navy_supremacy
+			add_idea = RUS_balanced_funding
+				}
+			}
+		}
+	}
+
+	RUS_increase_navy_funding = {
+			cost = 75
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			has_idea = RUS_balanced_funding
+		}
+
+          days_remove = 30
+          remove_effect = {
+				swap_ideas = { 
+	 		remove_idea = RUS_balanced_funding 
+  			add_idea = RUS_navy_supremacy
+			}
+		}
+	}
+}
+
+#DEFCON SYSTEM
+RUS_defcon = {
+	RUS_Defcon_5 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			has_idea = HUM_defcon_4
+		}
+
+          remove_effect = {
+			#sound_effect = "Detente"
+				swap_ideas = { 
+	 		remove_idea = HUM_defcon_4 
+  			add_idea = HUM_defcon_5
+			}
+		}
+	}
+
+	RUS_Defcon_4 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			threat > 0.1
+			OR = {
+			has_idea = HUM_defcon_5			
+			has_idea = HUM_defcon_3
+			}
+		}
+
+          remove_effect = {
+				IF = {
+			limit = { has_idea = HUM_defcon_5}
+			#sound_effect = "DEFCON"
+			swap_ideas = {
+			remove_idea = HUM_defcon_5
+			add_idea = HUM_defcon_4
+				}
+			}
+
+				IF = {
+			limit = { has_idea = HUM_defcon_3}
+			#sound_effect = "Detente"
+			swap_ideas = {
+			remove_idea = HUM_defcon_3
+			add_idea = HUM_defcon_4
+				}
+			}
+		}
+	}
+
+	RUS_extra_preparation = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_4
+		}
+
+		available = {
+		has_idea = HUM_defcon_4
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+			add_political_power = 150
+			add_stability = 0.10
+			add_war_support = 0.10
+		}
+	}
+
+	RUS_Defcon_3 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			threat > 0.25
+			OR = {
+			has_idea = HUM_defcon_4		
+			has_idea = HUM_defcon_2
+			}
+		}
+
+          remove_effect = {
+			#sound_effect = "DEFCON"
+				IF = {
+			limit = { has_idea = HUM_defcon_4}
+			swap_ideas = {
+			remove_idea = HUM_defcon_4
+			add_idea = HUM_defcon_3
+				}
+			}
+
+				IF = {
+			limit = { has_idea = HUM_defcon_2}
+			swap_ideas = {
+			remove_idea = HUM_defcon_2
+			add_idea = HUM_defcon_3
+				}
+			}
+		}
+	}
+
+	RUS_defcon_mobilisation = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_3
+
+		}
+		
+		available = {
+		has_idea = HUM_defcon_3
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+			add_war_support = -0.05
+			add_manpower = 25000
+			add_command_power = 50
+		}
+	}
+
+	RUS_Defcon_2 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			threat > 0.45
+			OR = {
+			has_idea = HUM_defcon_3
+			has_idea = HUM_defcon_1
+			}
+		}
+
+          remove_effect = {
+			#sound_effect = "DEFCON"
+				IF = {
+			limit = { has_idea = HUM_defcon_3}
+			swap_ideas = {
+			remove_idea = HUM_defcon_3
+			add_idea = HUM_defcon_2
+				}
+			}
+
+				IF = {
+			limit = { has_idea = HUM_defcon_1}
+			swap_ideas = {
+			remove_idea = HUM_defcon_1
+			add_idea = HUM_defcon_2
+				}
+			}
+		}
+	}
+
+	RUS_strategic_forces = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_2
+		has_tech = strategic_bomber1 
+		}
+		
+		available = {
+		has_idea = HUM_defcon_2
+		has_tech = strategic_bomber1  
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+				add_equipment_to_stockpile = {
+				type = strat_bomber_equipment_1
+				amount = 50
+			}
+		}
+	}
+
+	RUS_Defcon_1 = {
+			cost = 25
+			ai_will_do = {
+			factor = 50
+		}
+		available = {
+			always = yes
+			has_war
+			threat > 0.6		
+			has_idea = HUM_defcon_2
+			has_tech = nuclear_reactor
+		}
+
+          remove_effect = {
+				IF = {
+			#sound_effect = "DEFCON"
+			limit = { has_idea = HUM_defcon_2}
+			swap_ideas = {
+			remove_idea = HUM_defcon_2
+			add_idea = HUM_defcon_1
+				}
+			}
+		}
+	}
+
+
+	RUS_nuke_crate = {
+			ai_will_do = {
+			factor = 50
+			modifier = {
+				factor = 50
+			}
+		}
+		visible = {
+		has_idea = HUM_defcon_1
+
+		}
+		
+		available = {
+		has_idea = HUM_defcon_1
+		}
+
+		fire_only_once = yes
+          remove_effect = {
+				set_technology = { nukes = 1 }
+		}
+	}
+}
+
+
+form_RUS_OLE_category = {
+	form_RUS_OLE = {
+		icon = generic_form_nation
+
+          visible = {
+              76  = { is_fully_controlled_by = ROOT }
+          }
+
+		available = {
+			has_completed_focus = RUS_OLE_federation
+		}
+
+		cost = 200
+		allowed = {
+		OR = {
+				original_tag = RUS
+				original_tag = OLE
+			}
+		}
+		available = {
+			always = yes
+			RUS = { is_in_faction_with = OLE } 
+		}
+		visible = {
+			AND = { 
+				OR = {
+				original_tag = RUS
+				original_tag = OLE
+				}
+			NOT = { has_global_flag = form_euroequestria_flag }
+			}
+		}
+        days_remove = 14
+          remove_effect = {
+			country_event = {
+				id = RUS.408 
+			}
+		}
+		complete_effect = {
+        add_timed_idea = { idea = HUM_recent_unification days = 250 }
+			set_cosmetic_tag = RUS_OLE
+			set_global_flag = form_POL_HUN_UNION_flag
+			if = {
+				limit = { tag = RUS }
+				annex_country = { target = OLE transfer_troops = yes }
+
+				recruit_character = RUS_ole_union_council
+				recruit_character = RUS_gorby_velvet
+
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = OLE
+                        }
+                    }
+                    add_core_of = RUS
+                }
+				OLE = {
+					every_unit_leader = {
+						set_nationality = RUS
+					}
+				}
+			}			
+			if = {
+				limit = { tag = OLE }
+				annex_country = { target = RUS transfer_troops = yes }
+				every_state = {
+					limit = {
+							is_core_of = RUS
+					}
+					add_core_of = OLE
+				}
+				RUS = {
+					every_unit_leader = {
+						set_nationality = OLE
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+RUS_occupation = {
+
+   RUS_occupation_olenia = {
+
+        icon = deer
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            OLE = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 76
+            }
+
+        cost = 75
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = OLE }
+            OLE = { transfer_state = PREV }
+        }
+                OLE = {
+
+
+					load_focus_tree = generic_focus
+                    set_cosmetic_tag = RUS_OLE_puppet
+					recruit_character = RUS_military_governor
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+                }
+                set_autonomy = { target = OLE autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+   RUS_occupation_changeling = {
+
+        icon = changeling_icon
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            CHN = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 251
+            }
+
+        cost = 175
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = CHN }
+            CHN = { transfer_state = PREV }
+        }
+                CHN = {
+
+					load_focus_tree = generic_focus
+                    set_cosmetic_tag = RUS_CHN_puppet
+					recruit_character = RUS_military_governor
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+                }
+                set_autonomy = { target = CHN autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+
+   RUS_occupation_crystal = {
+
+        icon = generic_magic
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            CRY = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 344
+            }
+
+        cost = 100
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = CRY }
+            CRY = { transfer_state = PREV }
+        }
+                CRY = {
+
+					load_focus_tree = generic_focus
+                    set_cosmetic_tag = RUS_CRY_puppet
+					recruit_character = RUS_military_governor
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+                }
+                set_autonomy = { target = CRY autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+   RUS_occupation_stalliongrad = {
+
+        icon = stg_cores
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            STG = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 153
+            }
+
+        cost = 100
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = STG
+            is_owned_by = RUS }
+            STG = { transfer_state = PREV }
+        }
+                STG = {
+
+					load_focus_tree = generic_focus
+                    set_cosmetic_tag = RUS_STG_puppet
+                    add_ideas = HUM_modernized_army
+                }
+                set_autonomy = { target = STG autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+ 	RUS_occupation_equestria = {
+
+        icon = manehattan
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            EQS = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 3
+            }
+
+        cost = 100
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = EQS
+            is_owned_by = RUS }
+            EQS = { transfer_state = PREV }
+        }
+                EQS = {
+
+					load_focus_tree = generic_focus
+                    set_cosmetic_tag = RUS_EQS_puppet
+                    add_ideas = HUM_modernized_army
+					recruit_character = RUS_military_governor
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+                }
+                set_autonomy = { target = EQS autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+ 	RUS_occupation_yakistan = {
+
+        icon = red_star
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            YAK = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 274
+            }
+
+        cost = 75
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+ 		274 = { add_core_of = YAK }
+		269 = { add_core_of = YAK }
+		275 = { add_core_of = YAK }
+		275 = { add_core_of = YAK }
+		340 = { add_core_of = YAK }
+		341 = { add_core_of = YAK }
+		342 = { add_core_of = YAK }
+		253 = { add_core_of = YAK }
+
+        every_state = { 
+            limit = { is_core_of = YAK }
+            YAK = { transfer_state = PREV }
+        }
+                YAK = {
+
+					load_focus_tree = generic_focus
+                    set_cosmetic_tag = RUS_YAK_puppet
+               		recruit_character = RUS_yumjaagiin_tsedenbal
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+                }
+                set_autonomy = { target = YAK autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+ 	RUS_occupation_wingbardy = {
+
+        icon = griffon
+
+        available = {
+            has_completed_focus = RUS_Soviet_domination
+            WNG = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 371
+            }
+
+        cost = 100
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = RUS_Soviet_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = WNG }
+            WNG = { transfer_state = PREV }
+        }
+                WNG = {
+
+					load_focus_tree = generic_griffon_focus
+                    set_cosmetic_tag = RUS_WNG_puppet
+					recruit_character = RUS_military_governor
+					add_ideas = HUM_modernized_army
+					add_ideas = HUM_modernized_society
+                }
+                set_autonomy = { target = WNG autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+}
