@@ -598,13 +598,13 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = af_sou.11.a 
-		country_event = { id = af_sou.12 }
+		country_event = { id = af_sou.1 }
 		custom_effect_tooltip = af_sou_tooltip_desc
 	}
 	option = {
 		name = af_sou.11.b 
 		custom_effect_tooltip = af_sou_tooltip_desc_esc84
-		country_event = { id = af_sou.1 }
+		country_event = { id = af_sou.12 }
 	}
 	option = {
 		name = af_sou.11.c 
