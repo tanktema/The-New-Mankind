@@ -578,7 +578,6 @@ country_event = {
 			}
 		}
 		set_country_flag = AF_SOU_FLAG
-		custom_effect_tooltip = af_sou_tooltip_desc
 		set_cosmetic_tag = SOU_REDALERT
 		promote_character = SOU_cherdenko
 		recruit_character = SOU_oleg_vodnik
@@ -600,10 +599,15 @@ country_event = {
 	option = {
 		name = af_sou.11.a 
 		country_event = { id = af_sou.12 }
+		custom_effect_tooltip = af_sou_tooltip_desc
 	}
 	option = {
 		name = af_sou.11.b 
+		custom_effect_tooltip = af_sou_tooltip_desc_esc84
 		country_event = { id = af_sou.1 }
+	}
+	option = {
+		name = af_sou.11.c 
 	}
 }
 
@@ -654,23 +658,32 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = af_sou.12.a 
-		RUS = {
-			change_tag_from = ROOT 
-			set_variable = { eaw_welcome_screen = 1 }
+		hidden_effect = {
+			RUS = {
+				change_tag_from = ROOT 
+				set_variable = { eaw_welcome_screen = 1 }
+			}
 		}
+		custom_effect_tooltip = play_as_esc84_ussr
 	}
 	option = {
-		name = af_sou.12.b 
-		UEN = {
-			change_tag_from = ROOT 
-			set_variable = { eaw_welcome_screen = 1 }
+		name = af_sou.12.a 
+		hidden_effect = {
+			UEN = {
+				change_tag_from = ROOT 
+				set_variable = { eaw_welcome_screen = 1 }
+			}
 		}
+		custom_effect_tooltip = play_as_esc84_europe
 	}
 	option = {
-		name = af_sou.12.c 
-		UAS = {
-			change_tag_from = ROOT 
-			set_variable = { eaw_welcome_screen = 1 }
+		name = af_sou.12.a 
+		hidden_effect = {
+			UAS = {
+				change_tag_from = ROOT 
+				set_variable = { eaw_welcome_screen = 1 }
+			}
 		}
+		custom_effect_tooltip = play_as_esc84_usa
 	}
 }

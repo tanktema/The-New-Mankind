@@ -93,6 +93,9 @@ focus_tree = {
 					id = 119
 					name = "STATE_901"
 				}
+				country_event = {
+					id = af_sou.11 days = 1 
+				}
 			}
 		}
 	}
