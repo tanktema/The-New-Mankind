@@ -402,7 +402,32 @@ country_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = af_uns.3.a 
+		id = af_uns.3.a 
+		country_event = { id = af_uns.32 }
+	}
+}
+country_event = {
+	id = af_uns.32 
+	title = af_uns.32.t 
+	desc = af_uns.32.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		id = af_uns.32.a 
+		country_event = { id = af_uns.33 }
+	}
+}
+
+country_event = {
+	id = af_uns.33 
+	title = af_uns.33.t 
+	desc = af_uns.33.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = af_uns.33.a 
 		if = {
 			limit = {
 				has_dlc = "Together for Victory"
