@@ -10,3 +10,11 @@
     UNS_minpeace_mod:0 "Ministry of §CPeace§! funding"
     UNS_minwar_mod:0 "Ministry of §RWar§! funding"
     UNS_minmor_mod:0 "Ministry of §gMorale§! funding"
+    
+    create_trade_embassy:0 "Start the Trading Embassy\n\n\nStart the Trading Embassy in the §C[From.GetName]§!\nIn case of their refuse you can ask again after 90 days\n[!offer_trading_click_enabled]"
+    show_decisions_trd:0 "§CShow§! curren country decisions"
+    close_decisions_trd:0 "§CHide§! curren country decisions"
+    grb_trade_value:0 "§CTrading Influence§! level"
+    grb_tc_refuse:0 "At least §Y90 days§! since previous offer have passed"
+    
+    launch_nuke_tt:0 "§ROrbital Strike§!\n\nFires a powerful attack upon the region\nDamages buildings and infrastructure. Has §Y10%§! chace of full destruction of enemy units\n\nYou have 5 shots of it every month\nShots left:[?UNS.available_orbital_bombings]\n§RShots are not accumulating!§!"

@@ -80,3 +80,67 @@
     SOU_TNO_fascism_ADJ:0 "Soviet"
     SOU_TNO_fascism_DEF:0 "USSR"
     
+    GRB_ANCOM_communism:0 "British People Commune"
+    GRB_ANCOM_communism_ADJ:0 "British"
+    GRB_ANCOM_communism_DEF:0 "British Commune"
+    
+    SOU_ANCOM_communism:0 "Soviet People's Frontier"
+    SOU_ANCOM_communism_ADJ:0 "Soviet"
+    SOU_ANCOM_communism_DEF:0 "SPF"
+    
+    EQS_ANCOM_communism:0 "The Three-Unity of Ponies Commonwealth"
+    EQS_ANCOM_communism_ADJ:0 "Three-Unity"
+    EQS_ANCOM_communism_DEF:0 "Ponies Commonwealth"
+    
+    STG_ANCOM_communism:0 "Severyanian Commune"
+    STG_ANCOM_communism_ADJ:0 "Severyanian"
+    STG_ANCOM_communism_DEF:0 "Severyanian Commune"
+    
+    GRF_ANCOM_communism:0 "Griffonian People's Frontier"
+    GRF_ANCOM_communism_ADJ:0 "Griffonian"
+    GRF_ANCOM_communism_DEF:0 "GPF"
+    
+    YAK_ANCOM_communism:0 "Yaks Clans"
+    YAK_ANCOM_communism_ADJ:0 "Yaks"
+    YAK_ANCOM_communism_DEF:0 "Yaks Clans"
+    
+    JAK_ANCOM_communism:0 "Jaks Ckans"
+    JAK_ANCOM_communism_ADJ:0 "Jaks"
+    JAK_ANCOM_communism_DEF:0 "Jaks Clans"
+    
+    GFF_ANCOM_communism:0 "Griffonian People's Frontier"
+    GFF_ANCOM_communism_ADJ:0 "Griffonian"
+    GFF_ANCOM_communism_DEF:0 "GPF"
+    
+    OLE_ANCOM_communism:0 "Olenian Forest Brotherhood"
+    OLE_ANCOM_communism_ADJ:0 "Olenian"
+    OLE_ANCOM_communism_DEF:0 "Olenian Brotherhood"
+    
+    CHN_ANCOM_communism:0 "United Changeling Hives"
+    CHN_ANCOM_communism_ADJ:0 "Changeling"
+    CHN_ANCOM_communism_DEF:0 "Changeling Hives"
+    
+    CRY_ANCOM_communism:0 "Crystal Mountains Commune"
+    CRY_ANCOM_communism_ADJ:0 "Crystal"
+    CRY_ANCOM_communism_DEF:0 "Crystal Commune"
+    
+    PNG_ANCOM_communism:0 "People's Army of the Northern Ocean"
+    PNG_ANCOM_communism_ADJ:0 Northern"
+    PNG_ANCOM_communism_DEF:0 "PANO"
+    
+    PLB_ANCOM_communism:0 "Bears Unity"
+    PLB_ANCOM_communism_ADJ:0 "Bear"
+    PLB_ANCOM_communism_DEF:0 "Bears Unity"
+    
+    GEM_ANCOM_communism:0 "Berlin Commune"
+    GEM_ANCOM_communism_ADJ:0 "Berlin"
+    GEM_ANCOM_communism_DEF:0 "Berlin Commune"
+    
+    UNS_ANCOM_communism:0 "Brotherhood of the New America"
+    UNS_ANCOM_communism_ADJ:0 "American"
+    UNS_ANCOM_communism_DEF:0 "Brotherhood of the New America"
+    
+   # impeiral_protectorate_land:0 "Имперский Протекторат"
+    UNS_IMPERIUM_fascism:0 "Imperium of Man"
+    UNS_IMPERIUM_fascism_ADJ:0 "Imperial" 
+    UNS_IMPERIUM_fascism_DEF:0 "Imperium of Man"
