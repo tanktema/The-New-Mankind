@@ -2290,7 +2290,33 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -10200
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -12
+				}
+				add_equipment_to_stockpile = {
+					type = magical_equipment
+					amount = -910
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -255
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -20
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -24
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
@@ -2324,7 +2350,33 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 45
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -20400
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -24
+				}
+				add_equipment_to_stockpile = {
+					type = magical_equipment
+					amount = -1820
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -519
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -40
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -48
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
@@ -2362,7 +2414,33 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 60
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -40800
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -48
+				}
+				add_equipment_to_stockpile = {
+					type = magical_equipment
+					amount = -3640
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -1020
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -80
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -96
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
@@ -2405,7 +2483,29 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 50
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -7200
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -300
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -250
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -85
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -70
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
@@ -2436,7 +2536,29 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 70
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -14400
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -600
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -170
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -140
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
@@ -2471,8 +2593,31 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 90
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -28800
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -1200
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -340
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -280
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
+				
 				create_unit = {
 					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
 					owner = ROOT
@@ -2524,8 +2669,38 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 40
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -7500
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -160
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -550
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -40
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -35
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -12
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -24
+				}
+			}
+		}
 		remove_effect = {
 			capital_scope = {
+				
 				create_unit = {
 					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
 					owner = ROOT
@@ -2565,7 +2740,37 @@ GRB_anarchy_military_category = {
 			}
 		}
 		days_remove = 60
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -15000
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -320
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1100
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -80
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -70
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -24
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -48
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
@@ -2606,11 +2811,41 @@ GRB_anarchy_military_category = {
 				artillery_equipment > 47
 			}
 			has_equipment = {
-				anti_tank_equipment > 96
+				anti_tank_equipment > 95
 			}
 		}
 		days_remove = 80
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -640
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2200
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -160
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -140
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -48
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -96
+				}
+			}
+		}
 		remove_effect = {
+			
 			capital_scope = {
 				create_unit = {
 					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
