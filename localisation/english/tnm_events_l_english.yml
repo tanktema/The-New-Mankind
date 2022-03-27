@@ -804,7 +804,7 @@
     grb.6.a:0 "A city? What the..."
     
     grb.7.t:0 "First contact"
-    grb.7.desc:0 "When the radio operators made contact, we didn't believe them. When the New Mareland ambassadors came to us, we were surprised. We were able to achieve a mutually beneficial cooperation, and we signed several treaties"
+    grb.7.desc:0 "[From.GetNewspaperHeader]When the radio operators made contact, we didn't believe them. When the New Mareland ambassadors came to us, we were surprised. We were able to achieve a mutually beneficial cooperation, and we signed several treaties"
     grb.7.a:0 "Wonderful!"
     
     grb.8.t:0 "Death of Churchill"
@@ -1108,7 +1108,7 @@
     af_sou.11.c:0 "No, thanks"
     
     af_sou.12.t:0 "The transition"
-    af_sou.12.desc:0 "Экспериментальные порталы открылись, и наши жители начали пересекать его. Мы выжили и нашли себе новый дом."
+    af_sou.12.desc:0 "Experimental portals were opened, and people go throught them. We survived. Again"
     play_as_esc84_ussr:0 "Joint content with §YEscalation'84§!\n\nPlay as the §RSoviet Union§!"
     play_as_esc84_europe:0 "Joint content with §YEscalation'84§!\n\nPlay as the §BUnity of European Nations§!"
     play_as_esc84_usa:0 "Joint content with §YEscalation'84§!\n\nPlay as the §CUnited States of America§!"

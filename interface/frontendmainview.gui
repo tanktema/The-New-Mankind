@@ -136,8 +136,8 @@ guiTypes = {
 		name = "mainmenu_single_player"
 		position = { x= 820 y =0}
 		size = { width = 353 height = 474}
-		Orientation = upper_left
-		Origo = upper_left
+		Orientation = lower_left
+		Origo = lower_left
 
 		iconType =
 		{
@@ -169,7 +169,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= -999 y = 101 }
+			position = { x= 35 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -177,7 +177,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_left_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= -999 y = 101 }
+			position = { x= 35 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -185,7 +185,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= -999 y = 101 }
+			position = { x= 245 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -193,7 +193,7 @@ guiTypes = {
 		iconType = {
 			name = "sp_continue_flag_right_overlay"
 			quadTextureSprite ="GFX_flag_small2_not_masked"
-			position = { x= -999 y = 101 }
+			position = { x= 245 y = 101 }
 			Orientation = "UPPER_LEFT"
 			alwaystransparent = yes
 		}
@@ -246,11 +246,11 @@ guiTypes = {
 		name ="mainmenu_panel_bottom"
 		position = { x= 820 y =0}
 		size = { width = 353 height = 474}
-		Orientation = upper_left
-		Origo = upper_left
+		Orientation = lower_left
+		Origo = lower_left
 
 		iconType =
-		{ 
+		{
 			name ="frontend_game_version"
 			spriteType = "GFX_frontend_game_version"
 			position = { x = -17 y = -57 }

@@ -558,16 +558,20 @@ country_event = {
 		name = af_sou.1.a 
 		108 = {
 			transfer_state_to = UEN
+			add_core_of = UEN
 		}
 		216 = {
 			transfer_state_to = RUS
+			add_core_of = RUS
 		}
 		217 = {
 			transfer_state_to = RUS 
+			add_core_of = RUS
 		}
 		363 = {
 			transfer_state_to = UAS 
 			remove_core_of = GRB 
+			add_core_of = UAS
 		}
 		hidden_effect = {
 			every_state = {
@@ -609,6 +613,7 @@ country_event = {
 	}
 	option = {
 		name = af_sou.11.c 
+		ai_chance = { base = 100 }
 	}
 }
 
@@ -620,16 +625,20 @@ country_event = {
 			SOU = {
 				108 = {
 					transfer_state_to = UEN
+					add_core_of = UEN
 				}
 				216 = {
 					transfer_state_to = RUS
+					add_core_of = RUS
 				}
 				217 = {
 					transfer_state_to = RUS 
+					add_core_of = RUS
 				}
 				363 = {
 					transfer_state_to = UAS 
 					remove_core_of = GRB 
+					add_core_of = UAS
 				}
 				hidden_effect = {
 					every_state = {
