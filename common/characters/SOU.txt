@@ -906,7 +906,7 @@ characters={
 	}
 	
 	SOU_nataila_volkova = {
-		name = SOU_nikolay_moskvin
+		name = SOU_nataila_volkova
 		portraits = {
 			army = {
 				large = "gfx/leaders/SOU/Natasha.dds"

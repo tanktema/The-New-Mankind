@@ -2474,3 +2474,12 @@ spriteTypes = {
 		name = "GFX_grb_colonial_police_tech_4_medium"
 		textureFile = "gfx/interface/technologies/GRB/grb_colonial_police_tech_4.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_astartes_equipment_0_medium"
+		textureFile = "gfx/interface/technologies/GRB/UNS_astartes_eqpm.dds"
+	}
+	SpriteType = {
+		name = "GFX_custodes_equipment_0_medium"
+		textureFile = "gfx/interface/technologies/GRB/UNS_custodes_eqpm.dds"
+	}

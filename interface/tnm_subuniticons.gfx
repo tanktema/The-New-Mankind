@@ -6,7 +6,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_sniper_corps_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -18,7 +18,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_UNS_marines_corps_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -30,7 +30,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_UNS_grenadiers_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -42,7 +42,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_UNS_stormsquads_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -54,7 +54,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_SOU_desantura_ebat_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -66,7 +66,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_SOU_infiltrators_group_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -78,7 +78,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_SOU_attack_group_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -90,7 +90,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_GEM_jagers_human_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -102,7 +102,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_GEM_flamethrowing_units_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -114,7 +114,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_GEM_executors_support_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -126,7 +126,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_GRB_sas_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -138,7 +138,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_GRB_heavy_infantry_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
@@ -151,9 +151,52 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_unit_GRB_colonial_police_unit_icon_medium_white"
-		texturefile = "gfx/interface/counters/divisions_amsll/onmap_snipers_icon.dds" 
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
 		noOfFrames = 2
 	}
 	
+	spriteType = {
+		name = "GFX_unit_UNS_imperium_excertus_imperialis_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/uns_excertus_imperialis.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_UNS_imperium_excertus_imperialis_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_UNS_imperium_legio_astartes_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/uns_legio_astartes.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_UNS_imperium_legio_astartes_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_UNS_imperium_legio_custodes_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/uns_legio_custodes.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_UNS_imperium_legio_custodes_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_unit_UNS_solar_auxillia_icon_medium"
+		texturefile = "gfx/interface/counters/divisions_large/uns_solar_auxillia.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_unit_UNS_solar_auxillia_icon_medium_white"
+		texturefile = "gfx/interface/counters/divisions_small/onmap_snipers_icon.dds" 
+		noOfFrames = 2
+	}
 	
 	

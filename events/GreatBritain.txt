@@ -230,6 +230,13 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = grb.5.a 
+		if = {
+			limit = {
+				EQC = {
+					controls_state = 364
+				}
+			}
+		}
 		transfer_state = 364
 	#	country_event = { id = grb.6 days = 15 }
 	}
@@ -242,6 +249,13 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = grb.6.a 
+		if = {
+			limit = {
+				EQC = {
+					controls_state = 363
+				}
+			}
+		}
 		transfer_state = 363
 
 	}

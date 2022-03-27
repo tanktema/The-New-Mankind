@@ -93,8 +93,15 @@ focus_tree = {
 					id = 119
 					name = "STATE_901"
 				}
-				country_event = {
-					id = af_sou.11 days = 1 
+				if = {
+					limit = {	
+						NOT = {
+							has_global_flag = tnm_countries_appeared
+						}
+					}
+					country_event = {
+						id = af_sou.11 days = 1 
+					}
 				}
 			}
 		}
@@ -5497,7 +5504,7 @@ focus_tree = {
 		relative_position_id = SOU_european_claims
 		prerequisite = { focus = SOU_european_claims }
 		prerequisite = { focus = SOU_claim_germany }
-		prerequisite = { focus = SOU_european_claims }
+		prerequisite = { focus = SOU_claim_america }
 		prerequisite = { focus = SOU_national_threat }
 		available = {
 			has_completed_focus = SOU_command_and_conquer 
@@ -5516,7 +5523,10 @@ focus_tree = {
 		relative_position_id = SOU_unite_the_humanity 
 		prerequisite = { focus = SOU_unite_the_humanity }
 		bypass = {
-			is_in_faction_with = GRB 
+			OR = {
+				is_in_faction_with = GRB 
+				has_war_with = GRB 
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -5535,7 +5545,10 @@ focus_tree = {
 		relative_position_id = SOU_unite_the_humanity 
 		prerequisite = { focus = SOU_unite_the_humanity }
 		bypass = {
-			is_in_faction_with = UEN 
+			OR = {
+				is_in_faction_with = UEN
+				has_war_with = UEN
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -5554,7 +5567,10 @@ focus_tree = {
 		relative_position_id = SOU_unite_the_humanity 
 		prerequisite = { focus = SOU_unite_the_humanity }
 		bypass = {
-			is_in_faction_with = UAS 
+			OR = {
+				is_in_faction_with = UAS 
+				has_war_with = UAS 
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -5573,7 +5589,10 @@ focus_tree = {
 		relative_position_id = SOU_unite_the_humanity 
 		prerequisite = { focus = SOU_unite_the_humanity }
 		bypass = {
-			is_in_faction_with = UNS 
+			OR = {
+				is_in_faction_with = UNS 
+				has_war_with = UNS 
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -5592,7 +5611,10 @@ focus_tree = {
 		relative_position_id = SOU_unite_the_humanity 
 		prerequisite = { focus = SOU_unite_the_humanity }
 		bypass = {
-			is_in_faction_with = GEM 
+			OR = {
+				is_in_faction_with = GEM 
+				has_war_with = GEM 
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -5609,6 +5631,12 @@ focus_tree = {
 		y = 1
 		icon = GFX_goal_GEB_attack_JER
 		relative_position_id = SOU_new_london 
+		bypass = {
+			OR = {
+				is_in_faction_with = JER 
+				has_war_with = JER
+			}
+		}
 		prerequisite = { focus = SOU_new_london }
 		cost = 5
 		completion_reward = {
@@ -5624,6 +5652,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		icon = GFX_goal_GRB_invade_EQC
+		bypass = {
+			OR = {
+				is_in_faction_with = EQC 
+				has_war_with = EQC 
+			}
+		}
 		relative_position_id = SOU_unity 
 		prerequisite = { focus = SOU_new_london OR = SOU_unity }
 		cost = 5
@@ -5639,6 +5673,12 @@ focus_tree = {
 		id = SOU_invade_harmony_land
 		x = -1
 		y = 1
+		bypass = {
+			OR = {
+				is_in_faction_with = EQS 
+				has_war_with = EQS 
+			}
+		}
 		icon = GFX_goal_SOU_destroy_equestria
 		relative_position_id = SOU_fall_of_washington 
 		prerequisite = { focus = SOU_fall_of_washington OR = SOU_unity }
@@ -5668,6 +5708,12 @@ focus_tree = {
 		id = SOU_conquer_deers
 		x = -1
 		y = 1
+		bypass = {
+			OR = {
+				is_in_faction_with = OLE 
+				has_war_with = OLE 
+			}
+		}
 		icon = GFX_goal_GEM_deers
 		relative_position_id = SOU_march_berlin 
 		prerequisite = { focus = SOU_march_berlin OR = SOU_new_washington }
@@ -5684,6 +5730,12 @@ focus_tree = {
 		id = SOU_changelings_attack
 		x = 1
 		y = 1
+		bypass = {
+			OR = {
+				is_in_faction_with = CHN
+				has_war_with = CHN
+			}
+		}
 		icon = GFX_goal_SOU_crush_bugs
 		relative_position_id = SOU_march_berlin 
 		prerequisite = { focus = SOU_march_berlin }
