@@ -1,0 +1,91 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+	research_pre_ironclad_modifier = {
+		enable = { always = yes } #optional, the modifier won't apply if not enabled
+		research_speed_factor = var_research_adjustment_pre_ironclad
+	}
+	
+	HUM_dense_population_center = {
+		enable = { always = yes }
+	
+		icon = GFX_decision_modern_city
+
+		offence = -0.1
+		army_speed_factor = -0.20
+		enemy_army_bonus_air_superiority_factor = -0.10
+		army_armor_attack_factor = -0.25
+		resistance_target = 0.1
+		resistance_growth = 0.25
+		army_core_defence_factor = 0.25
+		required_garrison_factor = 0.75
+	}
+
+	HUM_iron_cathedral = {
+		enable = { always = yes }
+	
+		icon = GFX_decision_ironcathedral
+
+		monthly_population = 0.05
+		recruitable_population_factor = 0.75
+		offence = -0.2
+		max_dig_in_factor = 0.25
+		army_speed_factor = -0.25
+		enemy_army_bonus_air_superiority_factor = -0.20
+		army_armor_attack_factor = -0.25
+		resistance_target = 0.1
+		resistance_growth = 0.25
+		army_core_defence_factor = 0.25
+		required_garrison_factor = 0.75
+	}
+
+	HUM_fire_and_ice = {
+		enable = { always = yes }
+	
+		icon = GFX_decision_bird_skull
+
+		recruitable_population_factor = 0.25
+		offence = -0.05
+		army_speed_factor = -0.25
+		enemy_army_bonus_air_superiority_factor = -0.05
+		army_armor_attack_factor = -0.15
+		army_core_defence_factor = 0.25
+		attrition = 0.20
+	}
+
+	HUM_darkness_spread = {
+		enable = { always = yes }
+	
+		icon = GFX_decision_bird_skull
+
+		local_non_core_manpower = 0.90
+		compliance_growth = 0.25
+		offence = -0.05
+		army_speed_factor = -0.10
+		army_armor_attack_factor = -0.05
+		army_core_defence_factor = 0.15
+		attrition = 0.15
+	}

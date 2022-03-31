@@ -1,0 +1,572 @@
+leader_traits = {
+		human_leader = {
+			random = no
+			research_speed_factor = 0.1
+			non_core_manpower = -0.5
+			planning_speed = 0.10
+			
+			ai_will_do = {
+				factor = 1
+				}
+			}
+		demo_leader = {
+			random = no
+			drift_defence_factor = 0.5
+			political_power_gain = 0.5
+			guarantee_cost = -0.5
+			stability_factor = 0.1
+			
+			ai_will_do = {
+				factor = 1
+				}
+			}
+		comm_leader = {
+			random = no
+			political_power_gain = 0.5
+			stability_factor = 0.1
+			ai_focus_aggressive_factor = 0.5
+			mobilization_laws_cost_factor = -0.2
+			high_command_cost_factor = -0.2
+			
+			ai_will_do = {
+				factor = 1
+				}
+			}
+		fasc_leader = {
+			random = no
+			political_power_gain = 0.5
+			stability_factor = 0.1
+			ai_focus_aggressive_factor = 0.5
+			training_time_army_factor = -0.1
+			army_org_factor = 0.05
+			
+			ai_will_do = {
+				factor = 1
+				}
+		
+			}
+		demo_bring = {
+			random = no
+			democratic_drift = 0.1
+			stability_factor = 0.1
+			
+			ai_will_do = {
+				factor = 1
+				}
+			}
+		comm_bring = {
+			random = no
+			communism_drift = 0.1
+			war_support_factor = 0.05
+			
+			ai_will_do = {
+				factor = 1
+				}
+		}
+		fasc_bring = {
+			random = no
+			fascism_drift = 0.1
+			war_support_factor = 0.05
+			ai_will_do = {
+				factor = 1
+				}
+		}
+		military_leader = {
+			random = no
+			war_support_factor = 0.1
+			max_command_power = 50
+			special_forces_cap = 0.05
+			mobilization_speed = 0.1
+			army_chief_cost_factor = 0.5
+			surrender_limit = -0.2
+		}
+		peoples_favourite = {
+			random = no
+			stability_factor = 0.1
+			democratic_drift = 0.01
+		}
+		captured_scientist = {
+			random = no
+			war_support_factor = 0.1
+			political_power_gain = -0.01
+			stability_factor = -0.05
+		}
+		onwheel_master = {
+			random = no
+			equipment_bonus = {
+				armor = {
+					maximum_speed = 0.05
+					reliability = 0.1
+					breakthrough = 0.05
+				}
+				mechanized = {
+					maximum_speed = 0.15
+					reliability = 0.1
+				}
+				motorized = {
+					maximum_speed = 0.1
+					reliability = 0.15
+				}
+			}
+		}
+		arms_dealer_m = {
+			random = no
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					defense = 0.05
+					build_cost_ic = -0.01
+				}
+				magical_equipment = {
+					reliability = 0.1
+					defense = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		arms_dealer = {
+			random = no
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.15
+					defense = 0.1
+					build_cost_ic = -0.05
+				}
+
+			}
+		}
+		old_world_shipyard = {
+			random = no
+			equipment_bonus = {
+				carrier = {
+					armor_value = 0.25
+					max_strength = 0.1
+				}
+				capital_ship = {
+					armor_value = 0.1 
+					hg_attack = 0.1
+				}
+				screen_ship = {
+					naval_range = 0.2
+				}
+				submarine = {
+					naval_range = 0.15
+				}
+			}
+		}
+		master_of_building = {
+			random = no
+			production_speed_bunker_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+		}
+		peoples_voice = {
+			random = no 
+			democratic_drift = 0.02
+			war_support_factor = -0.15
+			stability_factor = 0.1
+		}
+		fascist_politician_yasnov = {
+			random = no
+			political_power_gain = 0.2
+			fascism_drift = 0.02 
+			stability_factor = 0.1
+		}
+		foolish_leader = {
+			random = no 
+			political_power_gain = -0.15
+			drift_defence_factor = -0.5
+			stability_factor = -0.05
+		}
+		xeno_tolerant = {
+			random = no 
+			non_core_manpower = 0.25
+			resistance_target = -0.2
+		}
+		tsar_of_all = {
+			random = no
+			non_core_manpower = 0.5
+		}
+		heavy_tank_producer = {
+			random = no
+			equipment_bonus = {
+				heavy_armor = {
+					armor = 0.1
+					reliability = 0.1
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		medium_tank_producer = {
+			equipment_bonus = {
+				medium_armor = {
+					armor = 0.12
+					reliability = 0.12
+					build_cost_ic = -0.08
+				}
+			}
+		}
+		serp_high_command = {
+			random = no
+			experience_gain_army = 0.02
+			attrition = -0.1
+		}
+		electrical_concern_sou = {
+			random = no
+			research_speed_factor = 0.05
+		}
+		comissar_of_kgb = {
+			random = no 
+			operative_slot = 1
+			agency_upgrade_time = -0.2
+			intel_network_gain_factor = 0.1
+			intelligence_agency_defense = 1
+		}
+		army_planning_master_chief = {
+			random = no
+			experience_gain_army = 0.02
+			defence = 0.1
+			offence = 0.1
+		}
+		navy_leader_human = {
+			random = no 
+			naval_range = 0.1
+			experience_gain_navy = 0.02
+			naval_speed_factor = 0.1
+		}
+		human_air_leader = {
+			random = no 
+			experience_gain_air = 0.02
+			air_night_penalty = -0.1
+			air_range_factor = 0.1
+		}
+		shutzstaffen_reichsfuhrer = {
+			random = no
+			special_forces_cap = 0.1
+		}
+		pure_race_fighter = {
+			random = no
+			non_core_manpower = -1
+		}
+		propaganda_master_hum = {
+			random = no
+			fascism_drift = 0.01
+			drift_defence_factor = 0.2
+		} 
+		military_reichministr = {
+			random = no 
+			production_speed_arms_factory_factor = 0.15
+			production_oil_factor = 0.1
+			industrial_capacity_factory = 0.1
+		}
+		
+		rock_band_hum = {
+			random = no
+			fascism_drift = 0.01
+			drift_defence_factor = 0.2
+			stability_factor = 0.1
+			war_support_factor = 0.1
+		}
+		
+		computer_pioneer = {
+			random = no
+			research_speed_factor = 0.05 
+		}
+		
+		world_war_veteran = {
+			random = no 
+			offence = 0.07
+			defence = 0.07
+			experience_gain_army = 0.02
+		}
+		
+		airborne_creator = {
+			random = no 
+			experience_gain_air = 0.02
+			special_forces_min = 10
+			extra_paratrooper_supply_grace = 24
+			paratrooper_count_per_plane = 2
+		}
+		
+		medical_company_trait = {
+			random = no 
+			research_speed_factor = 0.05
+			MONTHLY_POPULATION = 0.25
+			experience_loss_factor = -0.05
+			equipment_bonus = {
+				support_equipment = {
+					build_cost_ic = -0.1
+					reliability = 0.15
+				}
+			}
+		}
+		
+		exiled_german_communist = {
+			random = no 
+			fascism_drift = -0.02
+			communism_drift = 0.02
+			stability_factor = 0.05
+			war_support_factor = 0.07
+			communism_acceptance = 25
+			fascism_acceptance = -50
+		}
+		
+		statesoc_trait = {
+			random = no 
+			stability_factor = 0.1
+			ai_focus_aggressive_factor = 0.5
+			crypto_strength = 10
+			encryption_factor = 0.1
+		}
+		
+		railroad_builder = {
+			random = no 
+			production_speed_infrastructure_factor = 0.15
+			production_speed_rail_way_factor = 0.1
+			dig_in_speed = 2
+			army_speed_factor = 0.15
+			
+		}
+	
+	
+	dies_soon_trait = {
+	
+		random = no 
+		custom_modifier_tooltip = dies_soon_tt 
+	}
+		
+	
+	lyra_human_lover = {
+		random = no 
+		custom_modifier_tooltip = acceptance_10_modifier
+		
+	}
+		
+		
+	nuclear_pacifist = {
+		research_speed_factor = 0.05
+		research_bonus = {
+			nuclear = 0.1
+		}
+		stability_factor = 0.07
+		war_support_factor = -0.1
+	}
+		
+		
+	magical_human_assistant = {
+		random = no 
+		research_speed_factor = 0.05
+		research_bonus = {
+			magical_tech = 0.08
+			race_tech = 0.1
+		}
+	}
+	
+	altidiya_sssr = {
+		random = no 
+		drift_defence_factor = 0.15
+		communism_drift = 0.02
+		stability_factor = 0.05
+	}
+		
+	gromyko_minist_trait = {
+		random = no 
+		custom_modifier_tooltip = acceptance_10_modifier
+		
+	}
+	gromyko_selhoz_trait = {
+		random = no 
+		MONTHLY_POPULATION = 0.25 
+		stability_factor = 0.02
+	}
+		
+	gen_yazov = {
+		random = no 
+		offence = 0.08
+		defence = 0.1 
+		army_org_factor = 0.15
+		political_power_gain = -0.1
+		stability_factor = -0.07
+		war_support_factor = 0.06
+	}
+		
+		
+		
+		
+	trading_company_grb = {
+		random = no 
+		production_speed_industrial_complex_factor = 0.1
+		local_resources_factor = 0.15
+		stability_factor = 0.05
+	}
+		
+	first_nonhuman_leader = {
+		random = no 
+		stability_factor = 0.05
+		drift_defence_factor = 0.15
+		democratic_drift = 0.02
+		political_power_gain = 0.1
+	}
+	
+	
+	state_secretary = {
+		random = no 
+		stability_factor = 0.05
+		political_power_factor = 0.2
+		democratic_drift = 0.03
+	}
+	
+	peacekeeper_state = {
+		random = yes 
+		war_support_factor = -0.1
+		stability_factor = 0.08
+		political_power_gain = 0.1
+		democratic_drift = 0.02
+	}
+	
+	her_majesty_moneykeeper = {
+		random = no 
+		consumer_goods_factor = -0.05
+		political_power_factor = 0.1
+		neutrality_drift = 0.02
+	}
+	
+	inner_politics_minister = {
+		random = no 
+		
+		agency_upgrade_time = -0.1
+		intel_network_gain_factor = 0.1
+		intelligence_agency_defense = 1
+		operative_slot = 2
+	}
+	
+	bloody_purger_human = {
+		random = no 
+		non_core_manpower = 0.1
+		starting_compliance = 0.05
+	}
+	
+	grb_fasc_trait = {
+		random = no
+		
+		fascism_drift = 0.03
+		drift_defence_factor = 0.2
+		stability_factor = 0.05
+		war_support_factor = 0.07
+	}
+	
+	labour_union_pred = {
+		random = no 
+		
+		communism_drift = 0.03
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.07
+	}
+	
+	
+	minister_of_industry = {
+		random = no 
+		
+		production_speed_buildings_factor = 0.1
+		consumer_goods_factor = -0.05
+		
+	}
+	
+	excavation_minister = {
+		random = no 
+		
+		local_resources_factor = 0.1
+		production_oil_factor = 0.1
+	}
+	
+	army_mixed_trait = {
+		random = no 
+		
+		army_attack_factor = 0.07
+		army_defence_factor = 0.07
+		army_org_factor = 0.05
+	}
+	
+	rocketry_pioneer = {
+		random = no 
+	}
+	
+	
+	reichminister_of_trade = {
+		random = no 
+		
+		trade_opinion_factor = 0.2
+		extra_trade_to_target_factor = 0.2
+		consumer_goods_factor = 0.05
+		
+	}
+	
+	
+	reformator_hum = {
+		random = yes 
+		
+		democratic_drift = 0.03
+		communism_drift = 0.03
+		stability_factor = 0.05
+		drift_defence_factor = -0.12
+	}
+	
+	
+	man_in_black = {
+		random = no 
+		
+		agency_upgrade_time = -0.1
+		intel_network_gain_factor = 0.12
+		intelligence_agency_defense = 2
+		operative_slot = 1
+	}
+	
+	
+	german_science_is_the_best = {
+		random = no 
+		
+		research_speed_factor = 0.07
+		stability_factor = -0.05
+		ai_focus_aggressive_factor = 0.3
+		fascism_drift = 0.03 
+		
+	}
+	german_science_is_the_best_harm = {
+		random = no 
+		
+		research_speed_factor = 0.1
+		stability_factor = 0.03
+		fascism_drift = 0.03 
+		
+	}
+	
+	rcbd_officer = {
+		random = no 
+		
+		winter_attrition_factor = -0.1
+		heat_attrition_factor = -0.1
+		army_org_regain = 0.20
+		no_supply_grace = 24
+		attrition = -0.1
+	}
+	
+	grb_ancom_trait = {
+		random = no 
+		
+		stability_factor = 0.05
+		political_power_factor = 0.1
+		drift_defence_factor = 0.05
+		ai_focus_aggressive_factor = 0.20
+		ai_badass_factor = 0.1
+	}
+	
+	emperor_of_mankind = {
+		random = no 
+		stability_factor = 0.25
+		war_support_factor = 0.25
+		political_power_gain = 0.2
+		army_morale_factor = 0.15
+		army_core_defence_factor = 0.15
+		surrender_limit = 0.25
+		nuclear_production = yes
+		custom_modifier_tooltip = get_5_fact_monthly
+	}

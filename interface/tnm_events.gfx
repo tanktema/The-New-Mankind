@@ -1,0 +1,19 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_news_event_league_of_evil"
+		texturefile = "gfx/event_pictures/end_war.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_event_SOU_tanker"
+		texturefile = "gfx/event_pictures/gfx_event_sou_tanker_spritesheet.dds"
+		noOfFrames = 17
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+		
+		animation_rate_fps = 8
+		looping = yes 
+        play_on_show = yes
+        pause_on_loop = 0
+        
+        allwaystransparent = yes
+    }

@@ -1,0 +1,34 @@
+﻿division_template = {
+	name = "Home Guard"
+	division_names_group = UEN_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 2 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }		
+	}
+	priority = 0
+}
+
+
+
+
+units = {
+	division = {
+		name = "1. Opalchenets-pobornik"
+		location 767
+		division_template = "Home Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 }
+
+	division = {
+		name = "2. Opalchenets-pobornik"
+		location 767
+		division_template = "Home Guard"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1.0 }
+}

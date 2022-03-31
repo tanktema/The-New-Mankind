@@ -1,0 +1,19 @@
+compliance_50 = {
+	type = core_compliance_modifier
+	# Хотелось бы подробнее остановиться на типах 
+	# Всего их 4: 2 на подчинение и 2 на сопротивление
+	# core_compliance_modifier и core_resistance_modifier применяются к стране в целом
+	# state_resistance_modifier и state_compliance_modifier применяются к конкретному стейту
+	# для модификаторов стейтов по умолчанию идет скоуп стейта, FROM - страна-оккупант, FROMFROM - оккупированная страна 	
+	# для модификаторов core по умолчанию идет скоуп страны-оккупанта, FROM - оккупированная страна 
+	icon = "GFX_occupation_compliance_modifier_strip:7"  # Это - иконка. Подробнее, как обычно, позже
+	small_icon = "GFX_occupation_compliance_modifier_small_strip:7" # Тоже иконка, но маленькая. И тоже объясню потом
+	visible = { always = yes } # Условие видимости
+	available = { always = yes } # И доступности. Если вы это не понимаете, то не лезьте сюда
+	threshold = 50 # При каком проценте подчинения будет активен модификатор
+	margin = 2 # Это - ОТСТУП иконки от полоски. Если его не поставить, иконки будут налезать на полоску
+	state_modifier = { # Собстенно модификатор 
+		local_factories = 0.05
+		local_resources = 0.1
+	}
+}

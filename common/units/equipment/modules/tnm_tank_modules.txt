@@ -1,0 +1,292 @@
+equipment_modules = {
+
+	tnm_tank_laser_defence_system = { #### Уникальный айди
+		abbreviation = "tnm_lasd"
+		category = tank_special_module ### Категория
+		sfx = sfx_ui_sd_module_turret ### Звук добавления
+		
+		xp_cost = 2 ### Сколько очков опыта добавится к стоимости проекта
+		add_stats = { ### Добавить +N ЕДИНИЦ к атрибуту. 
+			defense = 20
+			reliability = -0.15
+		}
+		multiply_stats = { #### Добавить +N ПРОЦЕНТОВ к атрибуту
+			armor_value = 0.15
+		}
+		
+	}
+	
+	
+	tnm_tank_las_cannon = {
+		abbreviation = "tnm_lasc"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 80
+			ap_attack = 350
+			build_cost_ic = 10
+			maximum_speed = -0.2
+			reliability = -0.35
+		}
+		xp_cost = 2
+		build_cost_resources = {
+			crystals = 3
+			chromium = 4
+		}
+	}
+	
+	tnm_tesla_cannon = {
+		abbreviation = "tnm_tesla"
+		category = tank_medium_main_armament 
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 60
+			hard_attack = 50
+			ap_attack = 120
+			build_cost_ic = 8
+			maximum_speed = -0.1
+			reliability = -0.15
+		}
+		xp_cost = 2
+		build_cost_resources = {
+			crystals = 2
+			chromium = 3
+		}
+	}
+	
+	tnm_hammer_cannon = {
+		abbreviation = "tnm_hammer"
+		category = tank_secondary_turret 
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 5
+			hard_attack = 15
+			ap_attack = 80
+			build_cost_ic = 2
+			maximum_speed = -0.05
+			reliability = -0.1
+		}
+		xp_cost = 2
+		build_cost_resources = {
+			tungsten = 1
+			chromium = 2
+		}
+	}
+	
+	
+	tnm_laser_ai_system = {
+		abbreviation = "tnm_las_ai"
+		category = tank_secondary_turret 
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 50
+			reliability = -0.1
+			build_cost_ic = 4
+		}
+		xp_cost = 2
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+	}
+	
+	tnm_rockets_module = {
+		abbreviation = "tnm_rocket"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		add_stats = {
+			soft_attack = 75
+			hard_attack = 15
+			breakthrough = 20
+			reliability = -0.07
+			build_cost_ic = 3
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			steel = 1
+			oil = 1
+			chromium = 1
+		}
+	}
+	
+	tnm_gauss_tank_cannon = {
+		abbreviation = "tnm_gauss"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		add_stats = {
+			soft_attack = 1
+			hard_attack = 120
+			ap_attack = 400
+			reliability = -0.5
+			build_cost_ic = 15
+			maximum_speed = -0.25
+			breakthrough = 1
+		}
+		
+		xp_cost = 3
+		build_cost_resources = {
+			crystals = 4
+			tungsten = 3
+		}
+	}
+	
+	tnm_microwave_module = {
+		abbreviation = "tnm_mcw"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			soft_attack = 15
+			reliability = 0.05
+			breakthrough = 10
+			build_cost_ic = 4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			crystals = 1
+			tungsten = 1
+		}
+	}
+	
+	tnm_flamethrower_grb = {
+		abbreviation = "tnm_flame"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = flame
+		add_stats = {
+			soft_attack = 65
+			breakthrough = 60
+			build_cost_ic = 0.5
+			reliability = -0.05
+		}
+		xp_cost = 2
+		build_cost_resources = {
+			oil = 1
+			tungsten = 1
+		}
+	}
+	
+	tnm_plasma_cannon = {
+		abbreviation = "tnm_plas"
+		category = tank_medium_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		add_stats = {
+			soft_attack = 150
+			reliability = -0.6
+			build_cost_ic = 12
+			hard_attack = 15
+			ap_attack = 250
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			crystals = 3
+			tungsten = 2
+		}
+	}
+	
+	tnm_gem_ubercanone = {
+		abbreviation = "ttfc"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 120
+			ap_attack = 400
+			reliability = 0.1
+			build_cost_ic = 20
+			maximum_speed = -0.15
+			breakthrough = 5
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 2
+		}
+	}
+	
+	tnm_gem_magicengine = {
+		abbreviation = "ttfe"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 3
+			#fuel_consumption = 4
+			reliability = 0.1
+		#	maximum_speed = 0.2
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.25
+		}
+		build_cost_resources = {
+			steel = 3
+			crystals = 2
+		}
+	}
+	
+	tnm_gem_superarmor = {
+		abbreviation = "ttfa"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			defense = 6
+			breakthrough = 6
+			reliability = -0.1
+		}
+
+		multiply_stats = {
+			build_cost_ic = 0.4
+			armor_value = 0.7
+
+		}
+		build_cost_resources = {
+			chromium = 2
+		}
+	}
+	
+	tnm_benya_cannon = {
+		abbreviation = "ttfci"
+		category = tank_super_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			soft_attack = 500
+			hard_attack = 500
+			ap_attack = 500
+			reliability = 0.25
+			build_cost_ic = 50
+			maximum_speed = -0.15
+			breakthrough = 50
+		}
+		build_cost_resources = {
+			steel = 5
+			tungsten = 5
+		}
+	}
+	
+	tnm_adamant_armor = {
+		abbreviation = "ttfai"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			defense = 50
+			breakthrough = 15
+			#reliability = -0.1
+		}
+
+		multiply_stats = {
+			build_cost_ic = 2.0
+			armor_value = 2.0
+
+		}
+		build_cost_resources = {
+			chromium = 5
+		}
+	}
+	
+}

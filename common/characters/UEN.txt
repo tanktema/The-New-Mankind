@@ -1,0 +1,1129 @@
+characters={
+	UEN_federal_council={
+		name=UEN_federal_council
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/demportrait_council.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_UEN_COUNCIL_DESC"
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	UEN_people_council={
+		name=UEN_people_council
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/UENcom.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	UEN_high_council={
+		name=UEN_high_council
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/highcouncileu.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=nazism
+			traits={ warmonger }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	UEN_federal_council_neutrality={
+		name=UEN_federal_council
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/demportrait_council.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_UEN_COUNCIL_DESC"
+			ideology=centrism  
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+#Political advisors
+	UEN_olav_V={
+		name=UEN_olav_V
+		portraits={
+			army={
+				small=GFX_idea_UEN_olav_V
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_olav_V
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_idea = UEN_exiled_monarch }
+			}
+			traits = {
+				HUM_arhundrets_nordmann
+			}
+		}
+	}
+
+	UEN_otto={
+		name=UEN_otto
+		portraits={
+			army={
+				small=GFX_idea_UEN_otto
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_otto
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_idea = UEN_exiled_monarch }
+			}
+			traits = {
+				HUM_emperor_of_austria
+			}
+		}
+	}
+
+	UEN_michael={
+		name=UEN_michael
+		portraits={
+			army={
+				small=GFX_idea_UEN_michael
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_michael
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_idea = UEN_exiled_monarch }
+			}
+			traits = {
+				popular_figurehead
+			}
+		}
+	}
+
+	UEN_janos_kadar={
+		name=UEN_janos_kadar
+		portraits={
+			army={
+				small=GFX_idea_UEN_janos_kadar
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_janos_kadar
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_idea = UEN_exiled_monarch }
+			}
+			traits = {
+				HUM_goulash_communism
+			}
+		}
+	}
+
+	UEN_vaclav_havel={
+		name=UEN_vaclav_havel
+		portraits={
+			army={
+				small=GFX_idea_UEN_vaclav_havel
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_vaclav_havel
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				
+			}
+			traits = {
+				HUM_president_philosopher
+			}
+		}
+	}
+
+	UEN_enver_hoxha={
+		name=UEN_enver_hoxha
+		portraits={
+			army={
+				small=GFX_idea_UEN_enver_hoxha
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_enver_hoxha
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_government = fascism }
+				if = {
+						OR = {
+							NOT = { has_idea = UEN_disunited_0 }
+					}
+						OR = {
+							NOT = { has_idea = UEN_disunited_1 }
+					}
+				}
+			}
+			traits = {
+				HUM_dulla_spirit
+			}
+		}
+	}
+
+	UEN_jacque_chirac={
+		name=UEN_jacque_chirac
+		portraits={
+			army={
+				small=GFX_idea_UEN_jacque_chirac
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_jacque_chirac
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_government = fascism }
+			}
+			traits = {
+				HUM_man_of_the_peoples
+			}
+		}
+	}
+
+	UEN_richard_weizsacker={
+		name=UEN_richard_weizsacker
+		portraits={
+			army={
+				small=GFX_idea_UEN_richard_weizsacker
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_richard_weizsacker
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				
+			}
+			traits = {
+				financial_expert
+				economist
+			}
+		}
+	}
+
+	UEN_erich_mielke={
+		name=UEN_erich_mielke
+		portraits={
+			army={
+				small=GFX_idea_UEN_erich_mielke
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_erich_mielke
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_government = democratic }
+				if = {
+						OR = {
+							NOT = { has_idea = UEN_disunited_0 }
+					}
+						OR = {
+							NOT = { has_idea = UEN_disunited_1 }
+					}
+				}
+			}
+			traits = {
+				HUM_stasi
+			}
+		}
+	}
+
+	UEN_carmen_franco={
+		name=UEN_carmen_franco
+		portraits={
+			army={
+				small=GFX_idea_UEN_carmen_franco
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UEN_carmen_franco
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				HUM_daughter_of_caudillo
+			}
+		}
+	}
+
+#High command
+	UEN_jurgen_brandt={
+		name=UEN_jurgen_brandt
+		portraits={
+			army={
+				small=GFX_idea_UEN_jurgen_brandt
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UEN_jurgen_brandt
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+	}
+
+	UEN_petar_gracanin={
+		name=UEN_petar_gracanin
+		portraits={
+			army={
+				small=GFX_idea_UEN_petar_gracanin
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UEN_petar_gracanin
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_government = fascism }
+				if = {
+						OR = {
+							has_completed_focus = UEN_communist_in_the_council
+						OR = {
+							has_completed_focus = UEN_unite_peoples
+						}
+					}
+				}
+			}
+			traits = {
+				mass_assault_expert
+			}
+		}
+	}
+
+	UEN_bernard_capillon={
+		name=UEN_bernard_capillon
+		portraits={
+			army={
+				small=GFX_idea_UEN_bernard_capillon
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UEN_bernard_capillon
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				air_warfare_theorist
+			}
+		}
+	}
+
+	UEN_lannuzel={
+		name=UEN_lannuzel
+		portraits={
+			army={
+				small=GFX_idea_UEN_lannuzel
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UEN_lannuzel
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				naval_theorist
+			}
+		}
+	}
+
+
+	UEN_rene_imbot={
+		name=UEN_rene_imbot
+		portraits={
+			army={
+				small=GFX_idea_UEN_rene_imbot
+			}
+		}
+		advisor={
+			slot = army_chief 
+			idea_token = UEN_rene_imbot
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+		}
+	}
+
+	UEN_wolfgang_altenburg={
+		name=UEN_wolfgang_altenburg
+		portraits={
+			army={
+				small=GFX_idea_UEN_wolfgang_altenburg
+			}
+		}
+		advisor={
+			slot = army_chief 
+			idea_token = UEN_wolfgang_altenburg
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+		}
+	}
+
+	UEN_achille_lerche={
+		name=UEN_achille_lerche
+		portraits={
+			army={
+				small=GFX_idea_UEN_achille_lerche
+			}
+		}
+		advisor={
+			slot = air_chief 
+			idea_token = UEN_achille_lerche
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				air_chief_reform_2
+			}
+		}
+	}
+
+	UEN_harald_wust={
+		name=UEN_harald_wust
+		portraits={
+			army={
+				small=GFX_idea_UEN_harald_wust
+			}
+		}
+		advisor={
+			slot = air_chief 
+			idea_token = UEN_harald_wust
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+		}
+	}
+
+	UEN_saturnino_suanzes={
+		name=UEN_saturnino_suanzes
+		portraits={
+			army={
+				small=GFX_idea_UEN_saturnino_suanzes
+			}
+		}
+		advisor={
+			slot = navy_chief 
+			idea_token = UEN_saturnino_suanzes
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+		}
+	}
+
+	UEN_bengt_goran_rasin={
+		name=UEN_bengt_goran_rasin
+		portraits={
+			army={
+				small=GFX_idea_UEN_bengt_goran_rasin
+			}
+		}
+		advisor={
+			slot = navy_chief 
+			idea_token = UEN_bengt_goran_rasin
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				navy_submarine_2
+			}
+		}
+	}
+
+	UEN_jozef_uzycki={
+		name=UEN_jozef_uzycki
+		portraits={
+			army={
+				small=GFX_idea_UEN_jozef_uzycki
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_jozef_uzycki
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				army_armored_1
+			}
+		}
+	}
+
+	UEN_umberto_cappuzzo={
+		name=UEN_umberto_cappuzzo
+		portraits={
+			army={
+				small=GFX_idea_UEN_umberto_cappuzzo
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_umberto_cappuzzo
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				army_cavalry_2
+			}
+		}
+	}
+
+	UEN_govert_huyser={
+		name=UEN_govert_huyser
+		portraits={
+			army={
+				small=GFX_idea_UEN_govert_huyser
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_govert_huyser
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				army_logistics_3
+			}
+		}
+	}
+
+	UEN_heinz_kessler={
+		name=UEN_heinz_kessler
+		portraits={
+			army={
+				small=GFX_idea_UEN_heinz_kessler
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_heinz_kessler
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+				NOT = { has_government = fascism }
+				if = {
+						OR = {
+							has_completed_focus = UEN_communist_in_the_council
+						OR = {
+							has_completed_focus = UEN_unite_peoples
+						}
+					}
+				}
+			}
+			traits = {
+				army_infantry_3
+			}
+		}
+	}
+
+	UEN_jose_saenz={
+		name=UEN_jose_saenz
+		portraits={
+			army={
+				small=GFX_idea_UEN_jose_saenz
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_jose_saenz
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+		}
+	}
+
+	UEN_yves_Leenhardt={
+		name=UEN_yves_Leenhardt
+		portraits={
+			army={
+				small=GFX_idea_UEN_yves_Leenhardt
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_yves_Leenhardt
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+		}
+	}
+
+	UEN_franco_pisano={
+		name=UEN_franco_pisano
+		portraits={
+			army={
+				small=GFX_idea_UEN_franco_pisano
+			}
+		}
+		advisor={
+			slot = high_command 
+			idea_token = UEN_franco_pisano
+			removal_cost = -1
+			allowed = {
+				original_tag = UEN
+			}
+			available = {
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+		}
+	}
+
+
+#OFFICERS
+
+	UEN_sabatier={
+		name=UEN_sabatier
+		portraits={
+			army={
+				large="gfx/leaders/UEN/christian.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		field_marshal={
+			traits={ human_race_trait }
+			skill = 5
+			attack_skill = 2
+    		defense_skill = 3
+   			planning_skill = 2
+    		logistics_skill = 2
+		}
+	}
+
+	UEN_karel_novak={
+		name=UEN_karel_novak
+		portraits={
+			army={
+				large="gfx/leaders/UEN/CZEHQ.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		field_marshal={
+			traits = { human_race_trait hill_fighter }
+			skill = 3
+			attack_skill = 2
+    		defense_skill = 2
+    		planning_skill = 2
+    		logistics_skill = 3
+		}
+	}
+
+	UEN_damien_huzard={
+		name=UEN_damien_huzard
+		portraits={
+			army={
+				large="gfx/leaders/UEN/hussard.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait trickster cavalry_officer }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	UEN_wilhemus_faas={
+		name=UEN_wilhemus_faas
+		portraits={
+			army={
+				large="gfx/leaders/UEN/huzaren.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait trickster cavalry_officer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	UEN_karl_harald={
+		name=UEN_karl_harald
+		portraits={
+			army={
+				large="gfx/leaders/UEN/stormpionjarer.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait urban_assault_specialist fortress_buster }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UEN_jorgen_niklas={
+		name=UEN_jorgen_niklas
+		portraits={
+			army={
+				large="gfx/leaders/UEN/stormingenior.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait urban_assault_specialist fortress_buster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	UEN_hans_lothar_domrose={
+		name=UEN_hans_lothar_domrose
+		portraits={
+			army={
+				large="gfx/leaders/UEN/fallschirmjager.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait commando paratrooper }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = 842
+		}
+	}
+
+	UEN_njord_asmund={
+		name=UEN_njord_asmund
+		portraits={
+			army={
+				large="gfx/leaders/UEN/jaeger.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait commando infantry_officer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UEN_peder_andreas={
+		name=UEN_peder_andreas
+		portraits={
+			army={
+				large="gfx/leaders/UEN/norrlandsjagare.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait ranger trait_mountaineer winter_specialist }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+		}
+	}
+
+	UEN_henryk_tomek={
+		name=UEN_henryk_tomek
+		portraits={
+			army={
+				large="gfx/leaders/UEN/niebeskiberety.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait naval_invader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 843
+		}
+	}
+
+
+	UEN_carl_kjell={
+		name=UEN_carl_kjell
+		portraits={
+			army={
+				large="gfx/leaders/UEN/RBS56.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait Ambusher }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UEN_zacharie_vivien={
+		name=UEN_zacharie_vivien
+		portraits={
+			army={
+				large="gfx/leaders/UEN/Mistral.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { human_race_trait camouflage_expert }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UEN_marco_campioni={
+		name=UEN_marco_campioni
+		portraits={
+			army={
+				large="gfx/leaders/UEN/Ita_captain.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { human_race_trait gunnery_expert naval_lineage }
+			skill = 3
+			desc = "POLITICS_CAMPIONI_DESC"
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
+
+	UEN_torben_hoffmann={
+		name=UEN_torben_hoffmann
+		portraits={
+			army={
+				large="gfx/leaders/UEN/DDR_captain.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { human_race_trait green_water_expert }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 4
+			coordination_skill = 1
+			legacy_id = 845
+		}
+	}
+
+	UEN_janko_mlakar={
+		name=UEN_janko_mlakar
+		portraits={
+			army={
+				large="gfx/leaders/UEN/YUG_captain.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { human_race_trait }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			maneuvering_skill = 3
+			coordination_skill = 1
+			legacy_id = 844
+		}
+	}
+
+#NATIVE OFFICER + EVENT CHARACTER
+	UEN_crystal_water={
+		name=UEN_crystal_water
+		portraits={
+			army={
+				large="gfx/leaders/UEN/UEN_pony_captain.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+			traits = { pony_race_trait promising_general  }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			maneuvering_skill = 2
+			coordination_skill = 2
+			legacy_id = 848
+		}
+	}
+	UEN_onyx_shield={
+		name=UEN_onyx_shield
+		portraits={
+			army={
+				large="gfx/leaders/UEN/UEN_pony_officer_land1.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+			traits = { pony_race_trait  }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+				legacy_id = 846
+		}
+	}
+	UEN_velvet_dawn={
+		name=UEN_velvet_dawn
+		portraits={
+			army={
+				large="gfx/leaders/UEN/UEN_pony_officer_land2.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		corps_commander={
+				traits = { pony_race_trait trickster }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+				legacy_id = 847
+		}
+	}
+
+
+	UEN_willem_alexander={
+		name=UEN_willem_alexander
+		portraits={
+			army={
+				large="gfx/leaders/UEN/Willem.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		navy_leader={
+				traits = { human_race_trait navy_media_personality bold }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				maneuvering_skill = 1
+				coordination_skill = 2
+		}
+	}
+	UEN_olav_V={
+		name=UEN_olav_V
+		portraits={
+			army={
+				large="gfx/leaders/UEN/Olav.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		field_marshal={
+			traits = { human_race_trait media_personality war_hero }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	UEN_juan_carlos={
+		name=UEN_juan_carlos
+		portraits={
+			army={
+				large="gfx/leaders/UEN/Juan.tga"
+				small="GFX_idea_UEN_generic_advisor"
+			}
+		}
+		
+		field_marshal={
+			traits = { human_race_trait media_personality inspirational_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UEN_federation_council={
+		name=UEN_federation_council
+		portraits={
+			civilian={
+				large="gfx/leaders/UEN/uen_eqs_council.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_UEN_COUNCIL_DESC"
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+
+}

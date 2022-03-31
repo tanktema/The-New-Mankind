@@ -1,0 +1,38 @@
+objectTypes = {
+####Models by Cold War Iron Curtain and Economic Criris
+	# AK74
+	pdxmesh = {
+		name = "SOV_infantry_weapon_AK74_mesh"
+		file = "gfx/models/units/AK74.mesh"
+		scale = 1.0
+	}
+	
+		# ппш42
+	pdxmesh = {
+		name = "SOV_infantry_weapon_ppsh42_mesh"
+		file = "gfx/models/units/ppsh42.mesh"
+		scale = 1.0
+	}
+		
+		# M16A1
+	pdxmesh = {
+		name = "USA_infantry_weapon_m15_mesh"
+		file = "gfx/models/units/m16a1.mesh"
+		scale = 1.0
+	}
+	
+			# FNFAL
+	pdxmesh = {
+		name = "infantry_weapon_FNFAL_mesh"
+		file = "gfx/models/units/FAL.mesh"
+		scale = 0.9
+	}
+	
+			# G3 NEW
+	pdxmesh = {
+		name = "infantry_weapon_G3_mesh"
+		file = "gfx/models/units/G3.mesh"
+		scale = 0.9
+	}
+	
+}

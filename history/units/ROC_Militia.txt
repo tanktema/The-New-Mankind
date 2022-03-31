@@ -1,0 +1,66 @@
+﻿division_template = {
+	name = "Militia"			#Infantry Division
+	priority = 0
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+
+
+units = {
+	division = {
+		name = "Rockville People's Militia"
+		location = 11511
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.75 }
+	division = {
+		name = "Rock farms Rangers"
+		location = 11029
+		division_template = "Militia"
+		start_experience_factor = 0.35
+		start_equipment_factor = 0.9 }
+	division = {
+		name = "Foaledo Militia"
+		location = 3645
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7 }
+	division = {
+		name = "Rockville Volunteer"
+		location = 11511
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7 }
+
+	division = {
+		name = "'Granit' Militia"
+		location = 11511
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.6 }
+	division = {
+		name = "'Andesite' Militia"
+		location = 11511
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5 }
+	division = {
+		name = "'Basalt' Militia"
+		location = 11511
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.45 }
+	division = {
+		name = "1st Rockville Regiment"
+		location = 11511
+		division_template = "Militia"
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.9 }
+}

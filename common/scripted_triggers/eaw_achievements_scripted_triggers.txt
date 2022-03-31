@@ -1,0 +1,438 @@
+available_conditions_met_for_achievement_1 = {
+	custom_trigger_tooltip = {
+		tooltip = ACHIEVEMENT_DID_NOT_HAVE_FRACTION
+		NOT = { has_country_flag = country_was_in_faction_at_start }
+	}
+}
+unlock_conditions_met_for_achievement_1 = {
+	available_conditions_met_for_achievement_1 = yes
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+	is_in_faction = yes 
+}
+
+available_conditions_met_for_achievement_2 = {
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+}
+unlock_conditions_met_for_achievement_2 = {
+	available_conditions_met_for_achievement_2 = yes
+	has_tech = nukes
+	num_of_nukes > 0
+}
+
+available_conditions_met_for_achievement_3 = {
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+}
+unlock_conditions_met_for_achievement_3 = {
+	available_conditions_met_for_achievement_3 = yes
+	custom_trigger_tooltip = {
+		tooltip = 100_adaptation_level
+		check_variable = { acceptance_value > 99 }
+	
+	}
+}
+
+available_conditions_met_for_achievement_4 = {
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+}
+unlock_conditions_met_for_achievement_4 = {
+	available_conditions_met_for_achievement_4 = yes
+	OR = {
+		AND = {
+			original_tag = SOU 
+			OR = {
+				UNS = {
+					is_subject_of = ROOT 
+				}
+				96 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GEM = {
+					is_subject_of = ROOT 
+				}
+				312 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GRB = {
+					is_subject_of = ROOT 
+				}
+				365 = {
+					is_owned_by = ROOT 
+				}
+			}
+		}
+		AND = {
+			original_tag = UNS 
+			OR = {
+				SOU = {
+					is_subject_of = ROOT 
+				}
+				332 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GEM = {
+					is_subject_of = ROOT 
+				}
+				312 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GRB = {
+					is_subject_of = ROOT 
+				}
+				365 = {
+					is_owned_by = ROOT 
+				}
+			}
+		}
+		AND = {
+			original_tag = GEM
+			OR = {
+				SOU = {
+					is_subject_of = ROOT 
+				}
+				332 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				UNS = {
+					is_subject_of = ROOT 
+				}
+				96 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GRB = {
+					is_subject_of = ROOT 
+				}
+				365 = {
+					is_owned_by = ROOT 
+				}
+			}
+		}
+		AND = {
+			original_tag = GRB
+			OR = {
+				SOU = {
+					is_subject_of = ROOT 
+				}
+				332 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				UNS = {
+					is_subject_of = ROOT 
+				}
+				96 = {
+					is_owned_by = ROOT 
+				}
+			}
+			OR = {
+				GEM = {
+					is_subject_of = ROOT 
+				}
+				312 = {
+					is_owned_by = ROOT 
+				}
+			}
+		}
+	}
+					
+}
+
+available_conditions_met_for_achievement_5 = {
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+}
+unlock_conditions_met_for_achievement_5 = {
+	available_conditions_met_for_achievement_5 = yes
+	has_tech = sniper_nigt_vision
+}
+
+available_conditions_met_for_achievement_6 = {
+	original_tag = UNS 
+}
+unlock_conditions_met_for_achievement_6 = {
+	available_conditions_met_for_achievement_6 = yes
+	has_country_leader = {
+		name = "General Gershell fon Shepherd"
+		ruling_only = yes 
+	}
+}
+
+available_conditions_met_for_achievement_7 = {
+	original_tag = UNS 
+}
+unlock_conditions_met_for_achievement_7 = {
+	available_conditions_met_for_achievement_7 = yes
+	has_completed_focus = UNS_continue_support
+	NLR = {
+		exists = no 
+	}
+	EQS = {
+		NOT = {
+			has_country_leader = {
+				name = "Daybreaker"
+			}
+		}
+	}
+}
+
+available_conditions_met_for_achievement_8 = {
+	original_tag = UNS
+}
+unlock_conditions_met_for_achievement_8 = {
+	available_conditions_met_for_achievement_8 = yes
+	has_country_flag = uns_built_tech_park
+}
+
+available_conditions_met_for_achievement_9 = {
+	original_tag = UNS
+}
+unlock_conditions_met_for_achievement_9 = {
+	available_conditions_met_for_achievement_9 = yes
+	has_idea = UNS_liberty_statue_idea
+}
+
+available_conditions_met_for_achievement_10 = {
+	original_tag = UNS
+}
+unlock_conditions_met_for_achievement_10 = {
+	available_conditions_met_for_achievement_10 = yes
+	has_completed_focus = UNS_marines_corp
+}
+available_conditions_met_for_achievement_11 = {
+	original_tag = SOU
+}
+unlock_conditions_met_for_achievement_11 = {
+	available_conditions_met_for_achievement_11 = yes
+	has_completed_focus = SOU_god_chained_alliance
+}
+available_conditions_met_for_achievement_12 = {
+	original_tag = SOU
+}
+unlock_conditions_met_for_achievement_12 = {
+	available_conditions_met_for_achievement_12 = yes
+	has_completed_focus = SOU_execute_traitor
+} 
+available_conditions_met_for_achievement_13 = {
+	original_tag = SOU
+}
+unlock_conditions_met_for_achievement_13 = {
+	available_conditions_met_for_achievement_13 = yes
+	OR = {
+		has_completed_focus = SOU_finish_rebuilding
+		has_completed_focus = SOU_end_of_destroyment
+	}
+	num_of_civilian_factories > 39
+	num_of_military_factories > 39
+	
+} 
+available_conditions_met_for_achievement_14 = {
+	original_tag = SOU
+}
+unlock_conditions_met_for_achievement_14 = {
+	available_conditions_met_for_achievement_14 = yes
+	has_completed_focus = SOU_world_rev
+	has_government = communism
+	GRI = {
+		is_subject_of = ROOT 
+		has_government = communism
+	}
+	EQS = {
+		is_subject_of = ROOT 
+		has_government = communism
+	}
+	CHN = {
+		is_subject_of = ROOT 
+		has_government = communism
+	}
+	WNG = {
+		is_subject_of = ROOT 
+		has_government = communism
+	}
+	RIV = {
+		is_subject_of = ROOT 
+		has_government = communism
+	}
+	
+} 
+available_conditions_met_for_achievement_15 = {
+	original_tag = SOU
+}
+unlock_conditions_met_for_achievement_15 = {
+	available_conditions_met_for_achievement_15 = yes
+	OR = {
+		has_tech = advanced_infantry_weapons_e
+		has_tech = magical_weapons3
+	}
+} 
+available_conditions_met_for_achievement_16 = {
+	original_tag = GEM 
+}
+unlock_conditions_met_for_achievement_16 = {
+	available_conditions_met_for_achievement_16 = yes 
+	has_country_leader = {
+		name = "Heinrich Himmler"
+		ruling_only = yes 
+	}
+	has_completed_focus = GEM_way_east
+	RIV = {
+		OR = {
+			exists = no 
+			is_subject_of = GEM 
+		}
+	}
+}
+available_conditions_met_for_achievement_17 = {
+	OR = {
+		original_tag = UNS 
+		original_tag = SOU 
+		original_tag = GRB
+	}
+}
+unlock_conditions_met_for_achievement_17 = {
+	available_conditions_met_for_achievement_17 = yes
+	has_tech = nukes
+	custom_trigger_tooltip = {
+		tooltip = new_berlin_nuked
+		312 = {
+			has_state_flag = nuked_by_hum
+		}
+	}
+}
+available_conditions_met_for_achievement_18 = {
+	original_tag = GEM 
+}
+unlock_conditions_met_for_achievement_18 = {
+	available_conditions_met_for_achievement_18 = yes
+	all_country = {
+		limit = {
+			OR = {
+				original_tag = EQS 
+				original_tag = CHN 
+				original_tag = SOU 
+				original_tag = UNS 
+				original_tag = OLE 
+				original_tag = YAK 
+				original_tag = JAK 
+				original_tag = GRF 
+				original_tag = GFF
+				original_tag = STG
+				original_tag = PLB
+				original_tag = PNG
+				original_tag = CRY
+				original_tag = BUF
+				original_tag = DRG 
+			}
+		}
+	
+		OR = {
+			exists = no 
+			is_subject_of = GEM 
+		}
+		GEM = {
+			exists = yes 
+			is_subject = no
+		}
+	}
+}
+
+available_conditions_met_for_achievement_19 = {
+	original_tag = GEM 
+}
+unlock_conditions_met_for_achievement_19 = {
+	available_conditions_met_for_achievement_19 = yes
+	has_tech = main_battle_tank
+	custom_trigger_tooltip = {
+		tooltip = num_modern_tank_bats_60
+		check_variable = { num_battalions_with_type@modern_armor > 59 }
+	}
+}
+
+available_conditions_met_for_achievement_20 = {
+	custom_trigger_tooltip = {
+		tooltip = IS_HUMAN_COUNTRY_YES 
+		has_tech = human_race
+	}
+}
+unlock_conditions_met_for_achievement_20 = {
+	available_conditions_met_for_achievement_20 = yes 
+	custom_trigger_tooltip = {
+		tooltip = hum_rage_100_tt
+		check_variable = { human_rage > 99 }
+	}
+}
+
+available_conditions_met_for_achievement_21 = {
+	original_tag = GRB 
+}
+
+unlock_conditions_met_for_achievement_21 = {
+	available_conditions_met_for_achievement_21 = yes 
+	TRD = {
+		AND = {
+			is_subject_of = ROOT 
+			has_ideas = GRB_eco_integration
+		}
+	}
+}
+available_conditions_met_for_achievement_22 = {
+	original_tag = UNS 
+}
+
+unlock_conditions_met_for_achievement_22 = {
+	available_conditions_met_for_achievement_22 = yes 
+	GRB = {
+		is_subject_of = UNS
+	}
+}
+available_conditions_met_for_achievement_23 = {
+	original_tag = GRB 
+}
+
+unlock_conditions_met_for_achievement_23 = {
+	available_conditions_met_for_achievement_23 = yes 
+	UNS = {
+		is_subject_of = GRB
+	}
+}
+available_conditions_met_for_achievement_24 = {
+	original_tag = SOU 
+}
+
+unlock_conditions_met_for_achievement_24 = {
+	available_conditions_met_for_achievement_24 = yes 
+	has_completed_focus = SOU_execute_traitor
+}
+available_conditions_met_for_achievement_25 = {
+	original_tag = GRB 
+}
+
+unlock_conditions_met_for_achievement_25 = {
+	available_conditions_met_for_achievement_25 = yes 
+	has_completed_focus = GRB_the_great_crusade
+}

@@ -1,0 +1,4755 @@
+focus_tree = {
+	id = gem_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 12
+			tag = GEM 
+		}
+	}
+	
+	continuous_focus_position = { x = 0 y = 2800 }
+	
+	default = no
+	
+	focus = {
+		id = GEM_evac_focus
+		icon = GFX_goal_GEM_evac
+		x = 20
+		y = 0
+		cost = 0.2
+		select_effect = {
+			country_event = {
+				id = gem.1
+				days = 1
+			}
+			
+			country_event = {
+				id = gem.2
+				days = 5
+			}
+			country_event = {
+				id = gem.3
+				days = 7
+			}
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = gem.1 days = 15 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_exploration
+		icon = GFX_goal_GEM_exploration
+		x = 0
+		y = 1
+		relative_position_id = GEM_evac_focus
+		prerequisite = { focus = GEM_evac_focus }
+		cost = 0.2
+		select_effect = {
+			country_event = {
+				id = gem.4
+				days = 3
+			}
+			country_event = {
+				id = gem.5
+				days = 6
+			}
+		}
+		completion_reward = {
+			effect_tooltip = {
+				country_event = { id = gem.4 days = 15 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_contact
+		icon = GFX_goal_GEM_contact
+		x = 0
+		y = 1
+		relative_position_id = GEM_exploration
+		prerequisite = { focus = GEM_exploration }
+		cost = 1
+		completion_reward = {
+			acceptance_expand_extra = yes
+			country_event = { id = gem.6 }
+			hidden_effect = {
+				314 = {
+					add_core_of = ROOT 
+					remove_core_of = CHN
+				}
+				311 = {
+					add_core_of = ROOT 
+					remove_core_of = CHN 
+				}
+				312 = {
+					set_state_category = large_city
+					set_state_name = "STATE_902"
+				}
+				set_province_name = {
+					id = 12305
+					name = "STATE_902"
+				}
+				country_event = { id = af_gem.1 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_party_meeting 
+		icon = GFX_goal_GEM_party_meeting
+		x = 0 
+		y = 1
+		relative_position_id = GEM_contact
+		prerequisite = { focus = GEM_contact }
+		cost = 7.2
+		completion_reward = {
+			set_variable = { fasc_support = 60 }
+			set_variable = { goebbels_support = 30 }
+			set_variable = { himmler_support = 30 }
+			set_variable = { comm_support = 20 }
+			set_variable = { demo_support = 20 }
+			custom_effect_tooltip = start_party_reformation
+		}
+	}
+	focus = {
+		id = GEM_goebbels_speech
+		icon = GFX_goal_GEM_goebbels_speech
+		x = -1
+		y = 1
+		relative_position_id = GEM_party_meeting
+		prerequisite = { focus = GEM_party_meeting }
+		cost = 7.2 
+		completion_reward = {
+			country_event = { id = gem.7 }
+		}
+	}
+	focus = {
+		id = GEM_rations
+		icon = GFX_goal_GEM_rations
+		x = 1
+		y = 1
+		cost = 7.2
+		relative_position_id = GEM_party_meeting
+		prerequisite = { focus = GEM_party_meeting }
+		completion_reward = {
+			country_event = { id = gem.8 }
+		}
+	}
+	focus = {
+		id = GEM_opposition_question
+		icon = GFX_goal_GEM_opposition
+		available = {
+			custom_trigger_tooltip = {
+				OR = {
+					has_country_flag = himmler_way
+					has_country_flag = goebbels_way
+					has_country_flag = communist_way
+					has_country_flag = democratic_way
+				}
+				tooltip = gem_choise_has_been_made
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GEM_AF_FLAG
+				}
+			}
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = GEM_goebbels_speech
+		prerequisite = { focus = GEM_goebbels_speech }
+		prerequisite = { focus = GEM_rations }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = gem.9 }
+		}
+	}
+	focus = {
+		id = GEM_night_of_broken_glass
+		icon = GFX_goal_GEM_night_of_broken_glass
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = { 
+					has_country_flag = AI_GEM_HISTORICAL_PATH
+					has_country_flag = AI_GEM_ALT_FASC_PATH
+				}
+			}
+		}
+		relative_position_id = GEM_opposition_question
+		prerequisite = { focus = GEM_opposition_question }
+		mutually_exclusive = { focus = GEM_oppose_nazis }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = gem.10 }
+		}
+	}
+	focus = {
+		id = GEM_oppose_nazis
+		icon = GFX_goal_GEM_oppose_nazis
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				OR = { 
+					has_country_flag = AI_GEM_COMM_PATH
+					has_country_flag = AI_GEM_DEMO_PATH
+				}
+			}
+		}
+		relative_position_id = GEM_opposition_question
+		prerequisite = { focus = GEM_opposition_question }
+		mutually_exclusive = { focus = GEM_night_of_broken_glass }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = way_support_opposition
+		}
+	}
+	focus = {
+		id = GEM_destroy_the_opposition
+		icon = GFX_goal_GEM_destroy_opposition
+		x = 0
+		y = 1
+		relative_position_id = GEM_night_of_broken_glass
+		prerequisite = { focus = GEM_night_of_broken_glass }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = way_destroy_opposiion
+		}
+	}
+	focus = {
+		id = GEM_iron_guard
+		icon = GFX_goal_GEM_iron_guard
+		available = { always = no }
+		x = 0
+		y = 1
+		relative_position_id = GEM_destroy_the_opposition
+		prerequisite = { focus = GEM_destroy_the_opposition }
+		mutually_exclusive = { focus = GEM_a_little_freedom }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			effect_tooltip = {
+				promote_character = GEM_heinrich_himmler
+			}
+		}
+	}
+	focus = {
+		id = GEM_a_little_freedom
+		icon = GFX_goal_GEM_a_little_freedom
+		available = { always = no }
+		x = -2
+		y = 1
+		relative_position_id = GEM_destroy_the_opposition
+		prerequisite = { focus = GEM_destroy_the_opposition }
+		mutually_exclusive = { focus = GEM_iron_guard }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			effect_tooltip = {
+				promote_character = GEM_goebbels_min
+			}
+		}
+	}
+	focus = {
+		id = GEM_red_variant 
+		icon = GFX_goal_GEM_red_variant
+		available = { always = no }
+		x = 0
+		y = 1
+		relative_position_id = GEM_oppose_nazis
+		prerequisite = { focus = GEM_oppose_nazis }
+		mutually_exclusive = { focus = GEM_people_spirit }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	focus = {
+		id = GEM_people_spirit
+		icon = GFX_goal_people_spirit
+		available = { always = no }
+		x = 4
+		y = 1
+		relative_position_id = GEM_oppose_nazis
+		prerequisite = { focus = GEM_oppose_nazis }
+		mutually_exclusive = { focus = GEM_red_variant }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+		}
+	}
+	focus = {
+		id = GEM_comendant_hour
+		icon = GFX_goal_GEM_comendant_hour
+		x = -2
+		y = 1
+		relative_position_id = GEM_a_little_freedom
+		prerequisite = { focus = GEM_a_little_freedom }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				set_demilitarized_zone = yes 
+			}
+		}
+	}
+	focus = {
+		id = GEM_xeno_question
+		icon = GFX_goal_GEM_xenos
+		x = 0
+		y = 1
+		relative_position_id = GEM_a_little_freedom
+		prerequisite = { focus = GEM_a_little_freedom }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.12 }
+		}
+	}
+	focus = {
+		id = GEM_world_arena
+		icon = GFX_goal_GEM_world_arena
+		x = -1
+		y = 1
+		relative_position_id = GEM_xeno_question
+		prerequisite = { focus = GEM_xeno_question }
+		prerequisite = { focus = GEM_comendant_hour }
+		cost = 5
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = GEM_military_squads
+		icon = GFX_goal_GEM_milsquads
+		x = 0
+		y = 1
+		relative_position_id = GEM_iron_guard
+		prerequisite = { focus = GEM_iron_guard }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_ss_stormtroopers
+		}
+	}
+	focus = {
+		id = GEM_war_never_changes
+		icon = GFX_goal_GEM_war_never_changes
+		x = 0
+		y = 1
+		relative_position_id = GEM_military_squads
+		prerequisite = { focus = GEM_military_squads }
+		cost = 5
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = GEM_worker_manifest
+		icon = GFX_goal_GEM_work_manifest
+		x = 0
+		y = 1
+		relative_position_id = GEM_red_variant
+		prerequisite = { focus = GEM_red_variant }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+		}
+	}
+	focus = {
+		id = GEM_soviet_assistance
+		icon = GFX_goal_GEM_SOU_assist
+		x = 2
+		y = 1
+		relative_position_id = GEM_red_variant
+		prerequisite = { focus = GEM_red_variant }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				country_event = { id = gem.13 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_rise_the_people
+		icon = GFX_goal_GEM_rise_people
+		x = 1
+		y = 1
+		relative_position_id = GEM_worker_manifest
+		prerequisite = { focus = GEM_worker_manifest }
+		prerequisite = { focus = GEM_soviet_assistance }
+		cost = 5
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+	}
+	focus = {
+		id = GEM_equality_brothehood
+		icon = GFX_goal_GEM_equality
+		x = 0
+		y = 1
+		relative_position_id = GEM_rise_the_people
+		prerequisite = { focus = GEM_rise_the_people }
+		cost = 5
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = GEM_echo_of_war
+		icon = GFX_goal_GEM_war_echo
+		x = 0
+		y = 1
+		relative_position_id = GEM_people_spirit
+		prerequisite = { focus = GEM_people_spirit }
+		cost = 5
+		completion_reward = {
+			add_war_support = -0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GEM_coups
+		icon = GFX_goal_GEM_coups
+		x = 2
+		y = 1
+		relative_position_id = GEM_people_spirit
+		prerequisite = { focus = GEM_people_spirit }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_coups_idea
+		}
+	}
+	focus = {
+		id = GEM_ask_for_UNS
+		icon = GFX_goal_GEM_UNS
+		x = 0
+		y = 1
+		relative_position_id = GEM_echo_of_war
+		prerequisite = { focus = GEM_echo_of_war }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				country_event = { id = gem.15 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_natives_help
+		icon = GFX_goal_natives
+		x = 0
+		y = 1
+		relative_position_id = GEM_coups
+		prerequisite = { focus = GEM_coups }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				country_event = { id = gem.15 }
+			}
+			CRY = {
+				country_event = { id = gem.15 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_elections
+		icon = GFX_goal_GEM_elections
+		x = 1
+		y = 1
+		relative_position_id = GEM_ask_for_UNS
+		prerequisite = { focus = GEM_ask_for_UNS }
+		prerequisite = { focus = GEM_natives_help }
+		cost = 5
+		completion_reward = {
+			set_major = yes 
+			remove_ideas = GEM_polit_crisis
+			custom_effect_tooltip = gem_polit_crisis_over
+			set_politics = {
+				ruling_party = democratic
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	
+	focus = {
+		id = GEM_contact_changeling 
+		allow_branch = {
+			has_completed_focus = GEM_world_arena
+		}
+		icon = GFX_goal_GEM_CHN_contact
+		x = 0 
+		y = 1
+		relative_position_id = GEM_world_arena
+		prerequisite = { focus = GEM_world_arena }
+		cost = 5
+		completion_reward = {
+			CHN = {
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_liberal_politics
+		available = {
+			has_idea = GEM_no_xenophobia
+		}
+		icon = GFX_goal_GEM_liberal
+		x = -2
+		y = 1
+		relative_position_id = GEM_contact_changeling
+		prerequisite = { focus = GEM_contact_changeling }
+		mutually_exclusive = { focus = GEM_radicalism_goeb }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_war_support = 0.05
+			capital_scope = {
+				set_demilitarized_zone = no
+			} 
+		}
+	}
+	focus = {
+		id = GEM_dialog_himmler
+		icon = GFX_goal_GEM_dialog_himmler
+		x = -1
+		y = 1
+		relative_position_id = GEM_liberal_politics 
+		prerequisite = { focus = GEM_liberal_politics }
+		mutually_exclusive = { focus = GEM_arrest_himmler }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.17 }
+		}
+	}
+	focus = {
+		id = GEM_arrest_himmler
+		icon = GFX_goal_GEM_arrest_himmler
+		x = 1
+		y = 1
+		relative_position_id = GEM_liberal_politics
+		prerequisite = { focus = GEM_liberal_politics }
+		mutually_exclusive = { focus = GEM_dialog_himmler }
+		cost = 5
+		completion_reward = {
+			set_country_flag = gem_himmler_arrested
+			custom_effect_tooltip = arrest_himmler_tt
+		}
+	}
+	focus = {
+		id = GEM_access_xenophilia
+		icon = GFX_goal_GEM_fight_xenophilia
+		x = 1
+		y = 1
+		relative_position_id = GEM_dialog_himmler
+		prerequisite = { focus = GEM_dialog_himmler OR = GEM_arrest_himmler }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	focus = {
+		id = GEM_ss_question
+		icon = GFX_goal_GEM_ss_question
+		x = 0
+		y = 1
+		relative_position_id = GEM_access_xenophilia
+		prerequisite = { focus = GEM_access_xenophilia }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = depence_of_himmlers_fate 
+			hidden_effect = {
+				if = {
+					limit = {
+						has_template = "Waffen SS"
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Waffen SS\" division_template = \"Waffen SS\" start_experience_factor = 1 start_equipment_factor = 1"
+							owner = ROOT 
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = himmler_civil_war
+					}
+					start_civil_war = {
+						ideology = neutrality
+						size = 0.3
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_black_day
+		icon = GFX_goal_GEM_black_day
+		available = {
+			has_civil_war = no 
+		}
+		x = -1
+		y = 1
+		relative_position_id = GEM_ss_question 
+		prerequisite = { focus = GEM_ss_question }
+		cost = 5
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 500
+			}
+		}
+	}
+	focus = {
+		id = GEM_adaptation
+		icon = GFX_goal_adaptation
+		available = {
+			has_civil_war = no 
+		}
+		x = 1
+		y = 1
+		relative_position_id = GEM_ss_question
+		prerequisite = { focus = GEM_ss_question }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	focus = {
+		id = GEM_radicalism_goeb
+		icon = GFX_goal_GEM_goeb_radicalism
+		available = {
+			has_idea = GEM_no_xenos
+		}
+		x = 2
+		y = 1
+		relative_position_id = GEM_contact_changeling
+		prerequisite = { focus = GEM_contact_changeling }
+		mutually_exclusive = { focus = GEM_liberal_politics }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = GEM_disband_ss
+		icon = GFX_goal_GEM_ss_disbanding
+		x = -1
+		y = 1
+		relative_position_id = GEM_radicalism_goeb
+		prerequisite = { focus = GEM_radicalism_goeb }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_ss_disbanding_idea
+		}
+	}
+	focus = {
+		id = GEM_shoot_the_diss
+		icon = GFX_goal_GEM_shoot_the_dissidents
+		x = 1
+		y = 1
+		relative_position_id = GEM_radicalism_goeb
+		prerequisite = { focus = GEM_radicalism_goeb }
+		cost = 5
+		completion_reward = {
+			add_manpower = -20
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GEM_question_of_etnos 
+		icon = GFX_goal_GEM_etnos_question
+		x = 0
+		y = 1
+		relative_position_id = GEM_disband_ss
+		prerequisite = { focus = GEM_disband_ss }
+		cost = 5
+		completion_reward = {
+			add_timed_idea = {
+				idea = GEM_ethnos_cleanups
+				days = 90
+			}
+		}
+	}
+	focus = {
+		id = GEM_xeno_fighting 
+		icon = GFX_goal_GEM_xeno_fighting
+		x = 0
+		y = 1
+		relative_position_id = GEM_shoot_the_diss
+		prerequisite = { focus = GEM_shoot_the_diss }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						is_pony_race = yes 
+						is_griffon_race = yes 
+						is_generic_race = yes 
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT 
+					modifier = hates_race
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+					modifier = hates_race
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_race_supremacy
+		icon = GFX_goal_GEM_race
+		x = 1
+		y = 1
+		relative_position_id = GEM_question_of_etnos
+		prerequisite = { focus = GEM_question_of_etnos }
+		prerequisite = { focus = GEM_xeno_fighting }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_race_power
+		}
+	}
+	focus = {	
+		id = GEM_military_police
+		icon = GFX_goal_GEM_milpolice
+		x = -1
+		y = 1
+		relative_position_id = GEM_race_supremacy
+		prerequisite = { focus = GEM_race_supremacy }
+		cost = 5
+		completion_reward = {
+			swap_ideas = {
+				add_idea = GEM_military_police
+				remove_idea = GEM_ss_disbanding_idea
+			}
+		}
+	}
+	focus = {
+		id = GEM_civil_mobilization
+		icon = GFX_goal_GEM_mobilize_civils
+		x = 1
+		y = 1
+		relative_position_id = GEM_race_supremacy
+		prerequisite = { focus = GEM_race_supremacy }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_people_militarization
+		}
+	}
+	focus = {
+		id = GEM_chn_allance
+		icon = GFX_goal_GEM_CHN_alliance
+		x = 1
+		y = 1
+		relative_position_id = GEM_adaptation
+		prerequisite = { focus = GEM_adaptation OR = GEM_military_police }
+		cost = 5
+		completion_reward = {
+			CHN = {
+				country_event = { id = generic.2 }
+				add_ai_strategy = {
+					type = alliance
+					id = ROOT 
+					value = 500
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_limited_contingent
+		icon = GFX_goal_limit
+		x = -1
+		y = 1
+		relative_position_id = GEM_chn_allance
+		prerequisite = { focus = GEM_chn_allance }
+		mutually_exclusive = { focus = GEM_expansion_goebbels }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_limited_xepansion
+			add_stability = 0.05
+			add_war_support = -0.1
+		}
+	}
+	focus = {
+		id = GEM_expansion_goebbels
+		icon = GFX_goal_GEM_expansion
+		x = 1
+		y = 1
+		relative_position_id = GEM_chn_allance
+		prerequisite = { focus = GEM_chn_allance }
+		mutually_exclusive = { focus = GEM_limited_contingent }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_unlimited_expansion
+			add_stability = -0.15
+			add_war_support = -0.1
+		}
+	}
+	focus = {
+		id = GEM_ask_for_territory 
+		icon = GFX_goal_GEM_ask_territory 
+		x = 1
+		y = 1 
+		relative_position_id = GEM_limited_contingent
+		prerequisite = { focus = GEM_limited_contingent OR = GEM_expansion_goebbels }
+		cost = 5
+		completion_reward = {
+			CHN = {
+				country_event = { id = gem.20 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_attack_equestria
+		icon = GFX_goal_GEM_attack_EQS 
+		x = -2
+		y = 1
+		relative_position_id = GEM_ask_for_territory
+		prerequisite = { focus = GEM_ask_for_territory }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = EQS 
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = CRY 
+				type = puppet_wargoal_focus
+			}
+			will_lead_to_war_with = EQS 
+			will_lead_to_war_with = CRY 
+		}
+	}
+	
+	focus = {
+		id = GEM_steel_gambit
+		icon = GFX_goal_GEM_stel_gambit 
+		x = 0
+		y = 1
+		relative_position_id = GEM_ask_for_territory 
+		prerequisite = { focus = GEM_ask_for_territory }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = STG 
+				type = puppet_wargoal_focus
+			}
+			will_lead_to_war_with = STG 
+		}
+	} 
+	focus = {
+		id = GEM_yak_attack
+		icon = GFX_goal_GEM_attack_yak
+		x = 2
+		y = 1
+		relative_position_id = GEM_ask_for_territory
+		prerequisite = { focus = GEM_ask_for_territory }
+		cost = 5
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = YAK
+				}
+				create_wargoal = {
+					target = YAK 
+					type = puppet_wargoal_focus
+				}
+			}
+			if = {
+				limit = {
+					country_exists = JAK 
+				}
+				create_wargoal = {
+					target = JAK 
+					type = puppet_wargoal_focus
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_unification_war
+		icon = GFX_goal_gem_unification
+		x = 1
+		y = 1
+		relative_position_id = GEM_attack_equestria
+		prerequisite = { focus = GEM_attack_equestria OR = GEM_steel_gambit }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = UNS 
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = SOU 
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_north_crusade
+		icon = GFX_goal_GEM_north
+		x = 1
+		y = 1
+		relative_position_id = GEM_steel_gambit 
+		prerequisite = { focus = GEM_steel_gambit OR = GEM_yak_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = PLB
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = PNG 
+				type = puppet_wargoal_focus
+				
+			}
+			create_wargoal = {
+				target = GRF 
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = GFF
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_swap_the_roles
+		icon = GFX_goal_GEM_swap_the_roles 
+		x = 1
+		y = 1
+		relative_position_id = GEM_unification_war
+		prerequisite = { focus = GEM_unification_war }
+		prerequisite = { focus = GEM_north_crusade }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = CHN 
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	
+	######### Himmler Branch 
+	
+	
+	focus = {
+		id = GEM_propaganda_campaign
+		icon = GFX_goal_GEM_propaganda
+		allow_branch = {
+			has_completed_focus = GEM_war_never_changes
+		}
+		x = 0
+		y = 1
+		relative_position_id = GEM_war_never_changes
+		prerequisite = { focus = GEM_war_never_changes }
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GEM_arrest_the_unbeliefs
+		icon = GFX_goal_GEM_arrests_unbelief
+		x = -3
+		y = 1
+		relative_position_id = GEM_propaganda_campaign
+		prerequisite = { focus = GEM_propaganda_campaign }
+		cost = 5
+		completion_reward = {
+			add_popularity = { 
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = GEM_brandenburg_800
+		icon = GFX_goal_GEM_brandenburg 
+		x = 0
+		y = 1
+		relative_position_id = GEM_arrest_the_unbeliefs
+		prerequisite = { focus = GEM_arrest_the_unbeliefs }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_brand_800
+		}
+	}
+	focus = {
+		id = GEM_party_purges
+		icon = GFX_goal_GEM_purge
+		x = -1
+		y = 1
+		relative_position_id = GEM_brandenburg_800
+		prerequisite = { focus = GEM_brandenburg_800 }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = GEM_natives_police_squads 
+		icon = GFX_goal_GEM_native_police
+		x = 1
+		y = 1
+		relative_position_id = GEM_brandenburg_800
+		prerequisite = { focus = GEM_brandenburg_800 }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.22 }
+			add_corps_commander_role = {
+				character = GEM_arianna
+				traits = {
+					other_race_general 
+					infantry_officer
+					cavalry_officer
+				}
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 2
+			}
+			add_corps_commander_role = {
+				character = GEM_radiant_croup
+				traits = {
+					other_race_general 
+					rhbz_trait
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				character = GEM_aliz_neumann
+				traits = {
+					other_race_general 
+					infantry_officer
+				}
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 2
+			}
+			
+		}
+	}
+	focus = {
+		id = GEM_military_conditions
+		icon = GFX_goal_GEM_mil_cond 
+		x = 1 
+		y = 1
+		relative_position_id = GEM_party_purges
+		prerequisite = { focus = GEM_party_purges }
+		prerequisite = { focus = GEM_natives_police_squads }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_milcondit
+		}
+	}
+	focus = {
+		id = GEM_prewar_preparation
+		icon = GFX_goal_GEM_prewar_preparation
+		x = 0
+		y = 1
+		relative_position_id = GEM_military_conditions
+		prerequisite = { focus = GEM_military_conditions }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_prewarprep
+		}
+	}
+	focus = {
+		id = GEM_new_mobil_way 
+		bypass = {
+			has_idea = extensive_conscription
+		}
+		icon = GFX_goal_new_mobil_way
+		x = 0
+		y = 1
+		relative_position_id = GEM_propaganda_campaign
+		prerequisite = { focus = GEM_propaganda_campaign }
+		cost = 5
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+	}
+	focus = {
+		id = GEM_first_son_rule_focus 
+		icon = GFX_goal_GEM_first_son 
+		x = -1
+		y = 1
+		relative_position_id = GEM_new_mobil_way
+		prerequisite = { focus = GEM_new_mobil_way }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_first_son_rule
+		}
+	}
+	focus = {
+		id = GEM_rations_doubling_rule
+		icon = GFX_goal_GEM_doubleration
+		x = 1
+		y = 1
+		relative_position_id = GEM_new_mobil_way
+		prerequisite = { focus = GEM_new_mobil_way }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_double_rations_rule
+		}
+	}
+	focus = {
+		id = GEM_economy_mobilization
+		icon = GFX_goal_GEM_eco_mobiliz
+		x = 1
+		y = 1
+		relative_position_id = GEM_first_son_rule_focus
+		prerequisite = { focus = GEM_first_son_rule_focus OR = GEM_rations_doubling_rule }
+		cost = 5
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+	focus = {
+		id = GEM_himmler_yunge
+		icon = GFX_goal_GEM_himmlerunge
+		x = -1
+		y = 1
+		relative_position_id = GEM_economy_mobilization
+		prerequisite = { focus = GEM_economy_mobilization }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_gimmlerunge
+		}
+	}
+	focus = {
+		id = GEM_youth_training
+		icon = GFX_goal_GEM_youth_training 
+		x = 1
+		y = 1
+		relative_position_id = GEM_economy_mobilization
+		prerequisite = { focus = GEM_economy_mobilization }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_youthtrain
+		}
+	}
+	focus = {
+		id = GEM_miltary_parade 
+		icon = GFX_goal_GEM_military_parade 
+		x = 1
+		y = 1
+		relative_position_id = GEM_himmler_yunge
+		prerequisite = { focus = GEM_himmler_yunge }
+		prerequisite = { focus = GEM_youth_training }
+		cost = 5
+		completion_reward = {
+			news_event = { id = gem.23 }
+		}
+	}
+	
+	focus = {
+		id = GEM_find_supporters 
+		icon = GFX_goal_GEM_supporters
+		x = 3 
+		y = 1
+		relative_position_id = GEM_propaganda_campaign
+		prerequisite = { focus = GEM_propaganda_campaign }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				add_ideas = GEM_german_followers
+			}
+			SOU = {
+				add_ideas = GEM_german_followers
+			}
+		}
+	}
+	focus = {
+		id = GEM_influence_on_human
+		icon = GFX_goal_GEM_influence
+		x = 0
+		y = 1
+		relative_position_id = GEM_find_supporters
+		prerequisite = { focus = GEM_find_supporters }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				add_ideas = GEM_fascist_supporters
+			}
+			SOU = {
+				add_ideas = GEM_fascist_supporters
+			}
+		}
+	}
+	focus = {
+		id = GEM_speak_to_taboritskiy 
+		icon = GFX_goal_GEM_taboritskiy
+		x = -1
+		y = 1
+		relative_position_id = GEM_influence_on_human
+		prerequisite = { focus = GEM_influence_on_human }
+		cost = 5
+		completion_reward = {
+			ROOT = {
+				add_collaboration = {
+					target = SOU
+					value = 0.3
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_speak_to_rockwell
+		icon = GFX_goal_GEM_rockwell
+		x = 1
+		y = 1
+		relative_position_id = GEM_influence_on_human
+		prerequisite = { focus = GEM_influence_on_human }
+		cost = 5
+		completion_reward = {
+			ROOT = {
+				add_collaboration = {
+					target = UNS
+					value = 0.3
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_claim_the_humans 
+		icon = GFX_goal_GEM_claims
+		x = 1
+		y = 1
+		relative_position_id = GEM_speak_to_taboritskiy
+		prerequisite = { focus = GEM_speak_to_taboritskiy }
+		prerequisite = { focus = GEM_speak_to_rockwell }
+		cost = 5
+		completion_reward = {
+			add_state_claim = 96
+			add_state_claim = 332
+		}
+	}
+	focus = {
+		id = GEM_know_your_enemy
+		icon = GFX_goal_GEM_know_enemy 
+		x = 0
+		y = 1
+		relative_position_id = GEM_claim_the_humans
+		prerequisite = { focus = GEM_claim_the_humans }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_know_enemy
+		}
+	}
+	
+	focus = {
+		id = GEM_the_time_has_come 
+		icon = GFX_goal_GEM_time_has_come 
+		x = 0
+		y = 1
+		relative_position_id = GEM_miltary_parade
+		prerequisite = { focus = GEM_military_parade }
+		prerequisite = { focus = GEM_know_your_enemy}
+		prerequisite = { focus = GEM_prewar_preparation }
+		cost = 5
+		will_lead_to_war_with = CHN 
+		completion_reward = {
+			create_wargoal = {
+				target = CHN
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = OLE
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_move_forward 
+		icon = GFX_goal_GEM_attack_eqs 
+		x = 0
+		y = 1
+		relative_position_id = GEM_the_time_has_come
+		prerequisite = { focus = GEM_the_time_has_come }
+		cost = 5
+		will_lead_to_war_with = EQS 
+		will_lead_to_war_with = CRY
+		completion_reward = {
+			create_wargoal = {
+				target = EQS
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = CRY
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_way_north
+		icon = GFX_goal_GEM_way_north
+		x = -1
+		y = 1
+		relative_position_id = GEM_move_forward
+		prerequisite = { focus = GEM_move_forward }
+		cost = 5 
+		will_lead_to_war_with = PNG
+		will_lead_to_war_with = PLB 
+		completion_reward = {
+			create_wargoal = {
+				target = PLB
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = PNG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_way_east
+		icon = GFX_goal_attack_yacks
+		x = 1
+		y = 1
+		relative_position_id = GEM_move_forward 
+		prerequisite = { focus = GEM_move_forward }
+		cost = 5
+		will_lead_to_war_with = YAK 
+		will_lead_to_war_with = JAK 
+		completion_reward = {
+			create_wargoal = {
+				target = YAK
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = JAK
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_attack_nova_griff
+		icon = GFX_goal_GEM_invade_griff
+		x = 0
+		y = 1
+		relative_position_id = GEM_way_north
+		prerequisite = { focus = GEM_way_north }
+		cost = 5
+		will_lead_to_war_with = GRF 
+		will_lead_to_war_with = GFF 
+		completion_reward = {
+			create_wargoal = {
+				target = GRF
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = GFF
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_invade_stg
+		icon = GFX_goal_GEM_invade_stg
+		x = 0
+		y = 1
+		relative_position_id = GEM_way_east
+		prerequisite = { focus = GEM_way_east }
+		cost = 5
+		will_lead_to_war_with = STG 
+		completion_reward = {
+			create_wargoal = {
+				target = STG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_end_the_started
+		icon = GFX_goal_GEM_invade_hum
+		x = 1
+		y = 1
+		relative_position_id = GEM_attack_nova_griff
+		prerequisite = { focus = GEM_attack_nova_griff }
+		prerequisite = { focus = GEM_invade_stg }
+		cost = 5
+		will_lead_to_war_with = UNS 
+		will_lead_to_war_with = SOU 
+		completion_reward = {
+			create_wargoal = {
+				target = UNS
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = SOU
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_attack_the_empire 
+		icon = GFX_goal_destroy_empire
+		x = 0
+		y = 1
+		relative_position_id = GEM_end_the_started
+		prerequisite = { focus = GEM_end_the_started }
+		cost = 5
+		will_lead_to_war_with = GRI 
+		completion_reward = {
+			create_wargoal = {
+				target = GRI
+				type = annex_everything
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_crush_wingbardy
+		icon = GFX_goal_GEM_attack_WNG 
+		x = -2
+		y = 1
+		relative_position_id = GEM_attack_the_empire 
+		prerequisite = { focus = GEM_attack_the_empire }
+		cost = 5
+		will_lead_to_war_with = WNG 
+		completion_reward = {
+			create_wargoal = {
+				target = WNG
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_northern_march
+		icon = GFX_goal_GEM_attack_SRS 
+		x = 2
+		y = 1
+		relative_position_id = GEM_attack_the_empire
+		prerequisite = { focus = GEM_attack_the_empire } 
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = SRS
+				type = puppet_wargoal_focus
+			}
+			create_wargoal = {
+				target = FAT
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	focus = {
+		id = GEM_hellquill_question
+		icon = GFX_goal_HLQ
+		x = 0
+		y = 1
+		relative_position_id = GEM_attack_the_empire
+		prerequisite = { focus = GEM_attack_the_empire }
+		cost = 5
+		completion_reward = {
+			HLQ = {
+				country_event = { id = gem.24 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_way_east 
+		icon = GFX_goal_GEM_way_east
+		x = 0
+		y = 1
+		relative_position_id = GEM_hellquill_question
+		prerequisite = { focus = GEM_hellquill_question }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				target = RIV 
+				type = annex_everything
+			}
+		}
+	}
+	
+	######## Communist branch
+	
+	focus = {
+		id = GEM_end_of_tyranny
+		allow_branch = {
+			has_completed_focus = GEM_equality_brothehood
+		}
+		icon = GFX_goal_GEM_end_tyranny 
+		x = 0
+		y = 1 
+		relative_position_id = GEM_equality_brothehood
+		prerequisite = { focus = GEM_equality_brothehood }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.27 }
+		}
+	}
+	
+	focus = {
+		id = GEM_human_spirit 
+		icon = GFX_goal_GEM_human_spirit 
+		x = -1
+		y = 1
+		relative_position_id = GEM_end_of_tyranny
+		prerequisite = { focus =GEM_end_of_tyranny }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = GEM_freedom_and_equality
+		icon = GFX_goal_GEM_equality 
+		x = 1
+		y = 1
+		relative_position_id = GEM_end_of_tyranny
+		prerequisite = { focus = GEM_end_of_tyranny }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = GEM_forget_of_past
+		icon = GFX_goal_GEM_forget_past 
+		x = 1
+		y = 1
+		relative_position_id = GEM_human_spirit 
+		prerequisite = { focus = GEM_human_spirit }
+		prerequisite = { focus = GEM_freedom_and_equality }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.15
+			}
+		}
+	}
+	focus = {
+		id = GEM_hang_them
+		icon = GFX_goal_GEM_ganging
+		x = -2
+		y = 1
+		relative_position_id = GEM_forget_of_past 
+		prerequisite = { focus = GEM_forget_of_past }
+		mutually_exclusive = { focus = GEM_ask_the_people }
+		mutually_exclusive = { focus = GEM_human_decide }
+		cost = 5
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+	focus = {
+		id = GEM_ask_the_people
+		icon = GFX_goal_GEM_asking
+		x = 0
+		y = 1
+		relative_position_id = GEM_forget_of_past 
+		prerequisite = { focus = GEM_forget_of_past }
+		mutually_exclusive = { focus = GEM_hang_them }
+		mutually_exclusive = { focus = GEM_human_decide }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = GEM_human_decide
+		icon = GFX_goal_GEM_human_decide
+		x = 2
+		y = 1
+		relative_position_id = GEM_forget_of_past 
+		prerequisite = { focus = GEM_forget_of_past }
+		mutually_exclusive = { focus = GEM_hang_them }
+		mutually_exclusive = { focus = GEM_human_decide }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				add_ideas = GEM_hanged_nazis 
+			}
+			SOU = {
+				add_ideas = GEM_hanged_nazis
+			}
+			add_ideas = GEM_hanged_nazis
+		}
+	}
+	focus = {
+		id = GEM_brotherhood_unity
+		icon = GFX_goal_GEM_unity_focus
+		x = 0
+		y = 1
+		relative_position_id = GEM_ask_the_people
+		prerequisite = { focus = GEM_ask_the_people OR = GEM_hang_them OR = GEM_human_decide }
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = GEM_COMM_FAC_1
+		}
+	}
+	focus = {
+		id = GEM_invite_STG 
+		icon = GFX_goal_GEM_invite_STG 
+		x = -1
+		y = 1
+		relative_position_id = GEM_brotherhood_unity
+		prerequisite = { focus = GEM_brotherhood_unity }
+		cost = 5
+		completion_reward = {
+			STG = {
+				country_event = { id = generic.3 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_invite_SOU 
+		icon = GFX_goal_GEM_invite_SOU 
+		x = 1
+		y = 1
+		relative_position_id = GEM_brotherhood_unity
+		prerequisite = { focus = GEM_brotherhood_unity }
+		cost = 5
+		completion_reward = {
+			SOU = {
+				country_event = { id = generic.3 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_second_chance 
+		icon = GFX_goal_GEM_second_chance 
+		x = 0
+		y = 1
+		relative_position_id = GEM_invite_STG
+		prerequisite = { focus = GEM_invite_SOU OR = GEM_invite_STG }
+		cost = 5
+		will_lead_to_war_with = CHN 
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHN 
+			}
+		}
+	}
+	focus = {
+		id = GEM_crush_them
+		icon = GFX_goal_GEM_crush_them
+		x = 0
+		y = 1
+		relative_position_id = GEM_invite_SOU
+		prerequisite = { focus = GEM_invite_SOU OR = GEM_invite_STG }
+		cost = 5
+		will_lead_to_war_with = CHN 
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = CHN 
+			}
+		}
+	}
+	focus = {
+		id = GEM_vesalipolis_triumph
+		icon = GFX_goal_GEM_triumph_vesalipolis 
+		x = 1
+		y = 1
+		relative_position_id = GEM_second_chance
+		prerequisite = { focus = GEM_second_chance OR = GEM_crush_them }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_ves_tr
+		}
+	}
+	
+	focus = {
+		id = GEM_bears
+		icon = GFX_goal_GEM_bears 
+		x = -2
+		y = 1
+		relative_position_id = GEM_vesalipolis_triumph
+		prerequisite = { focus = GEM_vesalipolis_triumph }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PLR 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_yaks
+		icon = GFX_goal_GEM_yask
+		x = 0
+		y = 1
+		relative_position_id = GEM_vesalipolis_triumph
+		prerequisite = { focus = GEM_vesalipolis_triumph }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = YAK 
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAK  
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_deers
+		icon = GFX_goal_GEM_deers
+		x = 2
+		y = 1
+		relative_position_id = GEM_vesalipolis_triumph
+		prerequisite = { focus = GEM_vesalipolis_triumph }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = OLE  
+			}
+		}
+	}
+	focus = {
+		id = GEM_equestrian_workers
+		icon = GFX_goal_GEM_EQS_attack
+		x = 0
+		y = 1
+		relative_position_id = GEM_yaks
+		prerequisite = { focus = GEM_yaks OR = GEM_bears OR = GEM_deers }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = EQS 
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CRY  
+			}
+		}
+	}
+	focus = {
+		id = GEM_red_world
+		icon = GFX_goal_GEM_RW 
+		x = 0
+		y = 1
+		relative_position_id = GEM_equestrian_workers
+		prerequisite = { focus = GEM_equestrian_workers }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_red_world_idea
+		}
+	}
+	
+	########## Democratic branch
+	
+	focus = {
+		id = GEM_stop_the_radicals
+		allow_branch = {
+			has_completed_focus = GEM_elections
+		}
+		icon = GFX_goal_GEM_stop_radicals
+		x = 0 
+		y = 1
+		relative_position_id = GEM_elections
+		prerequisite = { focus = GEM_elections }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+			country_event = { id = gem.28 }
+		}
+	}
+	focus = {
+		id = GEM_court_on_them
+		icon = GFX_goal_GEM_court 
+		x = 0
+		y = 1
+		relative_position_id = GEM_stop_the_radicals
+		prerequisite = { focus = GEM_stop_the_radicals }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.29 }
+		}
+	}
+	focus = {
+		id = GEM_peace_politics
+		icon = GFX_goal_GEM_peace 
+		x = -1
+		y = 1
+		relative_position_id = GEM_court_on_them
+		prerequisite = { focus = GEM_court_on_them }
+		mutually_exclusive = { focus = GEM_peacekeepers }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = -0.1
+			acceptance_expand_extra = yes 
+		}
+	}
+	focus = {
+		id = GEM_peacekeepers
+		icon = GFX_goal_GEM_peacekeepers 
+		x = 1
+		y = 1
+		relative_position_id = GEM_court_on_them
+		prerequisite = { focus = GEM_court_on_them }
+		mutually_exclusive = { focus = GEM_peace_politics }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_peacekeepers 
+		}
+	}
+	focus = {
+		id = GEM_peaceful_propaganda
+		icon = GFX_goal_GEM_peqceprop
+		x = 0
+		y = 1
+		relative_position_id = GEM_peace_politics
+		prerequisite = { focus = GEM_peace_politics }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = GEM_peaceful_prop_idea 
+		}
+	}
+	focus = {
+		id = GEM_peacekeeping_divisions 
+		icon = GFX_goal_GEM_peacekeeping_divs
+		x = 0
+		y = 1
+		relative_position_id = GEM_peacekeepers
+		prerequisite = { focus = GEM_peacekeepers }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = uun_blue_helmets
+			hidden_effect = {
+				load_oob = "GEM_peacekeepers"
+			}
+		}
+	}
+	focus = {
+		id = GEM_united_nations
+		icon = GFX_goal_GEM_UN 
+		x = 1
+		y = 1
+		relative_position_id = GEM_peaceful_propaganda
+		prerequisite = { focus = GEM_peaceful_propaganda OR = GEM_peacekeeping_divisions }
+		cost = 5
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes 
+			}
+			create_faction = GEM_UN 
+		}
+	}
+	
+	focus = {
+		id = GEM_invite_north
+		icon = GFX_goal_invitation_north 
+		x = -2
+		y = 1 
+		relative_position_id = GEM_united_nations
+		prerequisite = { focus = GEM_united_nations }
+		cost = 5
+		completion_reward = {
+			PNG = {
+				country_event = { id = generic.3 }
+				add_ai_strategy = {
+					type = alliance
+					id = GEM 
+					value = 500
+				}
+			}
+			PLB = {
+				country_event = { id = generic.3 }
+				add_ai_strategy = {
+					type = alliance
+					id = GEM 
+					value = 500
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_invite_griffons 
+		icon = GFX_goal_GEM_invite_griffs 
+		x = 0
+		y = 1
+		relative_position_id = GEM_united_nations
+		prerequisite = { focus = GEM_united_nations }
+		cost = 5
+		completion_reward = {
+			GRF = {
+				add_ai_strategy = {
+					type = alliance
+					id = GEM 
+					value = 500
+				}
+				country_event = { id = generic.3 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_invite_yak
+		icon = GFX_goal_GEM_invite_yak
+		x = 2
+		y = 1
+		relative_position_id = GEM_united_nations
+		prerequisite = { focus = GEM_united_nations }
+		cost = 5
+		completion_reward = {
+			YAK = {
+				add_ai_strategy = {
+					type = alliance
+					id = GEM 
+					value = 500
+				}
+				country_event = { id = generic.3 }
+			}
+		}
+	}
+	focus = {
+		id = GEM_support_equestria
+		icon = GFX_goal_GEM_eqs_support 
+		x = 0
+		y = 1
+		relative_position_id = GEM_invite_griffons
+		prerequisite = { focus = GEM_invite_griffons }
+		prerequisite = { focus = GEM_invite_north }
+		prerequisite = { focus = GEM_invite_yak }
+		cost = 5
+		completion_reward = {
+			give_guarantee = EQS 
+			give_guarantee = CRY 
+			add_ideas = GEM_agains_CHN 
+			every_other_country = {
+				limit = {
+					OR = {
+						tag = EQS 
+						tag = CRY 
+						is_in_faction_with = ROOT 
+					}
+				}
+				add_ideas = GEM_agains_CHN
+			}
+			
+		}
+	}
+	focus = {
+		id = GEM_buy_american_eqpm
+		available = {
+			NOT = {
+				has_idea = GEM_debt_UNS_repayment
+			}
+		}
+		icon = GFX_goal_buy_equipment 
+		x = -1
+		y = 1
+		relative_position_id = GEM_support_equestria
+		prerequisite = { focus = GEM_support_equestria }
+		cost = 7.2
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+				producer = UNS 
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment 
+				amount = 1000
+				producer = UNS 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 1000
+				producer = UNS 
+			}
+			add_timed_idea = {
+				idea = GEM_debt_UNS_repayment 
+				days = 150 
+			}
+			UNS = {
+				add_timed_idea = {
+					idea = GEM_debt_uns_repayment_rev 
+					days = 150 
+				}
+			}
+		
+		}
+	}
+	focus = {
+		id = GEM_soviet_vehicles
+		available = {
+			NOT = {
+				has_idea = GEM_debt_UNS_repayment
+			}
+		}
+		icon = GFX_goal_GEM_soviet_tanks
+		x = 1
+		y = 1
+		relative_position_id = GEM_support_equestria
+		prerequisite = { focus = GEM_support_equestria }
+		cost = 7.2
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 300
+				producer = SOU 
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 300
+				producer = SOU 
+			}
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 150
+				producer = SOU 
+			}
+			add_timed_idea = {
+				idea = GEM_debt_UNS_repayment 
+				days = 150 
+			}
+			SOU = {
+				add_timed_idea = {
+					idea = GEM_debt_uns_repayment_rev 
+					days = 150 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_end_the_past
+		icon = GFX_goal_destroy_the_past
+		x = 1
+		y = 1
+		relative_position_id = GEM_buy_american_eqpm
+		prerequisite = { focus = GEM_buy_american_eqpm }
+		prerequisite = { focus = GEM_soviet_vehicles }
+		cost = 5
+		completion_reward = {
+			UNS = {
+				add_opinion_modifier = {
+					modifier = forgiven_mistake
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = forgiven_mistake
+					target = ROOT 
+				}
+			}
+			SOU = {
+				add_opinion_modifier = {
+					modifier = forgiven_mistake
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = forgiven_mistake
+					target = ROOT 
+				}
+			}
+			add_ideas = GEM_banned_fascism 
+			
+		}
+	}
+	focus = {
+		id = GEM_antifasc
+		icon = GFX_goal_GEM_antifasc
+		x = -2
+		y = 1
+		relative_position_id = GEM_end_the_past
+		prerequisite = { focus = GEM_end_the_past }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_government = fascism
+				}
+				add_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = antifascist_politics
+					target = ROOT 
+				}
+			}
+			add_political_power = 1
+		}
+	}
+	focus = {
+		id = GEM_contacts
+		icon = GFX_goal_GEM_comtacts
+		x = 0
+		y = 1
+		relative_position_id = GEM_end_the_past
+		prerequisite = { focus = GEM_end_the_past }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_government = democratic
+				}
+				add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = friendship_between
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_stop_xenophobia
+		icon = GFX_goal_GEM_no_xenophobia 
+		x = 2
+		y = 1
+		relative_position_id = GEM_end_the_past
+		prerequisite = { focus = GEM_end_the_past }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = GEM_new_view_of_germany
+		icon = GFX_goal_GEM_new_germany
+		x = 0
+		y = 1
+		relative_position_id = GEM_contacts
+		prerequisite = { focus = GEM_contacts }
+		prerequisite = { focus = GEM_stop_xenophobia }
+		prerequisite = { focus = GEM_antifasc }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.1
+			every_other_country = {
+				limit = {
+					is_human_race = yes 
+				}
+				country_event = { id = generic.3 }
+			}
+		}
+	}
+	
+	######### Industry tree
+	
+	focus = {
+		id = GEM_stop_offworking
+		icon = GFX_goal_GEM_stop_offwork
+		available = {
+			custom_trigger_tooltip = {
+				NOT = {
+					has_idea = GEM_polit_crisis
+				}
+				tooltip = polit_cris_over
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GEM_AF_FLAG
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		x = 5
+		y = 0
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+			every_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 1
+					instant_build = yes 
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_coastal = no 
+				}
+				add_building_construction = {
+					type = industrial_complex 
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_new_factories
+		icon = GFX_goal_GEM_new_factories
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = GEM_stop_offworking
+		prerequisite = { focus = GEM_stop_offworking }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_roads_networks
+		icon = GFX_goal_GEM_road_networks
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = GEM_stop_offworking
+		prerequisite = { focus = GEM_stop_offworking }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_new_dockyards
+		icon = GFX_goal_GEM_New_dockyard
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = GEM_new_factories
+		prerequisite = { focus = GEM_new_factories }
+		cost = 5 
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_coastal = yes 
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_autobans
+		icon = GFX_goal_GEM_autoban
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = GEM_roads_networks
+		prerequisite = { focus = GEM_roads_networks }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_capital = no 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_resource_searching_focus
+		icon = GFX_goal_GEM_resources
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		relative_position_id = GEM_new_dockyards
+		prerequisite = { focus = GEM_new_dockyards }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GEM_resources_category
+		}
+	}
+	focus = {
+		id = GEM_technology_trade 
+		icon = GFX_goal_GEM_trade_tech
+		x = 0
+		y = 1
+		relative_position_id = GEM_autobans
+		prerequisite = { focus = GEM_autobans }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.30 days = 1 }
+		}
+	}
+	focus = {
+		id = GEM_ask_the_old_ones
+		icon = GFX_goal_GEM_ask_lasts
+		x = 2
+		y = 1
+		relative_position_id = GEM_resource_searching_focus
+		prerequisite = { focus = GEM_resource_searching_focus }
+		prerequisite = { focus = GEM_technology_trade }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = GEM_shpeer
+		}
+	}
+	focus = {
+		id = GEM_syntetic_oil
+		icon = GFX_goal_GEM_synt_oil
+		x = -2
+		y = 1
+		relative_position_id = GEM_ask_the_old_ones 
+		prerequisite = { focus = GEM_ask_the_old_ones }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = synth_resources
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = GEM_sell_resources
+		icon = GFX_goal_GEM_sell_res 
+		x = 2
+		y = 1
+		relative_position_id = GEM_ask_the_old_ones
+		prerequisite = { focus = GEM_ask_the_old_ones }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GEM_resources_trading
+		}
+	}
+	
+	focus = {
+		id = GEM_research_fin
+		icon = GFX_goal_GEM_fund_research
+		x = 2
+		y = 1
+		relative_position_id = GEM_syntetic_oil
+		prerequisite = { focus = GEM_syntetic_oil }
+		prerequisite = { focus = GEM_sell_resources }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_fund_research
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = GEM_energo_magical_weapons
+		icon = GFX_goal_GEM_magical_weapons
+		x = -2
+		y = 1
+		relative_position_id = GEM_research_fin
+		prerequisite = { focus = GEM_research_fin }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = magical_tech
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = GEM_hidden_war_tactic
+		icon = GFX_goal_GEM_hidden_war
+		x = 2
+		y = 1
+		relative_position_id = GEM_research_fin
+		prerequisite = { focus = GEM_research_fin }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = radar_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = GEM_computer_science
+		icon = GFX_goal_GEM_computers
+		x = 2
+		y = 1
+		relative_position_id = GEM_energo_magical_weapons 
+		prerequisite = { focus = GEM_energo_magical_weapons }
+		prerequisite = { focus = GEM_hidden_war_tactic }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GEM_conrad_zuse
+		}
+	}
+	
+	focus = {
+		id = GEM_military_update
+		icon = GFX_goal_military_factories
+		x = -4
+		y = 1
+		relative_position_id = GEM_computer_science
+		prerequisite = { focus = GEM_computer_science }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { 
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_factories_update
+		icon = GFX_goal_GEM_factories
+		x = -1
+		y = 1
+		relative_position_id = GEM_military_update
+		prerequisite = { focus = GEM_military_update }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = { 
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_expand_workshifts
+		icon = GFX_goal_GEM_workshift
+		x = 1
+		y = 1
+		relative_position_id = GEM_military_update
+		prerequisite = { focus = GEM_military_update }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_expanded_shifts 
+		}
+	}
+	focus = {
+		id = GEM_more_rifles 
+		icon = GFX_goal_GEM_rifles
+		x = 1
+		y = 1
+		relative_position_id = GEM_factories_update
+		prerequisite = { focus = GEM_factories_update }
+		prerequisite = { focus = GEM_expand_workshifts }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_rifle_production
+		}
+	}
+	focus = {
+		id = GEM_new_armor
+		icon = GFX_goal_GEM_armor
+		x = 0
+		y = 1
+		relative_position_id = GEM_more_rifles
+		prerequisite = { focus = GEM_more_rifles }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_light_armor
+				category = cat_medium_armor
+				category = cat_heavy_armor
+				bonus = 1.5
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = GEM_city_infrastructure
+		icon = GFX_goal_GEM_city_update
+		x = 0
+		y = 1
+		relative_position_id = GEM_computer_science
+		prerequisite = { focus = GEM_computer_science }
+		cost = 5
+		completion_reward = {
+			311 = {
+				set_state_category = city
+				add_extra_state_shared_building_slots = 3
+			}
+			314 = {
+				set_state_category = metropolis
+				add_extra_state_shared_building_slots = 2
+			}
+			312 = {
+				set_state_category = city 
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+	focus = {
+		id = GEM_reusing
+		icon = GFX_goal_GEM_recycle
+		x = 0
+		y = 1
+		relative_position_id = GEM_city_infrastructure
+		prerequisite = { focus = GEM_city_infrastructure }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_recycle_idea
+		}
+	}
+	focus = {
+		id = GEM_railroad
+		icon = GFX_goal_GEM_railroad
+		x = 1
+		y = 1
+		relative_position_id = GEM_reusing
+		prerequisite = { focus = GEM_reusing }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_capital = no 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_electrification
+		icon = GFX_goal_GEM_electricity
+		x = -1
+		y = 1
+		relative_position_id = GEM_reusing
+		prerequisite = { focus = GEM_reusing }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_electro_idea
+		}
+	}
+	focus = {
+		id = GEM_light_heavy_ind
+		icon = GFX_goal_GEM_light_heavy_industry
+		x = 1
+		y = 1
+		relative_position_id = GEM_electrification
+		prerequisite = { focus = GEM_electrification }
+		prerequisite = { focus = GEM_railroad }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_industry_development
+		icon = GFX_goal_GEM_indstry_development
+		x = 4 
+		y = 1
+		relative_position_id = GEM_computer_science
+		prerequisite = { focus = GEM_computer_science }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_ionosphere_exploration
+		icon = GFX_goal_GEM_explore_ionosphere
+		x = -1
+		y = 1
+		relative_position_id = GEM_industry_development
+		prerequisite = { focus = GEM_industry_development }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = radar_tech
+				bonus = 0.75
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = GEM_building_optimization
+		icon = GFX_goal_GEM_building
+		x = 1
+		y = 1
+		relative_position_id = GEM_industry_development
+		prerequisite = { focus = GEM_industry_development }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = construction_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = GEM_medical_research
+		icon = GFX_goal_GEM_medical_research
+		x = 1
+		y = 1
+		relative_position_id = GEM_ionosphere_exploration
+		prerequisite = { focus = GEM_ionosphere_exploration OR = GEM_building_optimization }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_medical_research_idea
+			add_tech_bonus = {
+				category = hospital_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = GEM_rocketry_tech
+		icon = GFX_goal_GEM_rocketry
+		x = 0
+		y = 1
+		relative_position_id = GEM_medical_research
+		prerequisite = { focus = GEM_medical_research }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = rocketry
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_wunderwaffe
+		icon = GFX_goal_GEM_wunderwaffe
+		x = 0
+		y = 1
+		relative_position_id = GEM_light_heavy_ind
+		prerequisite = { focus = GEM_light_heavy_ind }
+		prerequisite = { focus = GEM_rocketry_tech }
+		prerequisite = { focus = GEM_new_armor }
+		cost = 15
+		completion_reward = {
+			add_tech_bonus = {
+				category = nuclear
+				bonus = 2
+				uses = 1
+			}
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = GEM_brandenburg_gates
+		icon = GFX_goal_GEM_brandenburg_gates 
+		x = 0
+		y = 1
+		relative_position_id = GEM_wunderwaffe
+		prerequisite = { focus = GEM_wunderwaffe }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GEM_brand_gates
+			effect_tooltip = {
+				add_ideas = GEM_brand_gates_idea
+			}
+			set_variable = { brand_gate_build = 0 }
+		}
+	}
+	
+	focus = {
+		id = GEM_mobilization
+		available = {
+			custom_trigger_tooltip = {
+				NOT = {
+					has_idea = GEM_polit_crisis
+				}
+				tooltip = polit_cris_over
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = GEM_AF_FLAG
+				}
+			}
+			NOT = {
+				has_idea = UNS_radiation_poisoning
+			}
+		
+		}
+		icon = GFX_goal_GEM_mobilization
+		x = 36
+		y = 0
+		cost = 5 
+		completion_reward = {
+			custom_effect_tooltip = gem_recruit_tt
+			hidden_effect = {
+				load_oob = "GEM_recruiting"
+			}
+		}
+	}
+	focus = {
+		id = GEM_wehrmacht
+		icon = GFX_goal_GEM_wehrmacht
+		x = -4
+		y = 1
+		relative_position_id = GEM_mobilization
+		prerequisite = { focus = GEM_mobilization }
+		cost = 7.2
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = GEM_sivispacem
+		icon = GFX_goal_GEM_sivispacem
+		x = -1
+		y = 1
+		relative_position_id = GEM_wehrmacht
+		prerequisite = { focus = GEM_wehrmacht }
+		mutually_exclusive = { focus = GEM_parabellum }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = GEM_sivvis_pacem
+		}
+	}
+	focus = {
+		id = GEM_parabellum
+		icon = GFX_goal_GEM_parabellum
+		x = 1
+		y = 1
+		relative_position_id = GEM_wehrmacht
+		prerequisite = { focus = GEM_wehrmacht }
+		mutually_exclusive = { focus = GEM_sivispacem }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = GEM_para_bellum
+		}
+	}
+	focus = {
+		id = GEM_schutstaffen
+		icon = GFX_goal_GEM_schutzstaffen
+		x = 1
+		y = 1
+		relative_position_id = GEM_sivispacem
+		prerequisite = { focus = GEM_sivispacem OR = GEM_parabellum }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = load_ss_oob_tt	
+			hidden_effect = {
+				set_technology = { gem_jaegers_unit_tech = 1 }
+				division_template = {
+					name = "SS Hermelin-Truppen"
+					division_names_group = GEM_SPEC_01
+					regiments = {
+						GEM_jagers_human_unit = { x = 0 y = 0 }
+						GEM_jagers_human_unit = { x = 0 y = 1 }
+						GEM_jagers_human_unit = { x = 0 y = 2 }
+						GEM_jagers_human_unit = { x = 1 y = 0 }
+						GEM_jagers_human_unit = { x = 1 y = 1 }
+						GEM_jagers_human_unit = { x = 1 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+					priority = 2
+				}
+				create_unit = {
+					division = "name = \"SS Hermelin-Truppen\" division_template = \"SS Hermelin-Truppen\" start_experience_factor = 1 start_equipment_factor = 1"
+					owner = ROOT
+				}	
+			}
+		}
+
+	}
+	focus = {
+		id = GEM_blitzkrieg
+		icon = GFX_goal_GEM_blietzkrieg
+		x = 0
+		y = 1
+		relative_position_id = GEM_schutstaffen
+		prerequisite = { focus = GEM_schutstaffen }
+		cost = 7.2
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_mobile_warfare
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	focus = {
+		id = GEM_fire_from_sky
+		icon = GFX_goal_GEM_fire_from_sky
+		x = -1
+		y = 1
+		relative_position_id = GEM_blitzkrieg
+		prerequisite = { focus = GEM_blitzkrieg }
+		mutually_exclusive = { focus = GEM_planning }
+		cost = 7.2
+		completion_reward = {
+			set_technology = { superior_firepower = 1 }
+		}
+	}
+	focus = {
+		id = GEM_planning
+		icon = GFX_goal_GEM_planning
+		x = 1
+		y = 1
+		relative_position_id = GEM_blitzkrieg
+		prerequisite = { focus = GEM_blitzkrieg }
+		mutually_exclusive = { focus = GEM_fire_from_sky }
+		cost = 7.2
+		completion_reward = {
+			set_technology = { trench_warfare = 1 }
+		}
+	}
+	focus = {
+		id = GEM_hugo_schmeisser
+		icon = GFX_goal_GEM_schmeisser
+		x = 1
+		y = 1
+		relative_position_id = GEM_fire_from_sky
+		prerequisite = { focus = GEM_fire_from_sky OR = GEM_planning }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = GEM_higo_shmeisser
+		}
+	}
+	focus = {
+		id = GEM_strength_the_border
+		icon = GFX_goal_GEM_bunkers
+		x = -2
+		y = 1
+		relative_position_id = GEM_hugo_schmeisser
+		prerequisite = { focus = GEM_hugo_schmeisser }
+		cost = 7.2
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes 
+					province = {
+						limit_to_border = yes
+						all_provinces = yes 
+					}
+				}
+			}
+			add_ideas = GEM_fortification
+		}
+	}
+	focus = {
+		id = GEM_military_training
+		icon = GFX_goal_GEM_training
+		x = 0
+		y = 1
+		relative_position_id = GEM_hugo_schmeisser
+		prerequisite = { focus = GEM_hugo_schmeisser }
+		cost = 7.2
+		completion_reward = {
+			army_experience = 25
+			add_ideas = GEM_trainings
+		}
+	}
+	focus = {
+		id = GEM_new_vests
+		icon = GFX_goal_GEM_vests
+		x = 2
+		y = 1
+		relative_position_id = GEM_hugo_schmeisser
+		prerequisite = { focus = GEM_hugo_schmeisser }
+		cost = 7.2
+		completion_reward = {
+			add_tech_bonus = {
+				category = human_army_upgrades
+				bonus = 0.75
+				uses = 3
+			}
+		}
+	}
+	focus = {
+		id = GEM_magical_experiments
+		icon = GFX_goal_GEM_magical_experiments
+		x = 0
+		y = 1
+		relative_position_id = GEM_military_training
+		prerequisite = { focus = GEM_military_training }
+		prerequisite = { focus = GEM_new_vests }
+		prerequisite = { focus = GEM_strength_the_border }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = magical_tech
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = race_tech
+				uses = 1
+				bonus = 1
+			}
+			add_tech_bonus = {
+				category = human_army_upgrades
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	
+	
+	focus = {	
+		id = GEM_luftwaffe
+		icon = GFX_goal_GEM_luftwaffe
+		x = 0
+		y = 1
+		relative_position_id = GEM_mobilization
+		prerequisite = { focus = GEM_mobilization }
+		cost = 5
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	focus = {
+		id = GEM_light_air_focus
+		icon = GFX_goal_GEM_fighters
+		x = -1
+		y = 1
+		relative_position_id = GEM_luftwaffe
+		prerequisite = { focus = GEM_luftwaffe }
+		mutually_exclusive = { focus = GEM_heavy_air_focus }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = tactical_bomber
+				category = naval_bomber
+				category = light_fighter
+				bonus = 1
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = strategic_destruction_tree
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	focus = {
+		id = GEM_heavy_air_focus
+		icon = GFX_goal_GEM_heavy_air
+		x = 1
+		y = 1
+		relative_position_id = GEM_luftwaffe
+		prerequisite = { focus = GEM_luftwaffe }
+		mutually_exclusive = { focus = GEM_light_air_focus }
+		cost = 5
+		completion_reward = {	
+			add_tech_bonus = {
+				category = cas_bomber
+				category = cat_heavy_fighter
+				category = light_fighter
+				bonus = 1
+				uses = 2
+			}
+			add_tech_bonus = {
+				category = battlefield_support_tree
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_exploring_air
+		icon = GFX_goal_GEM_explore_air
+		x = 1
+		y = 1
+		relative_position_id = GEM_light_air_focus
+		prerequisite = { focus = GEM_light_air_focus OR = GEM_heavy_air_focus }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = radar_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_early_detection_system
+		available = {
+			has_tech = radio_detection
+		}
+		icon = GFX_goal_GEM_early_detect
+		x = 0
+		y = 1
+		relative_position_id = GEM_exploring_air
+		prerequisite = { focus = GEM_exploring_air }
+		cost = 5
+		completion_reward = {
+			add_building_construction = {
+				type = radar_station
+				level = 1
+				instant_build = yes 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_meet_the_heroes
+		icon = GFX_goal_GEM_aces
+		x = 0
+		y = 1
+		relative_position_id = GEM_early_detection_system
+		prerequisite = { focus = GEM_early_detection_system }
+		cost = 5
+		completion_reward = {
+			add_ace = {
+				name = "Eric"
+				surname = "Hartamnn"
+				callsign = "Major"
+				type = fighter_genius
+			}
+			add_ace = {
+				name = "Wilhelm"
+				surname = "fon Richthofen"
+				callsign = "New Baron"
+				type = support_genius
+			}
+		}
+	}
+				
+	focus = {
+		id = GEM_air_superiority
+		icon = GFX_goal_GEM_air_superiority
+		x = -1
+		y = 1
+		relative_position_id = GEM_meet_the_heroes
+		prerequisite = { focus = GEM_meet_the_heroes }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_countermeasures
+		}
+	}
+	focus = {
+		id = GEM_new_airports
+		icon = GFX_goal_GEM_airports
+		x = 1
+		y = 1
+		relative_position_id = GEM_meet_the_heroes
+		prerequisite = { focus = GEM_meet_the_heroes }
+		cost = 5
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	focus = {
+		id = GEM_reactive_aircraft
+		icon = GFX_goal_GEM_reactive_air
+		x = 1
+		y = 1
+		relative_position_id = GEM_air_superiority
+		prerequisite = { focus = GEM_air_superiority }
+		prerequisite = { focus = GEM_new_airports }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = jet_technology
+				uses = 3
+				bonus = 0.75 
+			}
+		}
+	}
+	focus = {
+		id = GEM_soldiers_of_the_sky
+		icon = GFX_goal_GEM_sky_soldiers
+		x = 0
+		y = 1
+		relative_position_id = GEM_reactive_aircraft 
+		prerequisite = { focus = GEM_reactive_aircraft }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_sky_sold_idea
+		}
+	}
+	
+	focus = {
+		id = GEM_fleet_rebuild
+		icon = GFX_goal_GEM_fleet
+		x = 4
+		y = 1
+		relative_position_id = GEM_mobilization
+		prerequisite = { focus = GEM_mobilization }
+		cost = 5
+		completion_reward = {
+			navy_experience = 25
+			unlock_decision_category_tooltip = GEM_fleet_remake_category
+		}
+	}
+	
+	focus = {
+		id = GEM_expand_dockyards
+		icon = GFX_goal_GEM_expand_docks
+		x = 0
+		y = 1
+		relative_position_id = GEM_fleet_rebuild 
+		prerequisite = { focus = GEM_fleet_rebuild }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				limit = {
+					is_coastal = yes 
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_buy_blueprints
+		icon = GFX_goal_GEM_blueprints
+		x = 0
+		y = 1
+		relative_position_id = GEM_expand_dockyards
+		prerequisite = { focus = GEM_expand_dockyards }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = bb_tech
+				category = dd_tech
+				category = cl_tech
+				category = ca_tech
+				category = ss_tech
+				bonus = 1
+				uses = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_underwater_fleet
+		icon = GFX_goal_GEM_underwater
+		x = 0
+		y = 1
+		relative_position_id = GEM_buy_blueprints
+		prerequisite = { focus = GEM_buy_blueprints }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = ss_tech
+				bonus = 1
+				uses = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_fleet_tactics 
+		icon = GFX_goal_GEM_fleet_tactics
+		x = 0
+		y = 1
+		relative_position_id = GEM_underwater_fleet
+		prerequisite = { focus = GEM_underwater_fleet }
+		cost = 5
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	focus = {
+		id = GEM_naval_bases
+		icon = GFX_goal_GEM_naval_base
+		x = 0
+		y = 1
+		relative_position_id = GEM_fleet_tactics
+		prerequisite = { focus = GEM_fleet_tactics }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes 
+					province = {
+						limit_to_naval_base = yes
+						all_provinces = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_convoy_hunting
+		icon = GFX_goal_GEM_convoy_hunting
+		x = -1
+		y = 1
+		relative_position_id = GEM_naval_bases 
+		prerequisite = { focus = GEM_naval_bases }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = trade_interdiction_tree
+				uses = 1
+				bonus = 1
+			}
+		}
+	}
+	focus = {
+		id = GEM_shark_mouth
+		icon = GFX_goal_GEM_shark
+		x = 0
+		y = 1
+		relative_position_id = GEM_convoy_hunting
+		prerequisite = { focus = GEM_convoy_hunting }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_shark_idea
+		}
+	}
+	
+	focus = {
+		id = GEM_ship_researching
+		icon = GFX_goal_GEM_research_ship
+		x = 1
+		y = 1
+		relative_position_id = GEM_naval_bases
+		prerequisite = { focus = GEM_naval_bases }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem.31 days = 5 }
+		}
+	}
+	
+	focus = {
+		id = GEM_fleet_power
+		icon = GFX_goal_GEM_fleet_power
+		x = 0
+		y = 1
+		relative_position_id = GEM_ship_researching
+		prerequisite = { focus = GEM_ship_researching }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_fleet_power 
+		}
+	}
+	
+	######################## FA Content
+	
+	focus = {
+		id = GEM_experiments_strasse
+		x = 0
+		y = 8
+		icon = GFX_goal_GRB_milacc
+		relative_position_id = GEM_party_meeting
+		available = {
+			always = no 
+		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = GEM_opposition_question
+			}
+		}
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			hidden_effect = {
+				set_country_flag = choise_of_fascism
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_travel_to_magehold
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_evac
+		relative_position_id = GEM_experiments_strasse
+		prerequisite = { focus = GEM_experiments_strasse }
+		cost = 5
+		completion_reward = {
+			country_event = { id = af_gem.2 days = 30 }
+		}
+	}
+	
+	focus = {
+		id = GEM_last_experiment
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_weapdev
+		available = {
+			always = no 
+		}
+		relative_position_id = GEM_travel_to_magehold
+		prerequisite = { focus = GEM_travel_to_magehold }
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_on_decision_complete
+			custom_effect_tooltip = polit_cris_over
+			hidden_effect = {
+				remove_ideas = GEM_polit_crisis
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_financies_of_strasse
+		x = -8
+		y = 1
+		icon = GFX_goal_GRB_todd_howard
+		relative_position_id = GEM_last_experiment
+		prerequisite = { focus = GEM_last_experiment }
+		cost = 5
+		completion_reward = {
+			add_research_slot = 1
+			custom_effect_tooltip = add_strasse_advisor
+			hidden_effect = {
+				GRB_wilhelm_strasse = {
+					remove_advisor_role = { slot = political_advisor }
+					add_advisor_role = {
+						advisor = {
+							slot = political_advisor
+							idea_token = GRB_wilhelm_strasse
+							
+							allowed = {
+								original_tag = GEM 
+							}
+							
+							available = {
+								has_completed_focus = GEM_war_never_changes
+							}
+							
+							traits = {
+								german_science_is_the_best_harm
+							}
+						}
+					}
+				}
+				add_ideas = GRB_wilhelm_strasse
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_cybernetics
+		x = -6
+		y = 1
+		icon = GFX_goal_UNS_medicine
+		relative_position_id = GEM_financies_of_strasse
+		prerequisite = { focus = GEM_financies_of_strasse }
+		cost = 5
+		completion_reward = {
+			set_technology = { gem_cybrnetics_t1 = 1 }
+		}
+	}
+	
+	focus = {
+		id = GEM_firstgen_cyborg
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_SNOVA_magicians
+		relative_position_id = GEM_cybernetics
+		prerequisite = { focus = GEM_cybernetics }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = available_general
+			recruit_character = GEM_shtrohaim
+		}
+	}
+	
+	focus = {
+		id = GEM_heavy_soldiers
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_mobilization
+		relative_position_id = GEM_cybernetics
+		prerequisite = { focus = GEM_cybernetics }
+		cost = 5
+		completion_reward = {
+			set_technology = { 
+				grb_heavy_infantry_tech = 1
+			}
+		}
+	}
+	
+	focus = {	
+		id = GEM_biomodification
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_schutzstaffen
+		relative_position_id = GEM_firstgen_cyborg
+		prerequisite = { focus = GEM_firstgen_cyborg }
+		prerequisite = { focus = GEM_heavy_soldiers }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_biomodification_idea
+		}
+	}
+	
+	focus = {
+		id = GEM_secondgen_cyborg
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_milsquads
+		relative_position_id = GEM_biomodification
+		prerequisite = { focus = GEM_biomodification }
+		cost = 5
+		completion_reward = {
+			set_technology = { gem_cybrnetics_t2 = 1 }
+		}	
+	}
+	
+	focus = {
+		id = GEM_small_reactors
+		x = -2
+		y = 1
+		icon = GFX_goal_UNS_magical_teach
+		relative_position_id = GEM_secondgen_cyborg 
+		prerequisite = { focus = GEM_secondgen_cyborg }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = nuclear
+				uses = 2
+				bonus = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_wunderwaffe_strasse
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_nukes
+		relative_position_id = GEM_secondgen_cyborg 
+		prerequisite = { focus = GEM_secondgen_cyborg }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = rocketry
+				uses = 2
+				bonus = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_heavy_armor_for_infantry
+		x = 2
+		y = 1
+		icon = GFX_goal_GRB_personal_armor
+		relative_position_id = GEM_secondgen_cyborg 
+		prerequisite = { focus = GEM_secondgen_cyborg }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = human_army_upgrades
+				uses = 5
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_thirdgen_cyberslodier
+		x = 0 
+		y = 1
+		icon = GFX_goal_humantech
+		relative_position_id = GEM_wunderwaffe_strasse
+		prerequisite = { focus = GEM_wunderwaffe_strasse }
+		prerequisite = { focus = GEM_heavy_armor_for_infantry }
+		prerequisite = { focus = GEM_small_reactors }
+		cost = 5
+		completion_reward = {
+			set_technology = { gem_cybrnetics_t3 = 1 }
+		}
+	}
+	
+	focus = {
+		id = GEM_new_polymers
+		x = 4
+		y = 1
+		icon = GFX_goal_UNS_army_production
+		relative_position_id = GEM_financies_of_strasse
+		prerequisite = { focus = GEM_financies_of_strasse }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_new_gen_assault_rifle
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_Best_weap
+		relative_position_id = GEM_new_polymers
+		prerequisite = { focus = GEM_new_polymers }
+		cost = 5
+		completion_reward = {
+			set_technology = { 
+				gem_mg15_tech = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_new_gen_magical_rifle
+		x = 1
+		y = 1
+		icon = GFX_goal_GRB_barrad_magicians
+		relative_position_id = GEM_new_polymers
+		prerequisite = { focus = GEM_new_polymers }
+		cost = 5
+		completion_reward = {
+			set_technology = { 
+				gem_ubermagic = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_new_tank_cannon
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_blietzkrieg
+		relative_position_id = GEM_new_gen_assault_rifle 
+		prerequisite = { focus = GEM_new_gen_assault_rifle }
+		prerequisite = { focus = GEM_new_gen_magical_rifle }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = armor
+				uses = 3
+				bonus = 0.75
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_reactive_engine
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_air_superiority
+		relative_position_id = GEM_new_tank_cannon
+		prerequisite = { focus = GEM_new_tank_cannon }
+		cost = 15
+		completion_reward = {
+			set_technology = {
+				jet_engines = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_new_tank_development
+		x = -5
+		y = 1
+		icon = GFX_goal_SOU_milprod
+		relative_position_id = GEM_reactive_engine
+		prerequisite = { focus = GEM_reactive_engine }
+		cost = 5
+		completion_reward = {
+			army_experience = 75
+			custom_effect_tooltip = create_ubertank
+			add_tech_bonus = {
+				category = cat_heavy_armor
+				uses = 2
+				bonus = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_crystal_engine_focus
+		x = -2
+		y = 1
+		icon = GFX_goal_trade_tech
+		relative_position_id = GEM_new_tank_development
+		prerequisite = { focus = GEM_new_tank_development }
+		cost = 5
+		completion_reward = {
+			set_technology = { 	
+				gem_crystal_engine = 1 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_superheavy_cannon
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_artillery
+		relative_position_id = GEM_new_tank_development
+		prerequisite = { focus = GEM_new_tank_development }
+		cost = 5
+		completion_reward = {
+			set_technology = { gem_ubertank_cannon = 1 }
+		}
+	}
+	
+	focus = {
+		id = GEM_special_alloys
+		x = 2
+		y = 1
+		icon = GFX_goal_GEM_magical_experiments
+		relative_position_id = GEM_new_tank_development
+		prerequisite = { focus = GEM_new_tank_development }
+		cost = 5
+		completion_reward = {
+			set_technology = { gem_supertankarmor = 1 }
+		}
+	}
+	
+	focus = {
+		id = GEM_fuhrer_mark_1
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_machines_of_death
+		available = {
+			has_tech = advanced_heavy_tank_chassis
+		}
+		relative_position_id = GEM_superheavy_cannon
+		prerequisite = { focus = GEM_superheavy_cannon }
+		prerequisite = { focus = GEM_special_alloys }
+		prerequisite = { focus = GEM_crystal_engine_focus }
+		cost = 5
+		completion_reward = {
+			create_equipment_variant = {
+				name = "Fuhrer Mk.I"
+				parent = 0
+				
+				type = heavy_tank_chassis_3
+				
+				modules = {
+					main_armament_slot = tnm_gem_ubercanone
+					turret_type_slot = tank_heavy_three_man_tank_turret
+					suspension_type_slot = tank_interleaved_suspension
+					armor_type_slot = tnm_gem_superarmor
+					engine_type_slot = tnm_gem_magicengine
+					special_type_slot_1 = tank_radio_1
+					special_type_slot_2 = stabilizer
+					special_type_slot_3 = extra_ammo_storage
+					special_type_slot_4 = sloped_armor
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 8
+					tank_nsb_armor_upgrade = 8
+				}
+				icon = "gfx/interface/technologies/GEM/GEM_sht2.dds"
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_avia_development
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_expand_air
+		relative_position_id = GEM_reactive_engine
+		prerequisite = { focus = GEM_reactive_engine }
+		cost = 5
+		completion_reward = {
+			air_experience = 50
+		}
+	}
+	
+	focus = {
+		id = GEM_vertibird_eqpm
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_doctrine_more
+		relative_position_id = GEM_avia_development 
+		prerequisite = { focus = GEM_avia_development }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = helicopter_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {	
+		id = GEM_superheaavy_bombers
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_bombers
+		relative_position_id = GEM_avia_development 
+		prerequisite = { focus = GEM_avia_development }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = cat_strategic_bomber
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_jet_fighter_dev
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_airforce
+		relative_position_id = GEM_vertibird_eqpm
+		prerequisite = { focus = GEM_vertibird_eqpm }
+		prerequisite = { focus = GEM_superheaavy_bombers }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = light_fighter
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_fleet_evelopment
+		x = 4
+		y = 1
+		icon = GFX_goal_SOU_fleet
+		relative_position_id = GEM_reactive_engine 
+		prerequisite = { focus = GEM_reactive_engine }
+		cost = 5 
+		completion_reward = {
+			add_tech_bonus = {
+				category = naval_equipment
+				uses = 4
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_nuclear_torpedos
+		x = -1
+		y = 1
+		icon = GFX_goal_SOU_scout_navy
+		relative_position_id = GEM_fleet_evelopment	
+		prerequisite = { focus = GEM_fleet_evelopment }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = torpedo_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_atomic_navy_engines
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_fleet_tactics
+		relative_position_id = GEM_fleet_evelopment	
+		prerequisite = { focus = GEM_fleet_evelopment }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = bb_tech
+				category = shbb_tech
+				uses = 2
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_new_submarines
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_shark
+		relative_position_id = GEM_nuclear_torpedos 
+		prerequisite = { focus = GEM_nuclear_torpedos }
+		prerequisite = { focus = GEM_atomic_navy_engines }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = ss_tech
+				uses = 3
+				bonus = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_deathshead_battleship
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_fleet_power
+		relative_position_id = GEM_new_submarines
+		prerequisite = { focus = GEM_new_submarines }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GEM_fleet_remake_category
+		}
+	}
+	
+	focus = {
+		id = GEM_building_of_germany
+		x = 6
+		y = 1
+		icon = GFX_goal_GRB_support_FAT
+		relative_position_id = GEM_last_experiment
+		prerequisite = { focus = GEM_last_experiment }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_building_milprom
+		x = -2
+		y = 1
+		icon = GFX_goal_GRB_factory_expansion
+		relative_position_id = GEM_building_of_germany
+		prerequisite = { focus = GEM_building_of_germany }
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_military_build
+		x = 0
+		y = 1
+		icon = GFX_goal_second_doctrine
+		relative_position_id = GEM_building_milprom
+		prerequisite = { focus = GEM_building_milprom }
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				category = industry
+				bonus = 0.75
+				uses = 6
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_resources_of_strasse
+		x = -1
+		y = 1
+		icon = GFX_goal_uns_resources_2
+		relative_position_id = GEM_military_build
+		prerequisite = { focus = GEM_military_build }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = GEM_resources_category
+		}
+	}
+	
+	focus = {
+		id = GEM_supply_bonus
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_robwares
+		relative_position_id = GEM_military_build
+		prerequisite = { focus = GEM_military_build }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_supply_bonus_idea
+		}
+	}
+	
+	focus = {
+		id = GEM_radar_network
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_explore_ionosphere
+		relative_position_id = GEM_resources_of_strasse
+		prerequisite = { focus = GEM_resources_of_strasse }
+		prerequisite = { focus = GEM_supply_bonus }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_officers_schools
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_officer_purges
+		relative_position_id = GEM_radar_network
+		prerequisite = { focus = GEM_radar_network }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_milacc
+		}
+	}
+	
+	focus = {
+		id = GEM_prepare_pilots
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_jet
+		relative_position_id = GEM_radar_network
+		prerequisite = { focus = GEM_radar_network }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_aces_prep
+		}
+	}
+	
+	focus = {
+		id = GEM_factories_expand
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_road_networks
+		relative_position_id = GEM_officers_schools
+		prerequisite = { focus = GEM_officers_schools }
+		prerequisite = { focus = GEM_prepare_pilots }
+		cost = 5 
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {	
+					type = arms_factory 
+					level = 2
+					instant_build = yes
+				}	
+				add_building_construction = {	
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_civil_industry 
+		x = 3
+		y = 1
+		icon = GFX_goal_GEM_indstry_development
+		relative_position_id = GEM_building_of_germany
+		prerequisite = { focus = GEM_building_of_germany }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_trains
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_electrotrains
+		relative_position_id = GEM_civil_industry
+		prerequisite = { focus = GEM_civil_industry }
+		cost = 5
+		completion_reward = {
+			build_railway = {
+				level = 2
+				fallback = yes
+				path = { 12305 12361 1564 4342 }
+				start_province = 12305
+				target_province = 4342
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_ports_expansion
+		x = 1
+		y = 1
+		icon = GFX_goal_GRB_dockyards
+		relative_position_id = GEM_civil_industry
+		prerequisite = { focus = GEM_civil_industry }
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 12305
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_military_economic
+		x = 1
+		y = 1
+		icon = GFX_goal_GEM_eco_mobiliz
+		relative_position_id = GEM_trains
+		prerequisite = { focus = GEM_trains }
+		prerequisite = { focus = GEM_ports_expansion }
+		cost = 5
+		completion_reward = {
+			add_ideas = war_economy
+		}
+	}
+	
+	focus = {
+		id = GEM_aa_network
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_aa
+		relative_position_id = GEM_military_economic
+		prerequisite = { focus = GEM_military_economic }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_new_schools
+		x = -2
+		y = 1
+		icon = GFX_goal_UNS_Schools
+		relative_position_id = GEM_aa_network
+		prerequisite = { focus = GEM_aa_network }
+		cost = 5
+		completion_reward = {
+			add_ideas = GEM_fund_research
+		}
+	}
+	
+	focus = {
+		id = GEM_university
+		x = 0
+		y = 1
+		icon = SOU_rebuild_the_fleet
+		relative_position_id = GEM_new_schools
+		prerequisite = { focus = GEM_new_schools }
+		cost = 5
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = GEM_offworking
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_airfields
+		relative_position_id = GEM_aa_network
+		prerequisite = { focus = GEM_aa_network }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_industrial_kaboom
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_SNOVA_repair_mistakes
+		relative_position_id = GEM_offworking
+		prerequisite = { focus = GEM_offworking }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes 
+				}
+			}
+			add_ideas = GEM_electro_idea
+		}
+	}
+	
+	focus = {
+		id = GEM_autoroads
+		x = 2
+		y = 1
+		icon = GFX_goal_GRB_clean_barrad
+		relative_position_id = GEM_aa_network
+		prerequisite = { focus = GEM_aa_network }
+		cost = 5
+		completion_reward = {
+			every_core_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_vesalipolis_berlin_rail
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_transports
+		relative_position_id = GEM_autoroads
+		prerequisite = { focus = GEM_autoroads }
+		cost = 10
+		completion_reward = {
+			build_railway = {
+				level = 3
+				fallback = yes
+				start_state = 312
+				target_state = 251
+			}
+		}
+	}
+	
+	
+	focus = {
+		id = GEM_nsdap_purges
+		x = 14
+		y = 1
+		icon = GFX_goal_GEM_purge
+		relative_position_id = GEM_last_experiment
+		prerequisite = { focus = GEM_last_experiment }
+		cost = 5
+		completion_reward = {
+			retire_character = GEM_heinrich_himmler
+			add_stability = 0.1
+			add_war_support = 0.1
+		}
+	}
+	
+	focus = {
+		id = GEM_show_to_people
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_arrests_unbelief
+		relative_position_id = GEM_nsdap_purges
+		prerequisite = { focus = GEM_nsdap_purges }
+		cost = 5
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_solve_opposition
+		x = -2
+		y = 1
+		icon = GFX_goal_GRB_kill_supports
+		relative_position_id = GEM_show_to_people
+		prerequisite = { focus = GEM_show_to_people }
+		cost = 5
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.15
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_political_reforms
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_natref
+		relative_position_id = GEM_solve_opposition
+		prerequisite = { focus = GEM_solve_opposition }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_state_reforms
+		}
+	}
+	
+	focus = {
+		id = GEM_appease_civilians
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_military_parade
+		relative_position_id = GEM_show_to_people
+		prerequisite = { focus = GEM_show_to_people }
+		cost = 5
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 50
+		}
+	}
+	
+	focus = {
+		id = GEM_eco_reform
+		x = 0
+		y = 1
+		icon = GFX_goal_GRB_strehgth_funds
+		relative_position_id = GEM_appease_civilians
+		prerequisite = { focus = GEM_appease_civilians }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_eco_reforms_idea
+		}
+	}
+	
+	focus = {
+		id = GEM_appease_officers
+		x = 2
+		y = 1
+		icon = GFX_goal_limit
+		relative_position_id = GEM_show_to_people
+		prerequisite = { focus = GEM_show_to_people }
+		cost = 5
+		completion_reward = {
+			recruit_character = GEM_hermann_bachmann
+			recruit_character = GEM_heinrich_schantz
+			recruit_character = GEM_cristoff_waltz
+		}
+	}
+	
+	focus = {
+		id = GEM_military_reform
+		x = 0
+		y = 1
+		icon = GFX_goal_axis
+		relative_position_id = GEM_appease_officers
+		prerequisite = { focus = GEM_appease_officers }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_milit_reform
+		}
+	}
+	
+	focus = {
+		id = GEM_changelings_svadba
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_experience_visit
+		relative_position_id = GEM_eco_reform
+		prerequisite = { focus = GEM_eco_reform }
+		prerequisite = { focus = GEM_military_reform }
+		prerequisite = { focus = GEM_political_reforms }
+		cost = 5
+		completion_reward = {
+			news_event = {
+				id = af_gem.4 days = 5
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_north_and_south
+		x = 0
+		y = 1
+		icon = GFX_goal_GEM_claims
+		relative_position_id = GEM_changelings_svadba
+		prerequisite = { focus = GEM_changelings_svadba }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = lock_chn_focuses_some
+			CHN = {
+				country_event = { id = gem.20 }
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_plb_attack
+		x = -1
+		y = 1
+		icon = GFX_goal_GRB_attack_bear
+		bypass = {
+			PLB = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_north_and_south
+		prerequisite = { focus = GEM_north_and_south }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PLB 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_yak_attack_fa 
+		x = 1
+		y = 1
+		icon = GFX_goal_SOU_approach_yaki
+		bypass = {
+			AND = {
+				YAK = {
+					OR = {
+						is_in_faction_with = ROOT 
+						exists = no 
+						is_subject_of = ROOT 
+						has_war_with = ROOT
+					}
+				}
+				JAK = {
+					OR = {
+						is_in_faction_with = ROOT 
+						exists = no 
+						is_subject_of = ROOT 
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+		relative_position_id = GEM_north_and_south
+		prerequisite = { focus = GEM_north_and_south }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = YAK 
+			}
+			if = {
+				limit = {
+					country_exists = JAK 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = JAK 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_grf_attack
+		x = 1
+		y = 1
+		icon = GFX_goal_GRB_invade_GRF
+		bypass = {
+			AND = {
+				GRF = {
+					OR = {
+						is_in_faction_with = ROOT 
+						exists = no 
+						is_subject_of = ROOT 
+					}
+				}
+				GFF = {
+					OR = {
+						is_in_faction_with = ROOT 
+						exists = no 
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		relative_position_id = GEM_plb_attack
+		prerequisite = { focus = GEM_plb_attack }
+		prerequisite = { focus = GEM_yak_attack_fa }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRF 
+			}
+			if = {
+				limit = {
+					country_exists = GFF 
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = GFF 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_stg_attack
+		x = 0
+		y = 1
+		icon = GFX_goal_SOU_backstab
+		bypass = {
+			STG = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_grf_attack
+		prerequisite = { focus = GEM_grf_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = STG 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_sou_attack
+		x = -2
+		y = 1
+		icon = GFX_goal_UNS_attack_sou
+		bypass = {
+			SOU = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_grf_attack
+		prerequisite = { focus = GEM_grf_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOU 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_uns_attack
+		x = 2
+		y = 1
+		icon = GFX_goal_UNS_no_weakness
+		bypass = {
+			UNS = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_grf_attack
+		prerequisite = { focus = GEM_grf_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UNS 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_ved_attack
+		x = 0
+		y = 1
+		icon = GFX_goal_UNS_VED
+		bypass = {
+			VED = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_stg_attack
+		prerequisite = { focus = GEM_stg_attack }
+		prerequisite = { focus = GEM_sou_attack }
+		prerequisite = { focus = GEM_uns_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = VED 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_srs_attack
+		x = -1
+		y = 1
+		icon = GFX_goal_UNS_BOI_attack
+		bypass = {
+			SRS = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_ved_attack
+		prerequisite = { focus = GEM_ved_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SRS 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_fat_attack
+		x = 1
+		y = 1
+		icon = GFX_goal_GRB_guarantee_FAT
+		bypass = {
+			FAT = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_ved_attack
+		prerequisite = { focus = GEM_ved_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = FAT 
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_gri_attack
+		x = 1
+		y = 1
+		icon = GFX_goal_destroy_empire
+		bypass = {
+			GRI = {
+				OR = {
+					is_in_faction_with = ROOT 
+					exists = no 
+					is_subject_of = ROOT 
+					has_war_with = ROOT
+				}
+			}
+		}
+		relative_position_id = GEM_srs_attack
+		prerequisite = { focus = GEM_srs_attack }
+		prerequisite = { focus = GEM_fat_attack }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = GRI 
+			}
+		}
+	}
+	
+	
+	

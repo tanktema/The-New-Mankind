@@ -1,0 +1,16 @@
+units = {
+	fleet = {
+		name = "Leningradskiy Flot"
+		naval_base = 5005
+		task_force = {
+			name = "Atlantic Patrol 01"
+			location = 5005
+			ship = { name = "Echo One" definition = submarine start_experience_factor = 1 equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRB version_name = "Atlantic Raider" } } }
+			ship = { name = "Echo Two" definition = submarine start_experience_factor = 1 equipment = { ship_hull_submarine_1 = { amount = 1 owner = GRB version_name = "Atlantic Raider" } } }
+			ship = { name = "Bravo One" definition = light_cruiser start_experience_factor = 1 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = GRB version_name = "Atlantic Superiority" } } }
+			ship = { name = "Omega One" definition = destroyer start_experience_factor = 1 equipment = { ship_hull_light_2 = { amount = 1 owner = GRB version_name = "Atlantic Patrol" } } }
+			ship = { name = "Omega Two" definition = destroyer start_experience_factor = 1 equipment = { ship_hull_light_2 = { amount = 1 owner = GRB version_name = "Atlantic Patrol" } } }
+			ship = { name = "Omega Three" definition = destroyer start_experience_factor = 1 equipment = { ship_hull_light_2 = { amount = 1 owner = GRB version_name = "Atlantic Patrol" } } }
+		}
+	}
+}

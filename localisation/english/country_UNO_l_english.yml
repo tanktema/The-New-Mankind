@@ -1,0 +1,1017 @@
+﻿l_english:
+
+ ANZ_fascism:0 "Pacific Alliance"
+ ANZ_fascism_DEF:0 "the Pacific Alliance"
+ ANZ_democratic:0 "Pacific Alliance"
+ ANZ_democratic_DEF:0 "the Pacific Alliance"
+ ANZ_neutrality:0 "Pacific Alliance"
+ ANZ_neutrality_DEF:0 "the Pacific Alliance"
+ ANZ_communism:0 "Pacific Alliance"
+ ANZ_communism_DEF:0 "the Pacific Alliance"
+ ANZ_fascism_ADJ:0 "Pacifican"
+ ANZ_democratic_ADJ:0 "Pacifican"
+ ANZ_neutrality_ADJ:0 "Pacifican"
+ ANZ_communism_ADJ:0 "Pacifican"
+
+ UKI_fascism:0 "British Empire"
+ UKI_fascism_DEF:0 "the British Empire"
+ UKI_democratic:0 "United Kingdom"
+ UKI_democratic_DEF:0 "the United Kingdom"
+ UKI_neutrality:0 "British Empire"
+ UKI_neutrality_DEF:0 "the British Empire"
+ UKI_communism:0 "United Kingdom"
+ UKI_communism_DEF:0 "the United Kingdom"
+ UKI_fascism_ADJ:0 "British"
+ UKI_democratic_ADJ:0 "British"
+ UKI_neutrality_ADJ:0 "British"
+ UKI_communism_ADJ:0 "British"
+
+ SUO_fascism:0 "Finland"
+ SUO_fascism_DEF:0 "Finland"
+ SUO_democratic:0 "Finland"
+ SUO_democratic_DEF:0 "Finland"
+ SUO_neutrality:0 "Finland"
+ SUO_neutrality_DEF:0 "Finland"
+ SUO_communism:0 "Finland"
+ SUO_communism_DEF:0 "Finland"
+ SUO_fascism_ADJ:0 "Finnish"
+ SUO_democratic_ADJ:0 "Finnish"
+ SUO_neutrality_ADJ:0 "Finnish"
+ SUO_communism_ADJ:0 "Finnish"
+
+
+ UNO_fascism:0 "New World Order"
+ UNO_fascism_DEF:0 "the New World Order"
+ UNO_democratic:0 "United Nations"
+ UNO_democratic_DEF:0 "the United Nations"
+ UNO_neutrality:0 "World"
+ UNO_neutrality_DEF:0 "the World"
+ UNO_communism:0 "Socialist World Republic"
+ UNO_communism_DEF:0 "the Socialist World Republic"
+ UNO_fascism_ADJ:0 "Human"
+ UNO_democratic_ADJ:0 "Human"
+ UNO_neutrality_ADJ:0 "Human"
+ UNO_communism_ADJ:0 "Human"
+
+ TAN_fascism:0 "Tuvan Nationalist Republic"
+ TAN_fascism_DEF:0 "the Tuvan Nationalist Republic"
+ TAN_democratic:0 "Tuva Independent Republic"
+ TAN_democratic_DEF:0 "the Tuva Independent Republic"
+ TAN_neutrality:0 "Tannu Uriankhai"
+ TAN_neutrality_DEF:0 "Tannu Uriankhai"
+ TAN_communism:0 "Tannu Tuva"
+ TAN_communism_DEF:0 "Tannu Tuva"
+ TAN_fascism_ADJ:0 "Tuvan"
+ TAN_democratic_ADJ:0 "Tuvan"
+ TAN_neutrality_ADJ:0 "Tuvan"
+ TAN_communism_ADJ:0 "Tuvan"
+ TAN:0 "Tannu Tuva"
+ TAN_DEF:0 "Tannu Tuva"
+ TAN_ADJ:0 "Tuvan"
+
+ #Modifier
+ HUM_dense_population_center:0 "Dense Population Center"
+ HUM_iron_cathedral:0 "The Iron Cathedral"
+ HUM_fire_and_ice:0 "Unhospitable Lands"
+ HUM_darkness_spread:0 "Corrupted Lands"
+
+
+ #Decision
+ HUM_economic_action:0 "Economic Action"
+ HUM_economic_action_desc:0 "It will take time, but with our massive population and modern industry we could become a solid economic power if we attract foreign investement."
+
+ HUM_civilian_economy_investement:0 "Foreign Investement in Civilian Industry"
+ HUM_civilian_economy_investement_desc:0 ""
+
+ HUM_military_industry_investement:0 "Foreign Investement in Private Arms Industry"
+ HUM_military_industry_investement_desc:0 ""
+
+ HUM_attract_foreign_investement:0 "Attract Foreign Investement"
+ HUM_attract_foreign_investement_desc:0 ""
+
+ HUM_country_management:0 "Country Management"
+ HUM_country_management_desc:0 ""
+
+ HUM_raise_labour_unit:0 "Raise Labour Units"
+ HUM_raise_labour_unit_desc:0 "By drafting workers out of our population into dedicated work company we could accomplish more work on the national level."
+
+ HUM_improve_rationning:0 "Improve Rationning"
+ HUM_improve_rationning_desc:0 "Our current rationning system could be improved, we can't let any food to go to waste."
+
+ HUM_improve_life:0 "Improve Life Condition"
+ HUM_improve_life_desc:0 "Putting some efforts to help the daily life of our citizen will make us more popular to their eyes."
+
+ HUM_production_effort:0 "Production Efforts"
+ HUM_production_effort_desc:0 "It will be hard and unpopular but we need our population to work harder for some time."
+
+ HUM_ressource_economy:0 "Doing with what we Have"
+ HUM_ressource_economy_desc:0 "We don't have much ressources were we are so everything must be reused one way or another."
+
+ HUM_buy_ressource_neighbour:0 "Buying Ressources from our Neighbours"
+ HUM_buy_ressource_neighbour_desc:0 "The land we are in don't have much ressources, if we want our factories to work we need to buy the rest."
+
+ HUM_buy_food_neighbour:0 "Buying Food from our Neighbours"
+ HUM_buy_food_neighbour_desc:0 "Until we can assure our peoples with a steady supply of food its essential for us to fill the gap with foreign import."
+
+
+ HUM_nuclear_power:0 "Nuclear Power"
+ HUM_nuclear_power_desc:0 "A near endless source of electricity, if we gave our energy company enough ressources we could be able to have a steady source of power for our country... And Materials to build Nuclear Weapons."
+ HUM_build_power_plant:0 "Building a civilian Nuclear reactor"
+ HUM_build_power_plant_desc:0 ""
+ HUM_increase_output:0 "Increase Electricity Output"
+ HUM_increase_output_desc:0 ""
+
+ #Events
+ HUM.100.t:0 "Economical Success"
+ HUM.100.d:0 "Our efforts were more successful than we could have possibly imagine. We managed to get a lot investors for the developement of our civilian industry."
+ HUM.100.a:0 "Great!"
+
+ HUM.101.t:0 "Commercial Failure"
+ HUM.101.d:0 "We weren't able to attract enough investors, or our means of communicating wasn't good enough. We wasted more resources than expected in the process."
+ HUM.101.a:0 "Better luck next time."
+
+ HUM.102.t:0 "Industrial Success"
+ HUM.102.d:0 "Our efforts were successful in attracting investments for our war industry."
+ HUM.102.a:0 "Great!"
+
+ HUM.103.t:0 "Buildings Collapse!"
+ HUM.103.d:0 "Several buildings in different cities of our nations have collapsed in a short lapse of time. \nInspectors have all came to the same conclusion, a hasty construction with bad materials, if not some times wrong materials for construction. \n\nA plan to rebuild and solidify existing buildings is underway, but it will take time... and resources."
+ HUM.103.a:0 "Good idea on those budget cuts..."
+
+ HUM.10.t:0 "Contact with an Alien species"
+ HUM.10.d:0 "[This.GetNewspaperHeader]Incredible news from different parts of the world. \nIt seems that a new, otherworldly species called the Humans has made contact with different nations: The Kingdom of Olenia, New Mareland and Equestria to name a few.\nAfter a terrible war, they fled their dying world through a one-way portal and hope to start a new life in our world."
+ HUM.10.a:0 "Incredible!"
+ HUM.10.b:0 "It's a new start for us."
+
+ HUM.20.t:0 "End of World War III"
+ HUM.20.d:0 "[This.GetNewspaperHeader]The three major human nations have signed a peace treaty this morning in Canterlot. \n\nWhat’s called the Third World War claimed several millions of lives and ultimately left their world destroyed. \nAfter seeing the terrible effect of nuclear weapons, the three countries pledged to never use those weapons again."
+ HUM.20.a:0 "Finally."
+ HUM.20.b:0 "Good for them."
+
+ HUM.30.t:0 "Euro-Equestrian Federation"
+ HUM.30.d:0 "[This.GetNewspaperHeader]In the face of this dangerous world, the Europeans and Equestrians have agreed to federate their two countries together. \nThe Equestrian leaders have been invited into the European's council. The new government admits there is a lot of work to be done before everyone can adapt to this new country but for now, both of the peoples are rejoicing."
+ HUM.30.a:0 "History is being written."
+
+ HUM.40.t:0 "Soviet-Olenian Federation"
+ HUM.40.d:0 "[This.GetNewspaperHeader]In face of the danger the Changeling represent the Soviets and Olenians have decided to unite their country under one flag. \nOfficials will meet in the next few months to finalize the union. \nFor now, the citizen of this country rejoice at this unexpected news. Time will tell of what will come out of it."
+ HUM.40.a:0 "History is being written."
+
+ HUM.104.t:0 "Strange Disparitions"
+ HUM.104.d:0 "Several disappearances have been reported by police departments across the country. What’s strange is that it's often groups of several people that disappear... \n\nIt's more than probable these peoples just left our country to live elsewhere."
+ HUM.104.a:0 "They found a better life out there."
+
+ HUM.105.t:0 "Newcomers"
+ HUM.105.d:0 "A group of mortals have presented themselves from a species we have never seen before. They introduced themselves as humans, and have very interesting artefacts and knowledge..."
+ HUM.105.a:0 "Welcome!"
+ HUM.105.b:0 "Ah...fresh meat!"
+
+ HUM.1005.t:0 "A new Horde"
+ HUM.1005.d:0 "Thanks to our new found power, we have been able to raise several thousand more creatures. \n\nWith this the mortals will have no chance against us."
+ HUM.1005.a:0 "A rotten sea to drown the living in."
+
+ HUM.1006.t:0 "The End"
+ HUM.1006.d:0 "Something isn't right. \n\n\n'What's the matter rosa?'\n\n No! It couldn't be!\n\n'Who did you expect at the end of all this? God? The Devil, perhaps? No... It's just... \n\nMe.'"
+ HUM.1006.a:0 "What did I unleash...?"
+
+ HUM.106.t:0 "War Against the Living"
+ HUM.106.d:0 "[This.GetNewspaperHeader]What was only a legend a couple of days ago appeares to be a frightsome reality. \nThe dead are restless in the north and a gigantic horde is marching unto nearby territories. \nThe dead have risen and they are hungry."
+ HUM.106.a:0 "This is crazy!"
+ HUM.106.b:0 "No turning back now."
+
+ HUM.107.t:0 "Invitation to the Aquileian Alliance"
+ HUM.107.d:0 "The Aquileian embassy has transmitted an important proposal by their government. \nThey invite us into their alliance, should we accept?"
+ HUM.107.a:0 "Sure thing"
+ HUM.107.b:0 "No way"
+
+ HUM.108.t:0 "The United States Accepts!"
+ HUM.108.d:0 "The USA have accepted to join our alliance!"
+ HUM.108.a:0 "We welcome them"
+
+ HUM.1080.t:0 "American-Aquileian Meeting"
+ HUM.1080.d:0 "Several Aquileian and American representatives have met in New Washington in the past few days. \n\nOur two countries don’t have any grudges against each other, and both leaderships have decided that cooperation would be beneficial for both countries."
+ HUM.1080.a:0 "Understood"
+
+ HUM.1081.t:0 "Aquileian Blockade!"
+ HUM.1081.d:0 "We undergo a blockade from the Aquileian Marine National, those ships are blocking our merchant ships. \nIf this situation continues, we will suffer greatly. What should we do?"
+ HUM.1081.a:0 "We must protect our country!"
+ HUM.1081.b:0 "There nothing we can do!"
+
+ HUM.109.t:0 "Payment"
+ HUM.109.d:0 "The question of our people occupying those lands was finally answered by the Olenians. \n\nThey have accepted to let us live there on the condition we pay them for the occupation of their lands..."
+ HUM.109.a:0 "We must accept"
+ HUM.109.b:0 "No way"
+
+ HUM.110.t:0 "Payment Received!"
+ HUM.110.d:0 "The Soviets have accepted our demand, the money is flowing in the national reserve!"
+ HUM.110.a:0 "Good"
+
+ HUM.111.t:0 "The USSR Refuses"
+ HUM.111.d:0 "The Soviets have refused our demand, if we want to have a payment from this illegal occupation we will have to take it."
+ HUM.111.a:0 "so they have chosen, DEATH."
+
+ HUM.112.t:0 "The Oleno-Soviet Contingency Plan"
+ HUM.112.d:0 "Officers from both the Soviets and Olenian army have joined to discuss and plan an eventual Soviet intervention in Olenian if the Changelings were to invade the peninsula. \n\nThe defence of Vaverfront would come to the soviets, helped by some officers and militia of the Olenian army. \nSoldiers from both armies hope the technological and experience factor will help their side win the war against a much larger Changeling force.\n\nUntil then the USSR will come to the help of the Olenia if war there has to be."
+ HUM.112.a:0 "Thank you comrade!"
+ HUM.112.b:0 "Time to pay back those deers"
+
+ HUM.113.t:0 "Establishing Proper Contact"
+ HUM.113.d:0 "There has no been proper contact expected of Celestia not long after the first contact. This has been changed as a real meeting between several Equestrian and Europeans have taken place.\nMost notably is the visit of Todor Zhivkov and Jacque Chirac to Ponyville, and the visit of the Equestrian Diarchy to Unity.\n\nThe signature of several treaties and deals alongside a general sense of friendship presents an intensified cooperation in the near future."
+ HUM.113.a:0 "We will work together."
+
+ HUM.114.t:0 "Border Incident"
+ HUM.114.d:0 "An incident has been reported on the UEN-Equestrian frontier as tension between the two-countries rises.\n\nAccording to Equestrian officials, a European border guard opened fire on a Equestrian civilian passing too close on a non-recognized trail. This has provoked a small skirmish between unsuspecting European border troops and Equestrian militia.\n\nEquestria demands an extradition of the border guard to be judged accordingly..."
+ HUM.114.a:0 "oh no... NOT AGAIN!"
+ HUM.114.b:0 "What a shame."
+ HUM.114.b:0 "it doesn't bode well."
+
+ HUM.115.t:0 "Offer Land"
+ HUM.115.d:0 "Equestria has offered us the territory of Freeside as a present for our new friendship."
+ HUM.115.a:0 "Gladly!"
+ HUM.115.b:0 "We appreciate the offer but we don't need it."
+
+ HUM.1150.t:0 "Ask for Help"
+ HUM.1150.d:0 "The war with the Changelings isn’t going so well. The Europeans have stayed out of trouble until now... \n\nMaybe now is time for them to come and pay us back?"
+ HUM.1150.a:0 "This war will touch them too!"
+ HUM.1150.b:0 "We can manage."
+
+ HUM.1151.t:0 "Equestria asks for Help"
+ HUM.1151.d:0 "Being in a bad posture militarily speaking, Equestria has asked us to join their war stating that the Changelings will not hesitate to declare war on us if Equestria is defeated.\n\nShould we join Equestria in their struggle?"
+ HUM.1151.a:0 "If Equestria falls, we will fall too."
+ HUM.1151.b:0 "We refuse."
+
+ HUM.1152.t:0 "Europe Accepts"
+ HUM.1152.d:0 "The UEN have accepted, their troops are already on their way to join the conflict."
+ HUM.1152.a:0 "United We Stand."
+
+ HUM.1153.t:0 "Europe Refuses"
+ HUM.1153.d:0 "Even with the blatant threat the Changelings represent for the whole continent, the Europeans have refused to join us. The exception being hosting refugees and sending some medical equipment..."
+ HUM.1153.a:0 "They will regret it, sooner or later."
+
+ HUM.1154.t:0 "Equestria Offers to Join their Alliance"
+ HUM.1154.d:0 "The Equestrian government has offered a military alliance in the face of the danger of this world. \n\nThe council is divided on this question. It goes against our policy of neutrality, but at the same time many see this as a possibility to defend ourselves much more effectively."
+ HUM.1154.a:0 "United We Stand, Divided We Fall."
+ HUM.1154.b:0 "Meh."
+
+
+ HUM.116.t:0 "Griffon Treatment"
+ HUM.116.d:0 "The United State treatment of griffon minorities has sparked quite a debate in our society. \nWhile our minorities are underrepresented, the Americans have granted them a lot of liberties under their rule. \n\nAnd now those living inside our border are asking for the same rights!"
+ HUM.116.a:0 "We need enact some reforms."
+ HUM.116.b:0 "Send them away."
+
+ HUM.117.t:0 "New Mareland demands Guidance"
+ HUM.117.d:0 "The New Mareland government presented us a proposition to give us important control over their country. \nThey are not confident in their capacity to be alone in this world and would like us to help them in their first steps in this world."
+ HUM.117.a:0 "We will do that."
+ HUM.117.b:0 "We will not oppress the Marelanders."
+
+ HUM.118.t:0 "Immediate Independence"
+ HUM.118.d:0 "The New Mareland government has decided to cut all ties with Equestria. They shall no longer be a subject of Equestria, but a full independent country."
+ HUM.118.a:0 "Freedom!"
+ HUM.118.b:0 "Blast!"
+
+ HUM.119.t:0 "New Mareland Relief Operation"
+ HUM.119.d:0 "Out of compassion for our peoples struggle, many marelanders have come to help us, giving food, taking care of our wounded and sick an engineer company from their army even came to help build a camp."
+ HUM.119.a:0 "This was unexpected"
+
+ HUM.120.t:0 "New Chemical Weapons"
+ HUM.120.d:0 "Our scientists, taking inspiration and research of the humans, have created new weapons with devastating effectiveness."
+ HUM.120.a:0 "Good."
+
+ HUM.121.t:0 "Declare War on the USSR?"
+ HUM.121.d:0 "Until now the human country known as the Soviet Union has stayed out of our way. But having this nation exist is asking for trouble, as they might join the war when we are halfway through Equestria. \nThis could be a devastating blow for us.\n\nA good part of our general staff consider we should attack them as soon as we are ready."
+ HUM.121.a:0 "Get rid of them."
+ HUM.121.b:0 "Not now."
+
+ HUM.122.t:0 "New Planes"
+ HUM.122.d:0 "Our design bureau, thanks to our new blueprint “acquired” from the humans, have made several proposals to upgrade our planes to a new standard. \n\nThey are also developing new, more powerful weapons for our aircraft. \nWith this, we should have a better chance against human aircraft in battle."
+ HUM.122.a:0 "Good."
+
+
+ HUM.200.t:0 "Crystal Ponies Relief Operation"
+ HUM.200.d:0 "The news of the human’s arrival and their desperate situation have provoked a wave of emotion in our country. \n\nA feeling of a sympathy with the Human’s situation. \nThere are already a lot of ponies sending care packages to the humans of the Soviet Union and Europe.\n\nOther, more motivated individuals have been forming Relief groups and are departing to the USSR and UEN to help those countries install themselves in this new world."
+ HUM.200.a:0 "Good luck to them!"
+
+ HUM.201.t:0 "Crystal Ponies Relief Operation"
+ HUM.201.d:0 "The Crystal Ponies, moved by our situation, have decided to step in and intervene immediately to help us.\nThousands of packages and hundreds of volunteer relief workers came to help us. \n\nIt’s a surprise for many of us, but we can only be thankful that they have intervened to help us in our situation."
+ HUM.201.a:0 "This was unexpected"
+
+ HUM.202.t:0 "UEN-Crystal Meeting"
+ HUM.202.d:0 "This is the first official meeting between Europeans and Crystal Ponies. The humans have already know the Crystal Empire's kindness in the past, when some years ago some inhabitants of the empire left to help an unknown species in their time of need.\nThe citizen of the UEN haven't forget and nowadays its not rare to see references to the Crystal Empire in the country such as “Streets of the Volunteer”, and “Mi Amore Cadenza Plaza”. There has also been talk to name a ship in honor of them.\n\nSo it’s only normal that the Europeans met with their saviors when they could, with some presents of course. Outside of a new car, fresh out of the factory for the royal family, the European council has offered a great deal for the Crystal Empire and its industry. Unbeatable deal between the two countries in commercial exchange.\n\nIf that wasn’t enough, the Europeans have declared they would intervene immediately if the Empire came under attack.\nThe rest of the “meeting” was just a great party in the Crystal City. The officials of both countries also invited diplomats from the embassy to join in, most notably the Soviet ambassador and a representant of Stalliongrad.\n\nUEN military units were also present. A guard unit performed a drill before a large crowd and an aerobatics team on SK-60 flew above the city.\n\nA great bond between our two nations has been created. There’s no doubt further deals will be done between us."
+ HUM.202.a:0 "Good fun"
+ HUM.202.b:0 "Good fun"
+
+ HUM.203.t:0 "UEN-Crystal Meeting"
+ HUM.203.d:0 "As the UEN and Crystal Empire celebrate their friendship, they decided to invite different ambassadors including our representant in Crystal City. Both the UEN and Crystal Empire have decided to increased their relations and economic partnership.\n\nOur ambassador has also informed us that the Crystal Empire has sent some presents to our government."
+ HUM.203.a:0 "We remember their help in our time of need."
+
+#UN federation event
+ HUM.400.t:0 "Join the United Federation?"
+ HUM.400.d:0 "[FROM.GetNameDef] Invited our country in the United Federation, their diplomats are awaiting a reply from our side..."
+ HUM.400.a:0 "Agree."
+ HUM.400.b:0 "Refuse."
+
+ HUM.401.t:0 "America Agrees"
+ HUM.401.d:0 "The United states has accepted our proposition. \nTheir country will now be part of our great federation... It will take time for us to integrate them in our country. \n\nBut if it is for an everlasting peace, it will be worth the effort."
+ HUM.401.a:0 "Great!"
+
+ HUM.402.t:0 "Join the United Federation?"
+ HUM.402.d:0 "[FROM.GetNameDef] Invited our country in the United Federation, their diplomats are awaiting a reply from our side..."
+ HUM.402.a:0 "Agree."
+ HUM.402.b:0 "Refuse."
+
+ HUM.403.t:0 "The Soviet Union agrees"
+ HUM.403.d:0 "Many once doubted the possiblity of the Soviet Union coming with us to fight for a common future, and rightfully so. \nBut this morning, we recieved some absolutely astonishing news from New Moscow. Our ambassador has relyed the Soviet's response to our purposal, and their offical statement is that they have accepted our proposal to join our alliance! \n\nToday marks a new day for humanity and our future!"
+ HUM.403.a:0 "Great!"
+
+
+ HUM.404.t:0 "Join the United Federation?"
+ HUM.404.d:0 "[FROM.GetNameDef] Invited our country in the United Federation, their diplomats are awaiting a reply from our side..."
+ HUM.404.a:0 "Agree."
+ HUM.404.b:0 "Refuse."
+
+ HUM.405.t:0 "The Europeans Agree"
+ HUM.405.d:0 "We have recieved some outstanding from our ambassador in Europe! After meeting with the European Council, almost every European nation agreed to restablish our alliance, expect for a few in the former Eastern Bloc, which was the be expected. But the general consensus of the council was to accepted our proposal to join the alliance! \n\nWith the Human World once again standing united against the forces of evil, the future of the human race is already looking brighter."
+ HUM.405.a:0 "Great!"
+
+ HUM.4000.t:0 "Diplomatic Mission to the USA"
+ HUM.4000.d:0 "Our diplomats are on their way to the United states.\n\nLet’s hope our effort will pay off!"
+ HUM.4000.a:0 "Understood."
+
+ HUM.4002.t:0 "Diplomatic Mission to the USSR"
+ HUM.4002.d:0 "Our diplomats are on their way to the Soviet Union.\n\nLet’s hope our effort will pay off!"
+ HUM.4002.a:0 "Understood."
+
+ HUM.4004.t:0 "Diplomatic Mission to the UEN"
+ HUM.4004.d:0 "Our diplomats are on their way to the Union of European Nations.\n\nLet’s hope our effort will pay off!"
+ HUM.4004.a:0 "Understood."
+
+ #special loc
+
+volunteers_hum:0 "Sends volunteers to the selected nation."
+
+second_exodus:0 "§YMaybe the§Y §CEquestrians§C §Ycould help us?§Y"
+
+DED_unlock_sacrifice:0 "Thank to our newfound acolyte we can make offer to the gods to lend us a fraction of their powers. But it will require sacrifices...  \n\n§RThe price will be paid in Blood and Bones."
+DED_unlock_no_turning_back:0 "§RNo turning back now, nothing will ever be the same."
+DED_unlock_focus:0 "§RA wise decision that will change the world forever."
+
+HUM_fleet_build:0 "Spawn a Fleet with 1 CA 2 CL and 5 DD"
+
+#Idea Natives
+ HUM_economical_deal:0 "Economical deal"
+ JER_economical_deal_desc:0 ""
+
+
+
+ CRY_relief_volunteers:0 "Crystal Ponies Relief Operation"
+ CRY_relief_volunteers_desc:0 "The Crystal ponies have been greatly involved in helping our nation in these trying times."
+
+ EQS_information_exchange:0 "Equestrian Relief Operation"
+ EQS_information_exchange_desc:0 ""
+
+ EQS_information_exchange:0 "Euro-Equestrian research"
+ EQS_information_exchange_desc:0 ""
+
+ EQS_rightful_land:0 "Territorial Revendication"
+ EQS_rightful_land_desc:0 ""
+
+ EQS_intelligence_deployement:0 "Expanded signals intelligence corps"
+ EQS_intelligence_deployement_desc:0 "Wars are fought on ground, sea and air... but also on radio waves!"
+
+ EQS_pony_resistance:0 "Natives Resistance"
+ EQS_pony_resistance_desc:0 ""
+
+ OLE_soviet_olenian_cooperation:0 "Oleno-Soviet cooperation"
+ OLE_soviet_olenian_cooperation_desc:0 ""
+
+ OLE_rightful_land:0 "Territorial Revendication"
+ OLE_rightful_land_desc:0 ""
+
+ OLE_contingency_plan:0 "Contingency Warplan"
+ OLE_contingency_plan_desc:0 ""
+
+ OLE_economical_deal:0 "Economical Deal"
+ OLE_economical_deal_desc:0 ""
+
+ OLE_relief_volunteers:0 "Olenian Relief Operation"
+ OLE_relief_volunteers_desc:0 "Olenians have come to help us in our time of need."
+
+ EQC_relief_volunteers:0 "New Mareland Relief Volunteers"
+ EQC_relief_volunteers_desc:0 "New marelander have come to help us in our time of need."
+
+ EQC_containement_1:0 "Containement"
+ EQC_containement_1_desc:0 "We must contain the alien menace at our border."
+
+ EQC_containement_2:0 "Securisation"
+ EQC_containement_2_desc:0 "We must destroy the alien menace at our border."
+
+ EQC_economical_deal:0 "Economical Deal"
+ EQC_economical_deal_desc:0 ""
+
+ EQC_another_history_blue:0 "Another View on the World"
+ EQC_another_history_blue_desc:0 "thank to our research on human history we were able to point what kind of errors not to repeat"
+
+ EQC_another_history_red:0 "Another View on the World"
+ EQC_another_history_red_desc:0 "thank to our research on human history we were able to point what kind of errors not to repeat"
+
+ EQC_pony_griffon_equality:0 "Pony-Griffon Equality"
+ EQC_pony_griffon_equality_desc:0 ""
+
+
+ JER_economical_deal:0 "Economical Deal"
+ JER_economical_deal_desc:0 ""
+
+ JER_intelligence_deployement:0 "Corps des Transmissions"
+ JER_intelligence_deployement_desc:0 "The new branch of this corps 'Interception et Guerre Electronique' or IGE will give us an advantage when trying to decrypt enemy communication"
+
+ JER_containement:0 "Containement"
+ JER_containement_desc:0 "We must contain the alien menace at our border."
+
+ JER_blocus:0 "Blocus"
+ JER_blocus_desc:0 ""
+
+
+ CHN_humanity_study:0 "Studies of Humanity"
+ CHN_humanity_study_desc:0 "Our study of the Human species, technology and history is helping our scientists and technicians devellop a lot of new technology"
+
+ CHN_humanity_study_2:0 "Studies of Humanity"
+ CHN_humanity_study_2_desc:0 "Our study of the Human species, technology and history is helping our scientists and technicians devellop a lot of new technology"
+
+ CHN_chemical_Weapons_idea_2:0 "Expanded RCAMICD"
+ CHN_chemical_Weapons_idea_2_desc:0 "The Royal Changeling Army Medical Research Institute of Chemical Defence will ensure that our artillery can flush out any potential hostiles by denying them access to key areas without specialised forces equipped to deal with chemical warfare."
+
+ CHN_upgraded_planes:0 "Upgraded Planes"
+ CHN_upgraded_planes_desc:0 "While it doesn't look like much, with those upgrades our planes are now more capable of engaging enemy planes, especially humans."
+
+ CHN_spy_net:0 "Changelings spy"
+ CHN_spy_net_desc:0 ""
+
+
+#WHO DID YOU EXPECT? GOD? THE DEVIL PERHAPS?
+ DED_erebus_reactor_0:0 "Erebus Reactor"
+ DED_erebus_reactor_0_desc:0 "While a bit unstable, this reactor is helping our mages a lot in their research"
+
+ DED_erebus_reactor_1:0 "Erebus Reactor & Thresher"
+ DED_erebus_reactor_1_desc:0 "While a bit unstable, this reactor is helping our mages a lot in their research. The tresher is also a good mean of producing energy if we keep feeding it."
+
+
+ DED_iron_cathedral:0 "The Iron Cathedral"
+ DED_iron_cathedral_desc:0 "The closer they got, the more they suffered"
+
+ DED_city_of_shadow:0 "City of Shadows"
+ DED_city_of_shadow_desc:0 "'The Shadow sunk our City.'"
+
+ DED_crypt_of_flesh:0 "Crypt of the Flesh"
+ DED_crypt_of_flesh_desc:0 "'His monsters stripped our bones'"
+
+ DED_Madness:0 "Madness"
+ DED_Madness_desc:0 ""
+
+ DED_Fear:0 "Fear"
+ DED_Fear_desc:0 ""
+
+ DED_cool_dimming_sun:0 "'The dimming, cooling sun'"
+ DED_cool_dimming_sun_desc:0 ""
+
+ DED_global_cooling:0 "Global Cooling"
+ DED_global_cooling_desc:0 "The sun is unusually colder than usual lately. our scientists cannot explain the phenomenon but it will have impact on our society. \n\n\n\n§R'The dimming, cooling sun'"
+
+ DED_global_mobilization:0 "Global Mobilization"
+ DED_global_mobilization_desc:0 "The life of our world is at risk and we wont have a second chance saving it."
+
+
+ DED_machine_sacrifice:0 "Thresher Activated"
+ DED_machine_sacrifice_desc:0 "hacking blood and bones"
+
+ DED_sea_sacrifice:0 "Ritual for the Gods of the Seas"
+ DED_sea_sacrifice_desc:0 "They will be pleased"
+
+ DED_small_sacrifice:0 "Ritual Offering"
+ DED_small_sacrifice_desc:0 "blood for the blood god"
+
+ DED_medium_sacrifice:0 "Ritual Sacrifice"
+ DED_medium_sacrifice_desc:0 ""
+
+ DED_big_sacrifice:0 "Ritual Slaughter"
+ DED_big_sacrifice_desc:0 "skulls for the skull throne"
+
+ DED_final_sacrifice:0 "Perpetual Slaughter"
+ DED_final_sacrifice_desc:0 ""
+
+
+#Decision DED
+ DED_sacrifice_ritual:0 "Sacrifice Rituals"
+ DED_sacrifice_ritual_desc:0 "thank to our newly acquired power and machine we can now unleash the power of ancients gods... at a price."
+
+ DED_machine_ritual:0 "Feed the Thresher"
+ DED_machine_ritual_desc:0 ""
+
+ DED_sea_ritual:0 "Feed the Sea Gods"
+ DED_sea_ritual_desc:0 ""
+
+ DED_small_ritual:0 "Small Sacrifice"
+ DED_small_ritual_desc:0 "" 
+
+ DED_medium_ritual:0 "Bigger Sacrifice"
+ DED_medium_ritual_desc:0 ""
+
+ DED_big_ritual:0 "Intensifies the Rituals"
+ DED_big_ritual_desc:0 "" 
+
+ DED_final_ritual:0 "Ritual of Dusk"
+ DED_final_ritual_desc:0 "he will be awaken... \n\n\n\n§RNo turning back, activate it and unleash apocalypse."  
+
+
+ #National FOCUS
+ CHN_strange_events:0 "Strange Events"
+ CHN_strange_events_desc:0 "Our spy heard that a new, much more advanced civilization appeared near Svenholm in Olenia... Maybe our spy over there wasn't that drunk after all."
+
+ CHN_spy_hum:0 "Spy on the Humans"
+ CHN_spy_hum_desc:0 "Before trying anything too reckless we should spy on the humans civilization and get as much information as we could get."
+
+ CHN_study_hum:0 "Study the New Civilization"
+ CHN_study_hum_desc:0 "The human civilisation called 'Soviet Union' seem very advanced, we should get our hand on as much information for our own gain"
+
+ CHN_steal_europeans:0 "Steal European tech"
+ CHN_steal_europeans_desc:0 "Another human civilization the 'union of Europe' exist... they are far away, but their Infantry equipement is reputed as far superior"
+
+ CHN_steal_soviets:0 "Steal Soviet Tech"
+ CHN_steal_soviets_desc:0 "The Soviet Army ships and Tanks are much more advanced than our own, we should acquire more information for our technicians to Reverse engineer."
+
+ CHN_hum_oil_refining:0 "Human Oil Refining"
+ CHN_hum_oil_refining_desc:0 "Tanks, planes and all vehicles would be useless if we don't have the corrects type of fuel to supply them. lucky us, the humans also have the edge here. time to steal their plan."
+
+ CHN_aerodynamic_tech:0 "Improved Aerodynamic"
+ CHN_aerodynamic_tech_desc:0 "Our planes are corrects but could use some upgrade, althot most humans planes don't use propellers anymore there are lessons to learn there."
+
+ CHN_advanced_mag_weapons:0 "Advanced Magical weapons"
+ CHN_advanced_mag_weapons_desc:0 "What happen if we combine our magical abilities with human rifles? a Superior class of weapons!"
+
+ CHN_1982_warfare:0 "1980 Warfare"
+ CHN_1982_warfare_desc:0 "We are pioneer in the Mobile warfare but the humans are a whole level above us, their war is brutal... and minus the nuclear side of affair we could learn a lot from their exercise"
+
+ CHN_modern_chemicals:0 "Modern Chemical Weapons"
+ CHN_modern_chemicals_desc:0 "The RCAMICD expressed its interest in human NBC research, maybe we can find something Interesting..."
+
+ CHN_support_human_extremist:0 "Support Human Extremist"
+ CHN_support_human_extremist_desc:0 "It would be better for us not to fight the human directly... but thanks to our spy we know that some of them might be great allies to our cause."
+
+ CHN_one_step_ahead:0 "One step Ahead"
+ CHN_one_step_ahead_desc:0 "Humanity war forced them to come here, but thanks to them now we will be much more powerful than anyone that dare stand in our way"
+
+ CHN_nuclear_fruit:0 "Nuclear Fruit"
+ CHN_nuclear_fruit_desc:0 "Theres one last present humanity as to offer. Its also what caused them to come here in the first place... Should we bite this fruit?"
+
+
+ EQC_another_colony:0 "Another Colony"
+ EQC_another_colony_desc:0 "A new civilization appaeared at the north of our territory, what should we do?"
+
+ EQC_send_helpers:0 "Send Relief"
+ EQC_send_helpers_desc:0 "The humans are in pitiful situation, we should help them as much as we can. We could give some help to the Blue heart organisation extending their area of operation to American territories aswell"
+
+ EQC_rebuild_the_new_world:0 "Rebuilding the New World"
+ EQC_rebuild_the_new_world_desc:0 "If the humans are to survive they will need to have a basic industry. We should kickstart it... In the long run maybe it might benefit us aswell?"
+
+ EQC_history_lesson_blue:0 "§CHistory Lesson§!"
+ EQC_history_lesson_blue_desc:0 "The Americans have a rich history for us to discover. Maybe there are a lot to learn from them?"
+
+ EQC_independance:0 "Independence!"
+ EQC_independance_desc:0 "It would be a shame for this tea cargo to fall in the sea."
+
+ EQC_payback:0 "Payback"
+ EQC_payback_desc:0 "Now that the Americans are back on their feet, maybe they could help us in various way?"
+
+ EQC_puppet_eqc:0 "Under the US Protection"
+ EQC_puppet_eqc_desc:0 "We are now closer than ever to the US, maybe they would be willing to protect us? In exchange we could offer them greater control. \nSome might see this being a puppet state from one country to another, but this might be one of the the only solution to safeguard our nation in the near future."
+
+ EQC_equilibrium:0 "Equilibrium"
+ EQC_equilibrium_desc:0 "We need to maintain a good relation with our neighbours and calm the extremist on our side."
+
+ EQC_griffon_treatment:0 "Griffons Treatment"
+ EQC_griffon_treatment_desc:0 "...if they aren't happy here maybe they will accept to migrate to the USA?"
+
+ EQC_guard_borders:0 "Guard the Borders"
+ EQC_guard_borders_desc:0 "Those aliens are too close to New Manehatten to our taste we need to reinforce our border and stand fast against any agression."
+
+ EQC_contain_aliens:0 "Contain the Aliens"
+ EQC_contain_aliens_desc:0 "Those Americans are a danger for our population we must reinforce our army and prepare ourselve to fight against them!"
+
+ EQC_history_lesson_red:0 "§RHistory Lesson§!"
+ EQC_history_lesson_red_desc:0 "The Americans have a rich history for us to discover. Maybe there are a lot to learn from them?"
+
+ EQC_protect_manehatten:0 "Protect Manehatten"
+ EQC_protect_manehatten_desc:0 "before any serious operation we need to build defence near Manehatten incase we can't break trought the American lines"
+
+ EQC_liberate_new_freeside:0 "Liberation of New freeside"
+ EQC_liberate_new_freeside_desc:0 "The time have come we will liberate our homeland from those invaders!"
+
+ EQC_puppet_uas:0 "Puppet the Aliens Zone"
+ EQC_puppet_uas_desc:0 "As much as we would like to get rid of them, it wouldn't bring good thing for our country, we should control the Americans zone and let them have a relative freedom."
+
+
+ EQS_contact:0 "Contact"
+ EQS_contact_desc:0 "Aliens? In my Equestria?"
+
+ EQS_help_pony_pop:0 "Helping Poninsula"
+ EQS_help_pony_pop_desc:0 "Poninsula isn't a very rich province, quite remote with a nice landscape. We need to help poninsula in those time"
+
+ EQS_send_help:0 "Send Relief"
+ EQS_send_help_desc:0 "Many ponies have expressed their will to come and help the humans in their time of need, we will give them some ressource to help them in their operation"
+
+ EQS_send_food:0 "Send Food"
+ EQS_send_food_desc:0 "The most blatant problem those humans are facing is the lack of food. Thankfully Equestria don't lack that one bit. We should be able to send them a lot."
+
+ EQS_send_materials:0 "Send Consctruction Materials"
+ EQS_send_materials_desc:0 "Europe is struggling to build their society again, the reason is the lack of ressource. We can remedy to this problem aswell."
+
+ EQS_exchange_info:0 "Ideas Exchange"
+ EQS_exchange_info_desc:0 "It will be hard for the Europeans to repay us, but atleast they could exchange ideas with us aswell as some technology!"
+
+ EQS_strenghen_relation:0 "Strenghen the Relation"
+ EQS_strenghen_relation_desc:0 "Without much surprise Many europeans held us in high regard thanks to the help we offered. Its nice to make new friends!"
+
+ EQS_offer_land:0 "Sell some Lands"
+ EQS_offer_land_desc:0 "30 Millions peoples living in a space half the size of Fezera isn't healthy, we should sell some lands empty land for the humans. this will surely seals our alliance to them and gain their trust."
+
+ EQS_protection:0 "Guaranteing European Independance"
+ EQS_protection_desc:0 "A military alliance will be the cherry on the top. Our military has a lot to learn from the humans."
+
+ EQS_keep_an_eye:0 "Keep an eye on them"
+ EQS_keep_an_eye_desc:0 "Those humans aren't a good sign for equestria, without being openly hostile we need to keep an eye on them"
+
+ EQS_spying:0 "Spying"
+ EQS_spying_desc:0 "Thank to the presence of Dappleshore pony community spying on the UEN will be much easier."
+
+ EQS_resistance:0 "Fund Resistance Group"
+ EQS_resistance_desc:0 "Some residents of Poninsula aren't happy with the Europeans rule... Some weapons and fund allocated to them would be beneficial to us."
+
+ EQS_Close_border:0 "Close the Borders"
+ EQS_Close_border_desc:0 "Poninsula like the name indicate is a Peninsula, if we close our border it will amper the europeans economy."
+
+ EQS_create_incident:0 "Create an Incident"
+ EQS_create_incident_desc:0 "Oh no! An europeans border guard shot at a pony, this is terrible. Would be sad if things were to escalate"
+
+ EQS_erase_them:0 "Erasing Them"
+ EQS_erase_them_desc:0 "Enough of their presence on our soil, we shall erase them from this world"
+
+ EQS_puppet_them:0 "Puppet Them"
+ EQS_puppet_them_desc:0 "Killing each and everyone of them would only hurt our prestige on the international stage. Having the whole peninsula under our control the whole peninsula will be enough."
+
+
+
+ OLE_space_commie:0 "Commies from Space"
+ OLE_space_commie_desc:0 "A sentient communist species. Great."
+
+ OLE_react:0 "React!"
+ OLE_react_desc:0 "So what is the next step to do with those humans?"
+
+ OLE_opportunity:0 "Opportunity"
+ OLE_opportunity_desc:0 "The arrival of those aliens is an opportunity...\nfor a lot of peoples, but if we play our cards right we should be able to do something great with them."
+
+ OLE_reinforce:0 "Reinforce the Borders"
+ OLE_reinforce_desc:0 "They are much taller, and much more well-armed than us.\nWe must reinforce our army or else, they might destroy us in the future."
+
+ OLE_economic_support:0 "Economic Support"
+ OLE_economic_support_desc:0 "The soviet economy is almost inexistant. If we want to make them great allied to us. We might need to intervene and help our neighbour."
+
+ OLE_help_them:0 "Help them"
+ OLE_help_them_desc:0 "Sharing is caring they say.\nFood, medical equipment and materials are what we need to send to rebuild their nation!\nThankfully we got those in sufficient quantity. "
+
+ OLE_border_tension:0 "Border Tension"
+ OLE_border_tension_desc:0 "As we expected, those humans are an aggressive species that is there to take control over our country, we need to prepare for the coming struggle!"
+
+ OLE_knowledge_exchange:0 "Knowledge Exchange"
+ OLE_knowledge_exchange_desc:0 "The humans are ahead of us technologically, but they don’t know anything about magic and such. We both have a lot to learn from each other."
+
+ OLE_fair_deal:0 "Fair Deal"
+ OLE_fair_deal_desc:0 "We give them materials; they give us modern products! Easy and fair!"
+
+ OLE_demand_payment:0 "Demand Payment"
+ OLE_demand_payment_desc:0 "Those are OUR lands, if they are to stay, then they need to pay a compensation."
+
+ OLE_sea_border_dispute:0 "Sea Border Dispute"
+ OLE_sea_border_dispute_desc:0 "Of course, since they are in the middle of our territories, it also extends to the sea. Meaning that there’s often a friction between Soviet and Olenian fishing boats."
+
+ OLE_oleno_soviet_cooperation:0 "Oleno-Soviet Cooperation"
+ OLE_oleno_soviet_cooperation_desc:0 "The humans and us have much more to gain by cooperating. Science but also, culture, commerce and experience, are so much subject were our peoples can exchange and learn new things.\nWe absolutely need to increase our exchange with the USSR!"
+
+ OLE_support_nationalist:0 "Support Nationalist"
+ OLE_support_nationalist_desc:0 "Divide and rule, there are different faction in the Soviet government, by giving more mean to the Supremacist faction we will make sure the Soviet peoples stay divided."
+
+ OLE_contingency_plan:0 "Contingency Plan"
+ OLE_contingency_plan_desc:0 "The Changeling menace gets more present each passing day, we must prepare ourselves, prepare for the worst but hope for the best."
+
+ OLE_retake_svenholm:0 "Retake Svenholm!"
+ OLE_retake_svenholm_desc:0 "Svenholm is a major settlement of our country, we will take it back by force, it is our right to claim back our lands from those who aren’t even from this world!"
+
+ 
+ JER_other_shore:0 "On the other Shore"
+ JER_other_shore_desc:0 "On the other side of the channel, a new species appeared, this is a gate to new opportunities... and danger."
+ 
+ JER_gain_trust:0 "Gaining their Trust"
+ JER_gain_trust_desc:0 "The Americans (as those humans call themselves) are quite careful with their relation and quite mistrustful.\nBefore we try anything, we should get their trust."
+ 
+ JER_ignore:0 "Ignore Them"
+ JER_ignore_desc:0 "Not our country, not our problem! But one for the Ponies!"
+ 
+ JER_economic_aid:0 "Economic Help"
+ JER_economic_aid_desc:0 "The best way to help our new neighbours should be to help them get on their feet economically."
+ 
+ JER_naval_blockade:0 "Blocus"
+ JER_naval_blockade_desc:0 "After what we heard about those creatures, it is clear this is a dangerous species.\nThankfully they don’t have much of a navy our fleet should be enough to keep them at bay."
+
+ JER_meeting_uas:0 "Meeting"
+ JER_meeting_uas_desc:0 "An official meeting with the USA must be done so we could get a clear idea of their plan in the future, and what we could do together."
+
+ JER_investement_uas:0 "Investement in the USA"
+ JER_investement_uas_desc:0 "The USA is a land of opportunity the sooner the invest the better it will be for the future."
+
+ JER_spy_deployement:0 "Spy Deployement"
+ JER_spy_deployement_desc:0 "Those humans sure use a lot of telecommunication, old way spying won’t always cut it. If we don’t want to fall behind, we need to get ourselves a good information department.\nOur telecommunication branch of the ground forces will be the basis for this new unit, specialized in electronic warfare."
+
+ JER_democratic_alliance:0 "Alliance Démocratique"
+ JER_democratic_alliance_desc:0 "This world will soon need to be saved from totalitarianism and extremism, to defend democracy and liberty we will need to ally with the Americans.\nTogether we will form a new democratic alliance."
+
+ JER_help_griffon_community:0 "Helping griffons community"
+ JER_help_griffon_community_desc:0 "There are several griffons communities in the land under American controls, we should send help to our brother over there."
+
+ JER_free_brothers:0 "Liberation"
+ JER_free_brothers_desc:0 "Can’t you hear the plead and cry of our brother on the other side of this channel? Can’t you hear their cry for help, for liberty?"
+
+
+ DED_call:0 "The Calling"
+ DED_call_desc:0 "Something below is calling us"
+
+ DED_the_dig:0 "The Dig"
+ DED_the_dig_desc:0 "The humans, thanks to their technology and artifacts have uncovered ruins, ancient ones. \nBut it will take some time to decrypt and dig out all of it. They also uncovered several deposits of resources, that will prove useful in the future."
+
+ DED_sacrifice:0 "Sacrifice"
+ DED_sacrifice_desc:0 "Blood and Bones.\n\nThis is the price to pay to power?\nSo be it. Thankfully we have a lot of that."
+
+ DED_old_time_religion:0 "Old Time Religion"
+ DED_old_time_religion_desc:0 "Tales of forgotten times."
+
+ DED_neobabel:0 "Neobabel"
+ DED_neobabel_desc:0 "'Building toward the future'"
+
+ DED_city_of_shadows:0 "City of Shadows"
+ DED_city_of_shadows_desc:0 "We didn’t think that the Magehold was that big, but we were wrong, its much, much larger and extend underground, one of those places, a bleak, but big underground city is there."
+
+ DED_crypt_of_flesh:0 "Crypt of the Flesh"
+ DED_crypt_of_flesh_desc:0 "Half stones, half flesh, endless corridors of ancient tombs... Who know what hides down there?"
+
+ DED_blood_and_bones:0 "Blood and Bones"
+ DED_blood_and_bones_desc:0 "The only price to pay for power, what the living lose, will power our war machine, until there’s not a single living soul left."
+
+ DED_erebus_reactor:0 "Erebus Reactor"
+ DED_erebus_reactor_desc:0 "The latest creation of the humans, thank to their sciences, combined with our magic we have created a near endless source of power for our country."
+
+ DED_infernal_machine:0 "Infernal Machine"
+ DED_infernal_machine_desc:0 "§RA magnificient machine that will process living creatures into energy for our industry.§R"
+
+ DED_altar_of_concrete:0 "Altars of Concrete"
+ DED_altar_of_concrete_desc:0 "If our crusade is to continue, we will need a powerful base, upgrading the Magehold using new construction methods will optimize our domain and give us a better chance against the livings."
+
+ DED_study_ruins:0 "Study the Ruins"
+ DED_study_ruins_desc:0 "After all this time we have finally managed to decrypt the runes and language in the ruins. And there’s a lot to learn from it!"
+
+ DED_iron_cathedral:0 "The Iron Cathedral"
+ DED_iron_cathedral_desc:0 "A cold, but solid and menacing looking building, a gigantic building, if the living is so foolish to come there, they will be stopped right in their tracks by this imposing bastion, the gate to our domain.\nThe Iron Cathedral."
+
+ DED_darkness_spreading:0 "The Darkness is Spreading"
+ DED_darkness_spreading_desc:0 "Never again the order will gain from those territories, they are ours, and we will make them a real living hell for everyone that dare step in our territories."
+
+ DED_fire_and_ice:0 "Fire and Ice"
+ DED_fire_and_ice_desc:0 "Simple things really, but yet so different. One of the traits that interest us is that the livings hates both, setting traps in our territories will make sure nobody will survive travelling the peninsula."
+
+ DED_no_turning_back:0 "No Turning Back"
+ DED_no_turning_back_desc:0 "Are you ready for what come next?"
+
+ DED_madness:0 "Madness"
+ DED_madness_desc:0 "With what will come out of the bowels of the earth, only the sight will be enough to make any living question his sanity."
+
+ DED_creations:0 "Creations"
+ DED_creations_desc:0 "With the basic component needed for a living being to exist and a little magic, we will create a terrifying living weapons, whose sole purpose is to kill everything that lives."
+
+ DED_fear:0 "Fear"
+ DED_fear_desc:0 "Ungodly creation roaming the lands, a ground where nothing will grow again, magic that can kill you in so many gruesome ways. It’s enough to scare even the most seasoned veteran."
+
+ DED_sun:0 "The Dimming, Cooling Sun"
+ DED_sun_desc:0 "With this powerful spell we will make sure that even the sun won’t be an ally of the living anymore, Celestia’s power herself won’t be enough to warm up the world."
+
+ DED_complete_circle:0 "Complete the circle"
+ DED_complete_circle_desc:0 "Who did you expect at the end of all this? God? The Devil, perhaps?"
+
+
+#EEQ leader
+ EEQ_ryoku_memori:0 "Ryoku Memori"
+ EEQ_aine:0 "Aine Aisling"
+ EEQ_sweet_bear:0 "Sweet Bear"
+ EEQ_nova_star:0 "Nova Star"
+ EEQ_lyra_heartstring:0 "Lyra Heartstring"
+
+#TUVAN
+ tuvan_spirit:0 "Tuvan Spirit"
+ tuvan_spirit_2:0 "Tuvan Spirit"
+ mounted_warrior:0 "Mounted Warriors"
+ tuvan_peoples_army:0 "Tuvan People's Revolutionary Army"
+ tuvan_autharcy:0 "Autharcy"
+ tuvan_devellopment:0 "'New Tuva' Plan"
+
+
+
+ tuv_new_world:0 "A New World"
+ tuv_new_world_desc:0 "Alone and projected into an unknown world, this is nonetheless no the end of Tuva. Maybe the start of something greater. \n\n\n§YPlease bear with me and ignore some grammar error I did this in like two afternoons.§Y"
+
+ tuv_devellopment:0 "A New Age For Tuva"
+ tuv_devellopment_desc:0 "The Little Khural as unlocked as much fund as we need to push our nations to the level of our neighbours and nearly all sector of our society will be granted help to devellop."
+
+ tuv_taking_lead:0 "Taking The Lead"
+ tuv_taking_lead_desc:0 "Our comrades in Stalliongrad have made incredible things, but maybe we could help them and lead them in this world. Whatever the reason is, we will need the industry and Man... Ponypower, of our neighbour."
+
+ tuv_destiny:0 "Our Destiny"
+ tuv_destiny_desc:0 "We shall never know what projected us in this world. But now we shall forge our own Destiny for our peoples whatever they are. Pony or humans, the Great flag of the Tuvan People's Republic shall fly above them."
+
+ TAN.1.t:0 "A New Start for Tuva"
+ TAN.1.d:0 "Our country has fused with a town called our town. After the Initial shock, both sides are working to rebuild what was lost. Thanks to our engineer we found several more resource deposit. \n\nWithout restriction, with our new four-legged friends and our spirits, we will show our prowess to the world!"
+ TAN.1.a:0 "Onward!"
+
+ TAN.2.t:0 "Massive Extension of our Army"
+ TAN.2.d:0 "The Tuvan People's Revolutionary Army was very small, less than ten thousand soldiers a couple of recon planes and trucks... \nBut thanks to the arrivals of many volunteers, both Ponies and Humans and the effort of our weapons workshop we managed to deploy many more units to protect our Lands."
+ TAN.2.a:0 "Long live Tuva!"
+
+ TAN.3.t:0 "Stalliongrad and us"
+ TAN.3.d:0 "Stalliongrad is the Major Communist power on this world. If we could make sure to have the control of their country, we would be much stronger.\nTo achieve this, The Little Khural is divided on this matter.\n\n Some propose we simply pressure them military.\n The other would simply be to debate about it with Stalliongrad, and find a pacific solution."
+ TAN.3.a:0 "Open Dialogue"
+ TAN.3.b:0 "We are stronger than them!"
+
+ TAN.4.t:0 "Stalliongrad Accept!"
+ TAN.4.d:0 "After a short Debate they accepted to give us full control over their countries. Their units and officers are also already starting to reorganize with our High Command."
+ TAN.4.a:0 "Hands in Hooves Toward the future!"
+
+ TAN.5.t:0 "Stalliongrad Accept our guidance!"
+ TAN.5.d:0 "They have accepted to give us partial control over their country, but still want to remain a bit independent."
+ TAN.5.a:0 "A Glorious Event!"
+
+ TAN.6.t:0 "Stalliongrad give some Lands"
+ TAN.6.d:0 "Witnessing our hardship, Stalliongrad has decided to give us some lands. It should be enough to give us some room to expand. The only question that remain is, should we rename the capital of this region?"
+ TAN.6.a:0 "We shall rename the city"
+ TAN.6.b:0 "Its not our right to change it"
+
+ ### National Focus ###
+griffon_political_effort:0 "Open The Political Sphere"
+griffon_political_effort_desc:0 "The future of our nation is in our [Root.GetHands]. It is time to decide our destiny."
+griffon_dreams_of_a_republic:0 "Dreams Of A Republic"
+griffon_dreams_of_a_republic_desc:0 "There are those within our nation who would see us transition to a republican government. It may be time to seriously consider these suggestions."
+griffon_gather_support:0 "Gather Support"
+griffon_gather_support_desc:0 "Increasing support for a republic and drafting a constitution will allow us to complete all the necessary steps in order to form a republic."
+griffon_popular_revolution:0 "Popular Revolution"
+griffon_popular_revolution_desc:0 "[Root.GetPopularRevolutionDesc]"
+griffon_popular_revolution_desc_grif:0 "Some argue that griffons are naturally greedy and selfish, but these concepts have no place in our nation. With the support of the people, we shall usher in a new age of prosperity and equality by following socialist teachings."
+griffon_popular_revolution_desc_other:0 "With the support of the people, we shall usher in a new age of prosperity and equality by following socialist teachings."
+griffon_land_reform:0 "Land Reform"
+griffon_land_reform_desc:0 "The land within our borders is currently held only by a few [Root.GetRaceMembers], with most farmers struggling under their oppressive rule. This cannot stand. We must establish collective farms, with every farmer working for the good of the entire nation, not just their coin purse."
+griffon_five_year_plan:0 "Five Year Plan"
+griffon_five_year_plan_desc:0 "An important pillar of socialism is a planned economy. By drafting a five year plan for the growth of our economy, we can vastly improve our industrial capabilities in the long run."
+griffon_spread_the_revolution:0 "Spread The Revolution"
+griffon_spread_the_revolution_desc:0 "We may have achieved a socialist utopia here, but many people must still suffer under the oppression of capitalism. By sending volunteers to nations at war with the imperialists, we can fight against oppression wherever it appears."
+griffon_fight_to_the_last:0 "Fight To The Last"
+griffon_fight_to_the_last_desc:0 "Our national borders must be enforced no matter the cost. Any outside force attempting to undermine our sovereignty will face the full might of our army. And should our worst nightmares come to pass, we will make sure every [Root.GetRaceMember] is willing to die in the defence of their homeland."
+griffon_ideological_though:0 "Ideological Thought"
+griffon_ideological_though_desc:0 "We must strengthen the ideological foundation of our country. The world must know what we stand for, and that we are willing to fight for our values."
+griffon_expansionist_focus:0 "Expansionist Focus"
+griffon_expansionist_focus_desc:0 "All around us, foreign nations await the opportunity to subjugate us. We must not show weakness now, lest they carry out their nefarious plans. Our fate is our own, and should preemptive strikes be necessary to secure the future of our people, then so be it."
+griffon_our_own_way:0 "Our Own Way"
+griffon_our_own_way_desc:0 "Whatever our plans for the future may be, we will make it clear that we are our own nation. Whatever we do will be for the good of our own people."
+griffon_neutrality_focus:0 "Neutrality Focus"
+griffon_neutrality_focus_desc:0 "Let other nations fight each other until they can fight no more. We will never willingly get involved in any military conflict which does not affect our nation or people directly."
+griffon_strengthen_government:0 "Strengthen The Government"
+griffon_strengthen_government_desc:0 "It is becoming more and more clear that a strong, centralised state is required for any modern nation. The days of feudal realms are numbered."
+griffon_fundations_of_a_modern_state:0 "The Foundations Of A Modern State"
+griffon_fundations_of_a_modern_state_desc:0 "Our nation must be united under a large, centralised government. Every citizens allegiance will be to the state and the state alone."
+griffon_only_strong_will_survive:0 "Survival Of The Strongest"
+griffon_only_strong_will_survive_desc:0 "The world is growing dangerous. Our nation will have to be strong to face the coming storm, because ultimately, only the strongest will survive. We will make sure that WE are the strongest. And when the dust settles, we will be mightier than ever before."
+griffon_nationalist_thought:0 "Nationalist Thought"
+griffon_nationalist_thought_desc:0 "Our nation's needs must always come first. Foreign powers seek only to undermine our state and steal our progress for their own sinister purposes. Our nation will reign supreme, and if we must use force to accomplish this, then so be it. "
+griffon_gear_for_war:0 "Gear For War"
+griffon_gear_for_war_desc:0 "It is becoming more and more obvious every day that war with our neighbours is inevitable. We will make sure that we are prepared for prolonged conflict when the time comes."
+griffon_militarization:0 "Militarisation"
+griffon_militarization_desc:0 "Our people must be ready to take up arms and fight for the state at a moment's notice. We will require many capable soldiers for our future campaigns."
+griffon_rightful_rule:0 "Rightful Rule"
+griffon_rightful_rule_desc:0 "There is only one [Root.GetRaceMember] who can rule our nation: the rightful monarch. Where others would seek radical change, we will protect that which made us great in the first place."
+griffon_noble_birthright:0 "Noble Birthright"
+griffon_noble_birthright_desc:0 "Recently, some silly ideas concerning the notion of all [Root.GetRaceMembers] being equal have made the rounds in our country. We must do away with such foolishness immediately and reaffirm the ancient birthright of the nobility."
+griffon_harmony_and_liberty:0 "Harmony And Liberty"
+griffon_harmony_and_liberty_desc:0 "The ponies of Equestria have shown us the way to harmony centuries ago, yet our citizens were always slow to adapt to new ideas. We must finally overcome this obstacle and embrace harmony and liberty for all of our citizens."
+griffon_carry_the_torch:0 "Carry The Torch"
+griffon_carry_the_torch_desc:0 "Now that our population has finally been enlightened and embraced harmony, we will be able to conduct all kinds of research much more effectively."
+griffon_words_not_swords:0 "Words, Not Swords"
+griffon_words_not_swords_desc:0 "We will make it known that upholding the peace is the highest priority in our international policy. By encouraging trade and diplomacy, we can become a bastion of stability in a steadily deteriorating world."
+griffon_common_good:0 "The Common Good"
+griffon_common_good_desc:0 "Our hopes for a lasting peace are getting smaller by the day. We must prepare our industry and people for the possibility of an armed conflict. Every [Root.GetRaceMember] must lend their [Root.GetHands], either by fighting or by working in our factories and mines."
+griffon_stronger_together:0 "Strength In Unity"
+griffon_stronger_together_desc:0 "Even if we face near-impossible odds, working together we can accomplish tremendous feats. Not only will we encourage cooperation and friendship within our borders, but we will also strengthen our diplomatic ties with like-minded nations across the world."
+griffon_the_old_ways:0 "The Old Ways"
+griffon_the_old_ways_desc:0 "Monarchy has worked well for thousands of years, why should we change our government now? Radical changes can be very harmful and even dangerous to our society. We will make sure that every [Root.GetRaceMember] understands the importance of tradition and the old ways."
+griffon_defend_the_tradition:0 "Deterrence"
+griffon_defend_the_tradition_desc:0 "Our culture and traditions are sacred. Our sovereignty must be secured in order for our national identity to survive. By fortifying our borders, we will make sure that any foreign power attempting to strike our homeland will pay a terrible price."
+griffon_home_guard:0 "Home Guard"
+griffon_home_guard_desc:0 "By forming paramilitary units in which every [Root.GetRaceMember] must serve for a time, we can drastically increase the amount of trained soldiers at our disposal as well as improving our general defensive capabilities."
+griffon_leading_the_way:0 "Leading The Way"
+griffon_leading_the_way_desc:0 "We must make sure that every soldier knows exactly what they are fighting for. Every [Root.GetRaceMember] serving in our armed forces must be willing to die for their country."
+
+griffon_industrial_effort:0 "Industrial Effort"
+griffon_industrial_effort_desc:0 "In order to become a modern state, we must improve our industrial capabilities. Funding research in new technological fields would certainly help in this endeavour."
+griffon_cottage_industry:0 "Cottage Industry"
+griffon_cottage_industry_desc:0 "By encouraging our population to take up smaller crafts in addition to their full-time occupation, we should be able to improve our light industry."
+griffon_roads:0 "Roads and Railways"
+griffon_roads_desc:0 "We must improve our general infrastructure in order to achieve greater economic growth. To this end, we will construct railways connecting our entire nation, as well as improving our road network."
+griffon_boost_economy:0 "Economic Stimulus"
+griffon_boost_economy_desc:0 "By subsidising important parts of our economy and funding industrial research, we can devise a program which will stimulate and vitalise our economy and industry."
+griffon_industrial_revolution:0 "Industrial Revolution"
+griffon_industrial_revolution_desc:0 "Most other nations of the world have long embraced the Industrial Revolution and all the benefits that come with it. By building large manufacturies using the latest machinery, we can significantly improve our heavy industry."
+griffon_education_reform:0 "Education Reform"
+griffon_education_reform_desc:0 "It is well known that we are lacking in the scientific sector. A universal education reform will help us improve our scientific capabilities in the future."
+griffon_railway:0 "Improved Railways"
+griffon_railway_desc:0 "By further increasing the size of our national railway network as well as standardising all train cars and engines used we can significantly improve the infrastructure of our nation."
+griffon_economic_boom:0 "Economic Boom"
+griffon_economic_boom_desc:0 "Our efforts to stimulate our economy have been very successful thus far. It is important that we build on our success and keep up our industrial development, lest our efforts be for nothing."
+griffon_science_effort:0 "Scientific Effort"
+griffon_science_effort_desc:0 "Building on the success of our education reform, we should now fund higher education programs to further increase our scientific capabilities."
+griffon_science_effort_ii:0 "Scientific Effort II"
+griffon_science_effort_ii_desc:0 "By inviting foreign scientists to teach and work at our universities, we should be able train a new generation of skilled scientists, allowing us to do more research than ever before."
+griffon_universities:0 "New Universities"
+griffon_universities_desc:0 "Merely improving our existing universities is not enough. We must construct more universities using state-of-the-art architecture and construction techniques. We can expect many breakthroughs to happen in these grand halls of learning."
+griffon_scientific_breakthrough:0 "Scientific Breakthrough"
+griffon_scientific_breakthrough_desc:0 "Owing to our recent industrial and educational reforms, we are now in a position to become one of the most advanced nations in the world. Now, we can reap our reward and take full advantage of our industrial and scientific prowess."
+griffon_industrial_effort_ii:0 "Industrial Effort II"
+griffon_industrial_effort_ii_desc:0 "Our recent scientific and industrial advances should allow us to improve our industrial capabilities even further by applying new technologies and practices."
+griffon_new_factories:0 "New Factories"
+griffon_new_factories_desc:0 "We should construct a number of new factories from the ground up, using state-of-the-art machinery and construction techniques."
+griffon_modernise_society:0 "Modernise Society"
+griffon_modernise_society_desc:0 "Our industrial power has increased immeasurably in the past few years alone. Along with it, our society has changed as well, becoming comparable to the great nations of the world. It is time for us to fully reap the benefits of our new, modern society and industry."
+griffon_arms_effort:0 "Armaments Effort"
+griffon_arms_effort_desc:0 "The world is growing dangerous, and whether or not we will be drawn into a military conflict, we must be prepared. Funding our heavy industry will allow us to equip our soldiers with everything they need."
+griffon_arms_effort_ii:0 "Armaments Effort II"
+griffon_arms_effort_ii_desc:0 "Now that we have embraced the industrial revolution, we should be able to improve our military production as well as our civilian industry."
+griffon_arms_effort_iii:0 "Armaments Effort III"
+griffon_arms_effort_iii_desc:0 "Our light industry has improved significantly, but our heavy industry is still lacking in some departments. Further developing our military industry will allow us to maintain a larger military."
+
+griffon_expand_army:0 "Army Expansion"
+griffon_expand_army_desc:0 "Military conflict seems more likely by the day. In order to prepare us for this possibility, we should expand and improve our army."
+griffon_improved_weapons:0 "Improved Weapons"
+griffon_improved_weapons_desc:0 "Most of the infantry equipment in use by our army is woefully outdated. If we wish to field a modern and effective army, we must develop new weapon systems as soon as possible."
+griffon_artillery_effort:0 "Artillery Effort"
+griffon_artillery_effort_desc:0 "Artillery is very effective at supporting our infantry. Developing new artillery guns would go a long way to improving our army's capabilities."
+griffon_special_forces:0 "Special Forces"
+griffon_special_forces_desc:0 "Special Forces are able to carry out missions that are too dangerous or complicated for our regular troops. When used correctly, they are able to turn the tide of a war."
+griffon_doctrine_advancement:0 "Doctrinal Advancement"
+griffon_doctrine_advancement_desc:0 "We have equipped our army with the best armaments available to us, turning it into an effective force. There is still room for improvement, however, especially in our military doctrine. By studying modern combat and conducting training exercises, we should be able to improve the tactical and strategical competence of our officers."
+griffon_support:0 "Support Companies"
+griffon_support_desc:0 "Support companies such as engineers or recon units are able to assist our main force in many ways. Integrating support companies into our divisions will surely improve the effectiveness of our army."
+griffon_traditonal_warfair:0 "Traditional Warfare"
+griffon_traditonal_warfair_desc:0 "[Root.GetTraditionalWarfareDesc]"
+griffon_traditonal_warfair_desc_grif:0 "Our knights have stood strong for generations, and are still more than capable of defending our nation against any foreign power. We will focus on improving our knights' tactics and equipment instead of radically changing the core of our army."
+griffon_traditonal_warfair_desc_pony:0 "Our pegasi soldiers have stood strong for generations, and are still more than capable of defending our nation against any foreign power. We will focus on improving our pegasi's tactics and equipment instead of radically changing the core of our army."
+griffon_traditonal_warfair_desc_other:0 "In those changing times we need to focus on what protected us for all previous generations. Only by staying true to tradition we can prevail."
+griffon_modern_warfair:0 "Modern Warfare"
+griffon_modern_warfair_desc:0 "The world has changed a lot in the past few years, and so has the nature of conflict. Mobility is becoming more important than ever, and so it would be madness to keep relying on traditional warfare tactics and equipment."
+griffon_local_tank_production:0 "Local Tank Production"
+griffon_local_tank_production_desc:0 "In order to fully modernise our army, we need to integrate armoured forces into our military. Our local industry and scientists are more than capable of developing and producing our own tank models."
+griffon_tank_licenses:0 "Foreign Tank Licenses"
+griffon_tank_licenses_desc:0 "Due to our small scientific base, foreign tank designs are far superior to anything we can come up with. Instead of wasting time trying to design our own vehicles, we should fund a production license program and request licenses from allies or other sympathetic regimes."
+
+griffon_aviation_effort:0 "Aviation Effort"
+griffon_aviation_effort_desc:0 "[Root.GetAviationEffortDesc]"
+griffon_aviation_effort_desc_grif:0 "Every healthy griffon is capable of flight. In recent times, however, many advances have been made in mechanical aviation. Using modern aircraft, we can fly faster than ever before. The creation of a designated flying corps using only aircraft is in order."
+griffon_aviation_effort_desc_other:0 "Recently, many advances have been made in mechanical aviation. Using modern aircraft, we can fly faster than ever before. The creation of a designated flying corps using only aircraft is in order."
+griffon_fighter_focus:0 "Fighter Focus"
+griffon_fighter_focus_desc:0 "Fighters are able to defend our skies from any foreign incursions, and are also capable of assisting bombers with strikes into enemy air space."
+griffon_fighter_focus_2:0 "Advanced Fighter Focus"
+griffon_fighter_focus_2_desc:0 "Many advances have been made in fighter development, and many are likely still to come. With increased funding to our scientists, we should be able to speed up the development of new models significantly."
+griffon_bomber_focus:0 "Bomber Focus"
+griffon_bomber_focus_desc:0 "Bombers are able to strike deep into enemy airspace, reducing their infrastructure and industry to rubble. Using bombers, we can send our enemies back to the stone age."
+griffon_bomber_focus_2:0 "Advanced Bomber Focus"
+griffon_bomber_focus_2_desc:0 "Previous bomber models have proven to be very effective. There are still many improvements to be made, however, and with increased funding, we should be able to develop bombers superior to anything we currently possess."
+griffon_aviation_effort_2:0 "A Modern Air Force"
+griffon_aviation_effort_2_desc:0 "We now have access to highly advanced aircraft, but there is still room for improvement. Expanding our airfields and conducting training exercises will allow us to transform our flying corps into a truly modern air force."
+griffon_purchase_foreign:0 "Foreign Aircraft Licenses"
+griffon_purchase_foreign_desc:0 "Sadly, we lack the scientific base to develop our own aircraft. We should instead seek production licenses from foreign powers. This should allow us to focus our research on other fields."
+griffon_fighter_competition:0 "Foreign Fighter Competition"
+griffon_fighter_competition_desc:0 "We have a choice between many different fighter models from foreign nations. Holding a fighter competition should help us to determine which is the most suited to our needs."
+griffon_bomber_competition:0 "Foreign Bomber Competition"
+griffon_bomber_competition_desc:0 "We have a choice between many different bomber models from foreign nations. Holding a bomber competition should help us to determine which is the most suited to our needs."
+
+griffon_naval_effort:0 "Naval Effort"
+griffon_naval_effort_desc:0 "The expansion of our navy should be our first priority. Assign all available resources to new dockyards and research into light surface ships."
+griffon_flexible_navy:0 "Flexible Navy"
+griffon_flexible_navy_desc:0 "Reinventing naval warfare to account for the advances in submarine technology will allow us to strike efficiently against enemy convoys."
+griffon_large_navy:0 "Large Navy"
+griffon_large_navy_desc:0 "Adapting our naval doctrines to accommodate large ships and ensuring the safety of our trade convoys will teach us much about what sort of ships we need."
+griffon_cruiser_effort:0 "Cruiser Effort"
+griffon_cruiser_effort_desc:0 "Before making forays into advanced battleship research, the smaller cruisers are in need of replacement."
+griffon_submarine_effort:0 "Submarine Effort"
+griffon_submarine_effort_desc:0 "Submarine warfare is the most exciting naval development in recent years. We would do well to not just protect against submarines, but also use them against enemy shipping."
+griffon_capital_ships_effort:0 "Capital Ship Effort"
+griffon_capital_ships_effort_desc:0 "The nation with the most battleships will rule the oceans. Battleships and carriers represent the old and the new in naval superiority."
+griffon_destroyer_effort:0 "Destroyer Effort"
+griffon_destroyer_effort_desc:0 "Studying the design and strategic use of submarines, we have also learned how to counter those strategies. Destroyers will be crucial for this."

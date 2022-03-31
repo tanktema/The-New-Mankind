@@ -1,0 +1,65 @@
+﻿l_russian:
+    ### New Politics
+    militarism:0 "Милитаризм"
+    militarism_desc:0 "Милитаризм - форма правления, обретенная по праву сильного. Правительство вынашивает наполеоновские планы и презирает миротворчество"
+    democratical_protectionism:0 "Демократический Протекционизм"
+    democratical_protectionism_esc:0 "Основанная на идеях взаимовыручки и дружбы, Демократический Протекционизм стремится избавиться от слабостей демократического режима. Для этого существует Военный Комитет, наделенный чрезвычайными полномочиями, который берет власть в свои руки в случае начала войны"
+
+    ### UNS
+    UNS_fascism_party:0 "НСПА" 
+    UNS_democratic_party:0 "ДПА"
+    UNS_communism_party:0 "СДПА"
+    UNS_neutrality_party:0 "РПА"
+    UNS_fascism_party_long:0 "Национал-Социалистическая партия Америки"
+    UNS_democratic_party_long:0 "Демократическая партия Америки"
+    UNS_communism_party_long:0 "Социал-Демократическая партия Америки"
+    UNS_neutrality_party_long:0 "Республиканская Партия Америки"
+    UNS_harmonic_party:0 "ГПА"
+    UNS_harmonic_party_long:0 "Гармоническая Партия Америки" 
+    UNS_nasizm_party:0 "НСАВП"
+    UNS_nasizm_party_long:0 "Национал-Социалистическая Американская Рабочая Партия"
+    UNS_militarizm_party:0 "ООА"
+    UNS_militarizm_party_long:0 "Организация Обороны Америки"
+    
+    UNS_statesoc_name_long:0 "STATESOC"
+    UNS_statesoc_name:0 "STATESOC"
+    ### GEM
+    GEM_fascism_party:0 "НСДАП"
+    GEM_fascism_party_long:0 "Национал-Социалистическая Немецкая Рабочая Партия"
+    GEM_communism_party:0 "СДПГ"
+    GEM_communism_party_long:0 "Социал-Демократическая Партия Германии"
+    GEM_democratic_party:0 "РПГ"
+    GEM_democratic_party_long:0 "Республиканская Партия Германии"
+    GEM_neutrality_party:0 "СК"
+    GEM_neutrality_party_long:0 "Сторонники Кайзера"
+     
+    ### GRB
+    GRB_fascism_party:0 "Британский союз"
+    GRB_fascism_party_long:0 "Британский союз"
+    GRB_communism_party:0 "Лейбористы"
+    GRB_communism_party_long:0 "Лейбористская партия"
+    GRB_democratic_party:0 "КПВ"
+    GRB_democratic_party_long:0 "Консервативная партия Великоритании"
+    GRB_neutrality_party:0 "Королевская семья"
+    GRB_neutrality_party_long:0 "Королевская семья"
+     
+    ### SOU
+    SOU_fascism_party:0 "ИПСС"
+    SOU_fascism_party_long:0 "Империалистическая Партия Советского Союза"
+    SOU_communism_party:0 "КПСС"
+    SOU_communism_party_long:0 "Коммунистическая Партия Советского Союза"
+    SOU_democratic_party:0 "РПСС"
+    SOU_democratic_party_long:0 "Реформистская Партия Советского Союза"
+    SOU_neutrality_party:0 "ДС"
+    SOU_neutrality_party_long:0 "Династия Смоляных"
+    
+    GRB_anarcy_paty_long:0 "Народная Партия Британии"
+    GRB_anarcy_paty:0 "Народная Партия"
+    UNS_imperium_party_long:0 "Свет Имперской Истины"
+    UNS_imperium_party:0 "Власть Императора"
+    
+    tnm_human_supeiority:0 "Человеческое превосходство"
+    tnm_human_supeiority_desc:0 "В основе идеологии Человеческого превосходства лежит важность и ценность человека как биологического вида. Основанная на идее расового превосходства, они продвигается в догмах Имперской Истины. Император ставит процветание человечества превыше всего, и готов идти к нему любыми способами"
+    tnm_militarism:0 "Милитаризм"
+    tnm_militarism_desc:0 "Основой Милитаризма являются военное превосходство одной нации над другой. В качестве основополагающего фактора выставляется военная сила государства, патриотизм населения и стремление людей защищать свою страну"
+    

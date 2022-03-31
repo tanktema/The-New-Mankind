@@ -1,0 +1,9 @@
+DEM_INF_01 = {
+	name = "Demon Divisions"
+	for_countries = { DEM }
+	division_types = { "infantry" }
+	fallback_name = "%d Demon Division"
+	ordered = {
+		1 = { "%st Demon Division" }
+	}
+}

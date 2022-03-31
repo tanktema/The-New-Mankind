@@ -1,0 +1,698 @@
+ideas = {
+	country = {	
+		GEM_polit_crisis = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				political_advisor_cost_factor = 1
+				trade_laws_cost_factor = 1
+				mobilization_laws_cost_factor = 1
+				economy_cost_factor = 1
+				high_command_cost_factor = 1
+				air_chief_cost_factor = 1
+				army_chief_cost_factor = 1
+				navy_chief_cost_factor = 1
+				
+			}
+			
+		}
+		GEM_military_ration_system = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				conscription_factor = 0.2
+				training_time_factor = -0.1
+				conscription = 0.005
+				MONTHLY_POPULATION = -0.2
+			}
+		}
+		GEM_more_food_for_workers = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_oil_factor = 0.1
+				consumer_goods_factor = -0.01
+				MONTHLY_POPULATION = -0.1
+			}
+		}
+		GEM_equal_rations = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				stability_factor = 0.1
+			}
+		}
+		GEM_no_xenophobia = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				non_core_manpower = 0.2
+				stability_factor = 0.1
+				justify_war_goal_time = 0.2
+			}
+		}
+		GEM_no_xenos = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				non_core_manpower = -0.5
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				justify_war_goal_time = -0.1
+			}
+		}
+		GEM_ss_stormtroopers = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				drift_defence_factor = 0.4
+				conscription_factor = 0.2
+				resistance_target = -0.2
+				intelligence_agency_defense = 1
+			}
+		}
+		GEM_coups_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				production_oil_factor = -0.1
+				consumer_goods_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = -0.15
+			}
+		}
+		GEM_ss_disbanding_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				drift_defence_factor = -0.4
+				resistance_target = 0.2
+				intelligence_agency_defense = -2
+			}
+		}
+		GEM_ethnos_cleanups = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				MONTHLY_POPULATION = -0.2
+				weekly_manpower = -20
+				fascism_drift = 0.02
+			}
+		}
+		GEM_race_power = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				war_support_factor = 0.2
+				stability_factor = 0.2
+			}
+		}
+		GEM_military_police = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				drift_defence_factor = 0.4
+				resistance_target = -0.3
+				conscription = 0.005
+			}
+		}
+		GEM_people_militarization = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				conscription_factor = 0.3
+				training_time_factor = -0.2
+			}
+		}
+		GEM_limited_xepansion = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				conscription = 0.01
+				training_time_factor = -0.2
+				army_defence_factor = 0.1
+			}
+		}
+		GEM_unlimited_expansion = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				conscription = 0.015
+				training_time_factor = -0.2
+				army_attack_factor = 0.15
+			}
+		}
+		GEM_military_mission = {
+			removal_cost = -1
+			allowed = { 
+				NOT = {
+					has_war_with = GEM 
+				}
+			}
+			
+			modifier = {
+				army_org_factor = 0.1
+				planning_speed = 0.1
+				attrition = -0.1
+			}
+		}
+		GEM_brand_800 = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				intelligence_agency_defense = 1
+				operative_slot = 1
+				agency_upgrade_time = -0.1
+				intel_network_gain_factor = 0.1
+			}
+		}
+		GEM_natives_police = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				non_core_manpower = 0.2
+				resistance_target = -0.1
+			}
+		}
+		GEM_milcondit = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				conscription = 0.01
+				conscription_factor = 0.2
+				consumer_goods_factor = -0.1
+				production_speed_arms_factory_factor = 0.2
+				production_speed_industrial_complex_factor = -0.2
+				production_speed_bunker_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				offensive_war_stability_factor = 0.3
+				defensive_war_stability_factor = 0.3
+			}
+		}
+		GEM_prewarprep = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industry_repair_factor = 0.1
+				training_time_army_factor = -0.2
+				offensive_war_stability_factor = 0.3
+				defensive_war_stability_factor = 0.3
+			}
+		}
+		GEM_first_son_rule = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				weekly_manpower = 500
+			}
+		}
+		GEM_double_rations_rule = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+			}
+		}
+		GEM_gimmlerunge = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+		GEM_youthtrain = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				training_time_army_factor = -0.2
+				minimum_training_level = -0.02
+			}
+		}
+		GEM_german_followers = {
+			removal_cost = -1 
+			allowed = { always = yes }
+			
+			modifier = {
+				drift_defence_factor = -0.4
+			}
+		}
+		GEM_fascist_supporters = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				fascism_drift = 0.01
+			}
+		}
+		GEM_know_enemy = {
+			removal_cost = -1
+			allowed = { always = yes }
+			
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+		GEM_hanged_nazis = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				fascism_drift = -0.01
+				communism_drift = 0.01
+			}
+		}
+		GEM_ves_tr = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				compliance_gain = 0.01
+				resistance_growth = -0.15
+				subjects_autonomy_gain = -5
+			}
+		
+		}
+		GEM_red_world_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				mobilization_laws_cost_factor = -0.2
+				justify_war_goal_time = -0.2
+			}
+		}
+		GEM_peacekeepers = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				send_volunteers_tension = -0.2
+				send_volunteer_divisions_required = -0.25
+				send_volunteer_size = 2
+			}
+			rule = {
+				can_send_volunteers = yes 
+			}
+		}
+		GEM_peaceful_prop_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				democratic_drift = 0.03
+				stability_factor = 0.1
+				war_support_factor = -0.1
+				defensive_war_stability_factor = 0.3
+				offensive_war_stability_factor = -0.3
+			}
+		}
+		GEM_agains_CHN = {
+			removal_cost = -1
+			allowed = { always = yes }
+			targeted_modifier = {
+				tag = CHN 
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		GEM_debt_UNS_repayment = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = -0.5
+			}
+		}
+		GEM_debt_uns_repayment_rev = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		GEM_banned_fascism = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				fascism_drift = -0.05
+				fascism_acceptance = -50
+			}
+		}
+		GEM_fund_research = {
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.03
+				nuclear_production_factor = 0.01
+			}
+		}
+		GEM_expanded_shifts = {
+			allowed = { always = yes }
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				stability_factor = -0.1
+			}
+		}
+		GEM_rifle_production = {
+			removal_cost = -1
+			allowed = { always = yes }
+			equipment_bonus = {
+				infantry_equipment = {
+					reliability = 0.1
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		GEM_electro_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		GEM_medical_research_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.2
+				weekly_manpower = 150
+			}
+		}
+		GEM_brand_gates_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+			}
+		}
+		GEM_sivvis_pacem = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				mobilization_speed = -0.15
+				army_morale_factor = 0.2
+				breakthrough_factor = 0.1
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+			}
+		}
+		GEM_para_bellum = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				mobilization_speed = 0.15
+				breakthrough_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+		GEM_fortification = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_bunker_factor = 0.15
+			}
+		}
+		GEM_trainings = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				mobilization_speed = 0.25
+			}
+		}
+		GEM_countermeasures = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				air_interception_defence_factor = 0.1
+				air_close_air_support_defence_factor = 0.1
+			}
+		}
+		GEM_sky_sold_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				air_ace_generation_chance_factor = 0.15
+				air_interception_attack_factor = 0.1
+				air_air_superiority_attack_factor = 0.1
+				air_close_air_support_attack_factor = 0.1
+				air_strategic_bomber_attack_factor = 0.1
+			}
+		}
+		GEM_shark_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			equipment_bonus = {
+				ship_hull_submarine = {
+					naval_speed = 0.2
+					torpedo_attack = 0.2
+					surface_visibility = -0.15
+				}
+			}
+		}
+		GEM_researching = {
+			removal_cost = -1
+			allowed = {
+				NOT = {
+					has_war_with = GEM
+				}
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		GEM_researching_CHN = {
+			removal_cost = -1
+			allowed = {
+				NOT = {
+					has_war_with = CHN
+				}
+			}
+			research_bonus = {
+				ss_tech = 0.15
+				tp_tech = 0.15
+			}
+		}
+		GEM_researching_EQS = {
+			removal_cost = -1
+			allowed = {
+				NOT = {
+					has_war_with = EQS
+				}
+			}
+			research_bonus = {
+				bb_tech = 0.15
+				bc_tech = 0.15
+			}
+		}
+		GEM_researching_STG = {
+			removal_cost = -1
+			allowed = {
+				NOT = {
+					has_war_with = STG
+				}
+			}
+			research_bonus = {
+				dd_tech = 0.15
+				cl_tech = 0.15
+			}
+		}
+		GEM_fleet_power = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				convoy_escort_efficiency = 0.15
+				navy_anti_air_attack_factor = 0.15 
+				ships_at_battle_start = 0.25
+				experience_gain_navy_factor = 0.25
+				naval_coordination = 0.15
+			}
+			
+		}
+		
+		human_production_extraworktime = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.1
+				production_oil_factor = 0.1
+			}
+		}
+		
+		GEM_biomodification_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				army_org_regain = 0.10
+				experience_loss_factor = -0.1
+				army_speed_factor = 0.1
+			}
+		}
+		
+		GEM_supply_bonus_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				no_supply_grace = 48
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+			}
+		}
+	
+
+	}
+	
+	
+	tank_manufacturer = {
+		designer = yes 
+		
+		GEM_henshel_werke = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_new_armor
+			}
+			traits = { heavy_tank_producer }
+			research_bonus = {
+				armor = 0.15
+			}
+		}
+		
+		GEM_porsche = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_new_armor
+			}
+			traits = { medium_tank_producer }
+			research_bonus = {
+				armor = 0.1
+			}
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes
+		
+		GEM_mauser = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_more_rifles
+			}
+			traits = { arms_dealer_m }
+		}
+		
+		GEM_opel = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_industry_development
+			}
+			traits = { onwheel_master }
+		}
+	}
+	
+	aircraft_manufacturer = {
+		designer = yes 
+		
+		GEM_blom_und_foss = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_exploring_air
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		GEM_messershmit = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_exploring_air
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = { light_aircraft_manufacturer CAS_manufacturer }
+		}
+		
+	}
+	
+	naval_manufacturer = {
+		designer = yes
+		
+		GEM_lursen_werft = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_fleet_rebuild 
+			}
+			traits = { old_world_shipyard } 
+		}
+	}
+	
+	industrial_concern = {
+		designer = yes 
+		
+		GEM_bayer = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_ask_the_old_ones
+			}
+			traits = { medical_company_trait }
+			research_bonus = { medical_company = 0.07 }
+		}
+		
+		GEM_siemens = {
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_ask_the_old_ones
+			}
+			traits = { electrical_concern_sou }
+		}
+	}

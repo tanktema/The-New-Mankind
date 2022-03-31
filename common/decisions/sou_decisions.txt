@@ -1,0 +1,1465 @@
+soviet_pressure_category = {
+	attack_neighbour = {
+		available = {
+			has_completed_focus = SOU_world_rev
+		}
+		visible = {
+			has_completed_focus = SOU_world_rev
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						original_tag = SOU 
+						is_subject_of = ROOT 
+						is_in_faction_with = ROOT 
+					}
+				}
+				OR = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+		}
+		cost = 50
+		days_remove = 60
+		modifier = {
+			mobilization_speed = 0.15
+			conscription_factor = 0.25
+			political_power_gain = -1
+			mobilization_laws_cost_factor = -0.15
+		}
+		fire_only_once = yes
+		remove_effect = {
+			create_wargoal = {
+				target = FROM
+				type = puppet_wargoal_focus
+			}
+		}
+	}
+	soviet_ultimatum = {
+		available = {
+			has_completed_focus = SOU_world_rev
+		}
+		visible = {
+			has_completed_focus = SOU_world_rev
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				any_neighbor_country = {
+					original_tag = SOU 
+					OR = {
+						original_tag = SOU 
+						is_subject_of = ROOT 
+						is_in_faction_with = ROOT 
+					}
+				}
+				AND = {
+					has_government = communism
+					NOT = {
+						is_in_faction_with = ROOT 
+					}
+				}
+			}
+		}
+		cost = 50
+		modifier = {
+			political_power_gain = -1
+			mobilization_laws_cost_factor = -0.15
+		}
+		days_remove = 10
+		fire_only_once = yes 
+		remove_effect = {
+			FROM = {
+				country_event = { id = sou.7 }
+			}
+		}
+	}
+	set_the_ssr = {
+		available = {
+			has_completed_focus = SOU_world_rev
+		}
+		visible = {
+			FROM = {
+				is_subject_of = ROOT 
+				NOT = {
+					has_autonomy_state = autonomy_socialistic_republic
+				}
+			}
+		}
+		cost = 25
+		remove_effect = {
+			set_autonomy = {
+				target = FROM 
+				autonomy_state = autonomy_socialistic_republic
+			}
+		}
+	}
+}
+soviet_diplomacy_category = {
+	soviet_open_embassy = {
+		available = {
+			has_completed_focus = SOU_diplomatic_intrigues
+		}
+		visible = {
+			has_completed_focus = SOU_diplomatic_intrigues
+		}
+		target_trigger = {
+			FROM = {
+				communism > 0.4
+				NOT = {
+					has_government = communism
+					has_country_flag = soviet_embassy_declined
+					has_country_flag = soviet_embassy_opened
+				}
+			}
+		}
+		days_remove = 30
+		cost = 25
+		remove_effect = {
+			FROM = {
+				country_event = { id = sou.9 }
+			}
+		}
+	}
+	soviet_support_communists = {
+		available = {
+			has_completed_focus = SOU_diplomatic_intrigues
+		}
+		visible = {
+			has_completed_focus = SOU_diplomatic_intrigues
+			FROM = {
+				has_country_flag = soviet_embassy_opened
+				communism < 0.6
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_country_flag = soviet_embassy_opened
+			}
+		}
+		cost = 50
+		days_remove = 60
+		complete_effect = {
+			FROM = {
+				add_ideas = sou_communism_influence
+			}
+		}
+		remove_effect = {
+			FROM = {
+				set_country_flag = soviet_coup_prepared 
+				remove_ideas = sou_communism_influence
+			}
+		}
+	}
+	soviet_communist_coup = {
+		available = {
+			has_completed_focus = SOU_diplomatic_intrigues
+		}
+		visible = {
+			has_completed_focus = SOU_diplomatic_intrigues
+			FROM = {
+				has_country_flag = soviet_coup_prepared
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_country_flag = soviet_coup_prepared
+			}
+		}
+		cost = 75
+		days_remove = 25
+		remove_effect = {
+			FROM = {
+				start_civil_war = {
+					ruling_party = communism
+					ideology = FROM 
+					size = 0.5
+				}
+				set_country_flag = coup_succeeded_sou
+			}
+		}
+	}
+	soviet_postwar_annex = {
+		available = {
+			has_completed_focus = SOU_diplomatic_intrigues
+		}
+		visible = {
+			has_completed_focus = SOU_diplomatic_intrigues
+			FROM = {
+				has_country_flag = coup_succeeded_sou
+				
+				has_civil_war = no 
+			}
+		}
+		target_trigger = {
+			FROM = {
+				has_government = communism
+				has_country_flag = coup_succeeded_sou
+			}
+		}
+		days_remove = 15
+		cost = 50
+		remove_effect = {
+			ROOT = {
+				puppet = FROM 
+				set_autonomy = {
+					target = FROM 
+					autonomy_state = autonomy_socialistic_republic
+				}
+			}
+		}
+	}
+}
+soviet_tsar_coring_decisions = {
+	core_for_tsar = {
+		available = {
+			has_completed_focus = SOU_new_gubernies
+		}
+		visible = {
+			has_completed_focus = SOU_new_gubernies
+			FROM = {
+				AND = {
+					is_core_of = STG 
+					NOT = {
+						is_core_of = EQS 
+					}
+				}
+			}
+		}
+		state_target = yes 
+		target_trigger = {
+			FROM = {
+				AND = {
+					is_core_of = STG 
+					NOT = {
+						is_core_of = EQS 
+					}
+				}
+			}
+		
+		}
+		cost = 40
+		days_remove = 30
+		modifier = {
+			stability_weekly = -0.02
+			MONTHLY_POPULATION = -0.2
+		}
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT 
+			}
+		}
+		fire_only_once = yes
+	}
+}
+state_renaming_category = {
+	rename_state = {
+		available = {
+			is_ai = no
+			FROM = {
+				is_core_of = ROOT 
+			}
+		}
+		state_target = yes 
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT 
+				is_fully_controlled_by = ROOT
+			}
+			
+		}
+		target_array = ROOT.controlled_states
+		complete_effect = {
+			
+		}
+	}
+}
+sou_industrial_effort = {
+	ai_destruction_reduce = {
+		available = {
+			is_ai = yes 
+		}
+		visible = {
+			is_ai = yes 
+		}
+		days_remove = 180
+		complete_effect = {
+			add_to_variable = { industrial_broken_sou = -33 }
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = diminish_1
+					}
+				}
+				swap_ideas = {
+					remove_idea = SOU_industry_broken_lvl1
+					add_idea = SOU_industry_broken_lvl2
+				}
+				set_country_flag = diminish_1
+			}
+			else_if = {
+				limit = {
+					has_country_flag = diminish_1
+				}
+				swap_ideas = {
+					remove_idea = SOU_industry_broken_lvl2
+					add_idea = SOU_industry_broken_lvl3
+				} 
+				set_country_flag = diminish_2
+			}
+			else_if = {
+				limit = {
+					has_country_flag = diminish_2
+				}
+				swap_ideas = {
+					remove_idea = SOU_industry_broken_lvl3
+					add_idea = SOU_industry_broken_lvl4
+				}
+				set_country_flag = diminish_3
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 8
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes 
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+				
+	update_industry_destruc_level_1 = {
+		available = {
+			has_completed_focus = SOU_first_contact
+			custom_trigger_tooltip = {
+				check_variable = { industrial_broken_sou < 75 }
+				tooltip = broken_ind_level_1
+			}
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+			check_variable = { industrial_broken_sou > 0 }
+		}
+		fire_only_once = yes 
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOU_industry_broken_lvl1
+				add_idea = SOU_industry_broken_lvl2
+			}
+		
+				
+			custom_effect_tooltip = decrease_broken_level_tooltip
+			set_country_flag = diminish_1
+		}
+	}
+	update_industry_destruc_level_2 = {
+		available = {
+			has_completed_focus = SOU_first_contact
+			custom_trigger_tooltip = {
+				check_variable = { industrial_broken_sou < 50 }
+				tooltip = broken_ind_level_2
+			}
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+			has_country_flag = diminish_1
+			check_variable = { industrial_broken_sou > 0 }
+		}
+		fire_only_once = yes 
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOU_industry_broken_lvl2
+				add_idea = SOU_industry_broken_lvl3
+			} 
+			set_country_flag = diminish_2
+			custom_effect_tooltip = decrease_broken_level_tooltip
+		}
+	}
+	update_industry_destruc_level_3 = {
+		available = {
+			has_completed_focus = SOU_first_contact
+			custom_trigger_tooltip = {
+				check_variable = { industrial_broken_sou < 25 }
+				tooltip = broken_ind_level_3
+			}
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+			has_country_flag = diminish_2
+			check_variable = { industrial_broken_sou > 0 }
+		}
+		fire_only_once = yes 
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = SOU_industry_broken_lvl3
+				add_idea = SOU_industry_broken_lvl4
+			}
+			custom_effect_tooltip = decrease_broken_level_tooltip
+			set_country_flag = diminish_3
+		}
+	}
+	organize_stroysquads = {
+		available = {
+			has_completed_focus = SOU_first_contact
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+		}
+		cost = 50
+		modifier = {
+			weekly_manpower = -50
+		}
+		days_remove = 60
+		remove_effect = {
+			add_to_variable = { industrial_broken_sou = -5 }
+			custom_effect_tooltip = diminish_ind_break_5_perc
+		}
+		days_re_enable = 30
+	}
+	buy_materials = {
+		available = {
+			has_completed_focus = SOU_first_contact
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+		}
+		cost = 50
+		modifier = {
+			political_power_gain = -0.25
+			conscription_factor = 0.05
+		}
+		days_remove = 20
+		remove_effect = {
+			add_to_variable = { industrial_broken_sou = -2 }
+			custom_effect_tooltip = diminish_ind_break_2_perc
+		}
+		days_re_enable = 15
+	}
+	buy_materials_large = {
+		available = {
+			has_completed_focus = SOU_first_contact
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+		}
+		cost = 100
+		modifier = {
+			political_power_gain = -0.3
+			conscription_factor = 0.1
+		}
+		days_remove = 20
+		remove_effect = {
+			add_to_variable = { industrial_broken_sou = -5 }
+			custom_effect_tooltip = diminish_ind_break_5_perc
+		}
+		days_re_enable = 15
+	}
+	sell_resources_from = {
+		visible = {
+			has_completed_focus = SOU_first_contact
+		}
+		state_target = yes 
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				is_core_of = ROOT
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT 
+				is_fully_controlled_by = ROOT 
+			}
+		}
+		target_array = ROOT.controlled_states
+		cost = 25
+		days_remove = 30
+		days_re_enable = 120
+		complete_effect = {
+			give_resource_rights = { state = FROM receiver = STG }
+			set_variable = { var_resource_sell = 0 }
+		}
+		remove_effect = {
+			STG = { remove_resource_rights = FROM }
+			custom_effect_tooltip = diminish_tt_desc
+			hidden_effect = {
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				set_temp_variable = { industrial_broken_sou_temp = var_resource_sell }
+				divide_temp_variable = { industrial_broken_sou_temp = 2 }
+				round_temp_variable =  industrial_broken_sou_temp 
+				set_variable = { industrial_broken_sou_diminish = industrial_broken_sou_temp }
+				add_to_variable = { industrial_broken_sou = -industrial_broken_sou_diminish }
+			}
+			
+		}
+		
+	}
+	expand_building_time = {
+		available = {
+			has_completed_focus = SOU_first_contact
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+		}
+		cost = 75
+		modifier = {
+			stability_factor = -0.2
+			training_time_army_factor = 0.25
+			industrial_capacity_factory = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+		}
+		days_remove = 30
+		remove_effect = {
+			add_to_variable = { industrial_broken_sou = -5 }
+			custom_effect_tooltip = diminish_ind_break_5_perc
+		}
+		days_re_enable = 60
+	}
+	industrial_sector_rebuilding = {
+		available = {
+			has_completed_focus = SOU_first_contact
+		}
+		visible = {
+			has_completed_focus = SOU_first_contact
+		}
+		cost = 100
+		days_remove = 45
+		modifier = {
+			production_factory_max_efficiency_factor = -0.5
+			production_speed_buildings_factor = -0.5
+		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes 
+				}
+			}
+			add_to_variable = { industrial_broken_sou = -10 }
+			custom_effect_tooltip = diminish_ind_break_10_perc
+		}
+		days_re_enable = 20
+	}
+}
+SOU_resource_effort_category = {
+	explore_steel_in_krasivsk = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 234
+			controls_state = 234
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { steel < 0 }
+			}
+		}
+		remove_effect = {
+			234 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				set_state_flag = sou_steel_1
+			}
+			
+		}
+	}
+	explore_alum_in_krasivsk = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 234
+			controls_state = 234
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { aluminium < 0 }
+			}
+		}
+		remove_effect = {
+			234 = {
+				add_resource = {
+					type = aluminium
+					amount = 24
+				}
+				set_state_flag = sou_aluminium_1
+			}
+			
+		}
+	}
+	explore_tungs_in_krasivsk = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 234
+			controls_state = 234
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { tungsten < 0 }
+			}
+		}
+		remove_effect = {
+			234 = {
+				add_resource = {
+					type = tungsten
+					amount = 24
+				}
+				set_state_flag = sou_tungsten_1
+			}
+			
+		}
+	}
+	ravenskoe_chromium = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 332
+			controls_state = 332
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
+		}
+		remove_effect = {
+			332 = {
+				add_resource = {
+					type = chromium
+					amount = 24
+				}
+				set_state_flag = sou_chromium_1
+			}
+			
+		}
+	}
+	ravenskoe_crystals = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_resource_griff
+				has_completed_focus = SOU_geological_treaty
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 332
+			controls_state = 332
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { crystals < 0 }
+			}
+		}
+		remove_effect = {
+			332 = {
+				add_resource = {
+					type = crystals
+					amount = 18
+				}
+			}
+		}
+	}
+	great_sady_oil = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 233
+			controls_state = 233
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { oil < 0 }
+			}
+		}
+		remove_effect = {
+			233 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+			}
+		}
+	}
+	great_sady_rubber = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_resources 
+				has_completed_focus = SOU_resource_griff
+				has_completed_focus = SOU_geological_treaty
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			owns_state = 233
+			controls_state = 233
+		}
+		cost = 25
+		fire_only_once = yes 
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { rubber < 0 }
+			}
+		}
+		remove_effect = {
+			233 = {
+				add_resource = {
+					type = rubber
+					amount = 24
+				}
+			}
+		}
+	}
+}
+SOU_resource_selling = {
+	sell_resources_to_other_sou = {
+		visible = {
+			OR = {
+				has_completed_focus = SOU_sell_resources
+				has_completed_focus = SOU_geological_treaty
+				has_completed_focus = SOU_resource_griff
+			}
+			OR = {
+				arms_factory < 40
+				industrial_complex < 40
+			}
+		}
+		state_target = yes 
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT 
+				is_core_of = ROOT
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_core_of = ROOT 
+				is_fully_controlled_by = ROOT 
+			}
+		}
+		target_array = ROOT.controlled_states
+		cost = 50
+		days_remove = 60
+		days_re_enable = 120
+		complete_effect = {
+			if = {
+				limit = {
+					has_completed_focus = SOU_sell_resources
+				}
+				random_neighbor_country = {
+					give_resource_rights = { state = FROM }
+					set_country_flag = res_sold_from_sou
+				}
+				set_variable = { var_resource_sell = 0 }
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SOU_geological_treaty
+				}
+				give_resource_rights = { state = FROM receiver = STG }
+				set_variable = { var_resource_sell = 0 }
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SOU_resource_griff
+				}
+				give_resource_rights = { state = FROM receiver = GRF }
+				set_variable = { var_resource_sell = 0 }
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = {
+					has_completed_focus = SOU_sell_resources
+				}
+				random_neighbor_country = {
+					limit = {
+						has_country_flag = res_sold_from_sou
+					}
+					remove_resource_rights = FROM 
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SOU_geological_treaty
+				}
+				STG = {
+					remove_resource_rights = FROM 
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = SOU_resource_griff
+				}
+				GRF = {
+					remove_resource_rights = FROM 
+				}
+			}
+			custom_effect_tooltip = uns_factor_tt_1
+			hidden_effect = {
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = oil
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = steel
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = tungsten
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 4
+						}
+					}
+					add_to_variable = { var_resource_sell = 1 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 9
+						}
+					}
+					add_to_variable = { var_resource_sell = 2 }
+				}
+				else_if = {
+					FROM = {
+						has_resources_amount = {
+							resource = chromium
+							amount > 14
+						}
+					}
+					add_to_variable = { var_resource_sell = 3 }
+				}
+				set_temp_variable = { var_res_temp = var_resource_sell }
+				divide_temp_variable = { var_res_temp = 2 }
+				round_temp_variable =  var_res_temp 
+				set_variable = { var_resources_factories = var_res_temp }
+				add_offsite_building = { 
+					type = industrial_complex
+					level = root.var_resources_factories
+					instant_build = yes 
+				}
+				add_offsite_building = { 
+					type = arms_factory
+					level = root.var_resources_factories
+					instant_build = yes 
+				}
+			}
+			
+		}
+		
+	}
+}
+SOU_vdnh_category = {
+	hold_the_yarm = {
+		icon = yarmarka
+		cost = 25
+		days_remove = 365 
+		complete_effect = {
+			every_other_country = {
+				country_event = { id = spec.3 days = 1 }
+			}
+			country_event = { id = spec.4 days = 14 }
+		}
+	}
+	build_general_pavilion = {
+		icon = general_pav
+		cost = 75
+		available = {
+			NOT = {
+				has_country_flag = is_building_pavilion
+			}
+		}
+		fire_only_once = yes 
+		days_remove = 60
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			set_country_flag = is_building_pavilion
+		}
+		remove_effect = {
+			set_country_flag = built_general_pavilion
+			clr_country_flag = is_building_pavilion
+			custom_effect_tooltip = sou_vdnh_genpav_tooltip
+			add_to_variable = { num_of_built_pavilions = 1 }
+		}
+	}
+	build_military_pavilion = {
+		icon = military_pav
+		cost = 75
+		available = {
+			NOT = {
+				has_country_flag = is_building_pavilion
+			}
+		}
+		fire_only_once = yes 
+		days_remove = 60
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			set_country_flag = is_building_pavilion
+		}
+		remove_effect = {
+			set_country_flag = built_military_pavilion
+			clr_country_flag = is_building_pavilion
+			custom_effect_tooltip = sou_vdnh_milpav_tooltip
+			add_to_variable = { num_of_built_pavilions = 1 }
+		}
+	}
+	build_tractor_pavilion = {
+		icon = tractor_pav
+		cost = 75
+		available = {
+			NOT = {
+				has_country_flag = is_building_pavilion
+			}
+		}
+		fire_only_once = yes 
+		days_remove = 60
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			set_country_flag = is_building_pavilion
+		}
+		remove_effect = {
+			set_country_flag = built_tractor_pavilion
+			clr_country_flag = is_building_pavilion
+			custom_effect_tooltip = sou_vdnh_trapav_tooltip
+			add_to_variable = { num_of_built_pavilions = 1 }
+		}
+	}
+	build_astro_pavilion = {
+		icon = astro_pav
+		cost = 75
+		available = {
+			NOT = {
+				has_country_flag = is_building_pavilion
+			}
+		}
+		fire_only_once = yes 
+		days_remove = 60
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			set_country_flag = is_building_pavilion
+		}
+		remove_effect = {
+			set_country_flag = built_astro_pavilion
+			clr_country_flag = is_building_pavilion
+			custom_effect_tooltip = sou_vdnh_astpav_tooltip
+			add_to_variable = { num_of_built_pavilions = 1 }
+		}
+	}
+	build_medical_pavilion = {
+		icon = medic_pav
+		cost = 75
+		available = {
+			NOT = {
+				has_country_flag = is_building_pavilion
+			}
+		}
+		fire_only_once = yes 
+		days_remove = 60
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			set_country_flag = is_building_pavilion
+		}
+		remove_effect = {
+			set_country_flag = built_medical_pavilion
+			clr_country_flag = is_building_pavilion
+			custom_effect_tooltip = sou_vdnh_medpav_tooltip
+			add_to_variable = { num_of_built_pavilions = 1 }
+		}
+	}
+	build_agronomical_pavilion = {
+		icon = agron_pav
+		cost = 75
+		available = {
+			NOT = {
+				has_country_flag = is_building_pavilion
+			}
+		}
+		fire_only_once = yes 
+		days_remove = 60
+		modifier = {
+			production_speed_buildings_factor = -0.2
+			political_power_gain = -0.2
+		}
+		complete_effect = {
+			set_country_flag = is_building_pavilion
+		}
+		remove_effect = {
+			set_country_flag = built_agro_pavilion
+			clr_country_flag = is_building_pavilion
+			custom_effect_tooltip = sou_vdnh_agrpav_tooltip
+			add_to_variable = { num_of_built_pavilions = 1 }
+		}
+	}
+}
+SOU_cremlin_category = {
+	keep_building_cremlin = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = building_cremlin_less_3
+				check_variable = { num_buiild_cremlin < 4 }
+			}
+		}
+		visible = {
+			check_variable = { num_buiild_cremlin < 4 }
+		}
+		cost = 50
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			custom_effect_tooltip = build_libstat_tt_1
+			add_to_variable = { num_buiild_cremlin = 1 }
+		}
+	}
+	finish_building_creml = {
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = sou_cremlin_build_3_times 
+				check_variable = { num_buiild_cremlin = 4 }
+			}
+		}
+		fire_only_once = yes 
+		cost = 75
+		days_remove = 40
+		modifier = {
+			production_speed_buildings_factor = -0.1
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			add_ideas = SOU_cremlin_idea
+		}
+	}
+}
+SOU_fleet_remake_category = {
+	SOU_start_production_of_battlsehip = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = SOU_fleet_effort
+		}
+		visible = {
+			has_completed_focus = SOU_fleet_effort
+		}
+		cost = 25
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 25
+		remove_effect = {
+			set_country_flag = UNS_founded_bb
+			custom_effect_tooltip = UNS_founded_bb_tt
+		}
+	}
+	
+	SOU_build_the_guns = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 25
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		days_remove = 40
+		remove_effect = {
+			set_country_flag = UNS_built_guns
+			custom_effect_tooltip = UNS_built_guns_tt
+		}
+		fire_only_once = yes
+	}
+	SOU_build_the_engine = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 35
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 80
+		remove_effect = {
+			set_country_flag = UNS_built_engine
+			custom_effect_tooltip = UNS_built_engine_tt
+		}
+	}
+	SOU_build_the_controls = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 35
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 80
+		remove_effect = {
+			set_country_flag = UNS_built_controls
+			custom_effect_tooltip = UNS_built_controls_tt
+		}
+	}
+	SOU_build_the_paluba = {
+		available = {
+			num_of_available_naval_factories > 0
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		visible = {
+			has_completed_focus = SOU_fleet_effort
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 25
+		modifier = {
+			industrial_capacity_dockyard = -0.4
+		}
+		fire_only_once = yes
+		days_remove = 50
+		remove_effect = {
+			set_country_flag = UNS_built_paluba
+			custom_effect_tooltip = UNS_built_paluba_tt
+		}
+	}
+	SOU_build_the_ship = {
+		available = {
+			has_country_flag = UNS_built_controls
+			has_country_flag = UNS_built_engine
+			has_country_flag = UNS_built_guns
+			has_country_flag = UNS_built_paluba
+			capital_scope = {
+				naval_base > 0
+			}
+		}
+		visible = {
+			has_country_flag = UNS_founded_bb
+		}
+		cost = 60
+		modifier = {
+			industrial_capacity_dockyard = -0.8
+		}
+		fire_only_once = yes
+		days_remove = 80
+		remove_effect = {
+			hidden_effect = {
+				load_oob = "SOU_built_the_bb"
+			}
+			custom_effect_tooltip = sou_bb_built_ship_tt
+		}
+		fire_only_once = yes
+	}
+}

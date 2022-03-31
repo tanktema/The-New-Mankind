@@ -1,0 +1,930 @@
+characters={
+	UNS_john_kennedy={
+		name=UNS_john_kennedy
+		portraits={
+			civilian={
+				large="gfx/leaders/UNS/Kennedy.dds"
+			}
+		}
+		country_leader={
+			desc="UNS_demo_desc"
+			ideology=liberalism
+			traits={ human_leader demo_leader }
+			expire="1999.9.9.1"
+			id=-1
+		}
+	}
+	UNS_gus_hall={
+		name=UNS_comm_adv
+		portraits={
+			civilian={
+				large="gfx/leaders/UNS/Hall.dds"
+				small = "GFX_idea_UNS_comm_adv"
+			}
+		}
+		country_leader={
+			desc="UNS_comm_desc"
+			ideology=marxism
+			traits={ human_leader comm_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_comm_adv
+			
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				has_completed_focus = UNS_comm_1
+			}
+			traits = {
+				comm_bring
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 100
+					OR = {
+						has_country_flag = AI_UNS_COMMUNISM_STATESOC
+						has_country_flag = AI_UNS_COMMUNISM_STANDART
+					}
+				}
+			}
+		}
+	}
+	UNS_george_rockwell={
+		name=UNS_fasc_adv
+		portraits={
+			civilian={
+				large="gfx/leaders/UNS/Rockwell.dds"
+				small = "GFX_idea_UNS_fasc_adv"
+			}
+		}
+		country_leader={
+			desc="UNS_fasc_desc"
+			ideology=nazism
+			traits={ human_leader fasc_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_fasc_adv
+			
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+				has_completed_focus = UNS_fasc_1
+			}
+			traits = {
+				fasc_bring
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 100
+					OR = {
+						has_country_flag = AI_UNS_FASC_ROCKWELL
+						has_country_flag = AI_UNS_MILITARY_FASC
+						has_country_flag = AI_UNS_MILITARY_DEMO
+					}
+				}
+			}
+				
+		}
+	}
+	UNS_general_gershell_fon_shepherd={
+		name=general_shepherd
+		portraits={
+			army={
+				small="gfx/interface/ideas/shepherd_hmk.dds"
+			}
+			army={
+				large="gfx/leaders/UNS/Shep.dds"
+			}
+			civilian = {
+				large = "gfx/leaders/UNS/Shep.dds"
+			}
+		}
+		field_marshal={
+			traits={ gen_shepherd desert_storm }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=14999
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = general_shepherd
+			
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				NOT = {
+					has_country_leader = { character = UNS_general_gershell_fon_shepherd ruling_only = yes }
+				}
+			}
+			traits = { army_chief_offensive_1 }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 10
+					has_war = yes 
+				}
+			}
+		}
+		
+		country_leader = {	
+			expire = 1965.1.1
+			ideology = tnm_militarism
+			traits = {
+				military_leader
+				human_leader
+			}
+		}
+		
+	}
+	UNS_connor_kent={
+		name=UNS_connor_kent
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/UNS/UNS_connor_kent.dds"
+			}
+			army={
+				large="gfx/leaders/UNS/Kent.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer infantry_commander_hum ambusher }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	UNS_arthur_west={
+		name=UNS_arthur_west
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/UNS/UNS_arthur_west.dds"
+			}
+			army={
+				large="gfx/leaders/UNS/West.dds"
+			}
+		}
+		corps_commander={
+			traits={ panzer_expert fortress_buster }
+			skill=5
+			attack_skill=5
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	UNS_elian_chaney={
+		name=UNS_elian_chaney
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/UNS/UNS_elian_chaney.dds"
+			}
+			army={
+				large="gfx/leaders/UNS/Chaney.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer combined_arms_expert }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=5
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UNS_rachel_ramirs={
+		name="Rachel Ramirs"
+		portraits={
+			civilian={
+				large="gfx/leaders/Pony/portrait_pony_generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1016.1.1.12"
+			id=-1
+		}
+	}
+	
+	UNS_harry_trueman = {
+		name = UNS_demo_adv
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UNS/Trueman.dds"
+				small = "GFX_idea_UNS_demo_adv"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_demo_adv
+			
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				has_completed_focus = UNS_demo_1
+				NOT = {
+					has_country_flag = kennedy_killed
+				}
+			}
+			traits = {
+				demo_bring
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 20
+					has_country_flag = AI_UNS_HISTORICAL
+				}
+			}
+		}
+	}
+	
+	UNS_rarity = {
+		name = UNS_rarity
+		portraits = {
+			civilian = {	
+				small = "GFX_idea_UNS_rarity"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_rarity
+			
+			allowed = { original_tag = UNS }
+			available = {
+				has_completed_focus = UNS_manhattan_manehattan
+				NOT = {
+					country_exists = NLR
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+			traits = { rarity_the_designer }
+		}
+	}
+	
+	UNS_lyra_heartsrings = {
+		name = UNS_lyra_heartsrings
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_lyra_heartsrings"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_lyra_heartsrings
+			
+			allowed = { original_tag = UNS }
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 10
+					check_variable = { acceptance_value < 50 }
+				}
+				modifier = {
+					factor = 0
+					check_variable = { acceptance_value = 100 }
+				}
+			}
+			traits = { lyra_human_lover }
+			on_add = {
+				hidden_effect = {
+					acceptance_expand_extra = yes
+				}
+			}
+			on_remove = {
+				hidden_effect	= {
+					add_to_variable = { acceptance_value = -10 }
+					if = {
+						limit = {
+							OR = {
+								has_government = democratic
+								has_government = neutrality
+							}
+						}
+						add_to_variable = { acceptance_stability = -0.05 }
+						add_to_variable = { acceptance_militarism_penalty = 0.05 }
+					}
+					if = {
+						limit = {
+							OR = {
+								has_government = communism
+								has_government = fascism
+							}
+						}
+						add_to_variable = { acceptance_stability = -0.02 }
+					}
+					clamp_variable = {
+						var = acceptance_value
+						min = 0
+						max = 100
+					}
+				}
+			}
+		}	
+	}
+	
+	UNS_twilight_sparkle_visitor = {
+		name = UNS_twilight_sparkle_visitor
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_twilight_sparkle_visitor"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_twilight_sparkle_visitor
+			
+			allowed = {
+				original_tag = UNS 
+			}
+			visible = {
+				EQS = {
+					is_subject = no
+					exists = yes
+				}
+				has_completed_focus = UNS_twilight
+			}
+			available = {
+				original_tag = UNS
+				has_country_flag = twilight_visit
+			}
+			traits = { peoples_favourite }
+			research_bonus = {
+				magical_tech = 0.1
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 10 
+					has_completed_focus = UNS_knowledge_to_masses
+				}
+			}
+		}
+	}
+	
+	UNS_robert_oppenheimer = {
+		name = UNS_robert_oppenheimer
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_robert_oppenheimer"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_robert_oppenheimer
+			
+			allowed = {	original_tag = UNS }
+			available = {
+				NOT = {
+					has_government = fascism 
+				}
+			}
+			traits = { nuclear_pacifist }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 50
+					date > 1010.1.1
+				
+				}
+				modifier = {
+					factor = 100
+					date > 1014.1.1
+				}
+			}
+		}
+	}
+	
+	UNS_sky_star = {
+		name = UNS_sky_star
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_sky_star"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = UNS_sky_star
+			
+			allowed = {	original_tag = UNS }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+			}
+			traits = { magical_human_assistant }
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+	
+	general_bradley = {
+		name = general_bradley
+		portraits = {
+			civilian = {
+				small = "GFX_idea_general_bradley"
+			}
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = general_bradley
+			
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				has_completed_focus = UNS_doctrine_development 
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			traits = { army_chief_defensive_2 }
+		}
+	}
+	
+	UNS_captain_pettaine = {
+		name = UNS_captain_pettaine
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_captain_pettaine"
+			}
+		}
+		
+		advisor = {
+			slot = air_chief
+			idea_token = UNS_captain_pettaine
+			
+			allowed = {
+				original_tag = UNS
+			}
+			available = {
+				has_completed_focus = UNS_our_sky
+			}
+			traits = { human_air_leader }
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	
+	UNS_colonel_karnel = {
+		name = UNS_colonel_karnel
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_colonel_karnel"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = UNS_colonel_karnel
+			
+			allowed = {
+				original_tag = UNS 
+			}
+			available = {
+				has_completed_focus = UNS_army
+			}
+			traits = { army_planning_master_chief }
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	
+	UNS_phelps = {
+		name = UNS_phelps
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_phelps"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = UNS_phelps
+			
+			allowed = { original_tag = UNS }
+			
+			modifier = {
+				land_doctrine_cost_factor = -0.12
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				conscription_factor = 0.2
+			}
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	
+	UNS_holland = {
+		name = UNS_holland
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_holland"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = UNS_holland
+			
+			allowed = { original_tag = UNS }
+			
+			ai_will_do = {
+				factor = 10
+			}
+			modifier = {
+				land_doctrine_cost_factor = -0.1
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				planning_speed = 0.1
+				command_power_gain = 0.2
+			}
+		}
+	}
+	
+	UNS_harrison = {
+		name = UNS_harrison
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_harrison"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = UNS_harrison
+			
+			allowed = { original_tag = UNS }
+			available = { 
+				has_completed_focus = UNS_air_superiority
+			}
+			
+			
+			ai_will_do = {
+				factor = 10
+			}
+			modifier = {
+				land_doctrine_cost_factor = -0.14
+				air_doctrine_cost_factor = -0.05
+				experience_gain_air = 0.02
+				experience_gain_army = 0.02
+			}
+		}
+	}
+		
+	UNS_billy_scott = {
+		name = UNS_billy_scott
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_billy_scott"
+			}
+		}
+		
+		advisor = {
+			slot = navy_chief
+			idea_token = UNS_billy_scott
+			
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			available = {
+				has_completed_focus = UNS_our_fleet
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			modifier = {
+				
+				experience_gain_navy = 0.03
+			}
+		}
+	}
+	
+	UNS_zak_Harris = {
+		name = UNS_zak_Harris
+		portraits = {
+			army = {
+				small = "GFX_idea_UNS_zak_Harris"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = UNS_zak_Harris
+			
+			allowed = {
+				original_tag = UNS 
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			traits = { 
+				army_logistics_2
+			}
+		}
+	}
+		
+	UNS_hudson = {
+		name = UNS_hudson
+		portraits = {
+			army = {
+				small = "GFX_idea_UNS_hudson"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = UNS_hudson
+			ai_will_do = {
+				factor = 10
+			}
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			traits = { 
+				air_chief_all_weather_2
+			}
+		}
+	}
+
+	UNS_kline = {
+		name = UNS_kline
+		portraits = {
+			army = {
+				small = "GFX_idea_UNS_kline"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = UNS_kline
+			ai_will_do = {
+				factor = 10
+			}
+			allowed = {
+				original_tag = UNS 
+			}
+			
+			traits = { 
+				army_chief_drill_2
+			}
+		}
+	}
+	
+	UNS_alice = {
+		name = UNS_alice
+		portraits = {
+			army = {
+				small = "GFX_idea_UNS_alice"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = UNS_alice
+			
+			allowed = {
+				original_tag = UNS 
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			traits = { 
+				army_chief_offensive_2
+			}
+		}
+	}
+		
+	UNS_jason_broady = {
+		name = UNS_jason_broady
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_jason_broady.dds"
+				large = "gfx/leaders/UNS/gen_broady.dds"
+			}
+		}
+	}
+		
+	UNS_adam_savage = {
+		name = UNS_adam_savage
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_adam_savage.dds"
+				large = "gfx/leaders/UNS/gen_savage.dds"
+			}
+		}
+	}	
+		
+	UNS_colonel_barton = {
+		name = UNS_colonel_barton
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_colonel_barton.dds"
+				large = "gfx/leaders/UNS/gen_barton.dds"
+			}
+		}
+	}	
+
+	UNS_moonstriker = {
+		name = UNS_moonstriker
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_moonstriker.dds"
+				large = "gfx/leaders/UNS/moonstriker.dds"
+			}
+		}
+	}
+
+	UNS_maximilian_carter = {
+		name = UNS_maximilian_carter
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_maximilian_carter.dds"
+				large = "gfx/leaders/UNS/Carter.dds"
+			}
+		}
+	}
+	
+	UNS_sivill_ironshield = {
+		name = UNS_sivill_ironshield
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_sivill_ironshield.dds"
+				large = "gfx/leaders/UNS/Sivill.dds"
+			}
+		}
+	}
+	
+	UNS_carlax = {
+		name = UNS_carlax
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_carlax.dds"
+				large = "gfx/leaders/UNS/Carlax.dds"
+			}
+		}
+	}
+	
+	UNS_lina_cypher = {
+		name = UNS_lina_cypher
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_lina_cypher.dds"
+				large = "gfx/leaders/UNS/Cypher.dds"
+			}
+		}
+	}
+	
+	UNS_hartmann = {
+		name = UNS_hartmann
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/advisors/UNS/UNS_hartmann.dds"
+				large = "gfx/leaders/UNS/Hartmann.dds"
+			}
+		}
+	}
+	
+	UNS_statesoc_council = {
+		name = UNS_statesoc_council
+		portraits = {
+			civilian = {
+				large = "GFX_statesoc_animated"
+			}
+		}
+		
+		country_leader = {
+			expire = "1300.1.1"
+			ideology = equalism
+			traits = { statesoc_trait }
+		}
+	}
+	
+	UNS_the_emperor = {
+		name = UNS_the_emperor
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UNS/UNS_the_emperor.dds"
+			}
+		}
+		
+		country_leader={
+			desc="UNS_emperor_desc"
+			ideology=tnm_human_supeiority
+			traits={ emperor_of_mankind }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	
+	UNS_carstodes = {
+		name = UNS_carstodes
+		portraits = {
+			army = {
+				large = "gfx/leaders/UNS/Carstodes.dds"
+				small = "gfx/interface/ideas/advisors/UNS/UNS_carstodes.dds"
+			}
+		}
+		
+		field_marshal = {
+			skill=8
+			attack_skill=10
+			defense_skill=10
+			planning_skill=1
+			logistics_skill=5
+			traits = { custodes_trait }
+		}
+	}
+	UNS_custodisi = {
+		name = UNS_custodisi
+		portraits = {
+			army = {
+				large = "gfx/leaders/UNS/Custodisi.dds"
+				small = "gfx/interface/ideas/advisors/UNS/UNS_custodisi.dds"
+			}
+		}
+		
+		field_marshal = {
+			skill=8
+			attack_skill=10
+			defense_skill=5
+			planning_skill=1
+			logistics_skill=10
+			traits = { custodes_trait }
+		}
+	}
+	UNS_wammudes = {
+		name = UNS_wammudes
+		portraits = {
+			army = {
+				large = "gfx/leaders/UNS/Wammudes.dds"
+				small = "gfx/interface/ideas/advisors/UNS/UNS_wammudes.dds"
+			}
+		}
+		
+		field_marshal = {
+			skill=8
+			attack_skill=10
+			defense_skill=10
+			planning_skill=1
+			logistics_skill=5
+			traits = { custodes_trait }
+		}
+	}
+	
+}

@@ -1,0 +1,862 @@
+characters={
+	GEM_willy_brandt={
+		name=GEM_willy_brandt
+		portraits={
+			civilian={
+				large="gfx/leaders/GEM/Brandt.dds"
+			}
+		}
+		country_leader={
+			desc="GEM_demo_desc"
+			ideology=socialism
+			traits={ human_leader demo_leader }
+			expire="1999.9.9.1"
+			id=-1
+		}
+	}
+	GEM_walter_ulbricht={
+		name=GEM_walter_ulbricht
+		portraits={
+			civilian={
+				large="gfx/leaders/GEM/Ulbricht.dds"
+			}
+		}
+		country_leader={
+			desc="GEM_comm_desc"
+			ideology=democratic_socialism
+			traits={ human_leader comm_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	GEM_military_council={
+		name=GEM_military_council
+		portraits={
+			civilian={
+				large="gfx/leaders/GEM/MilCouncil.dds"
+			}
+		}
+		country_leader={
+			desc="GEM_fasc_desc"
+			ideology=ultranationalism
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	GEM_paul_hausser={
+		name=GEM_paul_hausser
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/GEM/GEM_hausser.dds"
+			}
+			army={
+				large="gfx/leaders/GEM/Hausser.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard offensive_doctrine }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	GEM_henning_fon_treskov={
+		name=GEM_henning_fon_treskov
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/GEM/GEM_treskov.dds"
+			}
+			army={
+				large="gfx/leaders/GEM/Treskov.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard desert_storm }
+			skill=6
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	GEM_johannes_friesner={
+		name=GEM_johannes_friesner
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/GEM/GEM_friesner.dds"
+			}
+			army={
+				large="gfx/leaders/GEM/Friesner.dds"
+			}
+		}
+		corps_commander={
+			traits={ media_personality infantry_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	GEM_lothar_rendulic={
+		name=GEM_lothar_rendulic
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/GEM/GEM_rendulic.dds"
+			}
+			army={
+				large="gfx/leaders/GEM/Rendulic.dds"
+			}
+		}
+		corps_commander={
+			traits={ panzer_expert adaptable }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	GEM_paskal_heinz={
+		name=GEM_paskal_heinz
+		portraits={
+			army={
+				small="gfx/interface/ideas/advisors/GEM/GEM_heinz.dds"
+			}
+			army={
+				large="gfx/leaders/GEM/Heinz.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_commander_hum adaptable }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_goebbels_min = {
+		name = GEM_goebbels_min
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_goebbels_min"
+				large = "gfx/leaders/GEM/Goebbels.dds"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_goebbels_min
+			
+			available = {
+				is_country_leader = no
+				has_government = fascism 
+				custom_trigger_tooltip = {
+					NOT = {
+						has_idea = GEM_polit_crisis
+					}
+					tooltip = polit_cris_over
+				}
+			}
+			allowed = {
+				original_tag = GEM 
+			}
+			traits = { propaganda_master_hum }
+		}
+		
+		
+		country_leader = {
+			desc = "GEM_GOEBBELS_DESC"
+		
+			ideology = nazism
+			traits = { propaganda_master_hum human_leader }
+		}
+	}
+	
+	GEM_heinrich_himmler = {
+		name = GEM_heinrich_himmler
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GEM/Himmler.dds"
+			}
+		}
+		
+		country_leader = {
+			ideology = nazism
+			expire = "1965.1.1"
+			traits = { shutzstaffen_reichsfuhrer human_leader pure_race_fighter }
+		}
+	}
+	
+	GEM_shpeer = {
+		name = GEM_shpeer
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_shpeer"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_shpeer
+			
+			available = {
+				has_completed_focus = GEM_ask_the_old_ones
+			}
+			allowed = {
+				original_tag = GEM 
+			}
+			traits = { military_reichministr }
+		}
+	}
+	
+	
+	GEM_adler_band = {
+		name = GEM_adler_band
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_adler_band"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_adler_band
+			
+			available = {
+				has_government = fascism
+			}
+			allowed = { 
+				original_tag = GEM 
+			}
+			traits = { rock_band_hum }
+		}
+	}
+	
+	
+	GEM_conrad_zuse = {
+		name = GEM_conrad_zuse
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_conrad_zuse"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_conrad_zuse
+			
+			available = {
+				has_completed_focus = GEM_computer_science
+			}
+			allowed = {
+				original_tag = GEM 
+			}
+			traits = { computer_pioneer }
+			research_bonus = {
+				electronics = 0.05
+			}
+		}
+	}
+	
+	
+	GEM_higo_shmeisser = {
+		name = GEM_higo_shmeisser
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_higo_shmeisser"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_higo_shmeisser
+			
+			available = {
+				has_completed_focus = GEM_hugo_schmeisser
+			}
+			allowed = {
+				original_tag = GEM 
+			}
+			traits = { arms_dealer }
+			research_bonus = {
+				infantry_weapons = 0.1
+			}
+		}
+	}
+	
+	
+	GEM_fittkau = {
+		name = GEM_fittkau
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_fittkau"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_fittkau
+			
+			allowed = {
+				original_tag = GEM
+			}
+			
+			available = {
+				NOT = {
+					has_idea = GEM_polit_crisis
+				}
+			}
+			
+			traits = { reichminister_of_trade }
+		}
+	}
+	
+	
+	GEM_shmitz = {
+		name = GEM_shmitz
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_shmitz"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_shmitz
+			
+			allowed = {
+				original_tag = GEM 
+				
+			}
+			available = {
+				has_completed_focus = GEM_oppose_nazis
+			}
+			
+			traits = { reformator_hum }
+		}
+	}
+	
+	
+	GEM_kleiner = {
+		name = GEM_kleiner
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_kleiner"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_kleiner
+			
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				man_in_black 
+			}
+		}
+	}
+	
+	
+	GRB_wilhelm_strasse = {
+		name = GRB_wilhelm_strasse
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_wilhelm_strasse"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_wilhelm_strasse
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			available = {
+				has_completed_focus = GEM_war_never_changes
+			}
+			
+			traits = {
+				german_science_is_the_best
+			}
+		}
+	}
+	
+	
+	GRB_heydrich = {
+		name = GRB_heydrich
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_heydrich"
+			}
+		}
+		
+		
+		advisor = {
+			slot = GRB_heydrich
+			idea_token = GRB_heydrich
+			
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			available = {
+				has_government = fascism
+			}
+			
+			traits = {
+				bloody_purger_human
+			}
+		}
+	}
+	
+	
+	erwin_rommel_hmc = {
+		name = erwin_rommel_hmc
+		portraits = {
+			civilian = {
+				small = "GFX_idea_erwin_rommel_hmc"
+			}
+		}
+		
+		advisor = {
+			slot = army_chief
+			idea_token = erwin_rommel_hmc
+			
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+					has_idea = GEM_erwin_rommel_theor
+				}
+			}
+			traits = { world_war_veteran }
+		}
+		
+		
+		advisor = {
+			slot = theorist
+			idea_token = GEM_erwin_rommel_theor
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_government = fascism
+				NOT = {
+					has_idea = erwin_rommel_hmc 
+				}
+			}
+			traits = { blitzkrieg_theorist }
+		}
+		
+	}
+	
+	
+	GEM_brestrich = {
+		name = GEM_brestrich
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GEM_brestrich"
+			}
+		}
+		
+		
+		advisor = {
+			slot = army_chief
+			idea_token = GEM_brestrich
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = { army_chief_offensive_2 }
+		}
+	}
+	
+	GEM_heitmann = {
+		name = GEM_heitmann
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_heitmann"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = GEM_heitmann
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			
+			available = {
+				has_completed_focus = GEM_wehrmacht
+			}
+			traits = {
+				army_chief_planning_2
+			}
+		}
+	}
+	
+	GEM_weber = {
+		name = GEM_weber
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_weber"
+			}
+		}
+		
+		advisor = {
+			slot = theorist
+			idea_token = GEM_weber
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			available = {
+				AND = {
+					has_completed_focus = GEM_military_training
+					has_completed_focus = GEM_reactive_aircraft
+					has_completed_focus = GEM_fleet_tactics
+				}
+			}
+			
+			
+			
+			modifier = {
+				experience_gain_navy = 0.02
+				experience_gain_army = 0.02
+				experience_gain_air = 0.02
+				army_attack_factor = 0.07
+				army_core_defence_factor = 0.05
+			}
+		}
+	}
+	
+	GEM_kurt_shtudent = {
+		name = GEM_kurt_shtudent
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_kurt_shtudent"
+			}
+		}
+		
+		advisor = {
+			slot = air_chief
+			idea_token = GEM_kurt_shtudent
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_meet_the_heroes
+			}
+			traits = { airborne_creator }
+		}
+		
+	}
+	
+	GEM_karl_doenitz = {
+		name = GEM_karl_doenitz
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_karl_doenitz"
+			}
+		}
+		
+		advisor = {
+			slot = navy_chief
+			idea_token = GEM_karl_doenitz
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = { navy_submarine_2 }
+		}
+	}
+	
+	GEM_radiant_croup = {
+		name = GEM_radiant_croup
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_radiant_croup"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GEM_radiant_croup
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			available = {
+				has_completed_focus = GEM_natives_police_squads
+			}
+			traits = {
+				rcbd_officer
+			}
+		}
+	}
+	
+	GEM_shternell = {
+		name = GEM_shternell
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_shternell"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GEM_shternell
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_logistics_2
+			}
+		}
+	}
+	
+	GEM_engelberger = {
+		name = GEM_engelberger
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_engelberger"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GEM_engelberger
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_chief_offensive_1
+			}
+			
+		}
+	}
+	
+	GEM_schoff = {
+		name = GEM_schoff
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_schoff"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GEM_schoff
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_armored_1
+			}
+			
+		}
+	}
+	
+	GEM_hengstler = {
+		name = GEM_hengstler
+		portraits = {
+			army = {
+				small = "GFX_idea_GEM_hengstler"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GEM_hengstler
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				army_mixed_trait
+			}
+		}
+	}
+	
+	GEM_arianna = {
+		name = GEM_arianna
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/Aryanna.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_arianna.dds"
+			}
+		}
+		
+	}
+	
+	GEM_aliz_neumann = {
+		name = GEM_aliz_neumann
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/Aliz.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_aliz.dds"
+			}
+		}
+		
+	}
+	
+	GEM_shtrohaim = {
+		name = GEM_shtrohaim
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_shtrohaim.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_shtrohaim.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ trait_cyborg infantry_commander_hum }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	
+	GEM_cristoff_waltz = {
+		name = GEM_cristoff_waltz
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/Gem_waltz.dds"
+				small = "gfx/interface/ideas/advisors/GEM/Gem_waltz.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ infantry_commander_hum }
+			skill=4
+			attack_skill=3
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_heinrich_schantz = {
+		name = GEM_heinrich_schantz
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_general_1.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_gen_2.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ tankist_commander_hum }
+			skill=3
+			attack_skill=2
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_hermann_bachmann = {
+		name = GEM_hermann_bachmann
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_general_2.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_gen_2.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ rhbz_trait }
+			skill=3
+			attack_skill=4
+			defense_skill=4
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	
+	GEM_william_blazskowich = {
+		name = GEM_william_blazskowich
+		portraits = {
+			army = {
+				large = "gfx/leaders/GEM/GEM_billy.dds"
+				small = "gfx/interface/ideas/advisors/GEM/GEM_billy.dds"
+			}
+		}
+		
+		corps_commander = {
+			traits={ demolisher_hum }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	
+	GEM_adolf_hitler = {
+		name = GEM_adolf_hitler
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GEM/Adya.dds"
+			}
+		}
+		
+		country_leader={
+			desc=""
+			ideology=ultranationalism
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	
+}

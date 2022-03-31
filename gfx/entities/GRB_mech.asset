@@ -1,0 +1,228 @@
+
+	entity = {
+		name = "GRB_motorized_entity"
+	pdxmesh = "motorized_frame_mesh"
+		
+		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "support_attack"	animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		scale = 1.0
+		
+		attach = { 	name = "vehicle"			vehicle = "GRB_motorized_vehicle_0_entity" }
+		attach = { 	name = "infantry"			infantry = "GRB_infantry_entity" }
+		}
+		
+		entity = {
+		name = "GRB_motorized_vehicle_0_entity"
+		pdxmesh = "ENG_motorized_vec0_mesh"
+		
+		state = { name = "idle"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "retreat"			animation = "move" 	 		animation_blend_time = 0.3 animation_speed = 1.0 
+			
+			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
+		}
+		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "training"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"			animation = "move" 			animation_blend_time = 0.3 animation_speed = 1.0
+			
+			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
+		}
+		state = { name = "support_attack"	animation = "attack" 	animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 0 node="barrel" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+		}
+		state = { name = "attack"			animation = "attack" animation_blend_time = 0.0 
+			event = { time = 0 node="barrel" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+		}
+		state = { name = "defend"			animation = "attack" animation_blend_time = 0.0 
+			event = { time = 0 node="barrel" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+		}
+				
+	}
+		
+		entity = {
+		name = "GRB_Saracen_entity"
+		pdxmesh = "ENG_Saracen_mesh"
+		
+		state = { name = "idle"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "retreat"			animation = "move" 	 		animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 0 node="left_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
+			event = { time = 0 node="right_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
+			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
+		}
+		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "training"				animation = "idle" 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"			animation = "move" 			animation_blend_time = 0.3 animation_speed = 1.0
+			event = { time = 0 node="left_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
+			event = { time = 0 node="right_tracks" particle = "tank_moving_tracks_particle"  keep_particle = no trigger_once = yes}
+			event = { trigger_once = yes sound = { soundeffect = "motorized_unit_move_animation" } }
+		}
+		state = { name = "support_attack"	animation = "attack" 	animation_blend_time = 0.3 animation_speed = 1.0 
+			event = { time = 0 node="barrel" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+		}
+		state = { name = "attack"			animation = "attack" animation_blend_time = 0.0 
+			event = { time = 0 node="barrel" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+		}
+		state = { name = "defend"			animation = "attack" animation_blend_time = 0.0 
+			event = { time = 0 node="barrel" particle = "mechanized_attack_barrel_particle"  keep_particle = yes } 
+			event = { sound = { soundeffect = "mechanized_units_mg_fire" } }
+			event = { trigger_once = yes sound = { soundeffect = "distance_mechanized_units_mg_fire" } }
+		}
+		scale = 1.0			
+	}
+	
+	entity = { 
+	clone = "GRB_motorized_entity"
+	name = "GRB_motorized_1_entity"
+}
+
+	entity = { 
+	clone = "GRB_motorized_entity"
+	name = "GRB_motorized_2_entity"
+}
+
+	entity = { 
+	clone = "GRB_motorized_entity"
+	name = "GRB_motorized_3_entity"
+}
+
+	entity = { 
+	clone = "GRB_motorized_entity"
+	name = "GRB_motorized_4_entity"
+}
+
+	
+		entity = {
+		name = "GRB_mechanized_entity"
+		pdxmesh = "motorized_frame_mesh"
+		
+		state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "retreat"			animation = "move" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "support_attack"	animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+		scale = 1.0
+		
+		attach = { 	name = "vehicle"			vehicle = "GRB_Saracen_entity" }
+		attach = { 	name = "infantry"			infantry = "GRB_infantry_3_entity" }
+		}
+
+	
+		entity = { 
+	clone = "GRB_mechanized_entity"
+	name = "GRB_mechanized_1_entity"
+}
+
+		entity = { 
+	clone = "GRB_mechanized_entity"
+	name = "GRB_mechanized_2_entity"
+}
+
+		entity = { 
+	clone = "GRB_mechanized_entity"
+	name = "GRB_mechanized_3_entity"
+}
+
+		entity = { 
+	clone = "GRB_mechanized_entity"
+	name = "GRB_amphibious_mechanized_entity"
+}
+	
+	entity = {
+	name = "GRB_artillery_entity"
+	pdxmesh = "frame_artillery_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "idle" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"	animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "idle" } }
+	state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "idle" } }
+	state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 propagate_state = { infantry = "idle" } }
+	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	
+	scale = 1
+	
+	attach = { name = artillery			artillery = "GRB_artillery_gun_entity" }
+	attach = { name = infantry			infantry = "GRB_infantry_entity" }
+}
+
+	entity = {
+	name = "GRB_artillery_gun_entity"
+	pdxmesh = "ENG_unit_artillery_1_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"				animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "idle" 	 				animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "training"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "death"			animation = "idle" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "support_attack"			animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 
+		event = { time = 0 node="muzzle" particle = "light_tank_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = artillery_unit_fire_01 } } 
+		event = { trigger_once = yes sound = { soundeffect = "distance_artillery_unit_fire_01" } }
+		event = { time = 0.3 node="smoke" particle = "artillery_cartridge_particle"  keep_particle = yes }
+		event = { time = 0.0 node="left_wheel" particle = "artillery_tyre_tracks_particle"  keep_particle = yes }
+		event = { time = 0.0 node="right_wheel" particle = "artillery_tyre_tracks_particle"  keep_particle = yes }
+	}
+	state = { name = "attack"			animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 
+		event = { time = 0 node="muzzle" particle = "light_tank_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = artillery_unit_fire_01 } } 
+		event = { trigger_once = yes sound = { soundeffect = "distance_artillery_unit_fire_01" } }
+		event = { time = 0.3 node="smoke" particle = "artillery_cartridge_particle"  keep_particle = yes }
+		event = { time = 0.0 node="left_wheel" particle = "artillery_tyre_tracks_particle"  keep_particle = yes }
+		event = { time = 0.0 node="right_wheel" particle = "artillery_tyre_tracks_particle"  keep_particle = yes }
+	}
+	state = { name = "defend"			animation = "attack" 					animation_blend_time = 0.0 animation_speed = 1.0 
+		event = { time = 0 node="muzzle" particle = "light_tank_attack_barrel_particle"  keep_particle = yes sound = { soundeffect = artillery_unit_fire_01 } } 
+		event = { trigger_once = yes sound = { soundeffect = "distance_artillery_unit_fire_01" } }
+		event = { time = 0.3 node="smoke" particle = "artillery_cartridge_particle"  keep_particle = yes }
+		event = { time = 0.0 node="left_wheel" particle = "artillery_tyre_tracks_particle"  keep_particle = yes }
+		event = { time = 0.0 node="right_wheel" particle = "artillery_tyre_tracks_particle"  keep_particle = yes }
+	}
+	state = { name = "move"				animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	state = { name = "retreat"			animation = "move" 					animation_blend_time = 0.3 animation_speed = 1.0 }
+	
+	scale = 1.1
+}
+
+	entity = { 
+	clone = "GRB_artillery_entity"
+	name = "GRB_artillery_1_entity"
+}
+
+	entity = { 
+	clone = "GRB_artillery_entity"
+	name = "GRB_artillery_2_entity"
+}
+
+	entity = { 
+	clone = "GRB_artillery_entity"
+	name = "GRB_artillery_3_entity"
+}
+
+	entity = { 
+	clone = "GRB_artillery_entity"
+	name = "GRB_artillery_4_entity"
+}
+
+	entity = { 
+	clone = "GRB_artillery_entity"
+	name = "GRB_anti_tank_entity"
+}

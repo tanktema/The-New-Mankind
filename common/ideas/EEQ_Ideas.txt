@@ -1,0 +1,85 @@
+ideas = {
+
+political_advisor = {
+
+	EEQ_ryoku_memori = {
+
+		allowed = {
+			original_tag = EEQ
+		}
+
+			available = {
+			}		
+		
+		traits = { EEQ_ryoku }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	EEQ_aine = {
+
+		allowed = {
+			original_tag = EEQ
+		}
+
+			available = {
+			}		
+		
+		traits = { EEQ_aine_aisling }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	EEQ_sweet_bear = {
+
+		allowed = {
+			original_tag = EEQ
+		}
+
+			available = {
+			}		
+		
+		traits = { EEQ_sweet }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	EEQ_nova_star = {
+
+		allowed = {
+			original_tag = EEQ
+		}
+
+			available = {
+			}		
+		
+		traits = { EEQ_nova }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}		
+
+	EEQ_lyra_heartstring = {
+
+		allowed = {
+			original_tag = EEQ
+		}
+
+			available = {
+			}		
+		
+		traits = { EEQ_lyra }
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+}

@@ -1,0 +1,37 @@
+﻿l_english:
+###########################################
+### FOCUS LOCALISATION ####################
+###########################################
+
+#europeans
+ cityfall.190.t:0 "The Siege of Unity"
+ cityfall.190.d:0 "[This.GetNewspaperHeader]The [old_controller.GetLeader] was waiting in the Council room silently. Some seats empties, as their occupant wanted to fight alongside their soldiers.\nCornered in the peninsula, the European army decided to make one last stand, many inhabitants taking up arms for the struggle to come.\nThe fight was gruesome around and in the city. the Europeans fought outnumber one to ten.\nSoldiers fought at every corner, using artillery pieces as makeshift support weapons, fighting until the last cartridge.\nFinally, the fight came around the Presidential building, ex-guards of many countries and patriots not giving any ground, the battle finished with one desperate Charge against the invader, some soldiers going Bare-chested, other charging with the flag of their country in a last sign of defiance...\nNow, [new_controller.GetAdjective] soldiers are approaching the council room."
+ cityfall.190.a:0 "It can’t end like this..."
+ cityfall.190.b:0 "Europeans soldiers showed all their courage."
+ cityfall.190.c:0 "This will be a crushing news for Humanity." 
+
+#soviets
+ cityfall.191.t:0 "The Fall of New Moscow"
+ cityfall.191.d:0 "[This.GetNewspaperHeader]As the [new_controller.GetAdjective] approach the Capital, the populations readied itself like their ancestor in 1941, the population was mobilized and trenches were dug, around the capital. But when the external line of defence was broken the fight took place in every part of the city. Human soldiers defending every inch of their capitals, the population fought with every weapon they could find. Often ambushing the enemy by throwing Molotov on advancing [new_controller.GetAdjective] forces.\nSoviet Marines helped by some policemen fought in the north of the city on the bridge over the river Virtuoosi, outnumbered by far but not retreating, buying time for a reinforcement that never came.\nSoviet Paratroopers helped by some Iraqi Republican guard managed to hold the enemy at the south of the capital but were forced deep inside the city by fear of encirclement. The final struggle took place in the presidential palace were member of the KGB helped by volunteers fought in the corridor until the end.\nNew Moscow as fallen."
+ cityfall.191.a:0 "We might not survive this."
+ cityfall.191.b:0 "They were no match to our power."
+ cityfall.191.c:0 "They fought until the very end." 
+
+ cityfall.192.t:0 "The Battle of Nadezhda"
+ cityfall.192.d:0 "[This.GetNewspaperHeader]Fighting grew even more fiercely in the surrounding forest as [new_controller.GetAdjective] forces approached the city. The city is nicknamed ‘Amal’ by the Arabs living in large number in the city. Fierce fighting took place around several place of the city. Soviets and Arabians soldiers counter-attacked near the marketplace, in the industrial zone and several Mosques. Often fighting bloody melee in building. Several charge of Iranian Basij surprized the attacker and forced it to fall back many times with a costly price...\nAfter many hours of fighting the defenders either evacuated or were taken prisoners.\nFighting is pursuing even more violently at the south of the city as Soviets soldier try to re-enter the city."
+ cityfall.192.a:0 "The war is not over yet!"
+ cityfall.192.b:0 "Those [old_controller.GetAdjective] got quite a fighting spirit."
+ cityfall.192.c:0 "We stole their 'hope'." 
+
+ #Americans
+ cityfall.193.t:0 "Battle of New Washington"
+ cityfall.193.d:0 "[This.GetNewspaperHeader]The [new_controller.GetAdjective] flag now float on New Washington\nThe battle started with pitched engagement between American Cavalry unit posted all around the defense perimeter those units quickly defeated the main line of defense brace for impact and held the line. The [new_controller.GetAdjective] knowing that the South Americans were the weak part of the American defensive line decided to press the attack on those sectors effectively crushing the unit there, the western sector of the city broke and even with the gallant resistance offered by Argentinean Paratroopers defending the last highway leading to the city.\nThe American vainly tried to close the breach even by calling the Police department who could only do so much against [new_controller.GetAdjective] superiority.\nIn little time the fighting propagated inside the city, were barricade were hastily built and manned by the population. The battle ended in the corridor of the new White house where after a bloody battle the last American troop surrendered."
+ cityfall.193.a:0 "We’ll be lucky to see tomorrow."
+ cityfall.193.b:0 "This will be over soon."
+ cityfall.193.c:0 "Will America ever regain initiative?" 
+
+ cityfall.194.t:0 "Siege of Nova Columbus"
+ cityfall.194.d:0 "[This.GetNewspaperHeader]Separated from other city by a thick forest at the east New Columbus defence was doomed to fail\nQuickly surrounded by  [new_controller.GetAdjective] troop, Militia were hastily formed and sparsely entrenched around key points.\nAlthough it was isolated, US air force bravely fought in the air supporting as much as they could, on its side the navy supplied the besieged with a motley fleet trying to bring as much ammo as possible and evacuating the civilian in cooperation with the USAF\nThe evacuation continued as long as the last line of militiamen held of the aggressor, the panic intensified as the evacuation points were bombarded by enemy artillery making the helicopters evacuation risky.\nLast cartridges were fired in the city docks where some soldiers tried to make a last stand before being dislodged."
+ cityfall.194.a:0 "The fall was previsible."
+ cityfall.194.b:0 "As planned."
+ cityfall.194.c:0 "They couldn’t win this" 

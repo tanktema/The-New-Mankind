@@ -1,0 +1,49 @@
+operation_nuke_the_capital = { # Айди операции - как всегда уникален
+	icon = GFX_operation_nuke_the_capital # Ключ иконки - тут все по аналогии
+	map_icon = GFX_operations_rescue_captured_operative_map # отображение на карте
+	name = operation_nuke_the_capital # Ключ локализации названия
+	desc = operation_nuke_the_capital_desc # Ключ локадизации названия 
+	priority = 0 # приоритет в списке
+	days = 1 # Время на подготовку. Для теста поставлю 1 день
+	network_strength = 1 # Сила разведсети. Для теста - 1 день
+	operatives = 1 # Количество оперативников. Нам хватит и одного 
+	visible = { # Условия видимости. FROM - цель-страна, ROOT - наша страна
+		network_national_coverage = {
+			target = FROM
+			value > 0
+		}
+		FROM = {
+			has_war_with = ROOT
+		}
+	}
+	available = {
+		num_of_nukes > 0 # Нам нужна ядернкая бомба
+	}
+	risk_chance = 0.1 # Насколько рисковано задание. Для теста поставлю 0.1
+	experience = 2 # Сколько опыта получит оперативник 
+	cost_multiplier = 0 # это немного не понятно, но насколько я понял при 0 каждое последующее будет иметь те же требования
+	
+	outcome_execute = { # Скоуп оперцаии. Что произойдет при выполнении
+		ROOT = {
+			launch_nuke = {
+				state = FROM.capital
+				controller = FROM 
+			}
+		}		
+	}
+	outcome_potential = { # Эффект, который будет показан в пункте 7
+		FROM = {
+			custom_effect_tooltip = human_nukedem
+		}
+	}
+	
+	phases = { # А сейчас мы пропишем фазы из которых состоит операция. Их 3
+		cross_the_border = { base = 100 } #шанс фазы. У нас пусть будет сотка 
+	}
+	phases = {
+		place_the_nuke = { base = 100 }
+	}
+	phases = {
+		escape_with_army = { base = 100 }
+	}
+}

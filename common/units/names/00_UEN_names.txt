@@ -1,0 +1,575 @@
+﻿# Names are based on equipment types (picking equipment with highest amount from the pool)
+# Generic are used for countries that are not scripted in.
+UEN = {
+	submarine = {
+		prefix = "ES. "
+		generic = { "Submarine" }
+		unique = {
+"Inflexible "
+"Wilk "
+"Marsouin"
+"Halland "
+"Heroj"
+"Dzik "
+"Orzeł "
+"Junon "
+"Sokół"
+"Triaina "
+"Mališan "
+"Indomptable "
+"Gotland"
+"Espadon"
+"Narval "
+"Katsonis "
+"Ula"
+"Bielik "
+"Sirène "
+"Bévéziers "
+"Redoutable "
+"Marsopa"
+"Glavkos "
+"La Praya"
+"Daphné"
+"Tonnant "
+"Uredd"
+"Vénus"
+"Galatée "
+"Agosta"
+"Utvær"
+"Kondor "
+"Requin"
+"Foudroyant "
+"Ouessant "
+"Uthaug"
+"Tonina"
+"Eurydice "
+"Psyché "
+"Utstein"
+"Papanikolis "
+"Uppland "
+"Flore "
+"Doris "
+"Diane"
+"Delfín "
+"Sava "
+"Dauphin"
+"Minerve"
+"Narval"
+"Kaszub"
+"Utsira"
+"Terrible "
+"Mazur"
+"Morse"
+"Tara "
+		}
+	}
+
+	destroyer = {
+		prefix = "ES. "
+		generic = { "Destroyer" }
+		unique = {
+"Tombazis "
+"Berbère"
+"Östergötland"
+"Rivière"
+"Casabianca"
+"Peder Skram"
+"Cassard"
+"Daphne"
+"Touareg"
+"Beograd"
+"Reykjavík"
+"Stockholm"
+"Apostolis "
+"Partizan "
+"Bouvet"
+"Sleipner "
+"Ostseeland"
+"Koper "
+"Le Corse"
+"Kriezis "
+"Vauquelin"
+"Södermanland"
+"República"
+"Fante "
+"Mărășești"
+"Metalowiec"
+"Carabiniere"
+"Tor "
+"Duquesne"
+"Dufour"
+"Du Chayla"
+"Rolnik "
+"Olfert Fischer"
+"Arabe"
+"Warszawa "
+"Wielingen"
+"Intrepido "
+"Belgica"
+"Diana "
+"Greifswald"
+"Hiddensee"
+"Gästrikland"
+"Schönebeck"
+"Chevalier Paul"
+"Algérien"
+"Guépratte"
+"Pula "
+"Strasburg"
+"Proleter"
+"Artigliere "
+"Aigaion "
+"Zagreb"
+"Hälsingland"
+"Bartolomeu Dias"
+"Neptun "
+"Willemoes"
+"Dryaden"
+"Cazadora "
+"Lupo"
+"Alpino"
+"Villa de Bilbao"
+"San Giorgo"
+"Górnik "
+"Wicher"
+"Hutnik "
+"Æger "
+"Nautilus "
+"Maillé-Brézé"
+"Søløven"
+"Split"
+"Herluf Trolle"
+"Ljubljana"
+"Ueckermünde"
+"Tirailleur"
+"Kanaris "
+"DeBrouwer"
+"Rudolf Egelhofer"
+"San Marco"
+"Grom"
+"Kersaint"
+		}
+	}
+
+	light_cruiser = {
+		prefix = "ES. "
+		generic = { "Cruiser" }
+		unique = {
+"Almirante Cervera"
+"Köln"
+"Puy-de-Dôme"
+"Karlsruhe"
+"San Marino"
+"København "
+"Luxembourg"
+"Baleares "
+"Andorra la Vella"
+"Rommel"
+"Bern"
+"Colbert"
+"Beograd"
+"Mölders"
+"Emden"
+"Amsterdam"
+"Vittorio Veneto"
+"Sofiya"
+"Lütjens"
+"Vaduz"
+"Augsburg"
+"Galicia "
+"Praha"
+"Lübeck"
+"Oslo"
+"Elli "
+"Athína "
+"Madrid"
+"Wien"
+"Andrea Doria"
+"Braunschweig"
+"București "
+"Enrico Dandolo"
+"Luxembourg"
+"Galeb"
+"Budapest"
+"Miguel de Cervantes"
+"Clermont-Ferrand"
+"Auvergne"
+"Lisboa"
+"Lefkosía "
+"Brussel"
+"Canarias"
+"Stockholm "
+		}
+	}
+
+	heavy_cruiser = {
+		prefix = "ES. "
+		generic = { "Missile Cruiser" }
+		unique = {
+"Georgios Averof"
+"Jeanne d'Arc"
+"Marseillaise"
+"Duca degli Abruzzi"
+"Jean de Vienne"
+"De Grasse"
+"Montcalm"
+"Gloire"
+"Berlin"
+"Tre Kronor"
+"Giuseppe Garibaldi"
+"De Ruyter"
+"Paris"
+"Condottieri"
+"Göta Lejon"
+"De Zeven Provinciën"
+		}
+	}
+
+	battle_cruiser = {
+		prefix = "ES. "
+		generic = { "Battlecruiser" }
+		unique = {
+"Richelieu"
+"Jaime I"
+"Italia"
+"Nantici"
+		}
+	}
+
+	battleship = {
+		prefix = "ES. "
+		generic = { "Battleship" }
+		unique = {
+"Richelieu"
+"Jaime I"
+"Italia"
+"Nantici"
+		}
+	}
+
+	carrier = {
+		prefix = "ES. "
+		generic = { "Aircraft Carrier" }
+		unique = {
+"Clemenceau"
+"Giuseppe Garibaldi"
+"Príncipe de Asturias"
+"Karel Doorman"
+"La Fayette"
+"Arromanches"
+"Jeanne d'Arc"
+"Dédalo"
+"Foch"
+"Anadolu"
+		}
+	}
+
+	air_wing_names_template = AIR_WING_NAME_UEN_FALLBACK
+
+	#Air wings can only be named through archetype
+	fighter_equipment = {
+		prefix = ""
+		generic = { "Air superiority Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"2 Tactische Wing 'De komeet'"
+"Jagdgeschwader 74"
+"Escadron de chasse 3/1 Argonne"
+"9. stíhací pluk"
+"711a escadrilă de aviație de luptă"
+"Escadron de chasse 3/2 Alsace"
+"Jagdfliegergeschwader 9 'Heinrich Rau'"
+"Esquadra 302 "Águias Reais""
+"1 Pułk Lotnictwa Myśliwskiego 'warsawa'"
+"Escadron de chasse 3/11 Corse"
+"Esquadra 304 "Magníficos""
+"4. stíhací pluk"
+"9º Gruppo Caccia"
+"204. borbeno vazduhoplovstvo"
+"Eskadrille 723"
+"137. luftvinge"
+"5. stíhací pluk"
+"Jagdgeschwader 71 Richthofen "
+"21-ti Iztrebitelen Aviatsionen polk"
+"10 Pułk Lotnictwa Myśliwskiego"
+"Luftflügel 1 (Swi.)"
+"15-ti iztrebitelen aviatsionen polk"
+"Jagdflügel (Aut.)"
+"Upplands flygflottilj"
+"110i ptéryga máchis"
+"Régiment de chasse 2/30 Normandie-Niémen"
+"Jagdfliegergeschwader 1 'Fritz Schmenkel'"
+"312 Squadron"
+"Escadron de Chasse 3/30 lorraine"
+"18-ti Iztrebitelen Aviatsionen polk"
+"47. pápa taktikai repülés"
+		}
+	}
+
+	jet_fighter_equipment = {
+		prefix = ""
+		generic = { "Air superiority Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"312 Squadron"
+"4. stíhací pluk"
+"21-ti Iztrebitelen Aviatsionen polk"
+"Jagdfliegergeschwader 1 'Fritz Schmenkel'"
+"Jagdfliegergeschwader 9 'Heinrich Rau'"
+"Régiment de chasse 2/30 Normandie-Niémen"
+"47. pápa taktikai repülés"
+"5. stíhací pluk"
+"15-ti iztrebitelen aviatsionen polk"
+"Esquadra 304 "Magníficos""
+"Escadron de chasse 3/2 Alsace"
+"204. borbeno vazduhoplovstvo"
+"18-ti Iztrebitelen Aviatsionen polk"
+"Eskadrille 723"
+"711a escadrilă de aviație de luptă"
+"137. luftvinge"
+"2 Tactische Wing 'De komeet'"
+"Esquadra 302 "Águias Reais""
+"1 Pułk Lotnictwa Myśliwskiego 'warsawa'"
+"Escadron de chasse 3/1 Argonne"
+"9. stíhací pluk"
+"110i ptéryga máchis"
+"10 Pułk Lotnictwa Myśliwskiego"
+"Jagdgeschwader 71 Richthofen "
+"Escadron de Chasse 3/30 lorraine"
+"Jagdflügel (Aut.)"
+"9º Gruppo Caccia"
+"Jagdgeschwader 74"
+"Escadron de chasse 3/11 Corse"
+"Luftflügel 1 (Swi.)"
+"Upplands flygflottilj"
+		}	
+	}
+
+	heavy_fighter_equipment = {
+		prefix = ""
+		generic = { "Interception Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Escadron de chasse 1/2 Cigognes"
+"Escadron de chasse 4/7 Limousin"
+"83. krilo borbenog vazduhoplovstva"
+"116i ptéryga máchis"
+"Jagdgeschwader 73 'Steinhoff'"
+"861 de escadrilă aviație de luptă"
+"Ala 12"
+"Escadron de chasse 2/3 Champagne"
+"Escadron de chasse 2/9 Auvergne"
+"10º Gruppo Caccia"
+"132. luftvinge"
+"Escadron de chasse 1/8 Maghreb"
+"Eskadrille 725"
+"12º Gruppo Caccia"
+"Ala 14"
+"31. Kapos taktikai repülés"
+"Jämtlands flygflottilj"
+"Jagdfliegergeschwader 8 'Hermann Matern'"
+		}	
+	}
+
+	CAS_equipment = {
+		prefix = ""
+		generic = { "Attack Helicopter Wing / "}
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Escadron d'hélicoptères 2/67 Valmy"
+"713 escadrilă de elicoptere"
+"49 Reg. Śmigłowca"
+"Norrbottens Armeflygbataljon 1"
+"Kampfhubschrauberregiment 26 'Franken'"
+"4e division aéromobile"
+"Östgöta Armeflygbataljon 2"
+"5° Reggimento Aviazione dell'Esercito 'Rigel'"
+"301 Squadron"
+"13ti Vertoleten Aviatsionen Polk"
+"Esquadra 552 "Zangões" "
+"107. krilo helikoptera"
+"1er Batallón de Helicópteros de Ataque"
+"51. vrtulníkový pluk"
+"1 Taxiarchia Aeroporias Stratou 'Kilkis Lachana'"
+"1. Hubschrauberflügel (Aut.)"
+"44ti Vertoleten Aviatsionen Polk"
+"Kampfhubschrauberregiment 36 'Kurhessen'"
+"11. vrtulníkový pluk"
+"Escadron d'hélicoptères 4/67 Durance"
+"Leichter Luftflügel 24 (Swi)"
+"56 Reg. Śmigłowca"
+		}	
+	}
+
+	cv_fighter_equipment = {
+		prefix = ""
+		generic = { "Carrier Fighter Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Gruppo aerei imbarcati"
+"9ª Escuadrilla Aeronaves"
+"Flottille 21F"
+"Flottille 23F"
+"Flottille 12F 'les lascars'"
+"Flottille 17F 'la glorieuse'"
+"Flottille 31F"
+"Flottille 11F 'la furieuse'"
+"Flottille 16F"
+"Flottille 34F"	
+		}	
+	}
+
+	cv_CAS_equipment = {
+		prefix = ""
+		generic = { "Carrier Attacker Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+		}	
+	}
+
+	cv_nav_bomber_equipment = {
+		prefix = ""
+		generic = { "Carrier Helicopter Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+		}	
+	}
+
+	tac_bomber_equipment = {
+		prefix = ""
+		generic = { "Support Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Jagdbombergeschwader 31 'Boelcke'"
+"30. stíhací bombardovací pluk"
+"Escadron de bombardement 2/91 Bretagne"
+"6. stíhací bombardovací pluk"
+"Jagdbombergeschwader 35"
+"3. dywizja myśliwsko-bombowa 'Brandenburg'"
+"Jagdbomberflügel (Aut.)"
+"Västgöta flygflottilj"
+"22ri Iztrebitelno-bombardirovŭchen Aviatsionen Polk"
+"185. vazduhoplovno krilo borbenih bombi"
+"Esquadra 301 "Jaguares""
+"154º Gruppo CBOC"
+"13º Gruppo caccia"
+"25ri Iztrebitelno-bombardirovŭchen Aviatsionen Polk"
+"Jagdbombergeschwader 34"
+"Esquadra 303 "Tigres" "
+"314  Squadron"
+"316  Squadron"
+"172. zrakoplovno krilo borbenih bombi"
+"Jagdbombergeschwader 33"
+"Ala 23"
+"Jagdbombergeschwader 32"
+"28. stíhací bombardovací pluk"
+"Jagdbombergeschwader 49"
+"4 Dywizja Myśliwsko-Bombowa 'Pomorze'"
+"2. dywizja myśliwsko-bombowa 'Brandenburg'"
+"20. stíhací bombardovací pluk"
+"Jagdbombenfliegergeschwader 37 'Klement Gottwald'"
+"Escadron de bombardement 1/91 Gascogne"
+		}	
+	}
+
+	jet_tac_bomber_equipment = {
+		prefix = ""
+		generic = { "Support Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Jagdbombergeschwader 35"
+"Jagdbombergeschwader 31 'Boelcke'"
+"314  Squadron"
+"30. stíhací bombardovací pluk"
+"316  Squadron"
+"Jagdbombergeschwader 32"
+"13º Gruppo caccia"
+"22ri Iztrebitelno-bombardirovŭchen Aviatsionen Polk"
+"Jagdbomberflügel (Aut.)"
+"Esquadra 301 "Jaguares""
+"Jagdbombergeschwader 34"
+"25ri Iztrebitelno-bombardirovŭchen Aviatsionen Polk"
+"172. zrakoplovno krilo borbenih bombi"
+"Jagdbombergeschwader 33"
+"4 Dywizja Myśliwsko-Bombowa 'Pomorze'"
+"Escadron de bombardement 2/91 Bretagne"
+"154º Gruppo CBOC"
+"20. stíhací bombardovací pluk"
+"Jagdbombenfliegergeschwader 37 'Klement Gottwald'"
+"6. stíhací bombardovací pluk"
+"185. vazduhoplovno krilo borbenih bombi"
+"3. dywizja myśliwsko-bombowa 'Brandenburg'"
+"Västgöta flygflottilj"
+"Ala 23"
+"Esquadra 303 "Tigres" "
+"Jagdbombergeschwader 49"
+"Escadron de bombardement 1/91 Gascogne"
+"28. stíhací bombardovací pluk"
+"2. dywizja myśliwsko-bombowa 'Brandenburg'"
+		}	
+	}
+
+	nav_bomber_equipment = {
+		prefix = ""
+		generic = { "Naval Aviation Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Marinefliegergeschwader 1"
+"Flottille 6F"
+"7 Squadron"
+"320 Squadron"
+"23º Gruppo Volo "
+"Esquadrilha de Helicópteros da Marinha"
+"Esquadra 503 "Golfinhos""
+"321 Squadron"
+"Marinefliegergeschwader 2"
+"114i ptéryga máchis"
+"Moíra Aeroskafón Naftikoú"
+"Blekinge flygflottilj"
+"Marinefliegergeschwader 3"
+"115i ptéryga máchis"
+"133. luftvinge"
+"Marinefliegergeschwader 28 'Paul Wieczorek'"
+		}	
+	}
+
+	strat_bomber_equipment = {
+		prefix = ""
+		generic = { "Strategic Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Escadron de bombardement 3/94 Arbois"
+"Escadron de bombardement 2/94 Marne"
+"Escadron de bombardement 1/94 Guyenne"
+"Escadron de bombardement 1/94 Bourbonnais"
+		}	
+	}
+
+	jet_strat_bomber_equipment = {
+		prefix = ""
+		generic = { "Strategic Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Escadron de bombardement 3/94 Arbois"
+"Escadron de bombardement 2/94 Marne"
+"Escadron de bombardement 1/94 Guyenne"
+"Escadron de bombardement 1/94 Bourbonnais"
+		}	
+	}
+
+	transport_plane_equipment = {
+		prefix = ""
+		generic = { "Transport Wing / " }
+		generic_pattern = AIR_WING_NAME_UEN_GENERIC
+		unique = {
+"Eskadrille 721"
+"Esquadra 502 'Elefantes' "
+"Escadron de transport 1/64 Béarn"
+"3. pluk letecké dopravy"
+"15 Wing Luchttransport"
+"Lufttransportgeschwader 61"
+"Transporthubschraubergeschwader 34 'Werner Seelenbinder'"
+"36 Reg. Transportu lotniczego"
+		}	
+	}	
+}

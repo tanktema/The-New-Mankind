@@ -1,0 +1,63 @@
+characters={
+	ANZ_bob_hawke={
+		name=ANZ_bob_hawke
+		portraits={
+			civilian={
+				large="gfx/leaders/ANZ_dem.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_UEN_COUNCIL_DESC"
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ANZ_joshua_benjamin_jeyaretnam={
+		name=ANZ_joshua_benjamin_jeyaretnam
+		portraits={
+			civilian={
+				large="gfx/leaders/ANZ/ANZ_com.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=syndicalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ANZ_kriangsak_chamanan={
+		name=ANZ_kriangsak_chamanan
+		portraits={
+			civilian={
+				large="gfx/leaders/ANZ/ANZ_fas.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=ultranationalism
+			traits={ warmonger }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	ANZ_bhumibol_adulyadej={
+		name=ANZ_bhumibol_adulyadej
+		portraits={
+			civilian={
+				large="gfx/leaders/ANZ/ANZ_neutral.tga"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERAL_COUNCIL_DESC"
+			ideology=despotism
+			traits={ warmonger }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

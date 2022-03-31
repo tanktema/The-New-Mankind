@@ -1,0 +1,27 @@
+objectTypes = {	
+	
+
+		pdxmesh = {
+		name = "MiG21_mesh"
+		file = "gfx/models/units/planes/MiG21.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}	
+
+	
+		pdxmesh = {
+		name = "Tu16_mesh"
+		file = "gfx/models/units/planes/tu16.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+		pdxmesh = {
+		name = "Tu95_mesh"
+		file = "gfx/models/units/planes/tu95.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+
+	
+	}
+	
+		

@@ -1,0 +1,192 @@
+guiTypes = {
+	containerWindowType = {
+		name = "hum_acceptance_container"
+		position = { x = -4 y = -1 }
+		size = { width=100%% height=100%% }
+			###prod####
+		iconType ={
+			name ="hum_acceptance_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 1090 y = 5 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "hum_acceptance_desc"
+		}
+		
+		iconType = {
+			name = "hum_acceptance_icon"
+			spriteType = "GFX_acceptance_value"
+			position = { x = 1090 y = 4 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "hum_acceptance_desc"
+		}		
+		
+		instantTextBoxType = {
+			name = "hum_acceptance_text"
+			position = { x = 1090  y = 8 }
+			text = "[?acceptance_value]%"
+			format = center
+			maxWidth = 90
+			maxHeight = 90
+			fixedsize = yes
+			pdx_tooltip = "hum_acceptance_desc"
+		}
+	
+	}
+	containerWindowType = {
+		name = "human_rage_meter_container"
+		position = { x = -4 y = -1 }
+		size = { width=100%% height=100%% }
+		
+		iconType ={
+			name ="hum_rage_bg"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 1190 y = 5 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "hum_rage_mech_desc"
+		}
+		
+		iconType = {
+			name = "hum_rage_meter_icon"
+			spriteType = "GFX_rage_meter_value"
+			position = { x = 1190 y = 4 }
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "hum_rage_mech_desc"
+		}	
+		
+		instantTextBoxType = {
+			name = "hum_rage_meter_text"
+			position = { x = 1190  y = 8 }
+			text = "[GetMeterStatus]"
+			format = center
+			maxWidth = 90
+			maxHeight = 90
+			fixedsize = yes
+			pdx_tooltip = "hum_rage_mech_desc"
+		}
+	}
+	
+	containerWindowType = { 
+		name = "frac_buttons_window"
+		position = { x = 540 y = 150 }
+		size = { width = 310 height = 400 } 
+		moveable = no
+		orientation = upper_left  
+		clipping = no 
+	}
+	containerWindowType = { 
+		name = "frac_button_side_bar"   
+		position = { x = -220 y = -75 } 
+		size = { width = 310 height = 400 } 
+		moveable = no
+		orientation = upper_left
+		clipping = no
+		
+	}
+	containerWindowType = { #Display GUI
+		name = "fac_button_side_bar_initial"
+		position = { x = 540 y = 60 }
+		size = { width = 310 height = 400 } 
+		moveable = no
+		orientation = upper_left
+		clipping = no
+		fade_type = linear 
+		fade_time = 300 
+		animation_time = 60
+		
+		buttonType = {
+			name = "market_top" 
+			position = { x = 225 y = 8 }
+			orientation = upper_left
+			spriteType = GFX_market_top_bottom
+			alwaystransparent = yes 
+		}
+		buttonType = { 
+			name = "ministry_of_peace_open"
+			position = { x = 225 y = 50 }  
+			orientation = upper_left
+			spriteType = GFX_minpeace
+			pdx_tooltip = "minpeace_open_tt"
+		}
+		buttonType = { 
+			name = "ministry_of_peace_open_active"
+			position = { x = 225 y = 50 }  
+			orientation = upper_left
+			spriteType = GFX_minpeace
+			pdx_tooltip = "minpeace_close_tt"
+		}
+		buttonType = {
+			name = "ministry_of_war_open"
+			position = { x = 225 y = 130 } 
+			orientation = upper_left
+			spriteType = GFX_minwar 
+			pdx_tooltip = "minwar_open_tt"
+		}
+		buttonType = {
+			name = "ministry_of_war_open_active"
+			position = { x = 225 y = 130 } 
+			orientation = upper_left
+			spriteType = GFX_minwar
+			pdx_tooltip = "minwar_close_tt" 
+		}
+		buttonType = {
+			name = "ministry_of_morale_open"
+			position = { x = 225 y = 210 } 
+			orientation = upper_left
+			spriteType = GFX_minmor 
+			pdx_tooltip = "minmor_open_tt"
+		}
+		buttonType = {
+			name = "ministry_of_morale_open_active"
+			position = { x = 225 y = 210 } 
+			orientation = upper_left
+			spriteType = GFX_minmor
+			pdx_tooltip = "minmor_close_tt"
+		}
+	}
+	
+	containerWindowType = {
+		name = "statesoc_unity_icon_container"
+		position = { x = -4 y = -1 }
+		size = { width=100%% height=100%% }
+		 
+		iconType ={
+			name ="statesoc_unity_bg" 
+			spriteType = "GFX_generic_box_smallest"
+			position = { x = 1290 y = 5 } 
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "statesoc_unity_desc"
+		}
+		
+		iconType = {
+			name = "statesoc_unity_icon"
+			spriteType = "GFX_statesoc_unity"
+			position = { x = 1290 y = 4 } 
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "statesoc_unity_desc"
+		}	
+		
+		instantTextBoxType = {
+			name = "hum_rage_meter_text"
+			position = { x = 1290  y = 8 }
+			text = "[?uns_unity_statesoc|%0]"
+			format = center
+			maxWidth = 90
+			maxHeight = 90
+			fixedsize = yes 
+			pdx_tooltip = "statesoc_unity_desc"
+		}
+	}
+	
+	containerWindowType = {
+		name = "imperium_orbital_bombardment_window" 
+		orientation = lower_left
+		position = { x = 0 y = 0 }	
+		size = { width = 100%% height = 100%% }   
+		
+		buttonType = {         
+			name = "big_red_button_state"
+			position = { x = 121 y = -91 } 
+			quadTextureSprite = "GFX_state_nuke_button"
+			pdx_tooltip = "launch_nuke_tt"
+		}   		
+	}

@@ -1,0 +1,2869 @@
+GRB_political_affairs_category = {
+	
+	
+	
+	
+	demo_decision_control_military = {
+		available = {
+			has_country_flag = player_democrats_choose
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		modifier = {
+			experience_gain_army_factor = -0.15
+			conscription_factor = -0.2
+			political_power_gain = -0.15
+			
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_GRB_NEUTRALITY_PATH
+			}
+	
+		}
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	demo_decision_control_workers = {
+		available = {
+			has_country_flag = player_democrats_choose
+		}
+		days_remove = 15
+		days_re_enable = 15
+		
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = 0.15
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_GRB_NEUTRALITY_PATH
+			}
+		}
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			} 
+			365 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	demo_decision_newspapers_control = {
+		available = {
+			has_country_flag = player_democrats_choose
+		}
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.1
+			political_power_gain = 0.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = AI_GRB_NEUTRALITY_PATH
+			}
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	comm_decision_control_military = {
+		available = {
+			has_country_flag = player_communists_choose
+		}
+		modifier = {
+			war_support_factor = -0.15
+			experience_gain_army_factor = -0.2
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	comm_decision_control_workers = {
+		available = {
+			has_country_flag = player_communists_choose
+		}
+		modifier = {
+			political_power_gain = 0.05
+			stability_factor = -0.05
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 7 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 3 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	comm_decision_newspapers_control = {
+		available = {
+			has_country_flag = player_communists_choose
+		}
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = 0.15
+			production_speed_buildings_factor = -0.15
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	fasc_decision_control_military = {
+		available = {
+			has_country_flag = player_fascism_choose
+		}
+		
+		modifier = {
+			fascism_drift = 0.01 
+			political_power_gain = -0.1
+			stability_factor = -0.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+				}
+			}
+		}
+		days_remove = 15
+		days_re_enable = 15
+		cost = 25
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	fasc_decision_control_workers = {
+		available = {
+			has_country_flag = player_fascism_choose
+		}
+		modifier = {
+			production_factory_max_efficiency_factor = -0.1
+			production_lack_of_resource_penalty_factor = 0.15
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+				}
+			}
+		}
+		days_re_enable = 15
+		cost = 25
+		days_remove = 15
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_demo_support_gb value = 3 tooltip = demo_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+	
+	
+	fasc_decision_newspapers_control = {
+		available = {
+			has_country_flag = player_fascism_choose
+		}
+		modifier = {
+			stability_factor = -0.1
+			war_support_factor = 0.15
+			experience_gain_army_factor = 0.25
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+				}
+			}
+		}
+		days_re_enable = 15
+		cost = 25
+		days_remove = 15
+		remove_effect = {
+			363 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			}
+			364 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			}
+			365 = {
+				add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+				add_to_variable = { var = reg_fasc_support_gb value = 10 tooltip = fasc_var_change_grb }
+				add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			}
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes 
+		}
+	}
+}
+
+
+
+GRB_communist_revolt_decisions = {
+	debug_add_all_commie_to_alliance = {
+		allowed = {
+			is_debug = yes 
+		}
+		complete_effect = {
+			set_politics = { ruling_party = communism }
+			create_faction = DEBUG_COMM
+			every_other_country = {
+				limit = {
+					has_government = communism
+				}
+				country_event = { id = generic.5 days = 3 }
+			}
+		}
+	}
+	debug_remove_all_commie_from_alliance = {
+		allowed = {
+			is_debug = yes 
+		}
+		complete_effect = {
+			dismantle_faction = yes
+		}
+	}
+	GRB_add_manpower_to_commie_country = {
+		available = {
+			has_manpower > 4999 
+			has_army_experience > 4.99
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+		modifier = {
+			experience_gain_army_factor = -0.25
+			experience_gain_army = -0.25
+			training_time_army_factor = 0.5
+		}
+		remove_effect = {
+			add_manpower = -5000
+			add_to_variable = { var = num_of_commie_recruits value = 5000 tooltip = add_commie_recruits }
+		}
+	}
+	
+	GRB_add_infantry_weapons = {
+		available = {
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = infantry_equipment amount = -2000 }
+			add_to_variable = { var = num_of_commie_rifles value = 2000 tooltip = add_commie_rifles }
+		}
+	}
+	
+	GRB_add_special_equipment = {
+		available = {
+			has_equipment = { support_equipment > 499 }
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = support_equipment amount = -500 }
+			add_to_variable = { var = num_of_commie_support value = 500 tooltip = add_commie_support }
+		}
+	}
+	
+	GRB_add_artillery = {
+		
+		available = {
+			has_equipment = { artillery_equipment > 249 }
+			custom_trigger_tooltip = {
+				tooltip = min_8_allies
+				check_variable = { allies_infl_max_revolt > 1 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = artillery_equipment amount = -250 }
+			add_to_variable = { var = num_of_commie_artillery value = 250 tooltip = add_commie_artillery }
+		}
+	}
+	
+	GRB_add_antitank = {
+		
+		available = {
+			has_equipment = { anti_tank_equipment > 249 }
+			custom_trigger_tooltip = {
+				tooltip = min_12_allies
+				check_variable = { allies_infl_max_revolt > 2 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = anti_tank_equipment amount = -250 }
+			add_to_variable = { var = num_of_commie_atguns value = 250 tooltip = add_commie_atitank }
+		}
+	}
+	
+	GRB_add_transport = {
+		available = {
+			has_equipment = { motorized_equipment > 499 }
+			custom_trigger_tooltip = {
+				tooltip = min_12_allies
+				check_variable = { allies_infl_max_revolt > 2 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = motorized_equipment amount = -500 }
+			add_to_variable = { var = num_of_commie_cars value = 500 tooltip = add_commie_transport }
+		}
+	}
+	
+	GRB_add_medium_tanks = {
+		available = {
+			has_equipment = { medium_tank_equipment > 199 }
+			custom_trigger_tooltip = {
+				tooltip = min_20_allies
+				check_variable = { allies_infl_max_revolt > 4 }
+			}
+		}
+		days_re_enable = 5
+		cost = 15 
+		days_remove = 20
+
+		remove_effect = {
+			add_equipment_to_stockpile = { type = medium_tank_equipment amount = -200 }
+			add_to_variable = { var = num_of_commie_medtanks value = 200 tooltip = add_commie_tanks }
+		}
+	}
+	
+	
+}
+
+
+
+GRB_communist_revolt_starting = { 
+	debug_check_tag = {
+		target_trigger = {
+			FROM = { 
+				has_civil_war = yes
+				NOT = { has_government = communism }
+			}
+			
+		}
+		allowed = {
+			is_debug = yes 
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					original_tag = FROM 
+					NOT = {
+						has_government = communism 
+					} 
+				}
+			}
+			add_stability = 0.01 
+		}
+	}
+	GRB_start_revolt_in_country = {
+		available = {
+			custom_trigger_tooltip = {
+				check_variable = { ROOT.started_revolts_value < ROOT.allies_infl_max_revolt }
+				tooltip = less_revolts_than_available
+			}
+		}
+		target_trigger = {
+			FROM = {
+				exists = yes
+				any_neighbor_country = {
+					OR = {
+						original_tag = GRB 
+						is_subject_of = ROOT 
+						is_in_faction_with = ROOT 
+					}
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
+		}
+		visible = {
+			check_variable = { ROOT.started_revolts_value < ROOT.allies_infl_max_revolt }
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 45
+		complete_effect = {
+			add_to_variable = { started_revolts_value = 1 }
+		} 
+		remove_effect = {
+			FROM = {
+				start_civil_war = {
+					ruling_party = communism
+					ideology = FROM 
+					size = 0.8
+				}
+				set_country_flag = is_grb_revolt_target
+				hidden_effect = {
+					set_technology = { tech_engineers = 1 }
+					set_technology = { tech_recon = 1 }
+					set_technology = { tech_field_hospital = 1 }
+					set_technology = { tech_logistics_company = 1 }
+					set_technology = { tech_signal_company = 1 }
+					set_technology = { tech_military_police = 1 }
+					set_technology = { tech_maintenance_company = 1 }
+					set_technology = { motorised_infantry = 1 }
+					set_technology = { radio =  1}
+				}
+			}
+		}
+	}
+	
+	
+	GRB_add_from_to_faction = {
+		target_trigger = {
+			FROM = {
+				exists = yes 
+				OR = {
+					has_country_flag = is_grb_revolt_target
+					has_government = communism 
+				}
+
+				is_in_faction = no 
+				
+			}
+		}
+		available = {
+			FROM = {
+				has_civil_war = no
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		days_remove = 5
+		remove_effect = {
+			FROM = {
+				country_event = { id = generic.5 days = 3 }
+			}
+			hidden_effect = {
+				add_to_variable = { ROOT.started_revolts_value = -1 }
+				FROM = {
+					clr_country_flag = is_grb_revolt_target
+				}
+			}
+		}
+	}
+}
+
+
+
+GRB_communist_support = {
+	GRB_send_helping_brigades = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 7999 }
+				check_variable = { ROOT.num_of_commie_rifles > 399 }
+				tooltip = vlunteers_brigade_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -8000 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -400 tooltip = add_commie_rifles }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Volunteer Brigade"
+							}
+						}
+						division_template = {
+							name = "Volunteer Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+					
+						create_unit = {
+							division = "name = \"Volunteers\" division_template = \"Volunteer Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Volunteers\" division_template = \"Volunteer Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_grb_tt
+				
+				
+			}
+			
+		}
+	}
+				
+	GRB_send_helping_divs = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 19599 }
+				check_variable = { ROOT.num_of_commie_rifles > 1819 }
+				check_variable = { ROOT.num_of_commie_support > 109 }
+				tooltip = vlunteers_divs_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -19600 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1820 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -110 tooltip = add_commie_support }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Volunteer Division"
+							}
+						}
+						division_template = {
+							name = "Volunteer Division"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								infantry = { x = 2 y = 0 }
+								infantry = { x = 2 y = 1 }
+								infantry = { x = 2 y = 2 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Volunteers Division\" division_template = \"Volunteer Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Volunteers Division\" division_template = \"Volunteer Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_bigger_grb_tt
+				
+			}
+			
+		}
+	}
+	
+	GRB_send_artillery_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 18199 }
+				check_variable = { ROOT.num_of_commie_rifles > 1419 }
+				check_variable = { ROOT.num_of_commie_support > 109 }
+				check_variable = { ROOT.num_of_commie_artillery > 167 }
+				tooltip = vlunteers_art_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -18200 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1420 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -110 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_artillery value = -168 tooltip = add_commie_artillery }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Artillery Division"
+							}
+						}
+						division_template = {
+							name = "Artillery Division"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								infantry = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+								artillery_brigade = { x = 2 y = 2 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Artillery Division\" division_template = \"Artillery Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Artillery Division\" division_template = \"Artillery Division\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_artillery_grb_tt
+			}
+			
+		}
+	}
+	
+	GRB_send_antitank_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 18199 }
+				check_variable = { ROOT.num_of_commie_rifles > 1419 }
+				check_variable = { ROOT.num_of_commie_support > 109 }
+				check_variable = { ROOT.num_of_commie_artillery > 167 }
+				check_variable = { ROOT.num_of_commie_atguns > 191 }
+				tooltip = vlunteers_at_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -18200 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1420 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -110 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_artillery value = -168 tooltip = add_commie_artillery }
+			add_to_variable = { var = num_of_commie_atguns value = -192 tooltip = add_commie_atitank }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Volunteer Antitank Brigade"
+							}
+						}
+						division_template = {
+							name = "Volunteer Antitank Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 1 y = 0 }
+								infantry = { x = 1 y = 1 }
+								infantry = { x = 1 y = 2 }
+								artillery_brigade = { x = 2 y = 0 }
+								artillery_brigade = { x = 2 y = 1 }
+								anti_tank_brigade = { x = 2 y = 2 }
+								anti_tank_brigade = { x = 2 y = 3 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+								anti_tank = { x = 0 y = 3 }
+								recon = { x = 0 y = 4 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Volunteer Antitank Brigade\" division_template = \"Volunteer Antitank Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Volunteer Antitank Brigade\" division_template = \"Volunteer Antitank Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_antitank_grb_tt
+			}
+			
+		}
+	}
+	
+	
+	
+	GRB_send_transport_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 20899 }
+				check_variable = { ROOT.num_of_commie_rifles > 1419 }
+				check_variable = { ROOT.num_of_commie_support > 209 }
+				check_variable = { ROOT.num_of_commie_artillery > 167 }
+				check_variable = { ROOT.num_of_commie_cars > 959 }
+				tooltip = vlunteers_cars_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -20900 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -1420 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -210 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_artillery value = -168 tooltip = add_commie_artillery }
+			add_to_variable = { var = num_of_commie_cars value = -960 tooltip = add_commie_transport }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Motorized Brigade"
+							}
+						}
+						division_template = {
+							name = "Motorized Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								motorized = { x = 0 y = 0 }
+								motorized = { x = 0 y = 1 }
+								motorized = { x = 0 y = 2 }
+								motorized = { x = 1 y = 0 }
+								motorized = { x = 1 y = 1 }
+								motorized = { x = 1 y = 2 }
+								motorized = { x = 2 y = 0 }
+								mot_artillery_brigade = { x = 2 y = 1 }
+								mot_artillery_brigade = { x = 2 y = 2 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								artillery = { x = 0 y = 2 }
+								field_hospital = { x = 0 y = 3 }
+								logistics_company = { x = 0 y = 4 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Motorized Brigade\" division_template = \"Motorized Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						create_unit = {
+							division = "name = \"Motorized Brigade\" division_template = \"Motorized Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_transport_grb_tt
+			}
+			
+		}
+	}
+	
+	
+	GRB_send_armor_company = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = is_grb_revolt_target 
+				has_government = communism
+			}
+		}
+		
+		cost = 25
+		available = {
+			custom_trigger_tooltip = { 
+				check_variable = { ROOT.num_of_commie_recruits > 17999 }
+				check_variable = { ROOT.num_of_commie_rifles > 819 }
+				check_variable = { ROOT.num_of_commie_support > 209 }
+				check_variable = { ROOT.num_of_commie_cars > 459 }
+				check_variable = { ROOT.num_of_commie_medtanks > 299 }
+				tooltip = vlunteers_tank_company_tt
+			}
+		}
+		days_re_enable = 25
+		days_remove = 5 
+		#fire_only_once = yes 
+		complete_effect = {
+			add_to_variable = { var = num_of_commie_recruits value = -18000 tooltip = add_commie_recruits }
+			add_to_variable = { var = num_of_commie_rifles value = -820 tooltip = add_commie_rifles }
+			add_to_variable = { var = num_of_commie_support value = -210 tooltip = add_commie_support }
+			add_to_variable = { var = num_of_commie_medtanks value = -300 tooltip = add_commie_tanks }
+			add_to_variable = { var = num_of_commie_cars value = -460 tooltip = add_commie_transport }
+		}
+		remove_effect = {
+			FROM = {
+				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								has_template = "Armored Brigade"
+							}
+						}
+						division_template = {
+							name = "Armored Brigade"
+							division_names_group = GEM_MIL_01
+							regiments = {
+								medium_armor = { x = 0 y = 0 }
+								medium_armor = { x = 0 y = 1 }
+								medium_armor = { x = 0 y = 2 }
+								medium_armor = { x = 1 y = 0 }
+								medium_armor = { x = 1 y = 1 }
+								medium_armor = { x = 1 y = 2 }
+								mot_artillery_brigade = { x = 2 y = 0 }
+								mot_artillery_brigade = { x = 2 y = 1 }
+								mot_artillery_brigade = { x = 2 y = 2 }
+								mot_artillery_brigade = { x = 2 y = 3 }
+							}
+							support = {
+								maintenance_company = { x = 0 y = 0 }
+								engineer = { x = 0 y = 1 }
+								
+								field_hospital = { x = 0 y = 2 }
+								logistics_company = { x = 0 y = 3 }
+							}
+							#priority = 0
+							is_locked = yes 
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Armored Brigade\" division_template = \"Armored Brigade\"  start_experience_factor = 0.6 start_equipment_factor = 1"
+							owner = FROM 
+						}
+						
+					}
+				}
+				custom_effect_tooltip = volunt_2_divs_armored_grb_tt
+			}
+			
+		}
+	}
+	
+
+}
+
+GRB_resources = {
+	GRB_search_steel = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { steel < 0 }
+			}
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+				set_state_flag = GRB_steel_1
+			}
+			
+		}
+	}
+	GRB_search_aluminium = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { aluminium < 0 }
+			}
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = aluminium
+					amount = 12
+				}
+				set_state_flag = GRB_aluminium_1
+			}
+		}
+	}
+	GRB_search_rubber = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 363
+			controls_state = 363
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { rubber < 0 }
+			}
+		}
+		remove_effect = {
+			366 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+				set_state_flag = GRB_rubber_1
+			}
+		}
+	}
+	GRB_search_oil = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 364
+			controls_state = 364
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { oil < 0 }
+			}
+		}
+		remove_effect = {
+			364 = {
+				add_resource = {
+					type = oil
+					amount = 20
+				}
+				set_state_flag = GRB_oil_1
+			}
+		}
+	}
+	GRB_search_crystals = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 364
+			controls_state = 364
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { crystals < 0 }
+			}
+		}
+		remove_effect = {
+			364 = {
+				add_resource = {
+					type = crystals
+					amount = 10
+				}
+				set_state_flag = GRB_crystals_1
+			}
+		}
+	}
+	GRB_search_chromium = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { chromium < 0 }
+			}
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = chromium
+					amount = 10
+				}
+				set_state_flag = GRB_chromium_1
+			}
+		}
+	}
+	GRB_search_tungsten = {
+		icon = 111
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			OR = {
+				has_completed_focus = GRB_resource_searching
+				has_completed_focus = GRB_resource_searching_hum
+				has_completed_focus = GRB_resource_search_anarch
+			}
+			owns_state = 365
+			controls_state = 365
+		}
+		
+		cost = 25
+		fire_only_once = yes
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_resources_amount = { tungsten < 0 }
+			}
+		}
+		remove_effect = {
+			365 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+				set_state_flag = GRB_tungsten_1
+			}
+		}
+	}
+}
+
+
+GRB_trading_category = {
+	GRB_fill_market = {
+		
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		days_remove = 60
+		days_re_enable = 60
+		modifier = {
+			consumer_goods_factor = 0.25 
+		}
+		cost = 25 
+		complete_effect = {
+			FROM = {	
+				add_ideas = GRB_market_filling
+			}
+		}
+		
+		remove_effect = {
+			FROM = {
+				remove_ideas = GRB_market_filling
+			}
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.03 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+		
+	}
+		
+		
+	GRB_buy_resources = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		days_remove = 30
+		days_re_enable = 60
+		modifier = {
+			consumer_goods_factor = 0.25 
+		}
+		cost = 25 
+		complete_effect = {
+			FROM = {
+				random_owned_state = {
+					limit = {
+						OR = {
+							has_resources_amount = {
+								resource = steel 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = aluminium 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = tungsten 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = chromium 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = oil 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = rubber 
+								amount > 0 
+							}
+							has_resources_amount = {
+								resource = crystals 
+								amount > 0 
+							}
+						}
+					}
+					set_state_flag = resource_buiying_by_grb@FROM 
+					give_resource_rights = { state = THIS receiver = ROOT }
+				}
+			}
+		}
+		
+		remove_effect = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						has_state_flag = resource_buiying_by_grb@FROM 
+					}
+					ROOT = { remove_resource_rights = PREV }
+						
+				}
+			}
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.04 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+	}
+	
+	GRB_industrial_investment = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				
+				check_variable = { trade_decisions_opened > 0 }
+					
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_12
+				check_variable = { FROM.grb_trading_influence > 0.11 }
+			}
+		}
+		fixed_random_seed = no 
+		days_remove = 45
+		days_re_enable = 45
+		
+		modifier = {
+			production_speed_buildings_factor = -0.1
+		}
+		cost = 25
+		remove_effect = {
+			FROM = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					random_list = {
+						33 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes 
+							}
+							ROOT = {
+								add_offsite_building = { type = industrial_complex level = 2 }
+							}
+						}
+						33 = {
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes 
+							}
+							ROOT = {
+								add_offsite_building = { type = arms_factory level = 2 }
+							}
+						}
+						33 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes 
+							}
+							add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes 
+							}
+							ROOT = {
+								add_offsite_building = { type = industrial_complex level = 1 }
+								add_offsite_building = { type = arms_factory level = 1 }
+							}
+						}
+						
+					}
+				}
+			}
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.05 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+			#custom_effect_tooltip = random_industry_receive
+		}
+	}
+			
+			
+	GRB_geological_research = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				
+				check_variable = { trade_decisions_opened > 0 }
+					
+				
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_25
+				check_variable = { FROM.grb_trading_influence > 0.24 }
+			}
+		}
+		cost = 25 
+		days_remove = 45
+		days_re_enable = 45
+		fixed_random_seed = no 
+		remove_effect = {	
+			FROM = {
+				hidden_effect = {
+					randomize_temp_variable = {
+						var = var_days_mech_temp
+						distribution = binomial
+						min = 5
+						max = 10
+						
+					}
+					round_variable = var_days_mech_temp
+				
+					random_owned_state = {
+						
+						random_list = {
+							25 = {
+								add_resource = {
+									type = steel
+									amount = var_days_mech_temp
+								}
+								add_resource = {
+									type = aluminium
+									amount = var_days_mech_temp
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_steel_value = var_days_mech_temp }
+								add_to_variable = { ROOT.grb_alum_value = var_days_mech_temp }
+							}
+							
+							25 = {
+								add_resource = {
+									type = chromium
+									amount = var_days_mech_temp
+								}
+								add_resource = {
+									type = tungsten
+									amount = var_days_mech_temp	
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_chrom_value = var_days_mech_temp }
+								add_to_variable = { ROOT.grb_tungs_value = var_days_mech_temp }
+									
+							}
+							
+							25 = {
+								add_resource = {
+									type = oil
+									amount = var_days_mech_temp
+								}
+								add_resource = {
+									type = rubber
+									amount = var_days_mech_temp
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_oil_value = var_days_mech_temp }
+								add_to_variable = { ROOT.grb_rubb_value = var_days_mech_temp }
+							}
+							
+							25 = {
+								add_resource = {
+									type = crystals
+									amount = var_days_mech_temp
+								}
+								divide_temp_variable = { PREV.var_days_mech_temp = 2 }
+								add_to_variable = { ROOT.grb_cryst_value = var_days_mech_temp }
+								
+							}
+						}
+						#fixed_random_seed = no 
+					}
+				}
+				custom_effect_tooltip = random_resource_receive
+			}
+			custom_effect_tooltip = random_resource_receive_root
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.05 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+	}
+	
+	
+	GRB_sterling_giving = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = check_variable = { trade_decisions_opened = 1 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_60
+				check_variable = { FROM.grb_trading_influence > 0.59 }
+			}
+		}
+					 
+		days_remove = 45
+		days_re_enable = 45
+		
+		cost = 25 
+		
+		remove_effect = {
+			FROM = {
+				add_ideas = GRB_funds_sterling
+			}
+			add_to_variable = { grb_political_power_gain = 0.1 }
+			custom_effect_tooltip = add_political_gain
+			add_to_variable = { var = FROM.grb_trading_influence value = 0.15 tooltip = grb_brit_infl_check }
+			clamp_variable = {
+				var = FROM.grb_trading_influence
+				min = 0
+				max = 1 
+			}
+		}
+	}
+	
+	
+	GRB_economical_integration = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_80
+				check_variable = { FROM.grb_trading_influence > 0.79 }
+				
+			}
+		}
+		cost = 50
+		fire_only_once = yes 
+		days_remove = 30
+		
+		remove_effect = {
+			FROM = {
+				every_owned_state = {
+					give_resource_rights = { state = THIS receiver = ROOT }
+				}
+				add_ideas = GRB_eco_integration
+			}
+		}
+	}
+	
+	
+	GRB_economical_puppet = {
+		target_trigger = {
+			FROM = {
+				has_country_flag = british_tc_opened
+			}
+		}
+		visible = {
+			FROM = {
+				AND = {
+					check_variable = { trade_decisions_opened > 0 }
+					NOT = {
+						is_subject_of = ROOT 
+					}
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = check_level_100
+				check_variable = { FROM.grb_trading_influence = 1 }
+			}
+		}
+		
+		fire_only_once = yes 
+		days_remove = 30
+		
+		remove_effect = {
+			set_autonomy = {
+				target = FROM 
+				autonomy_state = autonomy_trade_republic_grb
+				#freedom_level = 25
+			}
+			
+			custom_effect_tooltip = block_decisions_not_invest
+			add_to_variable = { num_of_tcs_nopupp = -1 }
+		}
+	} 
+}
+
+
+GRB_bigben_category = {
+	GRB_build_one_bigben = {
+		visible = {
+			check_variable = { grb_bigben_level < 4 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.08
+			consumer_goods_factor = 0.05
+			civilian_factory_use = 2
+		}
+		cost = 50
+		remove_effect = {
+			add_to_variable = { grb_bigben_level = 1 }
+		}
+	}
+	GRB_finish_bigben = {
+		visible = {
+			check_variable = { grb_bigben_level = 4 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.12
+			consumer_goods_factor = 0.1
+			civilian_factory_use = 4
+		}
+		fire_only_once = yes
+		cost = 50
+		remove_effect = {
+			add_ideas = GRB_bigben
+		}
+	}
+}
+
+GRB_tower_category = {
+	GRB_build_one_tower = {
+		visible = {
+			check_variable = { grb_tower_level < 4 }
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.08
+			consumer_goods_factor = 0.05
+			civilian_factory_use = 2
+		}
+		cost = 50
+		remove_effect = {
+			add_to_variable = { grb_tower_level = 1 }
+		}
+	}
+	GRB_finish_tower = {
+		visible = {
+			check_variable = { grb_tower_level = 4 }
+		}
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 3 
+		}
+		days_remove = 30
+		modifier = {
+			production_speed_buildings_factor = -0.12
+			consumer_goods_factor = 0.1
+			civilian_factory_use = 4
+		}
+		cost = 50
+		remove_effect = {
+			add_ideas = GRB_london_tower
+		}
+	}
+}
+
+
+GRB_anarchy_development_category = {
+	GRB_ANCOM_strength_narhoz = {
+		days_remove = 30
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 20
+				has_manpower < 100000
+			}
+		}
+		days_re_enable = 30
+		cost = 25
+		modifier = {
+			weekly_manpower = 500
+			stability_factor = 0.05
+		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_civilian_industry = {
+		days_remove = 50
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	
+	GRB_ANCOM_plan_military_industry = {
+		days_remove = 50
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_naval_industry = {
+		days_remove = 50
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				factor = 0
+				NOT = {
+					any_owned_state = {
+						is_coastal = yes 
+					}
+				}
+			}
+		}
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_fuel_storage = {
+		days_remove = 50
+		days_re_enable = 25
+		cost = 30
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = fuel_silo 
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = fuel_silo 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_fuel_industry = {
+		days_remove = 50
+		days_re_enable = 25
+		cost = 60
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery 
+					level = 1
+					instant_build = yes 
+				}
+				add_building_construction = {
+					type = fuel_silo 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_rockets = {
+		days_remove = 75
+		days_re_enable = 25
+		cost = 70
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = rocket_site 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_plan_reactors = {
+		days_remove = 120
+		days_re_enable = 150
+		cost = 120
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			has_completed_focus = GRB_what_do_they_need
+			has_tech = nuclear_reactor
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			random_owned_state = {
+				#limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor 
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_propaganda_campaign = {
+		days_remove = 45
+		ai_will_do = {
+			factor = 15
+		}
+		days_re_enable = 15
+		cost = 15
+		modifier = {
+			political_power_gain = 1
+			stability_factor = -0.07
+			communism_drift = 0.02
+		}
+	}
+	
+	GRB_ANCOM_war_propaganda = {
+		days_remove = 30
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			has_completed_focus = GRB_ideological_preparation
+		}
+		days_re_enable = 60
+		cost = 30
+		modifier = {
+			war_support_factor = 0.15
+			army_attack_factor = 0.1
+			weekly_manpower = 150
+		}
+	}
+	
+	GRB_ANCOM_infrastructure_development = {
+		days_remove = 25
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 25
+		cost = 50
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+			has_completed_focus = GRB_what_do_they_need
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect = {
+			random_owned_state = {
+				limit = { infrastructure < 5 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_production_bonuses = {
+		days_remove = 45
+		ai_will_do = {
+			factor = 25
+		}
+		days_re_enable = 15
+		cost = 25
+		modifier = {
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.15
+			industrial_capacity_factory = 0.1
+		}
+	}
+	
+	GRB_ANCOM_state_development = {
+		target_trigger = {
+			FROM = {
+				OR = {
+					has_state_category = metropolis
+					has_state_category = city
+					has_state_category = large_city
+					has_state_category = megalopolis
+				}
+				NOT = {
+					is_core_of = ROOT 
+				}
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		visible = {
+			has_completed_focus = GRB_new_lands_development
+		}
+		cost = 75
+		days_remove = 90
+		state_target = yes 
+		modifier = {
+			monthly_population = -0.1
+			production_speed_buildings_factor = -0.1
+			production_factory_max_efficiency_factor = -0.1
+			political_power_gain = -0.25
+		}
+		remove_effect = {
+			ROOT = {
+				add_core_of = FROM 
+			}
+		}
+	}
+	
+}
+
+GRB_anarchy_military_category = {
+	GRB_ANCOM_develop_new_army = {
+		cost = 25
+		ai_will_do = {
+			factor = 250
+		}
+		available = {
+			has_completed_focus = GRB_open_academy
+		}
+		
+		days_remove = 30
+		fire_only_once = yes 
+		
+		remove_effect = {
+			custom_effect_tooltip = load_anarchic_oob
+			hidden_effect = {
+				load_oob = "GRB_ANCOM"
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_infantry = {
+		cost = 15
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_manpower > 10199
+			has_equipment = {
+				magical_equipment > 909
+			}
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_equipment = {
+				support_equipment > 254
+			}
+			has_equipment = {
+				motorized_equipment > 19
+			}
+			has_equipment = {
+				anti_tank_equipment > 23
+			}
+		}
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -10200
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -12
+				}
+				add_equipment_to_stockpile = {
+					type = magical_equipment
+					amount = -910
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -255
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -20
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -24
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_2_infantry = {
+		cost = 30
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			has_manpower > 20399
+			has_equipment = {
+				magical_equipment > 1819
+			}
+			has_equipment = {
+				artillery_equipment > 23
+			}
+			has_equipment = {
+				support_equipment > 509
+			}
+			has_equipment = {
+				motorized_equipment > 39
+			}
+			has_equipment = {
+				anti_tank_equipment > 47
+			}
+		}
+		days_remove = 45
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -20400
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -24
+				}
+				add_equipment_to_stockpile = {
+					type = magical_equipment
+					amount = -1820
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -519
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -40
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -48
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_4_infantry = {
+		cost = 60
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			has_manpower > 40799
+			has_equipment = {
+				magical_equipment > 3639
+			}
+			has_equipment = {
+				artillery_equipment > 47
+			}
+			has_equipment = {
+				support_equipment > 1019
+			}
+			has_equipment = {
+				motorized_equipment > 79
+			}
+			has_equipment = {
+				anti_tank_equipment > 95
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -40800
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -48
+				}
+				add_equipment_to_stockpile = {
+					type = magical_equipment
+					amount = -3640
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -1020
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -80
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -96
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Brigade\" division_template = \"Liberation Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_armor = {
+		cost = 30
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_manpower > 7199
+			has_equipment = {
+				medium_tank_chassis > 299
+			}
+			has_equipment = {
+				infantry_equipment > 249
+			}
+			has_equipment = {
+				support_equipment > 84
+			}
+			has_equipment = {
+				motorized_equipment > 69
+			}
+		}
+		days_remove = 50
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -7200
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -300
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -250
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -85
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -70
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_2_armor = {
+		cost = 60
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			has_manpower > 14399
+			has_equipment = {
+				medium_tank_chassis > 599
+			}
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_equipment = {
+				support_equipment > 169
+			}
+			has_equipment = {
+				motorized_equipment > 139
+			}
+		}
+		days_remove = 70
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -14400
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -600
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -500
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -170
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -140
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_4_armor = {
+		cost = 120
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			has_manpower > 28799
+			has_equipment = {
+				medium_tank_chassis > 1199
+			}
+			has_equipment = {
+				infantry_equipment > 999
+			}
+			has_equipment = {
+				support_equipment > 339
+			}
+			has_equipment = {
+				motorized_equipment > 279
+			}
+		}
+		days_remove = 90
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -28800
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = -1200
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1000
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -340
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -280
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Armored Brigade\" division_template = \"Liberation Armored Company\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_mechanized = {
+		cost = 25
+		ai_will_do = {
+			factor = 5
+		}
+		visible = {
+			has_tech = mechanised_infantry
+		}
+		available = {
+			#has_tech = mechanised_infantry
+			has_manpower > 7499
+			has_equipment = {
+				mechanized_equipment > 159
+			}
+			has_equipment = {
+				infantry_equipment > 549
+			}
+			has_equipment = {
+				support_equipment > 39
+			}
+			has_equipment = {
+				motorized_equipment > 34
+			}
+			has_equipment = {
+				artillery_equipment > 11
+			}
+			has_equipment = {
+				anti_tank_equipment > 23
+			}
+		}
+		days_remove = 40
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -7500
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -160
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -550
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -40
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -35
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -12
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -24
+				}
+			}
+		}
+		remove_effect = {
+			capital_scope = {
+				
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_2_mechanized = {
+		cost = 50
+		ai_will_do = {
+			factor = 15
+		}
+		visible = {
+			has_tech = mechanised_infantry
+		}
+		available = {
+			#has_tech = mechanised_infantry
+			has_manpower > 14999
+			has_equipment = {
+				mechanized_equipment > 319
+			}
+			has_equipment = {
+				infantry_equipment > 1099
+			}
+			has_equipment = {
+				support_equipment > 79
+			}
+			has_equipment = {
+				motorized_equipment > 69
+			}
+			has_equipment = {
+				artillery_equipment > 23
+			}
+			has_equipment = {
+				anti_tank_equipment > 47
+			}
+		}
+		days_remove = 60
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -15000
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -320
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -1100
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -80
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -70
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -24
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -48
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	
+	GRB_ANCOM_recruit_4_mechanized = {
+		cost = 100
+		ai_will_do = {
+			factor = 25
+		}
+		visible = {
+			has_tech = mechanised_infantry
+		}
+		available = {
+			#has_tech = mechanised_infantry
+			has_manpower > 29999
+			has_equipment = {
+				mechanized_equipment > 639
+			}
+			has_equipment = {
+				infantry_equipment > 2199
+			}
+			has_equipment = {
+				support_equipment > 159
+			}
+			has_equipment = {
+				motorized_equipment > 139
+			}
+			has_equipment = {
+				artillery_equipment > 47
+			}
+			has_equipment = {
+				anti_tank_equipment > 95
+			}
+		}
+		days_remove = 80
+		complete_effect = {
+			hidden_effect = {
+				add_manpower = -30000
+				add_equipment_to_stockpile = {
+					type = mechanized_equipment
+					amount = -640
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = -2200
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = -160
+				}
+				add_equipment_to_stockpile = {
+					type = motorized_equipment
+					amount = -140
+				}
+				add_equipment_to_stockpile = {
+					type = artillery_equipment
+					amount = -48
+				}
+				add_equipment_to_stockpile = {
+					type = anti_tank_equipment
+					amount = -96
+				}
+			}
+		}
+		remove_effect = {
+			
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Volunteers Mechanized Brigade\" division_template = \"Liberation Mechanized Infantry\" start_experience_factor = 0.25 start_equipment_factor = 1"
+					owner = ROOT
+				}
+			}
+		}
+	}
+}

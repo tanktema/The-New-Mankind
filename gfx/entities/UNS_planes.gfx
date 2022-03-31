@@ -1,0 +1,24 @@
+objectTypes = {	
+
+		pdxmesh = {
+		name = "F4E_phantom_mesh"
+		file = "gfx/models/units/planes/F4E.mesh"
+		animation = { id = "idle" type = "fighter_default_idle_animation" }
+	}
+
+		pdxmesh = {
+		name = "F111_mesh"
+		file = "gfx/models/units/planes/F111.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+	
+		pdxmesh = {
+		name = "B52H_mesh"
+		file = "gfx/models/units/planes/B52H.mesh"
+		animation = { id = "idle" type = "bomber_default_idle_animation" }
+	}
+
+	
+	}
+	
+		

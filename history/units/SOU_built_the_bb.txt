@@ -1,0 +1,11 @@
+units = {
+	fleet = {
+		name = "Leningradskiy Flot"
+		naval_base = 119
+		task_force = {
+			name = "Operativnoe Soedinenie 1"
+			location = 119
+			ship = { name = "Kirov" pride_of_the_fleet = yes definition = battleship start_experience_factor = 1 equipment = { ship_hull_heavy_1 = { amount = 1 owner = SOU version_name = "Severomorsk class" } } }
+		}
+	}
+}

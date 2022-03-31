@@ -1,0 +1,195 @@
+﻿l_english:
+ 
+ human_armies:0 "Human Armies"
+ human_armies_desc:0 "Warring since uncountable times, human armies have several advantages against many species of this world.  \n\n§gYour vehicles are slightly different from what the natives can lign up.§! \n§OMotorized and Mechanized§! §gEasier to produce and slightly stronger.§! \n§OArmored Cars§! §gMuch faster but lack any kind of serious armor for combat.§!\n§OEarly tanks§! §gStronger but also slower and prone to breaking down.§!\n§OLight tanks§! §gFaster and well armed, they trade this for a very thin armor.§!\n§OMedium tanks§! §gPowerful and well armored, they are still a bit slow compared to other MBT's.§!\n§OHeavy tanks§! §gVery powerful vehicles that still have some reliability issue and are difficult to built§!\n§OSuper Heavy tanks§! §gThose behemoths can turn the tide of a battle... at a price.§!\n§OModern tanks§! §gAlso known as 'MBT' or Main battle tanks, they combine everything a tanker could dream of, sadly it come at an expensive production.§!"
+
+ human_air_force:0 "Human Air Force"
+ human_air_force_desc:0 "§gYour planes are generally faster and with stronger armement but struggle at low speed/altitude, on the other hand your helicopters are slower but much more agile.§! \n\nSince the end of WWII air forces across the world changed drastically, with the creation of helicopters and the discovery of the jet engines our planes are now much stronger and faster, but as well much more costly to produce."
+
+ precarious_condition:0 "Precarious Conditions"
+ precarious_condition_desc:0 "Mere years ago, our citizens lived in skyscrapers and houses, had access to running water and food in abundance. But that has all been wrenched away from us, and we find ourselves reduced to living in makeshift tents and having barely enough to survive. Radical action must be undertaken to address these issues; camps need to be organized, food sources discovered, and sanitation measures initiated. If it is not then famine, disease outbreaks, or even open revolt will be just around the corner, and then humanity truly will be doomed."
+
+ precarious_condition_2:0 "Improving Life Conditions"
+ precarious_condition_2_desc:0 "Our situation is slowly but surely improving, it will take more time to fully heal the wounds of the war, but we will make it. Humanity still have a chance."
+
+ radiation_poisoning:0 "Radiation Sickness"
+ radiation_poisoning_desc:0 "Since we didn't made any distinctions as to who could enter the gates there's a significant percentage of the population that still suffers from the aftermath of the nuclear bombings back on Earth."
+
+ radiation_poisoning_2:0 "Radioactive Disinfection"
+ radiation_poisoning_2_desc:0 "With a cure from radiation finally in hands soon enough the infected ones among us will be able to fully enjoy their lives in this new world."
+
+ stranger:0 "Strangers from Another World"
+ stranger_desc:0 "Due to several anatomical, cultural, political and even linguistic factors most of the non-human populace within this country don't want to serve in the army."
+
+ human_scientists:0 "Human Science"
+ human_scientists_desc:0 "With research treaties in course, this nation's now benefits from cooperation with humans in the scientific field."
+
+ magic_laboratory:0 "Modern Laboratories"
+ magic_laboratory_desc:0 "With modern equipments and access to sufficient funding, research efforts will be able to advance much faster in this nation."
+
+ AA_missile:0 "Guided Missiles"
+ AA_missile_desc:0 "The introduction of Radar/Infrared missiles in our aircraft greatly improves their attack capabilities."
+
+ ASM_missile:0 "Anti-Ship Missiles"
+ ASM_missile_desc:0 "The introduction of guided missiles on our ships greatly improve their attack capabilities."
+
+ human_history_program:0 "Human History Preservation Program"
+ human_history_program_desc:0 "Thanks to our efforts, we managed to recovery a extensive archive of the history of humanity, spamming from before humanity to the modern age. We must learn from our mistakes to avoid committing them again."
+
+ blue_helmet:0 "UN Intervention Force"
+ blue_helmet_desc:0 "Also know as the Blue Berets, they are a international peace enforcement unit which monitor and observe peace processes in post-conflict areas and assist ex-combatants in implementing the peace agreements they may have signed. Now they also double as a international volunteer force to harmonist countries fighting wars against undemocratic regimes."
+
+ humanity_will_not_go_down:0 "Humanity's Last Stand"
+ humanity_will_not_go_down_desc:0 "We are not going to going down so easily, we will battle for our independence until the bitter end!"
+
+ risk_of_famine:0 "Widespread Famine"
+ risk_of_famine_desc:0 "We currently face a terrible famine, if we don't do anything we will soon enough consume all of our food reserves."  
+
+ asserve_inferior:0 "Human Rights for Humans"
+ asserve_inferior_desc:0 "Truth be told, the several differences between the native species and our own species only show that we can apply the same rights to them. Humans rights are for human only!"
+
+ racial_domination:0 "Racial Domination"
+ racial_domination_desc:0 "We aren't scared of magic tricks and fancy sticks, the so called "sapient" creatures of this world are nothing but ants in comparation to the apex species we are. The sons of Gaia shall conquer their birth right!"
+
+ republican_protest:0 "Republican Protests"
+ republican_protest_desc:0 "Due to several actions of the government against democratic ideals several republican have spoke against such actions, and will continue to do so until we do something about it."
+
+ HUM_reconstruction:0 "Reconstruction"
+ HUM_reconstruction_desc:0 "With the absolutely necessary now done, we can now begin to work towards recreating our old glories from back home. The reconstruction begins!"
+
+
+#new
+ HUM_air_supply1:0 "Supply Helicopters"
+ HUM_air_supply1_desc:0 "Beyond reconnaissance, our helicopters are also able to quickly deliver supplies even to the most inhospitable battlefields."
+
+ HUM_air_supply2:0 "Supply Planes"
+ HUM_air_supply2_desc:0 "Even if not as efficient or organized as helicopters, planes are able to paradrop supplies to our troops on the ground."
+
+ HUM_air_supply3:0 "Emergency Supply Planning"
+ HUM_air_supply3_desc:0 "If one of our units become unattainable to our regular mean of supply, we will still have means to supply this unit until we can resume regular supplying."
+
+ HUM_overcrowed_population_0:0 "Overcrowed Population"
+ HUM_overcrowed_population_0_desc:0 ""
+
+ HUM_overcrowed_population_1:0 "Overcrowed Population"
+ HUM_overcrowed_population_1_desc:0 ""
+
+ HUM_overcrowed_population_2:0 "Overcrowed Population"
+ HUM_overcrowed_population_2_desc:0 ""
+
+ HUM_army_org_0:0 "Desorganized Armed Forces"
+ HUM_army_org_0_desc:0 ""
+
+ HUM_army_org_1:0 "Armed Forces Reorganisation"
+ HUM_army_org_1_desc:0 ""
+
+
+ HUM_protest:0 "Protests"
+ HUM_protest_desc:0 ""
+
+ HUM_strikes:0 "Strikes"
+ HUM_strikes_desc:0 ""
+
+ HUM_riot:0 "Riots"
+ HUM_riot_desc:0 ""
+
+ HUM_peace_protest:0 "Peace Protests"
+ HUM_peace_protest_desc:0 ""
+
+ HUM_magic_ignorance:0 "Ignorance of Magic Science"
+ HUM_magic_ignorance_desc:0 ""
+
+ HUM_VEN_Virus:0 "Venezuelan equine encephalitis virus"
+ HUM_VEN_Virus_desc:0 "Venezuelan equine encephalitis or encephalomyelitis (VEE). VEE can affect all equine species, such as horses, donkeys, and zebras. After infection, equines may suddenly die or show progressive central nervous system disorders. Humans also can contract this disease."
+
+ HUM_debt_payment_0:0 "Debt Payment"
+ HUM_debt_payment_0_desc:0 ""
+
+ HUM_debt_payment_1:0 "Debt Payment"
+ HUM_debt_payment_1_desc:0 "" 
+
+ HUM_debt_payment_2:0 "Debt Payment"
+ HUM_debt_payment_2_desc:0 ""
+
+ HUM_foreign_investment:0 "Foreign Investement"
+ HUM_foreign_investment_desc:0 ""
+
+ HUM_martial_law:0 "Martial Law"
+ HUM_martial_law_desc:0 ""
+
+ HUM_rationning:0 "Rationning"
+ HUM_rationning_desc:0 ""
+
+ HUM_demoralized:0 "Low Morale"
+ HUM_demoralized_desc:0 "" 
+
+ HUM_anti_war_0:0 "Anti-war Movement"
+ HUM_anti_war_0_desc:0 "After everything that happend to us, a large part of our population is strongly against war and won't join our armed forces. It will be hard to change their mind."
+
+ HUM_anti_war_1:0 "Anti-war Movement"
+ HUM_anti_war_1_desc:0 "In light of the situation the movement accepted some extreme measure taken by our government"
+
+ HUM_aggresive:0 "Infamous"
+ HUM_aggresive_desc:0 "We are viewed as aggressive and unstrustable." 
+
+ HUM_bioweapons_hazard:0 "Bioweapons hazard"
+ HUM_bioweapons_hazard_desc:0 "" 
+
+ HUM_national_celebration:0 "National Celebration"
+ HUM_national_celebration_desc:0 "" 
+
+
+ HUM_reconstruction_bonus_gen_0:0 "Reconstruction Efforts"
+ HUM_reconstruction_bonus_gen_0_desc:0 "" 
+
+ HUM_reconstruction_bonus_gen_1:0 "Increased Reconstruction Efforts"
+ HUM_reconstruction_bonus_gen_1_desc:0 ""
+
+ HUM_reconstruction_bonus_building:0 "Buildings Reconstruction Efforts"
+ HUM_reconstruction_bonus_building_desc:0 "" 
+
+ HUM_reconstruction_bonus_infra:0 "Infrastructure Reconstruction Efforts"
+ HUM_reconstruction_bonus_infra_desc:0 "" 
+
+
+ HUM_red_cross_help:0 "Red Cross Intervention"
+ HUM_red_cross_help_desc:0 "" 
+
+ HUM_imigration:0 "Immigration"
+ HUM_imigration_desc:0 "" 
+
+ HUM_emigration:0 "Emigration"
+ HUM_emigration_desc:0 ""
+
+ HUM_fragile_building:0 "Rushed Constructions"
+ HUM_fragile_building_desc:0 ""
+
+ HUM_recent_unification:0 "Recent Unification"
+ HUM_recent_unification_desc:0 "The unification of our countries is causing some difficulties for our societies."
+
+ HUM_export_industry:0 "Export Industry"
+ HUM_export_industry_desc:0 ""
+
+ HUM_national_industry:0 "Nationalized Industry"
+ HUM_national_industry_desc:0 ""
+
+ HUM_modernized_army:0 "Modernized Army"
+ HUM_modernized_army_desc:0 ""
+
+ HUM_modernized_society:0 "Modernized Society"
+ HUM_modernized_society_desc:0 "This society benefit greatly of the human governance. But not everyone like the change... or the occupation."
+
+ HUM_defcon_5:0 "DEFCON 5"
+ HUM_defcon_5_desc:0 "FADE OUT \nLowest state of readiness "  
+
+ HUM_defcon_4:0 "DEFCON 4"
+ HUM_defcon_4_desc:0 "DOUBLE TAKE \nIncreased intelligence watch and strengthened security measures"  
+
+ HUM_defcon_3:0 "DEFCON 3"
+ HUM_defcon_3_desc:0 "ROUND HOUSE \nIncrease in force readiness above that required for normal readiness"  
+
+ HUM_defcon_2:0 "DEFCON 2"
+ HUM_defcon_2_desc:0 "FAST PACE \nNext step to nuclear war"
+
+ HUM_defcon_1:0 "DEFCON 1"
+ HUM_defcon_1_desc:0 "COCKED PISTOL \nNuclear war is imminent or has already started"  

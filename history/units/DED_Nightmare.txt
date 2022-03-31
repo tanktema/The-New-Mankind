@@ -1,0 +1,190 @@
+﻿
+division_template = {
+	name = "Undeads"
+	division_names_group = DED_INF_02
+	template_counter=1
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+	}
+}
+
+units = {
+	division = {
+		name = "Legion of Darkness"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Shadow"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Flesh"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Fear"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Bone"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Horde"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Horde"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Horde"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Swarm"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Swarm"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Reanimated corpses"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Laboratories Experiments"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Darkness"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Shadow"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Flesh"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Fear"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Legion of Bone"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Horde"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Horde"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Horde"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Swarm"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Undeads Swarm"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Reanimated corpses"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+
+	division = {
+		name = "Laboratories Experiments"
+		location = 4351
+		division_template = "Undeads"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1 }
+}

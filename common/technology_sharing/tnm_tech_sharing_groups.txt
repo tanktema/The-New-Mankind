@@ -1,0 +1,15 @@
+add_to_tech_sharing_group = {
+	
+	id = uns_tech_group
+	name = uns_tech_group_name
+	desc = uns_tech_group_desc
+	picture = GFX_uns_tech_group
+	research_sharing_per_country = 0.4
+	categories = { industry electronics infantry }
+	available = {
+		OR = {
+			is_in_faction_with = UNS 
+			original_tag = UNS 
+		}
+	}
+}

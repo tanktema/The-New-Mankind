@@ -1,0 +1,57 @@
+division_template = {
+	name = "Liberation Company"
+	division_names_group = GEM_INF_01
+	regiments = {
+		GRB_heavy_infantry_unit = { x = 0 y = 0 }
+		GRB_heavy_infantry_unit = { x = 0 y = 1 }
+		GRB_heavy_infantry_unit = { x = 0 y = 2 }
+		GRB_heavy_infantry_unit = { x = 1 y = 0 }
+		GRB_heavy_infantry_unit = { x = 1 y = 1 }
+		GRB_heavy_infantry_unit = { x = 1 y = 2 }
+		GRB_heavy_infantry_unit = { x = 2 y = 0 }
+		GRB_heavy_infantry_unit = { x = 2 y = 1 }
+		GRB_heavy_infantry_unit = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		sniper_corps = { x = 0 y = 1 }
+		anti_tank = { x = 0 y = 2 }
+		field_hospital = { x = 0 y = 3 }
+	}		
+}
+division_template = {
+	name = "Liberation Armored Company"
+	regiments = {
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 0 y = 2 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 1 y = 1 }
+		medium_armor = { x = 1 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		maintenance_company = { x = 0 y = 2 }
+		logistics_company = { x = 0 y = 3 }
+	}
+}
+
+division_template = {
+	name = "Liberation Mechanized Infantry"
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 2 }
+		anti_tank = { x = 0 y = 3 }
+	}
+}

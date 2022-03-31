@@ -1,0 +1,1201 @@
+﻿add_namespace = HUM
+#Humanity discovered
+
+news_event = {
+	id = HUM.10
+	title = HUM.10.t
+	desc = HUM.10.d
+	picture = GFX_news_event_first_contact
+
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = HUM.10.a
+		trigger = {
+			NOT = { tag = UEN }
+			NOT = { tag = RUS }
+			NOT = { tag = UAS }
+		}
+	}
+
+	option = {
+		name = HUM.10.b
+		trigger = { 
+			OR = {
+				tag = UEN
+				tag = RUS
+				tag = UAS
+			}
+		}
+	}
+}
+
+#end of WWIII
+news_event = {
+	id = HUM.20
+	title = HUM.20.t
+	desc = HUM.20.d
+	picture = GFX_news_cwdiplo
+
+	major = yes
+	is_triggered_only = yes
+
+#finally
+	option = {
+		name = HUM.20.a
+		trigger = { 
+			OR = {
+				tag = UEN
+				tag = RUS
+				tag = UAS
+			}
+		}
+	}
+
+#good for them
+	option = {
+		name = HUM.20.b
+		trigger = {
+			NOT = { tag = UEN }
+			NOT = { tag = RUS }
+			NOT = { tag = UAS }
+		}
+	}
+}
+
+
+#euro equestria union
+news_event = {
+	id = HUM.30
+	title = HUM.30.t
+	desc = HUM.30.d
+	picture = GFX_news_eqs_uen_fed
+
+	major = yes
+	is_triggered_only = yes
+
+#history is being written
+	option = {
+		name = HUM.30.a
+	}
+}
+
+#Soviet Olenia union
+news_event = {
+	id = HUM.40
+	title = HUM.40.t
+	desc = HUM.40.d
+	picture = GFX_news_ole_sov_fed
+
+	major = yes
+	is_triggered_only = yes
+
+#history is being written
+	option = {
+		name = HUM.40.a
+	}
+}
+
+#Great success!
+country_event = {
+	id = HUM.100
+	title = HUM.100.t
+	desc = HUM.100.d
+	picture = GFX_report_officework
+
+	is_triggered_only = yes
+	
+	option = {
+		name = HUM.100.a
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_political_power = 20
+	}
+}
+
+#bad luck
+country_event = {
+	id = HUM.101
+	title = HUM.101.t
+	desc = HUM.101.d
+	picture = GFX_report_officework2
+
+	is_triggered_only = yes
+	
+	option = {
+		name = HUM.101.a
+		add_political_power = -15
+	}
+}
+
+#Great success! military
+country_event = {
+	id = HUM.102
+	title = HUM.102.t
+	desc = HUM.102.d
+	picture = GFX_report_factory80
+
+	is_triggered_only = yes
+	
+	option = {
+		name = HUM.102.a
+		add_offsite_building = { type = arms_factory level = 1 }
+		add_political_power = 20
+	}
+}
+
+#Fragile structure
+country_event = {
+	id = HUM.103
+	title = HUM.103.t
+	desc = HUM.103.d
+	picture = GFX_report_hum_destruction
+
+	is_triggered_only = yes
+	
+	option = {
+		name = HUM.103.a
+		add_timed_idea = { idea = HUM_fragile_building days = 150 }
+		}
+	}
+
+
+
+
+
+#N A T I V E
+#DED events
+country_event = {
+	id = HUM.104
+	title = HUM.104.t
+	desc = HUM.104.d
+	picture = GFX_report_hum_nightstreet
+
+	is_triggered_only = yes
+
+#they found a better life out there.
+	option = {
+		name = HUM.104.a
+		hidden_effect = { DED = { country_event = { days = 40 id = HUM.105 } } }
+		363 = {
+			add_manpower = -250
+		}
+	}
+}
+
+country_event = {
+	id = HUM.105
+	title = HUM.105.t
+	desc = HUM.105.d
+	picture = GFX_event_forest_depression
+
+	is_triggered_only = yes
+
+#we welcome them
+	option = {
+		ai_will_do = {  factor = 100 }
+
+		name = HUM.105.a
+	    custom_effect_tooltip = DED_unlock_focus
+		hidden_effect = {
+		set_country_flag = DED84_start_ritual
+		}
+		415 = {
+			add_manpower = 240
+		}
+	}
+
+#Ah...Fresh meat!
+	option = {
+		ai_will_do = {  factor = 5 }
+		name = HUM.105.b
+			add_manpower = 240
+	}
+}
+
+country_event = {
+	id = HUM.1005
+	title = HUM.1005.t
+	desc = HUM.1005.d
+	picture = GFX_report_ded_horde
+
+	is_triggered_only = yes
+
+#a rotten sea to drown the living
+	option = {
+		name = HUM.1005.a
+
+		hidden_effect = {
+		load_oob = "DED_Nightmare"
+		}
+	}
+}
+
+country_event = {
+	id = HUM.1006
+	title = HUM.1006.t
+	desc = HUM.1006.d
+	picture = GFX_event_magehold
+
+	is_triggered_only = yes
+
+	option = { #farewell, pawn
+		name = HUM.1006.a
+
+		create_country_leader = {
+			name = "Unknown"
+			picture = theblackman.tga	expire = "1965.1.1"
+			ideology = nazism
+			traits = { }
+		}
+	}
+}
+
+#War against the world
+news_event = {
+	id = HUM.106
+	title = HUM.106.t
+	desc = HUM.106.d
+	picture = GFX_news_war_on_the_world
+	major = yes
+	is_triggered_only = yes
+
+	#WAR
+	option = {
+		name = HUM.106.a
+		trigger = {
+			NOT = { tag = DED }
+		}
+
+		set_rule = {
+		    can_create_factions = yes
+		}
+		set_rule = {
+		    can_join_factions = yes
+		}
+		add_timed_idea = { idea = DED_global_mobilization  days = 250 }
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
+		}
+	}
+
+	option = {
+		name = HUM.106.b
+		trigger = { tag = DED }
+	}
+}
+
+#Aquileia events #JER
+#Invite the USA in Alliance
+country_event = {
+	id = HUM.107
+	title = HUM.107.t
+	desc = HUM.107.d
+	picture = GFX_report_hum_nightstreet
+
+	is_triggered_only = yes
+
+#Sure thing!
+	option = {
+		name = HUM.107.a
+		add_to_faction = FROM
+		FROM = {
+			add_ai_strategy = {
+				type = alliance
+				id = "JER"
+				value = 200
+			}
+		}
+			JER = {add_to_faction = UAS}
+			JER = { country_event = { id = HUM.108 days = 2 } }
+	}
+
+#No
+	option = {
+		name = HUM.107.b
+	}
+}
+
+country_event = {
+	id = HUM.108
+	title = HUM.108.t
+	desc = HUM.108.d
+	picture = GFX_report_hum_nightstreet
+
+	is_triggered_only = yes
+
+#we welcome them
+	option = {
+		name = HUM.108.a
+
+	}
+}
+
+#Meeting
+country_event = {
+	id = HUM.1080
+	title = HUM.1080.t
+	desc = HUM.1080.d
+	picture = GFX_report_usa_street
+
+	is_triggered_only = yes
+
+#understood
+	option = {
+		name = HUM.1080.a
+	    add_stability = 0.05
+		add_political_power = 25
+	}
+}
+
+#Blocus
+country_event = {
+	id = HUM.1081
+	title = HUM.1081.t
+	desc = HUM.1081.d
+	picture = GFX_report_aquileian_battleship
+
+	is_triggered_only = yes
+
+#we must protect our country!
+	option = {
+		name = HUM.1081.a
+	    create_wargoal = { type = puppet_wargoal_focus target = JER } 
+	    add_stability = -0.05
+	    add_war_support = 0.10
+		add_political_power = -10
+	}
+
+#there nothing we can do
+	option = {
+		name = HUM.1081.b
+	    add_stability = -0.10
+		add_political_power = -50
+	}
+}
+
+
+#OLE
+#Payment?
+country_event = {
+	id = HUM.109
+	title = HUM.109.t
+	desc = HUM.109.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+
+#sure thing
+	option = {
+		name = HUM.109.a
+		OLE = { add_timed_idea = { idea = HUM_debt_payment_1  days = 200 }
+		OLE = { add_political_power = 50 }
+		OLE = { country_event = { id = HUM.110 days = 2 } }
+		OLE = { add_opinion_modifier = { target = RUS modifier = medium_increase } }
+		add_political_power = -100
+		add_stability = -0.05
+	}
+}
+
+#no way
+	option = {
+		name = HUM.109.b
+		OLE = { country_event = { id = HUM.111 days = 2 } }
+		OLE = { add_opinion_modifier = { target = RUS modifier = large_decrease } }
+		add_stability = 0.10
+	    add_war_support = 0.05
+	}
+}
+
+#accept
+country_event = {
+	id = HUM.110
+	title = HUM.110.t
+	desc = HUM.110.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+
+#good
+	option = {
+		name = HUM.110.a
+	}
+}
+
+#refuse
+country_event = {
+	id = HUM.111
+	title = HUM.111.t
+	desc = HUM.111.d
+	picture = GFX_event_olenia_generic
+
+	is_triggered_only = yes
+
+#so you have chosen, DEATH
+	option = {
+		name = HUM.111.a
+		create_wargoal = { type = puppet_wargoal_focus target = RUS }
+	}
+}
+
+
+#oleno-soviet contingency plan
+country_event = {
+	id = HUM.112
+	title = HUM.112.t
+	desc = HUM.112.d
+	picture = GFX_report_soviet_poster
+
+	is_triggered_only = yes
+
+#Thank you comrade!
+	option = {
+		name = HUM.112.a
+		trigger = { TAG = OLE }
+		add_timed_idea = { idea = OLE_contingency_plan  days = 465 }
+		add_opinion_modifier = { target = RUS modifier = medium_increase }
+		hidden_effect = { news_event = { id = RUS.4156 } }
+	}
+
+#Time to pay back those deers
+	option = {
+		name = HUM.112.b
+		trigger = { TAG = RUS }
+		add_timed_idea = { idea = OLE_contingency_plan  days = 465 }
+		add_opinion_modifier = { target = OLE modifier = medium_increase }
+	}
+}
+
+
+#EQS
+#establigh proper contact
+country_event = {
+	id = HUM.113
+	title = HUM.113.t
+	desc = HUM.113.d
+	picture = GFX_event_pony_statue
+
+	is_triggered_only = yes
+
+	#we will work together
+	option = {
+		name = HUM.113.a
+		add_political_power = 25
+	}
+}
+
+#border incident
+country_event = {
+	id = HUM.114
+	title = HUM.114.t
+	desc = HUM.114.d
+	picture = GFX_report_grenzer_motorcycle
+
+	is_triggered_only = yes
+
+	option = { #outrageous!
+		name = HUM.114.a
+		trigger = { TAG = UEN }
+		trigger = { NOT = { TAG = EQS } }
+
+		EQS = { add_opinion_modifier = { target = UEN modifier = medium_decrease } }
+	}
+
+	option = { #what a shame
+		name = HUM.114.b
+		trigger = { TAG = EQS }
+		trigger = { NOT = { TAG = UEN } }
+	}
+
+	option = { #it doesn't bode well
+		name = HUM.114.c
+		trigger = { NOT = { TAG = EQS } }
+		trigger = { NOT = { TAG = UEN } }
+	}
+}
+
+#offer land
+country_event = {
+	id = HUM.115
+	title = HUM.115.t
+	desc = HUM.115.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+#sure thing!
+	option = {
+		name = HUM.115.a
+		add_political_power = -25
+		EQS = { add_opinion_modifier = { target = UEN modifier = medium_increase } }
+		add_opinion_modifier = { target = EQS modifier = medium_increase }
+		transfer_state = 110
+		110 = { add_core_of = UEN }
+		EQS = { add_timed_idea = { idea = HUM_debt_payment_2 days = 200 } }	
+		EQS = { add_timed_idea = { idea = human_scientists days = 165 } }
+	}
+
+#we appreciate the offer
+	option = {
+		name = HUM.115.b
+		EQS = { add_opinion_modifier = { target = UEN modifier = small_increase } }
+		add_opinion_modifier = { target = EQS modifier = small_increase }
+	}
+}
+
+#ask for help
+country_event = {
+	id = HUM.1150
+	title = HUM.1150.t
+	desc = HUM.1150.d
+	picture = GFX_report_uen_line_mobilization
+
+	trigger = {
+		TAG = EQS
+		has_war_with = CHN
+		UEN = { NOT= {has_government = fascism} }
+		surrender_progress > 0.05
+		has_civil_war = no
+	}
+	fire_only_once = yes
+
+#this war will touch them too!
+	option = {
+		name = HUM.1150.a
+		ai_will_do = { factor = 60 }
+		add_political_power = -25
+		UEN = { country_event = { id = HUM.1151 } }
+	}
+
+#we can manage
+	option = {
+		name = HUM.1150.b
+		add_political_power = 25
+	}
+}
+
+
+#equestria demand help
+country_event = {
+	id = HUM.1151
+	title = HUM.1151.t
+	desc = HUM.1151.d
+	picture = GFX_report_uen_preparation
+
+	is_triggered_only = yes
+	
+#if equestria fall, we will
+	option = {
+		name = HUM.1151.a
+		ai_will_do = { factor = 60 }
+		EQS = { add_opinion_modifier = { target = UEN modifier = medium_increase } }
+		add_opinion_modifier = { target = EQS modifier = medium_increase }
+		EQS = { country_event = { id = HUM.1152 } }
+	}
+
+#we refuse
+	option = {
+		name = HUM.1151.b
+		EQS = { add_opinion_modifier = { target = UEN modifier = small_decrease } }
+		add_opinion_modifier = { target = EQS modifier = small_decrease }
+		EQS = { country_event = { id = HUM.1153 } }
+	}
+}
+
+#europe accept
+country_event = {	id = HUM.1152
+	title = HUM.1152.t
+	desc = HUM.1152.d
+	picture = GFX_report_uen_march
+
+	is_triggered_only = yes
+#united we stand
+	option = {
+		name = HUM.1152.a
+		ai_will_do = { factor = 60 }
+		add_to_faction = UEN
+	}
+}
+
+#europe refuse
+country_event = {
+	id = HUM.1153
+	title = HUM.1153.t
+	desc = HUM.1153.d
+	picture = GFX_report_uen_preparation
+
+	is_triggered_only = yes
+#they will regret it, sooner or later
+	option = {
+		name = HUM.1153.a
+		ai_will_do = { factor = 50 }
+	}
+}
+
+#Equestria offer us an alliance!
+country_event = {
+	id = HUM.1154
+	title = HUM.1154.t
+	desc = HUM.1154.d
+	picture = GFX_event_canterlot
+
+	is_triggered_only = yes
+
+#sure
+	option = {
+		name = HUM.1154.a
+		add_opinion_modifier = { target = EQS modifier = medium_increase }
+		EQS = { add_opinion_modifier = { target = UEN modifier = medium_increase } }
+		EQS = { country_event = { id = HUM.1152 } }
+		EQS = {give_guarantee = UEN}
+		give_guarantee = EQS
+	}
+
+#meh
+	option = {
+		name = HUM.1154.b
+		add_opinion_modifier = { target = EQS modifier = small_decrease }
+		EQS = { add_opinion_modifier = { target = UEN modifier = small_decrease } }
+		EQS = { country_event = { id = HUM.1153 } }
+		EQS = {give_guarantee = UEN}
+	}
+}
+
+
+
+#EQC
+#Griffons treatment
+country_event = {
+	id = HUM.116
+	title = HUM.116.t
+	desc = HUM.116.d
+	picture = GFX_event_school
+
+	is_triggered_only = yes
+
+#we need to do some reforms
+	option = {
+		name = HUM.116.a
+		add_political_power = -25
+				IF = {
+			limit = { has_idea = EQC_griffon_minorities1 }
+			swap_ideas = {
+			remove_idea = EQC_griffon_minorities1
+			add_idea = EQC_pony_griffon_equality
+				}
+			}
+
+				IF = {
+			limit = { has_idea = EQC_griffon_minorities2 }
+			swap_ideas = {
+			remove_idea = EQC_griffon_minorities2
+			add_idea = EQC_pony_griffon_equality
+				}
+			}
+
+				IF = {
+			limit = { has_idea = EQC_griffon_minorities_commie }
+			swap_ideas = {
+			remove_idea = EQC_griffon_minorities_commie
+			add_idea = EQC_pony_griffon_equality
+			}
+		}
+	}
+
+#send them away.
+	option = {
+		name = HUM.116.b
+		    362 = {
+		      add_manpower = -5000
+		    }
+      		IF = {
+	      	limit = { controls_state = 365 }
+	      	365 = {
+    			365 = {
+    			  add_manpower = -2500
+    			}
+    		  }
+    		}
+				IF = {
+			limit = { has_idea = EQC_griffon_minorities1 }
+			remove_ideas = EQC_griffon_minorities1
+			}
+
+				IF = {
+			limit = { has_idea = EQC_griffon_minorities2 }
+			remove_ideas = EQC_griffon_minorities2
+			}
+
+				IF = {
+			limit = { has_idea = EQC_griffon_minorities_commie }
+			remove_ideas = EQC_griffon_minorities_commie
+			}
+		}
+}
+
+#change of overlords
+country_event = {
+	id = HUM.117
+	title = HUM.117.t
+	desc = HUM.117.d
+	picture = GFX_report_new_mareland_street
+
+	is_triggered_only = yes
+
+#we will do that
+	option = {
+		name = HUM.117.a
+		UAS = { puppet = EQC }
+		EQC = {
+		remove_ideas = equestrian_overlord
+		add_ideas = HUM_modernized_army
+        add_ideas = HUM_modernized_society
+        }
+	}
+
+#we will not oppress the marelanders
+	option = {
+		name = HUM.117.b
+		EQC = { add_opinion_modifier = { target = UAS modifier = huge_increase } }
+		add_opinion_modifier = { target = EQC modifier = huge_increase }
+		EQC = {give_guarantee = UAS}
+		give_guarantee = EQC
+	}
+}
+
+#Immediate independance
+country_event = {
+	id = HUM.118
+	title = HUM.118.t
+	desc = HUM.118.d
+	picture = GFX_report_new_mareland_street
+
+	is_triggered_only = yes
+
+#freedom!
+	option = {
+		name = HUM.118.a
+		trigger = { TAG = EQC }
+		remove_ideas = equestrian_overlord
+			end_puppet_this = yes
+			if = {
+				limit = {
+					is_faction_leader = no
+					is_in_faction_with = EQS
+				}
+				leave_faction = yes
+		}
+	}
+
+	option = {
+		name = HUM.118.b
+		trigger = { TAG = EQS }
+	}
+}
+
+country_event = {
+	id = HUM.119
+	title = HUM.119.t
+	desc = HUM.119.d
+	picture = GFX_report_new_mareland_street
+	is_triggered_only = yes
+
+#this was unexpected
+	option = {
+		name = HUM.119.a
+		add_stability = 0.05
+		add_opinion_modifier = { target = EQC modifier = huge_increase }
+	}
+}
+
+#CHN
+#NEW CHEM WEAPONS
+country_event = {
+	id = HUM.120
+	title = HUM.120.t
+	desc = HUM.120.d
+	picture = GFX_event_changeling_approved_stamp
+
+	is_triggered_only = yes
+
+#good
+	option = {
+		name = HUM.120.a
+     	add_ideas = CCN_chemical_Weapons_idea
+	}
+}
+
+#WAR TO THE USSR?
+country_event = {
+	id = HUM.121
+	title = HUM.121.t
+	desc = HUM.121.d
+	picture = GFX_report_border_guard
+
+	is_triggered_only = yes
+
+	option = { #get rid of them
+		name = HUM.121.a
+		add_war_support = 0.10
+ 	   create_wargoal = { type = puppet_wargoal_focus target = RUS } 
+	}
+
+	option = { #not now
+		name = HUM.121.b
+		add_war_support = 0.10
+		add_stability = 0.05
+		add_political_power = 50
+	}
+}
+
+#New planes
+country_event = {
+	id = HUM.122
+	title = HUM.122.t
+	desc = HUM.122.d
+	picture = GFX_event_changeling_approved_stamp
+
+	is_triggered_only = yes
+
+#good
+	option = {
+		name = HUM.122.a
+     	add_ideas = CHN_upgraded_planes
+	}
+}
+
+
+#Crystal
+country_event = {
+	id = HUM.200
+	title = HUM.200.t
+	desc = HUM.200.d
+	picture = GFX_event_crystal_city_evening
+
+	trigger = {
+		TAG = CRY
+		UAS = {has_completed_focus = UAS_settle} 
+		UEN = {has_completed_focus = UEN_settle} 
+		RUS = {has_completed_focus = RUS_settle} 
+	}
+
+	fire_only_once = yes
+
+#good luck to them
+	option = {
+		name = HUM.200.a
+		add_political_power = 50
+		UEN = { add_timed_idea = { idea = CRY_relief_volunteers  days = 730 } }
+		RUS = { add_timed_idea = { idea = CRY_relief_volunteers  days = 730 } }
+		add_opinion_modifier = { target = RUS modifier = huge_increase }
+		add_opinion_modifier = { target = UEN modifier = huge_increase }
+		hidden_effect = { 
+				UEN = { country_event = { id = HUM.201 } }
+				RUS = { country_event = { id = HUM.201 } }
+			}
+		}
+	}
+
+country_event = {
+	id = HUM.201
+	title = HUM.201.t
+	desc = HUM.201.d
+	picture = GFX_event_crystal_city_evening
+	is_triggered_only = yes
+
+#this was unexpected
+	option = {
+		name = HUM.201.a
+		add_stability = 0.05
+		add_opinion_modifier = { target = CRY modifier = huge_increase }
+	}
+}
+
+#Crystal Euro Meeting
+country_event = {
+	id = HUM.202
+	title = HUM.202.t
+	desc = HUM.202.d
+	picture = GFX_event_crystal_city
+	is_triggered_only = yes
+
+#good fun
+	option = {
+		name = HUM.202.a
+		trigger = { NOT = { TAG = CRY } }
+	    add_stability = 0.05
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_opinion_modifier = { target = CRY modifier = large_increase }
+		give_guarantee = CRY
+		add_timed_idea = { idea = HUM_economical_deal days = 360 }
+	}
+
+	option = {
+		name = HUM.202.b
+	    add_stability = 0.05
+		trigger = { NOT = { TAG = UEN } }
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_opinion_modifier = { target = UEN modifier = large_increase }
+		add_timed_idea = { idea = HUM_debt_payment_2 days = 200 }
+		add_timed_idea = { idea = HUM_economical_deal days = 360 }
+	}
+}
+
+country_event = {
+	id = HUM.203
+	title = HUM.203.t
+	desc = HUM.203.d
+	picture = GFX_event_crystal_city
+	is_triggered_only = yes
+
+	option = {
+		name = HUM.203.a
+	    add_stability = 0.05
+		add_political_power = 25
+		add_offsite_building = { type = industrial_complex level = 1 }
+		add_opinion_modifier = { target = CRY modifier = medium_increase }
+		add_opinion_modifier = { target = UEN modifier = medium_increase }
+	}
+}
+
+
+
+#UN FEDERATION
+#NUM 400
+#USA
+#Envoy
+country_event = {
+	id = HUM.4000
+	title = HUM.4000.t
+	desc = HUM.4000.d
+	picture = GFX_report_usa_countryside
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = { 
+		name = HUM.4000.a
+		ai_chance = { factor = 100 }
+		UAS = { country_event = { id = HUM.400 days = 14 } }
+	}
+}
+
+country_event = {
+	id = HUM.400
+	title = HUM.400.t
+	desc = HUM.400.d
+	picture = GFX_report_UN
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+    option = {
+        name = HUM.400.a
+        ai_chance = { factor = 100 }
+        every_other_country = {
+            limit = {
+                OR = {
+                    has_completed_focus = RUS_invite_USA
+                    has_completed_focus = invite_USA
+                }
+            }
+            country_event = HUM.401
+        }
+    }
+
+	option = { 
+		name = HUM.400.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = {
+	id = HUM.401
+	title = HUM.401.t
+	desc = HUM.401.d
+	picture = GFX_report_UN
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = { 
+		name = HUM.401.a
+		ai_chance = { factor = 100 }
+		activate_decision = form_UNO_UAS
+	}
+}
+
+#SOV
+country_event = {
+	id = HUM.4002
+	title = HUM.4002.t
+	desc = HUM.4002.d
+	picture = GFX_report_moscow_night
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = { 
+		name = HUM.4002.a
+		ai_chance = { factor = 100 }
+		RUS = { country_event = HUM.402 days = 14 }
+	}
+}
+
+country_event = {
+	id = HUM.402
+	title = HUM.402.t
+	desc = HUM.402.d
+	picture = GFX_report_UN
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+
+    option = {
+        name = HUM.402.a
+        ai_chance = { factor = 100 }
+        every_other_country = {
+            limit = {
+                OR = {
+                    has_completed_focus = invite_USSR
+                    has_completed_focus = UAS_invite_USSR
+                }
+            }
+            country_event = HUM.403
+        }
+    }
+
+	option = { 
+		name = HUM.402.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+country_event = {
+	id = HUM.403
+	title = HUM.403.t
+	desc = HUM.403.d
+	picture = GFX_report_UN
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = { 
+		name = HUM.403.a
+		ai_chance = { factor = 100 }
+		activate_decision = form_UNO_RUS
+	}
+}
+
+#UEN
+country_event = {
+	id = HUM.4004
+	title = HUM.4004.t
+	desc = HUM.4004.d
+	picture = GFX_report_humcity
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = { 
+		name = HUM.4004.a
+		ai_chance = { factor = 100 }
+		UEN = { country_event = HUM.404 days = 14 }
+	}
+}
+
+country_event = {
+	id = HUM.404
+	title = HUM.404.t
+	desc = HUM.404.d
+	picture = GFX_report_UN
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+    option = {
+        name = HUM.404.a
+        ai_chance = { factor = 100 }
+        every_other_country = {
+            limit = {
+                OR = {
+                    has_completed_focus = RUS_invite_UEN
+                    has_completed_focus = UAS_invite_UEN
+                }
+            }
+
+            country_event = HUM.405
+        }
+    }
+
+
+	option = { 
+		name = HUM.404.b
+		ai_chance = { factor = 0 }
+	}
+}
+
+
+country_event = {
+	id = HUM.405
+	title = HUM.405.t
+	desc = HUM.405.d
+	picture = GFX_report_UN
+
+	fire_only_once = yes
+
+	major = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = { 
+		name = HUM.405.a
+		ai_chance = { factor = 100 }
+		activate_decision = form_UNO_UEN
+	}
+}

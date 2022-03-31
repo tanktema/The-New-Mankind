@@ -1,0 +1,25 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_brit_trading_open_button"
+		texturefile = "gfx/interface/britain/brit_trading_open_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_brit_trading_bg"
+		texturefile = "gfx/interface/britain/GFX_tiled_bg_1_scrollbar_tnm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_brtit_trading_close" 
+		texturefile = "gfx/interface/britain/brit_trading_close_button.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_brtit_trading_button"
+		texturefile = "gfx/interface/britain/brit_trading_button.dds"
+	}
+	
+	spriteType = {
+		name = "GRB_british_trading_icon"
+		texturefile = "gfx/interface/britain/brit_trd_gold.dds"
+	}

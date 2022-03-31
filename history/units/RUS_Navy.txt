@@ -1,0 +1,19 @@
+﻿### RUS Navy
+units = {
+	fleet = {
+		name = "Soviet navy"
+		naval_base = 767
+		task_force = {
+			name = "Luna Flot"
+			location = 767
+			ship = { name = "Kuznetsov" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Theran" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Admiral Lazarev" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Zhdanov" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Frunze" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Komsomolets Ukrainy" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Oleniya" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RUS } } }
+			ship = { name = "Minsk" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = RUS } } }
+		}
+	}
+}

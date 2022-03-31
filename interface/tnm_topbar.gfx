@@ -1,0 +1,15 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_acceptance_value"
+		texturefile = "gfx/interface/acceptance_value.dds"
+	}
+	spriteType = {
+		name = "GFX_UNS_manpower_icon"
+		texturefile = "gfx//interface//manpower_icon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_rage_meter_value"
+		texturefile = "gfx//interface//human_rage_value.dds"
+	}
+	
+	

@@ -1,0 +1,31 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_GBR_POL_reg_364"
+		textureFile = "gfx/interface/britain/brit_map_364.dds"
+		noOfFrames = 10 
+	}
+	SpriteType = {
+		name = "GFX_GBR_POL_reg_363"
+		textureFile = "gfx/interface/britain/brit_map_363.dds"
+		noOfFrames = 10 
+	}
+	SpriteType = {
+		name = "GFX_GBR_POL_reg_365"
+		textureFile = "gfx/interface/britain/brit_map_365.dds"
+		noOfFrames = 10 
+	}
+	SpriteType = {
+		name = "GFX_GBR_POL_brit_map"
+		textureFile = "gfx/interface/britain/map_brit.dds"
+
+	}
+	SpriteType = {
+		name = "GFX_GBR_POL_brit_map_overlay"
+		textureFile = "gfx/interface/britain/map_brit_overlay.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_GBR_POL_brit_map_overlay_total"
+		textureFile = "gfx/interface/britain/map_brit_overlay_total.dds"
+	}

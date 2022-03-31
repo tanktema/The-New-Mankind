@@ -1,0 +1,713 @@
+ideas = {
+	country = {
+		SOU_kgb_defence = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				intel_network_gain = 0.1
+				operative_slot = 1
+				intelligence_agency_defense = 1
+			}
+		}
+		SOU_propaganda = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				democratic_drift = -0.01
+				fascism_drift = -0.01
+				communism_drift = 0.01
+			}
+		}
+		SOU_equestrian_friendship = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				communism_drift = 0.01
+			}
+		}
+		SOU_influence = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.05
+				communism_drift = 0.02
+			}
+			targeted_modifier = {
+				tag = SOU 
+				attack_bonus_against = -0.1
+				defense_bonus_against = -0.2
+			}
+		}
+		SOU_protests_democrates = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				democratic_drift = 0.02
+				stability_factor = -0.1
+			}
+		}
+		soviet_peacekeepers = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				send_volunteers_tension = -0.6
+				send_volunteer_divisions_required = -0.3
+				send_volunteer_size = 5
+			}
+		}
+		soviet_attack_bonus = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				offensive_war_stability_factor = 0.2
+				max_command_power = 20
+				army_attack_factor = 0.15
+			}
+		}
+		soviet_defence_bonus = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_defence_factor = 0.15
+				dig_in_speed = 1
+				max_dig_in = 2
+			}
+		}
+		destroyed_xenophobia = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				non_core_manpower = 0.25
+				resistance_target = -0.2
+				compliance_gain = 0.15
+			}
+		}
+		SOU_CHN_trainings = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				offence = 0.1
+				defence = 0.1
+				army_morale_factor = 0.2
+				experience_gain_army = 0.05
+			}
+		}
+		SOU_prepared_invasion = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			targeted_modifier = {
+				tag = EQS 
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SOU_tsarizm = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				neutrality_drift = 0.02
+				stability_factor = -0.05
+			}
+		}
+		SOU_printing_allied = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				neutrality_drift = 0.03
+				communism_drift = -0.01
+				democratic_drift = -0.01
+				fascism_drift = -0.01
+				stability_factor = 0.1
+			}
+		}
+		married_sunbutt_human = {	
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+		SOU_industry_broken_lvl1 = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.4
+				local_resources_factor = -0.4
+				production_factory_efficiency_gain_factor = -0.4
+				industrial_capacity_factory = -0.4
+			}
+		}
+		SOU_industry_broken_lvl2 = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.3
+				local_resources_factor = -0.3
+				production_factory_efficiency_gain_factor = -0.3
+				industrial_capacity_factory = -0.3
+			}
+		}
+		SOU_industry_broken_lvl3 = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.2
+				local_resources_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = -0.2
+			}
+		}
+		SOU_industry_broken_lvl4 = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = 0.1
+				local_resources_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+		SOU_fiveyear_plan = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				industrial_capacity_factory = 0.2
+				consumer_goods_factor = -0.1
+				local_resources_factor = 0.2
+				production_speed_buildings_factor = 0.25
+			}
+		}
+		SOU_vdnh_medical = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				MONTHLY_POPULATION = 0.25
+				weekly_manpower = 150
+				stability_factor = 0.1
+			}
+		}
+		SOU_cremlin_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.3
+				war_support_factor = 0.25
+			}
+		}
+		sou_communism_influence = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+		SOU_art_of_war = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_morale_factor = 0.1
+				conscription = 0.01
+				stability_factor = -0.1
+				war_support_factor = 0.1
+			}
+		}
+		SOU_shaking_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.1
+				army_core_attack_factor = 0.15
+				army_defence_factor = 0.1
+				army_core_defence_factor = 0.15
+				army_morale_factor = 0.1
+				max_dig_in = 5
+				dig_in_speed = 1
+			}
+		}
+		SOU_suvorov_academy = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 2
+				skill_bonus_factor = 0.2
+			}
+		}
+		SOU_mistake_of_past = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				air_interception_defence_factor = 0.15
+				air_close_air_support_defence_factor = 0.1
+			}
+			equipment_bonus = {
+				fighter_equipment = {
+					reliability = 0.25
+				}
+			}
+		}
+		SOU_pierce_the_sky = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				air_ace_generation_chance_factor = 0.1
+				air_night_penalty = -0.2
+				air_range_factor = 0.1
+				air_air_superiority_attack_factor = 0.15
+			}
+		}
+		SOU_fleet_build = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {	
+				naval_coordination = 0.1
+				navy_submarine_detection_factor = 0.1
+				naval_hit_chance = 0.1
+			}
+			equipment_bonus = {
+				ship_hull_light = {
+					fire_range = 0.05
+					shore_bombardment = 0.05
+					naval_range = 0.05
+					surface_visibility  = -0.15
+				}
+				ship_hull_heavy = {	
+					fire_range = 0.05
+					shore_bombardment = 0.05
+					naval_range = 0.15
+					surface_visibility  = -0.1
+				}
+				ship_hull_carrier = {
+					naval_range = 0.15
+				}
+				ship_hull_submarine = {
+					sub_visibility = -0.05
+					convoy_raiding_coordination = 0.05
+				}
+			}
+		}
+		SOU_heavy_fleet_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			equipment_bonus = {
+				ship_hull_light = {
+					fire_range = 0.15
+					shore_bombardment = 0.15
+					naval_range = 0.15
+					surface_visibility  = -0.3
+				}
+				ship_hull_heavy = {	
+					fire_range = 0.15
+					shore_bombardment = 0.15
+					naval_range = 0.3
+					surface_visibility  = -0.3
+				}
+			}
+			modifier = {
+				spotting_chance = 0.2
+				navy_capital_ship_attack_factor = 0.1
+			}
+		}
+		SOU_submarine_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			equipment_bonus = {
+				ship_hull_submarine = {
+					sub_visibility = -0.25
+					convoy_raiding_coordination = 0.15
+				}
+			}
+			modifier = {
+				navy_submarine_attack_factor = 0.15
+			}
+		}
+		SOU_fleet_superiority = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				convoy_escort_efficiency = 0.15
+				navy_anti_air_attack_factor = 0.15 
+				ships_at_battle_start = 0.25
+				experience_gain_navy_factor = 0.25
+				naval_coordination = 0.15
+				custom_modifier_tooltip = sou_fleet_tt
+			}
+			
+		}
+		
+		
+		SOU_state_reforms = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				political_advisor_cost_factor = -0.1
+			}
+		}
+		
+		SOU_bund_blyat = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				political_power_factor = -0.5
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.1
+				stability_factor = -0.25
+				research_speed_factor = -0.15
+			
+				#political_advisor_cost_factor = -0.1
+			}
+		}
+		
+		SOU_global_support = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				democratic_drift = 0.02
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		SOU_people_support = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				drift_defence_factor = 0.25
+				stability_factor = 0.15
+				political_power_factor = 0.15
+				political_power_gain = 0.1
+				offensive_war_stability_factor = -0.15
+			}
+		}
+		
+		SOU_military_coup_f = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				fascism_drift = 0.03
+				war_support_factor = 0.1
+				offensive_war_stability_factor = 0.15
+			}
+		}
+		
+		SOU_time_has_come = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				conscription = 0.01
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				drift_defence_factor = 0.25
+			}
+		}
+		
+		SOU_milit_reform = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = 0.07
+				army_defence_factor = 0.07
+				experience_gain_army = 0.02
+				war_support_factor = 0.05
+			}
+		}
+		
+		SOU_roa = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				special_forces_cap = 0.1
+				weekly_manpower = 500
+				training_time_factor = -0.1
+				army_core_defence_factor = 0.07
+			}
+		}
+		
+		SOU_STG_help = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.1
+				MONTHLY_POPULATION = 0.1
+				war_support_factor = 0.1
+			}
+		}
+		
+		SOU_childwork = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.1
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		SOU_yazov_camps = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.05
+				non_core_manpower = 0.15
+				resistance_target = -0.1
+				compliance_gain = 0.05
+				political_power_gain = -0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		SOU_enemies_here = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				operative_slot = 1
+				intel_network_gain = 0.15
+				intelligence_agency_defense = 2
+				encryption_factor = 0.15
+			}
+		}
+		
+		
+		SOU_mighty_union = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				justify_war_goal_time = -0.25
+				army_attack_factor = 0.15
+				army_defence_factor = 0.15
+				conscription = 0.05
+			}
+		}
+		
+		SOU_purges = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				max_command_power = -25
+				army_leader_cost_factor = 0.5 
+			}
+		}
+		
+		SOU_royal_guard = {	
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				drift_defence_factor = 0.5
+				neutrality_drift = 0.03
+				special_forces_cap = 0.2
+				army_core_defence_factor = 0.15
+			}
+		}
+		SOU_eco_reforms_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.07
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				conscription_factor = -0.05
+			}
+		}
+		
+		SOU_rpz = {
+			removal_cost = -1
+			allowed = { always = yes }
+			allowed_civil_war = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				compliance_gain = 0.05
+				non_core_manpower = 0.1
+			}
+		}
+		
+		
+	}
+	
+	tank_manufacturer = {	
+		designer = yes 
+		
+		SOU_lenin_kirov = {
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_keep_industry
+			}
+			traits = { heavy_tank_producer }
+		}
+		SOU_stalingrad_zavod = {
+			allowed = {
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_stg_stz
+			}
+			research_bonus = {
+				infantry = 0.1
+				sniper_tech = 0.1
+			}
+			traits = { medium_tank_producer }
+		}
+				
+	}
+	materiel_manufacturer = {
+		designer = yes 
+		
+		SOU_kalashnikov_common = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_military_production
+			}
+			research_bonus = {
+				sniper_tech = 0.15
+			}
+			traits = { arms_dealer }
+		}
+		SOU_kalashnikov_magic = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_talon_industries
+			}
+			research_bonus = {
+				infantry = 0.1
+				sniper_tech = 0.1
+			}
+			traits = { arms_dealer_m }
+		}
+	}
+	industrial_concern = {
+		designer = yes 
+		
+		SOU_radiotechnika = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_keep_industry
+			}
+			traits = { electrical_concern_sou }
+			research_bonus = {
+				electronics = 0.05
+			}
+		}
+		SOU_pervomayskaya_fabrika = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_cooperation
+			}
+			traits = { uniform_designer }
+		}
+	}
+	aircraft_manufacturer = {
+		
+		designer = yes 
+		
+		SOU_central_kb = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_new_moscow_air
+			}
+			traits = { light_aircraft_manufacturer CAS_manufacturer }
+		}
+		SOU_sokol_zavod = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_talon_industries
+			}
+			traits = { heavy_aircraft_manufacturer }
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+		
+		
+		SOU_almaz = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_stg_dockyards
+			}
+			traits = { old_world_shipyard }
+		}
+		SOU_severnoe_pkb = {
+			allowed = { 
+				original_tag = SOU 
+			}
+			available = {
+				has_completed_focus = SOU_naval_bases
+			}
+			traits = { old_world_shipyard }
+		}
+	}

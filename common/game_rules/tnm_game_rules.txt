@@ -1,0 +1,201 @@
+SOU_ai_behavior = {
+	name = "SOU_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = SOU_DEMOCRATIC_HISTORICAL
+		text = "RULE_OPTION_SOU_DEMOCRATIC_HISTORICAL"
+		desc = "RULE_OPTION_SOU_DEMOCRATIC_HISTORICAL_AI_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SOU_DEMOCRATIC_COUNTERREV_EASY 
+		text = "RULE_OPTION_SOU_COUNTERREV_EASY"
+		desc = "RULE_OPTION_SOU_COUNTERREV_EASY_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = SOU_DEMOCRATIC_COUNTERREV_HARD 
+		text = "RULE_OPTION_SOU_COUNTERREV_HARD"
+		desc = "RULE_OPTION_SOU_COUNTERREV_HARD_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = SOU_COMMUNISM_OPTION
+		text = "RULE_SOU_COMMUNISM_OPTION"
+		desc = "RULE_SOU_COMMUNISM_OPTION_DESC"
+		allow_achievements = yes 
+	}
+	option = {	
+		name = SOU_FASCISM_OPTION_TAB
+		text = "RULE_SOU_FASCISM_OPTION_TAB"
+		desc = "RULE_SOU_FASCISM_OPTION_TAB_DESC"
+		allow_achievements = yes 
+	}
+	option = {	
+		name = SOU_FASCISM_OPTION_YAZOV
+		text = "RULE_SOU_FASCISM_OPTION_YAZOV"
+		desc = "RULE_SOU_FASCISM_OPTION_YAZOV_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = SOU_TSARISM_OPTION
+		text = "RULE_SOU_TSARISM_OPTION"
+		desc = "RULE_SOU_TSARISM_OPTION_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+GRB_ai_behavior = {
+	name = "GRB_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = GRB_DEMOCRATIC_HISTORICAL
+		text = "RULE_GRB_DEMOCRATIC_HISTORICAL"
+		desc = "RULE_GRB_DEMOCRATIC_HISTORICAL_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GRB_COMMUNISM_PATH
+		text = "RULE_GRB_COMMUNISM_PATH"
+		desc = "RULE_GRB_COMMUNISM_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GRB_FASC_BASE_PATH
+		text = "RULE_GRB_FASC_BASE_PATH"
+		desc = "RULE_GRB_FASC_BASE_PATH_DESC"
+		allow_achievements = YES 
+	}
+	option = {
+		name = GRB_NEUTRALITY_PATH
+		text = "RULE_GRB_NEUTRALITY_PATH"
+		desc = "RULE_GRB_NEUTRALITY_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GRB_FASCISM_CHURCH
+		text = "RULE_GRB_FASCISM_CHURCH"
+		desc = "RULE_GRB_FASCISM_CHURCH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GRB_FASCISM_FEUDAL
+		text = "RULE_GRB_FASCISM_FEUDAL"
+		desc = "RULE_GRB_FASCISM_FEUDAL_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+GEM_ai_behavior = {
+	name = "GEM_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = GEM_HISTORICAL_PATH
+		text = "RULE_GEM_HISTORICAL_PATH"
+		desc = "RULE_GEM_HISTORICAL_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GEM_ALT_FASC_PATH
+		text = "RULE_GEM_ALT_FASC_PATH"
+		desc = "RULE_GEM_ALT_FASC_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GEM_COMM_PATH 
+		text = "RULE_GEM_COMM_PATH"
+		desc = "RULE_GEM_COMM_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = GEM_DEMO_PATH
+		text = "RULE_GEM_DEMO_PATH"
+		desc = "RULE_GEM_DEMO_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}
+
+UNS_ai_behavior = {
+	name = "UNS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = UNS_HISTORICAL_PATH
+		text = "RULE_UNS_HISTORICAL_PATH"
+		desc = "RULE_UNS_HISTORICAL_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = UNS_COMMUNISM_STANDART
+		text = "RULE_UNS_COMMUNISM_STANDART"
+		desc = "RULE_UNS_COMMUNISM_STANDART_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = UNS_COMMUNISM_STATESOC
+		text = "RULE_UNS_COMMUNISM_STATESOC"
+		desc = "RULE_UNS_COMMUNISM_STATESOC_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = UNS_FASC_ROCKWELL
+		text = "RULE_UNS_FASC_ROCKWELL"
+		desc = "RULE_UNS_FASC_ROCKWELL_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = UNS_MILITARY_FASC
+		text = "RULE_UNS_MILITARY_FASC"
+		desc = "RULE_UNS_MILITARY_FASC_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = UNS_MILITARY_DEMO
+		text = "RULE_UNS_MILITARY_DEMO"
+		desc = "RULE_UNS_MILITARY_DEMO_DESC"
+		allow_achievements = yes 
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+		allow_achievements = yes
+	}
+}

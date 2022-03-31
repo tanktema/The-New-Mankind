@@ -1,0 +1,36 @@
+objectTypes = {	
+	
+		pdxmesh = {
+		name = "WGR_HS30_mesh"
+		file = "gfx/models/units/vehicles/hs30.mesh"
+		
+		animation = { id = "idle"			type = "US_mechanized_01_idle_animation" }
+		animation = { id = "move"			type = "US_mechanized_01_move_animation" }
+		animation = { id = "attack"			type = "US_mechanized_01_attack_animation" }
+
+		scale = 0.8
+	}
+	
+		pdxmesh = {
+		name = "WGR_motorized_vec0_mesh"
+		file = "gfx/models/units/vehicles/GER_motorized_01_opel.mesh"
+		
+		animation = { id = "idle"			type = "GER_motorized_011_idle_animation" }
+		animation = { id = "move"			type = "GER_motorized_011_move_animation" }
+		animation = { id = "attack"		    type = "GER_motorized_011_move_animation" }
+
+		scale = 0.9
+	}
+	
+	pdxmesh = {
+		name = "WGR_unit_artillery_1_mesh"
+		file = "gfx/models/units/WGR_unit_artillery_1.mesh"
+		
+		animation = { id = "idle"  			type = "artillery_idle_animation" }
+		animation = { id = "move"  			type = "artillery_moving_animation" }
+		animation = { id = "attack"  		type = "artillery_attack_animation" }
+	}
+	
+	
+}
+

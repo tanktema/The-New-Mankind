@@ -1,0 +1,10 @@
+guiTypes = {
+	containerWindowType = {
+		name = "human_manpower_icon_container"
+		iconType ={
+			name ="human_manpower_icon"
+			spriteType = "GFX_UNS_manpower_icon"
+			position = { x= 315 y = 3 }
+			Orientation = "UPPER_LEFT"
+		}
+	}

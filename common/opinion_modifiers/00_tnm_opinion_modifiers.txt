@@ -1,0 +1,93 @@
+opinion_modifiers = {
+	democratic_reform = {
+		value = 35
+	}
+
+	soviet_embassy = {
+		value = 35
+	}
+	
+	embassy_changeling = {
+		value = 35
+	}
+	embassy_hjortland = {
+		value = 25
+	}
+	embassy_vesalipolis = {
+		value = 25
+	}
+	human_friendship = {
+		value = 25
+	}
+	canterlot_visit = {
+		value = 25
+	}
+	stalliongrad_visit = {
+		value = 25
+	}
+	accept_politics = {
+		value = 25
+	}
+	decline_politics = {
+		value = -25
+	}
+	supported_us = {
+		value = 25
+	}
+	supported_enemy = {
+		value = -25
+	}
+	heartwarming = {
+		value = 10
+	}
+	christmas = {
+		value = 10
+	}
+	twilight_accepted = {
+		value = 15
+	}
+	trading_treaty_uns  = {
+		trade = yes 
+		value = 60
+	}
+	friendship_between = {
+		value = 25
+	}
+	anticommunsim_politics = {
+		value = -50
+	}
+	married_sunbutt = {
+		value = 150 
+	}
+	broken_heart = {
+		value = -100
+	}
+	tsardom_of_eqvus = {
+		value = 1000
+	}
+	selling_resources_sou = {
+		trade = yes 
+		value = 50
+	}
+	accepted_vdnh = {
+		value = 70
+		months = 6
+	}
+	hates_race = {
+		value = -100
+	}
+	forgiven_mistake = {
+		value = 150
+	}
+	antifascist_politics = {
+		value = -50
+	}
+
+	
+	embassy_opened = {
+		value = 30
+	}
+	
+	joined_fair = {
+		value = 50
+	}

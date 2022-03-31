@@ -1,0 +1,11 @@
+units = {
+	fleet = {
+		name = "Erste Flotte"
+		naval_base = 12305
+		task_force = {
+			name = "Erste Flotte"
+			location = 12305
+			ship = { name = "Tottenkopf" pride_of_the_fleet = yes definition = battleship start_experience_factor = 1 equipment = { ship_hull_heavy_1 = { amount = 1 owner = GEM version_name = "Schlachtkreuzer" } } }
+		}
+	}
+}

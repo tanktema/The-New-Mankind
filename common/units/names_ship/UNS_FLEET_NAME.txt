@@ -1,0 +1,18 @@
+UNS_BB_historical = {
+	name = NAME_THEME_HISTORICAL_BB
+	for_countries = { UNS }
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	prefix = "USS"
+	fallback_name = "Battleship No.%d"
+	
+	unique = {
+		"Constitution"
+		"George Washington"
+		"Lincoln"
+		"Dreadnought"
+		"Gleaves"
+		"Ingham"
+		"Hound"
+	}
+}

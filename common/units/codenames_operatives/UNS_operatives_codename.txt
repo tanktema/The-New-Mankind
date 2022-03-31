@@ -1,0 +1,12 @@
+GENERIC_UNS_OPERATIVE_CODENAME_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_OPERATIVES
+	for_countries = { UNS }
+	fallback_name = "Agent %d"
+	
+	unique = {
+		"Snowden"
+		"John Wick"
+		"Jason Borne"
+		"Rambo"
+	}
+}

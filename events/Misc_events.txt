@@ -1,0 +1,304 @@
+add_namespace = spec
+add_namespace = tnmlore
+
+country_event = {
+	id = spec.1
+	title = spec.1.t 
+	desc = spec.1.desc 
+	is_triggered_only = yes
+	option = {
+		name = spec.1.a
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 100
+				OR = {
+					AND = {
+						ROOT = {
+							has_government = democratic
+						}
+						FROM = {
+							has_government = democratic 
+						}
+					}
+					AND = {
+						ROOT = {
+							has_government = communism
+						}
+						FROM = {
+							has_government = communism 
+						}
+					}
+					AND = {
+						ROOT = {
+							has_government = fascism
+						}
+						FROM = {
+							has_government = fascism 
+						}
+					}
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = spec.2 days = 1 }
+		}
+		set_country_flag = accepted_the_park
+		add_to_array = { accepted_list = var:my_scope }
+	}
+	option = {
+		name = spec.1.b
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+country_event = {
+	id = spec.2
+	title = spec.2.t 
+	desc = spec.2.desc
+	is_triggered_only = yes 
+	option = {
+		name = spec.2.a 
+		add_to_variable = { uns_num_of_accepted = 1 }
+		hidden_effect = {
+			add_ideas = tech_park_idea_hidden_total
+			FROM = {
+				add_ideas = tech_park_idea
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_pony_race = yes 
+					}
+				}
+				add_to_variable = { uns_num_ponies = 1 }
+				ROOT = {
+					add_ideas = tech_park_idea_hidden_ponies
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							is_changeling_race = yes 
+							is_deer_race = yes 
+						}
+					}
+				}
+				add_to_variable = { uns_num_ole_cha = 1 }
+				ROOT = {
+					add_ideas = tech_park_idea_hidden_spec
+				}
+			}
+			
+			if = {
+				limit = {
+					FROM = {
+						is_griffon_race = yes 
+					}
+				}
+				add_to_variable = { uns_num_griffs = 1 }
+				ROOT = {
+					add_ideas = tech_park_idea_hidden_griffs
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_human_race = yes
+					}
+				}
+				add_to_variable = { uns_num_humans = 1 }
+				ROOT = {
+					add_ideas = tech_park_idea_hidden_humans
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_generic_race = yes 
+					}
+				}
+				add_to_variable = { uns_num_generic = 1 }
+				ROOT = {
+					add_ideas = tech_park_idea_hidden_generic
+				}
+			}
+		}
+					
+	}
+}
+
+country_event = {
+	id = spec.3
+	title = spec.vdnh
+	desc = spec.vdnh.desc 
+	is_triggered_only = yes 
+	option = {
+		ai_chance = {
+			factor = 50 
+			modifier = {
+				factor = 75
+				is_same_ideology = yes 
+				is_human_race = no 
+			}
+			modifier = {
+				factor = 100
+				is_same_ideology = yes 
+				is_human_race = yes 
+			}
+		}
+		FROM = {
+			add_to_variable = { num_accepted_vdnh = 0.05 }
+			randomize_temp_variable = {
+				var = num_of_visitors_temp
+				distribution = uniform
+				min = 0
+				max = 25
+			}
+			add_to_variable = { num_visitors_vdnh = num_of_visitors_temp }
+		}
+		ROOT = {
+			add_opinion_modifier = {
+				target = FROM 
+				modifier = accepted_vdnh
+			}
+			reverse_add_opinion_modifier = {
+				target = FROM 
+				modifier = accepted_vdnh
+			}
+		}
+		name = spec.vdnh.a 
+	}
+	option = {
+		ai_chance = { factor = 50 }
+		ame = spec.vdnh.b
+	}
+}
+country_event = {
+	id = spec.4
+	title = spec.4.t 
+	desc = spec.4.desc 
+	is_triggered_only = yes 
+	option = {
+		name = spec.4.a 
+		custom_effect_tooltip = vdnh_tt_1
+		set_temp_variable = { var_visitors_check = num_accepted_vdnh }
+		divide_temp_variable = { var_visitors_check = 2 }
+		add_to_variable = { vdnh_research_bonus = var_visitors_check }
+		hidden_effect = {
+			news_event = { id = spec.5 days = 5 }
+			if = {
+				limit = {
+					has_country_flag = built_general_pavilion
+				}
+				add_tech_bonus = {
+					category = industry
+					category = electronics
+					uses = 4
+					bonus = ROOT.vdnh_research_bonus
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = built_military_pavilion
+				}
+				add_tech_bonus = {
+					category = infantry_weapons
+					category = cat_mechanized_equipment
+					category = motorized_equipment
+					uses = 4
+					bonus = ROOT.vdnh_research_bonus
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = built_tractor_pavilion
+				}
+				add_tech_bonus = {
+					category = cat_light_armor
+					category = cat_heavy_armor
+					category = cat_medium_armor
+					uses = 4
+					bonus = ROOT.vdnh_research_bonus
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = built_astro_pavilion
+				}
+				add_tech_bonus = {
+					category = nuclear
+					category = rocketry
+					uses = 4
+					bonus = ROOT.vdnh_research_bonus
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = built_medical_pavilion
+				}
+				add_timed_idea = {
+					idea = SOU_vdnh_medical
+					days = 60
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = built_agro_pavilion
+				}
+				add_stability = 0.2
+			}
+		}
+	}
+}
+
+news_event = {
+	id = spec.5 
+	title = spec.5.t 
+	desc = spec.5.desc 
+	is_triggered_only = yes 
+	major = yes 
+	option = {
+		name = spec.5.a 
+	}
+}
+
+
+
+
+country_event = {
+	id = tnmlore.1
+	desc = {
+		text = tnmlore.1.grb
+		trigger = {
+			original_tag = GRB 
+		}
+	}
+	desc = {
+		text = tnmlore.1.gem
+		trigger = {
+			original_tag = GEM
+		}
+	}
+	title = tnmlore.1.t 
+	
+	is_triggered_only = yes
+	option = {
+		name = tnmlore.1.a 
+		trigger = {
+			original_tag = GRB 
+		}
+		add_war_support = -0.01
+		add_stability = 0.01
+	}
+	option = {
+		name = tnmlore.1.b 
+		trigger = {
+			original_tag = GEM 
+		}
+		add_war_support = -0.01
+		add_stability = 0.01
+	}
+}

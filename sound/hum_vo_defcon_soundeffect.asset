@@ -1,0 +1,28 @@
+soundeffect = {
+	name = "DEFCON"
+	sounds = {
+		sound = "DEFCON"
+	}
+	volume = 3
+	fade_in = 0
+}
+
+soundeffect = {
+	name = "Detente"
+	sounds = {
+		sound = "Detente"
+	}
+	volume = 3
+	fade_in = 0
+}
+
+
+
+soundeffect = {
+	name = "fabstodes"
+
+	sounds = {
+		sound = fabstodes
+	} 
+	volume = 0.5
+}

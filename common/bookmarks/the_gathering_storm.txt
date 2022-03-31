@@ -1,0 +1,77 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1007.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GRB"
+		default = yes
+
+		"SOU"={
+			history = "SOU_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				UNS_radiation_poisoning
+				SOU_kgb_defence
+				SOU_industry_broken_lvl1
+			}
+			focuses = {
+				SOU_evac_focus
+				SOU_rebuild_industry
+				SOU_recruitment
+			}
+		}
+		"UNS"={
+			history = "UNS_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				UNS_radiation_poisoning
+				UNS_peacekeeping
+				UNS_twowar_exp
+			}
+			focuses = {
+				UNS_evac
+				UNS_world_situation
+				UNS_depression
+			}
+		}
+		"GEM"={
+			history = "GEM_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				UNS_radiation_poisoning
+				GEM_polit_crisis
+				GEM_prewarprep
+			}
+			focuses = {
+				GEM_evac_focus
+				GEM_party_meeting
+				GEM_new_view_of_germany
+			}
+		}
+		"GRB"={
+			history = "GRB_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				UNS_radiation_poisoning
+				GRB_mi6_idea
+				GRB_sterlings
+				
+			}
+			focuses = {
+				GRB_evac_focus
+				GRB_what_is_next
+				GRB_all_hail_the_queen
+			}
+		}
+		
+
+
+		# minors ####
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

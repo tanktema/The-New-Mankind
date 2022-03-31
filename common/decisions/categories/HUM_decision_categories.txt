@@ -1,0 +1,285 @@
+HUM_country_management = {
+	icon = generic_political_actions
+	priority = 100
+	allowed = {
+		OR = {
+			original_tag = UEN
+			original_tag = RUS
+			original_tag = UAS
+		}
+	}
+	visible = {			
+			NOT = { has_completed_focus = UAS_international_market
+			has_completed_focus = RUS_international_market
+			has_completed_focus = international_market
+			 }
+	}
+}
+
+HUM_economic_action = {
+	icon = generic_economy
+	priority = 100
+	allowed = {
+		OR = {
+			original_tag = UEN
+			original_tag = RUS
+			original_tag = UAS
+		}
+	}
+	visible = {
+	    num_of_civilian_factories > 3
+	}
+}
+
+HUM_nuclear_power = {
+	priority = 100
+	allowed = {
+		OR = {
+			original_tag = UEN
+			original_tag = RUS
+			original_tag = UAS
+		}
+	}
+	visible = {
+		has_tech = nuclear_reactor   
+	}
+}
+
+HUM_UNO = {
+	priority = 100
+	allowed = {
+		OR = {
+			original_tag = UEN
+			original_tag = RUS
+			original_tag = UAS
+		}
+	}
+    visible = {
+			has_completed_focus = UEN_UN_Federation
+			OR = { 	has_completed_focus = RUS_UN_federation }	
+			OR = { 	has_completed_focus = UAS_UN_federation }	
+    }
+}
+
+
+UEN_Mobilization = {
+	allowed = {
+		tag = UEN
+	}
+	priority = {
+		base = 100
+	}
+}
+
+RUS_Mobilization = {
+	allowed = {
+		tag = RUS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+UAS_Mobilization = {
+	allowed = {
+		tag = UAS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+
+###New decisions###
+#UEN
+UEN_real_estate = {
+	allowed = {
+		tag = UEN
+	}
+	priority = {
+		base = 100
+	}
+}
+
+UEN_defcon = {
+	icon = generic_propaganda
+	allowed = {
+		tag = UEN		
+	}
+
+	visible = {	
+		OR = {
+		has_idea = HUM_defcon_5
+		has_idea = HUM_defcon_4
+		has_idea = HUM_defcon_3
+		has_idea = HUM_defcon_2
+		has_idea = HUM_defcon_1
+		}
+	}
+
+	priority = {
+		base = 100
+	}
+}
+
+UEN_occupation = {
+	allowed = {
+		tag = UEN
+	}
+	priority = {
+		base = 100
+	}
+}
+
+UEN_annex_puppet_category = {
+	allowed = {
+		tag = UEN
+	}
+	priority = {
+		base = 100
+	}
+}
+
+form_UEN_EQS_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_unitedAxis
+
+	allowed = {
+		always = yes
+	}
+}
+
+#RUS
+RUS_real_estate = {
+	allowed = {
+		tag = RUS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+RUS_defcon = {
+	icon = generic_propaganda
+	allowed = {
+		tag = RUS
+	}
+
+	visible = {	
+		OR = {
+		has_idea = HUM_defcon_5
+		has_idea = HUM_defcon_4
+		has_idea = HUM_defcon_3
+		has_idea = HUM_defcon_2
+		has_idea = HUM_defcon_1
+		}
+	}
+
+	priority = {
+		base = 100
+	}
+}
+
+form_RUS_OLE_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_unitedAxis
+
+	allowed = {
+		always = yes
+	}
+}
+
+RUS_occupation = {
+	allowed = {
+		tag = RUS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+RUS_navy_army_supremacy = {
+    visible = {
+			has_completed_focus = RUS_the_red_army
+    }
+
+	allowed = {
+		tag = RUS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+#UAS
+UAS_change_flag = {
+	allowed = {
+		tag = UAS
+	}
+	priority = {
+		base = 0
+	}
+}
+
+UAS_change_name = {
+	allowed = {
+		tag = UAS
+	}
+	priority = {
+		base = 0
+	}
+}
+
+UAS_real_estate = {
+	allowed = {
+		tag = UAS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+UAS_defcon = {
+	icon = generic_propaganda
+	allowed = {
+		tag = UAS
+	}
+	visible = {	
+		OR = {
+		has_idea = HUM_defcon_5
+		has_idea = HUM_defcon_4
+		has_idea = HUM_defcon_3
+		has_idea = HUM_defcon_2
+		has_idea = HUM_defcon_1
+		}
+	}
+
+	priority = {
+		base = 100
+	}
+}
+
+UAS_occupation = {
+	allowed = {
+		tag = UAS
+	}
+	priority = {
+		base = 100
+	}
+}
+
+
+
+DED_sacrifice_ritual = {
+	allowed = {
+		tag = DED
+	}
+
+	available = {
+	}
+
+}

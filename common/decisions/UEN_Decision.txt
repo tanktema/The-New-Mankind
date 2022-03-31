@@ -1,0 +1,1041 @@
+UEN_Mobilization = {
+    UEN_Mobilize_Line = {
+        icon = rifles
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                108 = { is_controlled_by = ROOT }
+            }
+        }
+
+        custom_cost_trigger = {
+            has_political_power > 9
+            command_power > 19
+        }
+        
+        custom_cost_text = decision_cost_20_cp_10pp
+
+        fire_only_once = yes
+          days_remove = 70
+          remove_effect = {
+            country_event = {
+                id = europe.20 
+            }
+        }
+    }   
+
+    UEN_Mobilize_reserve = {
+        icon = rifles
+            cost = 50
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                108 = { is_controlled_by = ROOT }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 35
+          remove_effect = {
+            country_event = {
+                id = europe.21 
+            }
+        }
+    }
+
+    UEN_Mobilize_militia = {
+        icon = rifles
+            cost = 75
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                108 = { is_controlled_by = ROOT }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+            country_event = {
+                id = europe.22 
+            }
+        }
+    }
+
+    UEN_unmothball_tank = {
+        icon = rifles
+        available = {
+            has_tech = basic_light_tank  
+        }
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = light_tank_equipment_1
+                amount = 120
+            }
+
+                add_equipment_to_stockpile = {
+                type = gw_tank_equipment
+                amount = 48
+            }
+        }
+    }
+
+    UEN_unmothball_mechanized = {
+        icon = rifles
+        available = {
+            has_tech = mechanised_infantry  
+        }
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = mechanized_equipment_1
+                amount = 500
+            }
+        }
+    }
+
+    UEN_unmothball_artillery = {
+        icon = rifles
+        available = {
+            has_tech = artillery1  
+        }
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = artillery_equipment_0
+                amount = 250
+            }
+
+                add_equipment_to_stockpile = {
+                type = artillery_equipment_1
+                amount = 190
+            }
+
+                add_equipment_to_stockpile = {
+                type = artillery_equipment_2
+                amount = 96
+            }
+        }
+    }
+
+    UEN_unmothball_fighter = {
+        icon = rifles
+        available = {
+            has_tech = early_fighter  
+        }
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = fighter_equipment_0 
+                amount = 110
+            }
+        }
+    }
+
+    UEN_unmothball_helicopter = {
+        icon = rifles
+        available = {
+            has_tech = CAS1  
+        }
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = CAS_equipment_1 
+                amount = 200
+            }
+        }
+    }
+
+    UEN_unmothball_bomber = {
+        icon = rifles
+        available = {
+            has_tech = early_bomber  
+        }
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = tac_bomber_equipment_0 
+                amount = 50
+            }
+
+                add_equipment_to_stockpile = {
+                type = transport_plane_equipment_1 
+                amount = 30
+            }
+        }
+    }
+
+    UEN_unmothball_navy = {
+        icon = rifles
+        available = {
+                if = {
+                    limit = {
+                        has_dlc = "Man the Guns"
+                    }
+                    has_tech = early_ship_hull_light 
+                    has_tech = early_ship_hull_cruiser
+                    else = {
+                        OR = {
+                            has_tech = early_destroyer
+                            has_tech = early_light_cruiser
+                            has_tech = early_heavy_cruiser
+                        }
+                    }
+                }
+                has_completed_focus = create_naval_base 
+            }
+
+            cost = 15
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                navy_experience = 50  
+                custom_effect_tooltip = HUM_fleet_build
+                hidden_effect = {
+                    load_oob = "UEN_Navy"
+                }
+            }
+        }
+}
+
+
+UEN_real_estate = {
+    UEN_buy_somland = {
+        icon = ger_mefo_bills
+          visible = {
+               NOT = { 661 = { is_fully_controlled_by = ROOT } }
+          }
+
+        available = {
+            NOT = { has_war_with = EQC }
+        }
+
+            cost = 100
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                661 = { is_controlled_by = EQS }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                every_other_country = {
+                    limit = {
+                    controls_state = 661
+                }
+                country_event = europe.4160
+            }
+        }
+    }
+
+    UEN_take_back_somland = {
+          visible = {
+                661 = { is_core_of = UEN }
+                661 = { NOT = { is_controlled_by = UEN } }
+          }
+
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                661 = { is_controlled_by = EQS }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                every_other_country = {
+                    limit = {
+                    controls_state = 661
+                }
+                random_list = {
+                    45 = { add_timed_idea = { idea = HUM_debt_payment_1 days = 200 } }
+                    45 = { add_offsite_building = { type = industrial_complex level = 2 } }
+                    5 = { UEN = { add_manpower = -500 } }
+                    5 = { UEN = { add_manpower = -1000 } }
+                }
+            }
+            transfer_state = 661
+        }
+    }
+
+
+    UEN_upgrade_somland = {
+        icon = generic_industry
+          visible = {
+               661 = { is_fully_controlled_by = UEN }
+          }
+
+            cost = 50
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+            country_event = {
+                id = europe.4166
+            }
+        }
+    }
+
+    UEN_buy_spa_island = {
+        icon = ger_mefo_bills
+           visible = {
+               NOT = { 4 = { is_fully_controlled_by = ROOT } }
+          }
+
+        available = {
+            NOT = { has_war_with = EQS }
+        }
+
+            cost = 100
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                4 = { is_controlled_by = EQS }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 4
+                }
+                country_event = europe.4162
+            }
+        }
+    }
+
+    UEN_take_back_spa = {
+          visible = {
+                4 = { is_core_of = UEN }
+                4 = { NOT = { is_controlled_by = UEN } }
+          }
+
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                4 = { is_controlled_by = EQS }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+                every_other_country = {
+                    limit = {
+                    controls_state = 4
+                }
+                random_list = {
+                    45 = { add_timed_idea = { idea = HUM_debt_payment_1 days = 200 } }
+                    45 = { add_offsite_building = { type = industrial_complex level = 2 } }
+                    5 = { UEN = { add_manpower = -500 } }
+                    5 = { UEN = { add_manpower = -1000 } }
+                }
+            }
+            transfer_state = 4
+        }
+    }
+
+    UEN_upgrade_spa_island = {
+        icon = generic_industry
+          visible = {
+               4 = { is_fully_controlled_by = UEN }
+          }
+
+            cost = 50
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+            country_event = {
+                id = europe.4167
+            }
+        }
+    }
+
+    UEN_buy_freeside = {
+        icon = ger_mefo_bills
+          visible = {
+               NOT = { 110 = { is_fully_controlled_by = ROOT } }
+          }
+
+        available = {
+            NOT = { has_war_with = EQS }
+        }
+
+            cost = 200
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+                110 = { is_controlled_by = EQS }
+            }
+        }
+        fire_only_once = yes
+          days_remove = 14
+          remove_effect = {
+                 every_other_country = {
+                    limit = {
+                    controls_state = 110
+                }
+                country_event = europe.4164
+            }
+        }
+    }
+
+    UEN_upgrade_freeside = {
+        icon = generic_industry
+          visible = {
+               110 = { is_fully_controlled_by = UEN }
+          }
+
+            cost = 50
+            ai_will_do = {
+            factor = 50
+        }
+        fire_only_once = yes
+          days_remove = 7
+          remove_effect = {
+            country_event = {
+                id = europe.4168
+            }
+        }
+    }
+}
+
+form_UEN_EQS_category = {
+    form_UEN_EQS = {
+        icon = generic_form_nation
+
+          visible = {
+            has_completed_focus = UEN_equestria_proposal
+          }
+
+        available = {
+            has_completed_focus = UEN_equestria_proposal
+        }
+
+            cost = 200
+        allowed = {
+        OR = {
+                original_tag = UEN
+                original_tag = EQS
+            }
+        }
+
+
+        days_remove = 14
+          remove_effect = {
+        }
+        complete_effect = {
+        add_timed_idea = { idea = HUM_recent_unification days = 250 }
+            set_cosmetic_tag = UEN_EQS
+            set_global_flag = form_POL_HUN_UNION_flag
+            if = {
+                limit = { tag = UEN }
+                annex_country = { target = EQS transfer_troops = yes }
+                recruit_character = UEN_federation_council
+
+
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = EQS
+                        }
+                    }
+                    add_core_of = UEN
+                }
+                EQS = {
+                    every_unit_leader = {
+                        set_nationality = UEN
+                    }
+                }
+            }           
+            if = {
+                limit = { tag = EQS }
+                annex_country = { target = UEN transfer_troops = yes }
+                every_state = {
+                    limit = {
+                            is_core_of = UEN
+                    }
+                    add_core_of = EQS
+                }
+                UEN = {
+                    every_unit_leader = {
+                        set_nationality = EQS
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}
+
+UEN_annex_puppet_category = {
+    UEN_annex_puppet = {
+        icon = generic_form_nation
+
+          visible = {
+            EEQ = { is_puppet_of = UEN } 
+            has_cosmetic_tag = UEN_EQS
+          }
+
+        available = {
+            has_cosmetic_tag = UEN_EQS
+            EEQ = { is_puppet_of = UEN }
+            always = yes
+        }
+
+        cost = 150
+        allowed = {
+        OR = {
+                original_tag = UEN
+            }
+        }
+
+
+        days_remove = 14
+          remove_effect = {
+        }
+        complete_effect = {
+        add_timed_idea = { idea = HUM_recent_unification days = 120 }
+            set_global_flag = form_POL_HUN_UNION_flag
+            if = {
+                limit = { tag = UEN }
+                annex_country = { target = EEQ transfer_troops = yes }
+                every_state = {
+                    limit = {
+                        OR = {
+                            is_core_of = EEQ
+                        }
+                    }
+                    add_core_of = UEN
+                }
+                EEQ = {
+                    every_unit_leader = {
+                        set_nationality = UEN
+                    }
+                }
+            }           
+            if = {
+                limit = { tag = EEQ }
+                annex_country = { target = UEN transfer_troops = yes }
+                every_state = {
+                    limit = {
+                            is_core_of = UEN
+                    }
+                    add_core_of = EEQ
+                }
+                UEN = {
+                    every_unit_leader = {
+                        set_nationality = EEQ
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}
+
+
+#DEFCON SYSTEM
+UEN_defcon = {
+    UEN_Defcon_5 = {
+            cost = 25
+            ai_will_do = {
+            factor = 50
+        }
+        available = {
+            always = yes
+            has_idea = HUM_defcon_4
+        }
+
+          remove_effect = {
+            #sound_effect = "Detente"
+                swap_ideas = { 
+            remove_idea = HUM_defcon_4 
+            add_idea = HUM_defcon_5
+            }
+        }
+    }
+
+    UEN_Defcon_4 = {
+            cost = 25
+            ai_will_do = {
+            factor = 50
+        }
+        available = {
+            always = yes
+            threat > 0.1
+            OR = {
+            has_idea = HUM_defcon_5         
+            has_idea = HUM_defcon_3
+            }
+        }
+
+          remove_effect = {
+                IF = {
+            limit = { has_idea = HUM_defcon_5}
+            #sound_effect = "DEFCON"
+            swap_ideas = {
+            remove_idea = HUM_defcon_5
+            add_idea = HUM_defcon_4
+                }
+            }
+
+                IF = {
+            limit = { has_idea = HUM_defcon_3}
+            #sound_effect = "Detente"
+            swap_ideas = {
+            remove_idea = HUM_defcon_3
+            add_idea = HUM_defcon_4
+                }
+            }
+        }
+    }
+
+    UEN_extra_preparation = {
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+            }
+        }
+        visible = {
+        has_idea = HUM_defcon_4
+        }
+
+        available = {
+        has_idea = HUM_defcon_4
+        }
+
+        fire_only_once = yes
+          remove_effect = {
+            add_political_power = 150
+            add_stability = 0.10
+            add_war_support = 0.10
+        }
+    }
+
+    UEN_Defcon_3 = {
+            cost = 25
+            ai_will_do = {
+            factor = 50
+        }
+        available = {
+            always = yes
+            threat > 0.25
+            OR = {
+            has_idea = HUM_defcon_4     
+            has_idea = HUM_defcon_2
+            }
+        }
+
+          remove_effect = {
+            #sound_effect = "DEFCON"
+                IF = {
+            limit = { has_idea = HUM_defcon_4}
+            swap_ideas = {
+            remove_idea = HUM_defcon_4
+            add_idea = HUM_defcon_3
+                }
+            }
+
+                IF = {
+            limit = { has_idea = HUM_defcon_2}
+            swap_ideas = {
+            remove_idea = HUM_defcon_2
+            add_idea = HUM_defcon_3
+                }
+            }
+        }
+    }
+
+    UEN_defcon_mobilisation = {
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+            }
+        }
+        visible = {
+        has_idea = HUM_defcon_3
+
+        }
+        
+        available = {
+        has_idea = HUM_defcon_3
+        }
+
+        fire_only_once = yes
+          remove_effect = {
+            add_war_support = -0.05
+            add_manpower = 25000
+            add_command_power = 50
+        }
+    }
+
+    UEN_Defcon_2 = {
+            cost = 25
+            ai_will_do = {
+            factor = 50
+        }
+        available = {
+            always = yes
+            threat > 0.45
+            OR = {
+            has_idea = HUM_defcon_3
+            has_idea = HUM_defcon_1
+            }
+        }
+
+          remove_effect = {
+            #sound_effect = "DEFCON"
+                IF = {
+            limit = { has_idea = HUM_defcon_3}
+            swap_ideas = {
+            remove_idea = HUM_defcon_3
+            add_idea = HUM_defcon_2
+                }
+            }
+
+                IF = {
+            limit = { has_idea = HUM_defcon_1}
+            swap_ideas = {
+            remove_idea = HUM_defcon_1
+            add_idea = HUM_defcon_2
+                }
+            }
+        }
+    }
+
+    UEN_strategic_forces = {
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+            }
+        }
+        visible = {
+        has_idea = HUM_defcon_2
+        has_tech = strategic_bomber1 
+        }
+        
+        available = {
+        has_idea = HUM_defcon_2
+        has_tech = strategic_bomber1  
+        }
+
+        fire_only_once = yes
+          remove_effect = {
+                add_equipment_to_stockpile = {
+                type = strat_bomber_equipment_1
+                amount = 50
+            }
+        }
+    }
+
+    UEN_Defcon_1 = {
+            cost = 25
+            ai_will_do = {
+            factor = 50
+        }
+        available = {
+            always = yes
+            has_war
+            threat > 0.6        
+            has_idea = HUM_defcon_2
+            has_tech = nuclear_reactor
+        }
+
+          remove_effect = {
+                IF = {
+            #sound_effect = "DEFCON"
+            limit = { has_idea = HUM_defcon_2}
+            swap_ideas = {
+            remove_idea = HUM_defcon_2
+            add_idea = HUM_defcon_1
+                }
+            }
+        }
+    }
+
+
+    UEN_nuke_crate = {
+            ai_will_do = {
+            factor = 50
+            modifier = {
+                factor = 50
+            }
+        }
+        visible = {
+        has_idea = HUM_defcon_1
+
+        }
+        
+        available = {
+        has_idea = HUM_defcon_1
+        }
+
+        fire_only_once = yes
+          remove_effect = {
+                set_technology = {
+                nukes = 1
+            }
+        }
+    }
+}
+
+UEN_occupation = {
+    UEN_occupation_islands = {
+
+        icon = decision_generic_nationalism
+
+        available = {
+            has_completed_focus = european_domination
+            owns_state = 660
+            owns_state = 659
+            owns_state = 658
+
+            owns_state = 10
+            owns_state = 9
+            owns_state = 8
+            owns_state = 7
+            owns_state = 6
+            owns_state = 328
+        }
+
+        cost = 25
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = european_domination
+        }
+
+        complete_effect = {
+                DRG = {
+                    transfer_state = 660
+                    transfer_state = 659
+                    transfer_state = 658
+
+                    transfer_state = 10
+                    transfer_state = 9
+                    transfer_state = 8
+                    transfer_state = 7
+                    transfer_state = 6
+                    transfer_state = 328
+
+                    660 = { add_core_of = DRG }
+                    659 = { add_core_of = DRG }
+                    658 = { add_core_of = DRG }
+                    10 = { add_core_of = DRG }
+                    9 = { add_core_of = DRG }
+                    8 = { add_core_of = DRG }                       
+                    7 = { add_core_of = DRG }
+                    6 = { add_core_of = DRG }   
+                    328 = { add_core_of = DRG } 
+
+                    load_focus_tree = generic_focus
+                    set_cosmetic_tag = UEN_puppet
+                    recruit_character = EEQ_military_governor
+
+                    add_ideas = HUM_modernized_army
+                }
+                set_autonomy = { target = DRG autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+    UEN_occupation_equestria = {
+
+        icon = decision_generic_nationalism
+
+        available = {
+            has_completed_focus = european_domination
+            EQS = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+            STG = {
+                OR = {
+                    exists = no
+                    is_subject_of = ROOT
+                    has_war_with = ROOT
+                }
+            }
+                controls_state = 153
+                controls_state = 3
+            }
+
+        cost = 150
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        visible = {
+            has_completed_focus = european_domination
+        }
+
+        complete_effect = {
+        every_state = { 
+            limit = { is_core_of = EQS
+            is_owned_by = UEN }
+            EEQ = { transfer_state = PREV }
+        }
+        EEQ = { transfer_state = 75 }
+        75 = { add_core_of = EEQ }
+        UEN = { puppet = EEQ }
+
+        every_state = { 
+         limit = { is_core_of = EQS }
+           EEQ = { add_core_of = PREV }
+        }
+                EEQ = {
+
+                    load_focus_tree = generic_focus
+                    set_cosmetic_tag = UEN_puppet
+                    recruit_character = EEQ_military_governor
+
+                    add_ideas = HUM_modernized_army
+                }
+                set_autonomy = { target = EEQ autonomy_state = autonomy_integrated_puppet }
+            }
+        }
+
+    UEN_occupation_rockville = {
+
+        available = {
+            ROC = {
+                    exists = no
+            }
+            EQS = {
+                OR = {
+                    exists = no
+                    has_cosmetic_tag = EQS_SOL                    
+                    has_country_leader = { ruling_only = yes name = "Daybreaker" }
+                }
+            }
+                controls_state = 38
+                controls_state = 94
+                controls_state = 87
+            }
+
+        cost = 50
+        ai_will_do = {
+            factor = 0
+            modifier = {
+            }
+        }
+
+        complete_effect = {
+        ROC = { transfer_state = 38 }
+        ROC = { transfer_state = 94 }
+        ROC = { transfer_state = 87 }
+        38 = { add_core_of = ROC }
+        94 = { add_core_of = ROC }
+        87 = { add_core_of = ROC }
+
+        117 = { add_core_of = ROC }
+        121 = { add_core_of = ROC }
+        123 = { add_core_of = ROC }
+        114 = { add_core_of = ROC }
+        119 = { add_core_of = ROC }
+        118 = { add_core_of = ROC }     
+
+        every_state = { 
+            limit = { is_core_of = ROC }
+            ROC = { transfer_state = PREV }
+        }
+
+        UEN = { puppet = ROC }
+
+                ROC = {
+                add_stability = 0.10
+                    add_equipment_to_stockpile = {
+                    type = fighter_equipment_0
+                    amount = 100
+                    producer = STG
+                    }
+
+                    add_equipment_to_stockpile = {
+                    type = CAS_equipment_1 
+                    amount = 50
+                    producer = STG
+                    }
+
+                    if = {
+                    limit = { UEN = { has_government = fascism } }
+                    set_cosmetic_tag = UEN_puppet
+                    }
+
+                    load_focus_tree = generic_focus
+
+                    recruit_character = ROC_marble_pie
+                    recruit_character = ROC_maud_pie
+                    recruit_character = EEQ_military_governor
+
+                    add_ideas = HUM_modernized_army
+                    add_ideas = HUM_modernized_society 
+                    add_ideas = human_scientists
+                    add_timed_idea = { idea = HUM_imigration days = 365 }
+                }
+                set_autonomy = { target = ROC autonomy_state = autonomy_dominion  }
+                hidden_effect = { ROC = { load_oob = "ROC_Militia" } }
+            }
+        }
+}

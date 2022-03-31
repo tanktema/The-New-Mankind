@@ -1,0 +1,897 @@
+characters={
+	GRB_sir_winston_leonard_spenser_churchill={
+		name=GRB_sir_winston_leonard_spenser_churchill
+		portraits={
+			civilian={
+				large="gfx/leaders/GRB/Churchill.dds"
+			}
+		}
+		country_leader={
+			desc="GRB_demo_desc"
+			ideology=conservatism
+			traits={ human_leader demo_leader dies_soon_trait }
+			expire="1999.9.9.1"
+			id=-1
+		}
+	}
+	GRB_hugh_todd_naylor_gaitskell={
+		name=GRB_hugh_todd_naylor_gaitskell
+		portraits={
+			civilian={
+				large="gfx/leaders/GRB/Gaitskell.dds"
+			}
+		}
+		country_leader={
+			desc="GRB_comm_desc"
+			ideology=democratic_socialism
+			traits={ human_leader comm_leader }
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	GRB_sir_oswald_ernald_mosley={
+		name=GRB_sir_oswald_ernald_mosley
+		portraits={
+			civilian={
+				large="gfx/leaders/GRB/Mosley.dds"
+			}
+		}
+		country_leader={
+			desc="GRB_fasc_desc"
+			ideology=fascism_ideology
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	GRB_her_majesty_queen_elizabeth_ii={
+		name=GRB_her_majesty_queen_elizabeth_ii
+		portraits={
+			civilian={
+				large="gfx/leaders/GRB/QueenEliz.dds"
+			}
+		}
+		country_leader={
+			desc="GRB_neutr_desc"
+			ideology=despotism
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+	GRB_bernard_montgomerey={
+		name=GRB_montgomerie_hmc
+		portraits={
+			army={
+				small="GFX_idea_GRB_montgomerie_hmc"
+			}
+			army={
+				large="gfx/leaders/GRB/Montgomerie.dds"
+			}
+		}
+		field_marshal={
+			traits={ unyielding_defender expert_delegator }
+			skill=5
+			attack_skill=5
+			defense_skill=5
+			planning_skill=6
+			logistics_skill=4
+			legacy_id=-1
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GRB_montgomerie_hmc
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_contact
+				NOT = {
+					has_idea = GRB_montgomerie_ac
+				}
+			}
+			
+			traits = { army_chief_offensive_2 }
+		}
+		
+		
+		advisor = {
+			slot = army_chief 
+			idea_token = GRB_montgomerie_ac
+			
+			allowed = {
+				original_tag = GRB
+			}
+			
+			available = {
+				has_completed_focus = GRB_contact 
+				NOT = {
+					has_idea = GRB_montgomerie_hmc
+				}
+			}
+			
+			traits = {
+				world_war_veteran
+			}
+		}
+	
+	}
+	GRB_jake_grant={
+		name=GRB_jake_grant
+		portraits={
+			army={
+				small="GFX_idea_GRB_jake_grant"
+			}
+			army={
+				large="gfx/leaders/GRB/General_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer infantry_commander_hum }
+			skill=3
+			attack_skill=4
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	GRB_danny_barnest={
+		name=GRB_danny_barnest
+		portraits={
+			army={
+				small="GFX_idea_GRB_danny_barnest"
+			}
+			army={
+				large="gfx/leaders/GRB/General_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer scavenger }
+			skill=4
+			attack_skill=2
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	GRB_rowan_lawrence={
+		name=GRB_rowan_lawrence
+		portraits={
+			army={
+				small="GFX_idea_GRB_rowan_lawrence"
+			}
+			army={
+				large="gfx/leaders/GRB/General_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ tankist_commander_hum panzer_expert }
+			skill=5
+			attack_skill=3
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	
+	
+	GRB_esmee_hamilton = {
+		name = GRB_esmee_hamilton
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_esmee_hamilton"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_esmee_hamilton
+			allowed = { original_tag = GRB }
+			available = {
+				NOT = {
+					has_completed_focus = GRB_british_council
+				}
+			}
+			traits = {
+				state_secretary
+			}
+		}
+	}
+	
+	
+	GRB_darius_mason = {
+		name = GRB_darius_mason
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_darius_mason"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_darius_mason
+			
+			allowed = { original_tag = GRB }
+			available = {
+				NOT = {
+					has_completed_focus = GRB_british_council
+				}
+			}
+			traits = { 
+				peacekeeper_state 
+			}
+		}
+	}
+	
+	
+	GRB_richard_cole = {
+		name = GRB_richard_cole
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_richard_cole"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_richard_cole
+			
+			allowed = { original_tag = GRB }
+			available = {
+				has_government = neutrality
+			}
+			traits = {
+				her_majesty_moneykeeper
+			}
+		}
+	}
+	
+	
+	GRB_tyler_grant = {
+		name = GRB_tyler_grant
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_tyler_grant"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_tyler_grant
+			
+			allowed = { original_tag = GRB }
+			available = {
+				always = yes
+			}
+			traits = {
+				inner_politics_minister
+			}
+			
+		}
+	}
+	
+	
+	GRB_jonas_owen = {
+		name = GRB_jonas_owen
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_jonas_owen"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_jonas_owen
+			
+			allowed = { original_tag = GRB }
+			available = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			traits = {
+				bloody_purger_human
+			}
+		}
+		
+	}
+	
+	
+	GRB_taylor_mccarthny = {
+		name = GRB_taylor_mccarthny
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_taylor_mccarthny"
+			}
+		}
+		
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_taylor_mccarthny
+			
+			allowed = { original_tag = GRB }
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				grb_fasc_trait
+			}
+		}
+	}
+	
+	
+	GRB_albert_russell = {
+		name = GRB_albert_russell
+		portraits = {
+			civilian = {
+				small = "GFX_idea_GRB_albert_russell"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GRB_albert_russell
+			
+			allowed = { original_tag = GRB }
+			available = {
+				always = yes
+			}
+			traits = {
+				labour_union_pred
+			}
+		}
+	}
+	
+	
+	GRB_patrick_turner = {
+		name = GRB_patrick_turner
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_patrick_turner"
+			}
+		}
+		
+		
+		advisor = {
+			slot = theorist
+			idea_token = GRB_patrick_turner
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			research_bonus = {
+				cat_superior_firepower = 0.12
+			}
+			modifier = {
+			
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.08
+			}
+		}
+	}
+	
+	
+	GRB_elias_holland = {
+		name = GRB_elias_holland
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_elias_holland"
+			}
+		}
+		
+		
+		advisor = {
+			slot = theorist
+			idea_token = GRB_elias_holland
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_support_fleet
+			}
+			
+			research_bonus = {
+				cat_base_strike = 0.1
+				bb_tech = 0.1
+				shbb_tech = 0.1
+			}
+			equipment_bonus = {
+				ship_hull_heavy = {	
+					fire_range = 0.1
+					shore_bombardment = 0.1
+					naval_range = 0.1
+				}
+			}
+		}
+	}
+	
+	
+	GRB_mark_fletcher = {
+		name = GRB_mark_fletcher
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_mark_fletcher"
+			}
+		}
+		
+		
+		advisor = {
+			slot = theorist
+			idea_token = GRB_mark_fletcher
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_completed_focus = GRB_conscription_expansion
+			}
+			
+			research_bonus = {
+				cat_grand_battle_plan = 0.1
+			}
+			modifier = {
+				
+				army_infantry_attack_factor = 0.08
+				army_infantry_defence_factor = 0.05
+				planning_speed = 0.1
+			}
+		}
+		
+	}
+	
+	GRB_emma_thomson = {
+		name = GRB_emma_thomson
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_emma_thomson"
+			}
+		}
+		
+		
+		advisor = {
+			slot = theorist
+			idea_token = GRB_emma_thomson
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			available = {
+				has_tech = nuclear_reactor 
+			}
+			research_bonus = {
+				nuclear = 0.12
+			}
+
+			traits = { nuclear_scientist }
+		}
+	}
+	
+	
+	GRB_theodore_rees = {
+		name = GRB_theodore_rees
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_theodore_rees"
+			}
+		}
+		
+		advisor = {
+			slot = navy_chief
+			idea_token = GRB_theodore_rees
+			
+			
+			allowed = {
+				original_tag = GRB
+			}
+			
+			available = {
+				has_completed_focus = GRB_contact 
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			equipment_bonus = {
+				ship_hull_carrier = {
+					naval_range = 0.25
+				}
+				ship_hull_submarine = {
+					sub_visibility = -0.15
+					convoy_raiding_coordination = 0.1
+				}
+			}
+			modifier = {
+				
+				experience_gain_navy = 0.02
+			}
+		}
+	}
+	
+	GRB_maximillian_berry = {
+		name = GRB_maximillian_berry
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_maximillian_berry"
+			}
+		}
+		
+		
+		advisor = {
+			slot = air_chief
+			idea_token = GRB_maximillian_berry
+			
+			allowed = {
+				original_tag = GRB
+			}
+			
+			available = {
+				has_completed_focus = GRB_contact 
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.08
+			}
+			equipment_bonus = {
+				light_air = {
+					instant = yes
+					reliability = 0.1
+					air_superiority = 0.2
+					air_range = 0.2
+					air_attack = 0.1
+				}
+			}
+			modifier = {
+				experience_gain_air = 0.02
+			}
+		}
+	}
+	
+	GRB_kingsley_grant = {
+		name = GRB_kingsley_grant
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_kingsley_grant"
+			}
+		}
+		
+		advisor = {
+			slot = high_command
+			idea_token = GRB_kingsley_grant
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			traits = {
+				army_chief_defensive_2
+			}
+		}
+	}
+	
+	GRB_henry_williamson = {
+		name = GRB_henry_williamson
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_henry_williamson"
+			}
+		}
+		
+		
+		advisor = {
+			slot = high_command
+			idea_token = GRB_henry_williamson
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			traits = {
+				army_chief_maneuver_2
+			}
+		}
+	}
+	
+	
+	GRB_kasper_jones = {
+		name = GRB_kasper_jones
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_kasper_jones"
+			}
+		}
+		
+		
+		advisor = {
+			slot = high_command
+			idea_token = GRB_kasper_jones
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			traits = {
+				army_logistics_2
+			}
+		}
+	}
+	
+	GRB_harris_brown = {
+		name = GRB_harris_brown
+		portraits = {
+			army = {
+				small = "GFX_idea_GRB_harris_brown"
+			}
+		}
+		
+		
+		advisor = {
+			slot = high_command
+			idea = GRB_harris_brown
+			
+			allowed = {
+				original_tag = GRB 
+			}
+			
+			traits = {
+				army_chief_drill_1
+			}
+		}
+	}
+	
+	
+	GRB_ricko_meritt = {
+		name = GRB_ricko_meritt
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRB/Merritt.dds"
+				small = "GFX_idea_GRB_ricko_meritt"
+			}
+		}
+		
+		
+		corps_commander = {
+			traits = { other_race_general winter_expert demolisher_hum }
+			skill = 3 
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			visible = {
+				has_completed_focus = GRB_penguin_talents
+			}
+		}
+	}
+	
+	GRB_vzhick_gulseth = {
+		name = GRB_vzhick_gulseth
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRB/Gulseth.dds"
+				small = "GFX_idea_GRB_vzhick_gulseth"
+			}
+		}
+		
+		
+		corps_commander = {
+			traits = { tankist_commander_hum winter_expert }
+			skill = 3 
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 5
+			visible = {
+				has_completed_focus = GRB_penguin_talents
+			}
+		}
+	}
+	
+	GRB_santodes = {
+		name = GRB_santodes
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRB/montypiton.dds"
+			}
+		}
+		
+		
+		country_leader = {
+			desc = "GRB_SANTODES"
+			expire = 1999.9.9
+			ideology = holy_order_f
+			traits = {
+			
+			}
+		}
+	}
+	
+	
+	GRB_parsefal = {
+		name = GRB_parsefal
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRB/Parsefal.dds"
+			}
+		}
+		
+		
+		country_leader = {
+			desc = "GRB_SANTODES"
+			expire = 1999.9.9
+			ideology = neofeudalism
+			traits = {
+			
+			}
+		}
+	}
+	
+	GRB_anthony_eden = {
+		name = GRB_anthony_eden
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRB/Eden.dds"
+			}
+		}
+		
+		
+		country_leader = {
+			desc = "GRB_EDEN_DESC"
+			expire = 1999.9.9
+			ideology = conservatism
+			
+		}
+	}
+	
+	
+	GRB_dominik_harrison = {
+		name = GRB_dominik_harrison
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRB/Harrison.dds"
+				small = "GFX_idea_GRB_dominik_harrison"
+			}
+		}
+		
+		
+		corps_commander = {
+			traits = { trait_cautious }
+			skill = 3 
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 4
+			visible = {
+				has_country_flag = grb_new_generals_flag
+			}
+		}
+	}
+	
+	GRB_alistar_wild = {
+		name = GRB_alistar_wild
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRB/Ward.dds"
+				small = "GFX_idea_GRB_alistar_wild"
+			}
+		}
+		
+		corps_commander = {
+			traits = { infantry_commander_hum }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			logistics_skill = 3
+			planning_skill = 3
+			visible = {
+				has_country_flag = grb_new_generals_flag
+			}
+		}
+	}
+	
+	GRB_louie_carter = {
+		name = GRB_louie_carter
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRB/Carter.dds"
+				small = "GFX_idea_GRB_louie_carter"
+			}
+		}
+		
+		
+		corps_commander = {
+			traits = { armor_officer }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			logistics_skill = 4
+			planning_skill = 6
+			visible = {
+				has_country_flag = grb_new_generals_flag
+			}
+		}
+	}
+	
+	GRB_blast_guard = {
+		name = GRB_blast_guard
+		portraits = {
+			army = {
+				large = "gfx/leaders/GRB/BlastGuard.dds"
+				small = "GFX_idea_GRB_blast_guard"
+			}
+		}
+		
+		
+		corps_commander = {
+			traits = { terrain_penalty_reduction = 0.25 } 
+			skill = 6
+			attack_skill = 7
+			defense_skill = 8
+			logistics_skill = 5
+			planning_skill = 7
+			visible = {
+				has_country_flag = GRB_blast_guard_available
+			}
+		}
+	}
+	
+	GRB_margaret_thatcher = {
+		name = GRB_margaret_thatcher
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRB/Thatcher.dds"
+			}
+		}
+		
+		
+		country_leader = {
+			expire = "1999.9.9"
+			ideology = conservatism
+			traits = {
+				human_leader
+			}
+		}
+	}
+	
+	GRB_herman_buecher = {
+		name = GRB_herman_buecher
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRB/Buecher.dds"
+			}
+		}
+		
+		
+		country_leader = {
+			expire = "1999.9.9"
+			ideology = conservatism
+			traits = {
+				first_nonhuman_leader
+			}
+		}
+	}
+	
+	GRB_captain_wolf = {
+		name = GRB_captain_wolf
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GRB/GRB_capitan"
+		}
+		
+		country_leader = {
+
+			ideology = anarchist_communism
+			traits = { grb_ancom_trait }
+			expire="1999.9.9.1"
+			id=-1
+		}
+	}
+	
+	
+}

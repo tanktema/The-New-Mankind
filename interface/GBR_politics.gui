@@ -1,0 +1,48 @@
+guiTypes = {
+	containerWindowType = {
+		name = "british_politics_decision"
+		position = { x = 130 y = 20 }
+		
+		size = { width = 150 height = 300 } 
+		moveable = no 
+		orientation = center   
+		clipping = no
+		iconType = {
+			name = "british_bg" 
+			spriteType = "GFX_GBR_POL_brit_map"
+			position = { x = 110 y = 0 } 
+		}
+		
+		
+		buttonType = {
+			name = "brit_reg_363_button"
+			quadTextureSprite = "GFX_GBR_POL_reg_363"
+			position = { x = 247 y = 69 } 
+			
+		} 
+		
+		buttonType = {
+			name = "brit_reg_364_button"
+			quadTextureSprite = "GFX_GBR_POL_reg_364"
+			position = { x = 120 y = 34 }     
+			
+		} 
+		 
+		buttonType = {
+			name = "brit_reg_365_button" 
+			quadTextureSprite = "GFX_GBR_POL_reg_365"
+			position = { x = 125 y = 107 }  
+			 
+		} 
+		
+		instantTextBoxType = {
+			name = "british_status_text"
+			position = { x = 110  y = 230 }
+			text = "british_status"
+			format = center
+			font = "hoi_18mbs"
+			maxWidth = 290
+			maxHeight = 190
+			fixedsize = no
+
+		}

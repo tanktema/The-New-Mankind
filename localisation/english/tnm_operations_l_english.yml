@@ -1,0 +1,9 @@
+﻿l_english:
+    operation_nuke_the_capital:0 "Place a nuke in the capital"
+    operation_nuke_the_capital_desc:0 "We will nuke their capital"
+    cross_the_border_name:0 "Cross the border"
+    cross_the_border_name_desc:0 "Special forces will go to the depth of enemy's territoy and send a signla to our plane. Agent will be dropped in the supply crate."
+    place_the_nuke_name:0 "Plant a charge"
+    place_the_nuke_desc:0 "Our agent will leave the nuclear charge in some dark place. Then he will set up a timer and leave the city"
+    escape_with_army_name:0 "Return back"
+    escape_with_army_desc:0 "Agent will get to the border and send a signal to special forces. They will attack enemies there and pick him up"

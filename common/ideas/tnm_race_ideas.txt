@@ -1,0 +1,88 @@
+ideas = {
+	trade_laws = {
+		GRB_closed_economy = {
+			allowed = {
+				original_tag = GRB 
+			}
+			allowed_to_remove = { always = no }
+			visible = {
+				original_tag = GRB
+				has_completed_focus = GRB_closing_economy
+			}
+			modifier = {
+				min_export = 0
+				trade_opinion_factor = -0.75
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				political_power_gain = 0.2
+				production_speed_buildings_factor = 0.05
+			}
+
+			on_add = {
+				custom_effect_tooltip = closed_economy_TT
+			}
+		}
+	}
+	race_pointer = {
+		human_race = {
+			allowed = {
+				is_human_race = yes
+			}
+			visible = {
+				has_idea = human_race
+			}
+			removal_cost = -1
+			default = yes
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+			allowed_to_remove = {
+                always = no
+            }
+		}
+	}
+	city_idea = {
+		human_science = {
+			allowed = {
+				is_human_race = yes
+			}
+			visible = {
+				is_human_race = yes
+			}
+			removal_cost = -1
+			default = yes
+			available = {
+				is_human_race = yes
+			}
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			traits = { science_idea }
+			allowed_to_remove = {
+                always = no
+            }
+		}
+	}
+	society_development_idea = {
+		human_society = {
+			allowed = {
+				is_human_race = yes
+			}
+			visible = {
+				is_human_race = yes
+			}
+			allowed_to_remove = {
+                always = no
+            }
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				local_resources_factor = 0.1
+			}
+			traits = { society_idea }
+		}
+	}
+}

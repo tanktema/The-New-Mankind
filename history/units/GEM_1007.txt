@@ -1,0 +1,40 @@
+division_template = {
+	name = "Infanteriedivision"
+	division_names_group = GEM_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "Volksturm"
+	division_names_group = GEM_MIL_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Panzerbrigade"
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }
+	}
+}

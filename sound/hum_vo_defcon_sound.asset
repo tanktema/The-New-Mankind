@@ -1,0 +1,20 @@
+sound = {
+	name = "DEFCON"
+	file = "menu/DEFCON.wav"
+	volume = 1
+	always_load = yes
+}
+
+sound = {
+	name = "Detente"
+	file = "menu/Detente.wav"
+	volume = 1
+	always_load = yes
+}
+
+sound = {
+	name = "fabstodes"
+	file = "menu/fabstodes.wav"
+	volume = 1
+	always_load = yes
+}

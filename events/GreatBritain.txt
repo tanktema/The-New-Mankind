@@ -1,0 +1,1477 @@
+add_namespace = grb
+
+country_event = {
+	id = grb.1
+	title = grb.1.t 
+	desc = grb.1.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.1.a 
+		#country_event = { id = grb.2 days = 7 }
+		capital_scope = {
+			add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1 
+				instant_build = yes 
+			}
+		}
+	}
+	
+	option = {
+		name = grb.1.b
+		#country_event = { id = grb.2 days = 7 }
+		capital_scope = {
+			add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1 
+				instant_build = yes 
+			}
+		}
+	}
+	
+	option = {
+		name = grb.1.c 
+	#	country_event = { id = grb.2 days = 7 }
+		capital_scope = {
+			add_extra_state_shared_building_slots = 6
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes 
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 2 
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.2
+	title = grb.2.t 
+	desc = grb.2.desc
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.2.a 
+		custom_effect_tooltip = grb_recruitment_tt_1
+	#	country_event = { id = grb.3 days = 7 }
+		hidden_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Infantry Division\" division_template = \"Infantry Division\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Royal Armor Brigade\" division_template = \"Royal Armor Brigade\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+			}
+		}
+				
+				
+	}
+}
+
+country_event = {
+	id = grb.3 
+	title = grb.3.t 
+	desc = grb.3.desc
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.3.a 
+		
+		custom_effect_tooltip = fleet_come_grb_tt 
+		
+		hidden_effect = {
+			capital_scope = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 5005
+				}
+			}
+			create_equipment_variant = {
+				name = "Atlantic Raider"
+				type = ship_hull_submarine_1
+				name_group = SOU_SS_historical
+				parent_version = 0
+				modules = {
+					fixed_ship_torpedo_slot = ship_torpedo_sub_1
+					fixed_ship_engine_slot = sub_ship_engine_1
+					rear_1_custom_slot = ship_mine_layer_sub
+				}
+			}
+			create_equipment_variant = {
+				name = "Atlantic Patrol"
+				type = ship_hull_light_2
+				name_group = SOU_SS_historical
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = inherit
+					fixed_ship_torpedo_slot = inherit
+					fixed_ship_engine_slot = light_ship_engine_2
+				}
+			}	
+			create_equipment_variant = {
+				name = "Atlantic Superiority"
+				type = ship_hull_cruiser_2
+				name_group = SOU_SS_historical
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_medium_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_1
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+					fixed_ship_radar_slot = inherit
+					fixed_ship_torpedo_slot = inherit
+					fixed_ship_engine_slot = cruiser_ship_engine_2
+					fixed_ship_armor_slot = ship_armor_cruiser_1
+				}
+			}
+			
+			load_oob = "GRB_fleet_1007"
+		}
+	} 
+	
+}
+
+
+country_event = {
+	id = grb.4 
+	title = grb.4.t 
+	desc = grb.4.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.4.a 
+		
+		capital_scope = {
+			add_manpower = 50000
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 300
+		}
+		add_equipment_to_stockpile = {
+			type = light_tank_equipment
+			amount = 50
+		}
+	}
+	
+}
+
+
+country_event = {	
+	id = grb.5 
+	title = grb.5.t 
+	desc = grb.5.desc 
+	is_triggered_only = yes 
+	option = {
+		name = grb.5.a 
+		if = {
+			limit = {
+				EQC = {
+					controls_state = 364
+				}
+			}
+		}
+		transfer_state = 364
+	#	country_event = { id = grb.6 days = 15 }
+	}
+}
+
+country_event = {	
+	id = grb.6 
+	title = grb.6.t 
+	desc = grb.6.desc 
+	is_triggered_only = yes 
+	option = {
+		name = grb.6.a 
+		if = {
+			limit = {
+				EQC = {
+					controls_state = 363
+				}
+			}
+		}
+		transfer_state = 363
+
+	}
+}
+
+
+news_event = {
+	id = grb.7 
+	title = grb.7.t 
+	desc = grb.7.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.7.a 
+		country_event = { id = grb.8 days = 70 }
+		hidden_effect = {
+			id = af_grb.1 days = 65
+		}
+	}
+}
+			
+		
+country_event = {
+	id = grb.8 
+	title = grb.8.t 
+	desc = grb.8.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.8.a 
+		kill_country_leader = yes 
+		country_event = { id = grb.9 days = 1 }
+		hidden_effect = {
+			promote_character = GRB_anthony_eden
+		}
+	}
+}
+
+country_event = {
+	id = grb.9 
+	title = grb.9.t
+	desc = grb.9.desc
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.9.a 
+		custom_effect_tooltip = demo_choose_grb
+		set_country_flag = player_democrats_choose
+		complete_national_focus = GRB_death_of_churchill
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+					has_country_flag = AI_GRB_NEUTRALITY_PATH
+				}
+			}
+		}
+	}
+	
+	option = { 
+		name = grb.9.b 
+		custom_effect_tooltip = comm_choose_grb
+		set_country_flag = player_communists_choose
+		complete_national_focus = GRB_death_of_churchill
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
+	}
+
+	option = {
+		name = grb.9.c 
+		custom_effect_tooltip = fasc_choose_grb
+		set_country_flag = player_fascism_choose
+		complete_national_focus = GRB_death_of_churchill
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 100
+				OR = {
+					has_country_flag = AI_GRB_FASCISM_CHURCH
+					has_country_flag = AI_GRB_FASCISM_FEUDAL
+					has_country_flag = GRB_FASC_BASE_PATH
+				}
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = grb.10
+	title = grb.10.t 
+	desc = grb.10.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.10.a 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = 7 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
+		
+	}
+
+
+	option = {
+		name = grb.10.b 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_fasc_support_gb value = 7 tooltip = fasc_var_change_grb }
+			add_to_variable = { var = reg_comm_support_gb value = 3 tooltip = comm_var_change_grb }
+			add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			
+		}
+		
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.11
+	title = grb.11.t 
+	desc = grb.11.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.11.a 
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = 5 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
+		
+	}
+	
+	option = {
+		name = grb.11.b 
+		every_owned_state = {
+			add_to_variable = { var = reg_comm_support_gb value = 6 tooltip = comm_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = 4 tooltip = fasc_var_change_grb }
+			add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
+		
+	}
+}
+
+
+country_event = {
+	id = grb.12 
+	
+	title = grb.12.t 
+	desc = grb.12.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.12.a 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_comm_support_gb value = 6 tooltip = comm_var_change_grb }
+			add_to_variable = { var = reg_demo_support_gb value = 4 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = -10 tooltip = fasc_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		
+		add_timed_idea = {
+			idea = GRB_industry_financies
+			days = 720 
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_COMMUNISM_PATH
+			}
+		}
+	}
+	
+	
+	option = {
+		name = grb.12.b 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_fasc_support_gb value = 6 tooltip = fasc_var_change_grb }
+			add_to_variable = { var = reg_demo_support_gb value = 4 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_comm_support_gb value = -10 tooltip = comm_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		
+		add_timed_idea = {
+			idea = GRB_military_financies
+			days = 720 
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
+	}
+	
+	
+}
+
+
+
+country_event = {
+	id = grb.13
+	title = grb.13.t 
+	desc = grb.13.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.13.a 
+		
+		trigger = {
+			check_variable = { acceptance_value < 0.25 }
+		}
+		set_country_flag = grb_new_generals_flag
+		custom_effect_tooltip = new_officers_uns_tt
+	}
+		
+	
+	option = {
+		name = grb.13.b 
+		
+		trigger = {
+			check_variable = { acceptance_value > 0.24 }
+		}
+		hidden_effect = {
+			set_country_flag = grb_new_generals_flag
+			set_country_flag = GRB_blast_guard_available
+		}
+		custom_effect_tooltip = new_officers_uns_tt
+	}
+		
+	
+	
+}
+
+
+country_event = {
+	id = grb.14 
+	title = grb.14.t 
+	desc = grb.14.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.14.a 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
+		add_ideas = GRB_pony_science
+	}
+	option = {
+		name = grb.14.b 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = 5 tooltip = fasc_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
+		add_ideas = GRB_human_science_grb
+	}
+	
+} 
+
+
+
+country_event = {
+	id = grb.15
+	title = grb.15.t 
+	desc = grb.15.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.15.a 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = 10 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			add_to_variable = { var = reg_comm_support_gb value = -5 tooltip = comm_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
+		add_stability = 0.05
+		add_war_support = -0.1
+		
+	}
+	
+	option = {
+		name = grb.15.b 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = -10 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = 5 tooltip = fasc_var_change_grb }
+			add_to_variable = { var = reg_comm_support_gb value = 5 tooltip = comm_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				OR = {
+					has_country_flag = AI_GRB_FASC_BASE_PATH
+					has_country_flag = AI_GRB_COMMUNISM_PATH
+				}
+			}
+		}
+		add_stability = -0.1
+		add_war_support = 0.1
+		
+	}
+	
+}
+
+
+
+
+country_event = {
+	id = grb.16 
+	
+	title = grb.16.t
+	desc = grb.16.desc
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.16.a 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = 5 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = -5 tooltip = fasc_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_DEMOCRATIC_HISTORICAL
+			}
+		}
+	}
+	
+	option = {
+		name = grb.16.b 
+		
+		every_owned_state = {
+			add_to_variable = { var = reg_demo_support_gb value = -5 tooltip = demo_var_change_grb }
+			add_to_variable = { var = reg_fasc_support_gb value = 5 tooltip = fasc_var_change_grb }
+			check_british_regs_values = yes 
+			calculate_british_map_frames = yes
+		}
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.1
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 2 
+				has_country_flag = AI_GRB_FASC_BASE_PATH
+			}
+		}
+	}
+}
+
+
+
+country_event = {
+	id = grb.17 
+	title = grb.17.t 
+	desc = grb.17.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.17.a 
+		
+		add_popularity = {
+			ideology = democratic 
+			popularity = 0.15 
+		}
+		
+		trigger = {
+			set_temp_variable = { demo_victory_chance = 0 }
+			add_to_temp_variable = { demo_victory_chance = 365.reg_demo_support_gb }
+			add_to_temp_variable = { demo_victory_chance = 363.reg_demo_support_gb }
+			add_to_temp_variable = { demo_victory_chance = 364.reg_demo_support_gb }
+			check_variable = { demo_victory_chance > 150 }
+		}
+		
+	}
+	
+	
+	option = {
+		name = grb.17.b 
+		
+		add_popularity = {
+			ideology = fascism 
+			popularity = 0.35 
+		}
+		set_politics = {
+			ruling_party = fascism 
+			elections_allowed = no 
+		}
+		
+		trigger = {
+			set_temp_variable = { fasc_victory_chance = 0 }
+			add_to_temp_variable = { fasc_victory_chance = 365.reg_fasc_support_gb }
+			add_to_temp_variable = { fasc_victory_chance = 363.reg_fasc_support_gb }
+			add_to_temp_variable = { fasc_victory_chance = 364.reg_fasc_support_gb }
+			check_variable = { fasc_victory_chance > 150 }
+		}
+		
+	}
+	
+	
+	option = {
+		name = grb.17.c
+		
+		add_popularity = {
+			ideology = communism 
+			popularity = 0.35 
+		}
+		set_politics = {
+			ruling_party = communism 
+			elections_allowed = no 
+		}
+		trigger = {
+			set_temp_variable = { comm_victory_chance = 0 }
+			add_to_temp_variable = { comm_victory_chance = 365.reg_comm_support_gb }
+			add_to_temp_variable = { comm_victory_chance = 363.reg_comm_support_gb }
+			add_to_temp_variable = { comm_victory_chance = 364.reg_comm_support_gb }
+			check_variable = { comm_victory_chance > 150 }
+		}
+		
+	}
+	
+}
+
+
+country_event = {	
+	id = grb.18 
+	
+	title = grb.18.t 
+	desc = grb.18.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.18.a 
+		effect_tooltip = {
+			complete_national_focus = GRB_who_rules_britannia
+		}
+		set_country_flag = neutrality_leading
+		set_politics = {
+			ruling_party = neutrality
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.32 
+	title = grb.32.t 
+	desc = grb.32.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.32.a 
+		effect_tooltip = {
+			complete_national_focus = GRB_who_rules_britannia
+		}
+		set_country_flag = queen_has_lost
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no 
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.5
+		}
+	}
+}
+
+
+
+country_event = {
+	id = grb.19 
+	title = grb.19.t 
+	desc = grb.19.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.19.a 
+		add_opinion_modifier = {
+			modifier = embassy_opened
+			target = FROM 
+		}
+		reverse_add_opinion_modifier = {
+			modifier = embassy_opened
+			target = FROM 
+		}
+	}
+}
+
+
+country_event = { 
+	id = grb.20
+	title = grb.20.t 
+	desc = grb.20.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.20.a 
+		add_political_power = 25
+	}
+}
+
+
+
+country_event = { 
+	id = grb.21
+	title = grb.21.t 
+	desc = grb.21.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.21.a 
+		
+		hidden_effect = {
+			HLR = { load_oob = "GRB_HLR_knights" }
+		}
+		custom_effect_tooltip = load_HLR_support_forces
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_2
+			amount = 5000
+			producer = GRB
+		}
+	
+	}
+}
+
+
+country_event = {
+	id = grb.22 
+	title = grb.22.t 
+	desc = grb.22.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		
+		name = generic.5.c
+		trigger = {
+			is_in_faction = no
+			AND = {
+				FROM = {
+					has_government = communism
+				}
+				has_government = communism
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		FROM = {
+			add_to_faction = ROOT
+			country_event = { id = generic.6 hours = 6 }
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 200
+		}
+	}
+}
+
+
+
+country_event = {
+	id = grb.23
+	title = grb.23.t 
+	desc = grb.23.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.23.a 
+		
+		declare_war_on = { target = PNG type = puppet_wargoal_focus }
+		set_state_controller = 266
+		hidden_effect = {
+			266 = {
+				
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes 
+						limit_to_naval_base = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = grb.23.b 
+		
+		trigger = {
+			is_debug = yes 
+			is_ai = no
+		}
+		
+		PNG = {
+			white_peace = GRB
+		}
+		set_autonomy = {
+			target = PNG
+			autonomy_state = autonomy_free
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.24
+	title = grb.24.t 
+	desc = grb.24.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.24.a 
+		
+		declare_war_on = { target = FBK type = puppet_wargoal_focus }
+		set_state_controller = 569
+		hidden_effect = {
+			every_other_country = {
+				diplomatic_relation = {
+					country = FBK 
+					relation = guarantee
+					active = no 
+				}
+			}
+		}
+		hidden_effect = {
+			569 = {
+				
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes 
+						limit_to_naval_base = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = grb.23.b 
+		
+		trigger = {
+			is_debug = yes 
+		}
+		
+		FBK = {
+			white_peace = GRB
+		}
+		set_autonomy = {
+			target = FBK
+			autonomy_state = autonomy_free
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.25
+	title = grb.25.t 
+	desc = grb.25.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.25.a 
+		
+		declare_war_on = { target = ZES type = puppet_wargoal_focus }
+		set_state_controller = 558
+		hidden_effect = {
+			every_other_country = {
+				diplomatic_relation = {
+					country = ZES 
+					relation = guarantee
+					active = no 
+				}
+			}
+		}
+		hidden_effect = {
+			558 = {
+			
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes 
+						limit_to_naval_base = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = grb.23.b 
+		
+		trigger = {
+			is_debug = yes 
+		}
+		
+		ZES = {
+			white_peace = GRB
+		}
+		set_autonomy = {
+			target = ZES
+			autonomy_state = autonomy_free
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.26
+	title = grb.26.t 
+	desc = grb.26.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.26.a 
+		FROM = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT 
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				surrender_progress > 0.5
+				factor = 0
+			}
+			modifier = {
+				alliance_strength_ratio > 2 
+				factor = 0
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { base = 1 }
+		name = grb.26.b 
+		effect_tooltip = {
+			ZES = {
+				transfer_state = 452
+				transfer_state = 621
+				transfer_state = 618 
+				transfer_state = 681
+				transfer_state = 580 
+				transfer_state = 627 
+				transfer_state = 629
+				transfer_state = 628 
+				transfer_state = 616 
+				
+			}
+		}
+		
+		FROM = {
+			country_event = { id = grb.27 days = 2 }
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.27
+	title = grb.27.t 
+	desc = grb.27.desc 
+	
+	is_triggered_only = yes 
+	
+	
+	
+	option = {
+		name = grb.27.a 
+
+		ZES = {
+			transfer_state = 452
+			transfer_state = 621
+			transfer_state = 618 
+			transfer_state = 681
+			transfer_state = 580 
+			transfer_state = 627 
+			transfer_state = 629
+			transfer_state = 628 
+			transfer_state = 616 
+			transfer_state = 617
+		}
+
+	}
+}
+
+
+country_event = {
+	id = grb.28
+	title = grb.28.t 
+	desc = grb.28.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.28.a 
+		EQS = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = armor
+				bonus = 1
+				uses = 1
+			}
+		}
+		add_research_slot = 1
+	}
+	option = {
+		name = grb.28.b 
+		GRI = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = armor
+				bonus = 1
+				uses = 1
+			}
+		}
+		add_research_slot = 1
+	}
+	option = {
+		name = grb.28.c 
+		RCT = {
+			add_tech_bonus = {
+				category = infantry_weapons
+				bonus = 1
+				uses = 1
+			}
+			add_tech_bonus = {
+				category = armor
+				bonus = 1
+				uses = 1
+			}
+		}
+		add_research_slot = 1
+	}
+}
+
+
+country_event = {
+	id = grb.29
+	desc = grb.29.desc 
+	title = grb.29.t 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.29.a 
+		custom_effect_tooltip = open_british_tc 
+		set_country_flag = british_tc_opened
+		ai_chance = {
+			base = 100
+			modifier = {
+				check_variable = { GRB.num_of_tcs_nopupp > 1 }
+				factor = 0
+			}
+		}
+		set_variable = { trade_decisions_opened = 1 }
+		add_to_variable = { FROM.num_of_tcs_nopupp = 1 }
+	}
+	
+	option = {
+		name = grb.29.b 
+		ai_chance = {
+			base = 1
+		}
+		set_country_flag = {
+			flag = grb_tc_refuse
+			days = 90
+			value = 1
+		}
+		FROM = {
+			country_event = { id = grb.30 days = 1 }
+		}
+	}
+}
+			
+country_event = {
+	id = grb.30
+	desc = grb.30.desc 
+	title = grb.30.t 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.30.a 
+	}
+}
+
+country_event = {
+	id = grb.31
+	desc = grb.31.desc 
+	title = grb.31.t 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.31.a 
+		trigger = {
+			NOT = {
+				has_tech = mobile_warfare
+			}
+		}
+		set_technology = { 
+			mobile_warfare = 1
+		}
+	}
+	option = {
+		name = grb.31.b 
+		trigger = {
+			NOT = {
+				has_tech = superior_firepower
+			}
+		}
+		set_technology = { 
+			superior_firepower = 1
+		}
+	}
+	option = {
+		name = grb.31.c
+		trigger = {
+			NOT = {
+				has_tech = mass_assault
+			}
+		}
+		set_technology = { 
+			mass_assault = 1
+		}
+	}
+	option = {
+		name = grb.31.d 
+		trigger = {
+			NOT = {
+				has_tech = trench_warfare
+			}
+		}
+		set_technology = { 
+			trench_warfare = 1 
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.33 
+	desc = grb.33.desc 
+	title = grb.33.t 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.33.a 
+		
+		promote_character = GRB_margaret_thatcher
+	}
+	
+	option = {
+		name = grb.33.b 
+		trigger = {
+			check_variable = { acceptance_value > 0.39 }
+		}
+		promote_character = GRB_herman_buecher
+	}
+}
+		
