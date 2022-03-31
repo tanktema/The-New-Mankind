@@ -399,11 +399,16 @@ country_event = {
 	id = af_uns.3 
 	title = af_uns.3.t 
 	desc = af_uns.3.desc 
-	
+	immediate = {
+		hidden_effect = {
+			sound_effect = "fabstodes"
+		}
+	}
 	is_triggered_only = yes 
 	
 	option = {
-		id = af_uns.3.a 
+		name = af_uns.3.a 
+		
 		country_event = { id = af_uns.32 }
 	}
 }
@@ -415,7 +420,7 @@ country_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		id = af_uns.32.a 
+		name = af_uns.32.a 
 		country_event = { id = af_uns.33 }
 	}
 }

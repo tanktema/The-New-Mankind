@@ -11,3 +11,10 @@ sound = {
 	volume = 1
 	always_load = yes
 }
+
+sound = {
+	name = "fabstodes"
+	file = "menu/fabstodes.wav"
+	volume = 1
+	always_load = yes
+}

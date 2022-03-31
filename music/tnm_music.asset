@@ -9,3 +9,9 @@ music = {
 	file = "statesoc_ost.ogg"
 	volume = 0.5
 }
+
+music = {
+	name = "Fabulous Custodes"
+	file = "fabstodeses.ogg"
+	volume = 0.3
+}

@@ -22,3 +22,7 @@ music = {
 		}
 	}
 }
+
+music = {
+	song = "Fabulous Custodes"
+}

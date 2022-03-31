@@ -15,3 +15,14 @@ soundeffect = {
 	volume = 3
 	fade_in = 0
 }
+
+
+
+soundeffect = {
+	name = "fabstodes"
+
+	sounds = {
+		sound = fabstodes
+	} 
+	volume = 0.5
+}
