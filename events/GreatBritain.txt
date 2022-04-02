@@ -232,8 +232,8 @@ country_event = {
 		name = grb.5.a 
 		if = {
 			limit = {
-				EQC = {
-					controls_state = 364
+				364 = {
+					is_owned_and_controlled_by = EQC 
 				}
 			}
 		}
@@ -251,13 +251,12 @@ country_event = {
 		name = grb.6.a 
 		if = {
 			limit = {
-				EQC = {
-					controls_state = 363
+				363 = {
+					is_owned_and_controlled_by = EQC 
 				}
 			}
 		}
 		transfer_state = 363
-
 	}
 }
 

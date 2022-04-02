@@ -97,14 +97,7 @@ focus_tree = {
 					id = 5005
 					name = "STATE_903"
 				}
-				hidden_effect = {
-					if = {
-						limit = {
-							has_global_flag = first_april_flag
-						}
-						country_event = { id = af_grb.1 }
-					}
-				}
+				
 					
 			}
 		}
@@ -537,6 +530,13 @@ focus_tree = {
 		available = {
 			has_completed_focus = GRB_regional_politics
 		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_completed_focus = GRB_people_boiling
+				}
+			}
+		}
 		bypass = {
 			OR = {
 				has_country_flag = neutrality_leading
@@ -558,6 +558,7 @@ focus_tree = {
 		id = GRB_regional_politics
 		x = 1
 		y = 1
+		
 		icon = GFX_goal_GRB_regional_politics
 		relative_position_id = GRB_expand_military_rights
 		prerequisite = { focus = GRB_expand_military_rights OR = GRB_military_limits }
@@ -598,6 +599,24 @@ focus_tree = {
 					country_event = { id = grb.32 days = 5 }
 				
 				}
+				if = {
+					limit = {
+						AND = {
+							
+							OR = {
+								check_variable = { 363.reg_comm_support_gb < 50 }
+								check_variable = { 364.reg_comm_support_gb < 50 }
+								check_variable = { 365.reg_comm_support_gb < 50 }
+							}
+							has_country_flag = player_communists_choose
+						}
+					}
+					set_country_flag = GRB_AF_FLAG
+					mark_focus_tree_layout_dirty = yes 
+					complete_national_focus = GRB_people_boiling
+					
+				
+				}
 			}
 		}
 	}
@@ -606,6 +625,13 @@ focus_tree = {
 		id = GRB_what_is_next
 		x = 2
 		y = 1
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_completed_focus = GRB_people_boiling
+				}
+			}
+		}
 		icon = GFX_goal_GRB_what_next
 		relative_position_id = GRB_who_rules_britannia 
 		prerequisite = { focus = GRB_who_rules_britannia }

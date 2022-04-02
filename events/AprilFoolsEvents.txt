@@ -809,3 +809,26 @@ country_event = {
 		name = tnm_esc84_collab.2.c 
 	}
 }
+
+country_event = {
+	id = tnm_esc84_collab.3
+	title = tnm_esc84_collab.3.t
+	desc = tnm_esc84_collab.3.desc 
+	
+	is_triggered_only = yes 
+	option = {
+		name = tnm_esc84_collab.3.a 
+		UEN = { change_tag_from = ROOT }
+	}
+	option = {
+		name = tnm_esc84_collab.3.b 
+		RUS = { change_tag_from = ROOT }
+	}
+	option = {
+		name = tnm_esc84_collab.3.c 
+		UAS = { change_tag_from = ROOT }
+	}
+	option = {
+		name = tnm_esc84_collab.3.d
+	}
+}

@@ -641,7 +641,7 @@ characters={
 	}
 	
 	SOU_suvorov = {
-		name = SOU_suvorov
+		name = SOU_suvorov_a
 		portraits = {
 			army = {
 				small = "GFX_idea_SOU_suvorov"

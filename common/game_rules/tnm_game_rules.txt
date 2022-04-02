@@ -199,3 +199,23 @@ UNS_ai_behavior = {
 		allow_achievements = yes
 	}
 }
+
+TNM_ESC_april_fool = {
+	name = "TNM_ESC_APRIL_FOOL_STATUS"
+	group = "RULE_GROUP_GAME_SETUP"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_TNM_ESC_DESC"
+	}
+	option = {
+		name = TNM_ESC_FOOL
+		text = "RULE_OPTION_TNM_ESC"
+		desc = "RULE_OPTION_TNM_ESC_DESC"
+	}
+	option = {
+		name = TNM_ESC_countries
+		text = "RULE_OPTION_TNM_ESC_countries"
+		desc = "RULE_OPTION_TNM_ESC_countries_DESC"
+	}
+}

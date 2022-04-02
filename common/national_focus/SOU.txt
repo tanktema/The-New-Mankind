@@ -95,8 +95,11 @@ focus_tree = {
 				}
 				if = {
 					limit = {	
-						NOT = {
-							has_global_flag = tnm_countries_appeared
+						AND = {
+							NOT = {
+								has_global_flag = tnm_countries_appeared
+							}
+							has_global_flag = TNM_ESC_aprilfools_flag
 						}
 					}
 					country_event = {

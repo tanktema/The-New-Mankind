@@ -93,7 +93,12 @@ focus_tree = {
 					id = 12305
 					name = "STATE_902"
 				}
-				country_event = { id = af_gem.1 }
+				if = {
+					limit = {
+						has_global_flag = TNM_ESC_aprilfools_flag
+					}
+					country_event = { id = af_gem.1 }
+				}
 			}
 		}
 	}
@@ -3400,9 +3405,7 @@ focus_tree = {
 			always = no 
 		}
 		allow_branch = {
-			NOT = {
-				has_completed_focus = GEM_opposition_question
-			}
+			has_global_flag = TNM_ESC_aprilfools_flag
 		}
 		cost = 0
 		completion_reward = {

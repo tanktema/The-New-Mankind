@@ -1,8 +1,52 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			SOL = {
-				set_global_flag = first_april_flag
+			every_country = {
+				limit = {
+					is_ai = no 
+				} 
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = TNM_ESC_april_fool
+							option = TNM_ESC_FOOL
+						}
+					
+					}
+					set_global_flag = TNM_ESC_aprilfools_flag
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = TNM_ESC_april_fool
+							option = TNM_ESC_countries
+						}
+						
+					}
+					108 = {
+							transfer_state_to = UEN
+							add_core_of = UEN
+						}
+						216 = {
+							transfer_state_to = RUS
+							add_core_of = RUS
+						}
+						217 = {
+							transfer_state_to = RUS 
+							add_core_of = RUS
+						}
+						363 = {
+							transfer_state_to = UAS 
+							remove_core_of = GRB 
+							add_core_of = UAS
+						}
+						every_country = {
+							limit = {
+								is_ai = no 
+							}
+							country_event = { id = tnm_esc84_collab.3 }
+						}
+				}
 			}
 			every_country = {
 				if = {

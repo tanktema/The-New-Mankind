@@ -95,8 +95,14 @@ focus_tree = {
 				id = uns.8
 			}
 			hidden_effect = {
-				country_event = {
-					id = af_uns.1 days = 1
+				if = {
+					limit = {
+						has_global_flag = TNM_ESC_aprilfools_flag
+					}
+				
+					country_event = {
+						id = af_uns.1 days = 1
+					}
 				}
 			}
 			add_ideas = UNS_equestria_depence
