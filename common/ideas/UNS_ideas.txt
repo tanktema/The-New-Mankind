@@ -862,7 +862,7 @@ ideas = {
 			modifier = {
 				special_forces_cap = 0.15
 				special_forces_min = 12
-				extra_paratrooper_supply_grace = 0.15
+				extra_paratrooper_supply_grace = 24
 				paratrooper_count_per_plane = 0.2
 				paratrooper_aa_defense = 0.1
 			}
@@ -886,7 +886,7 @@ ideas = {
 				special_forces_cap = 0.15
 				special_forces_min = 12
 				invasion_preparation = -0.25
-				extra_marine_supply_grace = 0.15
+				extra_marine_supply_grace = 24
 			}
 		}
 				

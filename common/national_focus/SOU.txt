@@ -3044,7 +3044,10 @@ focus_tree = {
 		prerequisite = { focus = SOU_eqs_training }
 		prerequisite = { focus = SOU_strength_borders }
 		bypass = {
-			has_war_with = CHN 
+			OR = {
+				has_war_with = CHN 
+				has_country_flag = GEM_SOU_GRB_pact_flag
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -3881,12 +3884,14 @@ focus_tree = {
 					}
 					priority = 2
 				}
+				capital_scope = {
 				
-				create_unit = {
-					division = "name = \"Vozdushno-Desantnye Voiska\" division_template = \"Vozdushno-Desantnye Voiska\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = ROOT
+					create_unit = {
+						division = "name = \"Vozdushno-Desantnye Voiska\" division_template = \"Vozdushno-Desantnye Voiska\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = ROOT
+					}
+					
 				}
-				
 			}
 		}
 	}

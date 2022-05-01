@@ -916,7 +916,33 @@ on_actions = {
 					}
 				}
 			}
-						
+			if = {
+				limit = {
+					ROOT = {
+						AND = {
+							original_tag = GEM
+							has_completed_focus = GEM_stalliongradian_problem
+							has_country_flag = GEM_choose_to_give_stg_to_eqs
+						}
+					}
+					FROM = {
+						original_tag = STG 
+					}
+				}
+				FROM = {
+					every_core_state = {
+						limit = {
+							OR = {
+								is_owned_by = ROOT 
+								is_owned_by = FROM 
+							}
+						}
+						add_core_of = EQS 
+						transfer_state_to = EQS 
+					}
+				}
+			}
+			
 		}
 	}
 	

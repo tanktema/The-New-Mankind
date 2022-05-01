@@ -1590,7 +1590,7 @@ focus_tree = {
 					id = GRB 
 					value = 500
 				}
-				country_event = { id = generic.5 days = 2}
+				country_event = { id = generic.5 days = 2 }
 			}
 		}
 	}
@@ -2811,20 +2811,57 @@ focus_tree = {
 				add_state_claim = 265
 				add_state_claim = 280
 			}
-			create_wargoal = {
-				type = puppet_wargoal_focus
-				target = PLB 
-			}
+			
 			if = {
 				limit = {
 					PLB = {
 						is_subject = yes 
 					}
 				}
+				if = {
+					limit = {
+						PLB = { 
+							is_subject_of = GEM 
+						}
+						GEM = {
+							has_government = neutrality
+						}
+					}
+					every_state = {
+						limit =	 {
+							OR = {
+								state = 290
+								state = 289
+								state = 272
+								state = 265
+								state = 280
+							}
+						}
+						transfer_state_to = PNG 
+					}
+				}
+				if = {
+					limit = {
+						PLB = { 
+							NOT = { is_subject_of = GEM }
+						}						
+					}
+					create_wargoal = {
+						type = puppet_wargoal_focus
+						target = PLB.Overlord 
+					}
+				}
 				
+			}
+			if = {
+				limit = {
+					PLB = {
+						is_subject = no 
+					}
+				}
 				create_wargoal = {
 					type = puppet_wargoal_focus
-					target = PLB.Overlord 
+					target = PLB
 				}
 			}
 

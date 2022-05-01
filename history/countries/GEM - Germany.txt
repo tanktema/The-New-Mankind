@@ -163,6 +163,7 @@ add_manpower = 60000
 
 recruit_character = GEM_willy_brandt
 recruit_character = GEM_walter_ulbricht
+recruit_character = GEM_lui_ferdinand
 recruit_character = GEM_military_council
 recruit_character = GEM_paul_hausser
 recruit_character = GEM_henning_fon_treskov

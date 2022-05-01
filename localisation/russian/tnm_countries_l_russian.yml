@@ -155,3 +155,77 @@
     UNS_IMPERIUM_fascism:0 "Империум Человечества"
     UNS_IMPERIUM_fascism_ADJ:0 "Имперск." 
     UNS_IMPERIUM_fascism_DEF:0 "Империум Человечества"
+    
+    
+    GEM_NEWORDER_fascism:0 "Великогерманский Рейх"
+    GEM_NEWORDER_fascism_ADJ:0 "Великогерманск"
+    GEM_NEWORDER_fascism_DEF:0 "Третий Рейх"
+    GEM_NEWORDER_democratic:0 "Германская Демократическая Республика"
+    GEM_NEWORDER_democratic_ADJ:0 "Германск"
+    GEM_NEWORDER_democratic_DEF:0 "ГДР"
+    
+    SOU_NEWORDER_fascism:0 "Рейхскомиссариат Мидденланд"
+    SOU_NEWORDER_fascism_ADJ:0 "Мидденландск"
+    SOU_NEWORDER_fascism_DEF:0 "Мидденланд"
+    SOU_NEWORDER_democratic:0 "Российская Федерация"
+    SOU_NEWORDER_democratic_ADJ:0 "Российск"
+    SOU_NEWORDER_democratic_DEF:0 "Российская Федерация"
+    
+    GRF_NEWORDER_fascism:0 "Рейхскомиссариат Нордланд"
+    GRF_NEWORDER_fascism_ADJ:0 "Нордландск"
+    GRF_NEWORDER_fascism_DEF:0 "Нордланд"
+    GRF_NEWORDER_democratic:0 "Новая Грифонья Республика"
+    GRF_NEWORDER_democratic_ADJ:0 "Грифонск"
+    GRF_NEWORDER_democratic_DEF:0 "Новая Республика"
+    
+    UNS_NEWORDER_fascism:0 "Рейхскомиссариат Мондланд"
+    UNS_NEWORDER_fascism_ADJ:0 "Мондландск"
+    UNS_NEWORDER_fascism_DEF:0 "Мондланд"
+    UNS_NEWORDER_democratic:0 "Соединенные Штаты Америки"
+    UNS_NEWORDER_democratic_ADJ:0 "Американск"
+    UNS_NEWORDER_democratic_DEF:0 "США"
+    
+    CHN_NEWORDER_fascism:0 "Рейхскомиссариат Вехсельбалгланд"
+    CHN_NEWORDER_fascism_ADJ:0 "Вехсельбалгландск"
+    CHN_NEWORDER_fascism_DEF:0 "Вехсельбалгланд"
+    CHN_NEWORDER_democratic:0 "Свободные Ульи Чейнджлингов"
+    CHN_NEWORDER_democratic_ADJ:0 "Чейнджлингск"
+    CHN_NEWORDER_democratic_DEF:0 "Свободные Ульи"
+    
+    OLE_NEWORDER_fascism:0 "Рейхскомиссариат Рехланд"
+    OLE_NEWORDER_fascism_ADJ:0 "Рехландск"
+    OLE_NEWORDER_fascism_DEF:0 "Рехланд"
+    OLE_NEWORDER_democratic:0 "Королевство Оления"
+    OLE_NEWORDER_democratic_ADJ:0 "Оленийск"
+    OLE_NEWORDER_democratic_DEF:0 "Оления"
+    
+    EQS_NEWORDER_fascism:0 "Рейхскомиссариат Зоннланд"
+    EQS_NEWORDER_fascism_ADJ:0 "Зоннландск"
+    EQS_NEWORDER_fascism_DEF:0 "Зоннланд"
+    EQS_NEWORDER_democratic:0 "Эквестрия"
+    EQS_NEWORDER_democratic_ADJ:0 "Эквестрийск"
+    EQS_NEWORDER_democratic_DEF:0 "Эквестрия"
+    
+    SCS_NEWORDER_fascism:0 "Рейхскомиссариат Зюйдланд"
+    SCS_NEWORDER_fascism_ADJ:0 "Зюйдландск"
+    SCS_NEWORDER_fascism_DEF:0 "Зюйдланд"
+    SCS_NEWORDER_democratic:0 "Южная Республика"
+    SCS_NEWORDER_democratic_ADJ:0 "Республиканск"
+    SCS_NEWORDER_democratic_DEF:0 "Южная Республика"
+    
+    GRB_NEWORDER_fascism:0 "Рейхскомиссариат Меерланд"
+    GRB_NEWORDER_fascism_ADJ:0 "Меерландск"
+    GRB_NEWORDER_fascism_DEF:0 "Меерланд"
+    GRB_NEWORDER_democratic:0 "Великобритания"
+    GRB_NEWORDER_democratic_ADJ:0 "Британск"
+    GRB_NEWORDER_democratic_DEF:0 "Великобритания"
+  
+    LSC_NEWORDER_democratic:0 "Цитадель Хеллквилл-Лонгсворд"
+    LSC_NEWORDER_democratic_ADJ:0 "Лонгсвордск"
+    LSC_NEWORDER_democratic_DEF:0 "Цитадель"
+    
+    HLQ_NEWORDER_democratic:0 "Пустошь"
+    HLQ_NEWORDER_democratic_ADJ:0 "Пустошь"
+    HLQ_NEWORDER_democratic_DEF:0 "Пустошь"
+    
+    

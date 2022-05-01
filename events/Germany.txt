@@ -1,4 +1,5 @@
 add_namespace = gem
+add_namespace = gem_neworder
 
 country_event = {
 	id = gem.1
@@ -414,6 +415,7 @@ country_event = {
 		FROM = {
 			country_event = { id = gem.16 }
 		}
+		add_political_power = 25
 	}
 	option = {
 		name = gem.15.b 
@@ -429,8 +431,9 @@ country_event = {
 		name = gem.16.a 
 		add_popularity = {
 			ideology = democratic
-			popularity = 0.2
+			popularity = 0.1
 		}
+		add_political_power = 25
 	}
 }
 country_event = {
@@ -842,4 +845,281 @@ country_event = {
 		}
 		add_ideas = GEM_researching_STG
 	}
+}
+
+country_event = { 
+	id = gem.32 
+	title = gem.32.t 
+	desc = gem.32.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.32.a 
+		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
+		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl  }
+		country_event = { id = gem.33 days = 15 }
+	}
+	option = {
+		name = gem.32.b  
+		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
+		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl  }
+		country_event = { id = gem.33 days = 15 }
+	}
+}
+country_event = { 
+	id = gem.33 
+	title = gem.33.t 
+	desc = gem.33.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.33.a 
+		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
+		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
+		country_event = { id = gem.34 days = 15 }
+	}
+	option = {
+		name = gem.33.b  
+		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
+		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl }
+		country_event = { id = gem.34 days = 15 }
+	}
+}
+country_event = { 
+	id = gem.34 
+	title = gem.34.t 
+	desc = gem.34.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.34.a 
+		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
+		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
+		country_event = { id = gem.35 days = 15 }
+	}
+	option = {
+		name = gem.34.b  
+		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
+		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl }
+		country_event = { id = gem.35 days = 15 }
+	}
+}
+country_event = { 
+	id = gem.35 
+	title = gem.35.t 
+	desc = gem.35.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.35.a 
+		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
+		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
+		country_event = { id = gem.36 days = 10 }
+	}
+	option = {
+		name = gem.35.b
+		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
+		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl }
+		country_event = { id = gem.36 days = 10 }
+	}
+}
+
+country_event = { 
+	id = gem.36 
+	title = gem.36.t 
+	desc = gem.36.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.36.a 
+		complete_national_focus = GEM_left_opposition
+		trigger = {
+			check_variable = { dem_victory_chance > 2 }
+		}
+	}
+	option = {
+		name = gem.36.b 
+		complete_national_focus = GEM_revenge_1933
+		trigger = {
+			check_variable = { comm_victory_chance > 2 }
+		}
+	}
+	option = {
+		name = gem.36.c 
+		complete_national_focus = GEM_nsdap_consolidation
+		trigger = {
+			check_variable = { fasc_victory_chance > 2 }
+		}
+	}
+	option = {
+		name = gem.36.d
+		complete_national_focus = GEM_old_orders
+		trigger = {
+			check_variable = { neu_victory_chance > 2 }
+		}
+	}
+}
+
+
+country_event = {
+	id = gem.37
+	title = gem.37.t 
+	desc = gem.37.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.37.a 
+		army_experience = 10
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = gem.38
+	title = gem.38.t 
+	desc = gem.38.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = gem.38.a 
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = STG 
+		}
+	}
+	
+	option = {
+		name = gem.38.b 
+		create_wargoal = {
+			type = annex_everything
+			target = STG 
+		}
+		custom_effect_tooltip = gem_give_back_to_eqs_all
+	}
+	
+	option = {
+		name = gem.38.c 
+		create_wargoal = {
+			type = topple_government
+			target = STG 
+		}
+	}
+}
+
+country_event = {
+	id = gem.39
+	title = gem.39.t
+	desc = gem.39.desc 
+	immediate = {
+		hidden_effect = {
+			add_stability = -0.1
+			add_war_support = -0.1
+			add_political_power = -25
+			add_manpower = -154
+		}
+	}
+	is_triggered_only = yes 
+	option = {
+		name = gem.39.a 
+		set_country_flag = GEM_communism_way_revenge
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = GEM_search_for_blamed
+	}
+	option = {
+		name = gem.39.b 
+		set_country_flag = GEM_communism_way_revenge
+		mark_focus_tree_layout_dirty = yes
+		complete_national_focus = GEM_not_again_work
+	}
+}
+
+country_event = {
+	id = gem.40
+	title = gem.40.t 
+	desc = gem.40.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.40.a 
+		FROM = { country_event = { id = gem.41 } }
+	}
+	option = {
+		name = gem.40.b 
+		FROM = { country_event = { id = gem.42 } }
+	}
+}
+
+country_event = {
+	id = gem.41
+	title = gem.41.t 
+	desc = gem.41.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.41.a 
+		add_to_faction = FROM 
+		
+	}
+	
+}
+
+
+country_event = {
+	id = gem.42
+	title = gem.42.t 
+	desc = gem.42.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.42.a 
+		
+	}
+}
+
+
+country_event = {
+	id = gem.43
+	title = gem.43.t 
+	desc = gem.43.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem.43.a 
+		add_stability = 0.1
+		add_opinion_modifier = {
+			modifier = besties
+			target = EQS 
+		}
+		reverse_add_opinion_modifier = {
+			modifier = besties
+			target = EQS 
+		}
+	}
+}
+
+
+country_event = {
+	id = gem_neworder.1
+	title = gem_neworder.1.t 
+	desc = gem_neworder.1.desc 
+	is_triggered_only = yes 
+	option = {
+		name = gem_neworder.1.a 
+		white_peace = GRI
+		every_other_country = {
+			limit = { is_in_faction_with = ROOT }
+			white_peace = GRI 
+		}
+	}
+	option = {
+		name = gem_neworder.1.b 
+		hidden_effect = {
+			add_ideas = GEM_FALSE_GRI_SASAITI
+		}
+		custom_effect_tooltip = hard_war_awaits_tooltip
+	}
+	
 }

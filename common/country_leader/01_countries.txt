@@ -212,7 +212,10 @@ leader_traits = {
 		}
 		electrical_concern_sou = {
 			random = no
-			research_speed_factor = 0.05
+			research_speed_factor = 0.1
+			decryption_power_factor = 0.07
+			intelligence_agency_defense = 0.05
+			propaganda_mission_factor = 0.1
 		}
 		comissar_of_kgb = {
 			random = no 
