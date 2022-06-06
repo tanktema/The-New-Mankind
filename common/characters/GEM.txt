@@ -892,4 +892,24 @@ characters={
 		}
 		
 	}
+	
+	GEM_erich_von_shteinmann = {
+		name = GEM_erich_von_shteinmann
+		portraits = {
+		
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_erich_von_shteinmann
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				outer_politics_minister
+			}
+		}
+	}
 }

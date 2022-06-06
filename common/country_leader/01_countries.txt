@@ -573,3 +573,11 @@ leader_traits = {
 		nuclear_production = yes
 		custom_modifier_tooltip = get_5_fact_monthly
 	}
+	
+	outer_politics_minister = {
+		random = no 
+		stability_factor = 0.05
+		political_power_gain = 0.05
+		drift_defence_factor = 0.1
+		opinion_gain_monthly_factor = 0.1
+	}

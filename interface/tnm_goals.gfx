@@ -3440,4 +3440,8 @@ spriteTypes = {
 		name = "GFX_goal_GRB_navalacc" 
 		texturefile = "gfx/interface/goals/new_way.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_GEM_speak_mosley" 
+		texturefile = "gfx/interface/goals/GEM_speak_mosley.dds"
+	}
 	

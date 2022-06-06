@@ -638,14 +638,14 @@ UNS = {
 }
 SOU = {
 	color = rgb { 93 25 0 }
-	color_ui = rgb ( 75 25 0 }
+	color_ui = rgb { 75 25 0 }
 }
 GRB = {
 	color = rgb { 41 102 53 }
-	color_ui = rgb ( 60 120 56 }
+	color_ui = rgb { 60 120 56 }
 }
 
 GEM = {
 	color = rgb { 85 85 85 }
-	color_ui = rgb ( 95 95 95 }
+	color_ui = rgb { 95 95 95 }
 }

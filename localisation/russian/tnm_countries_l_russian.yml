@@ -213,6 +213,27 @@
     SCS_NEWORDER_democratic_ADJ:0 "Республиканск"
     SCS_NEWORDER_democratic_DEF:0 "Южная Республика"
     
+    CRY_NEWORDER_fascism:0 "Рейхскомиссариат Кристалланде"
+    CRY_NEWORDER_fascism_ADJ:0 "Кристалландск"
+    CRY_NEWORDER_fascism_DEF:0 "Кристалланде"
+    CRY_NEWORDER_democratic:0 "Республика Кристальных Пони"
+    CRY_NEWORDER_democratic_ADJ:0 "Республиканск"
+    CRY_NEWORDER_democratic_DEF:0 "Республика Кристальных Пони"
+    
+    YAK_NEWORDER_fascism:0 "Рейхскомиссариат Якланден"
+    YAK_NEWORDER_fascism_ADJ:0 "Якланденск"
+    YAK_NEWORDER_fascism_DEF:0 "Якланден"
+    YAK_NEWORDER_democratic:0 "Кланы Яков и Йаков"
+    YAK_NEWORDER_democratic_ADJ:0 "Кланск"
+    YAK_NEWORDER_democratic_DEF:0 "Кланы Яков и Йаков"
+    
+    PLB_NEWORDER_fascism:0 "Рейхскомиссариат Озеанланд"
+    PLB_NEWORDER_fascism_ADJ:0 "Озеанландск"
+    PLB_NEWORDER_fascism_DEF:0 "Озеанланд"
+    PLB_NEWORDER_democratic:0 "Медвежье-Пингвинья Конфедерация"
+    PLB_NEWORDER_democratic_ADJ:0 "Конфедератск"
+    PLB_NEWORDER_democratic_DEF:0 "Медвежье-Пингвинья Конфедерация"
+    
     GRB_NEWORDER_fascism:0 "Рейхскомиссариат Меерланд"
     GRB_NEWORDER_fascism_ADJ:0 "Меерландск"
     GRB_NEWORDER_fascism_DEF:0 "Меерланд"

@@ -188,11 +188,14 @@ recruit_character = GEM_weber
 recruit_character = GEM_kurt_shtudent
 recruit_character = GEM_karl_doenitz
 recruit_character = GEM_radiant_croup
+recruit_character = GEM_arianna
+recruit_character = GEM_aliz_neumann
 recruit_character = GEM_shternell
 recruit_character = GEM_engelberger
 recruit_character = GEM_schoff
 recruit_character = GEM_hengstler
 recruit_character = GEM_adolf_hitler
+recruit_character = GEM_erich_von_shteinmann
 
 
 if = {
@@ -311,3 +314,477 @@ create_equipment_variant = {
 	}
 }
 
+1018.1.1 = {
+	set_technology = {
+		atomic_research = 1
+		human_race = 1
+		infantry_weapons1 = 1
+		melee_weapons = 1
+		melee_weapons1 = 1
+		pre_gw_artillery = 1
+		tech_support = 1
+		transport = 1
+		infantry_weapons = 1
+		motorised_infantry = 1
+		tech_engineers = 1
+		tech_recon = 1
+		tech_military_police = 1
+		tech_maintenance_company = 1
+		tech_field_hospital = 1
+		tech_logistics_company = 1
+		tech_signal_company = 1
+		tech_mountaineers = 1
+		marines = 1
+		paratroopers = 1
+		tech_engineers2 = 1
+		tech_engineers3 = 1
+		tech_recon2 = 1
+		tech_recon3 = 1
+		tech_military_police2 = 1
+		tech_military_police3 = 1
+		tech_maintenance_company2 = 1
+		tech_maintenance_company3 = 1
+		tech_field_hospital2 = 1
+		tech_field_hospital3 = 1
+		tech_logistics_company2 = 1
+		tech_logistics_company3 = 1
+		tech_signal_company2 = 1
+		tech_signal_company3 = 1
+		transport_helicopter1 = 1
+		transport_helicopter2 = 1
+		attack_helicopter1 = 1
+		
+		gem_thermal_cannons = 1
+		gem_mg15_tech = 1
+		gem_laser_ai_gun = 1
+		gem_gas_grenades = 1
+		gem_rockets_module_tech = 1
+		gem_flamethrower_corps_tech = 1
+		gem_jaegers_unit_tech = 1
+		gem_executors_tech_1 = 1
+		gem_executors_tech_2 = 1
+		human_snipers_corps = 1
+		snipers_optics = 1
+		sniper_laser_designators = 1
+		snipers_double = 1
+		night_vision_scopes_tnm = 1
+		sniper_targeting_systems = 1
+		shortrange_radio = 1
+		production_requalification = 1
+		tnm_metallurgy = 1
+		cyphers_restart = 1
+		oil_production_refinery = 1
+		binary_code = 1
+		total_equipment_upgrade = 1
+		upgraded_vests = 1
+		heavy_inf_armor = 1
+		crystal_batteries = 1
+		microradio_headset = 1
+		magical_sights = 1
+		
+		
+		electronic_mechanical_engineering  = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		improved_decimetric_radar = 1
+		centimetric_radar = 1
+		improved_centimetric_radar = 1
+		computing_machine = 1
+		improved_computing_machine = 1
+		advanced_computing_machine = 1
+		basic_encryption = 1
+		improved_encryption = 1
+		advanced_encryption = 1
+		basic_decryption = 1
+		improved_decryption = 1
+		advanced_decryption = 1
+		basic_fire_control_system = 1
+		improved_fire_control_system = 1
+		advanced_fire_control_system = 1
+		experimental_rockets = 1
+		rocket_engines = 1
+		jet_engines = 1
+		experimental_helicopter = 1
+		nuclear_reactor = 1
+		nukes = 1
+		basic_encryption_lar = 1
+		improved_encryption_lar = 1
+		advanced_encryption_lar = 1
+		basic_decryption_lar = 1
+		improved_decryption_lar = 1
+		advanced_decryption_lar = 1
+		mechanical_computing = 1
+		mechanised_infantry = 1
+		amphibious_mechanized_infantry = 1
+		infantry_weapons2 = 1
+		improved_infantry_weapons = 1
+		improved_infantry_weapons_2 = 1
+		magical_weapons = 1
+		magical_weapons1 = 1
+		magical_weapons2 = 1
+		infantry_at = 1
+		infantry_at2 = 1
+		advanced_infantry_weapons = 1
+		advanced_infantry_weapons2 = 1
+		paratroopers2 = 1
+		paratroopers3 = 1
+		marines2 = 1
+		marines3 = 1
+		tech_mountaineers2 = 1
+		tech_mountaineers3 = 1
+		tech_special_forces = 1
+		advanced_special_forces = 1
+		extreme_environment_training = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		early_fighter = 1
+		CAS1 = 1
+		fighter1 = 1
+		naval_bomber1 = 1
+		cv_fighter_equipment_0 = 1
+		fighter2 = 1
+		cv_fighter1 = 1
+		fighter2 = 1
+		cv_fighter2 = 1
+		fighter3 = 1
+		cv_fighter3 = 1
+		cv_CAS1 = 1
+		CAS2 = 1
+		cv_CAS2 = 1
+		CAS3 = 1
+		cv_CAS3 = 1
+		cv_naval_bomber1 = 1
+		naval_bomber2 = 1
+		cv_naval_bomber2 = 1
+		naval_bomber3 = 1
+		cv_naval_bomber3 = 1
+		
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		assembly_line_production = 1
+		flexible_line = 1
+		improved_equipment_conversion = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		dispersed_industry4 = 1
+		fuel_silos = 1
+		fuel_refining = 1
+		fuel_refining2 = 1
+		fuel_refining3 = 1
+		fuel_refining4 = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		advanced_oil_processing = 1
+		rubber_processing = 1
+		improved_rubber_processing = 1
+		advanced_rubber_processing = 1
+		construction1 = 1
+		excavation1 = 1
+		construction2 = 1
+		excavation2 = 1
+		construction3 = 1
+		excavation3 = 1
+		construction4 = 1
+		excavation4 = 1
+		construction5 = 1
+		excavation5 = 1
+		
+		early_bomber = 1
+		tactical_bomber1 = 1
+		heavy_fighter1 = 1
+		heavy_fighter2 = 1
+		scout_plane1 = 1
+		scout_plane2 = 1
+		tactical_bomber2 = 1
+		strategic_bomber1 = 1
+		strategic_bomber2 = 1
+		
+		artillery1 = 1
+		antiair2 = 1
+		antiair1 = 1
+		antitank1 = 1
+		antitank2 = 1
+		gw_artillery = 1
+		interwar_artillery = 1
+		interwar_antiair = 1
+		antiair1 = 1
+		artillery2 = 1
+		artillery3 = 1
+		artillery4 = 1
+		mountain_gun = 1
+		rocket_artillery = 1
+		antiair3 = 1
+		antiair4 = 1
+		antitank3 = 1
+		antitank4 = 1
+		interwar_antitank = 1
+		basic_train = 1
+		mobile_warfare = 1
+		delay = 1
+		elastic_defence = 1
+		armored_spearhead = 1
+		schwerpunk = 1
+		blitzkrieg = 1
+		superior_firepower = 1
+		sup_delay = 1
+		mobile_defence = 1
+		intergrated_support = 1
+		regimental_combat_teams = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		subsidiary_carrier_role = 1
+		hunter_killer_groups = 1
+		air_superiority = 1
+		infrastructure_destruction = 1
+		home_defence = 1
+		naval_strike_tactics = 1
+	}
+	if = {
+		limit = {
+			has_dlc = "No Step Back"
+		}
+		set_technology = {
+			gwtank_chassis = 1
+			basic_light_tank_chassis = 1
+			improved_light_tank_chassis = 1
+			amphibious_tank_chassis = 1
+			amphibious_drive = 1
+			advanced_light_tank_chassis = 1
+			basic_medium_tank_chassis = 1
+			improved_medium_tank_chassis = 1
+			basic_heavy_tank_chassis = 1
+			improved_heavy_tank_chassis = 1
+			super_heavy_tank_chassis = 1
+			armor_tech_1 = 1
+			armor_tech_2 = 1
+			engine_tech_1 = 1
+			engine_tech_2 = 1
+			basic_train = 1
+			semi_modern_light_tank_chassis = 1
+			advanced_medium_tank_chassis = 1
+			advanced_heavy_tank_chassis = 1
+			super_heavy_tank_chassis = 1
+			armor_tech_3 = 1
+			engine_tech_3 = 1
+			
+		}
+	}
+
+
+	if = {
+		limit = {
+			NOT = { 
+				has_dlc = "No Step Back"
+			}
+		}
+		set_technology = {
+			improved_light_tank = 1
+			basic_heavy_tank = 1
+			basic_medium_tank = 1
+			gwtank = 1
+			basic_light_tank = 1
+			basic_light_td = 1
+			basic_light_art = 1
+			basic_light_spaa = 1
+			advanced_light_tank = 1
+			improved_medium_tank = 1
+			advanced_medium_tank = 1
+			improved_heavy_tank = 1
+			advanced_heavy_tank = 1
+			super_heavy_tank = 1
+		}
+	}
+	
+	set_cosmetic_tag = GEM_NEWORDER
+	promote_character = GEM_goebbels_min
+	
+	complete_national_focus = GEM_evac_focus
+	complete_national_focus = GEM_exploration
+	complete_national_focus = GEM_contact
+	complete_national_focus = GEM_opponents_discred
+	complete_national_focus = GEM_arrest_brandt
+	complete_national_focus = GEM_remember_1933
+	complete_national_focus = GEM_payback_time
+	complete_national_focus = GEM_anticommie_provocation
+	complete_national_focus = GEM_triumph_nsdap
+	complete_national_focus = GEM_end_the_opposition
+	complete_national_focus = GEM_extremal_condition
+	complete_national_focus = GEM_a_little_freedom
+	complete_national_focus = GEM_save_ss_position
+	complete_national_focus = GEM_only_ethnos_cleans
+	complete_national_focus = GEM_native_officers
+	complete_national_focus = GEM_workcamps
+	complete_national_focus = GEM_allies_with_changelings
+	complete_national_focus = GEM_buy_lands_from_changelings
+	complete_national_focus = GEM_cojoined_trainings
+	complete_national_focus = GEM_chn_techtrade
+	complete_national_focus = GEM_show_your_best_side
+	complete_national_focus = GEM_sell_our_tanks_bps
+	complete_national_focus = GEM_connect_with_changeling_officers
+	complete_national_focus = GEM_prepare_for_great_war
+	complete_national_focus = GEM_join_into_war
+	complete_national_focus = GEM_show_kapitoly
+	complete_national_focus = GEM_victory_parade_in_kremlin
+	complete_national_focus = GEM_dialogue_with_americans
+	complete_national_focus = GEM_dialogue_with_russians
+	complete_national_focus = GEM_end_what_is_started
+	complete_national_focus = GEM_invade_empire
+	complete_national_focus = GEM_pax_germannica
+	complete_national_focus = GEM_country_rebuild
+	complete_national_focus = GEM_end_offworking
+	complete_national_focus = GEM_building_civfacts
+	complete_national_focus = GEM_building_milfacts
+	complete_national_focus = GEM_resource_searching_focus
+	complete_national_focus = GEM_new_building_techs
+	complete_national_focus = GEM_total_electrifics
+	complete_national_focus = GEM_dispersion_focus
+	complete_national_focus = GEM_nuclear_industry
+	complete_national_focus = GEM_expand_infrastr_paths
+	complete_national_focus = GEM_light_industry
+	complete_national_focus = GEM_building_equipment
+	complete_national_focus = GEM_better_engines
+	complete_national_focus = GEM_autooban_building
+	complete_national_focus = GEM_producing_rifles
+	complete_national_focus = GEM_better_armor
+	complete_national_focus = GEM_old_friends
+	complete_national_focus = GEM_new_labs
+	complete_national_focus = GEM_magical_researches
+	complete_national_focus = GEM_find_and_destroy
+	complete_national_focus = GEM_radar_coverage
+	complete_national_focus = GEM_civilian_avia_development
+	complete_national_focus = GEM_medical_development
+	complete_national_focus = GEM_synthetic_fuel
+	complete_national_focus = GEM_jet_engine_focus
+	complete_national_focus = GEM_copmuters_development
+	complete_national_focus = GEM_new_university
+	complete_national_focus = GEM_mobilization
+	complete_national_focus = GEM_wehrmacht
+	complete_national_focus = GEM_sivispacem
+	complete_national_focus = GEM_focus_on_artilelry
+	complete_national_focus = GEM_blitzkrieg
+	complete_national_focus = GEM_luftwaffe
+	complete_national_focus = GEM_light_air_focus
+	complete_national_focus = GEM_exploring_air
+	complete_national_focus = GEM_fleet_rebuild
+	complete_national_focus = GEM_expand_dockyards
+	complete_national_focus = GEM_buy_blueprints
+	complete_national_focus = GEM_fleet_tactics
+	complete_national_focus = GEM_underwater_fleet
+	load_focus_tree = gem_neworder_focus
+	complete_national_focus = GEM_NO_attack_queens_tower
+	
+	add_corps_commander_role = {
+		character = GEM_arianna
+		traits = {
+			other_race_general 
+			infantry_officer
+			cavalry_officer
+		}
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 2
+	}
+	add_corps_commander_role = {
+	character = GEM_radiant_croup
+		traits = {
+			other_race_general 
+			rhbz_trait
+		}
+		skill = 2
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 3
+	}
+	add_corps_commander_role = {
+		character = GEM_aliz_neumann
+		traits = {
+			other_race_general 
+			infantry_officer
+		}
+		skill = 3
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 4
+		logistics_skill = 2
+	}
+	CHN = {
+		CHN_hermis_thysbe = { set_nationality =  ROOT }
+		CHN_narcys_murx = { set_nationality = ROOT }
+		CHN_actia_pagala = { set_nationality = ROOT }
+	}
+	
+	
+	add_ideas = {
+		GEM_erich_von_shteinmann
+		GEM_griffenheim_treaty
+	}
+	diplomatic_relation = { country = GRI relation = war_relation active = no }
+	set_autonomy = {
+		target = CHN 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = EQS 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = CRY 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = OLE 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = YAK 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = SCS 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = PLB 
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = GRF
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	set_autonomy = {
+		target = GRB
+		autonomy_state = autonomy_reichskommissariat
+		end_wars = yes
+		end_civil_wars = yes 
+	}
+	diplomatic_relation = {
+		country = SOV
+		relation = non_aggression_pact
+		active = yes
+	}
+	
+	
+}

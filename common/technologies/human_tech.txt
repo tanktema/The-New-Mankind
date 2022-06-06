@@ -2038,7 +2038,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 17y = 6 }
+			position = { x = 17 y = 6 }
 		}
 		research_cost = 1.5
 		categories = {

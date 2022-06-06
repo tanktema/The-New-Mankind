@@ -699,6 +699,17 @@ ideas = {
 				supply_consumption_factor = -0.1
 			}
 		}
+		
+		################## Bookmark TNO ideas here 
+		
+		
+		GEM_griffenheim_treaty = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				custom_modifier_tooltip = GEM_GRI_treaty_tt
+			}
+		}
 
 	}
 	
@@ -749,7 +760,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_better_armor
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_better_armor
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { heavy_tank_producer }
 			research_bonus = {
@@ -762,7 +784,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_better_armor
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_better_armor
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { medium_tank_producer }
 			research_bonus = {
@@ -778,7 +811,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_more_rifles
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_old_friends
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { arms_dealer_m }
 		}
@@ -788,7 +832,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_light_industry
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_light_industry
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { onwheel_master }
 		}
@@ -802,7 +857,19 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_exploring_air
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_exploring_air
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
+				
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -815,7 +882,19 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_exploring_air
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_exploring_air
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
+
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -833,7 +912,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_fleet_rebuild 
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_fleet_rebuild
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { old_world_shipyard } 
 		}
@@ -847,7 +937,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_medical_development
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_medical_development
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { medical_company_trait }
 			research_bonus = { medical_company = 0.07 }
@@ -858,7 +959,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_light_industry
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_light_industry
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { electrical_concern_sou }
 		}
@@ -869,7 +981,21 @@ ideas = {
 		GEM_panzerstorm_idea = {
 			ledger = army
 			allowed = { original_tag = GEM }
-			visible = { has_completed_focus = GEM_panzerstorm }
+			visible = { 
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_panzerstorm
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
+			}
+			
 			modifier = {
 				experience_gain_army = 0.05
 				pocket_penalty = -0.1

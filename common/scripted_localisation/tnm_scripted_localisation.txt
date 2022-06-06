@@ -137,3 +137,89 @@ defined_text = {
 		localization_key = rage_meter_red 
 	}
 }
+
+defined_text = {
+	name = GetGermanArmyFocusName
+	text = {
+		trigger = {
+			has_government = democratic 
+		}
+		localization_key = GEM_army_demo_name
+	}
+	text = {
+		trigger = {
+			has_government = neutrality 
+		}
+		localization_key = GEM_army_neut_name
+	}
+	text = {
+		trigger = {
+			has_government = communism 
+		}
+		localization_key = GEM_army_comm_name
+	}
+	text = {
+		trigger = {
+			has_government = fascism 
+		}
+		localization_key = GEM_army_fasc_name
+	}
+}
+
+
+defined_text = {
+	name = GetGermanAirFocusName
+	text = {
+		trigger = {
+			has_government = democratic 
+		}
+		localization_key = GEM_air_demo_name
+	}
+	text = {
+		trigger = {
+			has_government = neutrality 
+		}
+		localization_key = GEM_air_neut_name
+	}
+	text = {
+		trigger = {
+			has_government = communism 
+		}
+		localization_key = GEM_air_comm_name
+	}
+	text = {
+		trigger = {
+			has_government = fascism 
+		}
+		localization_key = GEM_air_fasc_name
+	}
+}
+
+
+defined_text = {
+	name = GetGermanNavyFocusName
+	text = {
+		trigger = {
+			has_government = democratic 
+		}
+		localization_key = GEM_navy_demo_name
+	}
+	text = {
+		trigger = {
+			has_government = neutrality 
+		}
+		localization_key = GEM_navy_neut_name
+	}
+	text = {
+		trigger = {
+			has_government = communism 
+		}
+		localization_key = GEM_navy_comm_name
+	}
+	text = {
+		trigger = {
+			has_government = fascism 
+		}
+		localization_key = GEM_navy_fasc_name
+	}
+}

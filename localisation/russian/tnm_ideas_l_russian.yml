@@ -507,3 +507,17 @@
     UNS_stc_blueprints:0 "Использование СШК"
     UNS_xenobiology_idea:0 "Ксенобиология"
     UNS_imperial_truth:0 "Имперская Истина"
+    
+    GEM_parliament_idea:0 "Парламент"
+    GEM_end_of_wars:0 "Конец Всех Войн"
+    GEM_humanitarka:0 "Гуманитарная помощь"
+    GEM_industry_bonus:0 "Промышленные реформы"
+    GEM_medicals:0 "Медицинские исследования"
+    GEM_camps:0 "Концентрационные лагеря"
+    GEM_canterlot_type:0 "Кантерлотский образец"
+    GEM_griffenheim_type:0 "Гриффенхеймский образец"
+    GEM_central_coalition:0 "Коалиция Центральных Держав"
+    GEM_sturmtruppen:0 "Штурмтруппен"
+    GEM_howitzers_march:0 "Артиллерийский Марш"
+    GEM_blitzkrieg_idea:0 "Блицкриг"
+    

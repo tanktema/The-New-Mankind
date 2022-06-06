@@ -446,3 +446,12 @@ GRB_anarchy_military_category = {
 		}
 	}
 }
+
+
+GEM_land_transfer_decision = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		#original_tag = GEM
+	}
+}

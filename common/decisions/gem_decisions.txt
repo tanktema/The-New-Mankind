@@ -252,7 +252,7 @@ GEM_resources_category = {
 GEM_resources_trading = {
 	sell_resources_to_other_gem = {
 		visible = {
-			has_completed_focus = GEM_sell_resources
+			has_completed_focus = GEM_industrial_network_development
 			OR = {
 				arms_factory < 40
 				industrial_complex < 40
@@ -722,3 +722,494 @@ GEM_himmler_coring_decisions = {
 		}
 	}
 }
+
+GEM_land_transfer_decision = {
+	debug_check_german_lands = {
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 314
+						state = 311
+						state = 261
+						state = 313
+						state = 305
+						state = 306
+						state = 252
+						state = 310
+						state = 251
+						state = 309
+						state = 303
+						state = 314
+						state = 304
+						state = 302
+						state = 308
+						state = 258
+						state = 259
+						state = 250
+						state = 321
+						state = 249
+						state = 248
+						state = 300
+						state = 301
+						state = 214
+						state = 292
+						state = 307
+						state = 291
+						state = 296
+						state = 195
+						state = 215
+						state = 219
+						state = 216
+						state = 217
+						state = 69
+						state = 218
+						state = 224
+						state = 246
+						state = 247
+						state = 316
+						state = 319
+						state = 139
+						state = 318
+						state = 137
+						state = 136
+						state = 172
+						state = 14
+						state = 343
+						state = 138
+						state = 175
+						state = 173
+						state = 73
+						state = 72
+						state = 45
+						state = 59
+						state = 61
+						state = 133
+						state = 54
+						state = 174
+						state = 324
+						state = 131
+						state = 169
+						state = 60
+						state = 46
+						state = 130
+						state = 132
+						state = 127
+						state = 126
+						state = 170
+						state = 260
+					}
+				}
+				transfer_state_to = GEM 
+				add_core_of = GEM
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 299
+						state = 294
+						state = 293
+						state = 220
+						state = 298
+						state = 295
+						state = 297
+						state = 204
+						state = 206
+						state = 194
+						state = 196
+						state = 192
+						state = 205
+						state = 197
+						state = 193
+						state = 207
+						state = 208
+						state = 200
+						state = 199
+						state = 198
+						state = 191
+						state = 205
+						state = 204
+						state = 220
+						state = 213
+						state = 201
+						state = 203
+						state = 209
+						state = 202
+						state = 211
+						state = 212
+						state = 210
+						state = 209
+						state = 76
+						state = 189
+						state = 190
+						
+					}
+				}
+				transfer_state_to = OLE 
+				add_core_of = OLE
+			}
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 264
+						state = 290
+						state = 263
+						state = 262
+						state = 315
+						state = 320
+						state = 322
+						state = 323
+						state = 289
+					}
+				}
+				transfer_state_to = CHN 
+				add_core_of = CHN
+			}
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 272
+						state = 282
+						state = 265
+						state = 266
+						state = 285
+						state = 284
+						state = 325
+						state = 280
+						state = 62
+						
+					}
+				}
+				transfer_state_to = PLB 
+				add_core_of = PLB
+			}
+			
+			every_state = {
+				limit = {
+					OR = {
+						state = 58
+						state = 222
+						state = 238
+						state = 239
+						state = 242
+						state = 243
+						state = 244
+						state = 245
+						state = 271
+						state = 279
+						state = 286
+						state = 287
+						state = 288
+						state = 329
+						state = 335
+						state = 336
+						state = 337
+						state = 338
+						state = 281
+						state = 278
+						state = 277
+						state = 283
+					}
+				}
+				transfer_state_to = GRF 
+				add_core_of = GRF
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 53
+						state = 55
+						state = 64
+						state = 77
+						state = 98
+						state = 345
+						state = 140
+						state = 141
+						state = 142
+						state = 143
+						state = 144
+						state = 145
+						state = 146
+						state = 147
+						state = 148
+						state = 149
+						state = 150
+						state = 151
+						state = 152
+						state = 236
+						state = 344
+						state = 339
+					}
+				}
+				transfer_state_to = CRY 
+				add_core_of = CRY
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 121
+						state = 111
+						state = 116
+						state = 115
+						state = 28
+						state = 13
+						state = 27
+						state = 63
+						state = 89
+						state = 78
+						state = 85
+						state = 117
+						state = 87
+						state = 38
+						state = 90
+						state = 80
+						state = 93
+						state = 122
+						state = 120
+						state = 22
+						state = 23
+						state = 19
+						state = 17
+						state = 82
+						state = 84
+						state = 112
+						state = 113
+						state = 35
+						state = 37
+						state = 31
+						state = 221
+						state = 4
+						state = 25
+						state = 30
+						state = 348
+						state = 350
+						state = 36
+						state = 88
+						state = 24
+						state = 83
+						state = 16
+						state = 352
+						state = 32
+						state = 52
+						state = 33
+						state = 351
+						state = 79
+						state = 26
+						state = 353
+						state = 34
+						state = 15
+						state = 86
+						state = 50
+						state = 81
+						state = 94
+						state = 100
+						state = 21
+						state = 20
+						state = 42
+						state = 71
+						state = 49
+						state = 47
+						state = 51
+						state = 44
+						state = 43
+						state = 92
+						state = 91
+					}
+				}
+				transfer_state_to = SCS 
+				add_core_of = SCS
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 11
+						state = 254
+						state = 253
+						state = 256
+						state = 257
+						state = 267
+						state = 268
+						state = 270
+						state = 273
+						state = 276
+						state = 317
+						state = 346
+						state = 347
+						state = 274
+						state = 269
+						state = 340
+						state = 275
+						state = 341
+						state = 342
+					}
+				}
+				transfer_state_to = YAK 
+				add_core_of = YAK
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 1
+						state = 2
+						state = 3
+						state = 129
+						state = 5
+						state = 12
+						state = 181
+						state = 188
+						state = 110
+						state = 107
+						state = 185
+						state = 105
+						state = 103
+						state = 104
+						state = 177
+						state = 108
+						state = 74
+						state = 128
+						state = 134
+						state = 171
+						state = 68
+						state = 29
+						state = 327
+						state = 101
+						state = 182
+						state = 179
+						state = 97
+						state = 176
+						state = 124
+						state = 123
+						state = 65
+						state = 39
+						state = 40
+						state = 178
+						state = 109
+						state = 106
+						state = 180
+						state = 186
+						state = 70
+						state = 99
+						state = 135
+						state = 75
+					}
+				}
+				transfer_state_to = EQS 
+				add_core_of = EQS
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 96
+						state = 125
+						state = 18
+						state = 48
+						state = 66
+						state = 118
+						state = 119
+						state = 95
+						state = 114
+						state = 41
+					}
+				}
+				transfer_state_to = UNS 
+				add_core_of = UNS
+			}
+			every_state = {
+				limit = {
+					OR = {
+						state = 332
+						state = 231
+						state = 230
+						state = 227
+						state = 232
+						state = 102
+						state = 155
+						state = 154
+						state = 164
+						state = 326
+						state = 156
+						state = 157
+						state = 160
+						state = 233
+						state = 166
+						state = 168
+						state = 161
+						state = 225
+						state = 678
+						state = 234
+						state = 165
+						state = 334
+						state = 240
+						state = 57
+						state = 235
+						state = 153
+						state = 237
+						state = 163
+						state = 228
+						state = 525
+						state = 662
+						state = 661
+						state = 241
+						state = 333
+						state = 67
+						state = 229
+						state = 653
+						state = 158
+						state = 162
+						state = 159
+						state = 167
+						state = 56
+						state = 183
+						state = 223
+						state = 226
+						state = 349
+						state = 184
+						state = 187
+					}
+				}
+				transfer_state_to = SOU 
+				add_core_of = SOU
+			}
+			
+			
+		}
+	}
+	
+	debug_gem_load_newfocus = {
+		complete_effect = {
+			load_focus_tree = {
+				tree = gem_neworder_focus
+				keep_completed = yes
+			}
+		}
+	}
+	
+
+	debug_write_statelog = {
+		complete_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = GRF 
+						original_tag = EQS 
+						original_tag = UNS 
+						original_tag = SOU 
+						original_tag = CRY 
+						original_tag = SCS 
+						original_tag = YAK 
+						original_tag = GRB 
+					}
+				}
+				log = "[This.GetTag]"
+				every_owned_state = { 
+					log = "state = [This.GetId]"
+				}
+			}
+			
+			
+		}
+	}
+}
+	

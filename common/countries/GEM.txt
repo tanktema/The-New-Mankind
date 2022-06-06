@@ -3,5 +3,5 @@ graphical_culture = commonwealth_gfx
 graphical_culture_2d = commonwealth_2d
 
 color = rgb { 85 85 85 }
-color_ui = rgb ( 95 95 95 }
+color_ui = rgb { 95 95 95 }
 

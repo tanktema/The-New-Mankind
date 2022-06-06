@@ -1,6 +1,12 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			if = {
+				limit = {
+					has_start_date > 1017.12.31
+				}
+				set_global_flag = TNM_launch_neworder_scenario
+			}
 			every_country = {
 				limit = {
 					is_ai = no 

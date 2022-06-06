@@ -1,0 +1,44 @@
+focus_tree = {
+	id = gem_neworder_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			tag = GEM 
+			has_start_date > 1007.1.1
+		}
+	}
+	
+	continuous_focus_position = { x = 3500 y = 1200 }
+	
+	default = no
+	
+	focus = {
+		id = GEM_NO_attack_queens_tower
+		x = 0
+		y = 2
+		#relative_position_id = GEM_pax_germannica
+		#prerequisite = { focus = GEM_pax_germannica }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem_neworder.3 days = 5 }
+			hidden_effect = {
+				RCT = {
+					country_event = { id = gem_neworder.4 days = 25 }
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GEM_NO_territory_redividing
+		x = 0
+		y = 1
+		relative_position_id = GEM_NO_attack_queens_tower
+		prerequisite = { focus = GEM_NO_attack_queens_tower }
+		cost = 5
+		completion_reward = {
+			country_event = { id = gem_neworder.7 days = 1 }
+		}
+	}

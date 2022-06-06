@@ -3,1113 +3,1118 @@ on_actions = {
 	#Not run on a specific country.
 	on_startup = {
 		effect = {
-			log = "[GetDateText] Equestria at War main on_startup begin"
-			every_state = {
+			if = {
 				limit = {
-					is_on_continent = europe #Equestria
+					has_start_date < 1018.1.1
 				}
-				add_to_array = { global.europe_states = THIS }
-			}
-			add_to_array = { global.river_cup_states = 619.id }
-			add_to_array = { global.river_cup_states = 387.id }
-			add_to_array = { global.river_cup_states = 637.id }
-			add_to_array = { global.river_cup_states = 645.id }
-			add_to_array = { global.river_cup_states = 617.id }
-			add_to_array = { global.river_cup_states = 544.id }
-			add_to_array = { global.river_cup_states = 649.id }
-			add_to_array = { global.river_cup_states = 580.id }
-			add_to_array = { global.river_cup_states = 455.id }
-			add_to_array = { global.river_cup_states = 642.id }
-			add_to_array = { global.river_cup_states = 454.id }
-			add_to_array = { global.river_cup_states = 670.id }
-			add_to_array = { global.river_cup_states = 550.id }
-			add_to_array = { global.river_cup_states = 577.id }
-			add_to_array = { global.river_cup_states = 682.id }
-			add_to_array = { global.river_cup_states = 622.id }
-			add_to_array = { global.river_cup_states = 438.id }
-			add_to_array = { global.river_cup_states = 628.id }
-			add_to_array = { global.river_cup_states = 646.id }
-			add_to_array = { global.river_cup_states = 648.id }
-			add_to_array = { global.river_cup_states = 499.id }
-			add_to_array = { global.river_cup_states = 511.id }
-			add_to_array = { global.river_cup_states = 491.id }
-			add_to_array = { global.river_cup_states = 620.id }
-			add_to_array = { global.river_coalition_members = RCT }
-			add_to_array = { global.river_coalition_members = LCT }
-			add_to_array = { global.river_coalition_members = NIM }
-			add_to_array = { global.river_coalition_members = WIT }
-			add_to_array = { global.river_coalition_members = BAK }
-			add_to_array = { global.river_coalition_members = DEP }
-			add_to_array = { global.river_coalition_members = FRE }
-			add_to_array = { global.river_coalition_members = DMT }
-
-			#SOL is used here as a random country selector
-			#Thanks to Delincious from KR team for the idea <3
-			SOL = {
-				mark_land_connected_states = yes
-				if = {
-					limit = { is_ai = no }
-					random_other_country = {
-						limit = { is_ai = yes }
-						set_variable = { eaw_welcome_screen = 1 }
-						capital_scope = { SOL = { goto_state = PREV } }
-						change_tag_from = PREV
-					}
-				}
-			}
-			SRS = {
-				set_variable = { total_sum_of_internationalist_and_communalist_displeasure = 0 }
-				add_to_variable = { total_sum_of_internationalist_and_communalist_displeasure = displeasure_towards_communards_var }
-				add_to_variable = { total_sum_of_internationalist_and_communalist_displeasure = displeasure_towards_internationalists_var }
-				set_temp_variable = { internationalist_displeasure_as_a_percentage_ersatz = displeasure_towards_internationalists_var }
-				divide_temp_variable = { internationalist_displeasure_as_a_percentage_ersatz = total_sum_of_internationalist_and_communalist_displeasure }
-				set_variable = { internationalist_displeasure_as_a_percentage = internationalist_displeasure_as_a_percentage_ersatz }
-				set_temp_variable = { communalist_displeasure_as_a_percentage_ersatz = displeasure_towards_communards_var }
-				divide_temp_variable = { communalist_displeasure_as_a_percentage_ersatz = total_sum_of_internationalist_and_communalist_displeasure }
-				set_variable = { communalist_displeasure_as_a_percentage = communalist_displeasure_as_a_percentage_ersatz }
-			}
-			OLE = {
-				global_every_army_leader = {
-					limit = { always = yes }
-					if = {
-						limit = { has_id = 105 }
-						save_global_event_target_as = OLE_Roshuo
-					}
-	
-					else_if = {
-						limit = { has_id = 106 }
-						save_global_event_target_as = OLE_Lurswig
-					}
-	
-					else_if = {
-						limit = { has_id = 107 }
-						save_global_event_target_as = OLE_Perkele
-					}
-	
-					else_if = {
-						limit = { has_id = 108 }
-						save_global_event_target_as = OLE_Manntlerhim
-					}
-	
-					else_if = {
-						limit = { has_id = 110 }
-						save_global_event_target_as = OLE_Einair
-					}
-	
-					else_if = {
-						limit = { has_id = 111 }
-						save_global_event_target_as = OLE_Pirhonen
-					}
-	
-					else_if = {
-						limit = { has_id = 112 }
-						save_global_event_target_as = OLE_Eilert
-					}
-	
-					else_if = {
-						limit = { has_id = 113 }
-						save_global_event_target_as = OLE_Ansa
-					}
-	
-					else_if = {
-						limit = { has_id = 114 }
-						save_global_event_target_as = OLE_Virta
-					}
-	
-					else_if = {
-						limit = { has_id = 115 }
-						save_global_event_target_as = OLE_Rikka
-					}
-				}
-			}
-			EQS = {
-				save_global_event_target_as = equestria
-				if = {
+				log = "[GetDateText] Equestria at War main on_startup begin"
+				every_state = {
 					limit = {
-						NOT = {
-							has_game_rule = {
-								rule = equestria_united_status
-								option = EQS_STATUS_CIVIL_WAR
-							}
+						is_on_continent = europe #Equestria
+					}
+					add_to_array = { global.europe_states = THIS }
+				}
+				add_to_array = { global.river_cup_states = 619.id }
+				add_to_array = { global.river_cup_states = 387.id }
+				add_to_array = { global.river_cup_states = 637.id }
+				add_to_array = { global.river_cup_states = 645.id }
+				add_to_array = { global.river_cup_states = 617.id }
+				add_to_array = { global.river_cup_states = 544.id }
+				add_to_array = { global.river_cup_states = 649.id }
+				add_to_array = { global.river_cup_states = 580.id }
+				add_to_array = { global.river_cup_states = 455.id }
+				add_to_array = { global.river_cup_states = 642.id }
+				add_to_array = { global.river_cup_states = 454.id }
+				add_to_array = { global.river_cup_states = 670.id }
+				add_to_array = { global.river_cup_states = 550.id }
+				add_to_array = { global.river_cup_states = 577.id }
+				add_to_array = { global.river_cup_states = 682.id }
+				add_to_array = { global.river_cup_states = 622.id }
+				add_to_array = { global.river_cup_states = 438.id }
+				add_to_array = { global.river_cup_states = 628.id }
+				add_to_array = { global.river_cup_states = 646.id }
+				add_to_array = { global.river_cup_states = 648.id }
+				add_to_array = { global.river_cup_states = 499.id }
+				add_to_array = { global.river_cup_states = 511.id }
+				add_to_array = { global.river_cup_states = 491.id }
+				add_to_array = { global.river_cup_states = 620.id }
+				add_to_array = { global.river_coalition_members = RCT }
+				add_to_array = { global.river_coalition_members = LCT }
+				add_to_array = { global.river_coalition_members = NIM }
+				add_to_array = { global.river_coalition_members = WIT }
+				add_to_array = { global.river_coalition_members = BAK }
+				add_to_array = { global.river_coalition_members = DEP }
+				add_to_array = { global.river_coalition_members = FRE }
+				add_to_array = { global.river_coalition_members = DMT }
+
+				#SOL is used here as a random country selector
+				#Thanks to Delincious from KR team for the idea <3
+				SOL = {
+					mark_land_connected_states = yes
+					if = {
+						limit = { is_ai = no }
+						random_other_country = {
+							limit = { is_ai = yes }
+							set_variable = { eaw_welcome_screen = 1 }
+							capital_scope = { SOL = { goto_state = PREV } }
+							change_tag_from = PREV
 						}
 					}
-					country_event = { id = equestria.1 hours = 15 }
-					country_event = { id = equestria.200 days = 160 }
-					country_event = { id = news.1101 days = 210 }
-					country_event = { id = news.300 days = 171 }
-					country_event = { id = equestria.183 days = 547 }
-					news_event = { id = news.16 days = 200 random = 960 }#days to hours applied
 				}
-				#country_event = { id = equestria.102 days = 93 }
-				set_country_flag = manpower_laws_blocked
-				set_country_flag = economic_laws_blocked
-				set_country_flag = { flag = celestia_evil_meter value = 0 }
-				country_event = { id = equestria.170 days = 30 random = 17280 }#days to hours applied
-				country_event = { id = utility.7 hours = 1 }
-			}
-			STG = {
-				country_event = { id = stalliongrad.0 days = 1 }
-				country_event = { id = stalliongrad.12 days = 10 }
-				country_event = { id = stalliongrad.13 days = 20 }
-				country_event = { id = stalliongrad.24 days = 45 }
-				country_event = { id = stalliongrad.2 days = 60 }
-				country_event = { id = stalliongrad.115 days = 545 random = 960 }#days to hours applied
-				country_event = { id = stalliongrad.139 days = 1095 random = 7200 }#days to hours applied
-				if = {
-					limit = { is_ai = yes }
-					random_list = {
-						5 = { set_country_flag = STG_darkwing_natbol }
-						95 ={ }
+				SRS = {
+					set_variable = { total_sum_of_internationalist_and_communalist_displeasure = 0 }
+					add_to_variable = { total_sum_of_internationalist_and_communalist_displeasure = displeasure_towards_communards_var }
+					add_to_variable = { total_sum_of_internationalist_and_communalist_displeasure = displeasure_towards_internationalists_var }
+					set_temp_variable = { internationalist_displeasure_as_a_percentage_ersatz = displeasure_towards_internationalists_var }
+					divide_temp_variable = { internationalist_displeasure_as_a_percentage_ersatz = total_sum_of_internationalist_and_communalist_displeasure }
+					set_variable = { internationalist_displeasure_as_a_percentage = internationalist_displeasure_as_a_percentage_ersatz }
+					set_temp_variable = { communalist_displeasure_as_a_percentage_ersatz = displeasure_towards_communards_var }
+					divide_temp_variable = { communalist_displeasure_as_a_percentage_ersatz = total_sum_of_internationalist_and_communalist_displeasure }
+					set_variable = { communalist_displeasure_as_a_percentage = communalist_displeasure_as_a_percentage_ersatz }
+				}
+				OLE = {
+					global_every_army_leader = {
+						limit = { always = yes }
+						if = {
+							limit = { has_id = 105 }
+							save_global_event_target_as = OLE_Roshuo
+						}
+		
+						else_if = {
+							limit = { has_id = 106 }
+							save_global_event_target_as = OLE_Lurswig
+						}
+		
+						else_if = {
+							limit = { has_id = 107 }
+							save_global_event_target_as = OLE_Perkele
+						}
+		
+						else_if = {
+							limit = { has_id = 108 }
+							save_global_event_target_as = OLE_Manntlerhim
+						}
+		
+						else_if = {
+							limit = { has_id = 110 }
+							save_global_event_target_as = OLE_Einair
+						}
+		
+						else_if = {
+							limit = { has_id = 111 }
+							save_global_event_target_as = OLE_Pirhonen
+						}
+		
+						else_if = {
+							limit = { has_id = 112 }
+							save_global_event_target_as = OLE_Eilert
+						}
+		
+						else_if = {
+							limit = { has_id = 113 }
+							save_global_event_target_as = OLE_Ansa
+						}
+		
+						else_if = {
+							limit = { has_id = 114 }
+							save_global_event_target_as = OLE_Virta
+						}
+		
+						else_if = {
+							limit = { has_id = 115 }
+							save_global_event_target_as = OLE_Rikka
+						}
 					}
-					else = { set_country_flag = STG_darkwing_natbol }
 				}
-			}
-			SOL = { save_global_event_target_as = solar_empire }
-			GRI = {
-				save_global_event_target_as = griffonian_empire
-				set_variable = { global.griffonian_empire_var = THIS }
-				country_event = { id = imperial.1 days = 6 random = 240 }#days to hours applied
-				country_event = { id = imperial.60 days = 186 random = 480 }#days to hours applied
-			}
-			DED = {
-				add_dynamic_modifier = {
-					modifier = DED_crystal_cost
-				}
-				for_each_scope_loop = {
-					array = global.countries
+				EQS = {
+					save_global_event_target_as = equestria
 					if = {
 						limit = {
 							NOT = {
-								original_tag = DED
-								original_tag = EWI
-								has_country_flag = FIR_is_necromancer
+								has_game_rule = {
+									rule = equestria_united_status
+									option = EQS_STATUS_CIVIL_WAR
+								}
 							}
 						}
-						add_opinion_modifier = { target = DED modifier = mortal_enemies }
-						add_opinion_modifier = { target = DED modifier = embargo }
-						add_opinion_modifier = { target = DED modifier = CHN_Embargo }
-						reverse_add_opinion_modifier = { target = DED modifier = mortal_enemies }
-						reverse_add_opinion_modifier = { target = DED modifier = embargo }
-						reverse_add_opinion_modifier = { target = DED modifier = CHN_Embargo }
-						add_opinion_modifier = { target = EWI modifier = mortal_enemies }
-						add_opinion_modifier = { target = EWI modifier = embargo }
-						add_opinion_modifier = { target = EWI modifier = CHN_Embargo }
-						reverse_add_opinion_modifier = { target = EWI modifier = mortal_enemies }
-						reverse_add_opinion_modifier = { target = EWI modifier = embargo }
-						reverse_add_opinion_modifier = { target = EWI modifier = CHN_Embargo }
+						country_event = { id = equestria.1 hours = 15 }
+						country_event = { id = equestria.200 days = 160 }
+						country_event = { id = news.1101 days = 210 }
+						country_event = { id = news.300 days = 171 }
+						country_event = { id = equestria.183 days = 547 }
+						news_event = { id = news.16 days = 200 random = 960 }#days to hours applied
 					}
+					#country_event = { id = equestria.102 days = 93 }
+					set_country_flag = manpower_laws_blocked
+					set_country_flag = economic_laws_blocked
+					set_country_flag = { flag = celestia_evil_meter value = 0 }
+					country_event = { id = equestria.170 days = 30 random = 17280 }#days to hours applied
+					country_event = { id = utility.7 hours = 1 }
 				}
-				#every_other_country = {
-				#	country_event = deadempire.36
-				#}
-				every_owned_state = {
-					add_claim_by = HLR
-				}
-			}
-			CHN = {
-				add_opinion_modifier = { target = EQS modifier = distrustful_relations }
-				reverse_add_opinion_modifier = { target = EQS modifier = distrustful_relations }
-				add_opinion_modifier = { target = CRY modifier = distrustful_relations }
-				reverse_add_opinion_modifier = { target = CRY modifier = distrustful_relations }
-				add_opinion_modifier = { target = EQC modifier = distrustful_relations }
-				reverse_add_opinion_modifier = { target = EQC modifier = distrustful_relations }
-				add_opinion_modifier = { target = EQS modifier = CHN_Embargo }
-				reverse_add_opinion_modifier = { target = EQS modifier = CHN_Embargo }
-				add_opinion_modifier = { target = CRY modifier = CHN_Embargo }
-				reverse_add_opinion_modifier = { target = CRY modifier = CHN_Embargo }
-				add_opinion_modifier = { target = EQC modifier = CHN_Embargo }
-				reverse_add_opinion_modifier = { target = EQC modifier = CHN_Embargo }
-				add_opinion_modifier = { target = GRI modifier = CHN_GRI_Friendship }
-				reverse_add_opinion_modifier = { target = GRI modifier = CHN_GRI_Friendship }
-			}
-			EYR = {
-				add_opinion_modifier = { target = ERI modifier = mortal_enemies }
-			}
-			ERI = {
-				add_opinion_modifier = { target = EYR modifier = mortal_enemies }
-			}
-			GRF = {
-				country_event = { id = griffons.21 days = 943 random = 96 }#days to hours applied
-				country_event = { id = griffons.22 days = 987 random = 96 }#days to hours applied
-				country_event = { id = griffons.23 days = 931 random = 96 }#days to hours applied
-				country_event = { id = griffons.24 days = 968 random = 96 }#days to hours applied
-				country_event = { id = griffons.25 days = 938 random = 96 }#days to hours applied
-			}
-			FEA = {
-				country_event = { id = feat.15 days = 60 random = 2880 }#days to hours applied
-				country_event = { id = feat.20 days = 72 random = 144 }#days to hours applied
-				country_event = { id = feat.21 days = 105 random = 144 }#days to hours applied
-			}
-			FAT = {
-				country_lock_all_division_template = yes
-				country_event = { id = griffonRepublic.60 days = 9 random = 38400 }#days to hours applied
-				country_event = { id = griffonRepublic.61 days = 10 random = 13920 }#days to hours applied
-				country_event = { id = griffonRepublic.62 days = 11 random = 9600 }#days to hours applied
-				country_event = { id = griffonRepublic.63 days = 12 random = 28800 }#days to hours applied
-				country_event = { id = griffonRepublic.64 days = 13 random = 22080 }#days to hours applied
-				country_event = { id = griffonRepublic.65 days = 14 random = 48000 }#days to hours applied
-				country_event = { id = griffonRepublic.266 days = 400 }
-			}
-			KAT = {
-				country_event = { id = katerin.1 days = 1 } #the Ball, was set this in history files
-				#country_event = { id = katerin.2 days = 9 } #Plague event starter - Dummied out for now.
-				country_event = { id = katerin.135 days = 15 } #THE NEW Plague event
-			}
-				country_lock_all_division_template = yes
-			}
-			BRF = {
-				country_event = { id = prywhen.6 days = 1 }
-			}
-			JER = {
-				country_event = { id = aquileia.30 days = 157 random = 480 }#days to hours applied
-			}
-			ARA = {
-				country_event = { id = arantiga.2 days = 470 random = 480 }#days to hours applied
-			}
-			FIR = {
-				country_event = { id = FIR.1 days = 1 random = 1200 }#days to hours applied
-			}
-			EQC = {
-				country_event = { id = mareland.19 days = 20 random = 5760 }#days to hours applied
-				country_event = { id = mareland.8 days = 3000 random = 72000 }#days to hours applied
-				country_event = { id = mareland.33 days = 1825 random = 43800 }#days to hours applied
-
-			}
-			SIC = {
-				country_event = { id = sicameon.1 days = 240 }
-				country_event = { id = sicameon.2 days = 104 }
-			}
-			NIM = {
-				if = {
-					limit = { is_historical_focus_on = no }
-					random_list = {
-						5 = {
-							set_global_flag = NIM_have_helots_rebel
-						}
-						95 = {
-
-						}
-					}
-				}
-			}
-			LNS = { save_global_event_target_as = longsword }
-			GRU = { country_event = { id = jan_brazowy.1 days = 70 random_hours = 200 } } ## Jan Brązowy event chain ##
-			ZES = { country_event = { id = kasa.92 days = 15 random_hours = 48 } } ## The Raid event
-			RCT = {
-				if = {
-					limit = {
-						has_dlc = "La Resistance"
-					}
-					create_operative_leader = {
-						name = "Dead Drop"
-						GFX = GFX_portrait_RCT_Dead_Drop
-						bypass_recruitment = yes
-						available_to_spy_master = yes
-						female = yes
-						nationalities = { 
-							RCT 
-						}
-						traits = { 
-							operative_agentbio_deaddrop
-							operative_seducer
-							operative_linguist
-						}
-					}
-
-					create_operative_leader = {
-						name = "False Flag"
-						GFX = GFX_portrait_RCT_False_Flag
-						bypass_recruitment = yes
-						available_to_spy_master = yes
-						female = yes
-						nationalities = { 
-							RCT 
-						}
-						traits = { 
-							operative_agentbio_falseflag
-							operative_demolition_expert
-							operative_linguist
-						}
-					}
-				}
-			}
-			every_country = {
-				# added in vanilla 1.9.2
-				capital_scope = {
-					set_variable = { historical_capital_for_country = PREV }
-				}
-				if = {
-					limit = {
-						is_riverlands_country = yes
-					}
-					add_opinion_modifier = { target = GRI modifier = RIV_hates_the_empire }
-					add_opinion_modifier = { target = event_target:longsword modifier = mortal_enemies }
-					add_opinion_modifier = { target = HLQ modifier = mortal_enemies }
-					add_opinion_modifier = { target = event_target:longsword modifier = CHN_Embargo }
-					add_opinion_modifier = { target = HLQ modifier = CHN_Embargo }
-					reverse_add_opinion_modifier = { target = event_target:longsword modifier = mortal_enemies }
-					reverse_add_opinion_modifier = { target = HLQ modifier = mortal_enemies }
-					reverse_add_opinion_modifier = { target = event_target:longsword modifier = CHN_Embargo }
-					reverse_add_opinion_modifier = { target = HLQ modifier = CHN_Embargo }
+				STG = {
+					country_event = { id = stalliongrad.0 days = 1 }
+					country_event = { id = stalliongrad.12 days = 10 }
+					country_event = { id = stalliongrad.13 days = 20 }
+					country_event = { id = stalliongrad.24 days = 45 }
+					country_event = { id = stalliongrad.2 days = 60 }
+					country_event = { id = stalliongrad.115 days = 545 random = 960 }#days to hours applied
+					country_event = { id = stalliongrad.139 days = 1095 random = 7200 }#days to hours applied
 					if = {
-						limit = { tag = WIT }
-						add_opinion_modifier = { target = BAR modifier = sworn_enemies }
-						reverse_add_opinion_modifier = { target = BAR modifier = sworn_enemies }
-						else = {
-							add_opinion_modifier = { target = BAR modifier = distrustful_relations }
-							reverse_add_opinion_modifier = { target = BAR modifier = distrustful_relations }
+						limit = { is_ai = yes }
+						random_list = {
+							5 = { set_country_flag = STG_darkwing_natbol }
+							95 ={ }
+						}
+						else = { set_country_flag = STG_darkwing_natbol }
+					}
+				}
+				SOL = { save_global_event_target_as = solar_empire }
+				GRI = {
+					save_global_event_target_as = griffonian_empire
+					set_variable = { global.griffonian_empire_var = THIS }
+					country_event = { id = imperial.1 days = 6 random = 240 }#days to hours applied
+					country_event = { id = imperial.60 days = 186 random = 480 }#days to hours applied
+				}
+				DED = {
+					add_dynamic_modifier = {
+						modifier = DED_crystal_cost
+					}
+					for_each_scope_loop = {
+						array = global.countries
+						if = {
+							limit = {
+								NOT = {
+									original_tag = DED
+									original_tag = EWI
+									has_country_flag = FIR_is_necromancer
+								}
+							}
+							add_opinion_modifier = { target = DED modifier = mortal_enemies }
+							add_opinion_modifier = { target = DED modifier = embargo }
+							add_opinion_modifier = { target = DED modifier = CHN_Embargo }
+							reverse_add_opinion_modifier = { target = DED modifier = mortal_enemies }
+							reverse_add_opinion_modifier = { target = DED modifier = embargo }
+							reverse_add_opinion_modifier = { target = DED modifier = CHN_Embargo }
+							add_opinion_modifier = { target = EWI modifier = mortal_enemies }
+							add_opinion_modifier = { target = EWI modifier = embargo }
+							add_opinion_modifier = { target = EWI modifier = CHN_Embargo }
+							reverse_add_opinion_modifier = { target = EWI modifier = mortal_enemies }
+							reverse_add_opinion_modifier = { target = EWI modifier = embargo }
+							reverse_add_opinion_modifier = { target = EWI modifier = CHN_Embargo }
 						}
 					}
+					#every_other_country = {
+					#	country_event = deadempire.36
+					#}
+					every_owned_state = {
+						add_claim_by = HLR
+					}
+				}
+				CHN = {
+					add_opinion_modifier = { target = EQS modifier = distrustful_relations }
+					reverse_add_opinion_modifier = { target = EQS modifier = distrustful_relations }
+					add_opinion_modifier = { target = CRY modifier = distrustful_relations }
+					reverse_add_opinion_modifier = { target = CRY modifier = distrustful_relations }
+					add_opinion_modifier = { target = EQC modifier = distrustful_relations }
+					reverse_add_opinion_modifier = { target = EQC modifier = distrustful_relations }
+					add_opinion_modifier = { target = EQS modifier = CHN_Embargo }
+					reverse_add_opinion_modifier = { target = EQS modifier = CHN_Embargo }
+					add_opinion_modifier = { target = CRY modifier = CHN_Embargo }
+					reverse_add_opinion_modifier = { target = CRY modifier = CHN_Embargo }
+					add_opinion_modifier = { target = EQC modifier = CHN_Embargo }
+					reverse_add_opinion_modifier = { target = EQC modifier = CHN_Embargo }
+					add_opinion_modifier = { target = GRI modifier = CHN_GRI_Friendship }
+					reverse_add_opinion_modifier = { target = GRI modifier = CHN_GRI_Friendship }
+				}
+				EYR = {
+					add_opinion_modifier = { target = ERI modifier = mortal_enemies }
+				}
+				ERI = {
+					add_opinion_modifier = { target = EYR modifier = mortal_enemies }
+				}
+				GRF = {
+					country_event = { id = griffons.21 days = 943 random = 96 }#days to hours applied
+					country_event = { id = griffons.22 days = 987 random = 96 }#days to hours applied
+					country_event = { id = griffons.23 days = 931 random = 96 }#days to hours applied
+					country_event = { id = griffons.24 days = 968 random = 96 }#days to hours applied
+					country_event = { id = griffons.25 days = 938 random = 96 }#days to hours applied
+				}
+				FEA = {
+					country_event = { id = feat.15 days = 60 random = 2880 }#days to hours applied
+					country_event = { id = feat.20 days = 72 random = 144 }#days to hours applied
+					country_event = { id = feat.21 days = 105 random = 144 }#days to hours applied
+				}
+				FAT = {
+					country_lock_all_division_template = yes
+					country_event = { id = griffonRepublic.60 days = 9 random = 38400 }#days to hours applied
+					country_event = { id = griffonRepublic.61 days = 10 random = 13920 }#days to hours applied
+					country_event = { id = griffonRepublic.62 days = 11 random = 9600 }#days to hours applied
+					country_event = { id = griffonRepublic.63 days = 12 random = 28800 }#days to hours applied
+					country_event = { id = griffonRepublic.64 days = 13 random = 22080 }#days to hours applied
+					country_event = { id = griffonRepublic.65 days = 14 random = 48000 }#days to hours applied
+					country_event = { id = griffonRepublic.266 days = 400 }
+				}
+				KAT = {
+					country_event = { id = katerin.1 days = 1 } #the Ball, was set this in history files
+					#country_event = { id = katerin.2 days = 9 } #Plague event starter - Dummied out for now.
+					country_event = { id = katerin.135 days = 15 } #THE NEW Plague event
+					country_lock_all_division_template = yes
+				}
+					
+				
+				BRF = {
+					country_event = { id = prywhen.6 days = 1 }
+				}
+				JER = {
+					country_event = { id = aquileia.30 days = 157 random = 480 }#days to hours applied
+				}
+				ARA = {
+					country_event = { id = arantiga.2 days = 470 random = 480 }#days to hours applied
+				}
+				FIR = {
+					country_event = { id = FIR.1 days = 1 random = 1200 }#days to hours applied
+				}
+				EQC = {
+					country_event = { id = mareland.19 days = 20 random = 5760 }#days to hours applied
+					country_event = { id = mareland.8 days = 3000 random = 72000 }#days to hours applied
+					country_event = { id = mareland.33 days = 1825 random = 43800 }#days to hours applied
+
+				}
+				SIC = {
+					country_event = { id = sicameon.1 days = 240 }
+					country_event = { id = sicameon.2 days = 104 }
+				}
+				NIM = {
 					if = {
-						limit = { is_river_fed_member = yes }
-						add_opinion_modifier = { target = OLV modifier = distrustful_relations }
-						add_opinion_modifier = { target = ZES modifier = distrustful_relations }
-						reverse_add_opinion_modifier = { target = OLV modifier = distrustful_relations }
-						reverse_add_opinion_modifier = { target = ZES modifier = distrustful_relations }
-						every_other_country = {
+						limit = { is_historical_focus_on = no }
+						random_list = {
+							5 = {
+								set_global_flag = NIM_have_helots_rebel
+							}
+							95 = {
+
+							}
+						}
+					}
+				}
+				LNS = { save_global_event_target_as = longsword }
+				GRU = { country_event = { id = jan_brazowy.1 days = 70 random_hours = 200 } } ## Jan Brązowy event chain ##
+				ZES = { country_event = { id = kasa.92 days = 15 random_hours = 48 } } ## The Raid event
+				RCT = {
+					if = {
+						limit = {
+							has_dlc = "La Resistance"
+						}
+						create_operative_leader = {
+							name = "Dead Drop"
+							GFX = GFX_portrait_RCT_Dead_Drop
+							bypass_recruitment = yes
+							available_to_spy_master = yes
+							female = yes
+							nationalities = { 
+								RCT 
+							}
+							traits = { 
+								operative_agentbio_deaddrop
+								operative_seducer
+								operative_linguist
+							}
+						}
+
+						create_operative_leader = {
+							name = "False Flag"
+							GFX = GFX_portrait_RCT_False_Flag
+							bypass_recruitment = yes
+							available_to_spy_master = yes
+							female = yes
+							nationalities = { 
+								RCT 
+							}
+							traits = { 
+								operative_agentbio_falseflag
+								operative_demolition_expert
+								operative_linguist
+							}
+						}
+					}
+				}
+				every_country = {
+					# added in vanilla 1.9.2
+					capital_scope = {
+						set_variable = { historical_capital_for_country = PREV }
+					}
+					if = {
+						limit = {
+							is_riverlands_country = yes
+						}
+						add_opinion_modifier = { target = GRI modifier = RIV_hates_the_empire }
+						add_opinion_modifier = { target = event_target:longsword modifier = mortal_enemies }
+						add_opinion_modifier = { target = HLQ modifier = mortal_enemies }
+						add_opinion_modifier = { target = event_target:longsword modifier = CHN_Embargo }
+						add_opinion_modifier = { target = HLQ modifier = CHN_Embargo }
+						reverse_add_opinion_modifier = { target = event_target:longsword modifier = mortal_enemies }
+						reverse_add_opinion_modifier = { target = HLQ modifier = mortal_enemies }
+						reverse_add_opinion_modifier = { target = event_target:longsword modifier = CHN_Embargo }
+						reverse_add_opinion_modifier = { target = HLQ modifier = CHN_Embargo }
+						if = {
+							limit = { tag = WIT }
+							add_opinion_modifier = { target = BAR modifier = sworn_enemies }
+							reverse_add_opinion_modifier = { target = BAR modifier = sworn_enemies }
+							else = {
+								add_opinion_modifier = { target = BAR modifier = distrustful_relations }
+								reverse_add_opinion_modifier = { target = BAR modifier = distrustful_relations }
+							}
+						}
+						if = {
 							limit = { is_river_fed_member = yes }
-							add_ai_strategy = {
-								id = PREV
-								type = alliance
-								value = 200
+							add_opinion_modifier = { target = OLV modifier = distrustful_relations }
+							add_opinion_modifier = { target = ZES modifier = distrustful_relations }
+							reverse_add_opinion_modifier = { target = OLV modifier = distrustful_relations }
+							reverse_add_opinion_modifier = { target = ZES modifier = distrustful_relations }
+							every_other_country = {
+								limit = { is_river_fed_member = yes }
+								add_ai_strategy = {
+									id = PREV
+									type = alliance
+									value = 200
+								}
 							}
 						}
-					}
-					every_other_country = {
-						limit = { is_griffon_continent_griffon_country = yes }
-						add_ai_strategy = {
-							id = PREV
-							type = alliance
-							value = -200
-						}
-						PREV = {
+						every_other_country = {
+							limit = { is_griffon_continent_griffon_country = yes }
 							add_ai_strategy = {
 								id = PREV
 								type = alliance
 								value = -200
 							}
-						}
-					}
-				}
-				
-				if = {
-					limit = { is_pony_race = yes }
-					add_ideas = pony_race
-				}
-				else_if = {
-					limit = { is_changeling_race = yes }
-					add_ideas = changeling_race
-				}
-				else_if = {
-					limit = { is_deer_race = yes }
-					add_ideas = deer_race
-				}
-				else_if = {
-					limit = { is_griffon_race = yes }
-					add_ideas = griffon_race
-					country_event = {
-						id = fantasyflavor.11
-						days = 345
-					}
-					if = {
-						limit = {
-							check_variable = { random > 0.90 }
-							is_ai = no
-							NOT = {
-								tag = MNC
-								tag = AET
-							}
-						}
-						country_event = {
-							id = fantasyflavor.12
-							days = 400
-							random = 25000
-						}
-					}
-				}
-				else_if = {
-					limit = { is_diamond_dog_race = yes }
-					add_ideas = diamond_dog_race
-				}
-				else_if = {
-					limit = { is_minotaur_race = yes }
-					add_ideas = minotaur_race
-				}
-				else_if = {
-					limit = { is_penguin_race = yes }
-					add_ideas = penguin_race
-				}
-				else_if = {
-					limit = { is_dragon_race = yes }
-					add_ideas = dragon_race
-				}
-				else_if = {
-					limit = { is_undead_race = yes }
-					add_ideas = undead_race
-				}
-				else_if = {
-					limit = { is_buffalo_race = yes }
-					add_ideas = buffalo_race
-				}
-				else_if = {
-					limit = { is_yak_race = yes }
-					add_ideas = yak_race
-				}
-				else_if = {
-					limit = { is_polar_race = yes }
-					add_ideas = polar_race
-				}
-				else = {
-					set_technology = { popup = no generic_race = 1 }
-					add_ideas = generic_race_idea
-				}
-
-				if = {
-					limit = {
-						is_on_equestrian_continent = no
-						OR = {
-							has_idea = dummy_idea_science
-							NOT = {
-								has_idea_with_trait = science_idea
-							}
-						}
-					}
-					if = {
-						limit = {
-							num_of_civilian_factories > 2
-							has_tech = melee_weapons1
-							NOT = { owns_big_griffon_city = yes }
-							NOT = { owns_major_griffon_city = yes }
-						}
-						#log = "[Root.GetName] better_science_base"
-						add_ideas = better_science_base
-					}
-					else_if = {
-						limit = { owns_big_griffon_city = yes }
-						#log = "[Root.GetName] big_science_base"
-						add_ideas = big_science_base
-					}
-					else_if = {
-						limit = { owns_major_griffon_city = yes }
-						#log = "[Root.GetName] proper_science_base"
-						add_ideas = proper_science_base
-					}
-					else_if = {
-						limit = {
-							NOT = { owns_major_griffon_city = yes }
-							NOT = { owns_big_griffon_city = yes }
-							OR = {
-								NOT = { has_tech = melee_weapons1 }
-								NOT = { num_of_civilian_factories > 2 }
-							}
-							is_griffon_continent_country = yes
-						}
-						#log = "[Root.GetName] poor_science_base"
-						add_ideas = poor_science_base
-					}
-				}
-
-				if = {
-					limit = {
-						OR = {
-							is_on_equestrian_continent = yes
-							has_idea = dummy_idea_science
-							NOT = {
-								has_idea_with_trait = science_idea
-							}
-						}
-					}
-					add_ideas = proper_science_base
-				}
-
-				if = {
-					limit = {
-						OR = {
-							has_idea = dummy_idea_society
-							NOT = {
-								has_idea_with_trait = society_idea
-							}
-						}
-					}
-					if = {
-						limit = { is_griffon_continent_country = yes }
-						add_ideas = outdated_industry
-						else = {
-							add_ideas = modern_society
-						}
-					}
-				}
-
-				if = {
-					limit = {
-						OR = {
-							has_idea = dummy_idea_literacy
-							NOT = { has_idea_with_trait = illiteracy_idea }
-						}
-					}
-					add_ideas = no_lack_of_scientists
-				}
-
-				if = {
-					limit = {
-						OR = {
-							has_idea = dummy_idea_poverty
-							NOT = { has_idea_with_trait = poverty_idea }
-						}
-					}
-					add_ideas = no_poverty
-				}
-
-				if = {
-					limit = {
-						is_ai = no
-					}
-					set_variable = { eaw_welcome_screen = 1 }
-				}
-
-				if = {
-					limit = {
-						is_griffon_continent_country = yes
-						OR = {
-							has_tribal_society = yes
-							has_agrarian_society = yes
-							has_pre_industrial_society = yes
-							has_illiteracy = yes
-						}
-					}
-					country_event = { id = griffonian.166 days = 912 } #comet sighted
-				}
-
-				if = {
-					limit = {
-						is_river_fed_member = yes
-					}
-					country_event = { id = river_cup.10 days = 193 }
-					country_event = { id = river_cup.11 days = 1656 }
-					country_event = { id = river_cup.12 days = 3119 }
-					country_event = { id = river_cup.13 days = 4582 }
-					country_event = { id = river_cup.14 days = 6045 }
-					country_event = { id = river_cup.15 days = 7508 }
-				}
-				
-				if = {
-					limit = {
-						is_ai = no
-						NOT = {
-							tag = DED
-						}
-					}
-					if = {
-						limit = { check_variable = { random > 0.90 } }
-						country_event = {
-							id = fantasyflavor.8
-							days = 400
-							random = 30000
-						}
-					}
-					if = {
-						limit = { check_variable = { random > 0.90 } }
-						country_event = {
-							id = fantasyflavor.5
-							days = 400
-							random = 25000
-						}
-					}
-					if = {
-						limit = { check_variable = { random > 0.90 } }
-						country_event = {
-							id = fantasyflavor.1
-							days = 400
-							random = 20000
-						}
-					}
-					if = {
-						limit = { check_variable = { random > 0.90 } }
-						country_event = {
-							id = fantasyflavor.14
-							days = 400
-							random = 35000
-						}
-					}
-				}
-				
-				if = {
-					limit = {
-						NOT = {
-							tag = GRI
-							any_owned_state = {
-								OR = {
-									is_coastal = yes
-									is_island_state = yes
+							PREV = {
+								add_ai_strategy = {
+									id = PREV
+									type = alliance
+									value = -200
 								}
 							}
 						}
 					}
-					set_country_flag = started_out_as_landlocked
-				}
-					limit = { 
-						OR = {
-							has_idea = agrarian_society
-							has_idea = tribal_society
-							has_idea = communal_society
-							has_idea = detached_country
+					
+					if = {
+						limit = { is_pony_race = yes }
+						add_ideas = pony_race
+					}
+					else_if = {
+						limit = { is_changeling_race = yes }
+						add_ideas = changeling_race
+					}
+					else_if = {
+						limit = { is_deer_race = yes }
+						add_ideas = deer_race
+					}
+					else_if = {
+						limit = { is_griffon_race = yes }
+						add_ideas = griffon_race
+						country_event = {
+							id = fantasyflavor.11
+							days = 345
+						}
+						if = {
+							limit = {
+								check_variable = { random > 0.90 }
+								is_ai = no
+								NOT = {
+									tag = MNC
+									tag = AET
+								}
+							}
+							country_event = {
+								id = fantasyflavor.12
+								days = 400
+								random = 25000
+							}
 						}
 					}
-					add_fuel = 25000
-				}
-				every_owned_state = {
+					else_if = {
+						limit = { is_diamond_dog_race = yes }
+						add_ideas = diamond_dog_race
+					}
+					else_if = {
+						limit = { is_minotaur_race = yes }
+						add_ideas = minotaur_race
+					}
+					else_if = {
+						limit = { is_penguin_race = yes }
+						add_ideas = penguin_race
+					}
+					else_if = {
+						limit = { is_dragon_race = yes }
+						add_ideas = dragon_race
+					}
+					else_if = {
+						limit = { is_undead_race = yes }
+						add_ideas = undead_race
+					}
+					else_if = {
+						limit = { is_buffalo_race = yes }
+						add_ideas = buffalo_race
+					}
+					else_if = {
+						limit = { is_yak_race = yes }
+						add_ideas = yak_race
+					}
+					else_if = {
+						limit = { is_polar_race = yes }
+						add_ideas = polar_race
+					}
+					else = {
+						set_technology = { popup = no generic_race = 1 }
+						add_ideas = generic_race_idea
+					}
+
 					if = {
 						limit = {
-							is_core_of = PREV
+							is_on_equestrian_continent = no
+							OR = {
+								has_idea = dummy_idea_science
+								NOT = {
+									has_idea_with_trait = science_idea
+								}
+							}
 						}
 						if = {
 							limit = {
-								PREV = { tag = CHN }
+								num_of_civilian_factories > 2
+								has_tech = melee_weapons1
+								NOT = { owns_big_griffon_city = yes }
+								NOT = { owns_major_griffon_city = yes }
 							}
-							add_to_array = { CCN.original_cores = THIS }
-							add_to_array = { state_original_cores = CCN }
+							#log = "[Root.GetName] better_science_base"
+							add_ideas = better_science_base
 						}
-						if = {
-							limit = {
-								PREV = { tag = FAT }
-							}
-							add_to_array = { FAW.original_cores = THIS }
-							add_to_array = { state_original_cores = FAW }
+						else_if = {
+							limit = { owns_big_griffon_city = yes }
+							#log = "[Root.GetName] big_science_base"
+							add_ideas = big_science_base
 						}
-						if = {
-							limit = {
-								PREV = { tag = BRF }
-							}
-							add_to_array = { GRW.original_cores = THIS }
-							add_to_array = { state_original_cores = GRW }
+						else_if = {
+							limit = { owns_major_griffon_city = yes }
+							#log = "[Root.GetName] proper_science_base"
+							add_ideas = proper_science_base
 						}
-						if = {
+						else_if = {
 							limit = {
-								PREV = { tag = GRW }
+								NOT = { owns_major_griffon_city = yes }
+								NOT = { owns_big_griffon_city = yes }
+								OR = {
+									NOT = { has_tech = melee_weapons1 }
+									NOT = { num_of_civilian_factories > 2 }
+								}
+								is_griffon_continent_country = yes
 							}
-							add_to_array = { BRF.original_cores = THIS }
-							add_to_array = { state_original_cores = BRF }
-						}
-						if = {
-							limit = {
-								PREV = { tag = EQS }
-							}
-							add_to_array = { NLR.original_cores = THIS }
-							add_to_array = { state_original_cores = NLR }
-						}
-						if = {
-							limit = {
-								PREV = { tag = LNS }
-							}
-							add_to_array = { LSC.original_cores = THIS }
-							add_to_array = { state_original_cores = LSC }
-							add_to_array = { LSM.original_cores = THIS }
-							add_to_array = { state_original_cores = LSM }
+							#log = "[Root.GetName] poor_science_base"
+							add_ideas = poor_science_base
 						}
 					}
-					for_each_scope_loop = {
-						array = core_countries
-						add_to_array = { original_cores = PREV }
-						add_to_array = { PREV.state_original_cores = THIS }
-					}
-				}
-				adjust_research_modifier = yes
-				update_global_arrays = yes
-				if = {
-					limit = { NOT = { has_country_flag = weapons_fixed_at_start } }
-					actually_fix_weapon_techs = yes
-				}
-			}
 
-			BUF = {
-				add_ideas = poor_science_base
-				adjust_research_modifier = yes
-			}
-			PLB = {
-				add_ideas = better_science_base
-				adjust_research_modifier = yes
-			}
-			GFF = {
-				add_ideas = big_science_base
-				adjust_research_modifier = yes
-			}
-			CRY = {
-				add_ideas = outdated_industry
-				adjust_research_modifier = yes
-			}
-			YAK = {
-				add_ideas = big_science_base
-				adjust_research_modifier = yes
-			}
-			JAK = {
-				add_ideas = big_science_base
-				adjust_research_modifier = yes
-			}
-			547 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 12874
-						id = 12787
-						id = 8039
+					if = {
+						limit = {
+							OR = {
+								is_on_equestrian_continent = yes
+								has_idea = dummy_idea_science
+								NOT = {
+									has_idea_with_trait = science_idea
+								}
+							}
+						}
+						add_ideas = proper_science_base
+					}
+
+					if = {
+						limit = {
+							OR = {
+								has_idea = dummy_idea_society
+								NOT = {
+									has_idea_with_trait = society_idea
+								}
+							}
+						}
+						if = {
+							limit = { is_griffon_continent_country = yes }
+							add_ideas = outdated_industry
+							else = {
+								add_ideas = modern_society
+							}
+						}
+					}
+
+					if = {
+						limit = {
+							OR = {
+								has_idea = dummy_idea_literacy
+								NOT = { has_idea_with_trait = illiteracy_idea }
+							}
+						}
+						add_ideas = no_lack_of_scientists
+					}
+
+					if = {
+						limit = {
+							OR = {
+								has_idea = dummy_idea_poverty
+								NOT = { has_idea_with_trait = poverty_idea }
+							}
+						}
+						add_ideas = no_poverty
+					}
+
+					if = {
+						limit = {
+							is_ai = no
+						}
+						set_variable = { eaw_welcome_screen = 1 }
+					}
+
+					if = {
+						limit = {
+							is_griffon_continent_country = yes
+							OR = {
+								has_tribal_society = yes
+								has_agrarian_society = yes
+								has_pre_industrial_society = yes
+								has_illiteracy = yes
+							}
+						}
+						country_event = { id = griffonian.166 days = 912 } #comet sighted
+					}
+
+					if = {
+						limit = {
+							is_river_fed_member = yes
+						}
+						country_event = { id = river_cup.10 days = 193 }
+						country_event = { id = river_cup.11 days = 1656 }
+						country_event = { id = river_cup.12 days = 3119 }
+						country_event = { id = river_cup.13 days = 4582 }
+						country_event = { id = river_cup.14 days = 6045 }
+						country_event = { id = river_cup.15 days = 7508 }
+					}
+					
+					if = {
+						limit = {
+							is_ai = no
+							NOT = {
+								tag = DED
+							}
+						}
+						if = {
+							limit = { check_variable = { random > 0.90 } }
+							country_event = {
+								id = fantasyflavor.8
+								days = 400
+								random = 30000
+							}
+						}
+						if = {
+							limit = { check_variable = { random > 0.90 } }
+							country_event = {
+								id = fantasyflavor.5
+								days = 400
+								random = 25000
+							}
+						}
+						if = {
+							limit = { check_variable = { random > 0.90 } }
+							country_event = {
+								id = fantasyflavor.1
+								days = 400
+								random = 20000
+							}
+						}
+						if = {
+							limit = { check_variable = { random > 0.90 } }
+							country_event = {
+								id = fantasyflavor.14
+								days = 400
+								random = 35000
+							}
+						}
+					}
+					
+					if = {
+						limit = {
+							NOT = {
+								tag = GRI
+								any_owned_state = {
+									OR = {
+										is_coastal = yes
+										is_island_state = yes
+									}
+								}
+							}
+						}
+						set_country_flag = started_out_as_landlocked
+					}
+						limit = { 
+							OR = {
+								has_idea = agrarian_society
+								has_idea = tribal_society
+								has_idea = communal_society
+								has_idea = detached_country
+							}
+						}
+						add_fuel = 25000
+					}
+					every_owned_state = {
+						if = {
+							limit = {
+								is_core_of = PREV
+							}
+							if = {
+								limit = {
+									PREV = { tag = CHN }
+								}
+								add_to_array = { CCN.original_cores = THIS }
+								add_to_array = { state_original_cores = CCN }
+							}
+							if = {
+								limit = {
+									PREV = { tag = FAT }
+								}
+								add_to_array = { FAW.original_cores = THIS }
+								add_to_array = { state_original_cores = FAW }
+							}
+							if = {
+								limit = {
+									PREV = { tag = BRF }
+								}
+								add_to_array = { GRW.original_cores = THIS }
+								add_to_array = { state_original_cores = GRW }
+							}
+							if = {
+								limit = {
+									PREV = { tag = GRW }
+								}
+								add_to_array = { BRF.original_cores = THIS }
+								add_to_array = { state_original_cores = BRF }
+							}
+							if = {
+								limit = {
+									PREV = { tag = EQS }
+								}
+								add_to_array = { NLR.original_cores = THIS }
+								add_to_array = { state_original_cores = NLR }
+							}
+							if = {
+								limit = {
+									PREV = { tag = LNS }
+								}
+								add_to_array = { LSC.original_cores = THIS }
+								add_to_array = { state_original_cores = LSC }
+								add_to_array = { LSM.original_cores = THIS }
+								add_to_array = { state_original_cores = LSM }
+							}
+						}
+						for_each_scope_loop = {
+							array = core_countries
+							add_to_array = { original_cores = PREV }
+							add_to_array = { PREV.state_original_cores = THIS }
+						}
+					}
+					adjust_research_modifier = yes
+					update_global_arrays = yes
+					if = {
+						limit = { NOT = { has_country_flag = weapons_fixed_at_start } }
+						actually_fix_weapon_techs = yes
 					}
 				}
-			}
-			506 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 1658 
-						id = 3860 
-						id = 3929 
-						id = 11862 
-						id = 3947 
-						id = 5022 
-						id = 7836
+
+				BUF = {
+					add_ideas = poor_science_base
+					adjust_research_modifier = yes
+				}
+				PLB = {
+					add_ideas = better_science_base
+					adjust_research_modifier = yes
+				}
+				GFF = {
+					add_ideas = big_science_base
+					adjust_research_modifier = yes
+				}
+				CRY = {
+					add_ideas = outdated_industry
+					adjust_research_modifier = yes
+				}
+				YAK = {
+					add_ideas = big_science_base
+					adjust_research_modifier = yes
+				}
+				JAK = {
+					add_ideas = big_science_base
+					adjust_research_modifier = yes
+				}
+				547 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 12874
+							id = 12787
+							id = 8039
+						}
 					}
 				}
-			}
-			554 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 1139
-						id = 4058
-						id = 4538
-						id = 12078
-						id = 12344
-						id = 12344
-						id = 1203
-						id = 4093
-						id = 12062
+				506 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 1658 
+							id = 3860 
+							id = 3929 
+							id = 11862 
+							id = 3947 
+							id = 5022 
+							id = 7836
+						}
 					}
 				}
-			}
-			423 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 12667
-						id = 10606
-						id = 12356
-						id = 4880
-						id = 4174
-						id = 1519
-						id = 10421
-						id = 4606
-						id = 4794
-						id = 9892
-						id = 9883
-						id = 10676
-						id = 12651
-						id = 10532 
-						id = 1867 
+				554 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 1139
+							id = 4058
+							id = 4538
+							id = 12078
+							id = 12344
+							id = 12344
+							id = 1203
+							id = 4093
+							id = 12062
+						}
 					}
 				}
-			}
-			411 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 3981
-						id = 10919
-						id = 12785
-						id = 4760
-						id = 7862
-						id = 12620
-						id = 7888
-						id = 3750
-						id = 4871 
+				423 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 12667
+							id = 10606
+							id = 12356
+							id = 4880
+							id = 4174
+							id = 1519
+							id = 10421
+							id = 4606
+							id = 4794
+							id = 9892
+							id = 9883
+							id = 10676
+							id = 12651
+							id = 10532 
+							id = 1867 
+						}
 					}
 				}
-			}
-			422 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 1718
-						id = 10862
-						id = 2050
-						id = 12731
-						id = 12026
-						id = 6828
-						id = 12900
-						id = 2025
-						id = 12589
-						id = 12174
-						id = 8034
-						id = 12692 
-						id = 10686 
+				411 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 3981
+							id = 10919
+							id = 12785
+							id = 4760
+							id = 7862
+							id = 12620
+							id = 7888
+							id = 3750
+							id = 4871 
+						}
 					}
 				}
-			}
-			471 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = { id = 10831 }
-				}
-			}
-			488 = {
-				add_province_modifier = {
-					static_modifiers = { scheisswald_forest }
-					province = {
-						id = 11996
-						id = 12648
-						id = 7770
-						id = 5036 
+				422 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 1718
+							id = 10862
+							id = 2050
+							id = 12731
+							id = 12026
+							id = 6828
+							id = 12900
+							id = 2025
+							id = 12589
+							id = 12174
+							id = 8034
+							id = 12692 
+							id = 10686 
+						}
 					}
 				}
-			}
-			586 = {
-				add_province_modifier = {
-					static_modifiers = { eygsic_forest }
-					province = {
-						all_provinces = yes
+				471 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = { id = 10831 }
 					}
 				}
-			}
-			#barrad
-			624 = {
-				add_province_modifier = {
-					static_modifiers = { barrad_climate }
-					province = {
-						all_provinces = yes
+				488 = {
+					add_province_modifier = {
+						static_modifiers = { scheisswald_forest }
+						province = {
+							id = 11996
+							id = 12648
+							id = 7770
+							id = 5036 
+						}
 					}
 				}
-				set_state_flag = BAR_climate
-			}
-			625 = {
-				add_province_modifier = {
-					static_modifiers = { barrad_climate }
-					province = {
-						all_provinces = yes
+				586 = {
+					add_province_modifier = {
+						static_modifiers = { eygsic_forest }
+						province = {
+							all_provinces = yes
+						}
 					}
 				}
-				set_state_flag = BAR_climate
-			}
-			626 = {
-				add_province_modifier = {
-					static_modifiers = { barrad_climate }
-					province = {
-						all_provinces = yes
+				#barrad
+				624 = {
+					add_province_modifier = {
+						static_modifiers = { barrad_climate }
+						province = {
+							all_provinces = yes
+						}
+					}
+					set_state_flag = BAR_climate
+				}
+				625 = {
+					add_province_modifier = {
+						static_modifiers = { barrad_climate }
+						province = {
+							all_provinces = yes
+						}
+					}
+					set_state_flag = BAR_climate
+				}
+				626 = {
+					add_province_modifier = {
+						static_modifiers = { barrad_climate }
+						province = {
+							all_provinces = yes
+						}
+					}
+					set_state_flag = BAR_climate
+				}
+				648 = {
+					add_province_modifier = {
+						static_modifiers = { eygsic_forest }
+						province = { 
+							id = 8222 
+							id = 12914
+							id = 2178
+						}
 					}
 				}
-				set_state_flag = BAR_climate
-			}
-			648 = {
-				add_province_modifier = {
-					static_modifiers = { eygsic_forest }
-					province = { 
-						id = 8222 
-						id = 12914
-						id = 2178
+				491 = {
+					add_province_modifier = {
+						static_modifiers = { eygsic_forest }
+						province = {
+							id = 1161
+							id = 1001
+							id = 10008
+							id = 4148
+							id = 10783
+							id = 12461
+							id = 7094
+							id = 12859
+							id = 7094
+							id = 1892
+							id = 3834
+							id = 2204
+							id = 1302
+							id = 12036
+							id = 10040
+							id = 4079
+						}
 					}
 				}
-			}
-			491 = {
-				add_province_modifier = {
-					static_modifiers = { eygsic_forest }
-					province = {
-						id = 1161
-						id = 1001
-						id = 10008
-						id = 4148
-						id = 10783
-						id = 12461
-						id = 7094
-						id = 12859
-						id = 7094
-						id = 1892
-						id = 3834
-						id = 2204
-						id = 1302
-						id = 12036
-						id = 10040
-						id = 4079
+				637 = {
+					add_province_modifier = {
+						static_modifiers = { eygsic_forest }
+						province = { id = 13144 }
 					}
 				}
-			}
-			637 = {
-				add_province_modifier = {
-					static_modifiers = { eygsic_forest }
-					province = { id = 13144 }
-				}
-			}
-			544 = {
-				add_province_modifier = {
-					static_modifiers = { eygsic_forest }
-					province = { 
-						id = 1562 
-						id = 1089
-						id = 4091
+				544 = {
+					add_province_modifier = {
+						static_modifiers = { eygsic_forest }
+						province = { 
+							id = 1562 
+							id = 1089
+							id = 4091
+						}
 					}
 				}
-			}
-			ZES = {
-				country_lock_all_division_template = yes
-				ZES_oppressive_countries_calculate = yes
-			}
-			CHN = {
-				country_lock_all_division_template = yes
-			}
-			1 = {
-				add_dynamic_modifier = { modifier = everfree_forest_resistance_to_occupation_modifier }
-				add_province_modifier = { ## Everfree Forest modifiers ##
-					static_modifiers = { old_dragon_gardens }
-					province = {
-						all_provinces = yes
+				ZES = {
+					country_lock_all_division_template = yes
+					ZES_oppressive_countries_calculate = yes
+				}
+				CHN = {
+					country_lock_all_division_template = yes
+				}
+				1 = {
+					add_dynamic_modifier = { modifier = everfree_forest_resistance_to_occupation_modifier }
+					add_province_modifier = { ## Everfree Forest modifiers ##
+						static_modifiers = { old_dragon_gardens }
+						province = {
+							all_provinces = yes
+						}
 					}
 				}
-			}
-			5 = {
-				add_dynamic_modifier = { modifier = everfree_forest_resistance_to_occupation_modifier }
-				add_province_modifier = {
-					static_modifiers = { old_dragon_gardens }
-					province = {
-						all_provinces = yes
+				5 = {
+					add_dynamic_modifier = { modifier = everfree_forest_resistance_to_occupation_modifier }
+					add_province_modifier = {
+						static_modifiers = { old_dragon_gardens }
+						province = {
+							all_provinces = yes
+						}
 					}
 				}
-      		}
-			FRN = {
-				give_resource_rights = { receiver = WNG state = 481 }
-				give_resource_rights = { receiver = WNG state = 652 }
-			}
-			TAL = {
-				give_resource_rights = { receiver = WNG state = 366 }
-				give_resource_rights = { receiver = WNG state = 367 }
-			}
-			WNG = {
-				setup_WNG_parliament = yes
-			}
-			# this extra loop is intentional
-			# adjust_research_modifier needs to be fired again after force_update_dynamic_modifier for the value to work correctly
-			# first loop is above, in every_country
-			for_each_scope_loop = {
-				array = global.countries
-				force_update_dynamic_modifier = yes
-				adjust_research_modifier = yes
-			}
-			every_state = {
-				limit = {
-					OR = {
-			        	is_core_of = STW
-				    	is_core_of = BRZ
-				    	is_core_of = FEA
-				    	is_core_of = PYT
-				    	is_core_of = YAL
-                    	is_core_of = ROU
-                    	is_core_of = KAT
-                    	is_core_of = ANG				
-                        is_core_of = GRI						
-					}
+				FRN = {
+					give_resource_rights = { receiver = WNG state = 481 }
+					give_resource_rights = { receiver = WNG state = 652 }
 				}
-				set_state_flag = JHZ_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = VED
-						is_core_of = SRS
-						is_core_of = FAT
-				    	is_core_of = FAW
-						is_core_of = MNC
-						is_core_of = HAU
-						is_core_of = NTR
-					}
+				TAL = {
+					give_resource_rights = { receiver = WNG state = 366 }
+					give_resource_rights = { receiver = WNG state = 367 }
 				}
-				set_state_flag = JNG_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = ARA
-						is_core_of = LAK
-						is_core_of = BOI
-				    	is_core_of = BAN
-						is_core_of = EYR
-					}
+				WNG = {
+					setup_WNG_parliament = yes
 				}
-				set_state_flag = JGF_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = WNG
-						is_core_of = TAL
-						is_core_of = FRN
-				    	is_core_of = FAL
-						is_core_of = SIC
-					}
+				# this extra loop is intentional
+				# adjust_research_modifier needs to be fired again after force_update_dynamic_modifier for the value to work correctly
+				# first loop is above, in every_country
+				for_each_scope_loop = {
+					array = global.countries
+					force_update_dynamic_modifier = yes
+					adjust_research_modifier = yes
 				}
-				set_state_flag = JKR_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = HLQ
-						is_core_of = LNS
-						is_core_of = LSC
-						is_core_of = LSM
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = STW
+							is_core_of = BRZ
+							is_core_of = FEA
+							is_core_of = PYT
+							is_core_of = YAL
+							is_core_of = ROU
+							is_core_of = KAT
+							is_core_of = ANG				
+							is_core_of = GRI						
+						}
 					}
+					set_state_flag = JHZ_cores
 				}
-				set_state_flag = JOS_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = WAT
-						is_core_of = FBK
-						is_core_of = FIR
-						is_core_of = NCH
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = VED
+							is_core_of = SRS
+							is_core_of = FAT
+							is_core_of = FAW
+							is_core_of = MNC
+							is_core_of = HAU
+							is_core_of = NTR
+						}
 					}
+					set_state_flag = JNG_cores
 				}
-				set_state_flag = JHP_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = RCT
-						is_core_of = LCT
-						is_core_of = DEP
-						is_core_of = BAK
-						is_core_of = DMT
-						is_core_of = NIM
-						is_core_of = WIT
-						is_core_of = ZES
-						is_core_of = OLV
-						is_core_of = BAR
-						is_core_of = FRE
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = ARA
+							is_core_of = LAK
+							is_core_of = BOI
+							is_core_of = BAN
+							is_core_of = EYR
+						}
 					}
+					set_state_flag = JGF_cores
 				}
-				set_state_flag = JRV_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = CYA
-						is_core_of = MIT
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = WNG
+							is_core_of = TAL
+							is_core_of = FRN
+							is_core_of = FAL
+							is_core_of = SIC
+						}
 					}
+					set_state_flag = JKR_cores
 				}
-				set_state_flag = JAS_cores
-			}
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = BRF
-						is_core_of = GRY
-						is_core_of = LUS
-						is_core_of = GRU
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = HLQ
+							is_core_of = LNS
+							is_core_of = LSC
+							is_core_of = LSM
+						}
 					}
+					set_state_flag = JOS_cores
 				}
-				set_state_flag = JEV_cores
-            }
-			EQS = {
-				STG = { add_to_PREV_potential_original_cores = yes }
-				STL = { add_to_PREV_potential_original_cores = yes }
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = WAT
+							is_core_of = FBK
+							is_core_of = FIR
+							is_core_of = NCH
+						}
+					}
+					set_state_flag = JHP_cores
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = RCT
+							is_core_of = LCT
+							is_core_of = DEP
+							is_core_of = BAK
+							is_core_of = DMT
+							is_core_of = NIM
+							is_core_of = WIT
+							is_core_of = ZES
+							is_core_of = OLV
+							is_core_of = BAR
+							is_core_of = FRE
+						}
+					}
+					set_state_flag = JRV_cores
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = CYA
+							is_core_of = MIT
+						}
+					}
+					set_state_flag = JAS_cores
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = BRF
+							is_core_of = GRY
+							is_core_of = LUS
+							is_core_of = GRU
+						}
+					}
+					set_state_flag = JEV_cores
+				}
+				EQS = {
+					STG = { add_to_PREV_potential_original_cores = yes }
+					STL = { add_to_PREV_potential_original_cores = yes }
+				}
+				log = "[GetDateText] Equestria at War main on_startup end"
 			}
-			log = "[GetDateText] Equestria at War main on_startup end"
-		}
-		
+		}	
 	}
 
 	#FROM is war target
