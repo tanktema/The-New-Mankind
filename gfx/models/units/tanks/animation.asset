@@ -27,3 +27,18 @@ animation = {
 	name = "m60a1_moving_animation"
 	file = "m60a1_moving.anim"
 }
+
+animation = {
+	name = "t26_attack_animation"
+	file = "t26_attack.anim"
+}
+
+animation = {
+	name = "t26_idle_animation"
+	file = "t26_idle.anim"
+}
+
+animation = {
+	name = "t26_moving_animation"
+	file = "t26_moving.anim"
+}
