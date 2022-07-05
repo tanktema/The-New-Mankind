@@ -9,11 +9,19 @@ objectTypes = {
 		scale = 0.7
 	}
 	pdxmesh = {
-		name = "SOU_light_armor_mesh"
+		name = "SOU_light_armor_0_mesh"
 		file = "gfx/models/units/tanks/t26.mesh"
 		
 		animation = { id = "idle"			type = "t26_idle" }
 		animation = { id = "move"			type = "t26_moving_animation" }
 		animation = { id = "attack"			type = "t26_attack_animation" }
+	}
+	pdxmesh = {
+		name = "SOU_light_armor_1_mesh"
+		file = "gfx/models/units/tanks/t60.mesh"
+		
+		animation = { id = "idle"			type = "t60_idle" }
+		animation = { id = "move"			type = "t60_moving_animation" }
+		animation = { id = "attack"			type = "t60_attack_animation" }
 	}
 }
