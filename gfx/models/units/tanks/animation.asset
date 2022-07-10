@@ -55,3 +55,15 @@ animation = {
 	name = "t60_moving_animation"
 	file = "t60_moving.anim"
 }
+animation = {
+	name = "t70_idle"
+	file = "t70_idle.anim"
+}
+animation = {
+	name = "t70_attack_animation"
+	file = "t70_attack.anim"
+}
+animation = {
+	name = "t70_moving_animation"
+	file = "t70_moving.anim"
+}

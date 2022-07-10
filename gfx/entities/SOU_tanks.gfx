@@ -24,4 +24,12 @@ objectTypes = {
 		animation = { id = "move"			type = "t60_moving_animation" }
 		animation = { id = "attack"			type = "t60_attack_animation" }
 	}
+	pdxmesh = {
+		name = "SOU_light_armor_2_mesh"
+		file = "gfx/models/units/tanks/t70.mesh"
+		
+		animation = { id = "idle"			type = "t70_idle" }
+		animation = { id = "move"			type = "t70_moving_animation" }
+		animation = { id = "attack"			type = "t70_attack_animation" }
+	}
 }
