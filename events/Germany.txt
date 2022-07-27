@@ -918,13 +918,23 @@ country_event = {
 		name = gem.35.a 
 		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
 		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
-		country_event = { id = gem.36 days = 10 }
+		if = {
+			limit = {
+				NOT = { has_country_flag = gem_strasse_solution }
+			}
+			country_event = { id = gem.36 days = 10 }
+		}
 	}
 	option = {
 		name = gem.35.b
 		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
 		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl }
-		country_event = { id = gem.36 days = 10 }
+		if = {
+			limit = {
+				NOT = { has_country_flag = gem_strasse_solution }
+			}
+			country_event = { id = gem.36 days = 10 }
+		}
 	}
 }
 

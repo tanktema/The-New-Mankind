@@ -1,0 +1,12 @@
+spriteTypes = {
+    frameAnimatedSpriteType = {
+        name = "GFX_portrait_ger_august_von_mackensen_anim"
+        texturefile = "gfx/leaders/GEM/portrait_ger_august_von_mackensen.dds"
+        noOfFrames = 69
+        
+        animation_rate_fps = 25
+        looping = yes
+        play_on_show = yes
+        pause_on_loop = 0.0
+    }
+}

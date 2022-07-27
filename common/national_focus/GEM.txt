@@ -107,6 +107,11 @@ focus_tree = {
 		id = GEM_council_meeting
 		x = 0
 		y = 1
+		available = {
+			NOT = {
+				has_country_flag = gem_strasse_solution
+			}
+		}
 		icon = GFX_goal_GEM_party_meeting
 		relative_position_id = GEM_contact
 		prerequisite = { focus = GEM_contact }
