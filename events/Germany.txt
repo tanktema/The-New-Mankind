@@ -1146,8 +1146,8 @@ country_event = {
 	is_triggered_only = yes 
 	option = {
 		name = gem_neworder.2.a 
-		set_global_flag = TNM_launch_neworder_scenario
-		mark_focus_tree_layout_dirty = yes 
+		#set_global_flag = TNM_launch_neworder_scenario
+		#mark_focus_tree_layout_dirty = yes 
 	}
 }
 

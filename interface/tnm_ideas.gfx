@@ -1567,3 +1567,57 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/GRB_anarch_fleet.dds"
 	}
 	
+	
+	
+	SpriteType = {
+		name = "GFX_idea_GEM_parliament_idea"
+		texturefile = "gfx/interface/ideas/SOU_state_reforms.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_end_of_wars"
+		texturefile = "gfx/interface/ideas/twowar_exp_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_humanitarka"
+		texturefile = "gfx/interface/ideas/hum_rationning.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_industry_bonus"
+		texturefile = "gfx/interface/ideas/SOU_fiveyear_plan.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_medicals"
+		texturefile = "gfx/interface/ideas/UNS_minpeace_healthdep_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_camps"
+		texturefile = "gfx/interface/ideas/hum_demoralized.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_canterlot_type"
+		texturefile = "gfx/interface/ideas/human_pony_intel_exchange.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_griffenheim_type"
+		texturefile = "gfx/interface/ideas/human_pony_intel_exchange.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_central_coalition"
+		texturefile = "gfx/interface/ideas/SOU_tsarizm.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_sturmtruppen"
+		texturefile = "gfx/interface/ideas/GEM_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_howitzers_march"
+		texturefile = "gfx/interface/ideas/GEM_fortification.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_blitzkrieg_idea"
+		texturefile = "gfx/interface/ideas/SOU_shaking.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_GEM_griffenheim_treaty"
+		texturefile = "gfx/interface/ideas/end_neutrality.dds"
+	}

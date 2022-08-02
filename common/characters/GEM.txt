@@ -896,7 +896,7 @@ characters={
 	GEM_erich_von_shteinmann = {
 		name = GEM_erich_von_shteinmann
 		portraits = {
-		
+			small = "gfx/interface/ideas/UAS_william_webster.dds"
 		}
 		
 		advisor = {
