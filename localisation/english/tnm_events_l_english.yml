@@ -1131,3 +1131,78 @@
     tnm_esc84_collab_grb_tt:0 "Cooperation with §YThe New Mankind§!\nStart a scenario: §YTemporal Paradox - Rule, Britannia§!"
     tnm_esc84_collab_gem_tt:0 "Cooperation with §YThe New Mankind§!\nStart a scenario: §YTemporal Paradox - Thousan year Reich§!"
     
+    add_demorats_infl:0 "The influence of §CDemocrats§! will increase by $RIGHT|0+$\n"
+    add_commies_infl:0 "The influence of §RCommunists§! will increase by $RIGHT|0+$\n"
+    add_neutrals_infl:0 "The influence of §ҮNazis§! will increase by $RIGHT|0+$\n"
+    add_nazis_infl:0 "The influence of §gMonarchists§! will increase by $RIGHT|0+$\n"
+    
+    gem.32.t:0 "First council meeting"
+    gem.32.desc:0 "The German Military Council met for the first time since the Transition to discuss the fate of Germany. After the discovery of the strange creatures, the changlings, and the conclusion of the treaty of friendship, it was time to deal with matters of national importance. Today, the question of citizenship and the acceptance of these very changelings was on the agenda. While the supporters of democracy and socialism believe that it is necessary to accept these creatures, the members of the NSDAP believe that this will not end well."
+    gem.32.a:0 "We are the guests of these creatures"
+    gem.32.b:0 "You can't make any concessions"
+    
+    gem.33.t:0 "The question of Germany governing "
+    gem.33.desc:0 "The second meeting of the council is called for the purpose of amending the constitution, giving the council more extensive rights, and conversely, reducing the rights of the chairman of the council, seeking to establish more democratic orders within the military council, and, subsequently, parliament if there is one."
+    gem.33.a:0 "The first step to democracy!"
+    gem.33.b:0 "There is no need for this"
+    
+    gem.34.t:0 "The special status of the NSDAP"
+    gem.34.desc:0 "The new council meeting aims to reduce the influence of the NSDAP. By displaying documents confirming numerous crimes by members of the NSDAP and the SS, the representatives of the Left Coalition together with the Monarchists intend to take away seats in the council from the NSDAP."
+    gem.34.a:0 "Unanimously in favor!"
+    gem.34.b:0 "Slander and blatant lies"
+    
+    gem.35.t:0 "Germany's New Landmarks"
+    gem.35.desc:0 "At today's council meeting the question of foreign and domestic policy was discussed. While the right-wing coalition of the NSDAP and the Monarchists insists on strengthening partisan and nationalist sentiments in order to preserve national identity, while the left-wing coalition of the Republicans and Socialists insists on an internationalist approach aimed at expanding intercultural relations and expanding the MFA."
+    gem.35.a:0 "We are only guests here"
+    gem.35.b:0 "Germany - above all!"
+    
+    gem.36.t:0 "Voting"
+    gem.36.desc:0 "Today the votes were counted. In spite of all the problems and disagreements, an absolute majority of the vote holds..."
+    gem.36.a:0 "Republican Party"
+    gem.36.b:0 "Socialist Party"
+    gem.36.c:0 "NSDAP"
+    gem.36.d:0 "Monarchist Party"
+    
+    gem.37.t:0 "A Meeting of Old Enemies"
+    gem.37.desc:0 "Erwin Rommel never thought this day would come: the old soldier, a veteran of the African campaign and the Oder meat grinder who had saved Germany from ruin, was expecting the most extraordinary guests he could imagine. In the living room of his small seaside home, granted to him for his past services, four armchairs stood by the large fireplace, and a tea service - the best he ever had - stood on the table. Hearing the sound of an engine outside, Rommel went over to the table and took a seat in the chair beside the fireplace-the rheumatism was beginning to set in. After a short \"Come in!\" the front door swung open, and Rommel, sitting half-turned to it, could see who came in:\nNaturally, the first to arrive was the Russian Special Forces man, Serpov, who commanded the USSR Special Forces, the man who had outplayed him on his own battlefield; after him came Shepherd, an elderly American who had defeated his colleagues on the Western front by a head. Montgomery was the last man through the door - despite his rather old age, he was quite fresh and quick. Smiling slightly, Rommel gestured to the officers to the table. It was time for the old enemies to reconcile, have tea, and discuss the affairs of the old days - as it was supposed to be in peacetime. After all, there is no greater joy for a soldier than to hear that his worst enemy is now his friend.
+    gem.37.a:0 "It will be a productive evening"
+    
+    gem.38.t:0 "The Problem of Stalliongrad"
+    gem.38.desc:0 "The General Staff and Defense Committee are bent over plans and maps of the continent. The changeling threat to Equestria was growing at an incredible rate: military build-ups, ultimatums and territorial expansions, provocations on the border... All of this could be a big problem, but an even bigger problem was Stalliongrad, a rebellious region that had separated from Equestria. Despite the low threat at the moment, they could become a big problem in the future, especially if they attacked at the wrong moment - and according to intelligence, Stalliongrad had plans to attack Equestria. It was necessary to strike preemptively and neutralize the threat... But how exactly to neutralize a threat of that potential?"
+    gem.38.a:0 "Establish a puppet government"
+    gem.38.b:0 "Help Equestria reclaim these lands"
+    gem.38.c:0 "Establish a democratic government"
+    gem_give_back_to_eqs_all:0 "All §CCore states§! of Stalliongrad will be turned over to Equestria after the end of the peace conference!"
+    
+    gem.39.t:0 "Revolution Parade"
+    gem.39.desc:0 "Thousands of people gathered in the streets of Berlin today, welcoming the revolutionary parade! In front were Volkswehr soldiers with red armbands on their arms and flags of the new Germany, driving tanks, from which the Nazi crosses had been erased, replacing them with symbols of socialism. Behind the military parade was a parade of the proletariat - workers, collective farmers, scientists, teachers, doctors...The parade was in full swing, and no one paid attention to the strange figure of a pony or a changeling standing in the front row. He nodded slightly, pushed his small suitcase forward, and slowly walked out of the crowd...nnA few minutes later, as the Changeling soldiers walked past the bleachers, there was a loud explosion, followed by several more. People, changlings and ponies all scattered in a hue and cry, but the military police and medics, on the other hand, rushed to the bleachers to tend to their wounded..."
+    gem.39.a:0 "What a horror! Find the people who did this!"
+    gem.39.b:0 "This is our fault. We need to prevent this from happening in the future!"
+    
+    gem.40.t:0 "[From.GetName] offers to make a pact to help."
+    gem.40.desc:0 "[From.GetAdjective] government offers to make a pact of friendship and cooperation. Although our past experience has been somewhat... unsuccessful... this time the Germans share socialist views, and their government considers us friends."
+    gem.40.a:0 "We will give them a second chance"
+    gem.40.b:0 "Double-take the same rake? No, thank you"
+    
+    gem.41.t:0 "[From.GetName] agrees."
+    gem.41.desc:0 "[From.GetName] accepts our offer and is ready to cooperate!"
+    gem.41.a:0 "Great!"
+     
+    gem.42.t:0 "[From.GetName] declines."
+    gem.42.desc:0 "Unfortunately, our past disagreements with the [From.GetName] state have resulted in them refusing to cooperate with us."
+    gem.42.a:0 "Expected..."
+    
+  gem.43.t:0 "Encounter at Vesalipolis"
+    gem.43.desc:0 "Louis Ferdinand, Kaiser of the Great Germany, and a detachment of soldiers stood near a military convoy consisting of two armored cars and a truck. While waiting for the arrival of the Equestrian delegation, the Kaiser had time to hand out orders and accept courier letters. Several hours seemed to pass when a chariot pulled by a pair of Pegasi, with Princess Celestia herself, her sister Princess Luna, and Princess Twilight seated in it, finally appeared in the sky. After the chariot stopped, the princesses left the chariot and stepped forward. Following the rules of etiquette, Kaiser bowed to the rulers of Equestria, and after receiving a return bow, he spoke:\n-Greetings, your highnesses! I thank you for responding to my letter and coming in person to deliver the shipment. We had planned to take care of this matter ourselves, but we thought it best to send her to you, you know what to do with her. A group of armored men ran up to the truck, and while a couple of them held the truck at gunpoint, the rest dragged the kicking and kicking queen, the Queen Chrysalis herself, out of the truck!\n-Wretched creatures! When I get out, I'm going to destroy you all! - the queen screamed.\n-Herr Kaiser, sir, may I? - Soldier asked, and on receiving an affirmative nod, one of the soldiers took a rag out of his pocket and gagged Chrysalis, sending a wry grin across Twilight's face and a chuckle from Luna.\n-Thank you, sir, - replied Celestia, - we'll begin neutralizing the threat immediately.\nWith that, Celestia's horn was ignited, and Chrysalis was covered in stone in a matter of seconds. After loading the resulting statue onto the chariot, Celestia continued, \n-I hope to continue our productive cooperation in the future!"
+    gem.43.a:0 "So do we, princess"
+    
+    #player_warning_of_fault:0 "§RГармоническое сопротивление - большая угроза Германии. Вряд ли ваша кампания увенчается успехом...§!"
+    gem_neworder.1.t:0 "Ambassador from Griffenheim
+    gem_neworder.1.desc:0 "The German General Staff was in a state of complete anarchy: every single German plan broke down one by one. Despite the eastern front, the Empire was able to hold its ground in the southwest and strengthen itself... But the German troops began to feel the effects of the resistance: the undermining of supply echelons, the undermining of the military industry, the theft of food and guerrilla movements were bleeding the army. It seemed that Germany was in for another inferno on the Eastern Front when suddenly a sentry peeked into the staff tent:\n-Herr General! The ambassador from Griffenheim is here to see you.\Nearly surprised, the officers looked at the commander-in-chief, who, after a brief hesitation, invited the ambassador inside, having previously closed all offensive plans. A griffon in plain clothes, with a medal on his chest, entered the room. With a crooked smile, he spoke:\n-My name is Herbert Kruegger, and I carry the will of the Emperor of the great Griffon Empire! Our Emperor recognizes and acknowledges your military prowess and military might, but we have noticed that your advance has slowed. We assume this is due to the actions of the resistance. Therefore, we offer you the following solution:\nFrom his shoulder pouch, the ambassador took out a scroll, unfolded it, and coughed and began to read loudly:\n-We, Emperor of all Gryphonia, [GRI.GetLeader], hereby notify the government of Great Germany of our intention to make peace. With this letter we express our deepest respect for your strategists, and wish to have an ally like you rather than an opponent. The Empire understands and accepts your claim to the lands formerly subject to the Kingdom of Equestria, as well as to the lands of the continent of Equus and the lands of New Mairland, including the British Isle. We, the Emperor of all Gryphonia, [GRI.GetLeader], now enter into a non-aggression pact with Great Germany and pledge not to meddle in the affairs of the German sphere of influence, in return for a promise not to meddle in the affairs of Gryphonia. \Sincerely, [GRI.GetLeader], Emperor of all Gryphonia...Finished reading, the Ambassador cleared his beak and continued, "I understand that you need time to contact your government and everything, so I'll wait outside..."
+    gem_neworder.1.a:0 "We have to agree"
+    gem_neworder.1.b:0 "Nonsense!"
+    hard_war_awaits_tooltip:0 "§RWe are in for a very hard war. For those who want to really test themselves§!"
+    
+    gem_neworder.2.t:0 "New World Order"
+    gem_neworder.2.desc:0 "You'll find out what happens next in the future. Stay tuned!"
+    gem_neworder.2.a:0 "Oh, come on, it is the most interesting point!"

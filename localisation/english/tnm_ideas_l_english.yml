@@ -421,3 +421,20 @@
     UNS_stc_blueprints:0 "STCs"
     UNS_xenobiology_idea:0 "Xenobiology"
     UNS_imperial_truth:0 "The Imperial Truth"
+    
+    GEM_parliament_idea:0 "The Parliament"
+    GEM_end_of_wars:0 "The end of all wars"
+    GEM_humanitarka:0 "Humanitarian aid"
+    GEM_industry_bonus:0 "Industrial reforms"
+    GEM_medicals:0 "Medical researches"
+    GEM_camps:0 "Concentration camps"
+    GEM_canterlot_type:0 "Canterlot-type Capital"
+    GEM_griffenheim_type:0 "Griffenheim-type Capital"
+    GEM_central_coalition:0 "Coalition of Central Powers"
+    GEM_sturmtruppen:0 "Sturmtruppen"
+    GEM_howitzers_march:0 "Artillery March"
+    GEM_blitzkrieg_idea:0 "Blietzkrieg"
+    
+    GEM_griffenheim_treaty:0 "The Pact of Griffenheim"
+    GEM_griffenheim_treaty_desc:0 "The Pact of Griffenheim was a document signed by the German Reich and the Griffon Empire a few months after the outbreak of war. This pact was primarily a peace treaty and a treaty of non-aggression between Germany and the Empire. In addition, the pact included several clauses:\n1. Germany secures the right to control the lands of Equus, which previously belonged to Equestria, Olenia, Stalliongrad, Yaks, Penguins, Bears, as well as Nova Griffonia. In addition, the German sphere of influence includes the lands of New Mareland and Britain, France and Italy.\n2. The Griffon Empire secures the right to control the lands of Griffonia, including the West, North, South and East of the continent, excluding the territories described in the first paragraph.\n3. The states pledge not to interfere, directly or indirectly, in confrontations and problems of spheres of influence, without a request from the other side. In the case of a request for assistance, the states are obliged to provide whatever assistance they can, the amount of which is determined by the states according to their own possibilities."
+    
