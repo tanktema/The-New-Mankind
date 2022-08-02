@@ -897,12 +897,12 @@ country_event = {
 	option = {
 		name = gem.34.a 
 		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
+		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
 		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
 		country_event = { id = gem.35 days = 15 }
 	}
 	option = {
 		name = gem.34.b  
-		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
 		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl }
 		country_event = { id = gem.35 days = 15 }
 	}
@@ -1011,6 +1011,7 @@ country_event = {
 			type = annex_everything
 			target = STG 
 		}
+		set_country_flag = GEM_choose_to_give_stg_to_eqs
 		custom_effect_tooltip = gem_give_back_to_eqs_all
 	}
 	
