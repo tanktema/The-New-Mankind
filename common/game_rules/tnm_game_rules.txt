@@ -141,6 +141,12 @@ GEM_ai_behavior = {
 		allow_achievements = yes 
 	}
 	option = {
+		name = GEM_NEUT_PATH
+		text = "RULE_GEM_NEUT_PATH"
+		desc = "RULE_GEM_NEUT_PATH_DESC"
+		allow_achievements = yes 
+	}
+	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
