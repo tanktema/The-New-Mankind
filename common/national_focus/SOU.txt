@@ -87,7 +87,7 @@ focus_tree = {
 				set_variable = { industrial_broken_sou = 100 }
 				332 = {
 					set_state_category = large_city
-					set_state_name = "STATE_901"
+					set_state_name = "STATE_99901"
 				}
 				set_province_name = {
 					id = 119

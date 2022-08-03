@@ -119,7 +119,7 @@ focus_tree = {
 				}
 				96 = {
 					set_state_category = large_city
-					set_state_name = "STATE_900"
+					set_state_name = "STATE_99900"
 				}
 				set_province_name = { 
 					id = 9406 
