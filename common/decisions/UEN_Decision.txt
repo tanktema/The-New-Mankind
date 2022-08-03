@@ -450,21 +450,16 @@ form_UEN_EQS_category = {
     form_UEN_EQS = {
         icon = generic_form_nation
 
-          visible = {
+        visible = {
             has_completed_focus = UEN_equestria_proposal
-          }
+        }
 
         available = {
             has_completed_focus = UEN_equestria_proposal
         }
 
             cost = 200
-        allowed = {
-        OR = {
-                original_tag = UEN
-                original_tag = EQS
-            }
-        }
+       
 
 
         days_remove = 14
@@ -520,10 +515,10 @@ UEN_annex_puppet_category = {
     UEN_annex_puppet = {
         icon = generic_form_nation
 
-          visible = {
+        visible = {
             EEQ = { is_puppet_of = UEN } 
             has_cosmetic_tag = UEN_EQS
-          }
+        }
 
         available = {
             has_cosmetic_tag = UEN_EQS
@@ -532,16 +527,10 @@ UEN_annex_puppet_category = {
         }
 
         cost = 150
-        allowed = {
-        OR = {
-                original_tag = UEN
-            }
-        }
 
 
         days_remove = 14
-          remove_effect = {
-        }
+          
         complete_effect = {
         add_timed_idea = { idea = HUM_recent_unification days = 120 }
             set_global_flag = form_POL_HUN_UNION_flag

@@ -241,7 +241,7 @@ christmas_celebrating_category = {
 		icon = 111
 		available = {
 			is_human_race = yes 
-			NOT ={
+			NOT = {
 				has_country_flag = celebrate_heart_warming
 			}
 		}
@@ -317,7 +317,6 @@ christmas_celebrating_category = {
 
 	UNS_celebrating = {
 		icon = 1111
-		allowed = { is_human_race = yes }
 		available = {
 			OR = {
 				has_country_flag = celebrate_christmas 
@@ -507,7 +506,6 @@ resource_keep_exploring_human_category = {
 	UNS_steel_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_steel_1
 			}
@@ -544,7 +542,6 @@ resource_keep_exploring_human_category = {
 	UNS_aluminium_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_aluminium_1
 			}
@@ -581,7 +578,6 @@ resource_keep_exploring_human_category = {
 	UNS_rubber_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			48 = {
 				has_state_flag = uns_rubber_1
 			}
@@ -618,7 +614,6 @@ resource_keep_exploring_human_category = {
 	UNS_oil_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			96 = {
 				has_state_flag = uns_oil_1
 			}
@@ -651,7 +646,6 @@ resource_keep_exploring_human_category = {
 	UNS_crystals_expand = {
 	icon = 111
 		available = {
-			original_tag = UNS
 			96 = {
 				has_state_flag = uns_crystals_1
 			}
@@ -688,7 +682,6 @@ resource_keep_exploring_human_category = {
 	UNS_chromium_expand = {
 	icon = 111
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_chromium_1
 			}
@@ -726,7 +719,6 @@ resource_keep_exploring_human_category = {
 		icon = 111
 		fire_only_once = yes
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_tungsten_1
 			}
@@ -764,9 +756,7 @@ resource_keep_exploring_human_category = {
 extra_worktime_human_category = {
 	extra_work_on = {
 		icon = 111
-		allowed = {
-			is_human_race = yes 
-		}
+		
 		available = {
 			NOT = {
 				has_country_flag = paying_for_diminish
@@ -802,9 +792,7 @@ extra_worktime_human_category = {
 	}
 	extra_work_off = {
 		icon = 111
-		allowed = {
-			is_human_race = yes 
-		}
+
 		available = {
 		
 		}
@@ -834,9 +822,7 @@ extra_worktime_human_category = {
 		
 	}
 	extra_work_diminish_by_payment = {
-		allowed = {
-			is_human_race = yes 
-		}
+
 		available = {
 			check_variable = { human_rage > 0 }
 		}
@@ -876,7 +862,7 @@ scientifical_expand_human_category = {
 	
 	fund_the_army = {
 		available = { 
-			original_tag = UNS 
+			
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -907,7 +893,7 @@ scientifical_expand_human_category = {
 	}
 	fund_the_navy = {
 		available = { 
-			original_tag = UNS 
+			
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -938,7 +924,7 @@ scientifical_expand_human_category = {
 	}
 	fund_the_air = {
 		available = { 
-			original_tag = UNS 
+			
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -969,7 +955,7 @@ scientifical_expand_human_category = {
 	}
 	fund_the_industry = {
 		available = { 
-			original_tag = UNS 
+		 
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -1000,7 +986,7 @@ scientifical_expand_human_category = {
 	}
 	manhattan_project = {
 		available = { 
-			original_tag = UNS 
+			 
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
