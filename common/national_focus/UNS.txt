@@ -123,7 +123,7 @@ focus_tree = {
 				}
 				set_province_name = { 
 					id = 9406 
-					name = "STATE_900" 
+					name = "STATE_99900" 
 				}
 			}
 		}

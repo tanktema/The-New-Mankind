@@ -91,7 +91,7 @@ focus_tree = {
 				}
 				set_province_name = {
 					id = 12305
-					name = "STATE_902"
+					name = "STATE_99902"
 				}
 				if = {
 					limit = {
@@ -1488,7 +1488,7 @@ focus_tree = {
 		completion_reward = {
 			every_other_country = {
 				limit = {
-					has_idea = RIV_member_state
+					is_riverlands_country = yes
 				}
 				give_military_access = ROOT
 				ROOT = { give_guarantee = PREV }
@@ -1507,7 +1507,7 @@ focus_tree = {
 		completion_reward = {
 			every_other_country = {
 				limit = {
-					has_idea = RIV_member_state
+					is_riverlands_country = yes
 				}
 				add_timed_idea = {
 					idea = GEM_industry_bonus
@@ -1549,7 +1549,7 @@ focus_tree = {
 		completion_reward = {
 			every_other_country = {
 				limit = {
-					has_idea = RIV_member_state
+					is_riverlands_country = yes
 				}
 				add_ideas = GEM_medicals
 			}
