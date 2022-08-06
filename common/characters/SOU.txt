@@ -49,6 +49,7 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/SOU/Seledka.dds"
+				small = "gfx/interface/ideas/Advisors/SOU/SOU_tsar.dds"
 			}
 		}
 		country_leader={

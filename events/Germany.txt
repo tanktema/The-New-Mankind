@@ -877,12 +877,13 @@ country_event = {
 	option = {
 		name = gem.33.a 
 		add_to_variable = { dem_victory_chance = 1 tooltip = add_demorats_infl }
-		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
+		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
+		
 		country_event = { id = gem.34 days = 15 }
 	}
 	option = {
 		name = gem.33.b  
-		add_to_variable = { comm_victory_chance = 1 tooltip = add_commies_infl }
+		add_to_variable = { neu_victory_chance = 1 tooltip = add_neutrals_infl }
 		add_to_variable = { fasc_victory_chance = 1 tooltip = add_nazis_infl }
 		country_event = { id = gem.34 days = 15 }
 	}
@@ -1100,6 +1101,28 @@ country_event = {
 	option = {
 		name = gem.43.a 
 		add_stability = 0.1
+		hidden_effect = {	
+			if = {
+				limit = {
+					SOU = {
+						has_government = neutrality
+					}
+				}
+				EQS = {
+					diplomatic_relation = {
+						country = OLE 
+						relation = gguarantee
+						active = no 
+					}
+					set_autonomy = {
+						target = OLE 
+						autonomy_state = autonomy_free
+					}
+					remove_from_faction = OLE
+				}
+			}
+		}
+		custom_effect_tooltip = GEM_remove_puppet_olenia_neut
 		add_opinion_modifier = {
 			modifier = besties
 			target = EQS 

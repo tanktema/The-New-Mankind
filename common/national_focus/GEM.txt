@@ -4463,15 +4463,23 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			hidden_effect = {
+				SOU = { 
+					set_nationality = {
+						target_country = GEM 
+						character = SOU_andrey_smolyaniy
+					}
+				}
+			}
 			SOU_andrey_smolyaniy = { 
-				set_nationality = ROOT
+				
 				add_advisor_role = {
 					advisor = {
 						slot = political_advisor
 						idea_token = SOU_andrey_smolyaniy
 						
 						allowed = {
-							original_tag = GEM 
+							always = yes
 						}
 						
 						available = {
@@ -4809,6 +4817,7 @@ focus_tree = {
 			CHN = {
 				retire_character = CHN_queen_chrysalis
 			}
+			
 		}
 	}
 	
@@ -4949,7 +4958,21 @@ focus_tree = {
 					modifier = anticommunsim_politics
 					target = ROOT 
 				}
+				every_other_country = {
+					limit = {
+						has_idea = GEM_central_coalition
+					}
+					add_opinion_modifier = {
+						modifier = anticommunsim_politics
+						target = PREV 
+					}
+					reverse_add_opinion_modifier = {
+						modifier = anticommunsim_politics
+						target = PREV 
+					}
+				}
 			}
+			
 		}
 	}
 	

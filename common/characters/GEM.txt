@@ -625,7 +625,8 @@ characters={
 		name = GEM_radiant_croup
 		portraits = {
 			army = {
-				small = "GFX_idea_GEM_radiant_croup"
+				small = "gfx/interface/ideas/GEM_radiant_croup.dds"
+				large = "gfx/leaders/GEM/GEM_radiant_croup.dds"
 			}
 		}
 		
@@ -896,7 +897,9 @@ characters={
 	GEM_erich_von_shteinmann = {
 		name = GEM_erich_von_shteinmann
 		portraits = {
-			small = "gfx/interface/ideas/UAS_william_webster.dds"
+			civilian = {
+				small = "gfx/interface/ideas/UAS_william_webster.dds"
+			}
 		}
 		
 		advisor = {
