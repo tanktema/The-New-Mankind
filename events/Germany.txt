@@ -1048,7 +1048,7 @@ country_event = {
 		name = gem.39.b 
 		set_country_flag = GEM_communism_way_revenge
 		mark_focus_tree_layout_dirty = yes
-		complete_national_focus = GEM_not_again_work
+		complete_national_focus = GEM_create_inner_police
 	}
 }
 

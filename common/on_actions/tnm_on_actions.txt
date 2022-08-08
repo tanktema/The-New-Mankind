@@ -583,11 +583,6 @@ on_actions = {
 			}
 		}
 	}
-				
-				
-	
-	
-	
 	
 				
 	on_puppet = {

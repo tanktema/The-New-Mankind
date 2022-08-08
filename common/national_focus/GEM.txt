@@ -1823,6 +1823,11 @@ focus_tree = {
 		id = GEM_carthin_dictator
 		x = 7
 		y = 1
+		bypass = {
+			WNG = {
+				NOT = { has_government = fascism }
+			}
+		}
 		icon = GFX_goal_GEM_attack_WNG
 		relative_position_id = GEM_griffonia_peacekeeper_comitee
 		prerequisite = { focus = GEM_griffonia_peacekeeper_comitee }
@@ -1867,6 +1872,11 @@ focus_tree = {
 		id = GEM_sanctions_carthin
 		x = 1
 		y = 1
+		bypass = {
+			WNG = {
+				NOT = { has_government = fascism }
+			}
+		}
 		icon = GFX_goal_UNS_SNOVA_top_secret
 		relative_position_id = GEM_strength_british_borders
 		prerequisite = { focus = GEM_strength_british_borders }
@@ -1914,6 +1924,11 @@ focus_tree = {
 	focus = {
 		id = GEM_intervent_carthin
 		x = 0
+		bypass = {
+			WNG = {
+				has_government = democratic
+			}
+		}
 		y = 1
 		icon = GFX_goal_GRB_wh40k_reference
 		relative_position_id = GEM_sanctions_carthin
