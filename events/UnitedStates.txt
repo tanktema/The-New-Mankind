@@ -1870,10 +1870,11 @@ country_event = {
 				level = 2
 				instant_build = yes 
 			}
-			country_event = {
-				id = uns.64 
-				days = 25
-			}
+			
+		}
+		country_event = {
+			id = uns.64 
+			days = 25
 		}
 	}
 }
