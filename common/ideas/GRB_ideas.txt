@@ -8,7 +8,7 @@ ideas = {
 			
 			removal_cost = -1
 			allowed = {
-				original_tag = GRB 
+				always = yes 
 			}
 			
 			modifier = {
@@ -21,7 +21,7 @@ ideas = {
 		GRB_military_financies = {
 			removal_cost = -1
 			allowed = {
-				original_tag = GRB 
+				always = yes 
 			}
 			
 			modifier = {
@@ -36,7 +36,7 @@ ideas = {
 		GRB_pony_science = {
 			removal_cost = -1
 			allowed = {
-				original_tag = GRB 
+				always = yes 
 			}
 			
 			modifier = {
@@ -53,7 +53,7 @@ ideas = {
 		GRB_human_science_grb = {
 			removal_cost = -1
 			allowed = {
-				original_tag = GRB 
+				always = yes 
 			}
 			
 			modifier = {
@@ -64,7 +64,7 @@ ideas = {
 		GRB_volunteers_of_peace_idea = {
 			removal_cost = -1
 			allowed = {
-				original_tag = GRB 
+				always = yes 
 			}
 			modifier = {
 				guarantee_tension = -0.15
@@ -705,6 +705,16 @@ ideas = {
 				defence_bonus_against = 0.15
 			}
 		}
+		
+		GRB_naval_trading = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.08
+				war_support_factor = 0.08
+			}
+		}
 	}
 	
 	
@@ -714,7 +724,7 @@ ideas = {
 		
 		GRB_vickers_armstrong = {
 			allowed = {
-				original_tag = GRB 
+				original_tag = GRB
 			}
 			available = {
 				has_completed_focus = GRB_contact_olds
@@ -731,7 +741,7 @@ ideas = {
 		}
 		GRB_british_anarch_armor = {
 			allowed = {
-				original_tag = GRB 
+				original_tag = GRB
 			}
 			available = {
 				has_completed_focus = GRB_british_council
@@ -765,7 +775,7 @@ ideas = {
 		
 		GRB_porsche = {
 			allowed = {
-				original_tag = GRB 
+				original_tag = GRB
 			}
 			available = {
 				hidden_trigger = {

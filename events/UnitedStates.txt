@@ -1,6 +1,7 @@
 add_namespace = uns
 add_namespace = tst
 add_namespace = uns_supernova
+add_namespace = uns_csto
 	# Эвакуация
 
 
@@ -495,6 +496,17 @@ country_event = {
 	option = {
 		name = uns.world.1.a
 		add_political_power = 50
+	}
+	option = {
+		name = uns.world.1.b
+		trigger = {
+			threat > 0.74
+		}
+		set_country_flag = UNS_csto_solution_flag
+		custom_effect_tooltip = UNS_CSTO_tooltip
+		hidden_effect = {
+			country_event = { id = uns_csto.1 days = 15 }
+		}
 	}
 }
 news_event = {
@@ -1870,10 +1882,11 @@ country_event = {
 				level = 2
 				instant_build = yes 
 			}
-			country_event = {
-				id = uns.64 
-				days = 25
-			}
+			
+		}
+		country_event = {
+			id = uns.64 
+			days = 25
 		}
 	}
 }
@@ -2370,4 +2383,173 @@ news_event = {
 		}
 	}
 }
-		
+
+country_event = {
+	id = uns_csto.1
+	title = uns_csto.1.t 
+	desc = uns_csto.1.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns_csto.1.a
+		set_country_flag = UNS_CSTO_founded
+		complete_national_focus = UNS_CSTO_organisation_of_csto
+		create_faction = UNS_CSTO 
+		hidden_effect = {
+			country_event = { id = uns_csto.2 days = 10 }
+		}
+	}
+}
+
+news_event = {
+	id = uns_csto.2 
+	title = uns_csto.2.t 
+	desc = uns_csto.2.desc 
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = {
+		name = uns_csto.2.a 
+		trigger = {
+			original_tag = UNS 
+		}
+	}
+	option = {
+		name = uns_csto.2.b 
+		trigger = {
+			NOT = { original_tag = UNS }
+			is_human_race = yes 
+		}
+	}
+	option = {
+		name = uns_csto.2.c 
+		trigger = {
+			OR = {
+				original_tag = EQS
+				original_tag = CRY
+				is_riverlands_country = yes 
+			}
+		}
+	}
+	option = {
+		name = uns_csto.2.d 
+		trigger = {
+			has_government = fascism
+		}
+	}
+	
+	option = {
+		name = uns_csto.2.e 
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = communism
+			}
+		}
+	}
+}
+
+
+news_event = {
+	id = uns_csto.3 
+	title = uns_csto.3.t 
+	desc = uns_csto.3.desc 
+	is_triggered_only = yes 
+	
+	major = yes 
+	
+	option = {
+		name = uns_csto.3.a 
+		trigger = {
+			original_tag = UNS 
+		}
+	}
+	option = {
+		name = uns_csto.3.b 
+		trigger = {
+			NOT = { original_tag = UNS }
+			is_human_race = yes 
+		}
+	}
+	option = {
+		name = uns_csto.3.c 
+		trigger = {
+			OR = {
+				original_tag = EQS
+				original_tag = CRY
+				is_riverlands_country = yes 
+			}
+		}
+	}
+	option = {
+		name = uns_csto.3.d 
+		trigger = {
+			has_government = fascism
+		}
+	}
+	
+	option = {
+		name = uns_csto.3.e 
+		trigger = {
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+				has_government = communism
+			}
+		}
+	}
+}
+
+country_event = {
+	id = uns_csto.4
+	title = uns_csto.4.t 
+	desc = uns_csto.4.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = uns_csto.4.a 
+		ai_chance = {
+			base = 1000
+		}
+		FROM = { add_to_faction = ROOT }
+		every_other_country = {
+			limit = {
+				is_subject_of = ROOT 
+			}
+			FROM = { add_to_faction = PREV }
+		}
+		add_ideas = UNS_CSTO_member_idea
+	}
+	
+	option = {
+		name = uns_csto.4.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+news_event = {
+	id = uns_csto.5
+	title = uns_csto.5.t 
+	desc = uns_csto.5.desc 
+	picture = GFX_news_event_friendship_games
+	is_triggered_only = yes 
+	major = yes 
+	option = {
+		name = uns_csto.5.a 
+		trigger = {
+			is_CSTO_member = yes 
+		}
+	}
+	option = {
+		name = uns_csto.5.b 
+		trigger = {
+			is_CSTO_member = no 
+		}
+	}
+}
+

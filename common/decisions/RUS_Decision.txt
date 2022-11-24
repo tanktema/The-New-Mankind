@@ -734,33 +734,17 @@ form_RUS_OLE_category = {
 	form_RUS_OLE = {
 		icon = generic_form_nation
 
-          visible = {
-              76  = { is_fully_controlled_by = ROOT }
-          }
-
-		available = {
-			has_completed_focus = RUS_OLE_federation
-		}
 
 		cost = 200
-		allowed = {
-		OR = {
-				original_tag = RUS
-				original_tag = OLE
-			}
-		}
+		
 		available = {
-			always = yes
 			RUS = { is_in_faction_with = OLE } 
+			has_completed_focus = RUS_OLE_federation
 		}
 		visible = {
-			AND = { 
-				OR = {
-				original_tag = RUS
-				original_tag = OLE
-				}
+			76  = { is_fully_controlled_by = ROOT }
 			NOT = { has_global_flag = form_euroequestria_flag }
-			}
+			
 		}
         days_remove = 14
           remove_effect = {

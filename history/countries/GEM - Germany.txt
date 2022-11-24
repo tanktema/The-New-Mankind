@@ -36,11 +36,6 @@ set_technology = {
 	improved_infantry_weapons = 1
 	support_weapons = 1
 	support_weapons2 = 1
-	early_fighter = 1
-	CAS1 = 1
-	fighter1 = 1
-	early_bomber = 1
-	tactical_bomber1 = 1
 	artillery1 = 1
 	antiair2 = 1
 	antiair1 = 1
@@ -92,7 +87,76 @@ if = {
 		basic_light_tank = 1
 	}
 }
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+	set_technology = {
+		aa_lmg = 1
+		aa_hmg = 1
+		aa_cannon_1 = 1
+		engines_1 = 1
+		engines_2 = 1
+		early_bombs = 1
+		photo_reconnaisance = 1
+		survivability_studies = 1
+		aircraft_construction = 1
+		iw_small_airframe = 1
+		basic_small_airframe = 1
+		improved_small_airframe = 1
+		iw_medium_airframe = 1
+		basic_medium_airframe = 1
+		improved_medium_airframe = 1
+		iw_large_airframe = 1
+		basic_large_airframe = 1
+	}
 	
+	create_equipment_variant = {
+		name = "Focke-Wulf Fw 190"
+		type = small_plane_airframe_2
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_GEM_fighter2_medium"
+	}
+	
+	create_equipment_variant = {
+		name = "Heinkel He 111" 
+		type = medium_plane_airframe_2
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = bomb_locks
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_GEM_tactical_bomber1_medium"
+	}
+	
+	create_equipment_variant = {
+		name = "Dornier Do 17" 
+		type = large_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = large_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+			engine_type_slot = engine_2_4x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_GEM_strategic_bomber1_medium"
+	}
+	
+	else = {
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			naval_bomber1 = 1
+			early_bomber = 1
+		}
+	}
+}
+
+
 actually_fix_weapon_techs = yes
 if = {
 	limit = {
@@ -115,7 +179,6 @@ if = {
 		has_dlc = "Man the Guns"
 	}
 	set_technology = {
-		human_race = 1
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
 		early_ship_hull_light = 1
@@ -219,7 +282,6 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Pz. II \"Luchs\""
-		parent = 0
 		
 		type = light_tank_chassis_2
 		
@@ -242,7 +304,6 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Panzerkampfwagen IV"
-		parent = 0
 		
 		type = medium_tank_chassis_1
 		
@@ -266,7 +327,6 @@ if = {
 	
 	create_equipment_variant = {
 		name = "Panzerkampfwagen VI \"Tiger\""
-		parent = 0
 		
 		type = heavy_tank_chassis_1
 		
@@ -293,8 +353,8 @@ if = {
 create_equipment_variant = {
 	name = "Schlachtkreuzer"
 	type = ship_hull_heavy_1
-	name_group = GEM_BB_historical
-	parent_version = 0
+	#name_group = GEM_BB_historical
+	
 	modules = {
 		fixed_ship_battery_slot = ship_heavy_battery_2
 		fixed_ship_anti_air_slot = ship_anti_air_1

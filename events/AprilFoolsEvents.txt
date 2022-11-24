@@ -231,8 +231,9 @@ country_event = {
 		name = af_gem.2.a
 		country_event = {
 			id = af_gem.3
-			days = 60 
+			days = 60			
 		}
+		set_country_flag = gem_strasse_solution 
 	}
 }
 
@@ -807,5 +808,28 @@ country_event = {
 	}
 	option = {
 		name = tnm_esc84_collab.2.c 
+	}
+}
+
+country_event = {
+	id = tnm_esc84_collab.3
+	title = tnm_esc84_collab.3.t
+	desc = tnm_esc84_collab.3.desc 
+	
+	is_triggered_only = yes 
+	option = {
+		name = tnm_esc84_collab.3.a 
+		UEN = { change_tag_from = ROOT }
+	}
+	option = {
+		name = tnm_esc84_collab.3.b 
+		RUS = { change_tag_from = ROOT }
+	}
+	option = {
+		name = tnm_esc84_collab.3.c 
+		UAS = { change_tag_from = ROOT }
+	}
+	option = {
+		name = tnm_esc84_collab.3.d
 	}
 }

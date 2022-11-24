@@ -512,6 +512,118 @@ ideas = {
 				war_support_factor = 0.15
 			}
 		}
+		
+		UNS_CSTO_leader_idea = {
+			allowed = { always = yes }
+			modifier = {
+				UNS_csto_members_modifier = 1
+				custom_modifier_tooltip = CSTO_guaranteed_by_csto
+			}
+		}
+		
+		UNS_CSTO_CIA_first_idea = {
+			allowed = { always = yes }
+			modifier = {
+				operative_slot = 2
+				crypto_strength = 5
+				intel_network_gain_factor = 0.1
+				enemy_operative_recruitment_chance = 0.25
+			}
+		}
+		
+		UNS_CSTO_comittee_plan_idea = {
+			allowed = { always = yes }
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_bunker_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.2
+			}
+		}
+		
+		UNS_CSTO_member_idea = {
+			allowed = { always = yes }
+			modifier = {
+				UNS_csto_members_modifier = 1
+				custom_modifier_tooltip = CSTO_guaranteed_by_csto
+			}
+		}
+		
+		UNS_CSTO_iron_curtain = {
+			allowed = { always = yes }
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				consumer_goods_factor = -0.1
+				stability_factor = -0.075
+				war_support_factor = 0.075
+				political_power_factor = 0.1
+				defensive_war_stability_factor = 0.2
+			}
+		}
+		
+		UNS_CSTO_military_tariners = {
+			allowed = { always = yes }
+			modifier = {
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+				army_morale_factor = 0.1
+				experience_gain_army = 0.05
+			}
+		}
+		
+		UNS_CSTO_trade_war_idea = {
+			allowed = { always = yes }
+			modifier = {
+				production_oil_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				local_resources_factor = 0.1
+				min_export = 0.1
+			}
+		}
+		
+		UNS_CSTO_expeditionary_corps_idea = {
+			allowed = { always = yes }
+			modifier = {
+				mobilization_speed = 0.15
+				conscription = 0.015
+				conscription_factor = 0.15
+			}
+		}
+		
+		UUNS_CSTO_frontier_idea = {
+			allowed = { always = yes }
+			modifier = {
+				conscription = 0.015
+				conscription_factor = 0.15
+				max_dig_in = 1
+				dig_in_speed_factor = 0.1
+				army_org_factor = 0.1
+			}
+		}
+		
+		UNS_CSTO_paladins = {
+			allowed = { always = yes }
+			targeted_modifier = {
+				tag = DED 
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+		}
+		
+		UNS_CSTO_attack_on_soldiers = {
+			allowed = { always = yes }
+			modifier = {
+				weekly_manpower = -15
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_morale_factor = -0.05
+			}
+		}
+		
+			
+		
+		
 		UNS_nukes_by_wmd = {
 			removal_cost = -1
 			allowed = { always = yes }
@@ -594,15 +706,15 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = yes }
 			equipment_bonus = {
-				fighter_equipment = {
+				small_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.15
 				}
-				tac_bomber_equipment = {
+				medium_plane_airframe = {
 					instant = yes
 					build_cost_ic = -0.15
 				}
-				cv_CAS_equipment = {
+				cv_small_plane_cas_airframe = {
 					instant = yes
 					build_cost_ic = -0.15
 				}
@@ -656,13 +768,13 @@ ideas = {
 				armor = {
 					reliability = 0.1
 				}
-				light_air = {
+				small_plane_airframe = {
 					reliability = 0.1
 				}
-				medium_air = {
+				medium_plane_airframe = {
 					reliability = 0.1
 				}
-				heavy_air = {
+				large_plane_airframe = {
 					reliability = 0.1
 				}
 			}
@@ -862,7 +974,7 @@ ideas = {
 			modifier = {
 				special_forces_cap = 0.15
 				special_forces_min = 12
-				extra_paratrooper_supply_grace = 0.15
+				extra_paratrooper_supply_grace = 24
 				paratrooper_count_per_plane = 0.2
 				paratrooper_aa_defense = 0.1
 			}
@@ -886,7 +998,7 @@ ideas = {
 				special_forces_cap = 0.15
 				special_forces_min = 12
 				invasion_preparation = -0.25
-				extra_marine_supply_grace = 0.15
+				extra_marine_supply_grace = 24
 			}
 		}
 				
@@ -896,7 +1008,7 @@ ideas = {
 			modifier = {
 				air_attack = 0.15
 			}
-			fighter_equipment = {
+			small_plane_airframe = {
 				air_superiority = 0.2
 			}
 		}
@@ -907,7 +1019,7 @@ ideas = {
 			modifier = {
 				air_attack = 0.15
 			}
-			tac_bomber_equipment = {
+			medium_plane_airframe = {
 				air_bombing = 0.3
 			}
 		}
@@ -1015,6 +1127,14 @@ ideas = {
 
 	}
 	hidden_ideas = {
+	
+		UNS_CSTO_anticommunism = {
+			allowed = { always = yes }
+			modifier = {
+				communism_drift = -0.05
+			}
+		}
+		
 		tech_park_idea_hidden_total = {
 			allowed = { 
 				OR = {

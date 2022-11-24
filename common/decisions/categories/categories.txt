@@ -169,29 +169,7 @@ SOU_fleet_remake_category = {
 		original_tag = SOU
 	}
 }
-GEM_political_crisis_category = {
-	icon = generic_formable_nations 
-	visible = {
-		AND = {
-			has_completed_focus = GEM_party_meeting
-			NOT = {
-				OR = {
-					has_completed_focus = GEM_iron_guard
-					has_completed_focus = GEM_a_little_freedom
-					has_completed_focus = GEM_red_variant
-					has_completed_focus = GEM_people_spirit
-				}
-			}
-		}
-		NOT = {
-			has_country_flag = GEM_AF_FLAG
-		}
-	}
-	allowed = {
-	#	has_dlc = "Waking the Tiger"
-		original_tag = GEM
-	}
-}
+
 GEM_resources_category = {
 	icon = generic_formable_nations
 	allowed = {
@@ -466,5 +444,111 @@ GRB_anarchy_military_category = {
 				}
 			}
 		}
+	}
+}
+
+
+GEM_land_transfer_decision = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		#original_tag = GEM
+	}
+}
+
+UNS_CSTO_decisions = {
+	allowed = {
+		always = yes 
+	}
+	visible_when_empty = yes 
+	visible = {
+		if = {
+			limit = {
+				original_tag = UNS 
+			}
+			has_completed_focus = UNS_CSTO_organisation_of_csto
+		}
+		else = {
+			is_CSTO_member = yes
+		}
+		
+	}
+}
+
+UNS_military_plan_gray = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_grey_plague
+	}
+}
+
+UNS_military_plan_red = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_red_menace
+	}
+}
+
+UNS_military_plan_yellow = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_fall_of_an_empire
+	}
+}
+
+UNS_military_plan_green = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_support_river_coalition
+	}
+}
+
+UNS_military_plan_black = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_guaranee_hlr
+	}
+}
+
+
+UNS_hirropterran_operation = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_chiropterran_operation
+	}
+}
+
+UNS_colthagen_operation = {
+	icon = generic_formable_nations
+	allowed = {
+		#has_dlc = "Waking the Tiger"
+		original_tag = UNS
+	}
+	visible = {
+		has_completed_focus = UNS_CSTO_prepare_colthage_operation
 	}
 }

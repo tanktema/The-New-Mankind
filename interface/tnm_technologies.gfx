@@ -1319,7 +1319,10 @@ spriteTypes = {
 		name = "GFX_UNS_ac_130_tech_medium"
 		textureFile = "gfx/interface/technologies/UNS/UNS_ac_130.dds"
 	}
-	
+	SpriteType = {
+		name = "GFX_UNS_bba_ac_130_tech_medium"
+		textureFile = "gfx/interface/technologies/UNS/UNS_ac_130.dds"
+	}
 	
 	
 	

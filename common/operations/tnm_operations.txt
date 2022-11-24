@@ -1,49 +1,66 @@
-operation_nuke_the_capital = { # Айди операции - как всегда уникален
-	icon = GFX_operation_nuke_the_capital # Ключ иконки - тут все по аналогии
-	map_icon = GFX_operations_rescue_captured_operative_map # отображение на карте
-	name = operation_nuke_the_capital # Ключ локализации названия
-	desc = operation_nuke_the_capital_desc # Ключ локадизации названия 
-	priority = 0 # приоритет в списке
-	days = 1 # Время на подготовку. Для теста поставлю 1 день
-	network_strength = 1 # Сила разведсети. Для теста - 1 день
-	operatives = 1 # Количество оперативников. Нам хватит и одного 
-	visible = { # Условия видимости. FROM - цель-страна, ROOT - наша страна
+operation_destroy_infrastructure = { 
+	icon = GFX_operation_nuke_the_capital 
+	map_icon = GFX_operations_rescue_captured_operative_map 
+	name = operation_destroy_infrastructure 
+	desc = operation_destroy_infrastructure_desc 
+	priority = 50 
+	days = 45 
+	network_strength = 5 
+	operatives = 2  
+	visible = { 
 		network_national_coverage = {
 			target = FROM
-			value > 0
+			value > 25
 		}
-		FROM = {
-			has_war_with = ROOT
-		}
-	}
-	available = {
-		num_of_nukes > 0 # Нам нужна ядернкая бомба
-	}
-	risk_chance = 0.1 # Насколько рисковано задание. Для теста поставлю 0.1
-	experience = 2 # Сколько опыта получит оперативник 
-	cost_multiplier = 0 # это немного не понятно, но насколько я понял при 0 каждое последующее будет иметь те же требования
-	
-	outcome_execute = { # Скоуп оперцаии. Что произойдет при выполнении
 		ROOT = {
-			launch_nuke = {
-				state = FROM.capital
-				controller = FROM 
-			}
-		}		
-	}
-	outcome_potential = { # Эффект, который будет показан в пункте 7
-		FROM = {
-			custom_effect_tooltip = human_nukedem
+			original_tag = UNS 
+			has_completed_focus = UNS_CSTO_destroy_infrastructure
 		}
 	}
 	
-	phases = { # А сейчас мы пропишем фазы из которых состоит операция. Их 3
-		cross_the_border = { base = 100 } #шанс фазы. У нас пусть будет сотка 
+	risk_chance = 0.65 
+	experience = 7 
+	cost_multiplier = 0 
+	
+	outcome_execute = {
+		FROM = {
+			random_owned_state = {
+				limit = {
+					arms_factory > 1
+					industrial_complex > 1
+					infrastructure > 1
+				}
+					
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+					
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+					
+				remove_building = {
+					type = infrastructure
+					level = 2
+				}
+			}
+		}
+	}
+	outcome_potential = { 
+		FROM = {
+			custom_effect_tooltip = UNS_CSTO_destroy_the_infra
+		}
+	}
+	
+	phases = { 
+		infiltration_diplomatic = { base = 100 }
 	}
 	phases = {
-		place_the_nuke = { base = 100 }
+		targeted_sabotage_plant_explosives = { base = 100 }
 	}
 	phases = {
-		escape_with_army = { base = 100 }
+		exfiltration_air_pickup = { base = 100 }
 	}
 }

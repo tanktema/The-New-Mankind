@@ -7,20 +7,20 @@ is_eqcus_country = {
 	}
 }
 
-is_riverlands_country = {
-	any_owned_state = {
-		AND = {
-			OR = {
-				state = 619
-				state = 544
-				state = 387
-				state = 637
-				state = 617
-				state = 580
-				state = 645
-				state = 649
+is_CSTO_member = {
+	custom_trigger_tooltip = {
+		tooltip = CSTO_is_member
+		OR = {
+			original_tag = UNS
+			has_idea = UNS_CSTO_member_idea
+			has_country_flag = UNS_CSTO_candidate
+			overlord = {
+				OR = {
+					has_idea = UNS_CSTO_member_idea
+					has_country_flag = UNS_CSTO_candidate
+				}
 			}
-			is_capital = yes 
 		}
 	}
+	
 }

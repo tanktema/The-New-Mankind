@@ -87,16 +87,19 @@ focus_tree = {
 				set_variable = { industrial_broken_sou = 100 }
 				332 = {
 					set_state_category = large_city
-					set_state_name = "STATE_901"
+					set_state_name = "STATE_99901"
 				}
 				set_province_name = {
 					id = 119
-					name = "STATE_901"
+					name = "STATE_99901"
 				}
 				if = {
 					limit = {	
-						NOT = {
-							has_global_flag = tnm_countries_appeared
+						AND = {
+							NOT = {
+								has_global_flag = tnm_countries_appeared
+							}
+							has_global_flag = TNM_ESC_aprilfools_flag
 						}
 					}
 					country_event = {
@@ -2902,6 +2905,8 @@ focus_tree = {
 				type = annex_everything
 				target = STG 
 			}
+			custom_effect_tooltip = unlocks_new_focus_subtree
+			mark_focus_tree_layout_dirty = yes  
 		}
 	}
 	
@@ -3041,7 +3046,10 @@ focus_tree = {
 		prerequisite = { focus = SOU_eqs_training }
 		prerequisite = { focus = SOU_strength_borders }
 		bypass = {
-			has_war_with = CHN 
+			OR = {
+				has_war_with = CHN 
+				has_country_flag = GEM_SOU_GRB_pact_flag
+			}
 		}
 		cost = 5
 		completion_reward = {
@@ -3052,6 +3060,557 @@ focus_tree = {
 		}
 	}
 	
+	#### Colonial_ochka
+	
+	focus = {
+		id = SOU_new_severyana
+		x = 0
+		y = 1
+		available = {
+			TBK = {
+				AND = {
+					exists = yes 
+					is_subject = no 
+				}
+			}
+			has_war = no 
+			STG = {
+				OR = {
+					exists = no
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT 
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOU_WARGOAL_STG
+				NOT = {
+					has_wargoal_against = STG 
+				}
+			}
+		}
+		allow_branch = {
+			has_completed_focus = SOU_attack_stg
+		}
+
+		relative_position_id = SOU_changeling_threat
+		
+		cost = 5
+		completion_reward = {
+			country_event = { id = sou.48 days = 15 }
+		}
+	}
+	
+	focus = {
+		id = SOU_invade_chiropterra
+		x = -3
+		y = 1
+		relative_position_id = SOU_new_severyana
+		prerequisite = { focus = SOU_new_severyana }
+		available = {
+			TBK = {
+				is_subject_of = ROOT 
+			}
+		}
+		bypass = {
+			AND = {
+				TBK = {
+					is_subject_of = ROOT 
+				}
+				has_war_with = BAT
+			}
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BAT 
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = SOU_war_criminals_extradiction
+		x = -1
+		y = 1
+		relative_position_id = SOU_invade_chiropterra
+		prerequisite = { focus = SOU_invade_chiropterra }
+		available = {
+			OR = {
+				BAT = {
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT 
+					AND = {
+						exists = no 
+						712 = { Owner = {
+							is_in_faction_with = ROOT 
+						} }
+					}
+				}
+			}
+		}
+		
+		cost = 5
+		completion_reward = {
+			EQS = {
+				add_opinion_modifier = {
+					modifier = supported_somehow
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = supported_somehow
+					target = ROOT 
+				}
+			}
+			add_war_support = 0.05
+			add_political_power = 25
+		}
+	}
+	
+	focus = {
+		id = SOU_end_the_cult_of_night
+		x = 1
+		y = 1
+		relative_position_id = SOU_invade_chiropterra
+		prerequisite = { focus = SOU_invade_chiropterra }
+		cost = 5
+		available = {
+			OR = {
+				BAT = {
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT 
+					AND = {
+						exists = no 
+						712 = { Owner = {
+							is_in_faction_with = ROOT 
+						} }
+					}
+				}
+			}
+		}
+		
+		completion_reward = {
+			BAT = {
+				every_core_state = {
+					add_core_of = TBK
+				}
+				if = {
+					limit = {
+						exists = yes 
+					}
+					add_popularity = {
+						ideology = fascism
+						popularity = -0.15
+					}
+				}
+			}
+			
+			add_manpower = 10000
+			add_political_power = 25
+		}
+	}
+	
+	focus = {	
+		id = SOU_delete_arcane_knowledges
+		x = -1
+		y = 1
+		relative_position_id = SOU_war_criminals_extradiction
+		prerequisite = { focus = SOU_war_criminals_extradiction }
+		cost = 7.2
+		completion_reward = {
+			country_event = { id = sou.50 days = 10 }
+		}
+	}
+	
+	focus = {
+		id = SOU_alexia_rule
+		x = 1
+		y = 1
+		relative_position_id = SOU_war_criminals_extradiction
+		prerequisite = { focus = SOU_war_criminals_extradiction }
+		prerequisite = { focus = SOU_end_the_cult_of_night }
+		cost = 7.2
+		completion_reward = {
+			TBK = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.15
+				}
+				add_stability = 0.1
+				add_war_support = 0.1
+				add_timed_idea = {
+					idea = SOU_state_reforms
+					days = 365
+				}
+			}
+			
+			add_ideas = SOU_milit_reform
+		}
+	}
+	
+	focus = {
+		id = SOU_tobuck_decrime
+		x = 1
+		y = 1
+		relative_position_id = SOU_end_the_cult_of_night
+		prerequisite = { focus = SOU_end_the_cult_of_night }
+		cost = 5
+		completion_reward = {
+			army_experience = 15
+			add_stability = 0.1
+			acceptance_expand_extra = yes
+			TBK = {
+				capital_scope = {
+					add_manpower = -73
+				}
+				add_stability = 0.03
+				add_political_power = -10
+				add_war_support = -0.01
+				army_experience = 5
+				add_timed_idea = {
+					idea = SOU_purges
+					days = 60
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+			}
+		}
+	}
+			
+	focus = {
+		id = SOU_send_stalliongrad_criminals
+		x = -1
+		y = 1
+		relative_position_id = SOU_alexia_rule
+		prerequisite = { focus = SOU_alexia_rule }
+		cost = 7.2
+		completion_reward = {
+			STG = {
+				retire_character = STG_vasiliy_pantsushenko
+				retire_character = STG_sinister_serov
+				retire_character = STG_dark_wing
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_joint_military_trainings
+		x = 1
+		y = 1
+		relative_position_id = SOU_alexia_rule
+		prerequisite = { focus = SOU_alexia_rule }
+		cost = 7.2
+		completion_reward = {
+			army_experience = 25
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT 
+				}
+				army_experience = 25
+			}
+			add_tech_bonus = {
+				category = armor
+				uses = 3
+				bonus = 0.5
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_zarantia_invasion
+		x = 3
+		y = 1
+		relative_position_id = SOU_new_severyana
+		prerequisite = { focus = SOU_new_severyana }
+		available = {
+			TBK = {
+				is_subject_of = ROOT 
+			}
+		}
+	
+		bypass = {
+			AND = {
+				TBK = {
+					is_subject_of = ROOT 
+				}
+				has_war_with = BAT
+			}
+		}
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ZAR 
+			}
+		}
+		
+	}
+	
+	focus = {
+		id = SOU_rezervations
+		x = -2
+		y = 1
+		relative_position_id = SOU_zarantia_invasion
+		prerequisite = { focus = SOU_zarantia_invasion }
+		available = {
+			OR = {
+				ZAR = {
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT 
+					AND = {
+						exists = no 
+						747 = { Owner = {
+							is_in_faction_with = ROOT 
+						} }
+					}
+				}
+			}
+		}
+		cost = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 747
+						state = 755
+						state = 730
+						state = 746
+					}
+				}
+				add_core_of = TBK 
+				transfer_state_to = TBK
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = SOU_saving_zarantia_culture
+		x = 0
+		y = 1
+		relative_position_id = SOU_rezervations
+		prerequisite = { focus = SOU_rezervations }
+		cost = 5
+		completion_reward = {
+			acceptance_expand_extra = yes
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+	
+	focus = {
+		id = SOU_search_for_zarantia_resources
+		x = 0
+		y = 1
+		relative_position_id = SOU_zarantia_invasion
+		prerequisite = { focus = SOU_zarantia_invasion }
+		available = {
+			OR = {
+				ZAR = {
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT 
+					AND = {
+						exists = no 
+						747 = { Owner = {
+							is_in_faction_with = ROOT 
+						} }
+					}
+				}
+			}
+		}
+		cost = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 755
+						state = 756
+						state = 878
+						state = 754
+					}
+				}
+				custom_effect_tooltip = add_random_resource
+				hidden_effect = {
+					random_list = {
+						25 = {
+							add_resource = {
+								type = oil
+								amount = 15
+							}
+							add_resource = {
+								type = rubber
+								amount = 15
+							}
+						}
+						25 = {
+							add_resource = {
+								type = tungsten
+								amount = 10	
+									
+							}
+							add_resource = {
+								type = chromium
+								amount = 10
+							}
+						}
+						25 = {
+							add_resource = {
+								type = steel
+								amount = 25
+							}
+							add_resource = {
+								type = aluminium
+								amount = 25
+							}
+						}
+						
+						25 = {
+							add_resource = {
+								type = crystals
+								amount = 25
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_greening_zarantia
+		x = 0
+		y = 1
+		relative_position_id = SOU_search_for_zarantia_resources
+		prerequisite = { focus = SOU_search_for_zarantia_resources }
+		cost = 5
+		completion_reward = {
+			ZAR = {
+				every_core_state = {
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			747 = {
+				set_state_category = rural
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_secure_colthage
+		x = 2
+		y = 1
+		relative_position_id = SOU_zarantia_invasion
+		prerequisite = { focus = SOU_zarantia_invasion }
+		available = {
+			OR = {
+				ZAR = {
+					is_subject_of = ROOT 
+					is_in_faction_with = ROOT 
+					AND = {
+						exists = no 
+						747 = { Owner = {
+							is_in_faction_with = ROOT 
+						} }
+					}
+				}
+			}
+		}
+		cost = 5
+		completion_reward = {
+			diplomatic_relation = {
+				country = CTH
+				relation = non_aggression_pact
+				active = yes
+			}
+			give_guarantee = CTH
+			add_stability = 0.05
+			add_political_power = -15
+			add_ai_strategy = {
+				type = befriend
+				id = CTH
+				value = 200
+			}
+			add_ai_strategy = {
+				type = consider_weak
+				id = CTH
+				value = -200
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_garrison
+		x = 0
+		y = 1
+		relative_position_id = SOU_secure_colthage
+		prerequisite = { focus = SOU_secure_colthage }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = SOU_deploy_5_divs
+			hidden_effect = {
+				division_template = {
+					name = "Pustynnaya Gvardiya"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+					}
+				}
+				747 = {
+					create_unit = {
+						division = "name = \"Pustynnaya Gvardiya\" division_template = \"Pustynnaya Gvardiya\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Pustynnaya Gvardiya\" division_template = \"Pustynnaya Gvardiya\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Pustynnaya Gvardiya\" division_template = \"Pustynnaya Gvardiya\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Pustynnaya Gvardiya\" division_template = \"Pustynnaya Gvardiya\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"Pustynnaya Gvardiya\" division_template = \"Pustynnaya Gvardiya\" start_experience_factor = 0.4 start_equipment_factor = 1"
+						owner = ROOT
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SOU_secure_zeranthian_south
+		x = 0
+		y = 1
+		relative_position_id = SOU_greening_zarantia
+		prerequisite = { focus = SOU_saving_zarantia_culture }
+		prerequisite = { focus = SOU_greening_zarantia }
+		prerequisite = { focus = SOU_garrison }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ZAI
+			}
+		}
+	}
+
 	################ Industry
 	focus = {
 		id = SOU_keep_industry
@@ -3878,12 +4437,14 @@ focus_tree = {
 					}
 					priority = 2
 				}
+				capital_scope = {
 				
-				create_unit = {
-					division = "name = \"Vozdushno-Desantnye Voiska\" division_template = \"Vozdushno-Desantnye Voiska\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = ROOT
+					create_unit = {
+						division = "name = \"Vozdushno-Desantnye Voiska\" division_template = \"Vozdushno-Desantnye Voiska\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = ROOT
+					}
+					
 				}
-				
 			}
 		}
 	}

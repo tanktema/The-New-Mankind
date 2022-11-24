@@ -241,7 +241,7 @@ christmas_celebrating_category = {
 		icon = 111
 		available = {
 			is_human_race = yes 
-			NOT ={
+			NOT = {
 				has_country_flag = celebrate_heart_warming
 			}
 		}
@@ -317,7 +317,6 @@ christmas_celebrating_category = {
 
 	UNS_celebrating = {
 		icon = 1111
-		allowed = { is_human_race = yes }
 		available = {
 			OR = {
 				has_country_flag = celebrate_christmas 
@@ -507,7 +506,6 @@ resource_keep_exploring_human_category = {
 	UNS_steel_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_steel_1
 			}
@@ -544,7 +542,6 @@ resource_keep_exploring_human_category = {
 	UNS_aluminium_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_aluminium_1
 			}
@@ -581,7 +578,6 @@ resource_keep_exploring_human_category = {
 	UNS_rubber_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			48 = {
 				has_state_flag = uns_rubber_1
 			}
@@ -618,7 +614,6 @@ resource_keep_exploring_human_category = {
 	UNS_oil_expand = {
 		icon = 111
 		available = {
-			original_tag = UNS
 			96 = {
 				has_state_flag = uns_oil_1
 			}
@@ -651,7 +646,6 @@ resource_keep_exploring_human_category = {
 	UNS_crystals_expand = {
 	icon = 111
 		available = {
-			original_tag = UNS
 			96 = {
 				has_state_flag = uns_crystals_1
 			}
@@ -688,7 +682,6 @@ resource_keep_exploring_human_category = {
 	UNS_chromium_expand = {
 	icon = 111
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_chromium_1
 			}
@@ -726,7 +719,6 @@ resource_keep_exploring_human_category = {
 		icon = 111
 		fire_only_once = yes
 		available = {
-			original_tag = UNS
 			18 = {
 				has_state_flag = uns_tungsten_1
 			}
@@ -764,9 +756,7 @@ resource_keep_exploring_human_category = {
 extra_worktime_human_category = {
 	extra_work_on = {
 		icon = 111
-		allowed = {
-			is_human_race = yes 
-		}
+		
 		available = {
 			NOT = {
 				has_country_flag = paying_for_diminish
@@ -802,9 +792,7 @@ extra_worktime_human_category = {
 	}
 	extra_work_off = {
 		icon = 111
-		allowed = {
-			is_human_race = yes 
-		}
+
 		available = {
 		
 		}
@@ -834,9 +822,7 @@ extra_worktime_human_category = {
 		
 	}
 	extra_work_diminish_by_payment = {
-		allowed = {
-			is_human_race = yes 
-		}
+
 		available = {
 			check_variable = { human_rage > 0 }
 		}
@@ -876,7 +862,7 @@ scientifical_expand_human_category = {
 	
 	fund_the_army = {
 		available = { 
-			original_tag = UNS 
+			
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -907,7 +893,7 @@ scientifical_expand_human_category = {
 	}
 	fund_the_navy = {
 		available = { 
-			original_tag = UNS 
+			
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -938,7 +924,7 @@ scientifical_expand_human_category = {
 	}
 	fund_the_air = {
 		available = { 
-			original_tag = UNS 
+			
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -969,7 +955,7 @@ scientifical_expand_human_category = {
 	}
 	fund_the_industry = {
 		available = { 
-			original_tag = UNS 
+		 
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -1000,7 +986,7 @@ scientifical_expand_human_category = {
 	}
 	manhattan_project = {
 		available = { 
-			original_tag = UNS 
+			 
 			NOT = {
 				has_country_flag = UNS_fundings_in_progress
 			}
@@ -2940,3 +2926,2277 @@ UNS_ministry_of_morale_cat = {
 			factor = 25
 		}
 	}
+	
+}
+
+
+UNS_CSTO_decisions = {
+
+	UNS_eqvus_representation_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_eqvus_contingent
+			NOT = {
+				has_global_flag = CSTO_late_trainings
+			}
+		}
+		days_re_enable = 90
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_30_pp_25
+		days_remove = 35
+		modifier = {
+			experience_gain_army_factor = 0.1
+			experience_gain_navy_factor = 0.1
+			experience_gain_air_factor = 0.1
+			experience_gain_air = 0.05
+			experience_gain_army = 0.05
+			experience_gain_navy = 0.05
+		}
+		complete_effect = {
+			hidden_effect = { add_command_power = -30 add_political_power = -25 }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_timed_idea = {
+					idea = UNS_training
+					days = 30
+				}
+			}
+			set_global_flag = {
+				flag = CSTO_late_trainings
+				days = 90
+				value = 1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	UNS_griphonia_representation_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_griffon_continent
+			NOT = {
+				has_global_flag = CSTO_late_trainings
+			}
+		}
+		days_re_enable = 90
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_30_pp_25
+		days_remove = 35
+		modifier = {
+			experience_gain_army_factor = 0.08
+			experience_gain_navy_factor = 0.08
+			experience_gain_air_factor = 0.08
+			experience_gain_air = 0.08
+			experience_gain_army = 0.08
+			experience_gain_navy = 0.08
+		}
+		complete_effect = {
+			hidden_effect = { add_command_power = -30 add_political_power = -25 }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_timed_idea = {
+					idea = UNS_training
+					days = 30
+				}
+			}
+			set_global_flag = {
+				flag = CSTO_late_trainings
+				days = 90
+				value = 1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	UNS_zebrican_representation_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_griffon_continent
+			NOT = {
+				has_global_flag = CSTO_late_trainings
+			}
+		}
+		days_re_enable = 90
+		custom_cost_trigger = {
+			command_power > 29
+			has_political_power > 24
+		}
+		custom_cost_text = decision_cost_CP_30_pp_25
+		days_remove = 35
+		modifier = {
+			experience_gain_air = 0.15
+			experience_gain_army = 0.15
+			experience_gain_navy = 0.15
+		}
+		complete_effect = {
+			hidden_effect = { add_command_power = -30 add_political_power = -25 }
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_timed_idea = {
+					idea = UNS_training
+					days = 30
+				}
+			}
+			set_global_flag = {
+				flag = CSTO_late_trainings
+				days = 90
+				value = 1
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	UNS_follow_csto_guarantees = {
+		visible = {
+			AND = {
+				UNS = { has_completed_focus = UNS_CSTO_eqvus_contingent }
+				UNS = { has_completed_focus = UNS_CSTO_article_five }
+				UNS = { has_completed_focus = UNS_CSTO_griffon_continent }
+				UNS = { has_completed_focus = UNS_CSTO_zebra_continent }
+			}
+		}
+		target_trigger = {
+			FROM = {
+				is_CSTO_member = yes 
+			}
+		}
+		days_mission_timeout = 45
+		###days_re_enable = 240 
+		cost = 50
+		is_good = no 
+		activation = {
+			FROM = {
+				has_defensive_war = yes 
+			}
+		}
+		available = {
+			has_war_together_with = FROM
+		}
+		complete_effect = {
+			FROM = {
+				ROOT = {
+					add_to_war = {
+						targeted_alliance = ROOT 
+						hostility_reason = UNS_CSTO_reason
+					}
+				}
+			}
+		}
+		timeout_effect = {
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { original_tag = UNS }
+					}
+				}
+				remove_ideas = UNS_CSTO_member_idea
+				clr_country_flag = UNS_CSTO_candidate
+				UNS = { remove_from_faction = ROOT }
+			}
+			if = {
+				limit = {
+					ROOT = {
+						original_tag = UNS 
+					}
+				}
+				every_other_country = {
+					limit = {
+						is_CSTO_member = yes 
+					}
+					remove_ideas = UNS_CSTO_member_idea
+					clr_country_flag = UNS_CSTO_candidate
+					UNS = { remove_from_faction = PREV }
+				}
+				country_event = { id = uns_csto.3 days = 5 }
+			}
+		}
+			
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	
+	UNS_equestrian_garrison = {
+		visible = {
+			EQS = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Equestrian Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				EQS = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Equestrian Corps\" division_template = \"CSTO Equestrian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Equestrian Corps\" division_template = \"CSTO Equestrian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Equestrian Corps\" division_template = \"CSTO Equestrian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Equestrian Corps\" division_template = \"CSTO Equestrian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Equestrian Corps\" division_template = \"CSTO Equestrian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_crystal_garrison = {
+		visible = {
+			CRY = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Crystal Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				CRY = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Crystal Corps\" division_template = \"CSTO Crystal Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Crystal Corps\" division_template = \"CSTO Crystal Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Crystal Corps\" division_template = \"CSTO Crystal Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Crystal Corps\" division_template = \"CSTO Crystal Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Crystal Corps\" division_template = \"CSTO Crystal Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_changeling_garrison = {
+		visible = {
+			CHN = {	
+				is_CSTO_member = yes 
+			}
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Changeling Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				CHN = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Changeling Corps\" division_template = \"CSTO Changeling Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Changeling Corps\" division_template = \"CSTO Changeling Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Changeling Corps\" division_template = \"CSTO Changeling Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Changeling Corps\" division_template = \"CSTO Changeling Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Changeling Corps\" division_template = \"CSTO Changeling Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_russian_garrison = {
+		visible = {
+			SOU = {	
+				is_CSTO_member = yes 
+			}
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Russian Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				SOU = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Russian Corps\" division_template = \"CSTO Russian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Russian Corps\" division_template = \"CSTO Russian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Russian Corps\" division_template = \"CSTO Russian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Russian Corps\" division_template = \"CSTO Russian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Russian Corps\" division_template = \"CSTO Russian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_severyanian_garrison = {
+		visible = {
+			STG = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Severyanian Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				STG = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Severyanian Corps\" division_template = \"CSTO Severyanian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Severyanian Corps\" division_template = \"CSTO Severyanian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Severyanian Corps\" division_template = \"CSTO Severyanian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Severyanian Corps\" division_template = \"CSTO Severyanian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Severyanian Corps\" division_template = \"CSTO Severyanian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_nova_griffonian_garrison = {
+		visible = {
+			GRF = {	
+				is_CSTO_member = yes 
+			}
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Nova Griffonian Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				GRF = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Nova Griffonian Corps\" division_template = \"CSTO Nova Griffonian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Nova Griffonian Corps\" division_template = \"CSTO Nova Griffonian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Nova Griffonian Corps\" division_template = \"CSTO Nova Griffonian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Nova Griffonian Corps\" division_template = \"CSTO Nova Griffonian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Nova Griffonian Corps\" division_template = \"CSTO Nova Griffonian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_olenian_garrison = {
+		visible = {
+			OLE = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Olenian Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				OLE = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Olenian Corps\" division_template = \"CSTO Olenian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Olenian Corps\" division_template = \"CSTO Olenian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Olenian Corps\" division_template = \"CSTO Olenian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Olenian Corps\" division_template = \"CSTO Olenian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Olenian Corps\" division_template = \"CSTO Olenian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_aquelian_garrison = {
+		visible = {
+			JER = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Aquellian Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				JER = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Aquellian Corps\" division_template = \"CSTO Aquellian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Aquellian Corps\" division_template = \"CSTO Aquellian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Aquellian Corps\" division_template = \"CSTO Aquellian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Aquellian Corps\" division_template = \"CSTO Aquellian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Aquellian Corps\" division_template = \"CSTO Aquellian Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	UNS_republican_garrison = {
+		visible = {
+			FAT = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Republican Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				FAT = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Republican Corps\" division_template = \"CSTO Republican Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Republican Corps\" division_template = \"CSTO Republican Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Republican Corps\" division_template = \"CSTO Republican Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Republican Corps\" division_template = \"CSTO Republican Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Republican Corps\" division_template = \"CSTO Republican Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_mareland_garrison = {
+		visible = {
+			EQC = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Mareland Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				EQC = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Mareland Corps\" division_template = \"CSTO Mareland Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Mareland Corps\" division_template = \"CSTO Mareland Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Mareland Corps\" division_template = \"CSTO Mareland Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Mareland Corps\" division_template = \"CSTO Mareland Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Mareland Corps\" division_template = \"CSTO Mareland Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_british_garrison = {
+		visible = {
+			GRB = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Britain Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				GRB = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Britain Corps\" division_template = \"CSTO Britain Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Britain Corps\" division_template = \"CSTO Britain Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Britain Corps\" division_template = \"CSTO Britain Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Britain Corps\" division_template = \"CSTO Britain Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Britain Corps\" division_template = \"CSTO Britain Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	UNS_riverlands_garrison = {
+		visible = {
+			RCT = {	
+				is_CSTO_member = yes 
+			}
+		}
+		available = {
+			has_tech = uns_assault_team_tech
+		}
+		allowed = {
+			original_tag = UNS
+		}
+		custom_cost_trigger = {
+			has_manpower > 38999
+		}
+		custom_cost_text = CSTO_39000_mp
+		fire_only_once = yes 
+		days_remove = 30
+		remove_effect = {
+			hidden_effect = {
+				division_template = {
+					name = "CSTO Riverlands Corps"
+					division_names_group = UNS_MAR_01
+					regiments = {
+						UNS_stormsquads_unit = { x = 0 y = 0 }
+						UNS_stormsquads_unit = { x = 0 y = 1 }
+						UNS_stormsquads_unit = { x = 1 y = 0 }
+						UNS_stormsquads_unit = { x = 1 y = 1 }
+						UNS_stormsquads_unit = { x = 2 y = 0 }
+					}
+					support = {
+						military_police = { x = 0 y = 0 }
+						field_hospital = { x = 0 y = 1 }
+						engineer = { x = 0 y = 2 }
+						maintenance_company = { x = 0 y = 3 }
+					}
+					priority = 0
+				}
+				RCT = {
+					capital_scope = {
+						create_unit = {
+							division = "name = \"CSTO Riverlands Corps\" division_template = \"CSTO Riverlands Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Riverlands Corps\" division_template = \"CSTO Riverlands Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Riverlands Corps\" division_template = \"CSTO Riverlands Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Riverlands Corps\" division_template = \"CSTO Riverlands Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+						create_unit = {
+							division = "name = \"CSTO Riverlands Corps\" division_template = \"CSTO Riverlands Corps\"	start_experience_factor = 0.4	start_equipment_factor = 1 "
+							owner = UNS
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+
+UNS_military_plan_gray = {
+
+	UNS_anti_changelings_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		targeted_modifier = {
+			tag = CHN 
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+	}
+	
+	UNS_anti_changeling_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.1
+			experience_gain_air_factor = 0.1
+			experience_gain_navy_factor = 0.1
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_changelling_refugees = {
+		visible = {	
+			has_completed_focus = UNS_CSTO_grey_plague
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			weekly_manpower = 250
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_refugees
+				}
+			}
+		}
+		cost = 15
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_refugees
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_refugees
+			}
+		}
+	}
+	
+	UNS_support_changeling_democrats = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_velvet
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		remove_effect = {
+			add_to_variable = { thoraxian_rebellion_strength = 5 tooltip = UNS_add_thorax_rebellion }
+			clamp_variable = { var = thoraxian_rebellion_strength max = 100 }
+		}
+		
+	}
+	
+	UNS_send_weapons_changelings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_weapon_sending_channels
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			has_equipment = {
+				type = infantry_equipment
+				amount > 2499
+			}
+			network_national_coverage = {
+				target = CHN 
+				value > 25
+			}
+		}
+		cost = 35
+		days_remove = 60
+		days_re_enable = 60
+		remove_effect = {
+			add_to_variable = { thoraxian_rebellion_strength = 10 tooltip = UNS_add_thorax_rebellion }
+			clamp_variable = { var = thoraxian_rebellion_strength max = 100 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2500
+			}
+		}
+	}
+	
+	UNS_buy_changeling_government = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_velvet
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			network_national_coverage = {
+				target = CHN 
+				value > 45
+			}
+		}
+		fire_only_once = yes 
+		cost = 60
+		days_remove = 120
+		remove_effect = {
+			add_to_variable = { thoraxian_rebellion_strength = 25 tooltip = UNS_add_thorax_rebellion }
+			clamp_variable = { var = thoraxian_rebellion_strength max = 100 }
+			
+		}
+	}
+	
+	UNS_support_olenian_democrats = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_velvet
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		remove_effect = {
+			add_to_variable = { olenian_rebellion_strength = 5 tooltip = UNS_add_velvet_rebellion }
+			clamp_variable = { var = olenian_rebellion_strength max = 100 }
+		}
+		
+	}
+	
+	UNS_send_weapons_olenian = {
+		visible = {
+			has_completed_focus = UNS_CSTO_weapon_sending_channels
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			has_equipment = {
+				type = infantry_equipment
+				amount > 2499
+			}
+			network_national_coverage = {
+				target = CHN 
+				value > 25
+			}
+		}
+		cost = 35
+		days_remove = 60
+		days_re_enable = 60
+		remove_effect = {
+			add_to_variable = { olenian_rebellion_strength = 10 tooltip = UNS_add_velvet_rebellion }
+			clamp_variable = { var = olenian_rebellion_strength max = 100 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2500
+			}
+		}
+	}
+	
+	UNS_buy_olenian_government = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_velvet
+			CHN = {
+				is_CSTO_member = no 
+			}
+			
+		}
+		available = {
+			network_national_coverage = {
+				target = CHN 
+				value > 45
+			}
+		}
+		fire_only_once = yes 
+		cost = 60
+		days_remove = 120
+		remove_effect = {
+			add_to_variable = { olenian_rebellion_strength = 25 tooltip = UNS_add_velvet_rebellion }
+			clamp_variable = { var = olenian_rebellion_strength max = 100 }
+			
+		}
+	}
+	
+	###### FRIENDSHIP SOLUTION
+	
+	UNS_CSTO_borders_demilitarisation = {
+		visible = {
+			has_completed_focus = UNS_CSTO_appease_chrysalis
+			hidden_trigger = {
+				has_country_flag = UNS_CSTO_appease_chrysalis_nobypass
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = UNS_CSTO_has_100_willing_to_cooperate
+				check_variable = { CHN_will_to_friend = 100 }
+			}
+		}
+		fire_only_once = yes 
+		cost = 100
+		remove_trigger = {
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 172
+						state = 136
+						state = 137
+						state = 318
+						state = 139
+						state = 246
+						state = 247
+						state = 319
+					}
+				}
+				set_demilitarized_zone = yes 
+			}
+			hidden_effect = { country_event = { id = uns_csto.5 days = 5 } }
+			add_to_faction = CHN 
+			CHN = {
+				add_ideas = UNS_CSTO_member_idea
+			}
+		}
+		
+	}
+	
+	UNS_CSTO_love_support = {
+		visible = {
+			has_completed_focus = UNS_CSTO_appease_chrysalis
+			hidden_trigger = {
+				has_country_flag = UNS_CSTO_appease_chrysalis_nobypass
+			}
+		}
+		
+		cost = 25
+		days_remove = 30
+		days_re_enable = 15
+		remove_effect = {
+			add_to_variable = { CHN_will_to_friend = 5 tooltip = CHN_will_to_friend_increase }
+			clamp_variable = { var = CHN_will_to_friend max = 100 }
+		}
+		
+	}
+	
+	UNS_CSTO_peaceful_propaganda = {
+
+		visible = {
+			has_completed_focus = UNS_CSTO_appease_chrysalis
+			hidden_trigger = {
+				has_country_flag = UNS_CSTO_appease_chrysalis_nobypass
+			}
+		}
+		
+		cost = 35
+		days_remove = 15
+		days_re_enable = 45
+		remove_effect = {
+			add_to_variable = { CHN_will_to_friend = 10 tooltip = CHN_will_to_friend_increase }
+			clamp_variable = { var = CHN_will_to_friend max = 100 }
+			acceptance_expand = yes 
+		}
+		
+	}
+
+	
+	UNS_CSTO_common_research = {
+		visible = {
+			has_completed_focus = UNS_CSTO_appease_chrysalis
+			hidden_trigger = {
+				has_country_flag = UNS_CSTO_appease_chrysalis_nobypass
+			}
+		}
+		
+		cost = 60
+		days_remove = 45
+		days_re_enable = 45
+		remove_effect = {
+			add_to_variable = { CHN_will_to_friend = 15 tooltip = CHN_will_to_friend_increase }
+			clamp_variable = { var = CHN_will_to_friend max = 100 }
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_tech_bonus = {
+					category = industry
+					category = electronics
+					category = infantry_weapons
+					uses = 1
+					bonus = 0.75
+				}
+			}
+		}
+	}
+	
+	UNS_CSTO_landlease_to_CHN = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+			hidden_trigger = {
+				has_country_flag = UNS_CSTO_appease_chrysalis_nobypass
+			}
+			
+		}
+		available = {
+			CHN = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 1999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 999
+			}
+		}
+		
+		cost = 15
+		days_remove = 5
+		days_re_enable = 30
+		complete_effect = {
+			CHN = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+				producer = ROOT 
+			}
+		}
+	}
+	
+}
+	
+UNS_military_plan_red = {
+	
+	
+	UNS_anti_communist_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			STG = {
+				is_CSTO_member = no 
+			}
+		}
+		targeted_modifier = {
+			tag = STG 
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+	}
+	
+	UNS_anti_stg_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			STG = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.15
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_stalliongradian_refugees = {
+		visible = {	
+			has_completed_focus = UNS_CSTO_grey_plague
+			STG = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			weekly_manpower = 100
+			research_speed_factor = 0.02
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_refugees
+				}
+			}
+		}
+		cost = 15
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_refugees
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_refugees
+			}
+		}
+	}
+	
+	UNS_CSTO_anticommunist_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_anticommie_propaganda
+		}
+		
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		
+		modifier = {
+			communism_drift = -0.05
+		}
+		
+		complete_effect = {
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						is_CSTO_member = yes 
+					}
+					add_timed_idea = {
+						idea = UNS_CSTO_anticommunism
+						days = 30
+					}
+				}
+			}
+		}
+		
+	}
+	
+	UNS_CSTO_landlease_to_GRF = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+		}
+		available = {
+			GRF = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 1999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 999
+			}
+		}
+		
+		cost = 15
+		days_remove = 5
+		days_re_enable = 30
+		complete_effect = {
+			GRF = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+				producer = ROOT 
+			}
+		}
+	}
+}
+
+
+UNS_military_plan_yellow = {
+	UNS_anti_imperial_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_fall_of_an_empire
+			GRI = {
+				is_CSTO_member = no 
+			}
+		}
+		targeted_modifier = {
+			tag = GRI 
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+	}
+	
+	UNS_anti_gri_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_fall_of_an_empire
+			GRI = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			experience_gain_air_factor = 0.1
+			experience_gain_navy_factor = 0.1
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_imperial_refugees = {
+		visible = {	
+			has_completed_focus = UNS_CSTO_fall_of_an_empire
+			GRI = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			weekly_manpower = 150
+			experience_gain_army_factor = 0.2
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_refugees
+				}
+			}
+		}
+		cost = 15
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_refugees
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_refugees
+			}
+		}
+	}
+	
+	
+	UNS_CSTO_landlease_to_FAT = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+		}
+		available = {
+			FAT = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 1999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 999
+			}
+		}
+		
+		cost = 25
+		days_remove = 15
+		days_re_enable = 30
+		complete_effect = {
+			FAT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+				producer = ROOT 
+			}
+		}
+	}
+}
+
+	
+UNS_military_plan_green = {
+	
+	
+	UNS_anti_hellquill_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			HLQ = {
+				is_CSTO_member = no 
+			}
+		}
+		targeted_modifier = {
+			tag = HLQ
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+	}
+	
+	UNS_anti_hlq_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_hellquill_operation
+			HLQ = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.05
+			experience_gain_air_factor = 0.25
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_hellquillian_refugees = {
+		visible = {	
+			has_completed_focus = UNS_CSTO_hellquill_operation
+			HLQ = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			weekly_manpower = 25
+			research_speed_factor = 0.05
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_refugees
+				}
+			}
+		}
+		cost = 15
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_refugees
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_refugees
+			}
+		}
+	}
+	
+	UNS_CSTO_landlease_to_RCT = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+		}
+		available = {
+			RCT = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 7999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 3999
+			}
+		}
+		
+		cost = 25
+		days_remove = 25
+		days_re_enable = 45
+		complete_effect = {
+			RCT = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 8000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 4000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -8000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -4000
+				producer = ROOT 
+			}
+		}
+	}
+	
+	UNS_CSTO_landlease_to_LSC = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+			has_completed_focus = UNS_CSTO_landlease_starry
+		}
+		available = {
+			LSC = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 7999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 3999
+			}
+		}
+		
+		cost = 25
+		days_remove = 25
+		days_re_enable = 45
+		complete_effect = {
+			LSC = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 8000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 4000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -8000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -4000
+				producer = ROOT 
+			}
+		}
+	}
+}
+
+
+	
+UNS_military_plan_black = {
+	
+	
+	UNS_anti_league_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_guaranee_hlr
+			STG = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.15
+			experience_gain_air_factor = 0.15
+			experience_gain_navy_factor = 0.15
+		}
+		targeted_modifier = {
+			tag = DED 
+			attack_bonus_against = 0.15
+			defense_bonus_against = 0.15
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_CSTO_landlease_to_HLR = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+		}
+		available = {
+			HLR = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 1999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 999
+			}
+		}
+		
+		cost = 15
+		days_remove = 5
+		days_re_enable = 30
+		complete_effect = {
+			HLR = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+				producer = ROOT 
+			}
+		}
+	}
+}
+
+UNS_hirropterran_operation = {
+	
+	UNS_anti_hiropterra_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			BAT = {
+				is_CSTO_member = no 
+			}
+		}
+		targeted_modifier = {
+			tag = HLQ
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+	}
+	
+	UNS_anti_bat_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_hellquill_operation
+			BAT = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.05
+			experience_gain_air_factor = 0.25
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_hiropterran_refugees = {
+		visible = {	
+			has_completed_focus = UNS_CSTO_embassy_in_bat
+			BAT = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			weekly_manpower = 150
+			research_speed_factor = 0.05
+			experience_gain_army = 0.02
+			stability_weekly = 0.01
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_refugees
+				}
+			}
+		}
+		cost = 15
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_refugees
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_refugees
+			}
+		}
+	}
+	
+	UNS_CSTO_landlease_to_TBK = {
+		visible = {
+			has_completed_focus = UNS_CSTO_land_lease_programm
+			has_completed_focus = UNS_CSTO_humanitarian_aid_aha
+		}
+		available = {
+			RCT = {
+				is_CSTO_member = yes 
+			}
+			has_equipment = {
+				type = infantry_equipment
+				amount > 1999
+			}
+			has_equipment = {
+				type = support_equipment
+				amount > 999
+			}
+		}
+		
+		cost = 25
+		days_remove = 25
+		days_re_enable = 45
+		complete_effect = {
+			TBK = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ROOT 
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = ROOT 
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -1000
+				producer = ROOT 
+			}
+		}
+	}
+}
+
+UNS_colthagen_operation = {
+
+	UNS_anti_colthage_propaganda = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			CTH = {
+				is_CSTO_member = no 
+			}
+		}
+		targeted_modifier = {
+			tag = CTH 
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+	}
+	
+	UNS_anti_colthage_trainings = {
+		visible = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			CTH = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_training_in_progress
+				}
+			}
+		}
+		modifier = {
+			experience_gain_army_factor = 0.1
+			experience_gain_air_factor = 0.1
+			experience_gain_navy_factor = 0.1
+		}
+		cost = 30
+		days_remove = 45
+		days_re_enable = 90
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_training_in_progress
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_training_in_progress
+			}
+		}
+	}
+	
+	UNS_colthage_refugees = {
+		visible = {	
+			has_completed_focus = UNS_CSTO_grey_plague
+			CTH = {
+				is_CSTO_member = no 
+			}
+		}
+		modifier = {
+			weekly_manpower = 250
+		}
+		available = {
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = UNS_CSTO_plan_refugees
+				}
+			}
+		}
+		cost = 15
+		days_remove = 30
+		days_re_enable = 60
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = UNS_CSTO_plan_refugees
+			}
+		}
+		
+		remove_effect = {
+			hidden_effect = {
+				clr = UNS_CSTO_plan_refugees
+			}
+		}
+	}
+	
+	UNS_support_colthage_democrats = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_constitutionalists
+			CTH = {
+				is_CSTO_member = no 
+			}
+		}
+		cost = 25
+		days_remove = 30
+		days_re_enable = 60
+		remove_effect = {
+			add_to_variable = { constitutionalist_strength = 5 tooltip = UNS_add_constitutional_rebellion }
+			clamp_variable = { var = constitutionalist_strength max = 100 }
+		}
+		
+	}
+	
+	UNS_send_weapons_colthage = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_constitutionalists
+			CTH = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			has_equipment = {
+				type = infantry_equipment
+				amount > 2499
+			}
+			network_national_coverage = {
+				target = CHN 
+				value > 25
+			}
+		}
+		cost = 35
+		days_remove = 60
+		days_re_enable = 60
+		remove_effect = {
+			add_to_variable = { constitutionalist_strength = 10 tooltip = UNS_add_constitutional_rebellion }
+			clamp_variable = { var = constitutionalist_strength max = 100 }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2500
+			}
+		}
+	}
+	
+	UNS_buy_colthage_government = {
+		visible = {
+			has_completed_focus = UNS_CSTO_support_constitutionalists
+			CTH = {
+				is_CSTO_member = no 
+			}
+		}
+		available = {
+			network_national_coverage = {
+				target = CHN 
+				value > 45
+			}
+		}
+		fire_only_once = yes 
+		cost = 60
+		days_remove = 120
+		remove_effect = {
+			add_to_variable = { constitutionalist_strength = 25 tooltip = UNS_add_constitutional_rebellion }
+			clamp_variable = { var = constitutionalist_strength max = 100 }
+			
+		}
+	}
+}

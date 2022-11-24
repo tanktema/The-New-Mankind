@@ -26,6 +26,12 @@ ideologies = {
 			harmonic_magocracy = {
 				can_be_randomly_selected = no
 			}
+			harmonic_constitutionalism = {
+				can_be_randomly_selected = no
+			}
+			social_banditry = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {
@@ -115,6 +121,9 @@ ideologies = {
 			juche = {
 				can_be_randomly_selected = no
 			}
+			dengism = {
+				can_be_randomly_selected = no
+			}
 		}
 
 		dynamic_faction_names = {
@@ -175,9 +184,6 @@ ideologies = {
 			plutocracy = {
 				can_be_randomly_selected = no
 			}
-			integralism = {
-				can_be_randomly_selected = no
-			}
 			reformisten = {
 				can_be_randomly_selected = no
 			}
@@ -210,16 +216,22 @@ ideologies = {
 			neofeudalism = {
 				can_be_randomly_selected = no
 			}
-			neo_bolshevism = {
-				can_be_randomly_selected = no 
-			}
 			esotericism = {
+				can_be_randomly_selected = no
+			}
+			celestial_cult = {
+				can_be_randomly_selected = no
+			}
+			surveillance_state = {
 				can_be_randomly_selected = no
 			}
 			tnm_militarism = {
 				can_be_randomly_selected = no 
 			}
 			tnm_human_supeiority = {
+				can_be_randomly_selected = no 
+			}
+			neo_bolshevism = {
 				can_be_randomly_selected = no 
 			}
 		}
@@ -278,7 +290,7 @@ ideologies = {
 			}
 			technocracy = {
 				can_be_randomly_selected = no
-			}
+			}		
 			libertarianism = {
 				can_be_randomly_selected = no
 			}
@@ -292,10 +304,10 @@ ideologies = {
 				can_be_randomly_selected = no
 			}
 			holy_order_n = {
-			    can_be_randomly_selected = no
+				can_be_randomly_selected = no
 			}
 			theocracy_subideology = {
-			    can_be_randomly_selected = no
+				can_be_randomly_selected = no
 			}
 			conservative_liberalism = {
 				can_be_randomly_selected = no

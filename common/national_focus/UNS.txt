@@ -95,8 +95,14 @@ focus_tree = {
 				id = uns.8
 			}
 			hidden_effect = {
-				country_event = {
-					id = af_uns.1 days = 1
+				if = {
+					limit = {
+						has_global_flag = TNM_ESC_aprilfools_flag
+					}
+				
+					country_event = {
+						id = af_uns.1 days = 1
+					}
 				}
 			}
 			add_ideas = UNS_equestria_depence
@@ -113,11 +119,11 @@ focus_tree = {
 				}
 				96 = {
 					set_state_category = large_city
-					set_state_name = "STATE_900"
+					set_state_name = "STATE_99900"
 				}
 				set_province_name = { 
 					id = 9406 
-					name = "STATE_900" 
+					name = "STATE_99900" 
 				}
 			}
 		}
@@ -716,6 +722,1756 @@ focus_tree = {
 		}
 	} 
 	
+	
+	##### COTO Focuses here
+	
+	focus = {
+		id = UNS_CSTO_organisation_of_csto
+		x = 0
+		y = 1
+		relative_position_id = UNS_world_situation
+		prerequisite = { focus = UNS_world_situation }
+		allow_branch = {
+			has_country_flag = UNS_csto_solution_flag
+		}
+		available = {
+			hidden_trigger = { has_country_flag = UNS_CSTO_founded }
+		}
+		cost = 0
+		completion_reward = {
+			custom_effect_tooltip = focus_complete_on_event
+			hidden_effect = {
+				add_ideas = UNS_CSTO_leader_idea
+				add_dynamic_modifier = { modifier = CSTO_modifier }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_eqvus_contingent 
+		x = -8
+		y = 1
+		relative_position_id = UNS_CSTO_organisation_of_csto
+		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_tooltip = UNS_eqvus_representation_trainings
+			unlock_decision_tooltip = UNS_follow_csto_guarantees
+			custom_effect_tooltip = UNS_additional_requirements
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_grey_plague
+		x = -2
+		y = 1
+		available = {
+			CHN = {
+				is_CSTO_member = no 
+			}
+		}
+		relative_position_id = UNS_CSTO_eqvus_contingent
+		prerequisite = { focus = UNS_CSTO_eqvus_contingent }
+		cost = 7.2
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_military_plan_gray
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_fifth_column
+		x = -6
+		y = 1
+		relative_position_id = UNS_CSTO_grey_plague
+		prerequisite = { focus = UNS_CSTO_grey_plague }
+		cost = 7.2
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+			CHN = {
+				add_stability = -0.07
+				add_war_support = -0.07
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_support_velvet
+		x = -3
+		y = 1
+		relative_position_id = UNS_CSTO_fifth_column
+		prerequisite = { focus = UNS_CSTO_fifth_column }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = UNS_CSTO_unlock_comm_dem_support_decisions
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_support_thorax
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_fifth_column
+		prerequisite = { focus = UNS_CSTO_fifth_column }
+		cost = 7.2
+		completion_reward = {
+			custom_effect_tooltip = UNS_CSTO_unlock_comm_dem_support_decisions
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_prepare_for_the_rebellion
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_support_velvet
+		prerequisite = { focus = UNS_CSTO_support_thorax }
+		prerequisite = { focus = UNS_CSTO_support_velvet }
+		cost = 5
+		completion_reward = {
+			add_political_power = -25
+			add_manpower = -150
+			add_to_variable = { thoraxian_rebellion_strength = 15 tooltip = UNS_add_thorax_rebellion }
+			add_to_variable = { olenian_rebellion_strength = 15 tooltip = UNS_add_velvet_rebellion }	
+			clamp_variable = { var = thoraxian_rebellion_strength max = 100 }
+			clamp_variable = { var = olenian_rebellion_strength max = 100 }
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_self_proclaim_rule
+		x = 0
+		y = 1
+		available = {
+			CCN = {
+				exists = no 
+			}
+			OLE = {
+				is_subject_of = CHN 
+			}
+		}
+		relative_position_id = UNS_CSTO_prepare_for_the_rebellion
+		prerequisite = { focus = UNS_CSTO_prepare_for_the_rebellion }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = UNS_calculate_strength
+			set_variable = { thoraxian_rebel_power = thoraxian_rebellion_strength }
+			divide_variable = { thoraxian_rebel_power = 200 }
+			set_variable = { olenian_rebel_power = olenian_rebellion_strength }
+			divide_variable = { olenian_rebel_power = 200 }
+			CHN = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = THIS
+					size = ROOT.thoraxian_rebel_power
+				}
+			}
+			OLE = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = THIS
+					size = ROOT.olenian_rebel_power
+				}
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_CIA_expansion
+		x = 2
+		y = 1
+		relative_position_id = UNS_CSTO_fifth_column
+		prerequisite = { focus = UNS_CSTO_fifth_column }
+		cost = 7.2
+		completion_reward = {
+			add_ideas = UNS_CSTO_CIA_first_idea
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_weapon_sending_channels
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_CIA_expansion
+		prerequisite = { focus = UNS_CSTO_CIA_expansion }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = UNS_unlock_new_decisions_grey_warplan
+		}
+	}
+	
+	focus = { 
+		id = UNS_CSTO_prepare_military_units
+		x = 1
+		y = 1 
+		relative_position_id = UNS_CSTO_CIA_expansion
+		prerequisite = { focus = UNS_CSTO_CIA_expansion }
+		cost = 5
+		completion_reward = {
+			add_ideas = SOU_milit_reform
+		}
+	}
+	
+	focus = {
+		id = UNS_CSO_changeling_embargo
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_weapon_sending_channels
+		prerequisite = { focus = UNS_CSTO_weapon_sending_channels }
+		prerequisite = { focus = UNS_CSTO_prepare_military_units }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_opinion_modifier = {
+					target = CHN 
+					modifier = CHN_Embargo
+				}
+				reverse_add_opinion_modifier = {
+					target = CHN 
+					modifier = CHN_Embargo
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_comittee_project
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_grey_plague
+		prerequisite = { focus = UNS_CSTO_grey_plague }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_ideas = UNS_CSTO_comittee_plan_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_hidden_airfields
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_comittee_project
+		prerequisite = { focus = UNS_CSTO_comittee_project }
+		cost = 5
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 14
+						state = 172
+						state = 136
+						state = 137
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_military_infra_build_help
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_hidden_airfields
+		prerequisite = { focus = UNS_CSTO_hidden_airfields }
+		cost = 10
+		completion_reward = {
+			EQS = {
+				add_ideas = GRB_infrastructure_build
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes 
+				start_province = 9406
+				target_province = 179
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes 
+				start_province = 9406
+				target_province = 13145
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes 
+				start_province = 9406
+				target_province = 585
+			}
+			build_railway = {
+				level = 2
+				build_only_on_allied = yes 
+				start_province = 9406
+				target_province = 9351
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_grey_plan_invade_CHN
+		x = 1
+		y = 2
+		relative_position_id = UNS_CSTO_military_infra_build_help
+		prerequisite = { focus = UNS_CSTO_military_infra_build_help }
+		prerequisite = { focus = UNS_CSO_changeling_embargo }
+		prerequisite = { focus = UNS_CSTO_self_proclaim_rule }
+		cost = 5
+		bypass = {
+			has_war_with = CHN 
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHN 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invite_EQS
+		x = 0
+		y = 2
+		relative_position_id = UNS_CSTO_eqvus_contingent
+		prerequisite = { focus = UNS_CSTO_grey_plague OR = UNS_CSTO_red_menace }
+		cost = 5
+		completion_reward = {
+			EQS = {
+				country_event = { id = uns_csto.4 days = 10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invite_CRY
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_invite_EQS
+		prerequisite = { focus = UNS_CSTO_invite_EQS }
+		cost = 5
+		bypass = {
+			CRY = {
+				is_CSTO_member = yes 
+			}
+		}
+		completion_reward = {
+			CRY = {
+				country_event = { id = uns_csto.4 days = 10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invite_SOU
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_invite_EQS
+		prerequisite = { focus = UNS_CSTO_invite_EQS }
+		cost = 5
+		bypass = {
+			SOU = {
+				is_CSTO_member = yes 
+			}
+		}
+		completion_reward = {
+			SOU = {
+				country_event = { id = uns_csto.4 days = 10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_article_five
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_invite_CRY 
+		prerequisite = { focus = UNS_CSTO_invite_CRY OR = UNS_CSTO_invite_SOU }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = UNS_CSTO_art_5_tooltip
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_red_menace
+		x = 2
+		y = 1
+		relative_position_id = UNS_CSTO_eqvus_contingent
+		prerequisite = { focus = UNS_CSTO_eqvus_contingent }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_military_plan_red
+		}
+	}
+	
+	focus = { 
+		id = UNS_CSTO_the_iron_curtain
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_red_menace 
+		prerequisite = { focus = UNS_CSTO_red_menace }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_ideas = UNS_CSTO_iron_curtain
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_appease_chrysalis
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_the_iron_curtain
+		prerequisite = { focus = UNS_CSTO_the_iron_curtain }
+		bypass = {
+			has_completed_focus = UNS_CSTO_grey_plague 
+		}
+		cost = 5
+		completion_reward = {
+			set_country_flag = UNS_CSTO_appease_chrysalis_nobypass
+			custom_effect_tooltip = UNS_CSTO_unlock_decisions_chrysalis
+		}
+	}
+		
+	focus = {
+		id = UNS_CSTO_anticommie_propaganda
+		x = 4
+		y = 1
+		relative_position_id = UNS_CSTO_red_menace
+		prerequisite = { focus = UNS_CSTO_red_menace }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_CSTO_anticommunist_propaganda
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_sf_provocations
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_anticommie_propaganda
+		prerequisite = { focus = UNS_CSTO_anticommie_propaganda }
+		cost = 5
+		completion_reward = {
+			STG = {
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_anticommunist_pact
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_anticommie_propaganda
+		prerequisite = { focus = UNS_CSTO_anticommie_propaganda }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = STG 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = STG 
+				}
+				add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = SRS 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = SRS
+				}
+				add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = GRW 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = anticommunsim_politics
+					target = GRW 
+				}
+			}
+		}
+	}
+	
+	focus = {	
+		id = UNS_CSTO_new_bloody_sunday
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_appease_chrysalis
+		prerequisite = { focus = UNS_CSTO_appease_chrysalis }
+		prerequisite = { focus = UNS_CSTO_sf_provocations }
+		cost = 7.2
+		completion_reward = {
+			STG = {
+				add_manpower = -153
+				add_stability = -0.1
+				add_war_support = -0.1
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+				custom_effect_tooltip = UNS_CSTO_start_STG_civilwar
+				if = {
+					limit = {
+						AND = {
+							check_variable = { party_popularity@communism < party_popularity@democratic }
+							has_stability < 0.5
+						}
+					}
+					start_civil_war = {
+						ruling_party = democratic
+						ideology = communism
+						size = 0.5
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_assasinate_serov
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_new_bloody_sunday
+		prerequisite = { focus = UNS_CSTO_new_bloody_sunday }
+		cost = 5
+		bypass = {
+			STG = {
+				OR = {
+					NOT = { has_character = STG_sinister_serov }
+					has_civil_war = yes 
+					has_government = democratic
+					is_CSTO_member = yes 
+				}
+			}
+		}
+		completion_reward = {
+			STG = {	
+				retire_character = STG_sinister_serov
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_nova_griffonia_support
+		x = 8
+		y = 1
+		relative_position_id = UNS_CSTO_red_menace
+		prerequisite = { focus = UNS_CSTO_red_menace }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = UNS_CSTO_add_GRF_csto_guarantee
+			GRF = {
+				set_country_flag = UNS_CSTO_candidate
+				add_stability = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_supress_vergilia
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_nova_griffonia_support
+		prerequisite = { focus = UNS_CSTO_nova_griffonia_support}
+		cost = 5
+		completion_reward = {	
+			GRF = {
+				army_experience = 25
+				add_ideas = UNS_CSTO_military_tariners
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_GRF_military_support
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_nova_griffonia_support
+		prerequisite = { focus = UNS_CSTO_nova_griffonia_support}
+		cost = 5
+		completion_reward = {	
+			GRF = {
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 1500
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = medium_tank_chassis
+					amount = 250
+					producer = ROOT 
+				}
+				add_equipment_to_stockpile = {
+					type = support_equipment
+					amount = 1000
+					producer = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_land_lease_programm
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_GRF_military_support
+		prerequisite = { focus = UNS_CSTO_GRF_military_support }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = UNS_CSTO_unlock_landlease_decision
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_trading_with_GRF
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_anticommunist_pact
+		prerequisite = { focus = UNS_CSTO_anticommunist_pact }
+		prerequisite = { focus = UNS_CSTO_supress_vergilia }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_opinion_modifier = {
+					modifier = trading_treaty_uns
+					target = GRF
+				}
+				reverse_add_opinion_modifier= {
+					modifier = trading_treaty_uns
+					target = GRF
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_guarantee_grf
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_trading_with_GRF
+		prerequisite = { focus = UNS_CSTO_trading_with_GRF }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				give_guarantee = GRF 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invade_stg
+		x = -1
+		y = 1
+		bypass = {
+			STG = {
+				OR = {
+					is_CSTO_member = yes 
+					has_war_with = ROOT 
+				}
+			}
+		}
+		relative_position_id = UNS_CSTO_assasinate_serov
+		prerequisite = { focus = UNS_CSTO_assasinate_serov }
+		prerequisite = { focus = UNS_CSTO_guarantee_grf }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = STG 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_griffon_continent
+		x = 8
+		y = 1
+		relative_position_id = UNS_CSTO_organisation_of_csto 
+		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_griphonia_representation_trainings
+			unlock_decision_tooltip = UNS_follow_csto_guarantees
+			custom_effect_tooltip = UNS_additional_requirements
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_fall_of_an_empire
+		x = -3
+		y = 1
+		relative_position_id = UNS_CSTO_griffon_continent
+		prerequisite = { focus = UNS_CSTO_griffon_continent }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_military_plan_yellow
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_trade_war_empire
+		x = -6
+		y = 1
+		relative_position_id = UNS_CSTO_fall_of_an_empire
+		prerequisite = { focus = UNS_CSTO_fall_of_an_empire }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				add_opinion_modifier = {
+					modifier = trading_treaty_uns
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					target = ROOT 
+				}
+			}
+			add_ideas = UNS_CSTO_trade_war_idea
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_resource_excavation_program
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_trade_war_empire
+		prerequisite = { focus = UNS_CSTO_trade_war_empire }
+		cost = 7.2
+		completion_reward = {	
+			custom_effect_tooltip = add_random_resource_csto
+			hidden_effect = {
+				every_country = {
+					limit = { is_CSTO_member = yes }
+					capital_scope = {
+					
+						hidden_effect = {
+							random_list = {
+								25 = {
+									add_resource = {
+										type = oil
+										amount = 15
+									}
+									add_resource = {
+										type = rubber
+										amount = 15
+									}
+								}
+								25 = {
+									add_resource = {
+										type = tungsten
+										amount = 10	
+											
+									}
+									add_resource = {
+										type = chromium
+										amount = 10
+									}
+								}
+								25 = {
+									add_resource = {
+										type = steel
+										amount = 25
+									}
+									add_resource = {
+										type = aluminium
+										amount = 25
+									}
+								}
+								
+								25 = {
+									add_resource = {
+										type = crystals
+										amount = 25
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = UNS_CSTO_trade_offer_grb
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_trade_war_empire
+		prerequisite = { focus = UNS_CSTO_trade_war_empire }
+		cost = 7.2
+		bypass = {
+			GRB = {
+				is_CSTO_member = yes 
+			}
+		}
+		completion_reward = {	
+			GRB = {
+				add_opinion_modifier = {
+					modifier = trading_treaty_uns
+					target = ROOT 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = trading_treaty_uns
+					target = ROOT 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_agenture_of_cia
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_resource_excavation_program
+		prerequisite = { focus = UNS_CSTO_resource_excavation_program }
+		cost = 5
+		completion_reward = {
+			UNS_maximilian_carter = {
+				add_corps_commander_role = {
+					traits = { griffon_infiltrator tankist_commander_hum }
+					skill = 5
+					attack_skill = 4
+					defense_skill = 4
+					logistics_skill = 5
+					planning_skill = 3
+				}
+			}
+			add_corps_commander_role = {
+				character = UNS_lina_cypher
+				traits = { other_race_general reactive_pony }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 4
+				logistics_skill = 5
+				planning_skill = 1
+			}
+			
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_skyfall_csto_candidate
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_trade_offer_grb
+		prerequisite = { focus = UNS_CSTO_trade_offer_grb }
+		cost = 5
+		completion_reward = {
+			TRD = {
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_TRD_guarantee
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_destroy_infrastructure
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_agenture_of_cia
+		prerequisite = { focus = UNS_CSTO_agenture_of_cia }
+		prerequisite = { focus = UNS_CSTO_skyfall_csto_candidate }
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = UNS_CSTO_unlock_new_operation
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_decline_imperial_politics
+		x = -2
+		y = 1
+		relative_position_id = UNS_CSTO_fall_of_an_empire
+		prerequisite = { focus = UNS_CSTO_fall_of_an_empire }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {	
+					is_CSTO_member = yes 
+				}
+				add_opinion_modifier = {
+					modifier = decline_politics
+					target = GRI 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = decline_politics
+					target = GRI 
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_support_republic
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_decline_imperial_politics
+		prerequisite = { focus = UNS_CSTO_decline_imperial_politics }
+		cost = 5
+		completion_reward = {
+			FAT = {
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_FAT_guarantee
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_public_aggression_declining
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_decline_imperial_politics
+		prerequisite = { focus = UNS_CSTO_decline_imperial_politics }
+		cost = 5
+		completion_reward = {
+			every_other_country = {
+				limit = {	
+					NOT = { original_tag = GRI }
+					is_CSTO_member = yes 
+				}
+				add_opinion_modifier = {
+					modifier = decline_politics
+					target = GRI 
+				}
+				reverse_add_opinion_modifier = {
+					modifier = decline_politics
+					target = GRI 
+				}
+			}
+			custom_effect_tooltip = UNS_CSTO_5_to_20_percent_embargo
+			hidden_effect = {
+				every_other_country = {
+					limit = {
+						NOT = { original_tag = GRI }
+						is_CSTO_member = no 
+					}
+					random_list = {
+						5 = {
+							add_opinion_modifier = {
+								modifier = decline_politics
+								target = GRI 
+							}
+							reverse_add_opinion_modifier = {
+								modifier = decline_politics
+								target = GRI 
+							}
+							modifier = {
+								factor = 2
+								has_government = neutrality
+							}
+							modifier = {
+								factor = 3
+								has_government = communism
+							}
+							modifier = {
+								factor = 4
+								has_government = democratic
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_expeditional_corps
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_support_republic
+		prerequisite = { focus = UNS_CSTO_support_republic }
+		prerequisite = { focus = UNS_CSTO_public_aggression_declining }
+		cost = 5
+		completion_reward = {
+			add_ideas = UNS_CSTO_expeditionary_corps_idea
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_north_support_programm
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_expeditional_corps
+		prerequisite = { focus = UNS_CSTO_expeditional_corps }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_CSTO_landlease_to_FAT
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_yellow_military_plan_griwar
+		x = 2
+		y = 1
+		bypass = {
+			OR = {
+				GRI = {
+					has_war_with = ROOT 
+					is_CSTO_member = yes 
+				}
+			}
+		}
+		relative_position_id = UNS_CSTO_destroy_infrastructure
+		prerequisite = { focus = UNS_CSTO_destroy_infrastructure }
+		prerequisite = { focus = UNS_CSTO_north_support_programm }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GRI 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invite_jer
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_fall_of_an_empire
+		prerequisite = { focus = UNS_CSTO_fall_of_an_empire }
+		cost = 5
+		completion_reward = {
+			JER = {
+				country_event = { id = uns_csto.4 days = 10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_support_river_coalition
+		x = 2
+		y = 1
+		relative_position_id = UNS_CSTO_griffon_continent
+		prerequisite = { focus = UNS_CSTO_griffon_continent }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_military_plan_green
+			unlock_decision_category_tooltip = UNS_military_plan_black
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_river_pact
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_support_river_coalition
+		prerequisite = { focus = UNS_CSTO_support_river_coalition }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_riverlands_country = yes 
+				}
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_this_to_CSTO
+			}
+			add_political_power = 25
+			acceptance_expand_extra = yes 
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invite_GRB
+		x = 2
+		y = 1
+		relative_position_id = UNS_CSTO_invite_jer
+		prerequisite = { focus = UNS_CSTO_invite_jer }
+		prerequisite = { focus = UNS_CSTO_river_pact }
+		cost = 7.2
+		completion_reward = {
+			GRB = {
+				country_event = { id = uns_csto.4 days = 10 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_frontier_project
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_invite_GRB
+		prerequisite = { focus = UNS_CSTO_invite_GRB }
+		cost = 7.2
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_ideas = UNS_CSTO_frontier_idea
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_hellquill_operation
+		x = 2
+		y = 1
+		relative_position_id = UNS_CSTO_support_river_coalition
+		prerequisite = { focus = UNS_CSTO_support_river_coalition }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_hellquillian_refugees
+			unlock_decision_tooltip = UNS_anti_hlq_trainings
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invite_LSC
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_hellquill_operation
+		prerequisite = { focus = UNS_CSTO_hellquill_operation }
+		cost = 5
+		completion_reward = {
+			LSC = {
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_this_to_CSTO
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_west_eleven_trainings
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_hellquill_operation
+		prerequisite = { focus = UNS_CSTO_hellquill_operation }
+		cost = 5
+		available = {
+			date > 1011.1.1
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				army_experience = 25
+				activate_decision = UNS_griphonia_representation_trainings 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_landlease_starry
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_invite_LSC
+		prerequisite = { focus = UNS_CSTO_invite_LSC }
+		prerequisite = { focus = UNS_CSTO_west_eleven_trainings }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_CSTO_landlease_to_LSC
+			custom_effect_tooltip = UNS_additional_requirements
+		}
+	}
+	
+	focus = {	
+		id = UNS_CSTO_attack_HLQ
+		x = 0
+		y = 1
+		bypass = {
+			HLQ = {
+				OR = {
+					has_war_with = ROOT 
+					is_CSTO_member = yes 
+				}
+			}
+		}
+		relative_position_id = UNS_CSTO_landlease_starry
+		prerequisite = { focus = UNS_CSTO_landlease_starry }
+		cost = 5
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = HLQ 
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_guaranee_hlr
+		x = 5
+		y = 1
+		relative_position_id = UNS_CSTO_support_republic
+		prerequisite = { focus = UNS_CSTO_support_republic }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_military_plan_black
+			HLR = {
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_this_to_CSTO
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_arcturian_infrastructure
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_guaranee_hlr
+		prerequisite = { focus = UNS_CSTO_guaranee_hlr }
+		cost = 5
+		completion_reward = {
+			HLR = {
+				every_owned_state = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_modern_warfare
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_guaranee_hlr
+		prerequisite = { focus = UNS_CSTO_guaranee_hlr }
+		cost = 5
+		completion_reward = {
+			HLR = {
+				add_doctrine_cost_reduction = {
+					category = land_doctrine
+					cost_reduction = 0.5
+					uses = 3
+				}
+				add_tech_bonus = {
+					category = infantry_weapons
+					uses = 3
+					bonus = 1
+				}
+			}
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_know_your_enemy
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_arcturian_infrastructure
+		prerequisite = { focus = UNS_CSTO_arcturian_infrastructure }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_ideas = UNS_CSTO_paladins
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_prepared_defense
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_modern_warfare
+		prerequisite = { focus = UNS_CSTO_modern_warfare }
+		cost = 10
+		completion_reward = {
+			HLR = {
+				every_owned_state = {
+					limit = {
+						any_neighbor_state = {
+							is_owned_by = DED 
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						instant_build = yes 
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_attack_dread_league
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_know_your_enemy
+		prerequisite = { focus = UNS_CSTO_know_your_enemy }
+		prerequisite = { focus = UNS_CSTO_prepared_defense }
+		cost = 5
+		completion_reward = {
+			add_to_faction = HLR 
+			HLR = {
+				add_ideas = UNS_CSTO_member_idea
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = DED
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_zebra_continent
+		x = 8
+		y = 1
+		relative_position_id = UNS_CSTO_organisation_of_csto 
+		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_zebrican_representation_trainings
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_chiropterran_operation
+		x = -3
+		y = 1
+		relative_position_id = UNS_CSTO_zebra_continent
+		prerequisite = { focus = UNS_CSTO_zebra_continent }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_hirropterran_operation
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_tobuk_connection
+		x = -3
+		y = 1
+		relative_position_id = UNS_CSTO_chiropterran_operation
+		prerequisite = { focus = UNS_CSTO_chiropterran_operation }
+		cost = 5
+		completion_reward = {
+			TBK = {
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_this_to_CSTO
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_humanitarian_aid_aha
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_tobuk_connection
+		prerequisite = { focus = UNS_CSTO_tobuk_connection }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_CSTO_landlease_to_TBK
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_contact_tobuck_generals
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_tobuk_connection
+		prerequisite = { focus = UNS_CSTO_tobuk_connection }
+		cost = 5
+		completion_reward = {
+			TBK = {
+				TBK_wallnut_drive = { set_nationality = ROOT }
+				TBK_baragzen = { set_nationality = ROOT }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_compromate
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_humanitarian_aid_aha
+		prerequisite = { focus = UNS_CSTO_humanitarian_aid_aha }
+		cost = 5
+		completion_reward = {
+			add_political_power = 25
+			add_intel = {
+				target = TBK
+				civilian_intel = 10
+				army_intel = 10
+				navy_intel = 10
+				airforce_intel = 10
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_military_instructors_tobuck
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_contact_tobuck_generals
+		prerequisite = { focus = UNS_CSTO_contact_tobuck_generals }
+		cost = 5
+		completion_reward = {
+			TBK = {
+				army_experience = 50
+			}
+			army_experience = 25
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_tobuck_alessia_takeover
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_compromate
+		prerequisite = { focus = UNS_CSTO_compromate }
+		prerequisite = { focus = UNS_CSTO_military_instructors_tobuck }
+		cost = 10
+		completion_reward = {
+			TBK = {
+				TBK_alesia = {
+					add_country_leader_role = {
+						promote_leader = yes
+						country_leader = {	
+							desc="UNS_alesia_desc"
+							ideology=harmonic_constitutionalism
+							traits={  }
+							expire="1999.1.1.1"
+							id=-1
+						}
+					}
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = no 
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.5
+				}
+				retire_character = TBK_pea_shooter
+				retire_character = TBK_zegiga
+				add_ideas = UNS_CSTO_member_idea
+			}
+				
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_deiplomacy_chiropterra
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_chiropterran_operation
+		prerequisite = { focus = UNS_CSTO_chiropterran_operation }
+		cost = 5
+		completion_reward = {
+			add_opinion_modifier = {
+				modifier = embassy_opened
+				target = BAT
+			}
+			reverse_add_opinion_modifier = {
+				modifier = embassy_opened
+				target = BAT
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_embassy_in_bat
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_deiplomacy_chiropterra
+		prerequisite = { focus = UNS_CSTO_deiplomacy_chiropterra }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_hiropterran_refugees
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_cia_bat
+		x = 3
+		y = 1
+		relative_position_id = UNS_CSTO_chiropterran_operation 
+		prerequisite = { focus = UNS_CSTO_chiropterran_operation }
+		cost = 5
+		completion_reward = {
+			create_operative_leader = {
+				name = "Moon Catcher"
+				GFX = GFX_portrait_Con_Mane_ELF
+				bypass_recruitment = yes
+				available_to_spy_master = yes
+				nationalities = {
+					BAT
+					NLR
+				}
+				traits = { 
+					operative_commando operative_safe_cracker operative_natural_orator  
+					pony_race_trait
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_assasinate_generals
+		x = -1
+		y = 1
+		available = {
+			network_national_coverage = {
+				target = BAT
+				value > 50
+			}
+		}
+		relative_position_id = UNS_CSTO_cia_bat
+		prerequisite = { focus = UNS_CSTO_cia_bat }
+		cost = 5
+		completion_reward = {
+			BAT = {
+				retire_character = BAT_dead_air
+				retire_character = BAT_ecliptic_brine
+				retire_character = BAT_eclipse_ember
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_attack_soldiers
+		x = 1
+		y = 1
+		available = {
+			network_national_coverage = {
+				target = BAT
+				value > 15
+			}
+		}
+		relative_position_id = UNS_CSTO_cia_bat
+		prerequisite = { focus = UNS_CSTO_cia_bat }
+		cost = 5
+		completion_reward = {
+			BAT = {
+				add_ideas = UNS_CSTO_attack_on_soldiers
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_diversions_of_factories
+		x = 1
+		y = 1
+		available = {
+			network_national_coverage = {
+				target = BAT
+				value > 90
+			}
+		}
+		relative_position_id = UNS_CSTO_assasinate_generals
+		prerequisite = { focus = UNS_CSTO_assasinate_generals }
+		prerequisite = { focus = UNS_CSTO_attack_soldiers }
+		cost = 5
+		completion_reward = {
+			BAT = {
+				every_owned_state = {
+					remove_building = {
+						type = infrastructure
+						level = 2
+					}
+				}
+				capital_scope = {
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSO_attack_bat
+		x = 0
+		y = 3
+		relative_position_id = UNS_CSTO_embassy_in_bat
+		prerequisite = { focus = UNS_CSTO_tobuck_alessia_takeover }
+		prerequisite = { focus = UNS_CSTO_embassy_in_bat }
+		prerequisite = { focus = UNS_CSTO_diversions_of_factories }
+		cost = 5
+		bypass = {
+			BAT = {
+				OR = {
+					has_war_with = ROOT 
+					is_CSTO_member = yes 
+				}
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BAT
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_prepare_colthage_operation
+		x = 2
+		y = 1
+		relative_position_id = UNS_CSTO_zebra_continent
+		prerequisite = { focus = UNS_CSTO_zebra_continent }
+		cost = 5
+		completion_reward = {
+			unlock_decision_category_tooltip = UNS_colthagen_operation
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_support_constitutionalists
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_prepare_colthage_operation
+		prerequisite = { focus = UNS_CSTO_prepare_colthage_operation }
+		cost = 5
+		completion_reward = {
+			unlock_decision_tooltip = UNS_support_colthage_democrats
+			unlock_decision_tooltip = UNS_send_weapons_colthage
+			unlock_decision_tooltip = UNS_buy_colthage_government
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_contact_HIP
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_support_constitutionalists
+		prerequisite = { focus = UNS_CSTO_support_constitutionalists }
+		cost = 5
+		completion_reward = {
+			HIP = {
+				country_event = { id = uns_csto.4 days = 5 }
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_partisan_tactics 
+		x = 0
+		y = 1
+		relative_position_id = UNS_CSTO_contact_HIP
+		prerequisite = { focus = UNS_CSTO_contact_HIP }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				activate_decision = UNS_zebrican_representation_trainings
+				add_doctrine_cost_reduction = {
+					type = land_doctrine
+					cost = 0.25
+					uses = 4
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = UNS_CSTO_trade_colthage_blockade
+		x = -1
+		y = 1
+		relative_position_id = UNS_CSTO_partisan_tactics
+		prerequisite = { focus = UNS_CSTO_partisan_tactics }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				add_opinion_modifier = {
+					modifier = CHN_Embargo
+					target = CTH
+				}
+				reverse_add_opinion_modifier = {
+					modifier = CHN_Embargo
+					target = CTH
+				}
+			}
+		}
+	}
+		
+	focus = {
+		id = UNS_CSTO_prepare_military_contingent
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_partisan_tactics
+		prerequisite = { focus = UNS_CSTO_partisan_tactics }
+		cost = 5
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_CSTO_member = yes 
+				}
+				army_experience = 25
+				air_experience = 25
+				navy_experience = 25
+			}
+		}
+	}
+	
+	focus = {
+		id = UNS_CSTO_invade_colthage
+		x = 1
+		y = 1
+		relative_position_id = UNS_CSTO_prepare_military_contingent
+		prerequisite = { focus = UNS_CSTO_prepare_military_contingent }
+		cost = 5
+		completion_reward = {
+			set_variable = { constitutionalist_power = constitutionalist_strength }
+			divide_variable = { constitutionalist_power = 200 }
+			custom_effect_tooltip = UNS_CSTO_start_civilwar_cth
+			CTH = {
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = THIS
+					size = ROOT.constitutionalist_power
+				}
+				ROOT = { add_to_faction = PREV }
+				set_country_flag = UNS_CSTO_candidate
+				custom_effect_tooltip = UNS_CSTO_add_this_to_CSTO
+			}
+		}
+	}
+		
 	focus = { ### Саммит в Кантерлоте
 		id = UNS_canterlot_summit
 		x = 0
@@ -730,6 +2486,7 @@ focus_tree = {
 						character = UNS_general_gershell_fon_shepherd
 						ruling_only = yes 
 					}
+					has_country_flag = UNS_csto_solution_flag
 				}
 			}
 		}
@@ -2251,6 +4008,7 @@ focus_tree = {
 			news_event = { id = uns.46 days = 15 }
 		}
 	}
+	
 	########### Тут коммуняки 
 	
 	
@@ -2276,6 +4034,7 @@ focus_tree = {
 		}
 	}
 	
+
 	################# Gus Hall focuses
 	
 	
@@ -4144,15 +5903,7 @@ focus_tree = {
 				type = tac_bomber_equipment
 				amount = 150
 			}
-			add_corps_commander_role = {
-				character = UNS_maximilian_carter
-				traits = { griffon_infiltrator infantry_commander_hum }
-				skill = 5
-				attack_skill = 4
-				defense_skill = 4
-				logistics_skill = 5
-				planning_skill = 3
-			}
+			
 			hidden_effect = {
 				load_oob = "UNS_shep_lead_oob"
 			}
@@ -6799,9 +8550,11 @@ focus_tree = {
 					}
 					priority = 2
 				}
-				create_unit = {
-					division = "name = \"U.S. Marines Corps\" division_template = \"U.S. Marines Corps\" start_experience_factor = 1 start_equipment_factor = 1"
-					owner = ROOT 
+				capital_scope = {
+					create_unit = {
+						division = "name = \"U.S. Marines Corps\" division_template = \"U.S. Marines Corps\" start_experience_factor = 1 start_equipment_factor = 1"
+						owner = ROOT 
+					}
 				}
 			}
 			custom_effect_tooltip = uns_marines_recruit

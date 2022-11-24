@@ -1191,3 +1191,137 @@ country_event = {
 	}
 }
 
+
+######### 0.9 Events start here 
+
+
+country_event = {
+	id = sou.48
+	
+	title = sou.48.t 
+	desc = sou.48.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.48.a 
+		give_guarantee = TBK 
+		hidden_effect = {
+			TBK = { country_event = { id = sou.49 days = 365 }
+		}
+		custom_effect_tooltip = SOU_depending_tbk_effect
+	}
+}
+
+country_event = {
+	id = sou.49
+	
+	title = sou.49.t 
+	desc = sou.49.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.47.a 
+		if = {
+			limit = {
+				has_country_leader = { character = TBK_alesia ruling_only = yes }
+			}
+			TBK_alesia = {
+				add_country_leader_role = {
+					promote_leader = yes
+					country_leader = {	
+						desc="SOU_alesia_desc"
+						ideology=despotism
+						traits={  }
+						expire="1989.1.1.1"
+						id=-1
+					}
+				}
+			}
+			FROM = {
+				set_autonomy = {
+					target = ROOT 
+					autonomy_state = autonomy_dominion
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_country_leader = { character = TBK_alesia ruling_only = yes } }
+			}
+			FROM = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = ROOT 
+				}
+				hidden_effect = {
+					TBK_alesia = {
+						add_country_leader_role = {
+							promote_leader = yes
+							country_leader = {	
+								desc="SOU_alesia_desc"
+								ideology=despotism
+								traits={  }
+								expire="1989.1.1.1"
+								id=-1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = sou.50
+	
+	title = sou.50.t 
+	desc = sou.50.desc 
+	is_triggered_only = yes 
+	
+	option = {
+		name = sou.50.a
+		add_tech_bonus = {
+			bonus = 1
+			category = race_tech
+			uses = 4
+		}
+		add_stability = -0.07
+		add_war_support = 0.03
+		EQS = {
+			add_opinion_modifier = {
+				modifier = why_you_do_this
+				target = ROOT 
+			}
+			reverse_add_opinion_modifier = {
+				modifier = why_you_do_this
+				target = ROOT 
+			}
+		}
+		custom_effect_tooltip = SOU_osujdayy
+	}
+	
+	option = {
+		name = sou.50.b 
+		add_tech_bonus = {
+			bonus = 0.5
+			category = race_tech
+			uses = 1
+		}
+		add_stability = 0.07
+		add_war_support = -0.03
+		acceptance_expand_extra = yes 
+		EQS = {
+			add_opinion_modifier = {
+				modifier = common_cause
+				target = ROOT 
+			}
+			reverse_add_opinion_modifier = {
+				modifier = common_cause
+				target = ROOT 
+			}
+		}
+	}
+}
+

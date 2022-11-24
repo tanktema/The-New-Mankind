@@ -85,8 +85,32 @@ technologies = {
 		dependencies = {
 			strategic_bomber3 = 1
 		}
+
 		allow_branch = {
 			original_tag = UNS 
+			NOT = { has_dlc = "By Blood Alone" }
+		}
+		enable_equipments = {
+			uns_ac130
+		}
+		folder = {
+			name = human_folder
+			position = { x = 14 y = 2 }
+		}
+		
+		start_year = 1015
+		#custom_modifier_tooltip = special_weapons_tech
+	}
+	
+	bba_ac_130_tech = {
+		research_cost = 10
+
+		dependencies = {
+			modern_large_airframe = 1
+		}
+		allow_branch = {
+			original_tag = UNS 
+			has_dlc = "By Blood Alone"
 		}
 		enable_equipments = {
 			uns_ac130
@@ -2038,7 +2062,7 @@ technologies = {
 		}
 		folder = {
 			name = human_folder
-			position = { x = 17y = 6 }
+			position = { x = 17 y = 6 }
 		}
 		research_cost = 1.5
 		categories = {

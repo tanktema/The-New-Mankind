@@ -147,8 +147,11 @@ form_UEN_EQS_category = {
 	picture = GFX_decision_cat_unitedAxis
 
 	allowed = {
-		always = yes
-	}
+        OR = {
+            original_tag = UEN
+			original_tag = EQS
+        }
+    }
 }
 
 #RUS
@@ -189,7 +192,10 @@ form_RUS_OLE_category = {
 	picture = GFX_decision_cat_unitedAxis
 
 	allowed = {
-		always = yes
+		OR = {
+			original_tag = RUS
+			original_tag = OLE
+		}
 	}
 }
 

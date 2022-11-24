@@ -53,3 +53,16 @@
     RULE_UNS_MILITARY_FASC_DESC:0 "After Rockwell's failed coup, General Shepard and the American Military Committee seek to show everyone the true power of the United States"
     RULE_UNS_MILITARY_DEMO:0 "Military Coup: Friendship is Power"
     RULE_UNS_MILITARY_DEMO_DESC:0 "After Rockwell's failed coup, General Shepard and the American Military Committee seek to protect U.S. interests and ensure peace on the continent"
+    
+    TNM_ESC_APRIL_FOOL_STATUS:0 "Temporal Paradox"
+    RULE_OPTION_TNM_ESC:0 "Temporal Paradox"
+    RULE_OPTION_TNM_ESC_DESC:0 "§YCooperation with Escalation'84\n\n\nActivates new focus trees for USA, USSR and Third Reich"
+    RULE_OPTION_TNM_ESC_countries:0 "Temporal Paradox - New Countries"
+    RULE_OPTION_TNM_ESC_countries_DESC:0 "§YCooperation with Escalation'84\n\n\nNew countries will appear on the map"
+    
+    tnm_esc84_collab.3.t:0 "New Countries"
+    tnm_esc84_collab.3.desc:0 ""
+    tnm_esc84_collab.3.a:0 "Play as §YUEN§!"
+    tnm_esc84_collab.3.b:0 "Play as §RUSSR§!"
+    tnm_esc84_collab.3.c:0 "Play as §CUnited States§!"
+    tnm_esc84_collab.3.d:0 "Don't change the country"

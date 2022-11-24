@@ -232,8 +232,8 @@ country_event = {
 		name = grb.5.a 
 		if = {
 			limit = {
-				EQC = {
-					controls_state = 364
+				364 = {
+					is_owned_and_controlled_by = EQC 
 				}
 			}
 		}
@@ -251,13 +251,12 @@ country_event = {
 		name = grb.6.a 
 		if = {
 			limit = {
-				EQC = {
-					controls_state = 363
+				363 = {
+					is_owned_and_controlled_by = EQC 
 				}
 			}
 		}
 		transfer_state = 363
-
 	}
 }
 
@@ -1474,4 +1473,263 @@ country_event = {
 		promote_character = GRB_herman_buecher
 	}
 }
+
+
+
+country_event = {
+	id = grb.34
+	title = grb.34.t 
+	desc = grb.34.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.34.a 
 		
+		declare_war_on = { target = BAT type = puppet_wargoal_focus }
+		set_state_controller = 690
+		hidden_effect = {
+			every_other_country = {
+				diplomatic_relation = {
+					country = BAT 
+					relation = guarantee
+					active = no 
+				}
+			}
+		}
+		hidden_effect = {
+			690 = {
+			
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes 
+						limit_to_naval_base = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = grb.34.b 
+		
+		trigger = {
+			is_debug = yes 
+		}
+		
+		BAT = {
+			white_peace = GRB
+		}
+		set_autonomy = {
+			target = BAT
+			autonomy_state = autonomy_free
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.35
+	
+	title = grb.35.t 
+	desc = grb.35.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.35.a 
+		FROM = {
+			set_autonomy = {
+				target = ROOT 
+				autonomy_state = autonomy_dominion
+			}
+		}
+		set_cosmetic_tag = GRB_SUBJ_TBK
+		add_ideas = GRB_PNG_infl
+		create_country_leader = {
+			name = "Colonial Administration"
+			desc = "GRB_SANTODES"
+			picture = "gfx/leaders/GRB/montypiton.dds"
+			expire = 1999.9.9
+			ideology = neofeudalism
+			traits = {
+			
+			}
+		}
+		hidden_effect = {
+			BAT = {
+				every_core_state = {
+					transfer_state_to = ROOT 
+				}
+			}
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = GRB_SUBJ_neutral_party_long
+			name = GRB_SUBJ_neutral_party
+		}
+		
+	}
+	
+	option = {
+		name = grb.35.b 
+		FROM = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ROOT 
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = grb.36
+	title = grb.36.t 
+	desc = grb.36.desc 
+	
+	is_triggered_only = yes 
+	
+	option = {
+		name = grb.36.a 
+		
+		declare_war_on = { target = MTA type = puppet_wargoal_focus }
+		declare_war_on = { target = MSS type = puppet_wargoal_focus }
+		set_state_controller = 997
+		hidden_effect = {
+			every_other_country = {
+				diplomatic_relation = {
+					country = MTA 
+					relation = guarantee
+					active = no 
+				}
+				diplomatic_relation = {
+					country = MSS 
+					relation = guarantee
+					active = no 
+				}
+			}
+		}
+		hidden_effect = {
+			997 = {
+			
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				create_unit = {
+					division = "name = \"Colonial Invasion Group\" division_template = \"Colonial Invasion Group\"	start_experience_factor = 0.5	start_equipment_factor = 1 "
+					owner = GRB
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes 
+						limit_to_naval_base = yes 
+					}
+				}
+			}
+		}
+	}
+	
+	
+	option = {
+		name = grb.36.b 
+		
+		trigger = {
+			is_debug = yes 
+		}
+		MSS = {
+			white_peace = GRB
+		}
+		MTA = {
+			white_peace = GRB
+		}
+		set_autonomy = {
+			target = MTA
+			autonomy_state = autonomy_free
+		}
+		set_autonomy = {
+			target = MSS
+			autonomy_state = autonomy_free
+		}
+	}
+}

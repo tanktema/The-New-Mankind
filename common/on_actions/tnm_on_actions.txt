@@ -1,8 +1,58 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			SOL = {
-				set_global_flag = first_april_flag
+			if = {
+				limit = {
+					has_start_date > 1017.12.31
+				}
+				set_global_flag = TNM_launch_neworder_scenario
+			}
+			every_country = {
+				limit = {
+					is_ai = no 
+				} 
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = TNM_ESC_april_fool
+							option = TNM_ESC_FOOL
+						}
+					
+					}
+					set_global_flag = TNM_ESC_aprilfools_flag
+				}
+				if = {
+					limit = {
+						has_game_rule = {
+							rule = TNM_ESC_april_fool
+							option = TNM_ESC_countries
+						}
+						
+					}
+					108 = {
+							transfer_state_to = UEN
+							add_core_of = UEN
+						}
+						216 = {
+							transfer_state_to = RUS
+							add_core_of = RUS
+						}
+						217 = {
+							transfer_state_to = RUS 
+							add_core_of = RUS
+						}
+						363 = {
+							transfer_state_to = UAS 
+							remove_core_of = GRB 
+							add_core_of = UAS
+						}
+						every_country = {
+							limit = {
+								is_ai = no 
+							}
+							country_event = { id = tnm_esc84_collab.3 }
+						}
+				}
 			}
 			every_country = {
 				if = {
@@ -494,6 +544,21 @@ on_actions = {
 					}
 				}
 			}
+			
+			if = {
+				limit = {
+					has_completed_focus = GRB_agressiv_yeti
+					check_varaible = { GRB_num_yeti_divisions < 12 }
+				}
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Yeti Warband\" division_template = \"Yeti Army Group\"	start_experience_factor = 1	start_equipment_factor = 1 "
+						owner = GRB
+					}
+					add_to_variable = { GRB_num_yeti_divisions = 1 }
+				}
+			}
+				
 		}
 	}
 	
@@ -533,11 +598,6 @@ on_actions = {
 			}
 		}
 	}
-				
-				
-	
-	
-	
 	
 				
 	on_puppet = {
@@ -761,7 +821,7 @@ on_actions = {
 						desc = "GRB_SANTODES"
 						picture = "gfx/leaders/GRB/montypiton.dds"
 						expire = 1999.9.9
-						ideology = neofeudalism
+						ideology = populism
 						traits = {
 						
 						}
@@ -809,7 +869,7 @@ on_actions = {
 						desc = "GRB_SANTODES"
 						picture = "gfx/leaders/GRB/montypiton.dds"
 						expire = 1999.9.9
-						ideology = neofeudalism
+						ideology = populism
 						traits = {
 						
 						}
@@ -858,7 +918,7 @@ on_actions = {
 						desc = "GRB_SANTODES"
 						picture = "gfx/leaders/GRB/montypiton.dds"
 						expire = 1999.9.9
-						ideology = neofeudalism
+						ideology = populism
 						traits = {
 						
 						}
@@ -872,7 +932,33 @@ on_actions = {
 					}
 				}
 			}
-						
+			if = {
+				limit = {
+					ROOT = {
+						AND = {
+							original_tag = GEM
+							has_completed_focus = GEM_stalliongradian_problem
+							has_country_flag = GEM_choose_to_give_stg_to_eqs
+						}
+					}
+					FROM = {
+						original_tag = STG 
+					}
+				}
+				FROM = {
+					every_core_state = {
+						limit = {
+							OR = {
+								is_owned_by = ROOT 
+								is_owned_by = FROM 
+							}
+						}
+						add_core_of = EQS 
+						transfer_state_to = EQS 
+					}
+				}
+			}
+			
 		}
 	}
 	

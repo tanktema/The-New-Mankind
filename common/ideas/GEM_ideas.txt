@@ -308,13 +308,15 @@ ideas = {
 			removal_cost = -1
 			allowed = { always = yes }
 			modifier = {
-				send_volunteers_tension = -0.2
-				send_volunteer_divisions_required = -0.25
-				send_volunteer_size = 2
+				send_volunteers_tension = -0.5
+				send_volunteer_divisions_required = -0.5
+				send_volunteer_size = 5
+				army_defence_factor = 0.1
+				army_attack_factor = 0.1
+				stability_factor = 0.05
+				political_power_gain = 0.1
 			}
-			rule = {
-				can_send_volunteers = yes 
-			}
+			
 		}
 		GEM_peaceful_prop_idea = {
 			removal_cost = -1
@@ -569,9 +571,185 @@ ideas = {
 				production_speed_rail_way_factor = 0.15
 			}
 		}
-	
+		
+		GEM_parliament_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_advisor_cost_factor = -0.25
+				army_chief_cost_factor = -0.25
+				high_command_cost_factor = -0.25
+				theorist_cost_factor = -0.25
+			}
+		}
+		
+		GEM_end_of_wars = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				drift_defence_factor = 0.15
+				democratic_drift = 0.02
+				stability_factor = 0.03
+				war_support_factor = -0.03
+			}
+		}
+		
+		GEM_humanitarka = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				stability_factor = 0.05
+				political_power_gain = 0.15
+			}
+		}
+		
+		GEM_industry_bonus = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		
+		GEM_medicals = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				weekly_manpower = 150
+				monthly_population = 0.1
+			}
+		}
+		
+		GEM_camps = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				compliance_gain = -0.01
+				non_core_manpower = -0.05
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		GEM_canterlot_type = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				production_speed_industrial_complex_factor = 0.07
+				production_speed_infrastructure_factor = 0.07
+			}
+		}
+		
+		GEM_griffenheim_type = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				production_speed_arms_factory_factor = 0.07
+				production_speed_infrastructure_factor = 0.07
+			}
+		}
+		
+		GEM_central_coalition = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		GEM_sturmtruppen = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				breakthrough_factor = 0.1
+				dig_in_speed_factor = 0.1
+				max_planning_factor = 0.1
+			}
+		}
+		
+		GEM_howitzers_march = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				army_artillery_attack_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		
+		
+		GEM_blitzkrieg_idea = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {	
+				army_armor_attack_factor = 0.1
+				army_armor_speed_factor = 0.1
+				supply_consumption_factor = -0.1
+			}
+		}
+		
+		################## Bookmark TNO ideas here 
+		
+		
+		GEM_griffenheim_treaty = {
+			removal_cost = -1
+			allowed = { always = yes }
+			modifier = {
+				custom_modifier_tooltip = GEM_GRI_treaty_tt
+			}
+		}
 
 	}
+	
+	hidden_ideas = {
+		GEM_RCT_ANTIGRI = {
+			removal_cost = -1
+			allowed = { always = yes }
+			targeted_modifier = {
+				tag = GRI 
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+		}
+		
+		GEM_FALSE_GRI = {
+			removal_cost = -1
+			allowed = { always = yes }
+			targeted_modifier = {
+				tag = GRI 
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			army_defence_factor = -0.2
+			army_attack_factor = -0.2
+		}
+		
+		GEM_FALSE_GRI_SASAITI = {
+			removal_cost = -1
+			allowed = { always = yes }
+			targeted_modifier = {
+				tag = GRI 
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+			army_defence_factor = -0.5
+			army_attack_factor = -0.5
+
+		}
+	}
+	
 	
 	
 	tank_manufacturer = {
@@ -582,7 +760,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_new_armor
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_better_armor
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { heavy_tank_producer }
 			research_bonus = {
@@ -595,7 +784,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_new_armor
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_better_armor
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { medium_tank_producer }
 			research_bonus = {
@@ -611,7 +811,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_more_rifles
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_old_friends
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { arms_dealer_m }
 		}
@@ -621,7 +832,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_industry_development
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_light_industry
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { onwheel_master }
 		}
@@ -635,7 +857,19 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_exploring_air
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_exploring_air
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
+				
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -648,7 +882,19 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_exploring_air
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_exploring_air
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
+
 			}
 			research_bonus = {
 				air_equipment = 0.10
@@ -666,7 +912,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_fleet_rebuild 
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_fleet_rebuild
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { old_world_shipyard } 
 		}
@@ -680,7 +937,18 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_ask_the_old_ones
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_medical_development
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { medical_company_trait }
 			research_bonus = { medical_company = 0.07 }
@@ -691,8 +959,62 @@ ideas = {
 				original_tag = GEM 
 			}
 			available = {
-				has_completed_focus = GEM_ask_the_old_ones
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_light_industry
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
 			}
 			traits = { electrical_concern_sou }
+		}
+	}
+	
+	
+	army_spirit = {
+		GEM_panzerstorm_idea = {
+			ledger = army
+			allowed = { original_tag = GEM }
+			visible = { 
+				if = {
+					limit = {
+						has_start_date < 1018.1.1
+					}
+					has_completed_focus = GEM_panzerstorm
+				}
+				if = {
+					limit = {
+						has_start_date > 1007.1.1
+					}
+					#has_completed_focus = GEM_better_armor
+				}
+			}
+			
+			modifier = {
+				experience_gain_army = 0.05
+				pocket_penalty = -0.1
+				army_armor_attack_factor = 0.1
+				army_armor_speed_factor = 0.1
+				army_armor_defence_factor = 0.1
+				breakthrough_factor = 0.1
+				unit_modern_armor_design_cost_factor = -1
+				unit_heavy_armor_design_cost_factor = -1 
+				unit_super_heavy_armor_design_cost_factor = -1
+				unit_motorized_design_cost_factor = -1
+				unit_mechanized_design_cost_factor = -1
+				unit_magical_motorized_design_cost_factor = -1
+				unit_magical_mechanized_design_cost_factor = -1
+				unit_light_armor_design_cost_factor = -1
+				unit_medium_armor_design_cost_factor = -1
+			}
+			ai_will_do = {
+				factor = 1.5
+			}
 		}
 	}

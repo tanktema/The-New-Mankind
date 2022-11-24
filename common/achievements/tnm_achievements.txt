@@ -1,0 +1,241 @@
+unique_id = tnm_achievements
+
+tnm_a_friend_in_need = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		is_human_race = yes
+    }
+    
+    happened = {
+		is_in_faction = yes
+    }    
+}
+
+tnm_dejavu = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		is_human_race = yes
+    }
+    
+    happened = {
+		num_of_nukes > 0
+    }    
+}
+
+tnm_improvise_adapt_overcome = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		is_human_race = yes
+    }
+    
+    happened = {
+		custom_trigger_tooltip = {
+			tooltip = TNM_100_ADAPTATION
+			check_variable = { acceptance_value = 100 }
+		}
+	}
+	
+}
+
+tnm_there_can_be_only_one_left = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		is_human_race = yes
+    }
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = TNM_OWNS_CONTROLS_ALL_CAPITALS_HUMAN
+			if = {
+				limit = {
+					original_tag = UNS 
+				}
+				AND = {
+					OR = {
+						GEM = { is_subject_of = ROOT }
+						controls_state = 312
+					}
+					OR = {
+						SOU = { is_subject_of = ROOT }
+						controls_state = 332
+					}
+					OR = {
+						GRB = { is_subject_of = ROOT }
+						controls_state = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = GEM 
+				}
+				AND = {
+					OR = {
+						UNS = { is_subject_of = ROOT }
+						controls_state = 96
+					}
+					OR = {
+						SOU = { is_subject_of = ROOT }
+						controls_state = 332
+					}
+					OR = {
+						GRB = { is_subject_of = ROOT }
+						controls_state = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = SOU 
+				}
+				AND = {
+					OR = {
+						GEM = { is_subject_of = ROOT }
+						controls_state = 312
+					}
+					OR = {
+						UNS = { is_subject_of = ROOT }
+						controls_state = 96
+					}
+					OR = {
+						GRB = { is_subject_of = ROOT }
+						controls_state = 365
+					}
+				}
+			}
+			if = {
+				limit = {
+					original_tag = GRB 
+				}
+				AND = {
+					OR = {
+						GEM = { is_subject_of = ROOT }
+						controls_state = 312
+					}
+					OR = {
+						SOU = { is_subject_of = ROOT }
+						controls_state = 332
+					}
+					OR = {
+						UNS = { is_subject_of = ROOT }
+						controls_state = 96
+					}
+				}
+			}
+		}
+	}
+}
+
+tnm_i_see_everything = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		is_human_race = yes
+    }
+	
+	happened = {
+		OR = {
+			has_tech = sniper_special_weapons
+			has_tech = shortrange_radio
+		}
+	}
+}
+
+tnm_i_am_the_senate = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = UNS 
+    }
+	
+	happened = {
+		has_country_leader = {
+			character = UNS_general_gershell_fon_shepherd
+			ruling_only = yes 
+		}
+	}
+}
+
+tnm_no_eternal_night = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = UNS 
+    }
+	
+	happened = {
+		NLR = { exists = no }
+		EQS = { is_EQS_SOL = no }
+		has_completed_focus = UNS_continue_support
+	}
+}
+
+tnm_knowledge_is_power = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = UNS 
+    }
+	
+	happened = {
+		has_country_flag = uns_built_tech_park
+	}
+}
+
+tnm_freedom_or_death = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = UNS 
+    }
+	
+	happened = {
+		has_idea = UNS_liberty_statue_idea
+	}
+}
+
+tnm_marines_corp = {
+	possible = {
+        # classic triggers used in all vanilla achievements
+        difficulty > 1
+        has_start_date < 1007.01.02
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		original_tag = UNS 
+    }
+	
+	happened = {
+		has_completed_focus = UNS_marines_corp
+	}
+}

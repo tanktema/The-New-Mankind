@@ -124,7 +124,7 @@ sub_units = {
 		ai_priority = 2000
 		active = no
 		cavalry = no
-		special_forcse = no
+		special_forces = no
 		marines = no
 		mountaineers = no
 		group = support
@@ -154,7 +154,7 @@ sub_units = {
 		hard_attack = 25
 		ap_attack = 10
 		suppression_factor = 0.05
-		movement = -0.1
+		
 		manpower = 100
 		soft_attack = 0.15
 		urban = {
