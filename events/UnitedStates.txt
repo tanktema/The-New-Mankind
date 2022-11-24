@@ -500,7 +500,7 @@ country_event = {
 	option = {
 		name = uns.world.1.b
 		trigger = {
-			threat > 0.74
+			threat > 0.24
 		}
 		set_country_flag = UNS_csto_solution_flag
 		custom_effect_tooltip = UNS_CSTO_tooltip

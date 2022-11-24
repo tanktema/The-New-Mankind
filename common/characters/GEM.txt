@@ -43,6 +43,20 @@ characters={
 			id=-1
 		}
 	}
+	GEM_lui_ferdinand = {
+		name = GEM_lui_ferdinand
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GEM/Caesar.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			expire="1989.1.1.1"
+			id=-1
+		}
+	}
+		
 	GEM_paul_hausser={
 		name=GEM_paul_hausser
 		portraits={
@@ -212,7 +226,7 @@ characters={
 			idea_token = GEM_shpeer
 			
 			available = {
-				has_completed_focus = GEM_ask_the_old_ones
+				has_completed_focus = GEM_old_friends
 			}
 			allowed = {
 				original_tag = GEM 
@@ -260,7 +274,7 @@ characters={
 			idea_token = GEM_conrad_zuse
 			
 			available = {
-				has_completed_focus = GEM_computer_science
+				has_completed_focus = GEM_copmuters_development
 			}
 			allowed = {
 				original_tag = GEM 
@@ -287,7 +301,7 @@ characters={
 			idea_token = GEM_higo_shmeisser
 			
 			available = {
-				has_completed_focus = GEM_hugo_schmeisser
+				has_completed_focus = GEM_old_friends
 			}
 			allowed = {
 				original_tag = GEM 
@@ -397,7 +411,7 @@ characters={
 			}
 			
 			available = {
-				has_completed_focus = GEM_war_never_changes
+				has_completed_focus = GEM_new_labs
 			}
 			
 			traits = {
@@ -611,7 +625,8 @@ characters={
 		name = GEM_radiant_croup
 		portraits = {
 			army = {
-				small = "GFX_idea_GEM_radiant_croup"
+				small = "gfx/interface/ideas/GEM_radiant_croup.dds"
+				large = "gfx/leaders/GEM/GEM_radiant_croup.dds"
 			}
 		}
 		
@@ -859,4 +874,45 @@ characters={
 		}
 	}
 	
+	GEM_jalmar_hyvonen = {
+		name = GEM_jalmar_hyvonen
+		portraits = {
+			army = {
+				large = ""
+				small = ""
+			}
+		}
+		corps_commander = {
+			traits={  }
+			skill=2
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		
+	}
+	
+	GEM_erich_von_shteinmann = {
+		name = GEM_erich_von_shteinmann
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/UAS_william_webster.dds"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			idea_token = GEM_erich_von_shteinmann
+			
+			allowed = {
+				original_tag = GEM 
+			}
+			
+			traits = {
+				outer_politics_minister
+			}
+		}
+	}
 }

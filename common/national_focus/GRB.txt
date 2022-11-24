@@ -2366,12 +2366,12 @@ focus_tree = {
 		x = -8
 		y = 1
 		icon = GFX_goal_GRB_hail_the_queen
-		#allow_branch = {
-		#	has_government = neutrality
-		#	NOT = {
-		#		has_country_flag = queen_has_lost
-		#	}
-		#}
+		allow_branch = {
+			has_government = neutrality
+			NOT = {
+				has_country_flag = queen_has_lost
+			}
+		}
 		relative_position_id = GRB_what_is_next
 		prerequisite = { focus = GRB_what_is_next }
 		cost = 5
