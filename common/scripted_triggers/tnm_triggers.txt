@@ -10,15 +10,16 @@ is_eqcus_country = {
 is_CSTO_member = {
 	custom_trigger_tooltip = {
 		tooltip = CSTO_is_member
-		OR = {
-			original_tag = UNS
-			has_idea = UNS_CSTO_member_idea
-			has_country_flag = UNS_CSTO_candidate
-			overlord = {
-				OR = {
-					has_idea = UNS_CSTO_member_idea
-					has_country_flag = UNS_CSTO_candidate
-				}
+	}
+	OR = {
+		original_tag = UNS
+		has_idea = UNS_CSTO_member_idea
+		has_country_flag = UNS_CSTO_candidate
+		overlord = {
+			OR = {
+				original_tag = UNS
+				has_idea = UNS_CSTO_member_idea
+				has_country_flag = UNS_CSTO_candidate
 			}
 		}
 	}

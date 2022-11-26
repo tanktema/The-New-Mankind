@@ -3664,6 +3664,12 @@ focus_tree = {
 		available = {
 			has_completed_focus = GRB_east_india
 		}
+		allow_branch = {
+			has_government = neutrality
+			NOT = {
+				has_country_flag = queen_has_lost
+			}
+		}
 		cost = 7.2
 		completion_reward = {
 			add_ideas = GEM_para_bellum

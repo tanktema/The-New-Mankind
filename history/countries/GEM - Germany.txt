@@ -223,9 +223,9 @@ set_stability = 0.65
 set_war_support = 0.35
 add_manpower = 60000
 
-
 recruit_character = GEM_willy_brandt
 recruit_character = GEM_walter_ulbricht
+recruit_character = GEM_lui_ferdinand
 recruit_character = GEM_military_council
 recruit_character = GEM_paul_hausser
 recruit_character = GEM_henning_fon_treskov
@@ -250,11 +250,14 @@ recruit_character = GEM_weber
 recruit_character = GEM_kurt_shtudent
 recruit_character = GEM_karl_doenitz
 recruit_character = GEM_radiant_croup
+recruit_character = GEM_arianna
+recruit_character = GEM_aliz_neumann
 recruit_character = GEM_shternell
 recruit_character = GEM_engelberger
 recruit_character = GEM_schoff
 recruit_character = GEM_hengstler
 recruit_character = GEM_adolf_hitler
+recruit_character = GEM_erich_von_shteinmann
 
 
 if = {

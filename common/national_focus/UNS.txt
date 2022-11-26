@@ -749,7 +749,7 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_eqvus_contingent 
-		x = -8
+		x = -14
 		y = 1
 		relative_position_id = UNS_CSTO_organisation_of_csto
 		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
@@ -1417,7 +1417,7 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_griffon_continent
-		x = 8
+		x = 12
 		y = 1
 		relative_position_id = UNS_CSTO_organisation_of_csto 
 		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
@@ -1922,10 +1922,10 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_guaranee_hlr
-		x = 5
+		x = 6
 		y = 1
-		relative_position_id = UNS_CSTO_support_republic
-		prerequisite = { focus = UNS_CSTO_support_republic }
+		relative_position_id = UNS_CSTO_support_river_coalition
+		prerequisite = { focus = UNS_CSTO_support_river_coalition }
 		cost = 5
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_military_plan_black
@@ -2048,7 +2048,7 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_zebra_continent
-		x = 8
+		x = 32
 		y = 1
 		relative_position_id = UNS_CSTO_organisation_of_csto 
 		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
@@ -2450,10 +2450,11 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_invade_colthage
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = UNS_CSTO_prepare_military_contingent
 		prerequisite = { focus = UNS_CSTO_prepare_military_contingent }
+		prerequisite = { focus = UNS_CSTO_trade_colthage_blockade }
 		cost = 5
 		completion_reward = {
 			set_variable = { constitutionalist_power = constitutionalist_strength }
