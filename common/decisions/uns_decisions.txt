@@ -3090,7 +3090,7 @@ UNS_CSTO_decisions = {
 				has_defensive_war = yes 
 			}
 		}
-		available = {
+		cancel_trigger = {
 			has_war_together_with = FROM
 		}
 		complete_effect = {
