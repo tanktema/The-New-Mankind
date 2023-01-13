@@ -167,8 +167,8 @@ equipments = {
 	uns_ac130 = {
 		#year = 1025
 
-		archetype = jet_tac_bomber_equipment
-
+		archetype = large_plane_airframe
+		type = strategic_bomber
 		priority = 20
 		allow_mission_type = {
 			cas
@@ -196,7 +196,7 @@ equipments = {
 		}
 		
 		build_cost_ic = 34
-
+		module_slots = none
 		manpower = 50
 		fuel_consumption = 0.7
 		

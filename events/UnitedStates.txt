@@ -2394,7 +2394,8 @@ country_event = {
 		name = uns_csto.1.a
 		set_country_flag = UNS_CSTO_founded
 		complete_national_focus = UNS_CSTO_organisation_of_csto
-		create_faction = UNS_CSTO 
+		set_rule = { can_create_factions = yes }
+		create_faction = UNS_CSTO_faction 
 		hidden_effect = {
 			country_event = { id = uns_csto.2 days = 10 }
 		}

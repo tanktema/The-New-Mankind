@@ -482,7 +482,10 @@ UNS_military_plan_gray = {
 		original_tag = UNS
 	}
 	visible = {
-		has_completed_focus = UNS_CSTO_grey_plague
+		OR = {
+			has_completed_focus = UNS_CSTO_grey_plague
+			has_completed_focus = UNS_CSTO_appease_chrysalis
+		}
 	}
 }
 

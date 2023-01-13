@@ -15,13 +15,7 @@ is_CSTO_member = {
 		original_tag = UNS
 		has_idea = UNS_CSTO_member_idea
 		has_country_flag = UNS_CSTO_candidate
-		overlord = {
-			OR = {
-				original_tag = UNS
-				has_idea = UNS_CSTO_member_idea
-				has_country_flag = UNS_CSTO_candidate
-			}
-		}
+		is_in_faction_with = UNS
 	}
 	
 }

@@ -729,6 +729,7 @@ focus_tree = {
 		id = UNS_CSTO_organisation_of_csto
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_scto_founding
 		relative_position_id = UNS_world_situation
 		prerequisite = { focus = UNS_world_situation }
 		allow_branch = {
@@ -751,6 +752,7 @@ focus_tree = {
 		id = UNS_CSTO_eqvus_contingent 
 		x = -14
 		y = 1
+		icon = GFX_goal_UNS_CSTO_eqvus_contingent
 		relative_position_id = UNS_CSTO_organisation_of_csto
 		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
 		cost = 7.2
@@ -770,6 +772,7 @@ focus_tree = {
 				is_CSTO_member = no 
 			}
 		}
+		icon = GFX_goal_UNS_CSTO_grey_plague
 		relative_position_id = UNS_CSTO_eqvus_contingent
 		prerequisite = { focus = UNS_CSTO_eqvus_contingent }
 		cost = 7.2
@@ -782,6 +785,7 @@ focus_tree = {
 		id = UNS_CSTO_fifth_column
 		x = -6
 		y = 1
+		icon = GFX_goal_UNS_CSTO_fifth_column
 		relative_position_id = UNS_CSTO_grey_plague
 		prerequisite = { focus = UNS_CSTO_grey_plague }
 		cost = 7.2
@@ -799,6 +803,7 @@ focus_tree = {
 		id = UNS_CSTO_support_velvet
 		x = -3
 		y = 1
+		icon = GFX_goal_UNS_CSTO_suppot_velvet
 		relative_position_id = UNS_CSTO_fifth_column
 		prerequisite = { focus = UNS_CSTO_fifth_column }
 		cost = 7.2
@@ -811,6 +816,7 @@ focus_tree = {
 		id = UNS_CSTO_support_thorax
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_support_thorax
 		relative_position_id = UNS_CSTO_fifth_column
 		prerequisite = { focus = UNS_CSTO_fifth_column }
 		cost = 7.2
@@ -823,6 +829,7 @@ focus_tree = {
 		id = UNS_CSTO_prepare_for_the_rebellion
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_prepare_rebellions
 		relative_position_id = UNS_CSTO_support_velvet
 		prerequisite = { focus = UNS_CSTO_support_thorax }
 		prerequisite = { focus = UNS_CSTO_support_velvet }
@@ -841,6 +848,7 @@ focus_tree = {
 		id = UNS_CSTO_self_proclaim_rule
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_self_proclaim_rule
 		available = {
 			CCN = {
 				exists = no 
@@ -880,6 +888,7 @@ focus_tree = {
 		id = UNS_CSTO_CIA_expansion
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_CSTO_CIA_expansion
 		relative_position_id = UNS_CSTO_fifth_column
 		prerequisite = { focus = UNS_CSTO_fifth_column }
 		cost = 7.2
@@ -893,6 +902,7 @@ focus_tree = {
 		id = UNS_CSTO_weapon_sending_channels
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_weapon_sending_channels
 		relative_position_id = UNS_CSTO_CIA_expansion
 		prerequisite = { focus = UNS_CSTO_CIA_expansion }
 		cost = 5
@@ -905,6 +915,7 @@ focus_tree = {
 		id = UNS_CSTO_prepare_military_units
 		x = 1
 		y = 1 
+		icon = GFX_goal_UNS_CSTO_traint_troops
 		relative_position_id = UNS_CSTO_CIA_expansion
 		prerequisite = { focus = UNS_CSTO_CIA_expansion }
 		cost = 5
@@ -917,6 +928,7 @@ focus_tree = {
 		id = UNS_CSO_changeling_embargo
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_embargo_chn
 		relative_position_id = UNS_CSTO_weapon_sending_channels
 		prerequisite = { focus = UNS_CSTO_weapon_sending_channels }
 		prerequisite = { focus = UNS_CSTO_prepare_military_units }
@@ -934,6 +946,7 @@ focus_tree = {
 					target = CHN 
 					modifier = CHN_Embargo
 				}
+				send_embargo = CHN
 			}
 		}
 	}
@@ -942,6 +955,7 @@ focus_tree = {
 		id = UNS_CSTO_comittee_project
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_comittee_project
 		relative_position_id = UNS_CSTO_grey_plague
 		prerequisite = { focus = UNS_CSTO_grey_plague }
 		cost = 5
@@ -959,6 +973,7 @@ focus_tree = {
 		id = UNS_CSTO_hidden_airfields
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_hidden_airfields
 		relative_position_id = UNS_CSTO_comittee_project
 		prerequisite = { focus = UNS_CSTO_comittee_project }
 		cost = 5
@@ -985,6 +1000,7 @@ focus_tree = {
 		id = UNS_CSTO_military_infra_build_help
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_military_infra
 		relative_position_id = UNS_CSTO_hidden_airfields
 		prerequisite = { focus = UNS_CSTO_hidden_airfields }
 		cost = 10
@@ -1023,6 +1039,7 @@ focus_tree = {
 		id = UNS_CSTO_grey_plan_invade_CHN
 		x = 1
 		y = 2
+		icon = GFX_goal_UNS_CSTO_invade_chn
 		relative_position_id = UNS_CSTO_military_infra_build_help
 		prerequisite = { focus = UNS_CSTO_military_infra_build_help }
 		prerequisite = { focus = UNS_CSO_changeling_embargo }
@@ -1043,6 +1060,7 @@ focus_tree = {
 		id = UNS_CSTO_invite_EQS
 		x = 0
 		y = 2
+		icon = GFX_goal_UNS_CSTO_invite_equestria
 		relative_position_id = UNS_CSTO_eqvus_contingent
 		prerequisite = { focus = UNS_CSTO_grey_plague OR = UNS_CSTO_red_menace }
 		cost = 5
@@ -1057,6 +1075,7 @@ focus_tree = {
 		id = UNS_CSTO_invite_CRY
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_invite_crystal_empire
 		relative_position_id = UNS_CSTO_invite_EQS
 		prerequisite = { focus = UNS_CSTO_invite_EQS }
 		cost = 5
@@ -1076,6 +1095,7 @@ focus_tree = {
 		id = UNS_CSTO_invite_SOU
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_invite_russia
 		relative_position_id = UNS_CSTO_invite_EQS
 		prerequisite = { focus = UNS_CSTO_invite_EQS }
 		cost = 5
@@ -1095,6 +1115,7 @@ focus_tree = {
 		id = UNS_CSTO_article_five
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_article_5
 		relative_position_id = UNS_CSTO_invite_CRY 
 		prerequisite = { focus = UNS_CSTO_invite_CRY OR = UNS_CSTO_invite_SOU }
 		cost = 5
@@ -1107,6 +1128,7 @@ focus_tree = {
 		id = UNS_CSTO_red_menace
 		x = 2
 		y = 1
+		icon = GFX_goal_UNS_CSTO_red_threat
 		relative_position_id = UNS_CSTO_eqvus_contingent
 		prerequisite = { focus = UNS_CSTO_eqvus_contingent }
 		cost = 5
@@ -1119,6 +1141,7 @@ focus_tree = {
 		id = UNS_CSTO_the_iron_curtain
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_iron_curtain_project
 		relative_position_id = UNS_CSTO_red_menace 
 		prerequisite = { focus = UNS_CSTO_red_menace }
 		cost = 5
@@ -1136,6 +1159,7 @@ focus_tree = {
 		id = UNS_CSTO_appease_chrysalis
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_contact_changelings
 		relative_position_id = UNS_CSTO_the_iron_curtain
 		prerequisite = { focus = UNS_CSTO_the_iron_curtain }
 		bypass = {
@@ -1152,6 +1176,7 @@ focus_tree = {
 		id = UNS_CSTO_anticommie_propaganda
 		x = 4
 		y = 1
+		icon = GFX_goal_UNS_CSTO_anticommie_mood
 		relative_position_id = UNS_CSTO_red_menace
 		prerequisite = { focus = UNS_CSTO_red_menace }
 		cost = 5
@@ -1164,6 +1189,7 @@ focus_tree = {
 		id = UNS_CSTO_sf_provocations
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_enforcer_provocations
 		relative_position_id = UNS_CSTO_anticommie_propaganda
 		prerequisite = { focus = UNS_CSTO_anticommie_propaganda }
 		cost = 5
@@ -1183,6 +1209,7 @@ focus_tree = {
 		id = UNS_CSTO_anticommunist_pact
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_anticommie_pact
 		relative_position_id = UNS_CSTO_anticommie_propaganda
 		prerequisite = { focus = UNS_CSTO_anticommie_propaganda }
 		cost = 5
@@ -1223,6 +1250,7 @@ focus_tree = {
 		id = UNS_CSTO_new_bloody_sunday
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_bloody_sunda
 		relative_position_id = UNS_CSTO_appease_chrysalis
 		prerequisite = { focus = UNS_CSTO_appease_chrysalis }
 		prerequisite = { focus = UNS_CSTO_sf_provocations }
@@ -1258,6 +1286,7 @@ focus_tree = {
 		id = UNS_CSTO_assasinate_serov
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_assasinate_sinister
 		relative_position_id = UNS_CSTO_new_bloody_sunday
 		prerequisite = { focus = UNS_CSTO_new_bloody_sunday }
 		cost = 5
@@ -1282,6 +1311,7 @@ focus_tree = {
 		id = UNS_CSTO_nova_griffonia_support
 		x = 8
 		y = 1
+		icon = GFX_goal_UNS_CSTO_help_nova
 		relative_position_id = UNS_CSTO_red_menace
 		prerequisite = { focus = UNS_CSTO_red_menace }
 		cost = 5
@@ -1298,6 +1328,7 @@ focus_tree = {
 		id = UNS_CSTO_supress_vergilia
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_supress_gff
 		relative_position_id = UNS_CSTO_nova_griffonia_support
 		prerequisite = { focus = UNS_CSTO_nova_griffonia_support}
 		cost = 5
@@ -1313,6 +1344,7 @@ focus_tree = {
 		id = UNS_CSTO_GRF_military_support
 		x = 1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_military_support
 		relative_position_id = UNS_CSTO_nova_griffonia_support
 		prerequisite = { focus = UNS_CSTO_nova_griffonia_support}
 		cost = 5
@@ -1341,6 +1373,7 @@ focus_tree = {
 		id = UNS_CSTO_land_lease_programm
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_landlease
 		relative_position_id = UNS_CSTO_GRF_military_support
 		prerequisite = { focus = UNS_CSTO_GRF_military_support }
 		cost = 5
@@ -1357,6 +1390,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_anticommunist_pact }
 		prerequisite = { focus = UNS_CSTO_supress_vergilia }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_trade_with_nova
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -1378,6 +1412,7 @@ focus_tree = {
 		id = UNS_CSTO_guarantee_grf
 		x = 0
 		y = 1
+		icon = GFX_goal_UNS_CSTO_guarantee_nova
 		relative_position_id = UNS_CSTO_trading_with_GRF
 		prerequisite = { focus = UNS_CSTO_trading_with_GRF }
 		cost = 5
@@ -1395,6 +1430,7 @@ focus_tree = {
 		id = UNS_CSTO_invade_stg
 		x = -1
 		y = 1
+		icon = GFX_goal_UNS_CSTO_invade_stg
 		bypass = {
 			STG = {
 				OR = {
@@ -1422,6 +1458,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_organisation_of_csto 
 		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_griffonia_contingent
 		completion_reward = {
 			unlock_decision_tooltip = UNS_griphonia_representation_trainings
 			unlock_decision_tooltip = UNS_follow_csto_guarantees
@@ -1669,6 +1706,7 @@ focus_tree = {
 					modifier = decline_politics
 					target = GRI 
 				}
+				send_embargo = GRI
 			}
 			custom_effect_tooltip = UNS_CSTO_5_to_20_percent_embargo
 			hidden_effect = {
@@ -1687,6 +1725,7 @@ focus_tree = {
 								modifier = decline_politics
 								target = GRI 
 							}
+							send_embargo = GRI
 							modifier = {
 								factor = 2
 								has_government = neutrality
@@ -2345,7 +2384,7 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_prepare_colthage_operation
-		x = 2
+		x = 3
 		y = 1
 		relative_position_id = UNS_CSTO_zebra_continent
 		prerequisite = { focus = UNS_CSTO_zebra_continent }
@@ -2425,6 +2464,7 @@ focus_tree = {
 					modifier = CHN_Embargo
 					target = CTH
 				}
+				send_embargo = CTH
 			}
 		}
 	}

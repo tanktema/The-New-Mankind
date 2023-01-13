@@ -1,0 +1,333 @@
+UNS = {
+	small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_UNS_early_fighter_medium
+				GFX_UNS_CAS1_medium
+				GFX_UNS_CAS2_medium
+				GFX_UNS_CAS3_medium
+				GFX_UNS_fighter1_medium
+				GFX_UNS_fighter2_medium
+				GFX_UNS_fighter3_medium
+				GFX_UNS_jet_fighter_a_medium
+				GFX_UNS_jet_fighter1_medium
+				GFX_UNS_scout_plane1_medium
+				GFX_UNS_scout_plane2_medium
+				GFX_UNS_scout_plane_a_medium
+				GFX_UNS_jet_scout_plane_a_medium
+				GFX_UNS_jet_strike_craft_a_medium
+				GFX_UNS_jet_strike_craft_b_medium
+				GFX_UNS_jet_strike_craft_c_medium
+			}
+		}
+	}
+	
+	cv_small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_UNS_early_fighter_medium
+				GFX_UNS_CAS1_medium
+				GFX_UNS_CAS2_medium
+				GFX_UNS_CAS3_medium
+				GFX_UNS_fighter1_medium
+				GFX_UNS_fighter2_medium
+				GFX_UNS_fighter3_medium
+				GFX_UNS_jet_fighter_a_medium
+				GFX_UNS_jet_fighter1_medium
+				GFX_UNS_scout_plane1_medium
+				GFX_UNS_scout_plane2_medium
+				GFX_UNS_scout_plane_a_medium
+				GFX_UNS_jet_scout_plane_a_medium
+				GFX_UNS_jet_strike_craft_a_medium
+				GFX_UNS_jet_strike_craft_b_medium
+				GFX_UNS_jet_strike_craft_c_medium
+				GFX_UNS_naval_bomber1_medium
+				GFX_UNS_naval_bomber2_medium
+				GFX_UNS_naval_bomber3_medium
+			}
+		}
+	}
+	
+	medium_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_UNS_early_bomber_medium
+				GFX_UNS_tactical_bomber1_medium
+				GFX_UNS_tactical_bomber2_medium
+				GFX_UNS_tactical_bomber3_medium
+				GFX_UNS_heavy_fighter1_medium
+				GFX_UNS_heavy_fighter2_medium
+				GFX_UNS_heavy_fighter3_medium
+				GFX_UNS_jet_tactical_bomber1_medium
+				GFX_UNS_jet_tactical_bomber2_medium
+				GFX_UNS_jet_tactical_bomber_a_medium
+				GFX_UNS_jet_heavy_fighter_a_medium
+			}
+		}
+	}
+	
+	large_plane_airframe = {
+		pool = {
+			icons = {		
+				GFX_UNS_strategic_bomber3_medium
+				GFX_UNS_strategic_bomber2_medium
+				GFX_UNS_strategic_bomber1_medium
+				GFX_UNS_jet_strategic_bomber1_medium
+				GFX_UNS_jet_strategic_bomber2_medium
+				GFX_UNS_ac_130_tech_medium
+				GFX_UNS_bba_ac_130_tech_medium
+			}
+		}
+	}
+}
+
+SOU = {
+	small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_SOU_early_fighter_medium
+				GFX_SOU_CAS1_medium
+				GFX_SOU_CAS2_medium
+				GFX_SOU_CAS3_medium
+				GFX_SOU_fighter1_medium
+				GFX_SOU_fighter2_medium
+				GFX_SOU_fighter3_medium
+				GFX_SOU_jet_fighter2_medium
+				GFX_SOU_jet_fighter_a_medium
+				GFX_SOU_jet_fighter1_medium
+				GFX_SOU_scout_plane1_medium
+				GFX_SOU_scout_plane2_medium
+				GFX_SOU_scout_plane_a_medium
+				GFX_SOU_jet_scout_plane_a_medium
+				GFX_SOU_jet_strike_craft_a_medium
+				GFX_SOU_jet_strike_craft_b_medium
+				GFX_SOU_jet_strike_craft_c_medium
+			}
+		}
+	}
+	
+	cv_small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_SOU_early_fighter_medium
+				GFX_SOU_CAS1_medium
+				GFX_SOU_CAS2_medium
+				GFX_SOU_CAS3_medium
+				GFX_SOU_fighter1_medium
+				GFX_SOU_fighter2_medium
+				GFX_SOU_fighter3_medium
+				GFX_SOU_jet_fighter2_medium
+				GFX_SOU_jet_fighter_a_medium
+				GFX_SOU_jet_fighter1_medium
+				GFX_SOU_scout_plane1_medium
+				GFX_SOU_scout_plane2_medium
+				GFX_SOU_scout_plane_a_medium
+				GFX_SOU_jet_scout_plane_a_medium
+				GFX_SOU_jet_strike_craft_a_medium
+				GFX_SOU_jet_strike_craft_b_medium
+				GFX_SOU_jet_strike_craft_c_medium
+				GFX_SOU_naval_bomber1_medium
+				GFX_SOU_naval_bomber2_medium
+				GFX_SOU_naval_bomber3_medium
+			}
+		}
+	}
+	
+	medium_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_SOU_early_bomber_medium
+				GFX_SOU_tactical_bomber1_medium
+				GFX_SOU_tactical_bomber2_medium
+				GFX_SOU_tactical_bomber3_medium
+				GFX_SOU_heavy_fighter1_medium
+				GFX_SOU_heavy_fighter2_medium
+				GFX_SOU_heavy_fighter3_medium
+				GFX_SOU_jet_tactical_bomber1_medium
+				GFX_SOU_jet_tactical_bomber2_medium
+				GFX_SOU_jet_tactical_bomber_a_medium
+				GFX_SOU_jet_heavy_fighter_a_medium
+				GFX_SOU_sou_kirov_tech_medium
+			}
+		}
+	}
+	
+	large_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_SOU_strategic_bomber3_medium
+				GFX_SOU_strategic_bomber2_medium
+				GFX_SOU_strategic_bomber1_medium
+				GFX_SOU_jet_strategic_bomber1_medium
+				GFX_SOU_jet_strategic_bomber2_medium
+			}
+		}
+	}
+}
+
+GEM = {
+	small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GEM_early_fighter_medium
+				GFX_GEM_CAS1_medium
+				GFX_GEM_CAS2_medium
+				GFX_GEM_CAS3_medium
+				GFX_GEM_fighter1_medium
+				GFX_GEM_fighter2_medium
+				GFX_GEM_fighter3_medium
+				GFX_GEM_jet_fighter2_medium
+				GFX_GEM_jet_fighter_a_medium
+				GFX_GEM_jet_fighter1_medium
+				GFX_GEM_scout_plane1_medium
+				GFX_GEM_scout_plane2_medium
+				GFX_GEM_scout_plane_a_medium
+				GFX_GEM_jet_scout_plane_a_medium
+				GFX_GEM_jet_strike_craft_a_medium
+				GFX_GEM_jet_strike_craft_b_medium
+				GFX_GEM_jet_strike_craft_c_medium
+			}
+		}
+	}
+	
+	cv_small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GEM_early_fighter_medium
+				GFX_GEM_CAS1_medium
+				GFX_GEM_CAS2_medium
+				GFX_GEM_CAS3_medium
+				GFX_GEM_fighter1_medium
+				GFX_GEM_fighter2_medium
+				GFX_GEM_fighter3_medium
+				GFX_GEM_jet_fighter2_medium
+				GFX_GEM_jet_fighter_a_medium
+				GFX_GEM_jet_fighter1_medium
+				GFX_GEM_scout_plane1_medium
+				GFX_GEM_scout_plane2_medium
+				GFX_GEM_scout_plane_a_medium
+				GFX_GEM_jet_scout_plane_a_medium
+				GFX_GEM_jet_strike_craft_a_medium
+				GFX_GEM_jet_strike_craft_b_medium
+				GFX_GEM_jet_strike_craft_c_medium
+				GFX_GEM_naval_bomber1_medium
+				GFX_GEM_naval_bomber2_medium
+				GFX_GEM_naval_bomber3_medium
+			}
+		}
+	}
+	
+	medium_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GEM_early_bomber_medium
+				GFX_GEM_tactical_bomber1_medium
+				GFX_GEM_tactical_bomber2_medium
+				GFX_GEM_tactical_bomber3_medium
+				GFX_GEM_heavy_fighter1_medium
+				GFX_GEM_heavy_fighter2_medium
+				GFX_GEM_heavy_fighter3_medium
+				GFX_GEM_jet_tactical_bomber1_medium
+				GFX_GEM_jet_tactical_bomber2_medium
+				GFX_GEM_jet_tactical_bomber_a_medium
+				GFX_GEM_jet_heavy_fighter_a_medium
+			}
+		}
+	}
+	
+	large_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GEM_strategic_bomber3_medium
+				GFX_GEM_strategic_bomber2_medium
+				GFX_GEM_strategic_bomber1_medium
+				GFX_GEM_jet_strategic_bomber1_medium
+				GFX_GEM_jet_strategic_bomber2_medium
+			}
+		}
+	}
+}
+
+
+GRB = {
+	small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GRB_early_fighter_medium
+				GFX_GRB_CAS1_medium
+				GFX_GRB_CAS2_medium
+				GFX_GRB_CAS3_medium
+				GFX_GRB_fighter1_medium
+				GFX_GRB_fighter2_medium
+				GFX_GRB_fighter3_medium
+				GFX_GRB_jet_fighter2_medium
+				GFX_GRB_jet_fighter_a_medium
+				GFX_GRB_jet_fighter1_medium
+				GFX_GRB_scout_plane1_medium
+				GFX_GRB_scout_plane2_medium
+				GFX_GRB_scout_plane_a_medium
+				GFX_GRB_jet_scout_plane_a_medium
+				GFX_GRB_jet_strike_craft_a_medium
+				GFX_GRB_jet_strike_craft_b_medium
+				GFX_GRB_jet_strike_craft_c_medium
+			}
+		}
+	}
+	
+	cv_small_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GRB_early_fighter_medium
+				GFX_GRB_CAS1_medium
+				GFX_GRB_CAS2_medium
+				GFX_GRB_CAS3_medium
+				GFX_GRB_fighter1_medium
+				GFX_GRB_fighter2_medium
+				GFX_GRB_fighter3_medium
+				GFX_GRB_jet_fighter2_medium
+				GFX_GRB_jet_fighter_a_medium
+				GFX_GRB_jet_fighter1_medium
+				GFX_GRB_scout_plane1_medium
+				GFX_GRB_scout_plane2_medium
+				GFX_GRB_scout_plane_a_medium
+				GFX_GRB_jet_scout_plane_a_medium
+				GFX_GRB_jet_strike_craft_a_medium
+				GFX_GRB_jet_strike_craft_b_medium
+				GFX_GRB_jet_strike_craft_c_medium
+				GFX_GRB_naval_bomber1_medium
+				GFX_GRB_naval_bomber2_medium
+				GFX_GRB_naval_bomber3_medium
+			}
+		}
+	}
+	
+	medium_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GRB_early_bomber_medium
+				GFX_GRB_tactical_bomber1_medium
+				GFX_GRB_tactical_bomber2_medium
+				GFX_GRB_tactical_bomber3_medium
+				GFX_GRB_heavy_fighter1_medium
+				GFX_GRB_heavy_fighter2_medium
+				GFX_GRB_heavy_fighter3_medium
+				GFX_GRB_jet_tactical_bomber1_medium
+				GFX_GRB_jet_tactical_bomber2_medium
+				GFX_GRB_jet_tactical_bomber_a_medium
+				GFX_GRB_jet_heavy_fighter_a_medium
+			}
+		}
+	}
+	
+	large_plane_airframe = {
+		pool = {
+			icons = {
+				GFX_GRB_strategic_bomber3_medium
+				GFX_GRB_strategic_bomber2_medium
+				GFX_GRB_strategic_bomber1_medium
+				GFX_GRB_jet_strategic_bomber1_medium
+				GFX_GRB_jet_strategic_bomber2_medium
+			}
+		}
+	}
+}

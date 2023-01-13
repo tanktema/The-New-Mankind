@@ -1367,6 +1367,7 @@ focus_tree = {
 					modifier = CHN_Embargo
 					target = CHN 
 				}
+				send_embargo = CHN 
 			}
 		}
 	}
@@ -1891,6 +1892,7 @@ focus_tree = {
 					modifier = CHN_Embargo
 					target = WNG 
 				}
+				send_embargo = WNG
 			}
 		}
 	}
@@ -1965,6 +1967,16 @@ focus_tree = {
 				add_war_support = -0.05
 			}
 			give_guarantee = WNG
+			every_country = {
+				limit = {
+					AND = {
+						is_embargoing = WNG 
+						has_government = democratic
+					}
+				}
+				end_embargo = WNG 
+			}
+				
 		}
 	}
 	

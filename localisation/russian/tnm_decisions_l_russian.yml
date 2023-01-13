@@ -620,8 +620,9 @@
     UNS_buy_olenian_government:0 "Подкупить Оленийских чиновников"
     UNS_CSTO_borders_demilitarisation:0 "Демилитаризация Чейнджлингско-Эквестрийской границы"
     UNS_CSTO_has_100_willing_to_cooperate:0 "Желание Чейнджлингов сотрудничать - 100%"
-    UNS_add_velvet_rebellion:0 "Влияние §CТораксианцев§! увеличится на $RIGHT|0+$"
-    UNS_add_thorax_rebellion:0 "Влияние §CВельвет§! увеличится на $RIGHT|0+$"
+    UNS_add_thorax_rebellion:0 "Влияние §CТораксианцев§! увеличится на $RIGHT|0+$"
+    UNS_add_velvet_rebellion:0 "Влияние §CВельвет§! увеличится на $RIGHT|0+$"
+    CHN_will_to_friend_increase:0 "Желание чейнджлингов сотрудничать увеличится на $RIGHT|0+$"
     UNS_CSTO_love_support:0 "Отправка любви" ### Все любят обнимашки. Особенно люди! 
     UNS_CSTO_peaceful_propaganda:0 "Мирные демонстрации"
     UNS_CSTO_common_research:0 "Совместные исследования"
@@ -629,7 +630,7 @@
     UNS_anti_communist_propaganda:0 "Антикоммунистическая пропаганда"
     UNS_anti_stg_trainings:0 "Тренировки контингента: Сталлионград"
     UNS_stalliongradian_refugees:0 "Принять Сталлионградских беженцев"
-    UNS_CSTO_anticommunist_propaganda
+    UNS_CSTO_anticommunist_propaganda:0 "Пропаганда против коммунизма"
     UNS_CSTO_landlease_to_GRF:0 "Поставки оружия Нова Гриффонии"
     UNS_anti_imperial_propaganda:0 "Пропаганда против Империи"
     UNS_anti_gri_trainings:0 "Тренировки контингента: Империя Грифонов"

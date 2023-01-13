@@ -3,8 +3,8 @@ equipments = {
 	sou_kirov_derjijabl = {
 		year = 1007
 		
-		archetype = jet_tac_bomber_equipment
-
+		archetype = medium_plane_airframe
+		type = tactical_bomber
 		priority = 20
 		allow_mission_type = {
 			cas
