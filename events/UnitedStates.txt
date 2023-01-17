@@ -496,6 +496,7 @@ country_event = {
 	option = {
 		name = uns.world.1.a
 		add_political_power = 50
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		name = uns.world.1.b
@@ -504,6 +505,7 @@ country_event = {
 		}
 		set_country_flag = UNS_csto_solution_flag
 		custom_effect_tooltip = UNS_CSTO_tooltip
+		mark_focus_tree_layout_dirty = yes
 		hidden_effect = {
 			country_event = { id = uns_csto.1 days = 15 }
 		}

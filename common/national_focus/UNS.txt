@@ -688,27 +688,8 @@ focus_tree = {
 			country_event = {
 				id = uns.15
 			}
-			custom_effect_tooltip = expand_acceptance_tt_exta
-			mark_focus_tree_layout_dirty = yes
-			if = {
-				limit = {
-					check_variable = { acceptance_value < 90 }
-				}
-				add_to_variable = {
-					acceptance_value = 10
-				}
-				
-			}
-			if = {
-				limit = {
-					check_variable = { acceptance_value > 90 }
-				}
-				set_temp_variable = { accept_temp_check = acceptance_value }
-				set_temp_variable = { temp_hundred = 100 }
-				subtract_from_temp_variable = { temp_hundred = accept_temp_check }
-				set_temp_variable = { vartoadd_accept = temp_hundred }
-				add_to_variable = { acceptance_value = vartoadd_accept }
-			}
+	
+			acceptance_expand_extra = yes 
 		}
 		ai_will_do = {
 			factor = 10
