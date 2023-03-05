@@ -2,7 +2,7 @@
 
 entity = {
 	name = "SOU_infantry_entity"
-	clone = "SOV_infantry_2_entity"
+	clone = "infantry_2_entity"
 }	
 
 entity = { 
