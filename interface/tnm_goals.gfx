@@ -3658,7 +3658,7 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "UNS_CSTO_decline_imperial_politics" 
+		name = "GFX_goal_UNS_CSTO_decline_imperial_politics" 
 		texturefile = "gfx/interface/goals/UNS_CSTO_doubt_agression.dds"
 	}
 	
@@ -3684,7 +3684,7 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_goal_UNS_CSTO_yellow_military_plan_griwar" 
-		texturefile = "gfx/interface/goals/.dds"
+		texturefile = "gfx/interface/goals/UNS_CSTO_invade_gri.dds"
 	}
 	
 	SpriteType = {
@@ -3774,7 +3774,7 @@ spriteTypes = {
 	
 	SpriteType = {
 		name = "GFX_goal_UNS_CSTO_chiropterran_operation" 
-		texturefile = "gfx/interface/goals/UNS_CSTO_hiropterra	.dds"
+		texturefile = "gfx/interface/goals/UNS_CSTO_hiropterra.dds"
 	}
 	
 	SpriteType = {
