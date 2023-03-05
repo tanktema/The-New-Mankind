@@ -3089,7 +3089,7 @@ focus_tree = {
 			}
 		}
 		allow_branch = {
-			has_completed_focus = SOU_attack_stg
+			always = no
 		}
 
 		relative_position_id = SOU_changeling_threat

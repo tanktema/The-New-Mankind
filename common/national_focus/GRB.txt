@@ -3283,6 +3283,7 @@ focus_tree = {
 		relative_position_id = GRB_ruler_of_the_seas
 		prerequisite = { focus = GRB_ruler_of_the_seas }
 		cost = 5
+		
 		completion_reward = {
 			country_event = { id = grb.25 days = 20 }
 			hidden_effect = {
@@ -3665,10 +3666,11 @@ focus_tree = {
 			has_completed_focus = GRB_east_india
 		}
 		allow_branch = {
-			has_government = neutrality
-			NOT = {
-				has_country_flag = queen_has_lost
-			}
+			#has_government = neutrality
+			#NOT = {
+			#	has_country_flag = queen_has_lost
+			#}
+			always = no
 		}
 		cost = 7.2
 		completion_reward = {

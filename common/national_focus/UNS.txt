@@ -1454,6 +1454,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_griffon_continent
 		prerequisite = { focus = UNS_CSTO_griffon_continent }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_fall_of_an_empire
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_military_plan_yellow
 		}
@@ -1466,6 +1467,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_fall_of_an_empire
 		prerequisite = { focus = UNS_CSTO_fall_of_an_empire }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_trade_war_empire
 		completion_reward = {
 			every_other_country = {
 				add_opinion_modifier = {
@@ -1487,6 +1489,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_trade_war_empire
 		prerequisite = { focus = UNS_CSTO_trade_war_empire }
 		cost = 7.2
+		icon = GFX_goal_UNS_CSTO_resource_excavation_program
 		completion_reward = {	
 			custom_effect_tooltip = add_random_resource_csto
 			hidden_effect = {
@@ -1549,6 +1552,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_trade_war_empire
 		prerequisite = { focus = UNS_CSTO_trade_war_empire }
 		cost = 7.2
+		icon = GFX_goal_UNS_CSTO_trade_offer_grb
 		bypass = {
 			GRB = {
 				is_CSTO_member = yes 
@@ -1575,6 +1579,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_resource_excavation_program
 		prerequisite = { focus = UNS_CSTO_resource_excavation_program }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_agenture_of_cia
 		completion_reward = {
 			UNS_maximilian_carter = {
 				add_corps_commander_role = {
@@ -1606,6 +1611,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_trade_offer_grb
 		prerequisite = { focus = UNS_CSTO_trade_offer_grb }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_skyfall_csto_candidate
 		completion_reward = {
 			TRD = {
 				set_country_flag = UNS_CSTO_candidate
@@ -1622,6 +1628,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_agenture_of_cia }
 		prerequisite = { focus = UNS_CSTO_skyfall_csto_candidate }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_destroy_infrastructure
 		completion_reward = {
 			custom_effect_tooltip = UNS_CSTO_unlock_new_operation
 		}
@@ -1634,6 +1641,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_fall_of_an_empire
 		prerequisite = { focus = UNS_CSTO_fall_of_an_empire }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_decline_imperial_politics
 		completion_reward = {
 			every_country = {
 				limit = {	
@@ -1658,6 +1666,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_decline_imperial_politics
 		prerequisite = { focus = UNS_CSTO_decline_imperial_politics }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_support_republic
 		completion_reward = {
 			FAT = {
 				set_country_flag = UNS_CSTO_candidate
@@ -1673,6 +1682,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_decline_imperial_politics
 		prerequisite = { focus = UNS_CSTO_decline_imperial_politics }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_public_aggression_declining
 		completion_reward = {
 			every_other_country = {
 				limit = {	
@@ -1734,6 +1744,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_support_republic }
 		prerequisite = { focus = UNS_CSTO_public_aggression_declining }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_expeditional_corps
 		completion_reward = {
 			add_ideas = UNS_CSTO_expeditionary_corps_idea
 		}
@@ -1746,6 +1757,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_expeditional_corps
 		prerequisite = { focus = UNS_CSTO_expeditional_corps }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_north_support_programm
 		completion_reward = {
 			unlock_decision_tooltip = UNS_CSTO_landlease_to_FAT
 		}
@@ -1767,6 +1779,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_destroy_infrastructure }
 		prerequisite = { focus = UNS_CSTO_north_support_programm }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_yellow_military_plan_griwar
 		completion_reward = {
 			create_wargoal = {
 				type = puppet_wargoal_focus
@@ -1782,6 +1795,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_fall_of_an_empire
 		prerequisite = { focus = UNS_CSTO_fall_of_an_empire }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_invite_jer
 		completion_reward = {
 			JER = {
 				country_event = { id = uns_csto.4 days = 10 }
@@ -1796,6 +1810,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_griffon_continent
 		prerequisite = { focus = UNS_CSTO_griffon_continent }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_support_river_coalition
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_military_plan_green
 			unlock_decision_category_tooltip = UNS_military_plan_black
@@ -1809,6 +1824,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_support_river_coalition
 		prerequisite = { focus = UNS_CSTO_support_river_coalition }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_river_pact
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -1830,6 +1846,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_invite_jer }
 		prerequisite = { focus = UNS_CSTO_river_pact }
 		cost = 7.2
+		icon = GFX_goal_UNS_CSTO_invite_GRB
 		completion_reward = {
 			GRB = {
 				country_event = { id = uns_csto.4 days = 10 }
@@ -1844,6 +1861,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_invite_GRB
 		prerequisite = { focus = UNS_CSTO_invite_GRB }
 		cost = 7.2
+		icon = GFX_goal_UNS_CSTO_frontier_project
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -1861,6 +1879,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_support_river_coalition
 		prerequisite = { focus = UNS_CSTO_support_river_coalition }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_hellquill_operation
 		completion_reward = {
 			unlock_decision_tooltip = UNS_hellquillian_refugees
 			unlock_decision_tooltip = UNS_anti_hlq_trainings
@@ -1874,6 +1893,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_hellquill_operation
 		prerequisite = { focus = UNS_CSTO_hellquill_operation }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_invite_LSC
 		completion_reward = {
 			LSC = {
 				set_country_flag = UNS_CSTO_candidate
@@ -1889,8 +1909,9 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_hellquill_operation
 		prerequisite = { focus = UNS_CSTO_hellquill_operation }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_west_eleven_trainings
 		available = {
-			date > 1011.1.1
+			date > 1009.1.1
 		}
 		completion_reward = {
 			every_country = {
@@ -1911,6 +1932,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_invite_LSC }
 		prerequisite = { focus = UNS_CSTO_west_eleven_trainings }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_landlease_starry
 		completion_reward = {
 			unlock_decision_tooltip = UNS_CSTO_landlease_to_LSC
 			custom_effect_tooltip = UNS_additional_requirements
@@ -1932,6 +1954,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_landlease_starry
 		prerequisite = { focus = UNS_CSTO_landlease_starry }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_attack_HLQ
 		completion_reward = {
 			create_wargoal = {
 				type = annex_everything
@@ -1947,6 +1970,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_support_river_coalition
 		prerequisite = { focus = UNS_CSTO_support_river_coalition }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_guaranee_hlr
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_military_plan_black
 			HLR = {
@@ -1963,6 +1987,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_guaranee_hlr
 		prerequisite = { focus = UNS_CSTO_guaranee_hlr }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_arcturian_infrastructure
 		completion_reward = {
 			HLR = {
 				every_owned_state = {
@@ -1983,6 +2008,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_guaranee_hlr
 		prerequisite = { focus = UNS_CSTO_guaranee_hlr }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_modern_warfare
 		completion_reward = {
 			HLR = {
 				add_doctrine_cost_reduction = {
@@ -2007,6 +2033,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_arcturian_infrastructure
 		prerequisite = { focus = UNS_CSTO_arcturian_infrastructure }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_know_your_enemy
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -2024,6 +2051,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_modern_warfare
 		prerequisite = { focus = UNS_CSTO_modern_warfare }
 		cost = 10
+		icon = GFX_goal_UNS_CSTO_prepared_defense
 		completion_reward = {
 			HLR = {
 				every_owned_state = {
@@ -2054,6 +2082,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_know_your_enemy }
 		prerequisite = { focus = UNS_CSTO_prepared_defense }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_attack_dread_league
 		completion_reward = {
 			add_to_faction = HLR 
 			HLR = {
@@ -2073,6 +2102,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_organisation_of_csto 
 		prerequisite = { focus = UNS_CSTO_organisation_of_csto }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_zebra_continent
 		completion_reward = {
 			unlock_decision_tooltip = UNS_zebrican_representation_trainings
 		}
@@ -2080,11 +2110,12 @@ focus_tree = {
 	
 	focus = {
 		id = UNS_CSTO_chiropterran_operation
-		x = -3
+		x = 0
 		y = 1
 		relative_position_id = UNS_CSTO_zebra_continent
 		prerequisite = { focus = UNS_CSTO_zebra_continent }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_chiropterran_operation
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_hirropterran_operation
 		}
@@ -2097,6 +2128,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_chiropterran_operation
 		prerequisite = { focus = UNS_CSTO_chiropterran_operation }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_tobuk_connection
 		completion_reward = {
 			TBK = {
 				set_country_flag = UNS_CSTO_candidate
@@ -2112,6 +2144,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_tobuk_connection
 		prerequisite = { focus = UNS_CSTO_tobuk_connection }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_humanitarian_aid_aha
 		completion_reward = {
 			unlock_decision_tooltip = UNS_CSTO_landlease_to_TBK
 		}
@@ -2124,6 +2157,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_tobuk_connection
 		prerequisite = { focus = UNS_CSTO_tobuk_connection }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_contact_tobuck_generals
 		completion_reward = {
 			TBK = {
 				TBK_wallnut_drive = { set_nationality = ROOT }
@@ -2139,6 +2173,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_humanitarian_aid_aha
 		prerequisite = { focus = UNS_CSTO_humanitarian_aid_aha }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_compromate
 		completion_reward = {
 			add_political_power = 25
 			add_intel = {
@@ -2158,6 +2193,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_contact_tobuck_generals
 		prerequisite = { focus = UNS_CSTO_contact_tobuck_generals }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_military_instructors_tobuck
 		completion_reward = {
 			TBK = {
 				army_experience = 50
@@ -2174,6 +2210,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_compromate }
 		prerequisite = { focus = UNS_CSTO_military_instructors_tobuck }
 		cost = 10
+		icon = GFX_goal_UNS_CSTO_tobuck_alessia_takeover
 		completion_reward = {
 			TBK = {
 				TBK_alesia = {
@@ -2211,6 +2248,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_chiropterran_operation
 		prerequisite = { focus = UNS_CSTO_chiropterran_operation }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_deiplomacy_chiropterra
 		completion_reward = {
 			add_opinion_modifier = {
 				modifier = embassy_opened
@@ -2230,6 +2268,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_deiplomacy_chiropterra
 		prerequisite = { focus = UNS_CSTO_deiplomacy_chiropterra }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_embassy_in_bat
 		completion_reward = {
 			unlock_decision_tooltip = UNS_hiropterran_refugees
 		}
@@ -2242,6 +2281,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_chiropterran_operation 
 		prerequisite = { focus = UNS_CSTO_chiropterran_operation }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_cia_bat
 		completion_reward = {
 			create_operative_leader = {
 				name = "Moon Catcher"
@@ -2273,6 +2313,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_cia_bat
 		prerequisite = { focus = UNS_CSTO_cia_bat }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_assasinate_generals
 		completion_reward = {
 			BAT = {
 				retire_character = BAT_dead_air
@@ -2295,6 +2336,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_cia_bat
 		prerequisite = { focus = UNS_CSTO_cia_bat }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_attack_soldiers
 		completion_reward = {
 			BAT = {
 				add_ideas = UNS_CSTO_attack_on_soldiers
@@ -2316,6 +2358,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_assasinate_generals }
 		prerequisite = { focus = UNS_CSTO_attack_soldiers }
 		cost = 5
+		icon = GFX_goal_UNS_CSTO_diversions_of_factories
 		completion_reward = {
 			BAT = {
 				every_owned_state = {
@@ -2347,6 +2390,7 @@ focus_tree = {
 		prerequisite = { focus = UNS_CSTO_embassy_in_bat }
 		prerequisite = { focus = UNS_CSTO_diversions_of_factories }
 		cost = 5
+		icon = GFX_goal_UNS_CSO_attack_bat
 		bypass = {
 			BAT = {
 				OR = {
@@ -2370,6 +2414,7 @@ focus_tree = {
 		relative_position_id = UNS_CSTO_zebra_continent
 		prerequisite = { focus = UNS_CSTO_zebra_continent }
 		cost = 5
+		allow_branch = { always = no }
 		completion_reward = {
 			unlock_decision_category_tooltip = UNS_colthagen_operation
 		}
