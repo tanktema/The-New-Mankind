@@ -1566,4 +1566,48 @@ spriteTypes = {
 		name = "GFX_idea_GRB_anarch_cocern_naval"
 		texturefile = "gfx/interface/ideas/GRB_anarch_fleet.dds"
 	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_leader_idea"
+		texturefile = "gfx/interface/ideas/UNsym.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_CIA_first_idea"
+		texturefile = "gfx/interface/ideas/SOU_democrats.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_comittee_plan_idea"
+		texturefile = "gfx/interface/ideas/SOU_equestria_friendship.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_member_idea"
+		texturefile = "gfx/interface/ideas/UNsym.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_iron_curtain"
+		texturefile = "gfx/interface/ideas/UNS_nukes_by_wmd.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_military_tariners"
+		texturefile = "gfx/interface/ideas/milacc_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_trade_war_idea"
+		texturefile = "gfx/interface/ideas/generic_trade_money.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_expeditionary_corps_idea"
+		texturefile = "gfx/interface/ideas/eqs_volunterrs.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UUNS_CSTO_frontier_idea"
+		texturefile = "gfx/interface/ideas/UNS_work_together.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_paladins"
+		texturefile = "gfx/interface/ideas/mobilize_more_idea.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_UNS_CSTO_attack_on_soldiers"
+		texturefile = "gfx/interface/ideas/hum_demoralized.dds"
+	}
 	

@@ -5,3 +5,10 @@
     uns_war_tooltip1:0 "We claim §GLas-Pegasus§!"
     uns_war_tooltip2:0 "We claim §YVanhoover and Toll-Tale§!"
     uns_war_tooltip3:0 "We claim §RBoth of them§!"
+    
+    UNS_csto_members_modifier:0 "Member of the CSTO"
+    CSTO_is_member:0 "Is either a member CSTO, under CSTO guarantees CSTO or the subject of another CSTO member"
+    
+    UNS_CSTO_tooltip:0 "An emergency defense commission will be convened. It's time to make our move!"
+    UNS_CSTO_faction:0 "Celestial Sea Treaty Organisation"
+    
