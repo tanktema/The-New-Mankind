@@ -413,6 +413,7 @@ guiTypes = {
 				format = "LEFT"
 			}
 		}
+		
 
 		containerWindowType = {
 			name = "support_folder"
@@ -5501,6 +5502,68 @@ guiTypes = {
 			}
 
 		}
+		
+		containerWindowType = {
+			name = "polar_folder"
+			position = { x=0 y=47 }
+			size = { width = 100%% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+
+			containerWindowType = {
+				name = "techtree_stripes"
+				position = { x= 0 y= 0 }
+				size = {
+					width = 2800 height = 1100
+					min = { width = 100%% height = 100%% }
+				}
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_techtree_stripes"
+				}
+
+				iconType = {
+					name ="polar_bear_techtree_bg"
+					spriteType = "GFX_polar_bear_techtree_bg"
+					position = { x=0 y=0 }
+					alwaystransparent = yes
+				}
+
+			}
+			gridboxtype = {
+				name = "tech_magi_scribes_tree"
+				position = { x = 270 y = 200 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_polar_berserkers_tree"
+				position = { x = 270 y = 200 }
+				#size = { width = 420 height = 500 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+			gridBoxType = {
+				name = "tech_panzerbar_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70	height = 70	}
+				format = "LEFT"
+			}
+
+
+		}
+		
 		containerWindowType = {
 			name = "hippogriff_folder"
 			position = { x=0 y=47 }
@@ -5638,6 +5701,176 @@ guiTypes = {
 				format = "LEFT"
 			}
 
+		}
+		
+		containerWindowType = {
+			name = "kirin_folder"
+			position = { x=0 y=47 }
+			size = { width = 100%% height = 100%% }
+			margin = { top = 13 left = 13 bottom = 24 right = 25}
+			drag_scroll = { left middle }
+			verticalScrollbar = "right_vertical_slider"
+			horizontalScrollbar = "bottom_horizontal_slider"
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window_2b_border"
+			}
+
+			containerWindowType = {
+				name = "techtree_stripes"
+				position = { x= 0 y= 0 }
+				size = {
+					width = 1800 height = 2388
+					min = { width = 100%% height = 100%% }
+				}
+				clipping = no
+
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_techtree_stripes"
+				}
+
+				iconType = {
+					name ="kirin techtree background"
+					spriteType = "GFX_kirin_techtree_bg"
+					position = { x=0 y=0 }
+					alwaystransparent = yes
+				}
+			}
+
+			instantTextBoxType = {
+				name = "vanguard subtitle"
+				position = { x = 60 y = 189 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_VANGUARD_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_vanguard_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+			
+			instantTextBoxType = {
+				name = "braves subtitle"
+				position = { x = 60 y = 470 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_BRAVES_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_brave_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "military subtitle"
+				position = { x = 60 y = 820 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_MILITARY_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_military_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "numerology subtitle"
+				position = { x = 60 y = 1240 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_NUMEROLOGY_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_numerology_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "geomancy subtitle"
+				position = { x = 60 y = 1520 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_GEOMANCY_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_geomancy_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "astrology subtitle"
+				position = { x = 60 y = 1730 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_ASTROLOGY_SUBTITLE"
+				maxWidth = 600
+				maxHeight = 62
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_astrology_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+
+			instantTextBoxType = {
+				name = "nirik subtitle"
+				position = { x = 60 y = 2080 }
+				font = "hoi_33"
+				borderSize = {x = 0 y = 4}
+				text = "TITLE_KIRIN_NIRIK_SUBTITLE"
+				maxWidth = 200
+				maxHeight = 100
+				format = left
+				Orientation = "UPPER_LEFT"
+			}
+
+			gridboxtype = {
+				name = "tech_kirin_nirik_tree"
+				position = { x = 270 y = 200 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
 		}
 		containerWindowType = {
 			name = "barrad_folder"
@@ -5815,6 +6048,13 @@ guiTypes = {
 				frame = 1
 				clicksound = ui_research_tab_infantry
 			}
+			buttonType = {
+				name = "human_infantry_folder_tab"
+				position = { x = 22 y = 0 }
+				quadTextureSprite = "GFX_infantry_folder_tab"
+				frame = 1
+				clicksound = ui_research_tab_infantry
+			}
 
 			iconType = {
 				name = "highlight_infantry_folder"
@@ -5987,7 +6227,21 @@ guiTypes = {
 				frame = 1
 				clicksound = magic_sound_ev
 			}
+			buttonType = {
+				position = { x = 823 y = 0 }
+				name = "kirin_folder_tab"
+				quadTextureSprite = "GFX_kirin_folder_tab"
+				frame = 1
+				clicksound = magic_sound_ev
+			}
+			buttonType = { 
+				position = { x = 823 y = 0 }
+				name = "polar_folder_tab"
+				quadTextureSprite = "GFX_polar_folder_tab"
+				frame = 1
+				clicksound = magic_sound_ev
 
+			}
 			buttonType = {
 				position = { x = 823 y = 0 }
 				name = "hippogriff_folder_tab"
@@ -6309,6 +6563,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -6399,6 +6659,152 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
+
+	}
+	
+	containerWindowType = {
+		name = "techtree_human_infantry_folder_small_item"
+		position = { x=0 y=0 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "bonus_icon"
+			position = { x=-1 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = -1 y = -21 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
+	}
+
+	containerWindowType = {
+		name = "techtree_human_infantry_folder_item"
+		position = { x=-56 y=-7 }
+		size = { width = 183 height = 84 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=91 y=50 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+
+
+		instantTextBoxType = {
+			name = "Name"
+			position = { x = 3 y = -3 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "Happy-Go-Lucky-Tank"
+			maxWidth = 160
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "bonus_icon"
+			position = { x=111 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 111 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+
+
+		containerWindowType = {
+			name = "sub_technology_slot_0"
+			position = { x=141 y=1 }
+			size = { width = 35 height = 26 }
+			clipping = no
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_subtechnology_unavailable_item_bg"
+			}
+
+			iconType = {
+				name = "picture"
+				position = { x=2 y=2 }
+				spriteType = "GFX_subtech_rocket"
+				alwaystransparent = yes
+			}
+		}
+		containerWindowType = {
+			name = "sub_technology_slot_1"
+			position = { x=141 y=1 }
+			size = { width = 35 height = 26 }
+			clipping = no
+			
+			background = {
+				name = "Background"
+				spriteType ="GFX_subtechnology_unavailable_item_bg"
+			}
+			
+			iconType = {
+				name = "picture"
+				position = { x=2 y=2 }
+				spriteType = "GFX_subtech_td"
+				alwaystransparent = yes
+			}
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 
 	}
 
@@ -6469,6 +6875,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 
 	}
 
@@ -6506,6 +6918,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -6614,7 +7032,13 @@ guiTypes = {
 				spriteType = "GFX_subtech_aa"
 				alwaystransparent = yes
 			}
-		}		
+		}	
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}	
 		
 	}
 	
@@ -6651,6 +7075,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 	
@@ -6742,6 +7172,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 
 	}
 	
@@ -6780,6 +7216,12 @@ guiTypes = {
 			maxWidth = 50
 			maxHeight = 20
 			format = right
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -6849,6 +7291,12 @@ guiTypes = {
 				spriteType = "GFX_subtech_rocket"
 				alwaystransparent = yes
 			}
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -6957,7 +7405,13 @@ guiTypes = {
 				spriteType = "GFX_subtech_aa"
 				alwaystransparent = yes
 			}
-		}			
+		}	
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}		
 	}
 
 	containerWindowType = {
@@ -6992,6 +7446,12 @@ guiTypes = {
 			maxWidth = 50
 			maxHeight = 20
 			format = right
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -7028,6 +7488,12 @@ guiTypes = {
 			maxHeight = 20
 			format = right
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -7062,6 +7528,12 @@ guiTypes = {
 			maxWidth = 50
 			maxHeight = 20
 			format = right
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -7113,6 +7585,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -7222,6 +7700,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 
 	}
 
@@ -7293,6 +7777,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -7328,6 +7818,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -7380,6 +7876,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -7415,6 +7917,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}	
 	
@@ -7503,6 +8011,12 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -7539,6 +8053,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -7578,6 +8098,12 @@ guiTypes = {
 			maxHeight = 20
 			format = right
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	###------> Etax Folder Items <><> <><> <><> <><> <><>
@@ -7616,6 +8142,12 @@ guiTypes = {
 			maxHeight = 20
 			format = right
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	###------> X <><> <><> <><> <><> <><>
@@ -7637,6 +8169,54 @@ guiTypes = {
 			spriteType = "GFX_technology_medium"
 			centerposition = yes
 			alwaystransparent = yes
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
+	}
+	containerWindowType = {
+		name = "techtree_kirin_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=34 y=35 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=-1 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = -1 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -7674,6 +8254,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -8460,6 +9046,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -8496,6 +9088,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -8534,6 +9132,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -8570,6 +9174,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -8608,6 +9218,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 
 	containerWindowType = {
@@ -8644,6 +9260,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 
@@ -8682,6 +9304,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 	containerWindowType = {
 		name = "techtree_hippogriff_folder_item"
@@ -8717,6 +9345,12 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 	containerWindowType = {
@@ -8754,6 +9388,12 @@ guiTypes = {
 			maxHeight = 20
 			format = center
 		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
 	}
 	containerWindowType = {
 		name = "techtree_zebra_folder_item"
@@ -8789,6 +9429,54 @@ guiTypes = {
 			maxWidth = 80
 			maxHeight = 20
 			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
+		}
+	}
+	containerWindowType = {
+		name = "techtree_polar_folder_item"
+		position = { x=0 y=5 }
+		size = { width = 72 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=34 y=35 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=-1 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = -1 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+			scale = 0.8
 		}
 	}
 }

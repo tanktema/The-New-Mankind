@@ -14,6 +14,9 @@
 #    e) depending on tag, add an entry in operative_add_secondary_nationalities and operative_handle_secondary_cultures_races
 
 #Race triggers
+is_human_race = {	
+	has_tech = human_race
+}
 is_pony_race = {
 	has_tech = pony_race
 }
@@ -92,9 +95,6 @@ is_zebra_race = {
 is_other_race = {
 	has_tech = generic_race
 }
-is_human_race = {	
-	has_tech = human_race
-}
 
 is_generic_race = {
 	NOT = {
@@ -104,8 +104,10 @@ is_generic_race = {
 		is_deer_race = yes
 		is_griffon_race = yes
 		is_diamond_dog_race = yes
+		is_kirin_race = yes
 		is_zebra_race = yes
 		is_hippogriff_race = yes
+		is_polar_race = yes
 		is_human_race = yes
 	}
 }
@@ -145,6 +147,10 @@ has_diamond_dog_race_tech = {
 	has_special_race_tech = no
 }
 
+has_kirin_race_tech = {
+	is_kirin_race = yes
+	has_special_race_tech = no
+}
 has_hippogriff_race_tech = {
 	is_hippogriff_race = yes
 	has_special_race_tech = no
@@ -154,7 +160,15 @@ has_zebra_race_tech = {
 	is_zebra_race = yes
 	has_special_race_tech = no
 }
+has_polar_bear_race_tech = {
+	is_polar_race = yes
+	has_special_race_tech = no
+}
 
+has_human_race_tech = {
+	is_human_race = yes
+	has_special_race_tech = no
+}
 has_special_race_tech = {
 	OR = {
 		has_barrad_race_tech = yes
@@ -162,14 +176,10 @@ has_special_race_tech = {
 	}
 }
 
-has_human_race_tech = {
-	is_human_race = yes
-	has_special_race_tech = no
-}
-
 has_barrad_race_tech = {
 	original_tag = BAR
 }
+
 
 is_same_race_as_PREV = {
 	OR = {

@@ -1,5 +1,40 @@
 spriteTypes = {
+	
+	
+	spriteType = {
+		name = "GFX_technology_human_infantry_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_researched_item_bg.dds"
+	}
 
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_human_infantry_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+
+	spriteType = {
+		name = "GFX_technology_human_infantry_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_human_infantry_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_human_infantry_folder_small_branch_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_branch_item_bg.dds"
+	}
+	
+	
+	
 	spriteType = {
 		name = "GFX_human_folder_UNS_bg"
 		textureFile = "gfx/interface/techtree/UNS_techtree_bg.dds"
@@ -2485,4 +2520,242 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_custodes_equipment_0_medium"
 		textureFile = "gfx/interface/technologies/GRB/UNS_custodes_eqpm.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_hum_infantry_weapons_tech_1_medium"
+		texturefile = "gfx/interface/technologies/SOU/infantry_weapons_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_hum_infantry_weapons_tech_2_medium"
+		texturefile = "gfx/interface/technologies/SOU/infantry_weapons_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_hum_infantry_weapons_tech_3_medium"
+		texturefile = "gfx/interface/technologies/SOU/infantry_weapons_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_hum_infantry_weapons_tech_4_medium"
+		texturefile = "gfx/interface/technologies/SOU/infantry_weapons_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_hum_infantry_weapons_tech_5_medium"
+		texturefile = "gfx/interface/technologies/SOU/infantry_weapons_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_hum_infantry_weapons_tech_6_medium"
+		texturefile = "gfx/interface/technologies/SOU/infantry_weapons_5.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_sniper_weapons_tech_1_medium"
+		texturefile = "gfx/interface/technologies/SOU/sniper_rifle_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_sniper_weapons_tech_2_medium"
+		texturefile = "gfx/interface/technologies/SOU/sniper_rifle_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_sniper_weapons_tech_3_medium"
+		texturefile = "gfx/interface/technologies/SOU/sniper_rifle_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_sniper_weapons_tech_4_medium"
+		texturefile = "gfx/interface/technologies/SOU/sniper_rifle_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_machinegun_tech_1_medium"
+		textureFile = "gfx/interface/technologies/SOU/machinegun_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_machinegun_tech_2_medium"
+		textureFile = "gfx/interface/technologies/SOU/machinegun_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_machinegun_tech_3_medium"
+		textureFile = "gfx/interface/technologies/SOU/machinegun_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_machinegun_tech_4_medium"
+		textureFile = "gfx/interface/technologies/SOU/machinegun_equipment_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_rocket_launchers_tech_1_medium"
+		texturefile = "gfx/interface/technologies/SOU/rocket_launcher_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_rocket_launchers_tech_2_medium"
+		texturefile = "gfx/interface/technologies/SOU/rocket_launcher_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_rocket_launchers_tech_3_medium"
+		texturefile = "gfx/interface/technologies/SOU/rocket_launcher_equipment_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_rocket_launchers_tech_4_medium"
+		texturefile = "gfx/interface/technologies/SOU/rocket_launcher_equipment_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_rocket_launchers_tech_5_medium"
+		texturefile = "gfx/interface/technologies/SOU/rocket_launcher_equipment_4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_manpads_tech_1_medium"
+		textureFile = "gfx/interface/technologies/SOU/manpads_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_manpads_tech_2_medium"
+		textureFile = "gfx/interface/technologies/SOU/manpads_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_manpads_tech_3_medium"
+		textureFile = "gfx/interface/technologies/SOU/manpads_equipment_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_SOU_magical_weapons_tech_1_medium"
+		texturefile = "gfx/interface/technologies/SOU/SOU_magical_weapons0.dds"
+	}
+	SpriteType = { 
+		name = "GFX_SOU_magical_weapons_tech_2_medium"
+		texturefile = "gfx/interface/technologies/SOU/SOU_magical_weapons1.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_magical_weapons_tech_3_medium"
+		texturefile = "gfx/interface/technologies/SOU/SOU_magical_weapons2.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_magical_weapons_tech_4_medium"
+		texturefile = "gfx/interface/technologies/SOU/SOU_magical_weapons4.dds"
+	}
+	SpriteType = {
+		name = "GFX_SOU_magical_weapons_tech_5_medium"
+		texturefile = "gfx/interface/technologies/SOU/sou_tesla_mk_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_hum_infantry_weapons_upgrade_1_medium"
+		textureFile = "gfx/interface/technologies/human_tech/ballist_weapons_upgrade_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_hum_infantry_weapons_upgrade_2_medium"
+		textureFile = "gfx/interface/technologies/human_tech/ballist_weapons_upgrade_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_hum_uniform_armor_tech_1_medium"
+		textureFile = "gfx/interface/technologies/human_tech/upgrades_vests.dds"
+	}
+	SpriteType = {
+		name = "GFX_hum_uniform_armor_tech_2_medium"
+		textureFile = "gfx/interface/technologies/human_tech/upgrades_5ac.dds"
+	}
+	SpriteType = {
+		name = "GFX_hum_uniform_armor_tech_3_medium"
+		textureFile = "gfx/interface/technologies/human_tech/upgrades_heavyarmor.dds"
+	}
+	SpriteType = {
+		name = "GFX_hum_uniform_armor_tech_4_medium"
+		textureFile = "gfx/interface/technologies/human_tech/upgrades_polymer_bap.dds"
+	}
+	SpriteType = {
+		name = "GFX_hum_uniform_armor_tech_5_medium"
+		textureFile = "gfx/interface/technologies/human_tech/upgrades_battlearmor.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_human_support_tech_medium"
+		texturefile = "gfx/interface/technologies/human_tech/support_equipment_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_auxilary_units_support_tech_medium"
+		texturefile = "gfx/interface/technologies/human_tech/infantry_comms.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_medical_eqpm_1_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_field_hospital.dds"
+	}
+	SpriteType = {
+		name = "GFX_medical_eqpm_2_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_field_hospital2.dds"
+	}
+	SpriteType = {
+		name = "GFX_medical_eqpm_3_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_field_hospital3.dds"
+	}
+	SpriteType = {
+		name = "GFX_medical_eqpm_4_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_field_hospital4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_maintenance_eqpm_1_medium" 
+		texturefile = "gfx/interface/technologies/human_tech/tech_maintenance_company.dds"
+	}
+	SpriteType = {
+		name = "GFX_maintenance_eqpm_2_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_maintenance_company2.dds"
+	}
+	SpriteType = {
+		name = "GFX_maintenance_eqpm_3_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_maintenance_company3.dds"
+	}
+	SpriteType = {
+		name = "GFX_maintenance_eqpm_4_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_maintenance_company4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_logistics_eqpm_1_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_logistics_company.dds"
+	}
+	SpriteType = {
+		name = "GFX_logistics_eqpm_2_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_logistics_company2.dds"
+	}
+	SpriteType = {
+		name = "GFX_logistics_eqpm_3_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_logistics_company3.dds"
+	}
+	SpriteType = {
+		name = "GFX_logistics_eqpm_4_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_logistics_company4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_mil_police_eqpm_1_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_military_police.dds"
+	}
+	SpriteType = {
+		name = "GFX_mil_police_eqpm_2_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_military_police2.dds"
+	}
+	SpriteType = {
+		name = "GFX_mil_police_eqpm_3_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_military_police3.dds"
+	}
+	SpriteType = {
+		name = "GFX_mil_police_eqpm_4_medium"
+		texturefile = "gfx/interface/technologies/human_tech/tech_military_police4.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_engineer_eqpm_1_medium"
+		texturefile = "gfx/interface/technologies/human_tech/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_engineer_eqpm_2_medium"
+		texturefile = "gfx/interface/technologies/human_tech/engineers2.dds"
+	}
+	SpriteType = {
+		name = "GFX_engineer_eqpm_3_medium"
+		texturefile = "gfx/interface/technologies/human_tech/engineers3.dds"
+	}
+	SpriteType = {
+		name = "GFX_engineer_eqpm_4_medium"
+		texturefile = "gfx/interface/technologies/human_tech/engineers4.dds"
 	}

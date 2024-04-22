@@ -594,7 +594,7 @@ ideas = {
 			available = {
 				has_completed_focus = SOU_keep_industry
 			}
-			traits = { heavy_tank_producer }
+			traits = { heavy_tank_manufacturer }
 		}
 		SOU_stalingrad_zavod = {
 			allowed = {
@@ -607,7 +607,7 @@ ideas = {
 				infantry = 0.1
 				sniper_tech = 0.1
 			}
-			traits = { medium_tank_producer }
+			traits = { medium_tank_manufacturer }
 		}
 				
 	}

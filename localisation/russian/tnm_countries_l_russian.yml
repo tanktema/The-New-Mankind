@@ -58,7 +58,7 @@
     SOU_democratic_DEF:0 "Россия"
     SOU_communism_DEF:0 "СССР"
     SOU_neutrality_DEF:0 "Россия"
-    SOU_fascism_ADJ:0 "Русск.."
+    SOU_fascism_ADJ:0 "Русск."
     SOU_democratic_ADJ:0 "Российск."
     SOU_communism_ADJ:0 "Советск."
     SOU_neutrality_ADJ:0 "Российск."
@@ -70,6 +70,20 @@
     SOU_neobol_fascism_ADJ:0 "Советск."
 
     autonomy_trade_republic_grb:0 "Торговая Республика"
+    
+    
+    ### ITL 
+    
+    ITL_fascism: "Королевство Италия"
+    ITL_fascism_DEF: "Италия"
+    ITL_fascism_ADJ: "Итальянск."
+    
+    
+    ### FRC 
+    
+    FRC_democratic: "Французская Республика"
+    FRC_democratic_DEF: "Франция"
+    FRC_democratic_ADJ: "Французск."
 
 
     GRB_SUBJ_FBK_neutrality:0 "Британский Фарбрук"

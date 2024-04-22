@@ -1,0 +1,192 @@
+UNS_general_motors_organization = {
+	name = UNS_general_motors
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_UNS_general_motors
+
+	allowed = {
+		original_tag = UNS
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_gm_side
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_gm_side
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { medium_tank_chassis } 
+		equipment_bonus = {
+			maximum_speed = 0.03
+		}
+	}
+}
+UNS_ford_motors_organization = {
+	name = UNS_ford_motors
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_UNS_ford_motors
+
+	allowed = {
+		original_tag = UNS
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { medium_tank_chassis } 
+		equipment_bonus = {
+			maximum_speed = 0.03
+		}
+	}
+}
+
+UNS_remington_organization = {
+	name = UNS_remington
+	icon = GFX_idea_UNS_remington
+	include = generic_infantry_equipment_organization
+	allowed = {
+		tag = UNS
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_ford_side
+		}
+	}
+    initial_trait = {
+        
+        production_bonus = {
+            production_efficiency_cap_factor = 0.03
+            production_resource_need_factor = -0.05
+        }
+
+        equipment_bonus = {
+            soft_attack = 0.03
+            breakthrough = 0.02
+        }
+    }
+}
+
+UNS_colt_macintosh_organization = {
+	name = UNS_colt_macintosh
+	icon = GFX_idea_UNS_colt_macintosh
+	include = generic_infantry_equipment_organization
+	allowed = {
+		tag = UNS
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { magical_equipment } 
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.25
+			reliability = -0.05
+		}
+	}
+}
+
+
+
+UNS_boeing_corp_organization = {
+	name = UNS_boeing_corp
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_UNS_boeing_corp
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_our_sky
+			has_completed_focus = UNS_gm_side
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_our_sky
+			has_completed_focus = UNS_gm_side
+		}
+	}
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		original_tag = UNS
+	}
+	
+}
+
+
+UNS_bell_heli_organization = {
+	name = UNS_bell_heli
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_UNS_bell_heli
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_our_sky
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_our_sky
+			has_completed_focus = UNS_ford_side
+		}
+	}
+	allowed = {	
+		original_tag = UNS
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+UNS_philadelphia_dockyard_organization = {
+	name =  UNS_philadelphia_dockyard
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_UNS_philadelphia_dockyard
+	visible = {
+		FROM = {
+			has_completed_focus = UNS_our_fleet
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = UNS_our_fleet
+		}
+	}
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		original_tag = UNS
+	}
+}

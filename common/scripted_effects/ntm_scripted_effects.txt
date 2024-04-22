@@ -558,3 +558,22 @@ GRB_ancom_revolution_start = {
 	}
 	load_focus_tree = generic_focus
 }
+
+TNM_check_human_mech_variables = {
+	
+	clamp_variable = { var = industrial_destruction_value min = 0 }
+	clamp_variable = { var = human_hunger_value min = 0 }
+	clamp_variable = { var = infrastructure_destruction_value min = 0 }
+	
+	set_temp_variable = { tmp_human_hunger_value_effect = 0 }
+	subtract_from_temp_variable = { tmp_human_hunger_value_effect = human_hunger_value }
+	set_variable = { human_hunger_value_effect = tmp_human_hunger_value_effect }
+	
+	set_temp_variable = { tmp_industrial_destruction_value_effect = 0 }
+	subtract_from_temp_variable = { tmp_industrial_destruction_value_effect = industrial_destruction_value }
+	set_variable = { industrial_destruction_value_effect = tmp_industrial_destruction_value_effect }
+	
+	set_temp_variable = { tmp_infrastructure_destruction_value_effect = 0 }
+	subtract_from_temp_variable = { tmp_infrastructure_destruction_value_effect = infrastructure_destruction_value }
+	set_variable = { infrastructure_destruction_value_effect = tmp_infrastructure_destruction_value_effect }
+}

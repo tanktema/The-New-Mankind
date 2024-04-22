@@ -1463,3 +1463,297 @@ SOU_fleet_remake_category = {
 		fire_only_once = yes
 	}
 }
+
+
+TNM_human_industrial_infrastructure_retort_decisions = {
+	
+	TNM_human_purchase_equipment = {
+		
+		cost = 25
+		
+		days_remove = 15
+		days_re_enable = 45
+		
+		modifier = {
+			political_power_gain = -0.05
+		}
+		
+		remove_effect = {
+			add_to_variable = { industrial_destruction_value = -0.05 tooltip = TNM_change_industrial_destruction_value }
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	
+	TNM_human_hire_the_industry = {
+		
+		cost = 50
+		days_remove = 90
+		days_re_enable = 90
+		
+		complete_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+		
+		remove_effect = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = -2
+			}
+			add_to_variable = { industrial_destruction_value = -0.1 tooltip = TNM_change_industrial_destruction_value }
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	
+	TNM_human_hire_the_workers = {
+		
+		cost = 30
+		days_remove = 180
+		days_re_enable = 180
+		
+		modifier = {
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+		}
+		
+		remove_effect = {
+			add_to_variable = { industrial_destruction_value = -0.05 tooltip = TNM_change_industrial_destruction_value }
+			add_to_variable = { infrastructure_destruction_value = -0.05 tooltip = TNM_change_infrastructure_destruction_value }
+			TNM_check_human_mech_variables = yes 
+			
+		}
+	}
+	
+	TNM_human_organise_building_groups = {
+		
+		visible = {
+			has_government = communism
+		}
+		
+		cost = 25
+		
+		days_remove = 90
+		
+		days_re_enable = 270
+		
+		modifier = {
+			production_speed_buildings_factor = 0.1
+			industrial_capacity_factory = 0.1
+			research_speed_factor = -0.05
+		}
+		
+		remove_effect = {
+			add_to_variable = { industrial_destruction_value = -0.05 tooltip = TNM_change_industrial_destruction_value }
+			add_to_variable = { infrastructure_destruction_value = -0.05 tooltip = TNM_change_infrastructure_destruction_value }
+			TNM_check_human_mech_variables = yes 
+		}
+		
+	}
+	
+	TNM_human_labour_camps = {
+		
+		visible = {
+			has_government = fascism
+		}
+		
+		cost = 25
+		days_remove = 45
+		days_re_enable = 90
+		
+		modifier = {
+			stability_factor = -0.1
+			political_power_factor = -0.1
+			production_speed_buildings_factor = 0.15
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+		}
+		remove_effect = {
+			add_to_variable = { industrial_destruction_value = -0.1 tooltip = TNM_change_industrial_destruction_value }
+			add_to_variable = { infrastructure_destruction_value = -0.1 tooltip = TNM_change_infrastructure_destruction_value }
+			TNM_check_human_mech_variables = yes 
+		}
+		
+	}
+	
+	TNM_human_look_for_investements = {
+		
+		visible = {
+			has_government = democratic
+		}
+		
+		cost = 25
+		days_remove = 90
+		days_re_enable = 270
+		
+		modifier = {
+			stability_factor = 0.05
+			political_power_factor = 0.1
+			industrial_capacity_factory = 0.05
+			production_speed_buildings_factor = 0.1
+		}
+		remove_effect = {
+			add_to_variable = { industrial_destruction_value = -0.05 tooltip = TNM_change_industrial_destruction_value }
+			add_to_variable = { infrastructure_destruction_value = -0.05 tooltip = TNM_change_infrastructure_destruction_value }
+			TNM_check_human_mech_variables = yes 
+		}
+		
+	}
+	
+	TNM_human_roads_building = {
+		
+		cost = 15
+		days_remove = 90
+		days_re_enable = 90
+		
+		modifier = {
+			production_speed_infrastructure_factor = 0.25
+		}
+		remove_effect = {
+			add_to_variable = { infrastructure_destruction_value = -0.1 tooltip = TNM_change_infrastructure_destruction_value }
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+}
+
+TNM_human_hunger_prevention_decisions = {
+
+	TNM_human_buy_food = {
+		
+		cost = 15
+		days_remove = 45
+		days_re_enable = 90
+		
+		modifier = {
+			monthly_population = 0.1
+		}
+		
+		remove_effect = {
+			add_to_variable = { human_hunger_value = -0.1 tooltip = TNM_change_human_hunger_value }
+			add_days_mission_timeout = {
+				mission = TNM_hunger_mission
+				days = 180
+			}
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	TNM_human_expand_farmlands = {
+		
+		cost = 15
+		days_remove = 90
+		days_re_enable = 90
+		
+		fixed_random_seed = no 
+		
+		remove_effect = {
+			add_to_variable = { human_hunger_value = -0.1 tooltip = TNM_change_human_hunger_value }
+			random_owned_state = {
+				add_extra_state_shared_building_slots = -1
+			}
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	TNM_human_create_colhoz = {
+		
+		cost = 15
+		days_remove = 30
+		days_re_enable = 90
+		
+		visible = {
+			has_government = communism
+		}
+		
+		fixed_random_seed = no 
+		
+		modifier = {
+			stability_weekly = 0.005
+		}
+		
+		remove_effect = {
+			add_to_variable = { human_hunger_value = -0.1 tooltip = TNM_change_human_hunger_value }
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	TNM_human_ersatz_products = {
+		
+		cost = 15
+		days_remove = 30
+		days_re_enable = 90
+		
+		visible = {
+			has_government = fascism
+		}
+		
+		fixed_random_seed = no 
+		
+		modifier = {
+			stability_weekly = -0.005
+			political_power_gain = -0.01
+			production_speed_buildings_factor = 0.05
+			monthly_population = 0.05
+			industrial_capacity_factory = 0.05
+		}
+		
+		remove_effect = {
+			add_to_variable = { human_hunger_value = -0.1 tooltip = TNM_change_human_hunger_value }
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	TNM_human_subsidize_farmers = {
+		
+		cost = 15
+		days_remove = 30
+		days_re_enable = 90
+		
+		visible = {
+			has_government = democratic
+		}
+		
+		fixed_random_seed = no 
+		
+		modifier = {
+			production_speed_buildings_factor = -0.05
+			political_power_gain = -0.01
+			stability_weekly = 0.005
+			monthly_population = 0.1
+		}
+		
+		remove_effect = {
+			add_to_variable = { human_hunger_value = -0.1 tooltip = TNM_change_human_hunger_value }
+			TNM_check_human_mech_variables = yes 
+		}
+	}
+	
+	TNM_hunger_mission = {
+		
+		activation = {
+			check_variable = { human_hunger_value > 0 }
+		}
+		available = { always = no }
+		
+		is_good = no
+		
+		days_mission_timeout = 1500
+		fire_only_once = yes
+		
+		available = { 
+			custom_trigger_tooltip = {
+				tooltip = TNM_no_more_hunger
+				check_variable = { human_hunger_value < 0.01 }
+			}
+			
+		}
+		
+		
+		timeout_effect = {
+			add_timed_idea = { 
+				idea = TNM_hungry_people
+				days = 365
+			}
+		}
+	}
+}
+	
+	

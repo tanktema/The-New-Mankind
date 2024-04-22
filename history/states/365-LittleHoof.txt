@@ -18,6 +18,6 @@ state={
 			infrastructure = 4
 		}
 	}
-	manpower=17854366
+	manpower=27854366
 	buildings_max_level_factor=1.000
 }

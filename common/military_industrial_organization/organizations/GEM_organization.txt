@@ -1,0 +1,188 @@
+GEM_porsche_organization = {
+	name = GEM_porsche
+	include = generic_infantry_tank_organization
+	icon = GFX_idea_GEM_porsche
+
+	allowed = {
+		original_tag = GEM
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_better_armor
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_better_armor
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { medium_tank_chassis } 
+		equipment_bonus = {
+			maximum_speed = 0.03
+		}
+	}
+}
+GEM_henshel_werke_organization = {
+	name = GEM_henshel_werke
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_GEM_henshel_werke
+
+	allowed = {
+		original_tag = GEM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_better_armor
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_better_armor
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { heavy_tank_chassis } 
+		equipment_bonus = {
+			maximum_speed = 0.03
+		}
+	}
+}
+
+GEM_opel_organization = {
+	name = GEM_opel
+	icon = GFX_idea_GEM_opel
+	include = generic_motorized_mechanized_organization
+	allowed = {
+		tag = GEM
+		has_dlc = "Arms Against Tyranny"
+	}
+	
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_light_industry
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_light_industry
+		}
+	}
+    initial_trait = {
+        
+        production_bonus = {
+            production_efficiency_cap_factor = 0.03
+            production_resource_need_factor = -0.05
+        }
+
+        equipment_bonus = {
+            soft_attack = 0.03
+            breakthrough = 0.02
+        }
+    }
+}
+
+GEM_mauser_organization = {
+	name = GEM_mauser
+	icon = GFX_idea_GEM_mauser
+	include = generic_infantry_equipment_organization
+	allowed = {
+		tag = GEM
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_old_friends
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_old_friends
+		}
+	}
+	initial_trait = {
+		limit_to_equipment_type = { magical_equipment } 
+		equipment_bonus = {
+			build_cost_ic = -0.1
+			soft_attack = 0.1
+			hard_attack = 0.1
+			ap_attack = 0.25
+			reliability = -0.05
+		}
+	}
+}
+
+
+
+GEM_messershmit_organization = {
+	name = GEM_messershmit
+	include = generic_cas_aircraft_organization
+	icon = GFX_idea_GEM_messershmit
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_exploring_air
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_exploring_air
+		}
+	}
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		original_tag = GEM
+	}
+	
+}
+
+
+GEM_blom_und_foss_organization = {
+	name = GEM_blom_und_foss
+	include = generic_heavy_aircraft_organization
+	icon = GFX_idea_GEM_blom_und_foss
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_exploring_air
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_exploring_air
+		}
+	}
+	allowed = {	
+		original_tag = GEM
+		has_dlc = "Arms Against Tyranny"
+	}
+}
+
+
+GEM_lursen_werft_organization = {
+	name =  GEM_lursen_werft
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_GEM_lursen_werft
+	visible = {
+		FROM = {
+			has_completed_focus = GEM_fleet_rebuild
+		}
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = GEM_fleet_rebuild
+		}
+	}
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+		original_tag = GEM
+	}
+}

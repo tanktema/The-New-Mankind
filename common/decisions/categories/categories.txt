@@ -555,3 +555,36 @@ UNS_colthagen_operation = {
 		has_completed_focus = UNS_CSTO_prepare_colthage_operation
 	}
 }
+
+TNM_human_industrial_infrastructure_retort_decisions = {
+
+	icon = generic_formable_nations
+	allowed = {
+		always = no  
+	}
+	
+	visible = {
+		OR = {
+			check_variable = { industrial_destruction_value > 0 }
+			check_variable = { infrastructure_destruction_value > 0 }
+		}
+	}
+	
+	visible_when_empty = yes
+	priority = { base = 1000 }
+}
+
+TNM_human_hunger_prevention_decisions = {
+
+	icon = generic_formable_nations
+	allowed = {
+		always = no 
+	}
+	
+	visible = {
+		check_variable = { human_hunger_value > 0 }
+	}
+	
+	visible_when_empty = yes
+	priority = { base = 999 }
+}
