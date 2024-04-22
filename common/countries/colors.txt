@@ -71,9 +71,9 @@ BAL = {
 	color = rgb { 176 21 71 }
 	color_ui = rgb { 176 21 71 }
 }
-ROC = {
-	color = rgb { 154 18 50 }
-	color_ui = rgb { 154 18 50 }
+VAN = {
+	color = rgb { 237 3 62 }
+	color_ui = rgb { 237 3 62 }
 }
 GFF = {
 	color = rgb { 247 208 158 }
@@ -975,6 +975,10 @@ TRO = {
 	color = rgb { 170 205 130 }
 	color_ui = rgb { 170 205 130 }
 }
+UFS = {
+	color = rgb { 121 255 176 }
+	color_ui = rgb { 121 255 176 }
+}
 UNS = {
 	color = rgb { 105 140 200 }
 	color_ui = rgb { 114 116 186 }
@@ -991,4 +995,12 @@ GRB = {
 GEM = {
 	color = rgb { 85 85 85 }
 	color_ui = rgb { 95 95 95 }
+}
+FRC = {
+	color = rgb { 107 80 175 }
+	color_ui = rgb { 107 80 175 }
+}
+ITL = {
+	color = rgb { 156 161 94 }
+	color_ui = rgb { 156 161 94 }
 }
