@@ -986,6 +986,18 @@ country_event = {
 		name = uns.30.a
 		custom_effect_tooltip = uns_recruitment_effect
 		hidden_effect = {
+			set_division_template_lock = { 
+				division_template = "U.S. Infantry Division"
+				is_locked = no
+			}
+			set_division_template_lock = { 
+				division_template = "U.S. Armored Corps"
+				is_locked = no
+			}
+			set_division_template_lock = { 
+				division_template = "U.S. Militia"
+				is_locked = no
+			}
 			load_oob = "UNS_recruitment"
 		}
 	}

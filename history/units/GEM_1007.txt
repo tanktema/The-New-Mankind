@@ -1,5 +1,7 @@
 division_template = {
 	name = "Infanteriedivision"
+	is_locked = yes 
+	force_allow_recruiting = yes
 	division_names_group = GEM_INF_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -15,6 +17,8 @@ division_template = {
 }
 division_template = {
 	name = "Volksturm"
+	is_locked = yes 
+	force_allow_recruiting = yes
 	division_names_group = GEM_MIL_01
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -26,6 +30,8 @@ division_template = {
 }
 division_template = {
 	name = "Panzerbrigade"
+	is_locked = yes 
+	force_allow_recruiting = yes
 	regiments = {
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }

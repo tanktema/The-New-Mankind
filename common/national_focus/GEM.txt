@@ -5700,6 +5700,18 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = gem_recruit_tt
 			hidden_effect = {
+				set_division_template_lock = { 
+					division_template = "Infanteriedivision"
+					is_locked = no
+				}
+				set_division_template_lock = { 
+					division_template = "Volksturm"
+					is_locked = no
+				}
+				set_division_template_lock = { 
+					division_template = "Panzerbrigade"
+					is_locked = no
+				}
 				load_oob = "GEM_recruiting"
 			}
 		}

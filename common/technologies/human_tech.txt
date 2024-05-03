@@ -23,6 +23,7 @@ technologies = {
 	human_race = {
 		research_cost = 1
 		intel_network_gain_factor = 0.2
+		additional_brigade_column_size = 1
 		recon = {
 			maximum_speed = -0.1
 		}

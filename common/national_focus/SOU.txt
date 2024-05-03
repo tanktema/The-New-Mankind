@@ -4374,6 +4374,18 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			hidden_effect = {
+				set_division_template_lock = { 
+					division_template = "Pekhotnaya Diviziya"
+					is_locked = no
+				}
+				set_division_template_lock = { 
+					division_template = "Pogranichnaya Diviziya NKVD"
+					is_locked = no
+				}
+				set_division_template_lock = { 
+					division_template = "Mekhanizirovannaya Brigada"
+					is_locked = no
+				}
 				load_oob = "SOU_recruiting"
 				country_event = { id = sou.31 days = 70 }
 			}
