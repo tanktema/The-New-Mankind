@@ -1,0 +1,797 @@
+equipments = {
+
+	afterwar_light_tank_equipment = {
+		abbreviation = "alt"
+		derived_variant_name = afterwar_light_tank_equipment
+		visual_level = 4
+		year = 1024
+		archetype = light_tank_chassis
+		priority = 2000
+		module_slots = inherit
+		build_cost_ic = 4
+		maximum_speed = 9
+		reliability = 2
+		armor_value = 40
+		resources = {
+			steel = 5
+		}
+	}
+	
+	afterwar_medium_tank_equipment = {
+		abbreviation = "mt3"
+		derived_variant_name = afterwar_medium_tank_equipment
+		visual_level = 2
+		year = 1014
+		archetype = medium_tank_chassis
+		priority = 2000
+		module_slots = inherit
+		maximum_speed = 6
+		build_cost_ic = 5
+		reliability = 2
+		armor_value = 65
+		resources = {
+			steel = 3
+		}
+	}
+	
+	afterwar_heavy_tank_equipment = {
+		abbreviation = "hv3"
+		derived_variant_name = afterwar_heavy_tank_equipment
+		visual_level = 2
+		year = 1014
+		archetype = heavy_tank_chassis
+		priority = 2000
+		module_slots = inherit
+		build_cost_ic = 12
+		maximum_speed = 5
+		reliability = 2
+		armor_value = 90
+		resources = {
+			steel = 3
+			chromium = 1
+		}
+	}
+	
+	
+
+	early_human_mbt_equipment = {
+		abbreviation = "ehmbt"
+		derived_variant_name = early_human_mbt_equipment
+		visual_level = 2
+		year = 1026
+		archetype = modern_tank_chassis
+		priority = 2000
+		module_slots = {
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					main_battle_tank_turret
+				}
+			}
+			
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_main_battle_tank_armament
+					tank_magical_main_battle_tank_armament
+					
+				}
+			}
+
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					mbt_asv_suspension
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					engine_type_module
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					communication_device_module
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_protection_device_slot
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_scope_module
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
+		
+		}
+
+		build_cost_ic = 12
+		reliability = 2.5
+		armor_value = 120
+		maximum_speed = 7
+		resources = {
+			steel = 3
+			chromium = 2
+		}
+	}
+	
+	early_human_mbt_equipment_2 = {
+		abbreviation = "mbt2"
+		derived_variant_name = early_human_mbt_equipment_2
+		visual_level = 2
+		year = 1026
+		archetype = modern_tank_chassis
+		parent = early_human_mbt_equipment
+		priority = 2000
+		module_slots = {
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					main_battle_tank_turret
+				}
+			}
+			
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_main_battle_tank_armament
+					tank_magical_main_battle_tank_armament
+					
+				}
+			}
+
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					mbt_asv_suspension
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					engine_type_module
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					communication_device_module
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_protection_device_slot
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_scope_module
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
+		
+		}
+
+		build_cost_ic = 14
+		reliability = 2.5
+		armor_value = 130
+		maximum_speed = 8
+		resources = {
+			steel = 4
+			chromium = 2
+		}
+	}
+	
+	early_human_mbt_equipment_3 = {
+		abbreviation = "mbt2"
+		derived_variant_name = early_human_mbt_equipment_3
+		visual_level = 2
+		year = 1026
+		archetype = modern_tank_chassis
+		parent = early_human_mbt_equipment_2
+		priority = 2000
+		module_slots = {
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					main_battle_tank_turret
+				}
+			}
+			
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_main_battle_tank_armament
+					tank_magical_main_battle_tank_armament
+					
+				}
+			}
+
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					mbt_asv_suspension
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					engine_type_module
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					communication_device_module
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_protection_device_slot
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_scope_module
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
+		
+		}
+
+		build_cost_ic = 15
+		reliability = 3
+		armor_value = 140
+		maximum_speed = 9
+		resources = {
+			steel = 4
+			chromium = 3
+		}
+	}
+	
+	early_human_mbt_equipment_4 = {
+		abbreviation = "mbt2"
+		derived_variant_name = early_human_mbt_equipment_4
+		parent = early_human_mbt_equipment_3
+		visual_level = 2
+		year = 1026
+		archetype = modern_tank_chassis
+		priority = 2000
+		module_slots = {
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					main_battle_tank_turret
+				}
+			}
+			
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_main_battle_tank_armament
+					tank_magical_main_battle_tank_armament
+					
+				}
+			}
+
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					mbt_asv_suspension
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					engine_type_module
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					communication_device_module
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_protection_device_slot
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_scope_module
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
+		
+		}
+
+		build_cost_ic = 16
+		reliability = 3
+		armor_value = 150
+		maximum_speed = 9
+		resources = {
+			steel = 4
+			chromium = 4
+		}
+	}
+	
+	early_human_mbt_equipment_5 = {
+		abbreviation = "mbt2"
+		derived_variant_name = early_human_mbt_equipment_5
+		parent = early_human_mbt_equipment_4
+		visual_level = 2
+		year = 1026
+		archetype = modern_tank_chassis
+		priority = 2000
+		module_slots = {
+			turret_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					main_battle_tank_turret
+				}
+			}
+			
+			main_armament_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_main_battle_tank_armament
+					tank_magical_main_battle_tank_armament
+					
+				}
+			}
+
+
+			suspension_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					mbt_asv_suspension
+				}
+			}
+
+			armor_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					tank_armor_type
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					engine_type_module
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					communication_device_module
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					tank_protection_device_slot
+				}
+			}
+
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+					tank_scope_module
+				}
+			}
+
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_special_module
+				}
+			}
+		
+		}
+
+		build_cost_ic = 20
+		reliability = 3
+		armor_value = 150
+		maximum_speed = 10
+		resources = {
+			steel = 5
+			chromium = 4
+		}
+	}
+	
+	### ICAV equipment 
+	
+	
+	human_mechanized_infantry_eqpm_1 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 18
+
+		#Defensive Abilities
+		defense = 45
+		breakthrough = 16
+		hardness = 0.9
+		armor_value = 45
+
+		#Offensive Abilities
+		soft_attack = 3
+		hard_attack = 0.25
+		ap_attack = 35
+
+		build_cost_ic = 20
+		resources = {
+			steel = 4
+			tungsten = 1
+			rubber = 1
+			#oil = 3
+		}
+	}
+	human_mechanized_infantry_eqpm_2 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		parent = human_mechanized_infantry_eqpm_1
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 18
+
+		#Defensive Abilities
+		defense = 47
+		breakthrough = 18
+		hardness = 0.9
+		armor_value = 50
+
+		#Offensive Abilities
+		soft_attack = 5
+		hard_attack = 1
+		ap_attack = 65
+
+		build_cost_ic = 24
+		resources = {
+			steel = 4
+			tungsten = 2
+			rubber = 1
+			#oil = 3
+		}
+	}
+	human_mechanized_infantry_eqpm_3 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		parent = human_mechanized_infantry_eqpm_2
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 22
+
+		#Defensive Abilities
+		defense = 49
+		breakthrough = 20
+		hardness = 0.9
+		armor_value = 55
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 1
+		ap_attack = 65
+
+		build_cost_ic = 20
+		resources = {
+			steel = 4
+			tungsten = 1
+			rubber = 1
+			#oil = 3
+		}
+	}
+	human_mechanized_infantry_eqpm_4 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		parent = human_mechanized_infantry_eqpm_3
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 25
+
+		#Defensive Abilities
+		defense = 51
+		breakthrough = 22
+		hardness = 0.9
+		armor_value = 70
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 2
+		ap_attack = 75
+
+		build_cost_ic = 20
+		resources = {
+			steel = 4
+			tungsten = 2
+			rubber = 2
+			#oil = 3
+		}
+	}
+	human_mechanized_infantry_eqpm_5 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		parent = human_mechanized_infantry_eqpm_4
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 25
+
+		#Defensive Abilities
+		defense = 54
+		breakthrough = 24
+		hardness = 0.9
+		armor_value = 70
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 3
+		ap_attack = 85
+
+		build_cost_ic = 30
+		resources = {
+			steel = 4
+			tungsten = 3
+			rubber = 2
+			#oil = 3
+		}
+	}
+	
+	human_amphibious_mechnized_1 = {
+		year = 1024
+
+		archetype = amphibious_mechanized_equipment
+		priority = 40
+		visual_level = 1
+
+		maximum_speed = 16
+
+		#Defensive Abilities
+		defense = 42
+		breakthrough = 14
+		hardness = 0.85
+		armor_value = 30
+
+		#Offensive Abilities
+		soft_attack = 1.5
+		hard_attack = 0.25
+		ap_attack = 31
+		
+		build_cost_ic = 18
+		resources = {
+			steel = 6
+			rubber = 1
+			tungsten = 1
+		}
+	}
+	
+	human_amphibious_mechnized_2 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		parent = human_amphibious_mechnized_1
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 18
+
+		#Defensive Abilities
+		defense = 47
+		breakthrough = 18
+		hardness = 1
+		armor_value = 60
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 2
+		ap_attack = 65
+
+		build_cost_ic = 24
+		resources = {
+			steel = 4
+			tungsten = 2
+			rubber = 1
+			#oil = 3
+		}
+	}
+	
+	human_amphibious_mechnized_3 = {
+		year = 1023
+
+		archetype = mechanized_equipment
+		parent = human_amphibious_mechnized_2
+		priority = 40
+		visual_level = 2
+
+
+		maximum_speed = 22
+
+		#Defensive Abilities
+		defense = 49
+		breakthrough = 20
+		hardness = 1
+		armor_value = 65
+
+		#Offensive Abilities
+		soft_attack = 7
+		hard_attack = 2
+		ap_attack = 65
+
+		build_cost_ic = 20
+		resources = {
+			steel = 4
+			tungsten = 1
+			rubber = 1
+			#oil = 3
+		}
+	}
+	
+	human_amphibious_mechnized_4 = {
+		year = 1024
+
+		archetype = amphibious_mechanized_equipment
+		parent = human_amphibious_mechnized_3
+		priority = 40
+		visual_level = 1
+
+		maximum_speed = 16
+
+		#Defensive Abilities
+		defense = 51
+		breakthrough = 22
+		hardness = 1
+		armor_value = 80
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 3
+		ap_attack = 75
+
+		build_cost_ic = 20
+		resources = {
+			steel = 4
+			tungsten = 2
+			rubber = 2
+			#oil = 3
+		}
+	}
+	
+	human_amphibious_mechnized_5 = {
+		year = 1024
+
+		archetype = amphibious_mechanized_equipment
+		parent = human_amphibious_mechnized_4
+		priority = 40
+		visual_level = 1
+
+		maximum_speed = 16
+
+		#Defensive Abilities
+		defense = 55
+		breakthrough = 25
+		hardness = 1
+		armor_value = 90
+
+		#Offensive Abilities
+		soft_attack = 10
+		hard_attack = 4
+		ap_attack = 100
+
+		build_cost_ic = 30
+		resources = {
+			steel = 4
+			tungsten = 3
+			rubber = 2
+			#oil = 3
+		}
+	}

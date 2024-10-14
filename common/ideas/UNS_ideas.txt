@@ -438,7 +438,7 @@ ideas = {
 		UNS_wartime_measures_idea = {
 			removal_cost = -1
 			allowed = { always = yes }
-			available = { has_war = yes }
+			###available = { has_war = yes }
 			modifier = {
 				conscription = 0.015
 				consumer_goods_factor = -0.05

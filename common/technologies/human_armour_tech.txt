@@ -1,0 +1,38 @@
+@tier0 = 0
+@tier1 = 4
+@tier2 = 8
+@tier3 = 12
+@tier4 = 16 
+@tier5 = 20
+
+
+
+technologies = {
+	
+	hum_afterwar_light_tank_equipment = {
+	
+		enable_equipments = {
+			afterwar_light_tank_equipment
+		}
+		
+		enable_subunits = {
+			light_armor
+		}
+		
+		path = {
+			leads_to_tech = hum_ifv_tech_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = hum_acv_tech_1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1000
+		
+		folder = {
+			name = human_infantry_folder
+			position = { x = 0 y = @1950 }
+		}
+	}

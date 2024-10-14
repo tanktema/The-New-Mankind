@@ -1,0 +1,1270 @@
+equipment_modules = {
+
+	### Engine Types
+	
+	engine_diesel_engine = {
+		abbreviation = "die"
+		category = engine_type_module
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 1 
+			fuel_consumption = 4
+			reliability = 0.25
+		}
+		multiply_stats = {  }
+	}
+	
+	engine_gasoturbine_engine = {
+		abbreviation = "gas"
+		category = engine_type_module
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 1
+			fuel_consumption = 4
+			maximum_speed = 0.5
+		}
+		multiply_stats = {
+			maximum_speed = 0.15
+		}
+	}
+	
+	engine_hybrid_engine = {
+		abbreviation = "tur"
+		category = engine_type_module
+		sfx = sfx_ui_sd_module_engine
+
+		add_stats = {
+			build_cost_ic = 3
+			fuel_consumption = 5
+			reliability = -0.15
+			maximum_speed = 1
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.25
+		}
+	}
+	
+	engine_crystal_engine = {
+		abbreviation = "tur"
+		category = engine_type_module
+		sfx = sfx_ui_sd_module_engine
+		#allow_equipment_type = magical_tank
+		add_stats = {
+			build_cost_ic = 5
+			fuel_consumption = 0
+			reliability = -0.25
+			
+		}
+		build_cost_resources = {
+			crystals = 2
+		}
+		multiply_stats = {
+			maximum_speed = 0.25
+		}
+	}
+	
+	###### Armor types - MBT
+	
+	mbt_rolled_homogen_armor = {
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+		abbreviation = "mrha"
+		add_stats = {
+			defense = 4
+			breakthrough = 4
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 8
+		multiply_stats = {
+			build_cost_ic = 0.2
+			armor_value = 0.5
+
+		}
+		build_cost_resources = {
+			chromium = 1
+		}
+	}
+	
+	mbt_multilayer_armour_1 = {
+		abbreviation = "mma1"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 5
+			armor_value = 15
+			breakthrough = 2
+			build_cost_ic = 2.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	mbt_multilayer_armour_2 = {
+		abbreviation = "mma2"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 8
+			armor_value = 25
+			breakthrough = 2
+			build_cost_ic = 3.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 2
+		}
+	}
+	
+	mbt_multilayer_armour_3 = {
+		abbreviation = "mma3"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 11
+			armor_value = 35
+			breakthrough = 2
+			build_cost_ic = 4.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 2
+		}
+	}
+	
+	mbt_multilayer_armour_4 = {
+		abbreviation = "mma4"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 15
+			armor_value = 45
+			breakthrough = 2
+			build_cost_ic = 5.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 3
+		}
+	}
+	
+	mbt_multilayer_armour_5 = {
+		abbreviation = "mma5"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 20
+			armor_value = 55
+			breakthrough = 2
+			build_cost_ic = 5.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 3
+		}
+	}
+	
+	mbt_mag_multilayer_armour_1 = {
+		abbreviation = "mmma1"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 9
+			armor_value = 20
+			breakthrough = 2
+			build_cost_ic = 2.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+	}
+	
+	mbt_mag_multilayer_armour_2 = {
+		abbreviation = "mmma2"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 12
+			armor_value = 35
+			breakthrough = 2
+			build_cost_ic = 3.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 2
+			crystals = 1
+		}
+	}
+	
+	mbt_mag_multilayer_armour_3 = {
+		abbreviation = "mmma3"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 16
+			armor_value = 45
+			breakthrough = 2
+			build_cost_ic = 4.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 2
+			crystals = 2
+		}
+	}
+	
+	mbt_mag_multilayer_armour_4 = {
+		abbreviation = "mmma4"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 25
+			armor_value = 55
+			breakthrough = 2
+			build_cost_ic = 5.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 3
+			crystals = 2
+		}
+	}
+	
+	mbt_mag_multilayer_armour_5 = {
+		abbreviation = "mmma5"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 25
+			armor_value = 70
+			breakthrough = 2
+			build_cost_ic = 5.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 3
+			crystals = 3
+		}
+	}
+	
+	additional_composite_armor = {
+		abbreviation = "aca"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 3
+			build_cost_ic = 0.5
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		multiply_stats = {
+			armor_value = 0.1
+			maximum_speed = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+	uranium_addings_armor = {
+		abbreviation = "uaa"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 5
+			build_cost_ic = 1.5
+			reliability = -0.04
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		multiply_stats = {
+			armor_value = 0.15
+			maximum_speed = -0.1
+		}
+		build_cost_resources = {
+			tungsten = 1
+		}
+	}
+	
+	uranium_crystals_addings_armor = {
+		abbreviation = "ucaa"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 7
+			build_cost_ic = 3.5
+			reliability = -0.1
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 4
+		multiply_stats = {
+			armor_value = 0.2
+		}
+		build_cost_resources = {
+			tungsten = 1
+			crystals = 1
+		}
+	}
+	
+	####### Suspensions
+	
+	tank_torsion_suspension = {
+		abbreviation = "tts"
+		category = mbt_asv_suspension
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 1
+			reliability = 0.1
+		}
+		multiply_stats = {
+		}
+		
+	}
+	
+	tank_ressor_suspension = {
+		abbreviation = "trs"
+		category = mbt_asv_suspension
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 1
+		}
+		multiply_stats =  {
+			maximum_speed = 0.2
+		}
+	}
+	
+	tank_hybrid_suspension = {
+		abbreviation = "ths"
+		category = mbt_asv_suspension
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 1
+			breakthrough = 4
+			reliability = -0.1
+		}
+		multiply_stats =  {
+		}
+	}
+	
+	tank_magical_suspension = {
+		abbreviation = "tms"
+		category = mbt_asv_suspension
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3
+			breakthrough = 4
+		}
+		multiply_stats =  {
+			maximum_speed = 0.2
+		}
+		build_cost_resources = {
+			crystals = 1
+		}
+	}
+	
+	mbt_main_turret = {
+		category = main_battle_tank_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.75
+			reliability = 0.2
+			defense = 3
+		}
+	}
+	
+	light_mbt_turret = {
+		category = special_issue_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.45
+		}
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_main_battle_tank_armament
+			}
+			
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+			}
+				
+		}
+		
+	}
+	
+	advanced_mbt_3_crew_turret = {
+		category = main_battle_tank_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.95
+			reliability = 0.2
+			defense = 6
+		}
+	}
+	
+	modern_mbt_3_crew_turret = {
+		category = main_battle_tank_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1.15
+			reliability = 0.2
+			defense = 9
+		}
+	}
+	
+	charger_aut_2_crew_turret = {
+		category = main_battle_tank_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.85
+			reliability = -0.05
+			defense = 3
+		}
+		manpower = -1
+	}
+	
+	modern_charger_aut_2_crew_turret = {
+		category = main_battle_tank_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1
+			reliability = -0.05
+			defense = 5
+		}
+		manpower = -1
+	}
+	
+	non_populated_turret = {
+		category = main_battle_tank_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1.2
+			reliability = -0.15
+			defense = 11
+		}
+		manpower = -2
+	}
+	
+	asv_main_turret = {
+		category = asv_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.75
+			reliability = 0.2
+			defense = 3
+		}
+	}
+	
+	asv_main_turret_2 = {
+		category = asv_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.95
+			reliability = 0.25
+			defense = 5
+		}
+	}
+	
+	asv_non_populated_main_turret = {
+		category = asv_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.65
+			reliability = 0.25
+			defense = 2
+		}
+	}
+	
+	asv_non_populated_main_turret_2 = {
+		category = asv_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.95
+			reliability = 0.25
+			defense = 4
+		}
+	}
+	
+	icav_main_turret = {
+		category = icav_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.75
+			reliability = 0.2
+			defense = 3
+		}
+	}
+	
+	icav_one_person_turret = {
+		category = icav_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.35
+			reliability = 0.1
+			defense = 1
+		}
+		manpower = -1
+	}
+	
+	icav_large_turret = {
+		category = icav_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.95
+			reliability = -0.05
+			defense = 4
+		}
+		allowed_module_categories = {
+			main_armament_slot = {
+				icav_heavy_cannon
+				icav_main_cannon
+			}
+		}
+		xp_cost = 2
+	}
+	
+	icav_large_nonlive_turret = {
+		category = icav_special_turret
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1.15
+			reliability = -0.05
+			defense = 6
+		}
+		allowed_module_categories = {
+			main_armament_slot = {
+				icav_heavy_cannon
+				icav_main_cannon
+			}
+		}
+		xp_cost = 2
+		manpower = -2
+	}
+	
+	mbt_100mm_cannon = {
+		abbreviation = "mbt100c"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.07
+			soft_attack = 0.07
+			ap_attack = 0.05
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	mbt_105mm_cannon = {
+		abbreviation = "mbt105c"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+			}
+		}
+		add_stats = {
+			build_cost_ic = 2.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.11
+			soft_attack = 0.11
+			ap_attack = 0.1
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	mbt_122mm_cannon = {
+		abbreviation = "mbt122c"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+			}
+		}
+		add_stats = {
+			build_cost_ic = 3.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.14
+			soft_attack = 0.14
+			ap_attack = 0.15
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	mbt_152mm_cannon = {
+		abbreviation = "mbt152c"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+			}
+		}
+		add_stats = {
+			build_cost_ic = 5.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.18
+			soft_attack = 0.18
+			ap_attack = 0.2
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	mbt_100mm_atgl_cannon = {
+		abbreviation = "mbt100rc"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+				mbt_cumulative_rockets
+				mbt_thermobaric_rockets
+				mbt_chemical_rockets
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.04
+			soft_attack = 0.04
+			ap_attack = 0.03
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	mbt_120mm_atgl_cannon = {
+		abbreviation = "mbt120rc"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+				mbt_cumulative_rockets
+				mbt_thermobaric_rockets
+				mbt_chemical_rockets
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.08
+			soft_attack = 0.08
+			ap_attack = 0.06
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	
+	mbt_125mm_atgl_cannon = {
+		abbreviation = "mbt125rc"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+				mbt_cumulative_rockets
+				mbt_thermobaric_rockets
+				mbt_chemical_rockets
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.12
+			soft_attack = 0.12
+			ap_attack = 0.09
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	
+	mbt_140mm_atgl_cannon = {
+		abbreviation = "mbt140rc"
+		category = tank_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			shell_type_slot = {
+				mbt_fuse_shells
+				mbt_cumulative_shells
+				mbt_cumulative_rockets
+				mbt_thermobaric_rockets
+				mbt_chemical_rockets
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.5
+			maximum_speed = -0.1
+			reliability = -0.1
+		}
+		multiply_stats = {
+			hard_attack = 0.16
+			soft_attack = 0.16
+			ap_attack = 0.12
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	
+	#### SHELL TYPES ROCKET TYPES 
+	
+	mbt_magic_cannon_1 = {
+		abbreviation = "mmc1"
+		category = tank_magical_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 25
+			ap_attack = 120
+			build_cost_ic = 8
+			maximum_speed = -0.3
+			reliability = -0.35
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			crystals = 1
+			steel = 1
+		}
+	}
+	
+	mbt_magic_cannon_2 = {
+		abbreviation = "mmc2"
+		category = tank_magical_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 55
+			hard_attack = 45
+			ap_attack = 10
+			maximum_speed = -0.4
+			reliability = -0.35
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 2
+			crystals = 1
+			steel = 1
+		}
+	}
+	
+	mbt_magic_cannon_3 = {
+		abbreviation = "mmc3"
+		category = tank_magical_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 75
+			hard_attack = 60
+			ap_attack = 160
+			build_cost_ic = 12
+			maximum_speed = -0.5
+			reliability = -0.3
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 2
+			crystals = 2
+			steel = 2
+		}
+	}
+	
+	mbt_magic_cannon_4 = {
+		abbreviation = "mmc4"
+		category = tank_magical_main_battle_tank_armament
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			soft_attack = 85
+			hard_attack = 70
+			ap_attack = 190
+			build_cost_ic = 15
+			maximum_speed = -0.5
+			reliability = -0.35
+		}
+		dismantle_cost_ic = 1
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 3
+			crystals = 3
+			steel = 2
+		}
+	}
+	
+	early_tank_fire_ext = {
+		abbreviation = "etfe"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			reliability = 0.15
+			build_cost_ic = 0.25
+		}
+	}
+	
+	early_auto_tank_fire_ext = {
+		abbreviation = "eatfe"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			reliability = 0.2
+			build_cost_ic = 0.45
+		}
+	}
+	
+	modern_auto_tank_fire_ext = {
+		abbreviation = "matfe"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			reliability = 0.25
+			build_cost_ic = 0.65
+		}
+	}
+	
+	tank_wmd_protection = {
+		abbreviation = "matfe"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			reliability = 0.2
+			build_cost_ic = 0.75
+			defense = 4
+		}
+		multiply_stats = {
+			armor_value = 0.05
+		}
+	}
+	
+	masking_coverage = {
+		abbreviation = "mask"
+		category = tank_protection_device_slot
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 0.35
+			defense = 2
+		}
+	}
+	
+	tank_stealth_tech = {
+		abbreviation = "mask"
+		category = tank_protection_device_slot
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 0.65
+			reliability = -0.1
+			defense = 8
+		}
+	}
+	
+	early_active_defence = {
+		abbreviation = "ead"
+		category = tank_protection_device_slot
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 0.45
+			defense = 5
+			armor_value = 15
+		}
+	}
+	
+	modern_active_defence = {
+		abbreviation = "mad"
+		category = tank_protection_device_slot
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 0.85
+			defense = 7
+			armor_value = 25
+		}
+	}
+	
+	antirocket_defence = {
+		abbreviation = "ard"
+		category = tank_protection_device_slot
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 0.95
+			defense = 5
+		}
+	}
+	
+	modern_antirocket_defence = {
+		abbreviation = "mard"
+		category = tank_protection_device_slot
+		sfx = sfx_ui_sd_module_turret
+		
+		add_stats = {
+			build_cost_ic = 1.25
+			defense = 9
+		}
+	}
+	
+	smoke_launchers = {
+		abbreviation = "smoke"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 0.5
+			defense = 2
+			breakthrough = 1
+		}
+		xp_cost = 1
+		multiply_stats = {
+
+		}
+	}
+	
+	expanded_resource = {
+		abbreviation = "mard"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			reliability = 0.25
+		}
+		multiply_stats = {
+			build_cost_ic = 0.25
+		}
+	}
+		
+	gw_tank_radio = {
+		abbreviation = "gwtr"
+		category = communication_device_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			soft_attack = 0.02
+			hard_attack = 0.02
+			maximum_speed = 0.05
+		}
+	}
+		
+	early_radio_1 = {
+		abbreviation = "earr1"
+		category = communication_device_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			breakthrough = 0.03
+			maximum_speed = 0.05
+		}
+	}
+		
+	early_radio_2 = {
+		abbreviation = "earr2"
+		category = communication_device_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			breakthrough = 0.06
+			maximum_speed = 0.07
+		}
+	}
+		
+	modern_radio_1 = {
+		abbreviation = "modr1"
+		category = communication_device_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			breakthrough = 0.1
+			maximum_speed = 0.1
+		}
+	}
+		
+	battle_integr_control_system_1 = {
+		abbreviation = "bics1"
+		category = communication_device_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			breakthrough = 0.12
+			maximum_speed = 0.12
+		}
+	}
+		
+	battle_integr_control_system_2 = {
+		abbreviation = "bics2"
+		category = communication_device_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			breakthrough = 0.15
+			maximum_speed = 0.15
+		}
+	}
+	
+	tank_scope_1 = {
+		abbreviation = "ts1"
+		category = tank_scope_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			soft_attack = 0.03
+			hard_attack = 0.03
+		}
+	}
+	
+	tank_scope_2 = {
+		abbreviation = "ts2"
+		category = tank_scope_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+	
+	tank_scope_1_fcs = {
+		abbreviation = "ts1fcs"
+		category = tank_scope_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			soft_attack = 0.07
+			hard_attack = 0.07
+			ap_attack = 0.02
+		}
+	}
+	
+	tank_scope_2_fcs = {
+		abbreviation = "ts2fcs"
+		category = tank_scope_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			soft_attack = 0.09
+			hard_attack = 0.09
+			ap_attack = 0.04
+		}
+	}
+	
+	tank_scope_3_fcs = {
+		abbreviation = "ts3fcs"
+		category = tank_scope_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.25
+		}
+		multiply_stats = {
+			soft_attack = 0.11
+			hard_attack = 0.1
+			ap_attack = 0.06
+		}
+	}
+	
+	outside_cameras = {
+		abbreviation = "ts1"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.5
+			
+			recon = 1
+		}
+		multiply_stats = {
+			
+		}
+		
+	}
+	
+	tank_radar = {
+		abbreviation = "ts1"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.65
+			defense = 2
+			recon = 1
+		}
+		multiply_stats = {
+			
+		}
+		
+	}
+	
+	automatic_gearbox = {
+		abbreviation = "autgb"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.5
+			reliability = -0.1
+		}
+		multiply_stats = {
+			fuel_consumption = -0.05
+			maximum_speed = 0.1
+		}
+	}
+	
+	reverse_gearbox = {
+		abbreviation = "autgb"
+		category = tank_special_module
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 1
+		add_stats = {
+			build_cost_ic = 0.35
+			reliability = 0.05
+		}
+		multiply_stats = {
+			fuel_consumption = -0.01
+			maximum_speed = 0.05
+		}
+	}
+	
+}

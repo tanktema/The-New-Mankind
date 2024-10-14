@@ -24,10 +24,10 @@ division_template = {
 	is_locked = yes 
 	force_allow_recruiting = yes
 	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 1 y = 0 }
-		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 1 y = 1 }
+		medium_armor = { x = 0 y = 0 }
+		medium_armor = { x = 1 y = 0 }
+		medium_armor = { x = 0 y = 1 }
+		medium_armor = { x = 1 y = 1 }
 	}
 	support = {
 		recon = { x = 0 y = 0 }

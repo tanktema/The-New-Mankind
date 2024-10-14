@@ -215,7 +215,7 @@ country_event = {
 			amount = 300
 		}
 		add_equipment_to_stockpile = {
-			type = light_tank_equipment
+			type = medium_tank_equipment
 			amount = 50
 		}
 	}

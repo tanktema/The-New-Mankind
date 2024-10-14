@@ -10,7 +10,68 @@ technology_folders = {
 			has_human_race_tech = yes
 		}
 		ledger = civilian
+	}	
+	
+	human_infantry_folder = {
+		available = {
+			has_human_race_tech = yes 
+		}
+		ledger = army
 	}
 	
+	human_artillery_folder = {
+		available = {
+			has_human_race_tech = yes 
+		}
+		ledger = army
+	}
+	
+	human_armor_folder_nsb = {
+		available = {
+			has_human_race_tech = yes 
+			has_dlc = "No Step Back"
+		}
+		ledger = army
+	}
+	
+	human_armor_folder_legacy = {
+		available = {
+			has_human_race_tech = yes 
+			NOT = { has_dlc = "No Step Back" }
+		}
+		ledger = army
+	}
+	
+	human_aircraft_folder_bba = {
+		available = {
+			has_human_race_tech = yes 
+			has_dlc = "By Blood Alone"
+		}
+		ledger = air
+	}
+	
+	human_aircraft_folder_legacy = {
+		available = {
+			has_human_race_tech = yes 
+			NOT = { has_dlc = "By Blood Alone" }
+		}
+		ledger = air
+	}
+	
+	human_fleet_folder_mtg = {
+		available = {
+			has_human_race_tech = yes 
+			has_dlc = "Man the Guns"
+		}
+		ledger = navy
+	}
+	
+	human_fleet_folder_legacy = {
+		available = {
+			has_human_race_tech = yes 
+			NOT = { has_dlc = "Man the Guns" }
+		}
+		ledger = navy
+	}
 	
 }

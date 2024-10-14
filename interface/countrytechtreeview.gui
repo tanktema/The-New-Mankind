@@ -610,7 +610,7 @@ containerWindowType = {
 				format = "LEFT"
 			}
 			gridboxtype = {
-				name = "motorised_infantry_tree"
+				name = "tech_trucks_tree"
 				position = { x = 100 y = 160 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -4788,8 +4788,8 @@ containerWindowType = {
 			}
 
 			gridboxtype = {
-				name = "tech_pony_misc_tree"
-				position = { x = 270 y = 200 }
+				name = "tech_earth_pony_tree"
+				position = { x = 231 y = 140 }
 				#size = { width = 420 height = 500 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -4948,8 +4948,8 @@ containerWindowType = {
 			}
 
 			gridboxtype = {
-				name = "tech_horse_misc_tree"
-				position = { x = 270 y = 200 }
+				name = "tech_earth_horse_tree"
+				position = { x = 231 y = 140 }
 				#size = { width = 420 height = 500 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"

@@ -1,0 +1,32 @@
+equipments = {
+
+	towed_artillery_equipment = {
+	
+	}
+	
+	
+	spaa_artillery_equipment = {
+	
+	}
+	
+	cannon_aa_equipment = {
+	
+	}
+	
+	rocket_aa_equipment = {
+	
+	}
+	
+	multiple_launch_rocket_equipment = {
+	
+	}
+	
+	tactical_rocket_equipment = {
+	
+	}
+	
+	railway_tactical_rocket_equipment = {
+	
+	}
+	
+}
