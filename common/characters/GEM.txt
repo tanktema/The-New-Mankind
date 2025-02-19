@@ -495,6 +495,101 @@ characters={
 	}
 	
 	
+	GEM_heisenberg = {
+		name = GEM_heisenberg
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_sakharov"
+				large = "gfx/leaders/GEM/GEM_heisenberg.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
+			skills = {
+				specialization_nuclear = 4
+			}
+			
+			
+			desc = SOU_sakharov_desc
+			visible = {
+				owner = { has_tech = atomic_research }
+			}
+		}
+	}
+	
+	GEM_messershmitt = {
+		name = GEM_messershmitt
+		portraits = {
+			army = {	
+				small = "GFX_idea_SOU_corolev"
+				large = "gfx/leaders/GEM/GEM_messershmitt.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = GEM_luftwaffe
+				}
+			}
+		}
+		
+	}
+	
+	GEM_walter = {
+		name = GEM_walter
+		portraits = {
+			army = {	
+				small = "GFX_idea_SOU_corolev"
+				large = "gfx/leaders/GEM/GEM_walther.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_bright scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_naval = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = GEM_fleet_rebuild
+				}
+			}
+		}
+		
+	}
+	
+	GEM_kniepkamp = {
+		name = GEM_kniepkamp
+		portraits = {
+			army = {	
+				small = "GFX_idea_SOU_corolev"
+				large = "gfx/leaders/GEM/GEM_knipkamp.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_land = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = GEM_wehrmacht
+				}
+			}
+		}
+		
+	}
+	
 	GEM_brestrich = {
 		name = GEM_brestrich
 		portraits = {

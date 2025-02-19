@@ -326,6 +326,11 @@ set_politics = {
    elections_allowed = yes
 }
 
+set_country_flag = has_custom_advisors
+
+set_country_flag = has_custom_spymaster
+
+
 set_popularities = {
    democratic = 70
    fascism = 15
@@ -345,6 +350,9 @@ recruit_character = UNS_rarity
 recruit_character = UNS_lyra_heartsrings
 recruit_character = UNS_twilight_sparkle_visitor
 recruit_character = UNS_robert_oppenheimer
+recruit_character = UNS_clarence
+recruit_character = UNS_lett
+recruit_character = UNS_abelson
 recruit_character = UNS_sky_star
 recruit_character = general_bradley
 recruit_character = UNS_captain_pettaine

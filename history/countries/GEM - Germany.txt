@@ -217,6 +217,10 @@ add_ideas = {
 	no_lack_of_scientists
 	GEM_polit_crisis
 }
+set_country_flag = has_custom_advisors
+
+set_country_flag = has_custom_spymaster
+
 
 set_convoys = 0
 set_stability = 0.65
@@ -240,6 +244,10 @@ recruit_character = GEM_conrad_zuse
 recruit_character = GEM_higo_shmeisser
 recruit_character = GEM_fittkau
 recruit_character = GEM_shmitz
+recruit_character = GEM_heisenberg
+recruit_character = GEM_messershmitt
+recruit_character = GEM_walter
+recruit_character = GEM_kniepkamp
 recruit_character = GEM_kleiner
 recruit_character = GRB_wilhelm_strasse
 recruit_character = GRB_heydrich

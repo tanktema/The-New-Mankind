@@ -343,33 +343,6 @@ characters={
 			}
 		}
 	}
-	
-	SOU_sakharov = {
-		name = SOU_sakharov
-		portraits = {
-			civilian = {
-				small = "GFX_idea_SOU_sakharov"
-			}
-		}
-		
-		advisor = {
-			slot = political_advisor
-			idea_token = SOU_sakharov
-			
-			allowed = {
-				original_tag = SOU 
-			}
-			available = {
-				has_tech = nuclear_reactor 
-			}
-			research_bonus = {
-				nuclear = 0.12
-			}
-
-			traits = { nuclear_scientist }
-		}
-	}
-	
 	SOU_chernov = {
 		name = SOU_chernov
 		portraits = {
@@ -392,34 +365,97 @@ characters={
 		}
 	}
 	
+	
+	SOU_sakharov = {
+		name = SOU_sakharov
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_sakharov"
+				large = "gfx/leaders/SOU/SOU_sakharov.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
+			skills = {
+				specialization_nuclear = 4
+			}
+			
+			
+			desc = SOU_sakharov_desc
+			visible = {
+				owner = { has_tech = atomic_research }
+			}
+		}
+	}
+	
 	SOU_corolev = {
 		name = SOU_corolev
 		portraits = {
 			army = {	
 				small = "GFX_idea_SOU_corolev"
+				large = "gfx/leaders/SOU/SOU_corolev.dds"
 			}
 		}
 		
-		advisor = {
-			slot = political_advisor
-			idea_token = SOU_corolev
-			
-			allowed = {
-				original_tag = SOU 
-			}
-			available = {
-				has_completed_focus = SOU_mistakes_of_past
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 4
 			}
 			
-			research_bonus = {
-				rocketry = 0.1
+			visible = {
+				owner = {
+					has_completed_focus = SOU_airforce
+				}
 			}
-			modifier = {
-				stability_factor = 0.05
-				experience_gain_air = 0.02
+		}
+		
+	}
+	
+	SOU_perkov = {
+		name = SOU_perkov
+		portraits = {
+			army = {	
+				small = "GFX_idea_SOU_corolev"
+				large = "gfx/leaders/SOU/SOU_perkov.dds"
 			}
-			traits = {
-				rocketry_pioneer
+		}
+		
+		scientist = {
+			traits = { scientist_trait_bright scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_naval = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = SOU_fleet_effort
+				}
+			}
+		}
+		
+	}
+	
+	SOU_morozov = {
+		name = SOU_morozov
+		portraits = {
+			army = {	
+				small = "GFX_idea_SOU_corolev"
+				large = "gfx/leaders/SOU/SOU_morozov.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_land = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = SOU_suvorov
+				}
 			}
 		}
 		

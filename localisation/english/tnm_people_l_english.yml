@@ -44,6 +44,8 @@
     SOU_mustafov:0 "Mayor Mustafov"
     SOU_vitaliy_orlov:0 "Vitaly Orlov"
     SOU_emerald_dusk:0 "Emerald Dusk"
+    SOU_perkov:0 "Alexandr Perkov"
+    SOU_morozov:0 "Alexandr Morozov"
     
     GRB_sir_winston_leonard_spenser_churchill:0 "Sie Winston Leonard Spenser Churchill"
     GRB_hugh_todd_naylor_gaitskell:0 "Hugh Todd Naylor Gaitskell"
@@ -63,6 +65,7 @@
     GRB_blast_guard:0 "Blast Guard"
     GRB_margaret_thatcher:0 "Margaret Hilda Thatcher"
     GRB_herman_buecher:0 "Herman Buecher"
+    GRB_chadwick:0 "James Chadwick"
     
     GEM_willy_brandt:0 "Willy Brandt"
     GEM_walter_ulbricht:0 "Walter Ulbricht"
@@ -75,6 +78,10 @@
     GEM_heinrich_himmler:0 "Heinrich Himmler"
     GEM_arianna:0 "Arianna"
     GEM_aliz_neumann:0 "Aliz Neumann"
+    GEM_heisenberg:0 "Werher Heizenberg"
+    GEM_messershmitt:0 "Wilhelm Messershmitt"
+    GEM_walter:0 "Helmut Walter"
+    GEM_kniepkamp:0 "Heinrich Kniepkamp"
     
     UNS_john_kennedy:0 "John Kennedy"
     UNS_connor_kent:0 "Connor Kent"
@@ -90,6 +97,9 @@
     UNS_lina_cypher:0 "Lina Cypher"
     UNS_hartmann:0 "Lieutenant Hartmann"
     UNS_statesoc_council:0 "STATESOC Council"
+    UNS_clarence:0 "Clarence Johnson"
+    UNS_lett:0 "Philip Lett"
+    UNS_abelson:0 "Henry Kaiser"
     
     GRB_captain_wolf:0 "Captain Wolf"
     GRB_ancom_council:0 "People's Council"

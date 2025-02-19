@@ -57,6 +57,8 @@ technologies = {
 			name = human_folder
 			position = { x = 12 y = 0 }
 		}
+		special_project_specialization = { specialization_magical }
+
 		army_attack_factor = 0.1
 		allow_branch = {
 			original_tag = UNS 
@@ -72,6 +74,8 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_secret
 		}
+		special_project_specialization = { specialization_magical }
+
 		folder = {
 			name = human_folder
 			position = { x = 14 y = 0 }
@@ -86,6 +90,8 @@ technologies = {
 		dependencies = {
 			strategic_bomber3 = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 
 		allow_branch = {
 			original_tag = UNS 
@@ -109,6 +115,8 @@ technologies = {
 		dependencies = {
 			modern_large_airframe = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = UNS 
 			has_dlc = "By Blood Alone"
@@ -132,6 +140,8 @@ technologies = {
 			breakthrough = 0.1
 			
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = UNS 
 		}
@@ -147,6 +157,8 @@ technologies = {
 		dependencies = {
 			magical_weapons1 = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 		enable_equipment_modules = {
 			tnm_tank_laser_defence_system
 		}
@@ -165,6 +177,8 @@ technologies = {
 		dependencies = {
 			magical_weapons1 = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 		enable_equipment_modules = {
 			tnm_tank_las_cannon
 		}
@@ -182,6 +196,8 @@ technologies = {
 		enable_subunits = {
 			UNS_stormsquads_unit
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = UNS 
 		}
@@ -198,6 +214,8 @@ technologies = {
 		enable_subunits = {
 			UNS_marines_corps_unit
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = UNS 
 		}
@@ -214,6 +232,8 @@ technologies = {
 		enable_subunits = {
 			UNS_grenadiers_unit
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = uns_grenadiers_tech_2
 			research_cost_coeff = 1
@@ -236,6 +256,8 @@ technologies = {
 			breakthrough = 0.1
 			default_morale = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = uns_grenadiers_tech_3
 			research_cost_coeff = 1
@@ -258,6 +280,8 @@ technologies = {
 			breakthrough = 0.12
 			default_morale = 0.12
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = uns_grenadiers_tech_4
 			research_cost_coeff = 1
@@ -280,6 +304,8 @@ technologies = {
 			breakthrough = 0.15
 			default_morale = 0.15
 		}
+		special_project_specialization = { specialization_magical }
+
 		
 		research_cost = 1.5
 		allow_branch = {
@@ -308,6 +334,8 @@ technologies = {
 		allow_branch = {
 			original_tag = SOU 
 		}
+		special_project_specialization = { specialization_magical }
+
 		#custom_modifier_tooltip = special_weapons_tech
 	}
 	
@@ -323,6 +351,8 @@ technologies = {
 			sou_tesla_mark_2_eqpm
 
 		}
+		special_project_specialization = { specialization_magical }
+
 		folder = {
 			name = human_folder
 			position = { x = 14 y = 0 }
@@ -340,6 +370,8 @@ technologies = {
 		enable_equipments = {
 			sou_kirov_derjijabl
 		}
+		special_project_specialization = { specialization_magical }
+
 		folder = {
 			name = human_folder
 			position = { x = 14 y = 2 }
@@ -360,6 +392,8 @@ technologies = {
 			soft_attack = 0.1
 			
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = SOU 
 		}
@@ -381,6 +415,8 @@ technologies = {
 		allow_branch = {
 			original_tag = SOU 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1012
 		folder = {
 			name = human_folder
@@ -396,6 +432,8 @@ technologies = {
 		enable_equipment_modules = {
 			tnm_tesla_cannon
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = SOU 
 		}
@@ -410,6 +448,8 @@ technologies = {
 		enable_subunits = {
 			SOU_attack_group
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = SOU 
 		}
@@ -426,6 +466,8 @@ technologies = {
 		enable_subunits = {
 			SOU_desantura_ebat
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = SOU 
 		}
@@ -450,6 +492,8 @@ technologies = {
 		allow_branch = {
 			original_tag = SOU 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1007
 		folder = {
 			name = human_folder
@@ -464,6 +508,8 @@ technologies = {
 			movement = 0.1
 			default_morale = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = sou_infiltrators_tech_3
 			research_cost_coeff = 1
@@ -486,6 +532,8 @@ technologies = {
 			movement = 0.12
 			default_morale = 0.15
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = sou_infiltrators_tech_4
 			research_cost_coeff = 1
@@ -510,6 +558,8 @@ technologies = {
 			movement = 0.1
 			default_morale = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+
 		
 		research_cost = 1.5
 		allow_branch = {
@@ -533,6 +583,8 @@ technologies = {
 			attack = 0.1
 			breakthrough = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1012
 		folder = {
 			name = human_folder
@@ -554,6 +606,8 @@ technologies = {
 		enable_equipments = {
 			gem_machinegewehr_15_eqpm
 		}
+		special_project_specialization = { specialization_magical }
+
 		folder = {
 			name = human_folder
 			position = { x = 14 y = 0 }
@@ -571,6 +625,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		enable_equipment_modules = {
 			tnm_laser_ai_system
 		}
@@ -592,6 +648,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1010
 		folder = {
 			name = human_folder
@@ -607,6 +665,8 @@ technologies = {
 		enable_equipment_modules = {
 			tnm_rockets_module
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GEM 
 		}
@@ -625,6 +685,8 @@ technologies = {
 		enable_equipment_modules = {
 			tnm_gauss_tank_cannon
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GEM 
 		}
@@ -642,6 +704,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		research_cost = 1.5
 		start_year = 1007
 		folder = {
@@ -658,6 +722,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1007
 		folder = {
 			name = human_folder
@@ -675,6 +741,8 @@ technologies = {
 			leads_to_tech = gem_executors_tech_2
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 		research_cost = 1.5
 		allow_branch = {
 			original_tag = GEM 
@@ -700,6 +768,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1012
 		folder = {
 			name = human_folder
@@ -721,6 +791,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1015
 		folder = {
 			name = human_folder
@@ -740,6 +812,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GEM 
 		}
+		special_project_specialization = { specialization_magical }
+
 		start_year = 1015
 		folder = {
 			name = human_folder
@@ -768,6 +842,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GRB 
 		}
+		special_project_specialization = { specialization_magical }
+
 		#custom_modifier_tooltip = special_weapons_tech
 	}
 	
@@ -780,6 +856,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GRB 
 		}
+		special_project_specialization = { specialization_magical }
+
 		enable_equipments = {
 			grb_plasma_ar_eqpm
 		}
@@ -797,6 +875,8 @@ technologies = {
 		dependencies = {
 			magical_weapons1 = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GRB 
 		}
@@ -818,6 +898,8 @@ technologies = {
 			breakthrough = 0.15
 			soft_attack = 0.15
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GRB 
 		}
@@ -836,6 +918,8 @@ technologies = {
 		enable_equipment_modules = {
 			tnm_flamethrower_grb
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GRB 
 		}
@@ -854,6 +938,8 @@ technologies = {
 		enable_equipment_modules = {
 			tnm_plasma_cannon
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GRB 
 		}
@@ -871,6 +957,8 @@ technologies = {
 		allow_branch = {
 			original_tag = GRB 
 		}
+		special_project_specialization = { specialization_magical }
+
 		research_cost = 1.5
 		start_year = 1007
 		folder = {
@@ -884,6 +972,8 @@ technologies = {
 		enable_subunits = {
 			GRB_sas_unit
 		}
+		special_project_specialization = { specialization_magical }
+
 		allow_branch = {
 			original_tag = GRB 
 		}
@@ -904,6 +994,8 @@ technologies = {
 			leads_to_tech = grb_colonial_police_tech_2
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+
 		research_cost = 1.5
 		allow_branch = {
 			original_tag = GRB 
@@ -921,6 +1013,8 @@ technologies = {
 			recon = 1
 			default_morale = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = grb_colonial_police_tech_3
 			research_cost_coeff = 1
@@ -942,6 +1036,8 @@ technologies = {
 			recon = 1
 			default_morale = 0.12
 		}
+		special_project_specialization = { specialization_magical }
+
 		path = {
 			leads_to_tech = grb_colonial_police_tech_4
 			research_cost_coeff = 1
@@ -964,6 +1060,8 @@ technologies = {
 			default_morale = 0.15
 			supply_consumption = -0.05
 		}
+		special_project_specialization = { specialization_magical }
+
 		
 		research_cost = 1.5
 		allow_branch = {
@@ -994,6 +1092,9 @@ technologies = {
 			leads_to_tech = silent_assasins
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
+
 		
 		on_research_complete = {
 			hidden_effect = {
@@ -1023,6 +1124,8 @@ technologies = {
 		xor = {
 			silent_assasins
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		path = {
 			leads_to_tech = sniper_laser_designators
 			research_cost_coeff = 1
@@ -1063,6 +1166,8 @@ technologies = {
 			attack = 0.07
 			breakthrough = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		category_cas = {
 			air_bombing  = 0.1
 			
@@ -1094,6 +1199,8 @@ technologies = {
 			leads_to_tech = sniper_targeting_systems
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 1
 		sniper_corps = {
 			#manpower = 200
@@ -1123,6 +1230,8 @@ technologies = {
 			leads_to_tech = mountain_eqpm_tnm
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			night = {
 				attack = 0.07
@@ -1161,6 +1270,8 @@ technologies = {
 			name = human_folder
 			position = { x = 3 y = 6 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		
 		
 		ai_will_do = {
@@ -1191,6 +1302,8 @@ technologies = {
 			}
 			default_morale = 0.1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 1.5
 		folder = {
 			name = human_folder
@@ -1221,6 +1334,8 @@ technologies = {
 				defence = 0.1
 			}
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		
 		research_cost = 1.5
 		folder = {
@@ -1245,6 +1360,8 @@ technologies = {
 			initiative = 0.01
 			attack = 0.05
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			recon = 1
 			initiative = 0.1
@@ -1280,6 +1397,8 @@ technologies = {
 			leads_to_tech = snipers_camo_cover
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		path = {
 			leads_to_tech = sniper_special_ammo
 			research_cost_coeff = 1
@@ -1314,6 +1433,8 @@ technologies = {
 			leads_to_tech = snipers_silencers 
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			default_morale = 0.4
 			need = {
@@ -1353,6 +1474,8 @@ technologies = {
 			leads_to_tech = snipers_high_caliber
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			attack = 0.05
 			breakthrough = 0.07
@@ -1385,6 +1508,8 @@ technologies = {
 			leads_to_tech = new_orienting_methods
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			recon = 1
 			initiative = 0.1
@@ -1421,6 +1546,8 @@ technologies = {
 			name = human_folder
 			position = { x = 7 y = 6 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			hard_attack = 0.05
 			soft_attack = 0.1
@@ -1439,6 +1566,8 @@ technologies = {
 			leads_to_tech = sniper_special_weapons
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		sniper_corps = {
 			hills = {
 				movement = 0.15
@@ -1486,6 +1615,8 @@ technologies = {
 			leads_to_tech = sniper_special_weapons
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		folder = {
 			name = human_folder
 			position = { x = 7 y = 8 }
@@ -1516,6 +1647,8 @@ technologies = {
 			name = human_folder
 			position = { x = 6 y = 10 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		ai_will_do = {
 			factor = 1
 		}
@@ -1826,6 +1959,8 @@ technologies = {
 			leads_to_tech = crystal_batteries
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		folder = {
 			name = human_folder
 			position = { x = 15 y = 0 }
@@ -1854,6 +1989,8 @@ technologies = {
 			name = human_folder
 			position = { x = 13 y = 2 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 2
 		start_year = 1010
 		categories = {
@@ -1876,6 +2013,8 @@ technologies = {
 			name = human_folder
 			position = { x = 13 y = 4 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 3
 		start_year = 1012
 		categories = {
@@ -1910,6 +2049,8 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		category_all_infantry = {
 			defense = 0.15
 			speed = 0.05
@@ -1926,6 +2067,8 @@ technologies = {
 			name = human_folder
 			position = { x = 13 y = 8 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 5
 		start_year = 1016
 		categories = {
@@ -1960,6 +2103,8 @@ technologies = {
 			name = human_folder
 			position = { x = 13 y = 10 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		start_year = 1020
 		research_cost = 5
 		categories = {
@@ -1979,6 +2124,8 @@ technologies = {
 			leads_to_tech = microradio_headset
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		folder = {
 			name = human_folder
 			position = { x = 15 y = 2 }
@@ -2008,6 +2155,8 @@ technologies = {
 			name = human_folder
 			position = { x = 15 y = 4 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 2
 		categories = {
 			race_tech
@@ -2026,6 +2175,8 @@ technologies = {
 			name = human_folder
 			position = { x = 15 y = 6 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 6
 		categories = {
 			race_tech
@@ -2049,6 +2200,8 @@ technologies = {
 			human_tech
 			human_army_upgrades
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		category_all_infantry = {
 			
 			soft_attack = 0.1
@@ -2065,6 +2218,8 @@ technologies = {
 			name = human_folder
 			position = { x = 17 y = 6 }
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		research_cost = 1.5
 		categories = {
 			race_tech
@@ -2087,6 +2242,8 @@ technologies = {
 			leads_to_tech = magical_field_scanners 
 			research_cost_coeff = 1
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		folder = {
 			name = human_folder
 			position = { x = 17 y = 8 }
@@ -2122,6 +2279,8 @@ technologies = {
 				defence = 0.07
 			}
 		}
+		special_project_specialization = { specialization_magical }
+		special_project_specialization = { specialization_land }
 		folder = {
 			name = human_folder
 			position = { x = 17 y = 10 }

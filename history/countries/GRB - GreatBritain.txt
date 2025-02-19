@@ -233,6 +233,10 @@ set_politics = {
    elections_allowed = yes
    elections_frequency = 48
 }
+set_country_flag = has_custom_advisors
+
+set_country_flag = has_custom_spymaster
+
 
 set_popularities = {
    democratic = 67
@@ -247,6 +251,7 @@ recruit_character = GRB_sir_oswald_ernald_mosley
 recruit_character = GRB_her_majesty_queen_elizabeth_ii
 recruit_character = GRB_bernard_montgomerey
 recruit_character = GRB_jake_grant
+recruit_character = GRB_chadwick
 recruit_character = GRB_danny_barnest
 recruit_character = GRB_rowan_lawrence
 recruit_character = GRB_santodes

@@ -233,6 +233,10 @@ set_politics = {
    elections_allowed = no
 }
 
+set_country_flag = has_custom_advisors
+
+set_country_flag = has_custom_spymaster
+
 set_popularities = {
    democratic = 21
    fascism = 8
@@ -258,6 +262,8 @@ recruit_character = SOU_victor_timoshenko
 recruit_character = SOU_sakharov
 recruit_character = SOU_chernov
 recruit_character = SOU_corolev
+recruit_character = SOU_perkov
+recruit_character = SOU_morozov
 recruit_character = sou_shtabnaya_krisa
 recruit_character = SOU_andropov
 recruit_character = SOU_biryukov

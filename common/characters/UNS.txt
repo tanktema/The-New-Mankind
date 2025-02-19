@@ -409,30 +409,79 @@ characters={
 		portraits = {
 			civilian = {
 				small = "GFX_idea_UNS_robert_oppenheimer"
+				large = "gfx/leaders/UNS/UNS_oppenheimer.dds"
 			}
 		}
-		
-		advisor = {
-			slot = political_advisor
-			idea_token = UNS_robert_oppenheimer
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
+			skills = {
+				specialization_nuclear = 4
+			}
 			
-			allowed = {	original_tag = UNS }
-			available = {
-				NOT = {
-					has_government = fascism 
+			visible = {
+				owner = { has_tech = atomic_research }
+			}
+		}
+	}
+	UNS_clarence = {
+		name = UNS_clarence
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_robert_oppenheimer"
+				large = "gfx/leaders/UNS/UNS_clarence.dds"
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_rocketry_specialist scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_air = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = UNS_our_sky
 				}
 			}
-			traits = { nuclear_pacifist }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 50
-					date > 1010.1.1
-				
+		}
+	}
+	UNS_lett = {
+		name = UNS_lett
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_robert_oppenheimer"
+				large = "gfx/leaders/UNS/UNS_lett.dds"
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_armored_specialist scientist_trait_gifted_engineer }
+			skills = {
+				specialization_land = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = UNS_army
 				}
-				modifier = {
-					factor = 100
-					date > 1014.1.1
+			}
+		}
+	}
+	UNS_abelson = {
+		name = UNS_abelson
+		portraits = {
+			civilian = {
+				small = "GFX_idea_UNS_robert_oppenheimer"
+				large = "gfx/leaders/UNS/UNS_kaiser.dds"
+			}
+		}
+		scientist = {
+			traits = { scientist_trait_bright scientist_trait_brilliant_theorist }
+			skills = {
+				specialization_naval = 4
+			}
+			
+			visible = {
+				owner = {
+					has_completed_focus = UNS_our_fleet
 				}
 			}
 		}

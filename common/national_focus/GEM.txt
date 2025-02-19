@@ -5253,10 +5253,9 @@ focus_tree = {
 		prerequisite = { focus = GEM_concentration_focus OR = GEM_dispersion_focus }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = nuclear
-				uses = 1
-				bonus = 1
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 1.25
 			}
 			
 		}
@@ -5320,10 +5319,9 @@ focus_tree = {
 		prerequisite = { focus = GEM_building_equipment }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = rocketry
-				uses = 2
-				bonus = 1
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 1.25
 			}
 		}
 	}
@@ -5615,10 +5613,9 @@ focus_tree = {
 		prerequisite = { focus = GEM_magical_usage }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = nuclear
-				uses = 1
-				bonus = 1
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 0.75
 			}
 		}
 	}
@@ -5660,7 +5657,7 @@ focus_tree = {
 		prerequisite = { focus = GEM_industrial_network_development }
 		cost = 5
 		available = {
-			has_tech = nuclear_reactor
+			is_special_project_completed = sp:sp_nuclear_reactor
 		}
 		completion_reward = {
 			random_owned_state = {
@@ -6446,10 +6443,9 @@ focus_tree = {
 		prerequisite = { focus = GEM_secondgen_cyborg }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = nuclear
-				uses = 2
-				bonus = 2
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 1
 			}
 		}
 	}
@@ -6463,10 +6459,9 @@ focus_tree = {
 		prerequisite = { focus = GEM_secondgen_cyborg }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = rocketry
-				uses = 2
-				bonus = 2
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
 			}
 		}
 	}

@@ -12,6 +12,10 @@
 #    c) add an entry in operative_add_secondary_nationalities_from_PREV
 #    d) add an entry in operative_add_starting_nationalities_and_race
 #    e) depending on tag, add an entry in operative_add_secondary_nationalities and operative_handle_secondary_cultures_races
+# 3. Update the culture map mode to include the new group by:
+#    a) adding an entry to define the color in common/map_mods/eaw_culture_map_mode.txt
+#    b) adding an entry to define the name of the group on the map in common/scripted_localisation/EAW_map_mode_scripted_localisations.txt
+# 4. In common/decisions/lar_agent_recruitment_decisions, add a new decision for hiring agents for the new culture group
 
 #Race triggers
 is_human_race = {	
@@ -108,6 +112,7 @@ is_generic_race = {
 		is_zebra_race = yes
 		is_hippogriff_race = yes
 		is_polar_race = yes
+		is_yak_race = yes
 		is_human_race = yes
 	}
 }
@@ -164,11 +169,16 @@ has_polar_bear_race_tech = {
 	is_polar_race = yes
 	has_special_race_tech = no
 }
+has_yak_race_tech = {
+	is_yak_race = yes
+	has_special_race_tech = no
+}
 
 has_human_race_tech = {
 	is_human_race = yes
 	has_special_race_tech = no
 }
+
 has_special_race_tech = {
 	OR = {
 		has_barrad_race_tech = yes
@@ -179,7 +189,6 @@ has_special_race_tech = {
 has_barrad_race_tech = {
 	original_tag = BAR
 }
-
 
 is_same_race_as_PREV = {
 	OR = {
@@ -202,6 +211,10 @@ is_same_race_as_PREV = {
 		AND = {
 			is_diamond_dog_race = yes
 			PREV = { is_diamond_dog_race = yes }
+		}
+		AND = {
+			is_kirin_race = yes
+			PREV = { is_kirin_race = yes }
 		}
 		AND = {
 			is_hippogriff_race = yes
@@ -284,7 +297,6 @@ uses_griffon_generic_portraits = {
 		original_tag = GFS
 		original_tag = TSV
 		original_tag = YAN
-		original_tag = MER
 	}
 }
 
@@ -302,6 +314,15 @@ uses_griffon_herzland_portraits = {
 		original_tag = HLQ
 		original_tag = LNS
 		original_tag = LSM
+		original_tag = EYR
+		original_tag = TRD
+	}
+}
+
+uses_griffon_republican_portraits = {
+	OR = {
+		original_tag = FAT
+		original_tag = FAW
 	}
 }
 
@@ -312,6 +333,11 @@ uses_griffon_JER_portraits = {
 		original_tag = JFT
 		original_tag = JRR
 		original_tag = VIN
+		original_tag = JES
+		original_tag = POM
+		original_tag = FLO
+		original_tag = ERI
+		original_tag = MER
 	}
 }
 
@@ -424,6 +450,8 @@ uses_llama_portraits = {
 uses_kirin_portraits = {
 	OR = {
 		original_tag = KIR
+		original_tag = KIS
+		original_tag = KIC
 		original_tag = KHM
 		original_tag = KXN
 		original_tag = NVA
@@ -461,7 +489,10 @@ uses_dragon_portraits = {
 }
 
 uses_hippogriff_portraits = {
-	original_tag = HIP
+	OR = {
+		original_tag = HIP
+		original_tag = WIN
+	}
 }
 
 uses_yeti_portraits = {
@@ -503,6 +534,39 @@ has_unit_leader_race_trait = {
 		has_trait = llama_race_trait
 		has_trait = harpy_race_trait
 		has_trait = yeti_race_trait
+	}
+}
+
+has_unit_leader_race_flag = {
+	OR = {
+		#has_unit_leader_flag = unspecified_race_flag
+		has_unit_leader_flag = pony_race_flag
+		has_unit_leader_flag = thestral_race_flag
+		has_unit_leader_flag = zebra_race_flag
+		has_unit_leader_flag = penguin_race_flag
+		has_unit_leader_flag = bear_race_flag
+		has_unit_leader_flag = changeling_race_flag
+		has_unit_leader_flag = griffon_race_flag
+		has_unit_leader_flag = yak_race_flag
+		has_unit_leader_flag = deer_race_flag
+		has_unit_leader_flag = diamond_dog_race_flag
+		has_unit_leader_flag = minotaur_race_flag
+		#has_unit_leader_flag = undead_race_flag
+		has_unit_leader_flag = buffalo_race_flag
+		has_unit_leader_flag = dragon_race_flag
+		has_unit_leader_flag = human_race_flag
+		has_unit_leader_flag = camel_race_flag
+		has_unit_leader_flag = cat_race_flag
+		has_unit_leader_flag = centaur_race_flag
+		has_unit_leader_flag = donkey_race_flag
+		has_unit_leader_flag = gargoyle_race_flag
+		has_unit_leader_flag = giraffe_race_flag
+		has_unit_leader_flag = hippogriff_race_flag
+		has_unit_leader_flag = horse_race_flag
+		has_unit_leader_flag = kirin_race_flag
+		has_unit_leader_flag = llama_race_flag
+		has_unit_leader_flag = harpy_race_flag
+		has_unit_leader_flag = yeti_race_flag
 	}
 }
 
@@ -594,6 +658,13 @@ is_country_main_culture_herzlander_colony = {
 	}
 }
 
+is_country_main_culture_nova_griffonian = {
+	OR = {
+		original_tag = GRF
+		original_tag = GFF
+	}
+}
+
 is_country_main_culture_buffalo = {
 	OR = {
 		original_tag = BUF
@@ -677,8 +748,6 @@ is_country_main_culture_great_laker = {
 is_country_main_culture_herzlander = {
 	OR = {
 		original_tag = EYR
-		original_tag = GRF
-		original_tag = GFF
 		original_tag = GRI
 		original_tag = FAT
 		original_tag = FAW
@@ -698,6 +767,7 @@ is_country_main_culture_herzlander = {
 		original_tag = SRS
 		original_tag = LSM
 		original_tag = BAN
+		original_tag = CYA
 		original_tag = JHZ
 		original_tag = JGF
 		original_tag = JOS
@@ -735,6 +805,8 @@ is_country_main_culture_hyena = {
 is_country_main_culture_kirin = {
 	OR = {
 		original_tag = KIR
+		original_tag = KIS
+		original_tag = KIC
 		original_tag = KHM
 		original_tag = KXN
 		original_tag = NVA
@@ -799,7 +871,6 @@ is_country_main_culture_riverlander = {
 is_country_main_culture_southerner = {
 	OR = {
 		original_tag = SIC
-		original_tag = CYA
 		original_tag = FRN
 		original_tag = ARA
 		original_tag = WNG
@@ -886,6 +957,92 @@ is_country_main_culture_hestrayan = {
 	OR = {
 		original_tag = MTO
 		original_tag = AES
+	}
+}
+
+is_operative_main_culture_avian_equus = {
+	OR = {
+		#nova griffonian
+		has_nationality = GRF
+		has_nationality = GFF
+		#penguin		
+		has_nationality = PNG
+	}
+}
+is_operative_main_culture_avian_griffonia = {
+	OR = {
+		#aquileian
+		has_nationality = ERI
+		has_nationality = HEL
+		has_nationality = AET
+		has_nationality = JER
+		has_nationality = JEB
+		has_nationality = JFT
+		has_nationality = JES
+		has_nationality = JRR
+		has_nationality = AVI
+		has_nationality = POM
+		has_nationality = VIN
+		has_nationality = FLO
+		has_nationality = FEZ
+		has_nationality = MER
+		#evi valley
+		has_nationality = GRW
+		has_nationality = BRF
+		has_nationality = GRY
+		has_nationality = LUS
+		has_nationality = GRU
+		has_nationality = JEV
+		#herzlander
+		has_nationality = EYR
+		#has_nationality = GRF
+		#has_nationality = GFF
+		has_nationality = GRI
+		has_nationality = FAT
+		has_nationality = FAW
+		has_nationality = TRD
+		has_nationality = FEA
+		has_nationality = PYT
+		has_nationality = ROU
+		has_nationality = BOI
+		has_nationality = LAK
+		has_nationality = YAL
+		has_nationality = ANG
+		has_nationality = STW
+		has_nationality = HLQ
+		has_nationality = KAT
+		has_nationality = LNS
+		has_nationality = HAU
+		has_nationality = SRS
+		has_nationality = LSM
+		has_nationality = BAN
+		has_nationality = CYA
+		has_nationality = JHZ
+		has_nationality = JGF
+		has_nationality = JOS
+		#southerner
+		has_nationality = SIC
+		has_nationality = FRN
+		has_nationality = ARA
+		has_nationality = WNG
+		has_nationality = FAL
+		has_nationality = TAL
+		has_nationality = JKR
+		
+	}
+}
+is_operative_main_culture_avian_north_zebrica = {
+	OR = {
+		#hippogriffia
+		has_nationality = HIP
+	}
+} 
+is_operative_main_culture_avian_se_zebrica = {
+	OR = {
+		#herzlander colony
+		has_nationality = GFS
+		has_nationality = TSV
+		has_nationality = YAN
 	}
 }
 
@@ -981,6 +1138,20 @@ is_state_main_culture_herzlander_colony = {
 	}
 }
 
+is_state_main_culture_nova_griffonian = {
+    NOT = {
+        state = 337 # Beside
+        state = 336 # Kluv Valley
+        state = 335 # Summer Camps
+        state = 277 # Amdral Nuur
+        state = 278 # Uulin Griffins
+    }
+	OR = {
+		is_in_array = { state_original_cores = GRF }
+		is_in_array = { state_original_cores = GFF }
+	}
+}
+
 is_state_main_culture_buffalo = {
 	OR = {
 		is_in_array = { state_original_cores = BUF }
@@ -989,8 +1160,7 @@ is_state_main_culture_buffalo = {
 
 is_state_main_culture_aquileian = {
 	OR = {
-		state = 500 # Balefire
-		state = 673 # Comrick
+		is_in_array = { state_original_cores = ERI }
 		is_in_array = { state_original_cores = HEL }
 		is_in_array = { state_original_cores = AET }
 		is_in_array = { state_original_cores = JER }
@@ -1078,21 +1248,12 @@ is_state_main_culture_great_laker = {
 
 is_state_main_culture_herzlander = {
 	NOT = {
-		state = 500 # Balefire
-		state = 673 # Comrick
 		state = 446 # Creeper Mountains
 		state = 606 # Banditplace
 		state = 505 # Longbowgriff
 		state = 634 # Sondersune
-		state = 337 # Beside
-		state = 336 # Kluv Valley
-		state = 335 # Summer Camps
-		state = 277 # Amdral Nuur
-		state = 278 # Uulin Griffins
 	}
 	OR = {
-		is_in_array = { state_original_cores = GRF }
-		is_in_array = { state_original_cores = GFF }
 		is_in_array = { state_original_cores = GRI }
 		is_in_array = { state_original_cores = TRD }
 		is_in_array = { state_original_cores = FEA }
@@ -1112,12 +1273,12 @@ is_state_main_culture_herzlander = {
 		is_in_array = { state_original_cores = JHZ }
 		is_in_array = { state_original_cores = JGF }
 		is_in_array = { state_original_cores = JOS }
-		is_in_array = { state_original_cores = ERI }
 		is_in_array = { state_original_cores = EYR }
 		state = 485 # Cloudbury
 		state = 522 # Skynavia
 		state = 424 # Raven Lakes
 		state = 479 # Pinesshade
+		state = 671 # Thymiaushafen
 	}
 }
 
@@ -1156,6 +1317,8 @@ is_state_main_culture_horse = {
 
 is_state_main_culture_hyena = {
 	OR = {
+		state = 190 # Northvale
+		state = 205 # Adishu
 		state = 1036 # Thunderbowl
 		state = 1050 # Dhir Cad
 		state = 1052 # Gajar
@@ -1251,7 +1414,6 @@ is_state_main_culture_southerner = {
 		state = 521 # Chateau Accueillant
 	}
 	OR = {
-		state = 671 # Thymiaushafen
 		is_in_array = { state_original_cores = SIC }
 		is_in_array = { state_original_cores = FRN }
 		is_in_array = { state_original_cores = ARA }
@@ -1283,6 +1445,8 @@ is_state_main_culture_yak = {
 
 is_state_main_culture_yeti = {
 	NOT = {
+		state = 190 # Northvale
+		state = 205 # Adishu
 		state = 978 # Zwahile
 		state = 979 # Zalabar
 		state = 980 # Buckonny
@@ -1471,6 +1635,13 @@ is_operative_main_culture_herzlander_colony = {
 	}
 }
 
+is_operative_main_culture_nova_griffonian = {
+	OR = {
+		has_nationality = GRF
+		has_nationality = GFF
+	}
+}
+
 is_operative_main_culture_buffalo = {
 	OR = {
 		has_nationality = BUF
@@ -1560,8 +1731,6 @@ is_operative_main_culture_great_laker = {
 is_operative_main_culture_herzlander = {
 	OR = {
 		has_nationality = EYR
-		has_nationality = GRF
-		has_nationality = GFF
 		has_nationality = GRI
 		has_nationality = FAT
 		has_nationality = FAW
@@ -1581,6 +1750,7 @@ is_operative_main_culture_herzlander = {
 		has_nationality = SRS
 		has_nationality = LSM
 		has_nationality = BAN
+		has_nationality = CYA
 		has_nationality = JHZ
 		has_nationality = JGF
 		has_nationality = JOS
@@ -1682,7 +1852,6 @@ is_operative_main_culture_riverlander = {
 is_operative_main_culture_southerner = {
 	OR = {
 		has_nationality = SIC
-		has_nationality = CYA
 		has_nationality = FRN
 		has_nationality = ARA
 		has_nationality = WNG
@@ -1862,6 +2031,12 @@ is_country_secondary_culture_herzlander = {
 	}
 }
 is_country_secondary_culture_herzlander_colony = {
+	always = no
+	OR = {
+	}
+}
+is_country_secondary_culture_nova_griffonian = {
+	always = no
 	OR = {
 	}
 }
@@ -1941,6 +2116,7 @@ is_country_secondary_culture_riverlander = {
 is_country_secondary_culture_southerner = {
 	OR = {
 		original_tag = EQC
+		original_tag = CYA
 	}
 }
 is_country_secondary_culture_undead = {

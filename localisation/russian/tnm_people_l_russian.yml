@@ -53,6 +53,8 @@
     SOU_mustafov:0 "Майор Мустафов"
     SOU_vitaliy_orlov:0 "Виталий Орлов"
     SOU_emerald_dusk:0 "Эмеральд Даск"
+    SOU_perkov:0 "Александр Перьков"
+    SOU_morozov:0 "Александр Морозов"
     
     GRB_sir_winston_leonard_spenser_churchill:0 "Сэр Уинстон Леонард Спенсер Черчилль"
     GRB_hugh_todd_naylor_gaitskell:0 "Хью Тодд Нейлор Гайтскелл"
@@ -72,6 +74,7 @@
     GRB_blast_guard:0 "Бласт Гард"
     GRB_margaret_thatcher:0 "Маргарет Хильда Тетчер"
     GRB_herman_buecher:0 "Герман Бюхер"
+    GRB_chadwick:0 "Джеймс Чедвик"
     
     GEM_willy_brandt:0 "Вилли Брандт"
     GEM_walter_ulbricht:0 "Вальтер Ульбрихт"
@@ -84,6 +87,10 @@
     GEM_heinrich_himmler:0 "Генрих Гиммлер"
     GEM_arianna:0 "Арианна"
     GEM_aliz_neumann:0 "Ализ Нойманн"
+    GEM_heisenberg:0 "Вернер Гейзенберг"
+    GEM_messershmitt:0 "Вильгельм Мессершмитт"
+    GEM_walter:0 "Гельмут Вальтер"
+    GEM_kniepkamp:0 "Генрих Книпкамп"
     
     UNS_john_kennedy:0 "Джон Кеннеди"
     UNS_connor_kent:0 "Коннор Кент"
@@ -99,6 +106,9 @@
     UNS_lina_cypher:0 "Лина Сайфер"
     UNS_hartmann:0 "Лейтенант Хартманн"
     UNS_statesoc_council:0 "Совет STATESOC"
+    UNS_clarence:0 "Кларенс Джонсон"
+    UNS_lett:0 "Филип Летт"
+    UNS_abelson:0 "Генри Кайзер"
     
     GRB_captain_wolf:0 "Капитан Вульф"
     GRB_ancom_council:0 "Народный Совет"

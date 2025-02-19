@@ -2919,16 +2919,14 @@ focus_tree = {
 		prerequisite = { focus = UNS_soviet_scientifical_mission }
 		cost = 5
 		completion_reward = {
-			add_tech_bonus = {
-				category = rocketry
-				uses = 1
-				bonus = 1.5
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 0.75
 			}
 			SOU = {
-				add_tech_bonus = {
-					category = rocketry
-					uses = 1
-					bonus = 1.5
+				add_breakthrough_progress = {
+					specialization = specialization_air
+					value = 0.75
 				}
 			}
 		}
@@ -7989,10 +7987,9 @@ focus_tree = {
 		cost = 5
 		icon = GFX_goal_UNS_nuclears
 		completion_reward = {
-			add_tech_bonus = {
-				category = nuclear
-				uses = 2
-				bonus = 1
+			add_breakthrough_progress = {
+				specialization = specialization_nuclear
+				value = 1
 			}
 		}
 	}

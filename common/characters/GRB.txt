@@ -229,6 +229,29 @@ characters={
 	}
 	
 	
+	GRB_chadwick = {
+		name = GRB_chadwick
+		portraits = {
+			civilian = {
+				small = "GFX_idea_SOU_sakharov"
+				large = "gfx/leaders/GRB/GRB_chadwick.dds"
+			}
+		}
+		
+		scientist = {
+			traits = { scientist_trait_nuclear_specialist scientist_trait_bright }
+			skills = {
+				specialization_nuclear = 4
+			}
+			
+			
+			desc = SOU_sakharov_desc
+			visible = {
+				owner = { has_tech = atomic_research }
+			}
+		}
+	}
+	
 	GRB_richard_cole = {
 		name = GRB_richard_cole
 		portraits = {
